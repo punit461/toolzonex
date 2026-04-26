@@ -7,7 +7,7 @@ const Footer = () => {
       <Container maxWidth="lg">
         {/* Logo + tagline */}
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 4 }}>
-          <Box component="img" src="/logo.png" alt="ToolZoneX" sx={{ height: 52, mb: 1.5 }} />
+          <Box component="img" src="logo.png" alt="ToolZoneX" sx={{ height: 52, mb: 1.5 }} />
           <Typography variant="body2" sx={{ color: '#71717A', letterSpacing: '0.1em', textTransform: 'uppercase', fontSize: '0.72rem' }}>
             Smart Tools. Better Decisions.
           </Typography>
