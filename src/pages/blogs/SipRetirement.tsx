@@ -1,5 +1,7 @@
+'use client';
+
 import { Typography } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import RouterLink from 'next/link';
 import BlogShell from '../../components/BlogShell';
 
 const SipRetirement = () => {
@@ -28,7 +30,7 @@ const SipRetirement = () => {
 
       <Typography variant="h3">2. Determine the SIP Amount</Typography>
       <Typography variant="body1">
-        Once you have your target corpus and a timeline (e.g., 20 years), you can calculate exactly how much you need to invest every month. You can use our <RouterLink to="/calculators/sip-calculator">SIP Calculator</RouterLink> to run the numbers. Assuming a conservative 12% annual return, a monthly SIP of ₹30,000 can grow to over ₹3 Crores in 20 years.
+        Once you have your target corpus and a timeline (e.g., 20 years), you can calculate exactly how much you need to invest every month. You can use our <RouterLink href="/calculators/sip-calculator">SIP Calculator</RouterLink> to run the numbers. Assuming a conservative 12% annual return, a monthly SIP of ₹30,000 can grow to over ₹3 Crores in 20 years.
       </Typography>
 
       <Typography variant="h3">3. Step-Up Your SIPs</Typography>

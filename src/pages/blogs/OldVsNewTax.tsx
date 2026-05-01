@@ -1,5 +1,7 @@
+'use client';
+
 import { Typography } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import RouterLink from 'next/link';
 import BlogShell from '../../components/BlogShell';
 
 const OldVsNewTax = () => {
@@ -40,7 +42,7 @@ const OldVsNewTax = () => {
 
       <Typography variant="h3">Run the Numbers</Typography>
       <Typography variant="body1">
-        The easiest way to decide is to calculate your tax liability under both regimes. You can use our free <RouterLink to="/calculators/income-tax-calculator">Income Tax Calculator</RouterLink> to input your salary and deductions. The calculator will instantly show you which regime saves you more money.
+        The easiest way to decide is to calculate your tax liability under both regimes. You can use our free <RouterLink href="/calculators/income-tax-calculator">Income Tax Calculator</RouterLink> to input your salary and deductions. The calculator will instantly show you which regime saves you more money.
       </Typography>
 
       <Typography variant="h2">Conclusion</Typography>

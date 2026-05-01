@@ -1,11 +1,12 @@
+'use client';
+
 import { useState, useMemo } from 'react';
 import {
   Box, Container, Typography, Card, CardContent, CardActionArea,
   Grid, TextField, Chip, InputAdornment, Divider,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { Link as RouterLink } from 'react-router-dom';
-import SEOHead from '../components/SEOHead';
+import RouterLink from 'next/link';
 
 // ── Tag taxonomy ───────────────────────────────────────────────────
 export type BlogTag =
@@ -166,11 +167,6 @@ const BlogList = () => {
 
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
-      <SEOHead
-        title="Personal Finance & Tax Blog"
-        description="Read the latest articles on income tax, investing, budgeting, and personal finance in India."
-        url="/blog"
-      />
 
       {/* Hero */}
       <Box sx={{ textAlign: 'center', mb: 6 }}>
@@ -249,7 +245,7 @@ const BlogList = () => {
       ) : (
         <Grid container spacing={4}>
           {filtered.map(post => (
-            <Grid size={{ xs: 12, md: 6 }} key={post.path}>
+            <Grid item xs={12} md={6} key={post.path}>
               <Card
                 variant="outlined"
                 sx={{
@@ -258,7 +254,7 @@ const BlogList = () => {
                   '&:hover': { borderColor: 'primary.main', boxShadow: '0 4px 20px rgba(0,0,0,0.07)', transform: 'translateY(-2px)' },
                 }}
               >
-                <CardActionArea component={RouterLink} to={post.path} sx={{ height: '100%', p: 0.5 }}>
+                <CardActionArea component={RouterLink} href={post.path} sx={{ height: '100%', p: 0.5 }}>
                   <CardContent>
                     <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 1, fontWeight: 600, textTransform: 'uppercase' }}>
                       {post.date}

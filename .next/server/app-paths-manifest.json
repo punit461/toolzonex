@@ -1,0 +1,18 @@
+{
+  "/health/bmr-calculator/page": "app/health/bmr-calculator/page.js",
+  "/utilities/age-calculator/page": "app/utilities/age-calculator/page.js",
+  "/utilities/date-calculator/page": "app/utilities/date-calculator/page.js",
+  "/tools/online-notepad/page": "app/tools/online-notepad/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/finance/emi-calculator/page": "app/finance/emi-calculator/page.js",
+  "/finance/sip-calculator/page": "app/finance/sip-calculator/page.js",
+  "/finance/income-tax-calculator/page": "app/finance/income-tax-calculator/page.js",
+  "/finance/gst-calculator/page": "app/finance/gst-calculator/page.js",
+  "/finance/ppf-calculator/page": "app/finance/ppf-calculator/page.js",
+  "/finance/gold-calculator/page": "app/finance/gold-calculator/page.js",
+  "/about/page": "app/about/page.js",
+  "/faq/page": "app/faq/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/privacy-policy/page": "app/privacy-policy/page.js",
+  "/terms-of-service/page": "app/terms-of-service/page.js"
+}

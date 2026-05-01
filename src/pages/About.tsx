@@ -1,14 +1,10 @@
+'use client';
+
 import { Box, Typography, Container, Paper } from '@mui/material';
-import SEOHead from '../components/SEOHead';
 
 const About = () => {
   return (
     <Container maxWidth="md">
-      <SEOHead 
-        title="About Us" 
-        description="Learn more about ToolZoneX, our mission, and the team behind the tools." 
-        url="/about"
-      />
       <Box sx={{ my: 4 }}>
         <Typography variant="h1" gutterBottom sx={{ mb: 4 }}>
           About ToolZoneX

@@ -1,5 +1,7 @@
+'use client';
+
 import { Typography } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import RouterLink from 'next/link';
 import BlogShell from '../../components/BlogShell';
 
 const PpfGuide = () => {
@@ -39,7 +41,7 @@ const PpfGuide = () => {
 
       <Typography variant="h2">Calculate Your Returns</Typography>
       <Typography variant="body1">
-        Because of the power of compounding, investing ₹1.5 Lakhs every year for 15 years at the current interest rate yields a massive tax-free corpus. You can calculate exactly how much wealth you can build by using our <RouterLink to="/calculators/ppf-calculator">PPF Calculator</RouterLink>.
+        Because of the power of compounding, investing ₹1.5 Lakhs every year for 15 years at the current interest rate yields a massive tax-free corpus. You can calculate exactly how much wealth you can build by using our <RouterLink href="/calculators/ppf-calculator">PPF Calculator</RouterLink>.
       </Typography>
 
       <Typography variant="h2">Conclusion</Typography>

@@ -1,5 +1,7 @@
+'use client';
+
 import { Box, Typography, Link, Container } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import RouterLink from 'next/link';
 
 const Footer = () => {
   return (
@@ -25,7 +27,7 @@ const Footer = () => {
               ['PPF Calculator', '/finance/ppf-calculator'],
               ['Gold Calculator', '/finance/gold-calculator'],
             ].map(([label, path]) => (
-              <Link key={path} component={RouterLink} to={path} variant="body2" sx={{ display: 'block', mb: 0.5, color: '#A1A1AA', textDecoration: 'none', '&:hover': { color: '#FFFFFF' } }}>{label}</Link>
+              <Link key={path} component={RouterLink} href={path} variant="body2" sx={{ display: 'block', mb: 0.5, color: '#A1A1AA', textDecoration: 'none', '&:hover': { color: '#FFFFFF' } }}>{label}</Link>
             ))}
           </Box>
 
@@ -36,7 +38,7 @@ const Footer = () => {
               ['BMR Calculator', '/health/bmr-calculator'],
               ['TDEE Calculator', '/health/tdee-calculator'],
             ].map(([label, path]) => (
-              <Link key={path} component={RouterLink} to={path} variant="body2" sx={{ display: 'block', mb: 0.5, color: '#A1A1AA', textDecoration: 'none', '&:hover': { color: '#FFFFFF' } }}>{label}</Link>
+              <Link key={path} component={RouterLink} href={path} variant="body2" sx={{ display: 'block', mb: 0.5, color: '#A1A1AA', textDecoration: 'none', '&:hover': { color: '#FFFFFF' } }}>{label}</Link>
             ))}
             <Typography variant="overline" sx={{ color: '#FFFFFF', fontWeight: 700, display: 'block', mt: 2, mb: 1 }}>Utilities</Typography>
             {[
@@ -44,7 +46,7 @@ const Footer = () => {
               ['Date Calculator', '/utilities/date-calculator'],
               ['Percentage Calc', '/utilities/percentage-calculator'],
             ].map(([label, path]) => (
-              <Link key={path} component={RouterLink} to={path} variant="body2" sx={{ display: 'block', mb: 0.5, color: '#A1A1AA', textDecoration: 'none', '&:hover': { color: '#FFFFFF' } }}>{label}</Link>
+              <Link key={path} component={RouterLink} href={path} variant="body2" sx={{ display: 'block', mb: 0.5, color: '#A1A1AA', textDecoration: 'none', '&:hover': { color: '#FFFFFF' } }}>{label}</Link>
             ))}
           </Box>
 
@@ -53,10 +55,10 @@ const Footer = () => {
             {[
               ['Online Notepad', '/tools/online-notepad'],
             ].map(([label, path]) => (
-              <Link key={path} component={RouterLink} to={path} variant="body2" sx={{ display: 'block', mb: 0.5, color: '#A1A1AA', textDecoration: 'none', '&:hover': { color: '#FFFFFF' } }}>{label}</Link>
+              <Link key={path} component={RouterLink} href={path} variant="body2" sx={{ display: 'block', mb: 0.5, color: '#A1A1AA', textDecoration: 'none', '&:hover': { color: '#FFFFFF' } }}>{label}</Link>
             ))}
             <Typography variant="overline" sx={{ color: '#FFFFFF', fontWeight: 700, display: 'block', mt: 2, mb: 1 }}>Blog</Typography>
-            <Link component={RouterLink} to="/blog" variant="body2" sx={{ display: 'block', mb: 0.5, color: '#A1A1AA', textDecoration: 'none', '&:hover': { color: '#FFFFFF' } }}>All Articles</Link>
+            <Link component={RouterLink} href="/blog" variant="body2" sx={{ display: 'block', mb: 0.5, color: '#A1A1AA', textDecoration: 'none', '&:hover': { color: '#FFFFFF' } }}>All Articles</Link>
           </Box>
 
           <Box>
@@ -68,7 +70,7 @@ const Footer = () => {
               ['Privacy Policy', '/privacy-policy'],
               ['Terms of Service', '/terms-of-service'],
             ].map(([label, path]) => (
-              <Link key={path} component={RouterLink} to={path} variant="body2" sx={{ display: 'block', mb: 0.5, color: '#A1A1AA', textDecoration: 'none', '&:hover': { color: '#FFFFFF' } }}>{label}</Link>
+              <Link key={path} component={RouterLink} href={path} variant="body2" sx={{ display: 'block', mb: 0.5, color: '#A1A1AA', textDecoration: 'none', '&:hover': { color: '#FFFFFF' } }}>{label}</Link>
             ))}
           </Box>
         </Box>

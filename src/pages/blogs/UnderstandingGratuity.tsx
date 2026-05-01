@@ -1,5 +1,7 @@
+'use client';
+
 import { Typography } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import RouterLink from 'next/link';
 import BlogShell from '../../components/BlogShell';
 
 const UnderstandingGratuity = () => {
@@ -40,7 +42,7 @@ const UnderstandingGratuity = () => {
 
       <Typography variant="h2">Check Your Eligibility and Payout</Typography>
       <Typography variant="body1">
-        Instead of doing the math manually, you can use our <RouterLink to="/calculators/gratuity-calculator">Online Gratuity Calculator</RouterLink>. Just enter your basic salary, DA, and years of service, and it will instantly show your estimated payout and whether it crosses the tax-free limit.
+        Instead of doing the math manually, you can use our <RouterLink href="/calculators/gratuity-calculator">Online Gratuity Calculator</RouterLink>. Just enter your basic salary, DA, and years of service, and it will instantly show your estimated payout and whether it crosses the tax-free limit.
       </Typography>
     </BlogShell>
   );

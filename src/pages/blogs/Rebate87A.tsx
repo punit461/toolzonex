@@ -1,5 +1,7 @@
+'use client';
+
 import { Typography } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import RouterLink from 'next/link';
 import BlogShell from '../../components/BlogShell';
 
 const Rebate87A = () => (
@@ -49,7 +51,7 @@ const Rebate87A = () => (
     </Typography>
     <Typography variant="body1">
       The government has provided marginal relief in some cases, but it's always worth calculating precisely using our{' '}
-      <RouterLink to="/finance/income-tax-calculator">Income Tax Calculator</RouterLink>.
+      <RouterLink href="/finance/income-tax-calculator">Income Tax Calculator</RouterLink>.
     </Typography>
 
     <Typography variant="h2">Key Rules to Remember</Typography>
