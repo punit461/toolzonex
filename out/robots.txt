@@ -1,5 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /private/
-
-Sitemap: https://punit461.github.io/toolzonex/sitemap.xml
