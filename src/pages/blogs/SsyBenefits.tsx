@@ -1,5 +1,7 @@
+'use client';
+
 import { Typography } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import RouterLink from 'next/link';
 import BlogShell from '../../components/BlogShell';
 
 const SsyBenefits = () => {
@@ -41,7 +43,7 @@ const SsyBenefits = () => {
         If you invest ₹1,00,000 every year for 15 years, your total investment is ₹15,00,000. By the time the account matures in 21 years, the corpus will grow to nearly ₹46 Lakhs! 
       </Typography>
       <Typography variant="body1">
-        You can plug your own numbers into our <RouterLink to="/calculators/ssy-calculator">SSY Calculator</RouterLink> to see exactly how much you can save based on your budget.
+        You can plug your own numbers into our <RouterLink href="/calculators/ssy-calculator">SSY Calculator</RouterLink> to see exactly how much you can save based on your budget.
       </Typography>
     </BlogShell>
   );

@@ -1,6 +1,7 @@
+'use client';
+
 import { Box, Typography, Card, CardContent, CardActionArea, Chip } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
-import SEOHead from '../components/SEOHead';
+import RouterLink from 'next/link';
 import CalculateIcon from '@mui/icons-material/Calculate';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import ReceiptIcon from '@mui/icons-material/Receipt';
@@ -70,11 +71,6 @@ const categories = [
 const Home = () => {
   return (
     <>
-      <SEOHead
-        title="ToolZoneX — Smart Tools for Every Decision"
-        description="Free online calculators for Finance, Health, and Utilities — EMI, SIP, Income Tax, BMI, Gold Rate, PPF, GST and more. Instant, accurate results."
-        url="/"
-      />
 
       {/* Hero */}
       <Box sx={{ textAlign: 'center', py: { xs: 4, md: 6 }, mb: 4 }}>
@@ -107,7 +103,7 @@ const Home = () => {
                   '&:hover': { transform: 'translateY(-4px)', boxShadow: 6 },
                 }}
               >
-                <CardActionArea component={RouterLink} to={tool.path} sx={{ height: '100%', p: 1 }}>
+                <CardActionArea component={RouterLink} href={tool.path} sx={{ height: '100%', p: 1 }}>
                   <CardContent>
                     <Box sx={{ mb: 1.5 }}>{tool.icon}</Box>
                     <Typography variant="h5" component="div" sx={{ fontWeight: 700, mb: 0.5, fontSize: '1.05rem' }}>

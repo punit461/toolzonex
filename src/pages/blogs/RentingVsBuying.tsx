@@ -1,5 +1,7 @@
+'use client';
+
 import { Typography } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import RouterLink from 'next/link';
 import BlogShell from '../../components/BlogShell';
 
 const RentingVsBuying = () => {
@@ -44,7 +46,7 @@ const RentingVsBuying = () => {
 
       <Typography variant="h2">Run Your Own Numbers</Typography>
       <Typography variant="body1">
-        Every city and property is different. To find out exactly which option is better for your specific situation, use our <RouterLink to="/calculators/rent-vs-buy-calculator">Rent vs Buy Calculator</RouterLink>. It factors in rent inflation, property appreciation, and home loan interest to give you a clear financial verdict.
+        Every city and property is different. To find out exactly which option is better for your specific situation, use our <RouterLink href="/calculators/rent-vs-buy-calculator">Rent vs Buy Calculator</RouterLink>. It factors in rent inflation, property appreciation, and home loan interest to give you a clear financial verdict.
       </Typography>
     </BlogShell>
   );

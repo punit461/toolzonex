@@ -1,5 +1,7 @@
+'use client';
+
 import { Typography } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import RouterLink from 'next/link';
 import BlogShell from '../../components/BlogShell';
 
 const HraExemption = () => (
@@ -67,7 +69,7 @@ const HraExemption = () => (
     <Typography variant="h2">New Regime Users: No HRA</Typography>
     <Typography variant="body1">
       If you opt for the New Regime, you cannot claim HRA exemption at all. If rent makes up a large part of your expenses and your employer pays significant HRA, this could tip the balance in favour of the Old Regime. Use our{' '}
-      <RouterLink to="/finance/income-tax-calculator">Income Tax Calculator</RouterLink>{' '}
+      <RouterLink href="/finance/income-tax-calculator">Income Tax Calculator</RouterLink>{' '}
       to compare both regimes with your actual HRA figures.
     </Typography>
   </BlogShell>

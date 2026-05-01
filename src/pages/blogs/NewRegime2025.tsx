@@ -1,5 +1,7 @@
+'use client';
+
 import { Typography } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import RouterLink from 'next/link';
 import BlogShell from '../../components/BlogShell';
 
 const NewRegime2025 = () => (
@@ -68,7 +70,7 @@ const NewRegime2025 = () => (
     </Typography>
     <Typography variant="body1">
       The best approach: calculate your liability under both regimes. Use our{' '}
-      <RouterLink to="/finance/income-tax-calculator">Income Tax Calculator</RouterLink>{' '}
+      <RouterLink href="/finance/income-tax-calculator">Income Tax Calculator</RouterLink>{' '}
       to run the comparison instantly with your actual numbers.
     </Typography>
 

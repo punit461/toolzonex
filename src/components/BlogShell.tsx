@@ -1,6 +1,7 @@
+'use client';
+
 import { Box, Container, Typography, Breadcrumbs, Link } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
-import SEOHead from './SEOHead';
+import RouterLink from 'next/link';
 
 interface BlogShellProps {
   title: string;
@@ -14,14 +15,14 @@ interface BlogShellProps {
 const BlogShell = ({ title, description, url, date, author = "ToolZoneX Team", children }: BlogShellProps) => {
   return (
     <Container maxWidth="md" sx={{ py: 6 }}>
-      <SEOHead title={title} description={description} url={url} />
+      
       
       <Box sx={{ mb: 6 }}>
         <Breadcrumbs aria-label="breadcrumb" sx={{ mb: 3 }}>
-          <Link component={RouterLink} color="inherit" to="/" sx={{ textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
+          <Link component={RouterLink} color="inherit" href="/" sx={{ textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
             Home
           </Link>
-          <Link component={RouterLink} color="inherit" to="/blog" sx={{ textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
+          <Link component={RouterLink} color="inherit" href="/blog" sx={{ textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
             Blog
           </Link>
           <Typography color="text.primary" sx={{ display: 'inline-block', maxWidth: '200px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>

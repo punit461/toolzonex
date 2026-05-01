@@ -1,6 +1,7 @@
+'use client';
+
 import { Box, Typography, Container, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import SEOHead from '../components/SEOHead';
 
 const faqs = [
   {
@@ -32,11 +33,6 @@ const faqs = [
 const FAQ = () => {
   return (
     <Container maxWidth="md" sx={{ py: 6 }}>
-      <SEOHead 
-        title="Frequently Asked Questions (FAQ)" 
-        description="Find answers to the most commonly asked questions about ToolZoneX and our calculators." 
-        url="/faq"
-      />
       
       <Box sx={{ mb: 6, textAlign: 'center' }}>
         <Typography variant="h1" gutterBottom sx={{ fontWeight: 800 }}>

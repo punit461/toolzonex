@@ -1,17 +1,18 @@
+'use client';
+
 import { useState } from 'react';
 import {
   Box, Typography, Container, Paper, TextField, Button,
   Alert, CircularProgress, Divider, Link,
 } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
-import SEOHead from '../components/SEOHead';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Google Sheets integration via Apps Script web-app URL.
-// Set VITE_CONTACT_SHEET_URL in your .env file to enable. Leave blank to
+// Set NEXT_PUBLIC_CONTACT_SHEET_URL in your .env file to enable. Leave blank to
 // fall back to mailto: behaviour (no sheet, just email client opens).
 // ─────────────────────────────────────────────────────────────────────────────
-const SHEET_URL = import.meta.env.VITE_CONTACT_SHEET_URL as string | undefined;
+const SHEET_URL = process.env.NEXT_PUBLIC_CONTACT_SHEET_URL as string | undefined;
 const CONTACT_EMAIL = 'punit461bharadwaj@gmail.com';
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
@@ -71,11 +72,6 @@ const Contact = () => {
 
   return (
     <Container maxWidth="md">
-      <SEOHead
-        title="Contact Us"
-        description="Get in touch with the ToolZoneX team for support, feedback, or feature requests."
-        url="/contact"
-      />
 
       <Box sx={{ my: 6 }}>
         <Typography variant="h1" gutterBottom sx={{ fontWeight: 800 }}>

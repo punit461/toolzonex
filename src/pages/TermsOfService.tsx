@@ -1,14 +1,10 @@
+'use client';
+
 import { Box, Typography, Container, Paper } from '@mui/material';
-import SEOHead from '../components/SEOHead';
 
 const TermsOfService = () => {
   return (
     <Container maxWidth="md">
-      <SEOHead 
-        title="Terms of Service" 
-        description="Terms and conditions for using ToolZoneX." 
-        url="/terms-of-service"
-      />
       <Box sx={{ my: 4 }}>
         <Typography variant="h1" gutterBottom sx={{ mb: 4 }}>
           Terms of Service
