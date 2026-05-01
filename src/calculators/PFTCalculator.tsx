@@ -97,6 +97,7 @@ const PFTCalculator = () => {
       description="Calculate your Physical Fitness Test (PFT) grade for Indian Army, NDA, CDS and defence recruitment."
       url="/health/pft-calculator"
       content={content}
+      category="Health"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

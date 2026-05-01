@@ -62,6 +62,7 @@ const AgeCalculator = () => {
       description="Calculate your exact age in years, months, and days based on your date of birth."
       url="/utilities/age-calculator"
       content={content}
+      category="Utilities"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

@@ -77,6 +77,7 @@ const GSTCalculator = () => {
       description="Add or remove Goods and Services Tax (GST) from any amount instantly."
       url="/finance/gst-calculator"
       content={content}
+      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

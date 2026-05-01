@@ -41,6 +41,7 @@ const GoldRateCalculator = () => {
       description="Calculate the exact final price of gold jewelry including making charges and GST."
       url="/finance/gold-calculator"
       content={content}
+      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

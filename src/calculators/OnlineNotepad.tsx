@@ -75,6 +75,7 @@ const OnlineNotepad = () => {
       description="A free, secure online notepad with auto-save. Take quick notes, count words, and download as text."
       url="/tools/online-notepad"
       content={content}
+      category="Tools"
     >
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         

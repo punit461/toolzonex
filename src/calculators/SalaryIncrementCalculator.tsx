@@ -57,6 +57,7 @@ const SalaryIncrementCalculator = () => {
       description="Calculate your new CTC and monthly gross salary after an appraisal or job switch."
       url="/finance/salary-increment-calculator"
       content={content}
+      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

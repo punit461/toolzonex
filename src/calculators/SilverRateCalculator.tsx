@@ -38,6 +38,7 @@ const SilverRateCalculator = () => {
       description="Calculate the exact final price of silver items including making charges and GST."
       url="/finance/silver-calculator"
       content={content}
+      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

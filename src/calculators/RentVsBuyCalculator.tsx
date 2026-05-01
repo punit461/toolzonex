@@ -98,6 +98,7 @@ const RentVsBuyCalculator = () => {
       description="Compare the financial costs of renting versus buying a home over time."
       url="/finance/rent-vs-buy-calculator"
       content={content}
+      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

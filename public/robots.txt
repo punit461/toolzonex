@@ -1,5 +1,14 @@
+# ToolZoneX robots.txt
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap location
+Sitemap: https://punit461.github.io/toolzonex/sitemap.xml
+
+# Crawl delay (optional, be nice to servers)
+Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://punit461.github.io/toolzonex/sitemap.xml
