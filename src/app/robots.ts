@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export const dynamic = 'force-static';
 
-const DOMAIN = process.env.VITE_SITE_URL || 'https://punit461.github.io/toolzonex';
+const DOMAIN = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
 
 export default function robots(): MetadataRoute.Robots {
   return {

@@ -9,10 +9,10 @@ import EmailIcon from '@mui/icons-material/Email';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Google Sheets integration via Apps Script web-app URL.
-// Set VITE_CONTACT_SHEET_URL in your .env file to enable. Leave blank to
+// Set NEXT_PUBLIC_CONTACT_SHEET_URL in your .env file to enable. Leave blank to
 // fall back to mailto: behaviour (no sheet, just email client opens).
 // ─────────────────────────────────────────────────────────────────────────────
-const SHEET_URL = process.env.VITE_CONTACT_SHEET_URL as string | undefined;
+const SHEET_URL = process.env.NEXT_PUBLIC_CONTACT_SHEET_URL as string | undefined;
 const CONTACT_EMAIL = 'punit461bharadwaj@gmail.com';
 
 type Status = 'idle' | 'sending' | 'success' | 'error';

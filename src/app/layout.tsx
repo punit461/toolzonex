@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "ToolZoneX — Smart Tools for Every Decision",
   description: "Free online calculators for Finance, Health, and Utilities — EMI, SIP, Income Tax, BMI, Gold Rate, PPF, GST and more. Instant, accurate results.",
-  metadataBase: new URL(process.env.VITE_SITE_URL || 'https://punit461.github.io/toolzonex/'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex/'),
 };
 
 export default function RootLayout({
