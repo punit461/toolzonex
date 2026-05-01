@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { Box, Typography, Button, TextField, Snackbar, Alert } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';

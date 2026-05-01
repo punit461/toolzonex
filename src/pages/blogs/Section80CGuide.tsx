@@ -1,5 +1,7 @@
+'use client';
+
 import { Typography } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import RouterLink from 'next/link';
 import BlogShell from '../../components/BlogShell';
 
 const Section80CGuide = () => (
@@ -32,7 +34,7 @@ const Section80CGuide = () => (
       <li><strong>Equity Linked Savings Scheme (ELSS):</strong> Mutual funds with 3-year lock-in and market-linked returns. The shortest lock-in among 80C options and potentially highest returns.</li>
       <li><strong>National Savings Certificate (NSC):</strong> 5-year government bond. Interest is reinvested and also qualifies for 80C each year, though taxable at maturity.</li>
       <li><strong>Tax Saving Fixed Deposits:</strong> 5-year bank FDs. Returns are taxable as per your slab rate, making them less efficient at higher income levels.</li>
-      <li><strong>Sukanya Samriddhi Yojana (SSY):</strong> For the girl child, EEE benefits, up to ₹1.5L/year. Use our <RouterLink to="/finance/ssy-calculator">SSY Calculator</RouterLink> to project returns.</li>
+      <li><strong>Sukanya Samriddhi Yojana (SSY):</strong> For the girl child, EEE benefits, up to ₹1.5L/year. Use our <RouterLink href="/finance/ssy-calculator">SSY Calculator</RouterLink> to project returns.</li>
       <li><strong>Senior Citizens Savings Scheme (SCSS):</strong> For individuals aged 60+, quarterly interest, high safety.</li>
     </ul>
 
@@ -60,7 +62,7 @@ const Section80CGuide = () => (
 
     <Typography variant="h2">80C + Old Regime vs New Regime Math</Typography>
     <Typography variant="body1">
-      If you invest ₹1.5L in 80C, you save up to ₹46,800 in tax (30% slab + 4% cess). But the New Regime's lower rates may still result in lower total tax even without 80C, especially at incomes below ₹15 lakh. Always compare using our <RouterLink to="/finance/income-tax-calculator">Income Tax Calculator</RouterLink>.
+      If you invest ₹1.5L in 80C, you save up to ₹46,800 in tax (30% slab + 4% cess). But the New Regime's lower rates may still result in lower total tax even without 80C, especially at incomes below ₹15 lakh. Always compare using our <RouterLink href="/finance/income-tax-calculator">Income Tax Calculator</RouterLink>.
     </Typography>
   </BlogShell>
 );

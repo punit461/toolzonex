@@ -1,5 +1,7 @@
+'use client';
+
 import { Typography } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import RouterLink from 'next/link';
 import BlogShell from '../../components/BlogShell';
 
 const GstImpact = () => {
@@ -38,7 +40,7 @@ const GstImpact = () => {
 
       <Typography variant="h2">How to Manage GST Calculations</Typography>
       <Typography variant="body1">
-        Creating invoices requires calculating the exact CGST, SGST, or IGST components based on the product's tax slab (5%, 12%, 18%, or 28%). Doing this manually can lead to errors. We recommend using our <RouterLink to="/calculators/gst-calculator">GST Calculator</RouterLink> to quickly add or remove GST from your product prices to ensure accurate invoicing.
+        Creating invoices requires calculating the exact CGST, SGST, or IGST components based on the product's tax slab (5%, 12%, 18%, or 28%). Doing this manually can lead to errors. We recommend using our <RouterLink href="/calculators/gst-calculator">GST Calculator</RouterLink> to quickly add or remove GST from your product prices to ensure accurate invoicing.
       </Typography>
 
       <Typography variant="h2">Conclusion</Typography>

@@ -1,5 +1,7 @@
+'use client';
+
 import { Typography } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import RouterLink from 'next/link';
 import BlogShell from '../../components/BlogShell';
 
 const CompoundInterest = () => {
@@ -45,7 +47,7 @@ const CompoundInterest = () => {
 
       <Typography variant="h2">See the Magic Yourself</Typography>
       <Typography variant="body1">
-        Don't just take our word for it. Head over to our <RouterLink to="/calculators/sip-calculator">SIP Calculator</RouterLink> and play around with the 'Time Period' slider. You'll notice that the wealth generated in the last 5 years of a 20-year SIP is almost equal to the wealth generated in the first 15 years.
+        Don't just take our word for it. Head over to our <RouterLink href="/calculators/sip-calculator">SIP Calculator</RouterLink> and play around with the 'Time Period' slider. You'll notice that the wealth generated in the last 5 years of a 20-year SIP is almost equal to the wealth generated in the first 15 years.
       </Typography>
     </BlogShell>
   );

@@ -1,5 +1,6 @@
+'use client';
+
 import { Box, Typography, Divider } from '@mui/material';
-import SEOHead from './SEOHead';
 import React from 'react';
 
 interface CalculatorShellProps {
@@ -13,7 +14,7 @@ interface CalculatorShellProps {
 const CalculatorShell = ({ title, description, url, children, content }: CalculatorShellProps) => {
   return (
     <Box>
-      <SEOHead title={title} description={description} url={url} />
+      
       
       <Box sx={{ mb: 6 }}>
         <Typography variant="h1" gutterBottom>

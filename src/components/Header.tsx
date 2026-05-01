@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useRef } from 'react';
 import {
   AppBar, Toolbar, Box, Button, IconButton, Drawer,
@@ -5,7 +7,7 @@ import {
   Slide, Paper, Popper, Grow, ClickAwayListener, MenuList, MenuItem,
   Typography, Collapse
 } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import RouterLink from 'next/link';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import HomeIcon from '@mui/icons-material/Home';
@@ -35,7 +37,8 @@ const navCategories: NavCategory[] = [
       { label: 'Gold Rate Calculator', path: '/finance/gold-calculator' },
       { label: 'Silver Rate Calculator', path: '/finance/silver-calculator' },
       { label: 'SSY Calculator', path: '/finance/ssy-calculator' },
-      { label: 'Gratuity Calculator', path: '/finance/gratuity-calculator' },
+      { label: 'Salary Increment Calculator', path: '/finance/salary-increment-calculator' },
+      { label: 'Retirement Calculator', path: '/finance/retirement-calculator' },
     ],
   },
   {
@@ -131,7 +134,7 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
                         <MenuItem
                           key={tool.path}
                           component={RouterLink}
-                          to={tool.path}
+                          href={tool.path}
                           onClick={() => setOpen(false)}
                           sx={{ fontSize: '0.875rem', py: 0.75, borderRadius: 1, mx: 0.5 }}
                         >
@@ -148,7 +151,7 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
                             <MenuItem
                               key={tool.path}
                               component={RouterLink}
-                              to={tool.path}
+                              href={tool.path}
                               onClick={() => setOpen(false)}
                               sx={{ fontSize: '0.875rem', py: 0.75, borderRadius: 1, mx: 0.5 }}
                             >
@@ -190,7 +193,7 @@ const MobileAccordion = ({ category, onClose }: MobileAccordionProps) => {
             <ListItemButton
               key={tool.path}
               component={RouterLink}
-              to={tool.path}
+              href={tool.path}
               onClick={onClose}
               sx={{ pl: 4, py: 0.6 }}
             >
@@ -223,16 +226,16 @@ const Header = () => {
           {/* Logo */}
           <Box
             component={RouterLink}
-            to="/"
+            href="/"
             sx={{ display: 'flex', alignItems: 'center', textDecoration: 'none', mr: 2 }}
           >
-            <Box component="img" src="logo.png" alt="ToolZoneX" sx={{ height: 44, width: 'auto' }} />
+            <Box component="img" src="/toolzonex/logo.png" alt="ToolZoneX" sx={{ height: 44, width: 'auto' }} />
           </Box>
 
           {/* Home button — desktop */}
           <Button
             component={RouterLink}
-            to="/"
+            href="/"
             startIcon={<HomeIcon />}
             color="inherit"
             sx={{ fontWeight: 600, fontSize: '0.9rem', textTransform: 'none', px: 1.5, display: { xs: 'none', md: 'flex' } }}
@@ -247,7 +250,7 @@ const Header = () => {
             ))}
             <Button
               component={RouterLink}
-              to="/blog"
+              href="/blog"
               color="inherit"
               sx={{ fontWeight: 600, fontSize: '0.9rem', textTransform: 'none', px: 1.5 }}
             >
@@ -267,14 +270,14 @@ const Header = () => {
         <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
           <Box sx={{ width: 280, pt: 2, height: '100%', overflowY: 'auto' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 2, mb: 1 }}>
-              <Box component="img" src="logo.png" alt="ToolZoneX" sx={{ height: 36 }} />
+              <Box component="img" src="/toolzonex/logo.png" alt="ToolZoneX" sx={{ height: 36 }} />
               <IconButton onClick={() => setDrawerOpen(false)}><CloseIcon /></IconButton>
             </Box>
             <Divider sx={{ mb: 1 }} />
 
             {/* Home link */}
             <List disablePadding>
-              <ListItemButton component={RouterLink} to="/" onClick={() => setDrawerOpen(false)}>
+              <ListItemButton component={RouterLink} href="/" onClick={() => setDrawerOpen(false)}>
                 <HomeIcon sx={{ mr: 1.5, fontSize: 20, color: 'text.secondary' }} />
                 <ListItemText primary="Home" slotProps={{ primary: { sx: { fontWeight: 700 } } }} />
               </ListItemButton>
@@ -286,7 +289,7 @@ const Header = () => {
               ))}
 
               {/* Blog */}
-              <ListItemButton component={RouterLink} to="/blog" onClick={() => setDrawerOpen(false)}>
+              <ListItemButton component={RouterLink} href="/blog" onClick={() => setDrawerOpen(false)}>
                 <ListItemText primary="Blog" slotProps={{ primary: { sx: { fontWeight: 700, fontSize: '0.95rem' } } }} />
               </ListItemButton>
             </List>

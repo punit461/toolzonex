@@ -1,14 +1,10 @@
+'use client';
+
 import { Box, Typography, Container, Paper } from '@mui/material';
-import SEOHead from '../components/SEOHead';
 
 const PrivacyPolicy = () => {
   return (
     <Container maxWidth="md">
-      <SEOHead 
-        title="Privacy Policy" 
-        description="Privacy policy for ToolZoneX outlining how we handle user data and advertising." 
-        url="/privacy-policy"
-      />
       <Box sx={{ my: 4 }}>
         <Typography variant="h1" gutterBottom sx={{ mb: 4 }}>
           Privacy Policy
