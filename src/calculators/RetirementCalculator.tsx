@@ -121,6 +121,7 @@ const RetirementCalculator = () => {
       description="Calculate the exact corpus you need to retire and how much you need to save every month."
       url="/finance/retirement-calculator"
       content={content}
+      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' }, gap: 6 }}>
         <Box>

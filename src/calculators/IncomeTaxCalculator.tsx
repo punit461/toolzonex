@@ -207,6 +207,7 @@ const IncomeTaxCalculator = () => {
       description="Calculate your income tax for FY 2025-26 (AY 2026-27) under New and Old Regime. Includes HRA, 80C, 80D, NPS, home loan, rebate 87A, surcharge, and cess."
       url="/finance/income-tax-calculator"
       content={content}
+      category="Finance"
     >
       {/* Regime selector */}
       <Box sx={{ mb: 4 }}>

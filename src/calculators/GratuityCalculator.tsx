@@ -57,6 +57,7 @@ const GratuityCalculator = () => {
       description="Calculate how much gratuity you are entitled to receive from your employer after 5 years of service."
       url="/finance/gratuity-calculator"
       content={content}
+      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

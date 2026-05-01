@@ -47,6 +47,7 @@ const PercentageCalculator = () => {
       description="Easily calculate percentages, percentage changes, and find out what percent one number is of another."
       url="/utilities/percentage-calculator"
       content={content}
+      category="Utilities"
     >
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
         

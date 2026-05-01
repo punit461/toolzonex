@@ -4,249 +4,259 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+<!-- ToolZoneX Sitemap - Updated 2026-05-01 -->
 
 <url>
   <loc>https://punit461.github.io/toolzonex/</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/finance/emi-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/finance/sip-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/finance/gst-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/finance/income-tax-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/finance/ppf-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/finance/rent-vs-buy-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/finance/gold-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/finance/silver-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/finance/ssy-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/finance/salary-increment-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/finance/retirement-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://punit461.github.io/toolzonex/finance/gratuity-calculator</loc>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/health/bmi-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/health/bmr-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/health/tdee-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/health/pft-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/health/cft-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/utilities/age-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/utilities/percentage-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/utilities/date-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/tools/online-notepad</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/about</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/faq</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/contact</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/privacy-policy</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/terms-of-service</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog/new-tax-regime-fy-2025-26</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog/section-87a-rebate-guide</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog/hra-exemption-calculation</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog/section-80c-investment-guide</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog/old-vs-new-tax-regime</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog/sip-early-retirement</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog/understanding-gst</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog/50-30-20-budgeting-rule</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog/improve-cibil-score</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog/renting-vs-buying-home</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog/complete-guide-to-ppf</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog/power-of-compound-interest</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog/sukanya-samriddhi-yojana-benefits</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/blog/understanding-gratuity-india</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
 </url>
-<url>
-  <loc>https://punit461.github.io/toolzonex/calculators/income-tax-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://punit461.github.io/toolzonex/calculators/sip-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://punit461.github.io/toolzonex/calculators/gst-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://punit461.github.io/toolzonex/calculators/rent-vs-buy-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://punit461.github.io/toolzonex/calculators/ppf-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://punit461.github.io/toolzonex/calculators/ssy-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://punit461.github.io/toolzonex/calculators/gratuity-calculator</loc>
-  <lastmod>2026-05-01T16:12:39+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-
 
 </urlset>

@@ -86,6 +86,7 @@ const DateCalculator = () => {
       description="Calculate days between two dates, or add and subtract days from a specific date."
       url="/utilities/date-calculator"
       content={content}
+      category="Utilities"
     >
       <Box sx={{ mb: 4, display: 'flex', justifyContent: 'center' }}>
         <ToggleButtonGroup
