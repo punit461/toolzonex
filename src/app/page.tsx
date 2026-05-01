@@ -75,7 +75,7 @@ const Home = () => {
     <>
       {/* Hero */}
       <Box sx={{ textAlign: 'center', py: { xs: 4, md: 6 }, mb: 4 }}>
-        {/* <Box component="img" src="/logo.png" alt="ToolZoneX" sx={{ height: { xs: 60, md: 80 }, mb: 3 }} /> */}
+        {/* <Box component="img" src="/toolzonex/logo.png" alt="ToolZoneX" sx={{ height: { xs: 60, md: 80 }, mb: 3 }} /> */}
         <Typography variant="h1" gutterBottom sx={{ fontWeight: 900, fontSize: { xs: '2rem', md: '3rem' } }}>
           Smart Tools for Every Decision
         </Typography>

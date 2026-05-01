@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Box, TextField, Typography, Slider, InputAdornment, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
@@ -8,6 +8,11 @@ import CalculatorShell from '../components/CalculatorShell';
 const SalaryIncrementCalculator = () => {
   const [currentCTC, setCurrentCTC] = useState<number>(1000000);
   const [incrementPercent, setIncrementPercent] = useState<number>(10);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const { newCTC, incrementAmount, monthlyIncrease, newMonthlyCTC } = useMemo(() => {
     const incAmount = (currentCTC * incrementPercent) / 100;
@@ -124,18 +129,20 @@ const SalaryIncrementCalculator = () => {
               </Box>
             </Box>
 
-            <Box sx={{ height: 250 }}>
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                  <XAxis dataKey="name" />
-                  <YAxis tickFormatter={(value) => `₹${(value / 100000).toFixed(0)}L`} />
-                  <RechartsTooltip formatter={(value: any) => `₹ ${value.toLocaleString('en-IN')}`} />
-                  <Legend />
-                  <Bar dataKey="Current CTC" stackId="a" fill="#171717" />
-                  <Bar dataKey="Increment Amount" stackId="a" fill="#2e7d32" />
-                </BarChart>
-              </ResponsiveContainer>
+            <Box sx={{ height: 300 }}>
+              {isClient && (
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+                    <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                    <XAxis dataKey="name" />
+                    <YAxis tickFormatter={(value) => `₹${(value / 100000).toFixed(0)}L`} />
+                    <RechartsTooltip formatter={(value: any) => `₹ ${value.toLocaleString('en-IN')}`} />
+                    <Legend />
+                    <Bar dataKey="Current CTC" stackId="a" fill="#171717" />
+                    <Bar dataKey="Increment Amount" stackId="a" fill="#2e7d32" />
+                  </BarChart>
+                </ResponsiveContainer>
+              )}
             </Box>
           </Box>
         </Box>

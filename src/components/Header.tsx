@@ -229,7 +229,7 @@ const Header = () => {
             href="/"
             sx={{ display: 'flex', alignItems: 'center', textDecoration: 'none', mr: 2 }}
           >
-            <Box component="img" src="logo.png" alt="ToolZoneX" sx={{ height: 44, width: 'auto' }} />
+            <Box component="img" src="/toolzonex/logo.png" alt="ToolZoneX" sx={{ height: 44, width: 'auto' }} />
           </Box>
 
           {/* Home button — desktop */}
@@ -270,7 +270,7 @@ const Header = () => {
         <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
           <Box sx={{ width: 280, pt: 2, height: '100%', overflowY: 'auto' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 2, mb: 1 }}>
-              <Box component="img" src="logo.png" alt="ToolZoneX" sx={{ height: 36 }} />
+              <Box component="img" src="/toolzonex/logo.png" alt="ToolZoneX" sx={{ height: 36 }} />
               <IconButton onClick={() => setDrawerOpen(false)}><CloseIcon /></IconButton>
             </Box>
             <Divider sx={{ mb: 1 }} />

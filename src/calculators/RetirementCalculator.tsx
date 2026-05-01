@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Box, TextField, Typography, Slider, InputAdornment } from '@mui/material';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
@@ -14,6 +14,11 @@ const RetirementCalculator = () => {
   const [returnPreRetirement, setReturnPreRetirement] = useState<number>(12);
   const [returnPostRetirement, setReturnPostRetirement] = useState<number>(7);
   const [existingCorpus, setExistingCorpus] = useState<number>(500000);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const { corpusNeeded, monthlySavingsRequired, futureExpenses, chartData } = useMemo(() => {
     const yearsToRetire = retirementAge - currentAge;
@@ -206,19 +211,21 @@ const RetirementCalculator = () => {
               </Box>
             </Box>
 
-            <Box sx={{ flexGrow: 1, minHeight: 250, mt: 2 }}>
+            <Box sx={{ flexGrow: 1, height: 350, mt: 2 }}>
               <Typography variant="subtitle2" sx={{ mb: 2, textAlign: 'left' }}>Corpus Growth Projection</Typography>
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={chartData} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                  <XAxis dataKey="age" tickFormatter={(value) => `Age ${value}`} />
-                  <YAxis tickFormatter={(value) => `₹${(value / 10000000).toFixed(1)}Cr`} />
-                  <RechartsTooltip formatter={(value: any) => `₹ ${(value / 100000).toFixed(1)}L`} labelFormatter={(value) => `Age ${value}`} />
-                  <Legend />
-                  <Line type="monotone" dataKey="Expected Corpus" stroke="#171717" strokeWidth={3} dot={false} />
-                  <Line type="monotone" dataKey="Total Invested" stroke="#8884d8" strokeWidth={2} dot={false} />
-                </LineChart>
-              </ResponsiveContainer>
+              {isClient && (
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={chartData} margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
+                    <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                    <XAxis dataKey="age" tickFormatter={(value) => `Age ${value}`} />
+                    <YAxis tickFormatter={(value) => value >= 10000000 ? `${(value / 10000000).toFixed(1)}Cr` : `${(value / 100000).toFixed(0)}L`} />
+                    <RechartsTooltip formatter={(value: any) => `₹ ${value.toLocaleString('en-IN')}`} labelFormatter={(value) => `Age ${value}`} />
+                    <Legend />
+                    <Line type="monotone" dataKey="Expected Corpus" stroke="#1a56db" strokeWidth={3} dot={false} />
+                    <Line type="monotone" dataKey="Total Invested" stroke="#71717A" strokeWidth={2} strokeDasharray="5 5" dot={false} />
+                  </LineChart>
+                </ResponsiveContainer>
+              )}
             </Box>
           </Box>
         </Box>
