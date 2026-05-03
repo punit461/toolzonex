@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Box, TextField, Button, Typography, Paper, Alert, Grid, Chip } from '@mui/material';
-import { parsePhoneNumber, isValidPhoneNumber, CountryCode, getCountryCallingCode } from 'libphonenumber-js';
+import { parsePhoneNumber, isValidPhoneNumber, CountryCode, getCountryCallingCode, getCountries } from 'libphonenumber-js';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CancelIcon from '@mui/icons-material/Cancel';
 import CalculatorShell from '../components/CalculatorShell';
@@ -19,6 +19,8 @@ const PhoneValidatorContent = () => {
     type?: string;
   } | null>(null);
   const [error, setError] = useState('');
+
+  const countries = getCountries();
 
   const validatePhone = () => {
     setError('');
@@ -49,13 +51,6 @@ const PhoneValidatorContent = () => {
     }
   };
 
-  const countries: CountryCode[] = [
-    'IN', 'US', 'GB', 'CA', 'AU', 'DE', 'FR', 'JP', 'SG', 'AE',
-    'CN', 'KR', 'IT', 'ES', 'MX', 'BR', 'ZA', 'NG', 'EG', 'TH',
-    'VN', 'MY', 'ID', 'PH', 'NZ', 'RU', 'SE', 'NO', 'DK', 'FI',
-    'NL', 'BE', 'CH', 'AT', 'PL', 'TR', 'IL', 'PK', 'BD', 'LK',
-    'AR', 'CL', 'CO', 'PE', 'VE', 'SA', 'AE', 'KW', 'QA', 'BH', 'OM'
-  ];
 
   return (
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>

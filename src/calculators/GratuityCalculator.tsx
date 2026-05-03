@@ -69,8 +69,8 @@ const GratuityCalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={basicSalary}
-              onChange={(e) => setBasicSalary(Number(e.target.value))}
+              value={Number.isNaN(basicSalary) ? '' : basicSalary}
+              onChange={(e) => setBasicSalary(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
             />
           </Box>
@@ -82,8 +82,8 @@ const GratuityCalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={dearnessAllowance}
-              onChange={(e) => setDearnessAllowance(Number(e.target.value))}
+              value={Number.isNaN(dearnessAllowance) ? '' : dearnessAllowance}
+              onChange={(e) => setDearnessAllowance(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
             />
             <Typography variant="caption" color="text.secondary">Enter 0 if not applicable</Typography>
@@ -96,8 +96,8 @@ const GratuityCalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={yearsOfService}
-              onChange={(e) => setYearsOfService(Number(e.target.value))}
+              value={Number.isNaN(yearsOfService) ? '' : yearsOfService}
+              onChange={(e) => setYearsOfService(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">Yrs</InputAdornment> } }}
             />
           </Box>

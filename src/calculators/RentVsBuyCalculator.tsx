@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Box, TextField, Typography, InputAdornment } from '@mui/material';
 import { BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
@@ -14,6 +14,11 @@ const RentVsBuyCalculator = () => {
   const [loanTenure, setLoanTenure] = useState<number>(20);
   const [propertyAppreciation, setPropertyAppreciation] = useState<number>(5);
   const [rentIncrease, setRentIncrease] = useState<number>(5);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const { breakEvenYear, chartData } = useMemo(() => {
     let downPayment = (propertyValue * downPaymentPct) / 100;
@@ -103,97 +108,97 @@ const RentVsBuyCalculator = () => {
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         {/* Rent Section */}
-        <Box sx={{ bgcolor: '#f0f9ff', p: 3, borderRadius: 2, border: '1px solid #e0e0e0' }}>
-          <Typography variant="h6" sx={{ mb: 2, color: 'primary.main', fontWeight: 700 }}>Rent Details</Typography>
-          <Box sx={{ mb: 3 }}>
-            <Typography gutterBottom>Monthly Rent (₹)</Typography>
+        <Box sx={{ bgcolor: '#f0f9ff', p: 4, borderRadius: 3, border: '1px solid #bae6fd', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+          <Typography variant="h5" sx={{ mb: 3, color: '#0369a1', fontWeight: 800 }}>Rent Details</Typography>
+          <Box sx={{ mb: 4 }}>
+            <Typography gutterBottom fontWeight={600} color="text.secondary">Monthly Rent (₹)</Typography>
             <TextField
               fullWidth
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={rentAmount}
-              onChange={(e) => setRentAmount(Number(e.target.value))}
+              value={Number.isNaN(rentAmount) ? '' : rentAmount}
+              onChange={(e) => setRentAmount(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
             />
           </Box>
           <Box>
-            <Typography gutterBottom>Annual Rent Increase (%)</Typography>
+            <Typography gutterBottom fontWeight={600} color="text.secondary">Annual Rent Increase (%)</Typography>
             <TextField
               fullWidth
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={rentIncrease}
-              onChange={(e) => setRentIncrease(Number(e.target.value))}
+              value={Number.isNaN(rentIncrease) ? '' : rentIncrease}
+              onChange={(e) => setRentIncrease(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
           </Box>
         </Box>
 
         {/* Buy Section */}
-        <Box sx={{ bgcolor: '#fef9e7', p: 3, borderRadius: 2, border: '1px solid #e0e0e0' }}>
-          <Typography variant="h6" sx={{ mb: 2, color: 'warning.dark', fontWeight: 700 }}>Buy Details</Typography>
-          <Box sx={{ mb: 3 }}>
-            <Typography gutterBottom>Property Value (₹)</Typography>
+        <Box sx={{ bgcolor: '#fefce8', p: 4, borderRadius: 3, border: '1px solid #fef08a', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+          <Typography variant="h5" sx={{ mb: 3, color: '#a16207', fontWeight: 800 }}>Buy Details</Typography>
+          <Box sx={{ mb: 4 }}>
+            <Typography gutterBottom fontWeight={600} color="text.secondary">Property Value (₹)</Typography>
             <TextField
               fullWidth
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={propertyValue}
-              onChange={(e) => setPropertyValue(Number(e.target.value))}
+              value={Number.isNaN(propertyValue) ? '' : propertyValue}
+              onChange={(e) => setPropertyValue(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
             />
           </Box>
-          <Box sx={{ mb: 3, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+          <Box sx={{ mb: 4, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 3 }}>
             <Box>
-              <Typography gutterBottom>Down Payment (%)</Typography>
+              <Typography gutterBottom fontWeight={600} color="text.secondary">Down Payment (%)</Typography>
               <TextField
                 fullWidth
                 variant="outlined"
                 type="number"
                 onFocus={(e) => e.target.select()}
-                value={downPaymentPct}
-                onChange={(e) => setDownPaymentPct(Number(e.target.value))}
+                value={Number.isNaN(downPaymentPct) ? '' : downPaymentPct}
+                onChange={(e) => setDownPaymentPct(e.target.value === '' ? NaN : Number(e.target.value))}
                 slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
               />
             </Box>
             <Box>
-              <Typography gutterBottom>Loan Tenure (Years)</Typography>
+              <Typography gutterBottom fontWeight={600} color="text.secondary">Loan Tenure (Years)</Typography>
               <TextField
                 fullWidth
                 variant="outlined"
                 type="number"
                 onFocus={(e) => e.target.select()}
-                value={loanTenure}
-                onChange={(e) => setLoanTenure(Number(e.target.value))}
+                value={Number.isNaN(loanTenure) ? '' : loanTenure}
+                onChange={(e) => setLoanTenure(e.target.value === '' ? NaN : Number(e.target.value))}
                 slotProps={{ input: { endAdornment: <InputAdornment position="end">Yr</InputAdornment> } }}
               />
             </Box>
           </Box>
-          <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 3 }}>
             <Box>
-              <Typography gutterBottom>Home Loan Rate (%)</Typography>
+              <Typography gutterBottom fontWeight={600} color="text.secondary">Home Loan Rate (%)</Typography>
               <TextField
                 fullWidth
                 variant="outlined"
                 type="number"
                 onFocus={(e) => e.target.select()}
-                value={loanRate}
-                onChange={(e) => setLoanRate(Number(e.target.value))}
+                value={Number.isNaN(loanRate) ? '' : loanRate}
+                onChange={(e) => setLoanRate(e.target.value === '' ? NaN : Number(e.target.value))}
                 slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
               />
             </Box>
             <Box>
-              <Typography gutterBottom>Property Appr. (%)</Typography>
+              <Typography gutterBottom fontWeight={600} color="text.secondary">Property Appr. (%)</Typography>
               <TextField
                 fullWidth
                 variant="outlined"
                 type="number"
                 onFocus={(e) => e.target.select()}
-                value={propertyAppreciation}
-                onChange={(e) => setPropertyAppreciation(Number(e.target.value))}
+                value={Number.isNaN(propertyAppreciation) ? '' : propertyAppreciation}
+                onChange={(e) => setPropertyAppreciation(e.target.value === '' ? NaN : Number(e.target.value))}
                 slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
               />
             </Box>
@@ -227,16 +232,18 @@ const RentVsBuyCalculator = () => {
             </Box>
 
             <Box sx={{ height: 250, mt: 'auto' }}>
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={chartData}>
-                  <XAxis dataKey="year" hide />
-                  <YAxis hide />
-                  <RechartsTooltip formatter={(value: any) => `₹ ${value.toLocaleString('en-IN')}`} />
-                  <Legend />
-                  <Bar dataKey="Rent Cost" fill="#171717" />
-                  <Bar dataKey="Net Buy Cost" fill="#D4AF37" />
-                </BarChart>
-              </ResponsiveContainer>
+              {isClient && (
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={chartData}>
+                    <XAxis dataKey="year" hide />
+                    <YAxis hide />
+                    <RechartsTooltip formatter={(value: any) => `₹ ${value.toLocaleString('en-IN')}`} />
+                    <Legend />
+                    <Bar dataKey="Rent Cost" fill="#171717" />
+                    <Bar dataKey="Net Buy Cost" fill="#D4AF37" />
+                  </BarChart>
+                </ResponsiveContainer>
+              )}
             </Box>
           </Box>
         </Box>

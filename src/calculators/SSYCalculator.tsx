@@ -107,12 +107,12 @@ const SSYCalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={girlAge}
-              onChange={(e) => setGirlAge(Number(e.target.value))}
+              value={Number.isNaN(girlAge) ? '' : girlAge}
+              onChange={(e) => setGirlAge(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">Yr</InputAdornment> } }}
             />
             <Slider
-              value={girlAge}
+              value={Number.isNaN(girlAge) ? 0 : girlAge}
               min={1}
               max={10}
               step={1}

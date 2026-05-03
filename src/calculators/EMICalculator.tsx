@@ -107,8 +107,8 @@ const EMICalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={rate}
-              onChange={(e) => setRate(Number(e.target.value))}
+              value={Number.isNaN(rate) ? '' : rate}
+              onChange={(e) => setRate(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{
                 input: {
                   endAdornment: <InputAdornment position="end">%</InputAdornment>,
@@ -116,7 +116,7 @@ const EMICalculator = () => {
               }}
             />
             <Slider
-              value={rate}
+              value={Number.isNaN(rate) ? 0 : rate}
               min={1}
               max={20}
               step={0.1}
@@ -132,8 +132,8 @@ const EMICalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={tenureYears}
-              onChange={(e) => setTenureYears(Number(e.target.value))}
+              value={Number.isNaN(tenureYears) ? '' : tenureYears}
+              onChange={(e) => setTenureYears(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{
                 input: {
                   endAdornment: <InputAdornment position="end">Yr</InputAdornment>,
@@ -141,7 +141,7 @@ const EMICalculator = () => {
               }}
             />
             <Slider
-              value={tenureYears}
+              value={Number.isNaN(tenureYears) ? 0 : tenureYears}
               min={1}
               max={30}
               step={1}

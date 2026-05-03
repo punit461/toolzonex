@@ -49,7 +49,7 @@ const EmailExtractorContent = () => {
           label="Enter Text"
           placeholder="Paste text containing email addresses..."
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={(e) => { setText(e.target.value); setHasSearched(false); }}
           multiline
           rows={6}
           fullWidth

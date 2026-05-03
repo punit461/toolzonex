@@ -70,8 +70,8 @@ const PPFCalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={yearlyInvestment}
-              onChange={(e) => setYearlyInvestment(Number(e.target.value))}
+              value={Number.isNaN(yearlyInvestment) ? '' : yearlyInvestment}
+              onChange={(e) => setYearlyInvestment(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{
                 input: {
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
@@ -79,7 +79,7 @@ const PPFCalculator = () => {
               }}
             />
             <Slider
-              value={yearlyInvestment}
+              value={Number.isNaN(yearlyInvestment) ? 0 : yearlyInvestment}
               min={500}
               max={150000}
               step={500}
@@ -95,8 +95,8 @@ const PPFCalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={timePeriod}
-              onChange={(e) => setTimePeriod(Number(e.target.value))}
+              value={Number.isNaN(timePeriod) ? '' : timePeriod}
+              onChange={(e) => setTimePeriod(e.target.value === '' ? NaN : Number(e.target.value))}
              slotProps={{
                 input: {
                   endAdornment: <InputAdornment position="end">Yr</InputAdornment>,
@@ -105,7 +105,7 @@ const PPFCalculator = () => {
               }}
             />
             <Slider
-              value={timePeriod}
+              value={Number.isNaN(timePeriod) ? 0 : timePeriod}
               min={15}
               max={50}
               step={5}

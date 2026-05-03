@@ -113,8 +113,8 @@ const TDEECalculator = () => {
                 variant="outlined"
                 type="number"
                 onFocus={(e) => e.target.select()}
-                value={age}
-                onChange={(e) => setAge(Number(e.target.value))}
+                value={Number.isNaN(age) ? '' : age}
+                onChange={(e) => setAge(e.target.value === '' ? NaN : Number(e.target.value))}
               />
             </Box>
             <Box>
@@ -125,8 +125,8 @@ const TDEECalculator = () => {
                   variant="outlined"
                   type="number"
                   onFocus={(e) => e.target.select()}
-                  value={weight}
-                  onChange={(e) => setWeight(Number(e.target.value))}
+                  value={Number.isNaN(weight) ? '' : weight}
+                  onChange={(e) => setWeight(e.target.value === '' ? NaN : Number(e.target.value))}
                 />
                 <ToggleButtonGroup
                   color="primary"
@@ -163,8 +163,8 @@ const TDEECalculator = () => {
                 variant="outlined"
                 type="number"
                 onFocus={(e) => e.target.select()}
-                value={heightCm}
-                onChange={(e) => setHeightCm(Number(e.target.value))}
+                value={Number.isNaN(heightCm) ? '' : heightCm}
+                onChange={(e) => setHeightCm(e.target.value === '' ? NaN : Number(e.target.value))}
                 slotProps={{ input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
               />
             ) : (
@@ -175,8 +175,8 @@ const TDEECalculator = () => {
                     variant="outlined"
                     type="number"
                     onFocus={(e) => e.target.select()}
-                    value={heightFt}
-                    onChange={(e) => setHeightFt(Number(e.target.value))}
+                    value={Number.isNaN(heightFt) ? '' : heightFt}
+                    onChange={(e) => setHeightFt(e.target.value === '' ? NaN : Number(e.target.value))}
                     slotProps={{ input: { endAdornment: <InputAdornment position="end">ft</InputAdornment> } }}
                   />
                 </Box>
@@ -186,8 +186,8 @@ const TDEECalculator = () => {
                     variant="outlined"
                     type="number"
                     onFocus={(e) => e.target.select()}
-                    value={heightIn}
-                    onChange={(e) => setHeightIn(Number(e.target.value))}
+                    value={Number.isNaN(heightIn) ? '' : heightIn}
+                    onChange={(e) => setHeightIn(e.target.value === '' ? NaN : Number(e.target.value))}
                     slotProps={{ input: { endAdornment: <InputAdornment position="end">in</InputAdornment> } }}
                   />
                 </Box>

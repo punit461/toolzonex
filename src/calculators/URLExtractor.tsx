@@ -53,7 +53,7 @@ const URLExtractorContent = () => {
           label="Enter Text"
           placeholder="Paste text containing URLs or links..."
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={(e) => { setText(e.target.value); setHasSearched(false); }}
           multiline
           rows={6}
           fullWidth
