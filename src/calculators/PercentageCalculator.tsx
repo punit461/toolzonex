@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Box, TextField, Typography, Paper } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const PercentageCalculator = () => {
   const [val1A, setVal1A] = useState<number>(0);
@@ -144,6 +145,8 @@ const PercentageCalculator = () => {
         </Paper>
 
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

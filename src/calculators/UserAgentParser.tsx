@@ -7,6 +7,7 @@ import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import ComputerIcon from '@mui/icons-material/Computer';
 import PublicIcon from '@mui/icons-material/Public';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const UserAgentParserContent = () => {
   const [ua, setUa] = useState('');
@@ -200,6 +201,8 @@ const UserAgentParser = () => {
       category="Tools"
     >
       <UserAgentParserContent />
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

@@ -6,6 +6,7 @@ import {
   ToggleButton, Chip
 } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 // Scoring tables based on Indian Army / NDA / CDS PFT standards
 const RUN_SCORES: Record<string, { max: number; good: number; avg: number; label: string }> = {
@@ -183,6 +184,8 @@ const PFTCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

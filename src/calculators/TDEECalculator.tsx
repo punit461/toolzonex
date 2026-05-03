@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { Box, TextField, Typography, ToggleButtonGroup, ToggleButton, InputAdornment, MenuItem, Select, FormControl } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const activityMultipliers = {
   sedentary: { label: 'Sedentary (Office job, little to no exercise)', value: 1.2 },
@@ -238,6 +239,8 @@ const TDEECalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

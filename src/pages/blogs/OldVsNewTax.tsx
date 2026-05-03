@@ -1,8 +1,17 @@
 'use client';
 
-import { Typography } from '@mui/material';
+import { Typography , Box} from '@mui/material';
 import RouterLink from 'next/link';
-import BlogShell from '../../components/BlogShell';
+import BlogShell, { RelatedTool } from '../../components/BlogShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const relatedTools: RelatedTool[] = [
+  {
+    label: 'Income Tax Calculator',
+    path: '/finance/income-tax-calculator',
+    description: 'Compare your tax liability under both old and new tax regimes.'
+  },
+];
 
 const OldVsNewTax = () => {
   return (
@@ -11,6 +20,7 @@ const OldVsNewTax = () => {
       description="A comprehensive guide to understanding the difference between the Old and New tax regimes in India and how to pick the right one for you."
       url="/blog/old-vs-new-tax-regime"
       date="April 2026"
+      relatedTools={relatedTools}
     >
       <Typography variant="body1">
         Filing income tax returns in India comes with a major decision: Should you opt for the Old Tax Regime or the New Tax Regime? The government introduced the New Regime to simplify taxes, but the Old Regime remains popular for its deductions. Here is how to decide which one is right for you.
@@ -49,6 +59,8 @@ const OldVsNewTax = () => {
       <Typography variant="body1">
         There is no one-size-fits-all answer. Your choice should be based on your financial goals, cash flow requirements, and existing investments. Always run the numbers before making your final declaration to your employer.
       </Typography>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </BlogShell>
   );
 };

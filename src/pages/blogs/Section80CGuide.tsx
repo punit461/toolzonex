@@ -1,8 +1,22 @@
 'use client';
 
-import { Typography } from '@mui/material';
+import { Typography , Box} from '@mui/material';
 import RouterLink from 'next/link';
-import BlogShell from '../../components/BlogShell';
+import BlogShell, { RelatedTool } from '../../components/BlogShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const relatedTools: RelatedTool[] = [
+  {
+    label: 'PPF Calculator',
+    path: '/finance/ppf-calculator',
+    description: 'Calculate returns on Section 80C qualifying PPF investments.'
+  },
+  {
+    label: 'SIP Calculator',
+    path: '/finance/sip-calculator',
+    description: 'Plan your Section 80C eligible SIP investments.'
+  },
+];
 
 const Section80CGuide = () => (
   <BlogShell
@@ -10,6 +24,7 @@ const Section80CGuide = () => (
     description="Section 80C lets you save up to ₹46,800 in taxes through qualifying investments. Here's every instrument covered, rules, and which ones actually make sense."
     url="/blog/section-80c-investment-guide"
     date="April 2026"
+    relatedTools={relatedTools}
   >
     <Typography variant="body1">
       Section 80C is the single most popular tax-saving provision in India. It allows you to deduct up to ₹1,50,000 from your taxable income by investing in or paying for a prescribed list of instruments and expenses. At a 30% tax rate with cess, this saves up to <strong>₹46,800 per year</strong>.
@@ -64,6 +79,8 @@ const Section80CGuide = () => (
     <Typography variant="body1">
       If you invest ₹1.5L in 80C, you save up to ₹46,800 in tax (30% slab + 4% cess). But the New Regime's lower rates may still result in lower total tax even without 80C, especially at incomes below ₹15 lakh. Always compare using our <RouterLink href="/finance/income-tax-calculator">Income Tax Calculator</RouterLink>.
     </Typography>
+
+  <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
   </BlogShell>
 );
 

@@ -1,7 +1,14 @@
 'use client';
 
-import { Box, Container, Typography, Breadcrumbs, Link } from '@mui/material';
+import { Box, Container, Typography, Breadcrumbs, Link, Paper, Grid, Button } from '@mui/material';
 import RouterLink from 'next/link';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
+export interface RelatedTool {
+  label: string;
+  path: string;
+  description: string;
+}
 
 interface BlogShellProps {
   title: string;
@@ -10,9 +17,10 @@ interface BlogShellProps {
   date: string;
   author?: string;
   children: React.ReactNode;
+  relatedTools?: RelatedTool[];
 }
 
-const BlogShell = ({ title, description, url, date, author = "ToolZoneX Team", children }: BlogShellProps) => {
+const BlogShell = ({ title, description, url, date, author = "ToolZoneX Team", children, relatedTools }: BlogShellProps) => {
   return (
     <Container maxWidth="md" sx={{ py: 6 }}>
       
@@ -58,6 +66,56 @@ const BlogShell = ({ title, description, url, date, author = "ToolZoneX Team", c
       }}>
         {children}
       </Box>
+
+      {relatedTools && relatedTools.length > 0 && (
+        <Box sx={{ mt: 8, pt: 4, borderTop: '2px solid', borderTopColor: 'divider' }}>
+          <Typography variant="h2" sx={{ mb: 3, fontWeight: 700 }}>
+            Related Tools
+          </Typography>
+          <Grid container spacing={2}>
+            {relatedTools.map((tool) => (
+              <Grid item xs={12} sm={6} key={tool.path}>
+                <Paper 
+                  sx={{ 
+                    p: 3, 
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    bgcolor: 'background.default',
+                    border: '1px solid',
+                    borderColor: 'divider',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      borderColor: 'primary.main',
+                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+                      transform: 'translateY(-2px)'
+                    }
+                  }}
+                >
+                  <Box>
+                    <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
+                      {tool.label}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {tool.description}
+                    </Typography>
+                  </Box>
+                  <Button
+                    component={RouterLink}
+                    href={tool.path}
+                    variant="text"
+                    endIcon={<ArrowForwardIcon />}
+                    sx={{ mt: 2, alignSelf: 'flex-start', color: 'primary.main' }}
+                  >
+                    Try Tool
+                  </Button>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      )}
     </Container>
   );
 };

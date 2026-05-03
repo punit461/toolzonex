@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { Box, TextField, Typography, Button } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const AgeCalculator = () => {
   const [dob, setDob] = useState<string>('1990-01-01');
@@ -127,6 +128,8 @@ const AgeCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

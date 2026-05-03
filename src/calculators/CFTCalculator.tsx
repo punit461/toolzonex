@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { Box, Typography, TextField, InputAdornment, Chip } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 // Indian Army CFT Standards (approximate)
 // Events: 5 mile run + ammo can lift (30 lb) + maneuver under fire
@@ -187,6 +188,8 @@ const CFTCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

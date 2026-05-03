@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Box, TextField, Button, Typography, Paper, Alert, Link as MuiLink, Grid } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const MailtoLinkGeneratorContent = () => {
   const [email, setEmail] = useState('');
@@ -157,6 +158,8 @@ const MailtoLinkGenerator = () => {
       category="Tools"
     >
       <MailtoLinkGeneratorContent />
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

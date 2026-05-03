@@ -6,6 +6,7 @@ import { parsePhoneNumber, isValidPhoneNumber, CountryCode, getCountryCallingCod
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CancelIcon from '@mui/icons-material/Cancel';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const PhoneValidatorContent = () => {
   const [phone, setPhone] = useState('');
@@ -48,7 +49,13 @@ const PhoneValidatorContent = () => {
     }
   };
 
-  const countries: CountryCode[] = ['IN', 'US', 'GB', 'CA', 'AU', 'DE', 'FR', 'JP', 'SG', 'AE'];
+  const countries: CountryCode[] = [
+    'IN', 'US', 'GB', 'CA', 'AU', 'DE', 'FR', 'JP', 'SG', 'AE',
+    'CN', 'KR', 'IT', 'ES', 'MX', 'BR', 'ZA', 'NG', 'EG', 'TH',
+    'VN', 'MY', 'ID', 'PH', 'NZ', 'RU', 'SE', 'NO', 'DK', 'FI',
+    'NL', 'BE', 'CH', 'AT', 'PL', 'TR', 'IL', 'PK', 'BD', 'LK',
+    'AR', 'CL', 'CO', 'PE', 'VE', 'SA', 'AE', 'KW', 'QA', 'BH', 'OM'
+  ];
 
   return (
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
@@ -177,6 +184,8 @@ const PhoneValidator = () => {
       category="Tools"
     >
       <PhoneValidatorContent />
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

@@ -1,8 +1,22 @@
 'use client';
 
-import { Typography } from '@mui/material';
+import { Typography , Box} from '@mui/material';
 import RouterLink from 'next/link';
-import BlogShell from '../../components/BlogShell';
+import BlogShell, { RelatedTool } from '../../components/BlogShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const relatedTools: RelatedTool[] = [
+  {
+    label: 'SIP Calculator',
+    path: '/finance/sip-calculator',
+    description: 'See how compound interest grows your SIP investments over time.'
+  },
+  {
+    label: 'PPF Calculator',
+    path: '/finance/ppf-calculator',
+    description: 'Understand compound growth with the Public Provident Fund.'
+  },
+];
 
 const CompoundInterest = () => {
   return (
@@ -11,6 +25,7 @@ const CompoundInterest = () => {
       description="Understand the mechanics of compound interest and why starting early is the biggest advantage in wealth creation."
       url="/blog/power-of-compound-interest"
       date="May 2026"
+      relatedTools={relatedTools}
     >
       <Typography variant="body1">
         "Compound interest is the eighth wonder of the world. He who understands it, earns it... he who doesn't... pays it." — often attributed to Albert Einstein.
@@ -49,6 +64,8 @@ const CompoundInterest = () => {
       <Typography variant="body1">
         Don't just take our word for it. Head over to our <RouterLink href="/calculators/sip-calculator">SIP Calculator</RouterLink> and play around with the 'Time Period' slider. You'll notice that the wealth generated in the last 5 years of a 20-year SIP is almost equal to the wealth generated in the first 15 years.
       </Typography>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </BlogShell>
   );
 };

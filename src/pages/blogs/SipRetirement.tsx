@@ -1,8 +1,22 @@
 'use client';
 
-import { Typography } from '@mui/material';
+import { Typography , Box} from '@mui/material';
 import RouterLink from 'next/link';
-import BlogShell from '../../components/BlogShell';
+import BlogShell, { RelatedTool } from '../../components/BlogShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const relatedTools: RelatedTool[] = [
+  {
+    label: 'SIP Calculator',
+    path: '/finance/sip-calculator',
+    description: 'Plan your SIP investments and track progress towards retirement.'
+  },
+  {
+    label: 'Retirement Calculator',
+    path: '/finance/retirement-calculator',
+    description: 'Calculate how much you need to save for early retirement.'
+  },
+];
 
 const SipRetirement = () => {
   return (
@@ -11,6 +25,7 @@ const SipRetirement = () => {
       description="Discover how consistent investments in Systematic Investment Plans (SIPs) can help you achieve financial independence and retire early."
       url="/blog/sip-early-retirement"
       date="April 2026"
+      relatedTools={relatedTools}
     >
       <Typography variant="body1">
         Retiring early isn't just a pipe dream for the ultra-wealthy. With the right strategy and a disciplined approach, anyone can achieve financial independence and retire early (FIRE). In India, one of the most effective tools for building this kind of wealth is the Systematic Investment Plan (SIP) in mutual funds.
@@ -49,6 +64,8 @@ const SipRetirement = () => {
       <Typography variant="body1">
         Early retirement requires sacrifice, discipline, and the right vehicle to grow your money. SIPs provide the perfect mix of flexibility, high potential returns, and compounding magic. Start early, stay consistent, and watch your wealth grow.
       </Typography>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </BlogShell>
   );
 };

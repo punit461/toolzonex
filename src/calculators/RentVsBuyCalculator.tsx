@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import { Box, TextField, Typography, InputAdornment } from '@mui/material';
 import { BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const RentVsBuyCalculator = () => {
   const [propertyValue, setPropertyValue] = useState<number>(5000000);
@@ -101,42 +102,58 @@ const RentVsBuyCalculator = () => {
       category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
-        <Box>
-          <Box sx={{ mb: 4, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
-            <Box>
-              <Typography gutterBottom>Property Value (₹)</Typography>
-              <TextField
-                fullWidth
-                variant="outlined"
-                type="number"
+        {/* Rent Section */}
+        <Box sx={{ bgcolor: '#f0f9ff', p: 3, borderRadius: 2, border: '1px solid #e0e0e0' }}>
+          <Typography variant="h6" sx={{ mb: 2, color: 'primary.main', fontWeight: 700 }}>Rent Details</Typography>
+          <Box sx={{ mb: 3 }}>
+            <Typography gutterBottom>Monthly Rent (₹)</Typography>
+            <TextField
+              fullWidth
+              variant="outlined"
+              type="number"
               onFocus={(e) => e.target.select()}
-                value={propertyValue}
-                onChange={(e) => setPropertyValue(Number(e.target.value))}
-                slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
-              />
-            </Box>
-            <Box>
-              <Typography gutterBottom>Monthly Rent (₹)</Typography>
-              <TextField
-                fullWidth
-                variant="outlined"
-                type="number"
-              onFocus={(e) => e.target.select()}
-                value={rentAmount}
-                onChange={(e) => setRentAmount(Number(e.target.value))}
-                slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
-              />
-            </Box>
+              value={rentAmount}
+              onChange={(e) => setRentAmount(Number(e.target.value))}
+              slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
+            />
           </Box>
+          <Box>
+            <Typography gutterBottom>Annual Rent Increase (%)</Typography>
+            <TextField
+              fullWidth
+              variant="outlined"
+              type="number"
+              onFocus={(e) => e.target.select()}
+              value={rentIncrease}
+              onChange={(e) => setRentIncrease(Number(e.target.value))}
+              slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+            />
+          </Box>
+        </Box>
 
-          <Box sx={{ mb: 4, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+        {/* Buy Section */}
+        <Box sx={{ bgcolor: '#fef9e7', p: 3, borderRadius: 2, border: '1px solid #e0e0e0' }}>
+          <Typography variant="h6" sx={{ mb: 2, color: 'warning.dark', fontWeight: 700 }}>Buy Details</Typography>
+          <Box sx={{ mb: 3 }}>
+            <Typography gutterBottom>Property Value (₹)</Typography>
+            <TextField
+              fullWidth
+              variant="outlined"
+              type="number"
+              onFocus={(e) => e.target.select()}
+              value={propertyValue}
+              onChange={(e) => setPropertyValue(Number(e.target.value))}
+              slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
+            />
+          </Box>
+          <Box sx={{ mb: 3, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
             <Box>
               <Typography gutterBottom>Down Payment (%)</Typography>
               <TextField
                 fullWidth
                 variant="outlined"
                 type="number"
-              onFocus={(e) => e.target.select()}
+                onFocus={(e) => e.target.select()}
                 value={downPaymentPct}
                 onChange={(e) => setDownPaymentPct(Number(e.target.value))}
                 slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
@@ -148,22 +165,21 @@ const RentVsBuyCalculator = () => {
                 fullWidth
                 variant="outlined"
                 type="number"
-              onFocus={(e) => e.target.select()}
+                onFocus={(e) => e.target.select()}
                 value={loanTenure}
                 onChange={(e) => setLoanTenure(Number(e.target.value))}
                 slotProps={{ input: { endAdornment: <InputAdornment position="end">Yr</InputAdornment> } }}
               />
             </Box>
           </Box>
-
-          <Box sx={{ mb: 4, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
             <Box>
               <Typography gutterBottom>Home Loan Rate (%)</Typography>
               <TextField
                 fullWidth
                 variant="outlined"
                 type="number"
-              onFocus={(e) => e.target.select()}
+                onFocus={(e) => e.target.select()}
                 value={loanRate}
                 onChange={(e) => setLoanRate(Number(e.target.value))}
                 slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
@@ -175,25 +191,12 @@ const RentVsBuyCalculator = () => {
                 fullWidth
                 variant="outlined"
                 type="number"
-              onFocus={(e) => e.target.select()}
+                onFocus={(e) => e.target.select()}
                 value={propertyAppreciation}
                 onChange={(e) => setPropertyAppreciation(Number(e.target.value))}
                 slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
               />
             </Box>
-          </Box>
-
-          <Box sx={{ mb: 4 }}>
-            <Typography gutterBottom>Annual Rent Increase (%)</Typography>
-            <TextField
-              fullWidth
-              variant="outlined"
-              type="number"
-              onFocus={(e) => e.target.select()}
-              value={rentIncrease}
-              onChange={(e) => setRentIncrease(Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
-            />
           </Box>
         </Box>
 
@@ -238,6 +241,8 @@ const RentVsBuyCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

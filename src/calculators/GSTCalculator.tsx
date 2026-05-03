@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { Box, TextField, Typography, ToggleButtonGroup, ToggleButton, InputAdornment, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const GST_RATES = [0, 5, 12, 18, 28];
 
@@ -168,6 +169,8 @@ const GSTCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

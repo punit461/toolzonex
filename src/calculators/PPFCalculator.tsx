@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import { Box, TextField, Typography, Slider, InputAdornment } from '@mui/material';
 import { BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const PPFCalculator = () => {
   const [yearlyInvestment, setYearlyInvestment] = useState<number>(150000);
@@ -152,6 +153,8 @@ const PPFCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

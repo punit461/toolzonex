@@ -1,8 +1,17 @@
 'use client';
 
-import { Typography } from '@mui/material';
+import { Typography , Box} from '@mui/material';
 import RouterLink from 'next/link';
-import BlogShell from '../../components/BlogShell';
+import BlogShell, { RelatedTool } from '../../components/BlogShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const relatedTools: RelatedTool[] = [
+  {
+    label: 'GST Calculator',
+    path: '/finance/gst-calculator',
+    description: 'Calculate GST amount and total price for products and services.'
+  },
+];
 
 const GstImpact = () => {
   return (
@@ -11,6 +20,7 @@ const GstImpact = () => {
       description="Learn the basics of Goods and Services Tax (GST) and how it affects the day-to-day operations of small businesses in India."
       url="/blog/understanding-gst"
       date="March 2026"
+      relatedTools={relatedTools}
     >
       <Typography variant="body1">
         The Goods and Services Tax (GST) was introduced in India to replace a complex web of indirect taxes like VAT, Service Tax, and Excise Duty. While it aimed for "One Nation, One Tax," its implementation has significantly changed how small businesses operate.
@@ -47,6 +57,8 @@ const GstImpact = () => {
       <Typography variant="body1">
         While GST compliance requires effort, the long-term benefits of a unified market, digital records, and easier logistics far outweigh the initial hurdles. Embracing technology and understanding the basics of GST is key to thriving in the current Indian business landscape.
       </Typography>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </BlogShell>
   );
 };

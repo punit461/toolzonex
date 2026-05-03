@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import { Box, TextField, Typography, Slider, InputAdornment } from '@mui/material';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const COLORS = ['#171717', '#D4AF37'];
 
@@ -79,7 +80,10 @@ const EMICalculator = () => {
               type="number"
               onFocus={(e) => e.target.select()}
               value={principal}
-              onChange={(e) => setPrincipal(Number(e.target.value))}
+              onChange={(e) => {
+                const val = e.target.value;
+                setPrincipal(val === '' ? 0 : Number(val));
+              }}
               slotProps={{
                 input: {
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
@@ -194,6 +198,8 @@ const EMICalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

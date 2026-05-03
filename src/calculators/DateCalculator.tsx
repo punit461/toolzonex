@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Box, TextField, Typography, Button, ToggleButtonGroup, ToggleButton } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const DateCalculator = () => {
   const [tab, setTab] = useState<'diff' | 'add'>('diff');
@@ -192,6 +193,8 @@ const DateCalculator = () => {
           </Box>
         </Box>
       )}
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

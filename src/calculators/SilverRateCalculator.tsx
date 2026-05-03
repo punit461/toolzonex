@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Box, TextField, Typography, InputAdornment } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const SilverRateCalculator = () => {
   const [weight, setWeight] = useState<number>(100); // in grams
@@ -121,6 +122,8 @@ const SilverRateCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

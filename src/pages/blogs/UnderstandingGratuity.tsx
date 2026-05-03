@@ -1,8 +1,17 @@
 'use client';
 
-import { Typography } from '@mui/material';
+import { Typography , Box} from '@mui/material';
 import RouterLink from 'next/link';
-import BlogShell from '../../components/BlogShell';
+import BlogShell, { RelatedTool } from '../../components/BlogShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const relatedTools: RelatedTool[] = [
+  {
+    label: 'Gratuity Calculator',
+    path: '/finance/gratuity-calculator',
+    description: 'Calculate your exact gratuity payout based on your basic salary and years of service.'
+  },
+];
 
 const UnderstandingGratuity = () => {
   return (
@@ -11,6 +20,7 @@ const UnderstandingGratuity = () => {
       description="Everything you need to know about Gratuity in India, from eligibility criteria to calculating your final payout."
       url="/blog/understanding-gratuity-india"
       date="May 2026"
+      relatedTools={relatedTools}
     >
       <Typography variant="body1">
         Gratuity is a financial reward provided by an employer to an employee for rendering continuous service for a certain period. It acts as a significant financial buffer when you switch jobs or retire, but many employees don't fully understand how it works.
@@ -44,6 +54,8 @@ const UnderstandingGratuity = () => {
       <Typography variant="body1">
         Instead of doing the math manually, you can use our <RouterLink href="/calculators/gratuity-calculator">Online Gratuity Calculator</RouterLink>. Just enter your basic salary, DA, and years of service, and it will instantly show your estimated payout and whether it crosses the tax-free limit.
       </Typography>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </BlogShell>
   );
 };

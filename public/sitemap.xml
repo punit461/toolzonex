@@ -4,7 +4,7 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- ToolZoneX Sitemap - Updated 2026-05-01 -->
+<!-- ToolZoneX Sitemap - Updated 2026-05-03 -->
 
 <url>
   <loc>https://punit461.github.io/toolzonex/</loc>
@@ -140,6 +140,72 @@
 </url>
 <url>
   <loc>https://punit461.github.io/toolzonex/tools/online-notepad</loc>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://punit461.github.io/toolzonex/tools/email-extractor</loc>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://punit461.github.io/toolzonex/tools/exif-reader</loc>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://punit461.github.io/toolzonex/tools/image-converter</loc>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://punit461.github.io/toolzonex/tools/mailto-link-generator</loc>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://punit461.github.io/toolzonex/tools/online-image-editor</loc>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://punit461.github.io/toolzonex/tools/phone-validator</loc>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://punit461.github.io/toolzonex/tools/text-size-calculator</loc>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://punit461.github.io/toolzonex/tools/url-extractor</loc>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://punit461.github.io/toolzonex/tools/user-agent-parser</loc>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://punit461.github.io/toolzonex/tools/what-is-my-ip</loc>
+  <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://punit461.github.io/toolzonex/tools/whatsapp-link-generator</loc>
   <lastmod>2026-05-01T00:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.70</priority>

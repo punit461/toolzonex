@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { Box, TextField, Typography, Slider, InputAdornment } from '@mui/material';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const RetirementCalculator = () => {
   const [currentAge, setCurrentAge] = useState<number>(30);
@@ -231,6 +232,8 @@ const RetirementCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

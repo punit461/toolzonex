@@ -5,15 +5,18 @@ import { Box, TextField, Button, Typography, Paper, Chip, Alert } from '@mui/mat
 import EmailIcon from '@mui/icons-material/Email';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const EmailExtractorContent = () => {
   const [text, setText] = useState('');
   const [emails, setEmails] = useState<string[]>([]);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const [hasSearched, setHasSearched] = useState(false);
 
   const extractEmails = () => {
     setError('');
+    setHasSearched(true);
     
     if (!text.trim()) {
       setError('Please enter some text to extract emails from');
@@ -59,7 +62,7 @@ const EmailExtractorContent = () => {
 
         {error && <Alert severity="error" sx={{ mb: 2 }}>{error}</Alert>}
 
-        {emails.length === 0 && text.trim() && !error && (
+        {hasSearched && emails.length === 0 && !error && (
           <Alert severity="info">No email addresses found in the text.</Alert>
         )}
       </Box>
@@ -137,6 +140,8 @@ const EmailExtractor = () => {
       category="Tools"
     >
       <EmailExtractorContent />
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

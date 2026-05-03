@@ -9,6 +9,7 @@ import RotateRightIcon from '@mui/icons-material/RotateRight';
 import FlipIcon from '@mui/icons-material/Flip';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const OnlineImageEditorContent = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -243,6 +244,8 @@ const OnlineImageEditor = () => {
       category="Tools"
     >
       <OnlineImageEditorContent />
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

@@ -1,7 +1,26 @@
 'use client';
 
-import { Typography } from '@mui/material';
-import BlogShell from '../../components/BlogShell';
+import { Typography , Box} from '@mui/material';
+import BlogShell, { RelatedTool } from '../../components/BlogShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const relatedTools: RelatedTool[] = [
+  {
+    label: 'EMI Calculator',
+    path: '/finance/emi-calculator',
+    description: 'Calculate your monthly EMI payments for loans and mortgages.'
+  },
+  {
+    label: 'SIP Calculator',
+    path: '/finance/sip-calculator',
+    description: 'Plan your systematic investment program and track growth.'
+  },
+  {
+    label: 'PPF Calculator',
+    path: '/finance/ppf-calculator',
+    description: 'Calculate returns on your Public Provident Fund investments.'
+  },
+];
 
 const BudgetingRule = () => {
   return (
@@ -10,6 +29,7 @@ const BudgetingRule = () => {
       description="Master your personal finances by applying the simple yet effective 50/30/20 budgeting rule to your monthly income."
       url="/blog/50-30-20-budgeting-rule"
       date="March 2026"
+      relatedTools={relatedTools}
     >
       <Typography variant="body1">
         Budgeting doesn't have to mean tracking every single penny on a complicated spreadsheet. If you find traditional budgeting overwhelming, the 50/30/20 rule is the perfect starting point for taking control of your finances.
@@ -69,6 +89,8 @@ const BudgetingRule = () => {
       <Typography variant="body1">
         Financial freedom starts with understanding where your money goes. By applying the 50/30/20 rule, you can balance your present desires with your future needs, building wealth slowly and steadily over time.
       </Typography>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </BlogShell>
   );
 };

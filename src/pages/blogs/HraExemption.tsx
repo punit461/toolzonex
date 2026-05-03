@@ -1,8 +1,17 @@
 'use client';
 
-import { Typography } from '@mui/material';
+import { Typography , Box} from '@mui/material';
 import RouterLink from 'next/link';
-import BlogShell from '../../components/BlogShell';
+import BlogShell, { RelatedTool } from '../../components/BlogShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const relatedTools: RelatedTool[] = [
+  {
+    label: 'Income Tax Calculator',
+    path: '/finance/income-tax-calculator',
+    description: 'Calculate your income tax liability with HRA exemption benefits.'
+  },
+];
 
 const HraExemption = () => (
   <BlogShell
@@ -10,6 +19,7 @@ const HraExemption = () => (
     description="House Rent Allowance (HRA) is one of the biggest tax-saving opportunities for salaried employees under the Old Regime. Learn the formula, examples, and tips."
     url="/blog/hra-exemption-calculation"
     date="April 2026"
+    relatedTools={relatedTools}
   >
     <Typography variant="body1">
       For salaried employees living in rented accommodation, HRA exemption can save tens of thousands in taxes each year. However, the calculation involves three competing limits — and the least of the three wins.
@@ -72,6 +82,8 @@ const HraExemption = () => (
       <RouterLink href="/finance/income-tax-calculator">Income Tax Calculator</RouterLink>{' '}
       to compare both regimes with your actual HRA figures.
     </Typography>
+
+  <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
   </BlogShell>
 );
 

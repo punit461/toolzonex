@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Box, TextField, Typography, InputAdornment } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const GoldRateCalculator = () => {
   const [weight, setWeight] = useState<number>(10); // in grams
@@ -124,6 +125,8 @@ const GoldRateCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

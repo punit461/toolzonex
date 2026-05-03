@@ -1,7 +1,16 @@
 'use client';
 
-import { Typography } from '@mui/material';
-import BlogShell from '../../components/BlogShell';
+import { Typography , Box} from '@mui/material';
+import BlogShell, { RelatedTool } from '../../components/BlogShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const relatedTools: RelatedTool[] = [
+  {
+    label: 'EMI Calculator',
+    path: '/finance/emi-calculator',
+    description: 'Plan your EMI payments to never miss a due date and improve your CIBIL score.'
+  },
+];
 
 const ImproveCibilScore = () => {
   return (
@@ -10,6 +19,7 @@ const ImproveCibilScore = () => {
       description="A step-by-step guide on how to fix a bad credit score and maintain a CIBIL score above 750."
       url="/blog/improve-cibil-score"
       date="May 2026"
+      relatedTools={relatedTools}
     >
       <Typography variant="body1">
         Your CIBIL score is a three-digit number ranging from 300 to 900 that summarizes your credit history. A score above 750 is generally considered excellent and can unlock low-interest home and personal loans. But what if your score is low?
@@ -46,6 +56,8 @@ const ImproveCibilScore = () => {
       <Typography variant="body1">
         Improving your CIBIL score doesn't happen overnight, but by following these disciplined steps, you can start seeing a steady increase within 3 to 6 months.
       </Typography>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </BlogShell>
   );
 };

@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { Box, TextField, Typography, Slider, InputAdornment, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const SalaryIncrementCalculator = () => {
   const [currentCTC, setCurrentCTC] = useState<number>(1000000);
@@ -178,6 +179,8 @@ const SalaryIncrementCalculator = () => {
           </Table>
         </TableContainer>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };
