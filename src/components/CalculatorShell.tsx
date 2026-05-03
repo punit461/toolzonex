@@ -14,13 +14,11 @@ interface CalculatorShellProps {
 }
 
 const CalculatorShell = ({ title, description, url, children, content, category = 'Finance' }: CalculatorShellProps) => {
-  const categoryPath = `/${category.toLowerCase()}`;
-  
   return (
     <Box>
       <Breadcrumbs
         items={[
-          { label: category, href: categoryPath },
+          { label: category },
           { label: title }
         ]}
       />

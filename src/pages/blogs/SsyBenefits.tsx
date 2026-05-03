@@ -1,8 +1,17 @@
 'use client';
 
-import { Typography } from '@mui/material';
+import { Typography , Box} from '@mui/material';
 import RouterLink from 'next/link';
-import BlogShell from '../../components/BlogShell';
+import BlogShell, { RelatedTool } from '../../components/BlogShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const relatedTools: RelatedTool[] = [
+  {
+    label: 'SSY Calculator',
+    path: '/finance/ssy-calculator',
+    description: 'Calculate returns and maturity amount for Sukanya Samriddhi Yojana.'
+  },
+];
 
 const SsyBenefits = () => {
   return (
@@ -11,6 +20,7 @@ const SsyBenefits = () => {
       description="A detailed guide to the SSY scheme, its benefits, interest rates, and why every parent should consider it."
       url="/blog/sukanya-samriddhi-yojana-benefits"
       date="May 2026"
+      relatedTools={relatedTools}
     >
       <Typography variant="body1">
         Launched under the Government of India's "Beti Bachao, Beti Padhao" campaign, the Sukanya Samriddhi Yojana (SSY) is one of the most powerful tax-saving investment schemes available today. It is exclusively designed to help parents build a substantial corpus for their daughter's higher education and marriage.
@@ -45,6 +55,8 @@ const SsyBenefits = () => {
       <Typography variant="body1">
         You can plug your own numbers into our <RouterLink href="/calculators/ssy-calculator">SSY Calculator</RouterLink> to see exactly how much you can save based on your budget.
       </Typography>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </BlogShell>
   );
 };

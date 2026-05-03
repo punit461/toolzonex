@@ -1,8 +1,22 @@
 'use client';
 
-import { Typography } from '@mui/material';
+import { Typography , Box} from '@mui/material';
 import RouterLink from 'next/link';
-import BlogShell from '../../components/BlogShell';
+import BlogShell, { RelatedTool } from '../../components/BlogShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const relatedTools: RelatedTool[] = [
+  {
+    label: 'Rent vs Buy Calculator',
+    path: '/finance/rent-vs-buy-calculator',
+    description: 'Compare the financial impact of renting vs buying a property.'
+  },
+  {
+    label: 'EMI Calculator',
+    path: '/finance/emi-calculator',
+    description: 'Calculate monthly EMI payments for your home loan.'
+  },
+];
 
 const RentingVsBuying = () => {
   return (
@@ -11,6 +25,7 @@ const RentingVsBuying = () => {
       description="A detailed analysis of the age-old debate: should you rent a house or buy one?"
       url="/blog/renting-vs-buying-home"
       date="May 2026"
+      relatedTools={relatedTools}
     >
       <Typography variant="body1">
         The "Rent vs Buy" debate is one of the most emotional financial discussions in India. For generations, buying a home has been seen as the ultimate symbol of security. However, changing economic realities and rising real estate prices are making many millennials rethink this paradigm.
@@ -48,6 +63,8 @@ const RentingVsBuying = () => {
       <Typography variant="body1">
         Every city and property is different. To find out exactly which option is better for your specific situation, use our <RouterLink href="/calculators/rent-vs-buy-calculator">Rent vs Buy Calculator</RouterLink>. It factors in rent inflation, property appreciation, and home loan interest to give you a clear financial verdict.
       </Typography>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </BlogShell>
   );
 };

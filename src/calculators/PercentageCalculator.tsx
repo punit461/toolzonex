@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Box, TextField, Typography, Paper } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const PercentageCalculator = () => {
   const [val1A, setVal1A] = useState<number>(0);
@@ -61,8 +62,8 @@ const PercentageCalculator = () => {
               onFocus={(e) => e.target.select()} 
               variant="outlined" 
               size="small" 
-              value={val1A} 
-              onChange={(e) => setVal1A(Number(e.target.value))} 
+              value={Number.isNaN(val1A) ? '' : val1A} 
+              onChange={(e) => setVal1A(e.target.value === '' ? NaN : Number(e.target.value))} 
               sx={{ width: 100 }}
             />
             <Typography>% of</Typography>
@@ -71,8 +72,8 @@ const PercentageCalculator = () => {
               onFocus={(e) => e.target.select()} 
               variant="outlined" 
               size="small" 
-              value={val1B} 
-              onChange={(e) => setVal1B(Number(e.target.value))} 
+              value={Number.isNaN(val1B) ? '' : val1B} 
+              onChange={(e) => setVal1B(e.target.value === '' ? NaN : Number(e.target.value))} 
               sx={{ width: 150 }}
             />
             <Typography>?</Typography>
@@ -92,8 +93,8 @@ const PercentageCalculator = () => {
               onFocus={(e) => e.target.select()} 
               variant="outlined" 
               size="small" 
-              value={val2A} 
-              onChange={(e) => setVal2A(Number(e.target.value))} 
+              value={Number.isNaN(val2A) ? '' : val2A} 
+              onChange={(e) => setVal2A(e.target.value === '' ? NaN : Number(e.target.value))} 
               sx={{ width: 150 }}
             />
             <Typography>is what % of</Typography>
@@ -102,8 +103,8 @@ const PercentageCalculator = () => {
               onFocus={(e) => e.target.select()} 
               variant="outlined" 
               size="small" 
-              value={val2B} 
-              onChange={(e) => setVal2B(Number(e.target.value))} 
+              value={Number.isNaN(val2B) ? '' : val2B} 
+              onChange={(e) => setVal2B(e.target.value === '' ? NaN : Number(e.target.value))} 
               sx={{ width: 150 }}
             />
             <Typography>?</Typography>
@@ -123,8 +124,8 @@ const PercentageCalculator = () => {
               onFocus={(e) => e.target.select()} 
               variant="outlined" 
               size="small" 
-              value={val3A} 
-              onChange={(e) => setVal3A(Number(e.target.value))} 
+              value={Number.isNaN(val3A) ? '' : val3A} 
+              onChange={(e) => setVal3A(e.target.value === '' ? NaN : Number(e.target.value))} 
               sx={{ width: 150 }}
             />
             <Typography>to</Typography>
@@ -133,8 +134,8 @@ const PercentageCalculator = () => {
               onFocus={(e) => e.target.select()} 
               variant="outlined" 
               size="small" 
-              value={val3B} 
-              onChange={(e) => setVal3B(Number(e.target.value))} 
+              value={Number.isNaN(val3B) ? '' : val3B} 
+              onChange={(e) => setVal3B(e.target.value === '' ? NaN : Number(e.target.value))} 
               sx={{ width: 150 }}
             />
           </Box>
@@ -144,6 +145,8 @@ const PercentageCalculator = () => {
         </Paper>
 
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

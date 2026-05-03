@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Box, TextField, Typography, InputAdornment } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const GoldRateCalculator = () => {
   const [weight, setWeight] = useState<number>(10); // in grams
@@ -51,8 +52,8 @@ const GoldRateCalculator = () => {
               fullWidth
               variant="outlined"
               type="number"
-              value={weight}
-              onChange={(e) => setWeight(Number(e.target.value))}
+              value={Number.isNaN(weight) ? '' : weight}
+              onChange={(e) => setWeight(e.target.value === '' ? NaN : Number(e.target.value))}
               onFocus={(e) => e.target.select()}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">g</InputAdornment> } }}
             />
@@ -64,8 +65,8 @@ const GoldRateCalculator = () => {
               fullWidth
               variant="outlined"
               type="number"
-              value={ratePer10g}
-              onChange={(e) => setRatePer10g(Number(e.target.value))}
+              value={Number.isNaN(ratePer10g) ? '' : ratePer10g}
+              onChange={(e) => setRatePer10g(e.target.value === '' ? NaN : Number(e.target.value))}
               onFocus={(e) => e.target.select()}
               slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
             />
@@ -77,8 +78,8 @@ const GoldRateCalculator = () => {
               fullWidth
               variant="outlined"
               type="number"
-              value={makingChargesPct}
-              onChange={(e) => setMakingChargesPct(Number(e.target.value))}
+              value={Number.isNaN(makingChargesPct) ? '' : makingChargesPct}
+              onChange={(e) => setMakingChargesPct(e.target.value === '' ? NaN : Number(e.target.value))}
               onFocus={(e) => e.target.select()}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
@@ -90,8 +91,8 @@ const GoldRateCalculator = () => {
               fullWidth
               variant="outlined"
               type="number"
-              value={gstPct}
-              onChange={(e) => setGstPct(Number(e.target.value))}
+              value={Number.isNaN(gstPct) ? '' : gstPct}
+              onChange={(e) => setGstPct(e.target.value === '' ? NaN : Number(e.target.value))}
               onFocus={(e) => e.target.select()}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
@@ -124,6 +125,8 @@ const GoldRateCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

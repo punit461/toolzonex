@@ -5,6 +5,7 @@ import { Box, Button, Typography, Paper, Alert, Grid, CircularProgress } from '@
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import exifr from 'exifr';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 interface ExifData {
   Make?: string;
@@ -190,6 +191,8 @@ const ExifReader = () => {
       category="Tools"
     >
       <ExifReaderContent />
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Box, TextField, Typography, InputAdornment } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const SilverRateCalculator = () => {
   const [weight, setWeight] = useState<number>(100); // in grams
@@ -48,8 +49,8 @@ const SilverRateCalculator = () => {
               fullWidth
               variant="outlined"
               type="number"
-              value={ratePerKg}
-              onChange={(e) => setRatePerKg(Number(e.target.value))}
+              value={Number.isNaN(ratePerKg) ? '' : ratePerKg}
+              onChange={(e) => setRatePerKg(e.target.value === '' ? NaN : Number(e.target.value))}
               onFocus={(e) => e.target.select()}
               slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
             />
@@ -61,8 +62,8 @@ const SilverRateCalculator = () => {
               fullWidth
               variant="outlined"
               type="number"
-              value={weight}
-              onChange={(e) => setWeight(Number(e.target.value))}
+              value={Number.isNaN(weight) ? '' : weight}
+              onChange={(e) => setWeight(e.target.value === '' ? NaN : Number(e.target.value))}
               onFocus={(e) => e.target.select()}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">g</InputAdornment> } }}
             />
@@ -74,8 +75,8 @@ const SilverRateCalculator = () => {
               fullWidth
               variant="outlined"
               type="number"
-              value={makingChargesPct}
-              onChange={(e) => setMakingChargesPct(Number(e.target.value))}
+              value={Number.isNaN(makingChargesPct) ? '' : makingChargesPct}
+              onChange={(e) => setMakingChargesPct(e.target.value === '' ? NaN : Number(e.target.value))}
               onFocus={(e) => e.target.select()}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
@@ -87,8 +88,8 @@ const SilverRateCalculator = () => {
               fullWidth
               variant="outlined"
               type="number"
-              value={gstPct}
-              onChange={(e) => setGstPct(Number(e.target.value))}
+              value={Number.isNaN(gstPct) ? '' : gstPct}
+              onChange={(e) => setGstPct(e.target.value === '' ? NaN : Number(e.target.value))}
               onFocus={(e) => e.target.select()}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
@@ -121,6 +122,8 @@ const SilverRateCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

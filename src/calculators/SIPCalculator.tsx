@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import { Box, TextField, Typography, Slider, InputAdornment } from '@mui/material';
 import { BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const SIPCalculator = () => {
   const [monthlyInvestment, setMonthlyInvestment] = useState<number>(5000);
@@ -69,8 +70,8 @@ const SIPCalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={monthlyInvestment}
-              onChange={(e) => setMonthlyInvestment(Number(e.target.value))}
+              value={Number.isNaN(monthlyInvestment) ? '' : monthlyInvestment}
+              onChange={(e) => setMonthlyInvestment(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{
                 input: {
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
@@ -78,7 +79,7 @@ const SIPCalculator = () => {
               }}
             />
             <Slider
-              value={monthlyInvestment}
+              value={Number.isNaN(monthlyInvestment) ? 0 : monthlyInvestment}
               min={500}
               max={100000}
               step={500}
@@ -94,8 +95,8 @@ const SIPCalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={expectedReturnRate}
-              onChange={(e) => setExpectedReturnRate(Number(e.target.value))}
+              value={Number.isNaN(expectedReturnRate) ? '' : expectedReturnRate}
+              onChange={(e) => setExpectedReturnRate(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{
                 input: {
                   endAdornment: <InputAdornment position="end">%</InputAdornment>,
@@ -103,7 +104,7 @@ const SIPCalculator = () => {
               }}
             />
             <Slider
-              value={expectedReturnRate}
+              value={Number.isNaN(expectedReturnRate) ? 0 : expectedReturnRate}
               min={1}
               max={30}
               step={0.5}
@@ -119,8 +120,8 @@ const SIPCalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={timePeriod}
-              onChange={(e) => setTimePeriod(Number(e.target.value))}
+              value={Number.isNaN(timePeriod) ? '' : timePeriod}
+              onChange={(e) => setTimePeriod(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{
                 input: {
                   endAdornment: <InputAdornment position="end">Yr</InputAdornment>,
@@ -128,7 +129,7 @@ const SIPCalculator = () => {
               }}
             />
             <Slider
-              value={timePeriod}
+              value={Number.isNaN(timePeriod) ? 0 : timePeriod}
               min={1}
               max={40}
               step={1}
@@ -171,6 +172,8 @@ const SIPCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

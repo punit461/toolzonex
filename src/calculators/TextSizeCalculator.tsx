@@ -6,6 +6,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import TimerIcon from '@mui/icons-material/Timer';
 import DataUsageIcon from '@mui/icons-material/DataUsage';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const TextSizeCalculatorContent = () => {
   const [text, setText] = useState('');
@@ -158,6 +159,8 @@ const TextSizeCalculator = () => {
       category="Tools"
     >
       <TextSizeCalculatorContent />
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

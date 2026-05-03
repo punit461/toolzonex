@@ -6,6 +6,7 @@ import {
   ToggleButton, Chip
 } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 // Scoring tables based on Indian Army / NDA / CDS PFT standards
 const RUN_SCORES: Record<string, { max: number; good: number; avg: number; label: string }> = {
@@ -122,8 +123,8 @@ const PFTCalculator = () => {
             <Box sx={{ display: 'flex', gap: 2 }}>
               <TextField
                 fullWidth label="Minutes" type="number"
-                value={runMin}
-                onChange={(e) => setRunMin(Number(e.target.value))}
+                value={Number.isNaN(runMin) ? '' : runMin}
+                onChange={(e) => setRunMin(e.target.value === '' ? NaN : Number(e.target.value))}
                 onFocus={(e) => e.target.select()}
                 slotProps={{ input: { endAdornment: <InputAdornment position="end">min</InputAdornment> } }}
               />
@@ -142,8 +143,8 @@ const PFTCalculator = () => {
             <Typography gutterBottom sx={{ fontWeight: 600 }}>Push-ups (in 2 minutes)</Typography>
             <TextField
               fullWidth type="number" label="Count"
-              value={pushups}
-              onChange={(e) => setPushups(Number(e.target.value))}
+              value={Number.isNaN(pushups) ? '' : pushups}
+              onChange={(e) => setPushups(e.target.value === '' ? NaN : Number(e.target.value))}
               onFocus={(e) => e.target.select()}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">reps</InputAdornment> } }}
             />
@@ -154,8 +155,8 @@ const PFTCalculator = () => {
             <Typography gutterBottom sx={{ fontWeight: 600 }}>Sit-ups (in 2 minutes)</Typography>
             <TextField
               fullWidth type="number" label="Count"
-              value={situps}
-              onChange={(e) => setSitups(Number(e.target.value))}
+              value={Number.isNaN(situps) ? '' : situps}
+              onChange={(e) => setSitups(e.target.value === '' ? NaN : Number(e.target.value))}
               onFocus={(e) => e.target.select()}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">reps</InputAdornment> } }}
             />
@@ -183,6 +184,8 @@ const PFTCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

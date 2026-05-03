@@ -1,8 +1,17 @@
 'use client';
 
-import { Typography } from '@mui/material';
+import { Typography , Box} from '@mui/material';
 import RouterLink from 'next/link';
-import BlogShell from '../../components/BlogShell';
+import BlogShell, { RelatedTool } from '../../components/BlogShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const relatedTools: RelatedTool[] = [
+  {
+    label: 'Income Tax Calculator',
+    path: '/finance/income-tax-calculator',
+    description: 'Calculate your tax liability with Section 87A rebate applied.'
+  },
+];
 
 const Rebate87A = () => (
   <BlogShell
@@ -10,6 +19,7 @@ const Rebate87A = () => (
     description="Section 87A rebate can make your entire income tax liability zero. Here's exactly how it works under both regimes for FY 2025-26, with examples."
     url="/blog/section-87a-rebate-guide"
     date="April 2026"
+    relatedTools={relatedTools}
   >
     <Typography variant="body1">
       Section 87A is one of the most powerful but misunderstood provisions in Indian income tax law. It allows eligible taxpayers to receive a rebate that can reduce their entire tax liability to zero. For FY 2025-26, the New Regime has made this even more generous.
@@ -72,6 +82,8 @@ const Rebate87A = () => (
     <Typography variant="body1">
       Section 87A effectively creates a zero-tax zone. Under the New Regime in FY 2025-26, this zone extends to ₹12.75 lakh gross salary for salaried individuals — making the New Regime the clear winner for most middle-income taxpayers who don't have large deductions.
     </Typography>
+
+  <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
   </BlogShell>
 );
 

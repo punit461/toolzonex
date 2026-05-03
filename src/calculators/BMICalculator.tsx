@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { Box, TextField, Typography, ToggleButtonGroup, ToggleButton, InputAdornment } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const BMICalculator = () => {
   const [weightUnit, setWeightUnit] = useState<'kg' | 'lbs'>('kg');
@@ -124,8 +125,8 @@ const BMICalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={weight}
-              onChange={(e) => setWeight(Number(e.target.value))}
+              value={Number.isNaN(weight) ? '' : weight}
+              onChange={(e) => setWeight(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">{weightUnit}</InputAdornment> } }}
             />
           </Box>
@@ -151,8 +152,8 @@ const BMICalculator = () => {
                 variant="outlined"
                 type="number"
                 onFocus={(e) => e.target.select()}
-                value={heightCm}
-                onChange={(e) => setHeightCm(Number(e.target.value))}
+                value={Number.isNaN(heightCm) ? '' : heightCm}
+                onChange={(e) => setHeightCm(e.target.value === '' ? NaN : Number(e.target.value))}
                 slotProps={{ input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
               />
             </Box>
@@ -164,8 +165,8 @@ const BMICalculator = () => {
                   variant="outlined"
                   type="number"
                   onFocus={(e) => e.target.select()}
-                  value={heightFt}
-                  onChange={(e) => setHeightFt(Number(e.target.value))}
+                  value={Number.isNaN(heightFt) ? '' : heightFt}
+                  onChange={(e) => setHeightFt(e.target.value === '' ? NaN : Number(e.target.value))}
                   slotProps={{ input: { endAdornment: <InputAdornment position="end">ft</InputAdornment> } }}
                 />
               </Box>
@@ -175,8 +176,8 @@ const BMICalculator = () => {
                   variant="outlined"
                   type="number"
                   onFocus={(e) => e.target.select()}
-                  value={heightIn}
-                  onChange={(e) => setHeightIn(Number(e.target.value))}
+                  value={Number.isNaN(heightIn) ? '' : heightIn}
+                  onChange={(e) => setHeightIn(e.target.value === '' ? NaN : Number(e.target.value))}
                   slotProps={{ input: { endAdornment: <InputAdornment position="end">in</InputAdornment> } }}
                 />
               </Box>
@@ -200,6 +201,8 @@ const BMICalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

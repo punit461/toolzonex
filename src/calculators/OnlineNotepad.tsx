@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Box, Typography, Button, TextField, Snackbar, Alert } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import DeleteIcon from '@mui/icons-material/Delete';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -126,6 +127,8 @@ const OnlineNotepad = () => {
           {toastMsg}
         </Alert>
       </Snackbar>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

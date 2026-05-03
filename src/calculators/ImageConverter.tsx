@@ -5,6 +5,7 @@ import { Box, Button, Typography, Paper, Alert, Grid, Select, MenuItem, FormCont
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import DownloadIcon from '@mui/icons-material/Download';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const ImageConverterContent = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -190,6 +191,8 @@ const ImageConverter = () => {
       category="Tools"
     >
       <ImageConverterContent />
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

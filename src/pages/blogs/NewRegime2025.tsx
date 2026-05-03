@@ -1,8 +1,17 @@
 'use client';
 
-import { Typography } from '@mui/material';
+import { Typography , Box} from '@mui/material';
 import RouterLink from 'next/link';
-import BlogShell from '../../components/BlogShell';
+import BlogShell, { RelatedTool } from '../../components/BlogShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const relatedTools: RelatedTool[] = [
+  {
+    label: 'Income Tax Calculator',
+    path: '/finance/income-tax-calculator',
+    description: 'Compare your tax liability under the new and old tax regimes.'
+  },
+];
 
 const NewRegime2025 = () => (
   <BlogShell
@@ -10,6 +19,7 @@ const NewRegime2025 = () => (
     description="Budget 2025 brought major changes to the New Tax Regime — new slabs, higher standard deduction, and a wider rebate. Here's everything that changed."
     url="/blog/new-tax-regime-fy-2025-26"
     date="April 2026"
+    relatedTools={relatedTools}
   >
     <Typography variant="body1">
       The Union Budget 2025 made the New Tax Regime significantly more attractive. If you haven't revisited your tax planning for FY 2025-26, now is the time. Here is a complete breakdown of what changed and what it means for your wallet.
@@ -78,6 +88,8 @@ const NewRegime2025 = () => (
     <Typography variant="body1">
       If you do not explicitly choose the Old Regime with your employer (via a declaration), the New Regime applies automatically. Employees who want the Old Regime must inform their employer before the end of the financial year.
     </Typography>
+
+  <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
   </BlogShell>
 );
 

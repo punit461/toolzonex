@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { Box, TextField, Typography, ToggleButtonGroup, ToggleButton, InputAdornment, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const GST_RATES = [0, 5, 12, 18, 28];
 
@@ -103,8 +104,8 @@ const GSTCalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={amount}
-              onChange={(e) => setAmount(Number(e.target.value))}
+              value={Number.isNaN(amount) ? '' : amount}
+              onChange={(e) => setAmount(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{
                 input: {
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
@@ -168,6 +169,8 @@ const GSTCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

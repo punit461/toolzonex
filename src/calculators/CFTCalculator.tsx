@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { Box, Typography, TextField, InputAdornment, Chip } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 // Indian Army CFT Standards (approximate)
 // Events: 5 mile run + ammo can lift (30 lb) + maneuver under fire
@@ -121,8 +122,8 @@ const CFTCalculator = () => {
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom sx={{ fontWeight: 600 }}>Tactical March Time (5 miles / ~8 km)</Typography>
             <Box sx={{ display: 'flex', gap: 2 }}>
-              <TextField fullWidth label="Minutes" type="number" value={marchMin}
-                onChange={(e) => setMarchMin(Number(e.target.value))} onFocus={(e) => e.target.select()}
+              <TextField fullWidth label="Minutes" type="number" value={Number.isNaN(marchMin) ? '' : marchMin}
+                onChange={(e) => setMarchMin(e.target.value === '' ? NaN : Number(e.target.value))} onFocus={(e) => e.target.select()}
                 slotProps={{ input: { endAdornment: <InputAdornment position="end">min</InputAdornment> } }}
               />
               <TextField fullWidth label="Seconds" type="number" value={marchSec}
@@ -135,8 +136,8 @@ const CFTCalculator = () => {
           {/* Ammo Can */}
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom sx={{ fontWeight: 600 }}>Ammo Can Lifts (30 lb, 2 minutes)</Typography>
-            <TextField fullWidth type="number" label="Repetitions" value={ammoCan}
-              onChange={(e) => setAmmoCan(Number(e.target.value))} onFocus={(e) => e.target.select()}
+            <TextField fullWidth type="number" label="Repetitions" value={Number.isNaN(ammoCan) ? '' : ammoCan}
+              onChange={(e) => setAmmoCan(e.target.value === '' ? NaN : Number(e.target.value))} onFocus={(e) => e.target.select()}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">reps</InputAdornment> } }}
             />
           </Box>
@@ -145,8 +146,8 @@ const CFTCalculator = () => {
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom sx={{ fontWeight: 600 }}>300m Shuttle Run Time</Typography>
             <Box sx={{ display: 'flex', gap: 2 }}>
-              <TextField fullWidth label="Minutes" type="number" value={shuttleMin}
-                onChange={(e) => setShuttleMin(Number(e.target.value))} onFocus={(e) => e.target.select()}
+              <TextField fullWidth label="Minutes" type="number" value={Number.isNaN(shuttleMin) ? '' : shuttleMin}
+                onChange={(e) => setShuttleMin(e.target.value === '' ? NaN : Number(e.target.value))} onFocus={(e) => e.target.select()}
                 slotProps={{ input: { endAdornment: <InputAdornment position="end">min</InputAdornment> } }}
               />
               <TextField fullWidth label="Seconds" type="number" value={shuttleSec}
@@ -159,8 +160,8 @@ const CFTCalculator = () => {
           {/* Casualty Drag */}
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom sx={{ fontWeight: 600 }}>Casualty Drag (completed sets)</Typography>
-            <TextField fullWidth type="number" label="Sets completed" value={dragReps}
-              onChange={(e) => setDragReps(Number(e.target.value))} onFocus={(e) => e.target.select()}
+            <TextField fullWidth type="number" label="Sets completed" value={Number.isNaN(dragReps) ? '' : dragReps}
+              onChange={(e) => setDragReps(e.target.value === '' ? NaN : Number(e.target.value))} onFocus={(e) => e.target.select()}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">sets</InputAdornment> } }}
             />
           </Box>
@@ -187,6 +188,8 @@ const CFTCalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

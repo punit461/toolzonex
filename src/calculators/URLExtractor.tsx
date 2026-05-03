@@ -6,14 +6,17 @@ import LinkIcon from '@mui/icons-material/Link';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const URLExtractorContent = () => {
   const [text, setText] = useState('');
   const [urls, setUrls] = useState<string[]>([]);
   const [error, setError] = useState('');
+  const [hasSearched, setHasSearched] = useState(false);
 
   const extractURLs = () => {
     setError('');
+    setHasSearched(true);
     
     if (!text.trim()) {
       setError('Please enter some text to extract URLs from');
@@ -50,7 +53,7 @@ const URLExtractorContent = () => {
           label="Enter Text"
           placeholder="Paste text containing URLs or links..."
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={(e) => { setText(e.target.value); setHasSearched(false); }}
           multiline
           rows={6}
           fullWidth
@@ -63,7 +66,7 @@ const URLExtractorContent = () => {
 
         {error && <Alert severity="error">{error}</Alert>}
 
-        {urls.length === 0 && text.trim() && !error && (
+        {hasSearched && urls.length === 0 && !error && (
           <Alert severity="info">No URLs found in the text.</Alert>
         )}
       </Box>
@@ -168,6 +171,8 @@ const URLExtractor = () => {
       category="Tools"
     >
       <URLExtractorContent />
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

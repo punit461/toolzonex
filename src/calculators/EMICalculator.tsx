@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import { Box, TextField, Typography, Slider, InputAdornment } from '@mui/material';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const COLORS = ['#171717', '#D4AF37'];
 
@@ -79,7 +80,10 @@ const EMICalculator = () => {
               type="number"
               onFocus={(e) => e.target.select()}
               value={principal}
-              onChange={(e) => setPrincipal(Number(e.target.value))}
+              onChange={(e) => {
+                const val = e.target.value;
+                setPrincipal(val === '' ? 0 : Number(val));
+              }}
               slotProps={{
                 input: {
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
@@ -103,8 +107,8 @@ const EMICalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={rate}
-              onChange={(e) => setRate(Number(e.target.value))}
+              value={Number.isNaN(rate) ? '' : rate}
+              onChange={(e) => setRate(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{
                 input: {
                   endAdornment: <InputAdornment position="end">%</InputAdornment>,
@@ -112,7 +116,7 @@ const EMICalculator = () => {
               }}
             />
             <Slider
-              value={rate}
+              value={Number.isNaN(rate) ? 0 : rate}
               min={1}
               max={20}
               step={0.1}
@@ -128,8 +132,8 @@ const EMICalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={tenureYears}
-              onChange={(e) => setTenureYears(Number(e.target.value))}
+              value={Number.isNaN(tenureYears) ? '' : tenureYears}
+              onChange={(e) => setTenureYears(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{
                 input: {
                   endAdornment: <InputAdornment position="end">Yr</InputAdornment>,
@@ -137,7 +141,7 @@ const EMICalculator = () => {
               }}
             />
             <Slider
-              value={tenureYears}
+              value={Number.isNaN(tenureYears) ? 0 : tenureYears}
               min={1}
               max={30}
               step={1}
@@ -194,6 +198,8 @@ const EMICalculator = () => {
           </Box>
         </Box>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

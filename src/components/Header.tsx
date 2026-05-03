@@ -63,6 +63,17 @@ const navCategories: NavCategory[] = [
     label: 'Tools',
     tools: [
       { label: 'Online Notepad', path: '/tools/online-notepad' },
+      { label: 'Email Extractor', path: '/tools/email-extractor' },
+      { label: 'EXIF Reader', path: '/tools/exif-reader' },
+      { label: 'Image Converter', path: '/tools/image-converter' },
+      { label: 'Mailto Link Generator', path: '/tools/mailto-link-generator' },
+      { label: 'Online Image Editor', path: '/tools/online-image-editor' },
+      { label: 'Phone Validator', path: '/tools/phone-validator' },
+      { label: 'Text Size Calculator', path: '/tools/text-size-calculator' },
+      { label: 'URL Extractor', path: '/tools/url-extractor' },
+      { label: 'User Agent Parser', path: '/tools/user-agent-parser' },
+      { label: 'What is My IP', path: '/tools/what-is-my-ip' },
+      { label: 'WhatsApp Link Generator', path: '/tools/whatsapp-link-generator' },
     ],
   },
 ];

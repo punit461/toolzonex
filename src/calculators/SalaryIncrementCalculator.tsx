@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { Box, TextField, Typography, Slider, InputAdornment, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
+import AdSenseUnit from '../components/AdSenseUnit';
 
 const SalaryIncrementCalculator = () => {
   const [currentCTC, setCurrentCTC] = useState<number>(1000000);
@@ -68,8 +69,8 @@ const SalaryIncrementCalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={currentCTC}
-              onChange={(e) => setCurrentCTC(Number(e.target.value))}
+              value={Number.isNaN(currentCTC) ? '' : currentCTC}
+              onChange={(e) => setCurrentCTC(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{
                 input: {
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
@@ -77,7 +78,7 @@ const SalaryIncrementCalculator = () => {
               }}
             />
             <Slider
-              value={currentCTC}
+              value={Number.isNaN(currentCTC) ? 0 : currentCTC}
               min={100000}
               max={10000000}
               step={100000}
@@ -93,8 +94,8 @@ const SalaryIncrementCalculator = () => {
               variant="outlined"
               type="number"
               onFocus={(e) => e.target.select()}
-              value={incrementPercent}
-              onChange={(e) => setIncrementPercent(Number(e.target.value))}
+              value={Number.isNaN(incrementPercent) ? '' : incrementPercent}
+              onChange={(e) => setIncrementPercent(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{
                 input: {
                   endAdornment: <InputAdornment position="end">%</InputAdornment>,
@@ -102,7 +103,7 @@ const SalaryIncrementCalculator = () => {
               }}
             />
             <Slider
-              value={incrementPercent}
+              value={Number.isNaN(incrementPercent) ? 0 : incrementPercent}
               min={0}
               max={100}
               step={1}
@@ -178,6 +179,8 @@ const SalaryIncrementCalculator = () => {
           </Table>
         </TableContainer>
       </Box>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>
   );
 };

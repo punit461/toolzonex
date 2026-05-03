@@ -1,8 +1,22 @@
 'use client';
 
-import { Typography } from '@mui/material';
+import { Typography , Box} from '@mui/material';
 import RouterLink from 'next/link';
-import BlogShell from '../../components/BlogShell';
+import BlogShell, { RelatedTool } from '../../components/BlogShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const relatedTools: RelatedTool[] = [
+  {
+    label: 'PPF Calculator',
+    path: '/finance/ppf-calculator',
+    description: 'Calculate your PPF returns and maturity amount based on investment.'
+  },
+  {
+    label: 'SIP Calculator',
+    path: '/finance/sip-calculator',
+    description: 'Compare PPF returns with systematic investment plans.'
+  },
+];
 
 const PpfGuide = () => {
   return (
@@ -11,6 +25,7 @@ const PpfGuide = () => {
       description="Learn why the Public Provident Fund (PPF) remains one of the best tax-saving investments in India."
       url="/blog/complete-guide-to-ppf"
       date="May 2026"
+      relatedTools={relatedTools}
     >
       <Typography variant="body1">
         Despite the rise of mutual funds and direct equity investing, the Public Provident Fund (PPF) remains a cornerstone of the average Indian's retirement portfolio. But what makes it so special?
@@ -48,6 +63,8 @@ const PpfGuide = () => {
       <Typography variant="body1">
         Even if you have an aggressive risk appetite and invest heavily in equities, having a debt allocation in the form of PPF provides stability to your portfolio, acting as a financial cushion during market downturns.
       </Typography>
+
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </BlogShell>
   );
 };
