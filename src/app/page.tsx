@@ -22,6 +22,18 @@ import WorkIcon from '@mui/icons-material/Work';
 import NoteAltIcon from '@mui/icons-material/NoteAlt';
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
+import LinkIcon from '@mui/icons-material/Link';
+import EmailIcon from '@mui/icons-material/Email';
+import TextFieldsIcon from '@mui/icons-material/TextFields';
+import ImageIcon from '@mui/icons-material/Image';
+import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
+import PhoneIcon from '@mui/icons-material/Phone';
+import ComputerIcon from '@mui/icons-material/Computer';
+import PublicIcon from '@mui/icons-material/Public';
+import LanguageIcon from '@mui/icons-material/Language';
+import SendIcon from '@mui/icons-material/Send';
+import PaymentIcon from '@mui/icons-material/Payment';
+import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 
 const categories = [
   {
@@ -66,6 +78,18 @@ const categories = [
     color: '#c27803',
     tools: [
       { title: 'Online Notepad', description: 'Free notepad with auto-save & word count.', path: '/tools/online-notepad', icon: <NoteAltIcon fontSize="large" color="primary" /> },
+      { title: 'What Is My IP', description: 'Find your public IP address instantly.', path: '/tools/what-is-my-ip', icon: <PublicIcon fontSize="large" color="primary" /> },
+      { title: 'WhatsApp Link Generator', description: 'Create WhatsApp click-to-chat links.', path: '/tools/whatsapp-link-generator', icon: <SendIcon fontSize="large" color="primary" /> },
+      { title: 'PayPal Link Generator', description: 'Create PayPal.me and payment links.', path: '/tools/paypal-link-generator', icon: <PaymentIcon fontSize="large" color="primary" /> },
+      { title: 'Mailto Link Generator', description: 'Create email links with subject & body.', path: '/tools/mailto-link-generator', icon: <AttachEmailIcon fontSize="large" color="primary" /> },
+      { title: 'Text Size Calculator', description: 'Character count, word count & reading time.', path: '/tools/text-size-calculator', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Email Extractor', description: 'Extract email addresses from any text.', path: '/tools/email-extractor', icon: <EmailIcon fontSize="large" color="primary" /> },
+      { title: 'URL Extractor', description: 'Extract URLs and links from any text.', path: '/tools/url-extractor', icon: <LinkIcon fontSize="large" color="primary" /> },
+      { title: 'EXIF Reader', description: 'Read image metadata and camera info.', path: '/tools/exif-reader', icon: <PhotoCameraIcon fontSize="large" color="primary" /> },
+      { title: 'Phone Validator', description: 'Validate phone numbers with country code.', path: '/tools/phone-validator', icon: <PhoneIcon fontSize="large" color="primary" /> },
+      { title: 'User Agent Parser', description: 'Parse browser and device from UA string.', path: '/tools/user-agent-parser', icon: <ComputerIcon fontSize="large" color="primary" /> },
+      { title: 'Image Converter', description: 'Convert images between PNG, JPEG, WebP.', path: '/tools/image-converter', icon: <ImageIcon fontSize="large" color="primary" /> },
+      { title: 'Online Image Editor', description: 'Edit images with filters & adjustments.', path: '/tools/online-image-editor', icon: <PhotoCameraIcon fontSize="large" color="primary" /> },
     ],
   },
 ];
@@ -80,7 +104,7 @@ const Home = () => {
           Smart Tools for Every Decision
         </Typography>
         <Typography variant="h6" color="text.secondary" sx={{ maxWidth: '580px', mx: 'auto', fontWeight: 400 }}>
-          Finance, health, and everyday calculators — built for India, designed to be fast.
+          Finance, health, utilities, and online tools — built for India, designed to be fast.
         </Typography>
       </Box>
 
