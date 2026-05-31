@@ -113,7 +113,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const adsensePublisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID;
+  let adsensePublisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || '';
+  if (adsensePublisherId && !adsensePublisherId.startsWith('ca-')) {
+    adsensePublisherId = `ca-${adsensePublisherId}`;
+  }
 
   return (
     <html lang="en">

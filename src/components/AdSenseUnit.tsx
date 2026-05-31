@@ -10,11 +10,15 @@ interface AdSenseUnitProps {
 }
 
 export default function AdSenseUnit({ slotId, style, className }: AdSenseUnitProps) {
-  const publisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID;
+  let publisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || '';
+  if (publisherId && !publisherId.startsWith('ca-')) {
+    publisherId = `ca-${publisherId}`;
+  }
   const adSlot = slotId || process.env.NEXT_PUBLIC_ADSENSE_SLOT_ID;
   const isDev = process.env.NODE_ENV === 'development';
 
   useEffect(() => {
+    // If no adSlot is provided, we rely on Auto Ads via the layout.tsx script, so we don't push into the array here.
     if (isDev || !publisherId || !adSlot) return;
 
     try {
@@ -43,12 +47,13 @@ export default function AdSenseUnit({ slotId, style, className }: AdSenseUnitPro
       >
         <Typography variant="body2" color="textSecondary">
           AdSense Unit Placeholder (Development Mode)<br/>
-          {adSlot ? `Slot ID: ${adSlot}` : 'No Slot ID configured'}
+          {adSlot ? `Slot ID: ${adSlot}` : 'No Slot ID configured. Falling back to Auto Ads.'}
         </Typography>
       </Box>
     );
   }
 
+  // If no publisherId or no adSlot is found, we render nothing and let Auto Ads handle placement.
   if (!publisherId || !adSlot) return null;
 
   return (
