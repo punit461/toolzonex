@@ -35,6 +35,11 @@ import LanguageIcon from '@mui/icons-material/Language';
 import SendIcon from '@mui/icons-material/Send';
 import PaymentIcon from '@mui/icons-material/Payment';
 import AttachEmailIcon from '@mui/icons-material/AttachEmail';
+import SecurityIcon from '@mui/icons-material/Security';
+import FingerprintIcon from '@mui/icons-material/Fingerprint';
+import NumbersIcon from '@mui/icons-material/Numbers';
+import TextFormatIcon from '@mui/icons-material/TextFormat';
+import ArticleIcon from '@mui/icons-material/Article';
 
 const categories = [
   {
@@ -91,6 +96,73 @@ const categories = [
       { title: 'Image Resizer', description: 'Resize images online easily.', path: '/tools/image-resizer', icon: <CropIcon fontSize="large" color="primary" /> },
       { title: 'Image Converter', description: 'Convert images between PNG, JPEG, WebP.', path: '/tools/image-converter', icon: <ImageIcon fontSize="large" color="primary" /> },
       { title: 'Online Image Editor', description: 'Edit images with filters & adjustments.', path: '/tools/online-image-editor', icon: <PhotoCameraIcon fontSize="large" color="primary" /> },
+    ],
+  },
+  {
+    label: 'Text Tools',
+    color: '#0284c7',
+    tools: [
+      { title: 'Text Sorter', description: 'Sort lines alphabetically or by length.', path: '/tools/text-sorter', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Word Counter', description: 'Count words, characters, and reading time.', path: '/tools/word-counter', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Text Reverser', description: 'Reverse text, words, or letters.', path: '/tools/text-reverser', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Duplicates Remover', description: 'Remove duplicate lines from text.', path: '/tools/duplicates-remover', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Duplicate Word Finder', description: 'Find duplicate words in text.', path: '/tools/duplicate-word-finder', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Line Numbering', description: 'Add line numbers to text.', path: '/tools/line-numbering', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Text Stats Analyzer', description: 'Detailed text statistics and readability.', path: '/tools/text-stats-analyzer', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'String Escaper', description: 'Escape or unescape JSON/HTML/URL.', path: '/tools/string-escaper', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Whitespace Cleaner', description: 'Remove extra spaces and empty lines.', path: '/tools/whitespace-cleaner', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Keyword Density', description: 'Analyze SEO keyword density.', path: '/tools/keyword-density-analyzer', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Character Distribution', description: 'Analyze character frequencies.', path: '/tools/character-distribution-analyzer', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Text Splitter', description: 'Split text into chunks.', path: '/tools/text-splitter', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Sentence Case Fixer', description: 'Fix capitalization errors.', path: '/tools/sentence-case-fixer', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Prefix & Suffix', description: 'Add prefix or suffix to lines.', path: '/tools/line-prefix-suffix-tool', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Text Repeater', description: 'Repeat text multiple times.', path: '/tools/text-repeater', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Text Encryption', description: 'Encrypt text using Base64/ROT13.', path: '/tools/text-encryption-decryption', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Palindrome Checker', description: 'Check if text is a palindrome.', path: '/tools/palindrome-checker', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Text Case Mixer', description: 'Random or alternating casing.', path: '/tools/text-case-mixer', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Word Wrap Tool', description: 'Wrap text to a column limit.', path: '/tools/word-wrap-tool', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+    ],
+  },
+  {
+    label: 'Generators',
+    color: '#e11d48',
+    tools: [
+      { title: 'Password Generator', description: 'Generate secure passwords.', path: '/tools/password-generator', icon: <SecurityIcon fontSize="large" color="primary" /> },
+      { title: 'UUID Generator', description: 'Generate v4 UUIDs.', path: '/tools/uuid-generator', icon: <FingerprintIcon fontSize="large" color="primary" /> },
+      { title: 'Random Number', description: 'Generate random numbers.', path: '/tools/random-number-generator', icon: <NumbersIcon fontSize="large" color="primary" /> },
+      { title: 'Random String', description: 'Generate random strings.', path: '/tools/random-string-generator', icon: <TextFormatIcon fontSize="large" color="primary" /> },
+      { title: 'Lorem Ipsum', description: 'Generate dummy text.', path: '/tools/lorem-ipsum-generator', icon: <ArticleIcon fontSize="large" color="primary" /> },
+      { title: 'Random Data', description: 'Generate fake names & addresses.', path: '/tools/random-data-generator', icon: <ArticleIcon fontSize="large" color="primary" /> },
+      { title: 'Business Name', description: 'Generate startup name ideas.', path: '/tools/business-name-generator', icon: <TextFormatIcon fontSize="large" color="primary" /> },
+      { title: 'Acronym Generator', description: 'Convert phrases to acronyms.', path: '/tools/acronym-generator', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Hashtag Generator', description: 'Extract hashtags from text.', path: '/tools/hashtag-generator', icon: <NumbersIcon fontSize="large" color="primary" /> },
+      { title: 'Coin Flip', description: 'Flip a virtual coin.', path: '/tools/coin-flip', icon: <ChangeHistoryIcon fontSize="large" color="primary" /> },
+      { title: 'Typing Speed Test', description: 'Check WPM typing speed.', path: '/tools/typing-speed-test', icon: <NumbersIcon fontSize="large" color="primary" /> },
+      { title: 'Wheel of Fortune', description: 'Spin wheel decision maker.', path: '/tools/wheel-of-fortune-spinner', icon: <ChangeHistoryIcon fontSize="large" color="primary" /> },
+      { title: 'Sudoku Generator', description: 'Printable Sudoku puzzles.', path: '/tools/sudoku-generator', icon: <NumbersIcon fontSize="large" color="primary" /> },
+      { title: 'Crossword Puzzle', description: 'Create custom crosswords.', path: '/tools/crossword-puzzle-generator', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Prompt Builder', description: 'Optimize ChatGPT prompts.', path: '/tools/prompt-builder', icon: <TextFormatIcon fontSize="large" color="primary" /> },
+      { title: 'Multiplication Table', description: 'Printable math tables.', path: '/tools/multiplication-table-generator', icon: <NumbersIcon fontSize="large" color="primary" /> },
+    ],
+  },
+  {
+    label: 'Converters',
+    color: '#8b5cf6',
+    tools: [
+      { title: 'JSON to CSV', description: 'Convert JSON to CSV format.', path: '/tools/json-to-csv', icon: <ArticleIcon fontSize="large" color="primary" /> },
+      { title: 'CSV to JSON', description: 'Convert CSV to JSON arrays.', path: '/tools/csv-to-json', icon: <ArticleIcon fontSize="large" color="primary" /> },
+      { title: 'XML to JSON', description: 'Parse XML to JSON data.', path: '/tools/xml-to-json', icon: <ArticleIcon fontSize="large" color="primary" /> },
+      { title: 'JSON to XML', description: 'Convert JSON to XML format.', path: '/tools/json-to-xml', icon: <ArticleIcon fontSize="large" color="primary" /> },
+      { title: 'Base64 Encode/Decode', description: 'Encode/decode base64 strings.', path: '/tools/base64-encode-decode', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'URL Encode/Decode', description: 'URL encode or decode text.', path: '/tools/url-encode-decode', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'HTML Entity Encoder', description: 'Encode/decode HTML entities.', path: '/tools/html-entity-encode-decode', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Markdown to HTML', description: 'Convert MD to raw HTML.', path: '/tools/markdown-to-html', icon: <ArticleIcon fontSize="large" color="primary" /> },
+      { title: 'PX to REM', description: 'Convert pixels to REM units.', path: '/tools/px-to-rem-converter', icon: <NumbersIcon fontSize="large" color="primary" /> },
+      { title: 'HEX to RGB', description: 'Convert HEX colors to RGB.', path: '/tools/hex-to-rgb', icon: <ChangeHistoryIcon fontSize="large" color="primary" /> },
+      { title: 'RGB to HEX', description: 'Convert RGB colors to HEX.', path: '/tools/rgb-to-hex', icon: <ChangeHistoryIcon fontSize="large" color="primary" /> },
+      { title: 'Binary to Text', description: 'Decode binary code to text.', path: '/tools/binary-to-text', icon: <NumbersIcon fontSize="large" color="primary" /> },
+      { title: 'Text to Binary', description: 'Encode text into binary.', path: '/tools/text-to-binary', icon: <NumbersIcon fontSize="large" color="primary" /> },
+      { title: 'Morse Code Translator', description: 'Translate morse code text.', path: '/tools/morse-code-translator', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
     ],
   },
 ];
