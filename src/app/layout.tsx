@@ -1,12 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import ThemeRegistry from "@/components/ThemeRegistry";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Box, Container } from "@mui/material";
 
-const inter = Inter({ subsets: ["latin"], display: 'swap' });
+const inter = localFont({
+  src: '../assets/fonts/Inter-Regular.woff2',
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
 
