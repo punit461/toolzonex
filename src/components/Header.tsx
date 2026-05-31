@@ -1,18 +1,20 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   AppBar, Toolbar, Box, Button, IconButton, Drawer,
   List, ListItemButton, ListItemText, Divider, useScrollTrigger,
   Slide, Paper, Popper, Grow, ClickAwayListener, MenuList, MenuItem,
-  Typography, Collapse
+  Typography, Collapse, Autocomplete, TextField, InputAdornment
 } from '@mui/material';
 import RouterLink from 'next/link';
+import { useRouter } from 'next/navigation';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import HomeIcon from '@mui/icons-material/Home';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import SearchIcon from '@mui/icons-material/Search';
 
 interface HideOnScrollProps { children: React.ReactElement }
 const HideOnScroll = ({ children }: HideOnScrollProps) => {
@@ -26,7 +28,7 @@ interface NavCategory { label: string; tools: NavTool[] }
 
 const navCategories: NavCategory[] = [
   {
-    label: 'Finance',
+    label: 'Finance & Health',
     tools: [
       { label: 'EMI Calculator', path: '/finance/emi-calculator' },
       { label: 'SIP Calculator', path: '/finance/sip-calculator' },
@@ -39,28 +41,125 @@ const navCategories: NavCategory[] = [
       { label: 'SSY Calculator', path: '/finance/ssy-calculator' },
       { label: 'Salary Increment Calculator', path: '/finance/salary-increment-calculator' },
       { label: 'Retirement Calculator', path: '/finance/retirement-calculator' },
-    ],
-  },
-  {
-    label: 'Health',
-    tools: [
+      { label: 'Loan Calculator', path: '/finance/loan-calculator' },
       { label: 'BMI Calculator', path: '/health/bmi-calculator' },
       { label: 'BMR Calculator', path: '/health/bmr-calculator' },
       { label: 'TDEE Calculator', path: '/health/tdee-calculator' },
       { label: 'PFT Calculator', path: '/health/pft-calculator' },
       { label: 'CFT Calculator', path: '/health/cft-calculator' },
+      { label: 'Sleep Time Calculator', path: '/health/sleep-time-calculator' },
+      { label: 'Body Fat Calculator', path: '/health/body-fat-calculator' },
+      { label: 'Calorie Calculator', path: '/health/calorie-calculator' },
     ],
   },
   {
-    label: 'Utilities',
+    label: 'Math & Utilities',
     tools: [
+      { label: 'Timer', path: '/utilities/timer' },
+      { label: 'Stopwatch', path: '/utilities/stopwatch' },
+      { label: 'Focus Timer', path: '/utilities/focus-timer' },
+      { label: 'Current Time Display', path: '/utilities/current-time-display' },
       { label: 'Age Calculator', path: '/utilities/age-calculator' },
       { label: 'Percentage Calculator', path: '/utilities/percentage-calculator' },
       { label: 'Date Calculator', path: '/utilities/date-calculator' },
+      { label: 'Margin Calculator', path: '/utilities/margin-calculator' },
+      { label: 'Discount Calculator', path: '/utilities/discount-calculator' },
+      { label: 'Tip Calculator', path: '/utilities/tip-calculator' },
+      { label: 'Aspect Ratio Calculator', path: '/utilities/aspect-ratio-calculator' },
+      { label: 'Rule of Three', path: '/utilities/rule-of-three-calculator' },
+      { label: 'Time Calculator', path: '/utilities/time-calculator' },
+      { label: 'Time Zone Converter', path: '/utilities/time-zone-converter' },
+      { label: 'Basic Calculator', path: '/utilities/basic-calculator' },
+      { label: 'Scientific Calculator', path: '/utilities/scientific-calculator' },
+      { label: 'Prime Number Checker', path: '/utilities/prime-number-checker' },
+      { label: 'Barcode Generator', path: '/utilities/barcode-generator' },
+      { label: 'Game Score Tracker', path: '/utilities/game-score-tracker' },
+      { label: 'Algorithm Visualizer', path: '/utilities/algorithm-visualizer' },
+      { label: 'Alphabet Learning Tool', path: '/utilities/alphabet-learning-tool' },
+      { label: 'Number to Words', path: '/utilities/number-to-words-converter' },
+      { label: 'Roman Numeral Converter', path: '/utilities/roman-numeral-converter' },
     ],
   },
   {
-    label: 'Tools',
+    label: 'Text & Content',
+    tools: [
+      { label: 'Text Sorter', path: '/tools/text-sorter' },
+      { label: 'Word Counter', path: '/tools/word-counter' },
+      { label: 'Text Reverser', path: '/tools/text-reverser' },
+      { label: 'Duplicates Remover', path: '/tools/duplicates-remover' },
+      { label: 'Duplicate Word Finder', path: '/tools/duplicate-word-finder' },
+      { label: 'Line Numbering', path: '/tools/line-numbering' },
+      { label: 'Text Stats Analyzer', path: '/tools/text-stats-analyzer' },
+      { label: 'String Escaper', path: '/tools/string-escaper' },
+      { label: 'Whitespace Cleaner', path: '/tools/whitespace-cleaner' },
+      { label: 'Keyword Density', path: '/tools/keyword-density-analyzer' },
+      { label: 'Character Distribution', path: '/tools/character-distribution-analyzer' },
+      { label: 'Text Splitter', path: '/tools/text-splitter' },
+      { label: 'Sentence Case Fixer', path: '/tools/sentence-case-fixer' },
+      { label: 'Prefix & Suffix', path: '/tools/line-prefix-suffix-tool' },
+      { label: 'Text Repeater', path: '/tools/text-repeater' },
+      { label: 'Text Encryption', path: '/tools/text-encryption-decryption' },
+      { label: 'Palindrome Checker', path: '/tools/palindrome-checker' },
+      { label: 'Text Case Mixer', path: '/tools/text-case-mixer' },
+      { label: 'Word Wrap Tool', path: '/tools/word-wrap-tool' },
+      { label: 'Password Generator', path: '/tools/password-generator' },
+      { label: 'UUID Generator', path: '/tools/uuid-generator' },
+      { label: 'Random Number Generator', path: '/tools/random-number-generator' },
+      { label: 'Random String Generator', path: '/tools/random-string-generator' },
+      { label: 'Lorem Ipsum Generator', path: '/tools/lorem-ipsum-generator' },
+      { label: 'Random Data Generator', path: '/tools/random-data-generator' },
+      { label: 'Business Name Generator', path: '/tools/business-name-generator' },
+      { label: 'Acronym Generator', path: '/tools/acronym-generator' },
+      { label: 'Hashtag Generator', path: '/tools/hashtag-generator' },
+      { label: 'Coin Flip', path: '/tools/coin-flip' },
+      { label: 'Typing Speed Test', path: '/tools/typing-speed-test' },
+      { label: 'Wheel of Fortune', path: '/tools/wheel-of-fortune-spinner' },
+      { label: 'Sudoku Generator', path: '/tools/sudoku-generator' },
+      { label: 'Crossword Puzzle', path: '/tools/crossword-puzzle-generator' },
+      { label: 'Prompt Builder', path: '/tools/prompt-builder' },
+      { label: 'Multiplication Table', path: '/tools/multiplication-table-generator' },
+      { label: 'Random Line Picker', path: '/tools/random-line-picker' },
+      { label: 'Vertical Text', path: '/tools/vertical-text-generator' },
+    ],
+  },
+  {
+    label: 'Dev & Converters',
+    tools: [
+      { label: 'JSON Formatter', path: '/tools/json-formatter' },
+      { label: 'Regex Tester', path: '/tools/regex-tester' },
+      { label: 'JWT Decoder', path: '/tools/jwt-decoder' },
+      { label: 'CSS Minifier', path: '/tools/css-minifier' },
+      { label: 'JS Minifier', path: '/tools/js-minifier' },
+      { label: 'HTML Minifier', path: '/tools/html-minifier' },
+      { label: 'CSS Grid Generator', path: '/tools/css-grid-generator' },
+      { label: 'Box Shadow Generator', path: '/tools/box-shadow-generator' },
+      { label: 'Gradient Generator', path: '/tools/gradient-generator' },
+      { label: 'Flexbox Generator', path: '/tools/flexbox-generator' },
+      { label: 'QR Code Generator', path: '/tools/qr-code-generator' },
+      { label: 'Cron Job Parser', path: '/tools/cron-job-parser' },
+      { label: 'SQL Formatter', path: '/tools/sql-formatter' },
+      { label: 'JSON to CSV', path: '/tools/json-to-csv' },
+      { label: 'CSV to JSON', path: '/tools/csv-to-json' },
+      { label: 'XML to JSON', path: '/tools/xml-to-json' },
+      { label: 'JSON to XML', path: '/tools/json-to-xml' },
+      { label: 'Base64 Encode/Decode', path: '/tools/base64-encode-decode' },
+      { label: 'URL Encode/Decode', path: '/tools/url-encode-decode' },
+      { label: 'HTML Entity Encode/Decode', path: '/tools/html-entity-encode-decode' },
+      { label: 'Markdown to HTML', path: '/tools/markdown-to-html' },
+      { label: 'PX to REM', path: '/tools/px-to-rem-converter' },
+      { label: 'HEX to RGB', path: '/tools/hex-to-rgb' },
+      { label: 'RGB to HEX', path: '/tools/rgb-to-hex' },
+      { label: 'Binary to Text', path: '/tools/binary-to-text' },
+      { label: 'Text to Binary', path: '/tools/text-to-binary' },
+      { label: 'Morse Code Translator', path: '/tools/morse-code-translator' },
+      { label: 'YAML to JSON', path: '/tools/yaml-to-json-converter' },
+      { label: 'JSON to YAML', path: '/tools/json-to-yaml-converter' },
+      { label: 'Base64 to Image', path: '/tools/base64-to-image' },
+      { label: 'Image to Base64', path: '/tools/image-to-base64' },
+    ],
+  },
+  {
+    label: 'Web Tools',
     tools: [
       { label: 'Online Notepad', path: '/tools/online-notepad' },
       { label: 'Email Extractor', path: '/tools/email-extractor' },
@@ -74,6 +173,13 @@ const navCategories: NavCategory[] = [
       { label: 'User Agent Parser', path: '/tools/user-agent-parser' },
       { label: 'What is My IP', path: '/tools/what-is-my-ip' },
       { label: 'WhatsApp Link Generator', path: '/tools/whatsapp-link-generator' },
+      { label: 'Text Diff Tool', path: '/tools/text-diff-tool' },
+      { label: 'Password Strength', path: '/tools/password-strength-checker' },
+      { label: 'Readability Score', path: '/tools/text-readability-score' },
+      { label: 'Word Frequency', path: '/tools/word-frequency-analyzer' },
+      { label: 'Text Merger', path: '/tools/text-merger' },
+      { label: 'Color Palette Generator', path: '/tools/color-palette-generator' },
+      { label: 'Contrast Checker', path: '/tools/contrast-checker' },
     ],
   },
 ];
@@ -97,11 +203,12 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
   };
 
-  // Split Finance tools into 2 columns, others single column
-  const cols = category.tools.length > 5 ? 2 : 1;
-  const half = Math.ceil(category.tools.length / 2);
-  const col1 = cols === 2 ? category.tools.slice(0, half) : category.tools;
-  const col2 = cols === 2 ? category.tools.slice(half) : [];
+  const maxPerCol = 14;
+  const cols = Math.ceil(category.tools.length / maxPerCol);
+  
+  const columns = Array.from({ length: cols }, (_, i) => 
+    category.tools.slice(i * maxPerCol, (i + 1) * maxPerCol)
+  );
 
   return (
     <Box onMouseLeave={handleClose}>
@@ -129,7 +236,7 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
               elevation={8}
               onMouseEnter={handleMenuMouseEnter}
               onMouseLeave={handleClose}
-              sx={{ mt: 0.5, borderRadius: 2, overflow: 'hidden', minWidth: cols === 2 ? 380 : 220 }}
+              sx={{ mt: 0.5, borderRadius: 2, overflow: 'hidden', minWidth: cols * 240 }}
             >
               <ClickAwayListener onClickAway={() => setOpen(false)}>
                 <Box>
@@ -139,26 +246,11 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
                     </Typography>
                   </Box>
                   <Box sx={{ display: 'flex' }}>
-                    {/* Column 1 */}
-                    <MenuList sx={{ py: 0.5, flex: 1 }}>
-                      {col1.map((tool) => (
-                        <MenuItem
-                          key={tool.path}
-                          component={RouterLink}
-                          href={tool.path}
-                          onClick={() => setOpen(false)}
-                          sx={{ fontSize: '0.875rem', py: 0.75, borderRadius: 1, mx: 0.5 }}
-                        >
-                          {tool.label}
-                        </MenuItem>
-                      ))}
-                    </MenuList>
-                    {/* Column 2 (Finance only) */}
-                    {col2.length > 0 && (
-                      <>
-                        <Divider orientation="vertical" flexItem />
+                    {columns.map((col, idx) => (
+                      <React.Fragment key={idx}>
+                        {idx > 0 && <Divider orientation="vertical" flexItem />}
                         <MenuList sx={{ py: 0.5, flex: 1 }}>
-                          {col2.map((tool) => (
+                          {col.map((tool) => (
                             <MenuItem
                               key={tool.path}
                               component={RouterLink}
@@ -170,8 +262,8 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
                             </MenuItem>
                           ))}
                         </MenuList>
-                      </>
-                    )}
+                      </React.Fragment>
+                    ))}
                   </Box>
                 </Box>
               </ClickAwayListener>
@@ -224,6 +316,11 @@ const MobileAccordion = ({ category, onClose }: MobileAccordionProps) => {
 // ── Main Header ────────────────────────────────────────────────────
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const router = useRouter();
+
+  const allTools = navCategories.flatMap(cat => 
+    cat.tools.map(tool => ({ ...tool, category: cat.label }))
+  );
 
   return (
     <HideOnScroll>
@@ -255,7 +352,7 @@ const Header = () => {
           </Button>
 
           {/* Desktop dropdown nav */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, gap: 0.5 }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 0.5, alignItems: 'center' }}>
             {navCategories.map((cat) => (
               <DropdownButton key={cat.label} category={cat} />
             ))}
@@ -269,8 +366,47 @@ const Header = () => {
             </Button>
           </Box>
 
+          <Box sx={{ flexGrow: 1 }} />
+
+          {/* Search Bar */}
+          <Box sx={{ display: { xs: 'none', md: 'block' }, ml: 2, width: 280 }}>
+            <Autocomplete
+              freeSolo
+              options={allTools}
+              groupBy={(option) => option.category}
+              getOptionLabel={(option) => typeof option === 'string' ? option : option.label}
+              onChange={(event, newValue) => {
+                if (typeof newValue === 'object' && newValue !== null) {
+                  router.push(newValue.path);
+                }
+              }}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  placeholder="Search tools..."
+                  size="small"
+                  InputProps={{
+                    ...params.InputProps,
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <SearchIcon fontSize="small" sx={{ color: 'text.secondary' }} />
+                      </InputAdornment>
+                    ),
+                    sx: { 
+                      borderRadius: 8, 
+                      bgcolor: '#f1f5f9', 
+                      '& fieldset': { border: 'none' },
+                      '&:hover': { bgcolor: '#e2e8f0' },
+                      fontSize: '0.9rem'
+                    }
+                  }}
+                />
+              )}
+            />
+          </Box>
+
           {/* Mobile hamburger */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1, justifyContent: 'flex-end' }}>
             <IconButton onClick={() => setDrawerOpen(true)} color="inherit">
               <MenuIcon />
             </IconButton>
