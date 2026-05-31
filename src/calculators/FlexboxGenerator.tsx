@@ -91,7 +91,7 @@ gap: ${gap};`;
         <Paper 
           sx={{ 
             height: 300, 
-            bgcolor: '#f8fafc',
+            bgcolor: 'action.hover',
             border: '2px dashed #cbd5e1',
             display: 'flex',
             flexDirection,

@@ -4,16 +4,29 @@ import * as React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
-import theme from './theme';
+import { createAppTheme } from './theme';
+import ColorModeProvider, { useColorMode } from './ColorModeProvider';
+
+function ThemeProviderInner({ children }: { children: React.ReactNode }) {
+  const { mode } = useColorMode();
+  const theme = React.useMemo(() => createAppTheme(mode), [mode]);
+
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {children}
+    </ThemeProvider>
+  );
+}
 
 export default function ThemeRegistry({ children }: { children: React.ReactNode }) {
   return (
     <AppRouterCacheProvider options={{ key: 'mui' }}>
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        {children}
-      </ThemeProvider>
+      <ColorModeProvider>
+        <ThemeProviderInner>
+          {children}
+        </ThemeProviderInner>
+      </ColorModeProvider>
     </AppRouterCacheProvider>
   );
 }

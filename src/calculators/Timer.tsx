@@ -97,7 +97,7 @@ const TimerContent = () => {
           justifyContent: 'center',
           bgcolor: isFinished ? 'error.light' : '#f8fafc',
           color: isFinished ? 'white' : 'text.primary',
-          border: '1px solid #e2e8f0',
+          border: '1px solid',
           borderRadius: 4,
           position: 'relative',
           overflow: 'hidden',

@@ -53,7 +53,7 @@ const PercentageCalculator = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
         
         {/* Calculation 1 */}
-        <Paper elevation={0} sx={{ p: 4, border: '1px solid #E5E5E5', borderRadius: 2 }}>
+        <Paper elevation={0} sx={{ p: 4, border: '1px solid', borderRadius: 2 }}>
           <Typography variant="h6" gutterBottom>1. What is X% of Y?</Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap', mt: 2 }}>
             <Typography>What is</Typography>
@@ -78,14 +78,14 @@ const PercentageCalculator = () => {
             />
             <Typography>?</Typography>
           </Box>
-          <Box sx={{ mt: 3, p: 2, bgcolor: '#f9f9f9', borderRadius: 1 }}>
+          <Box sx={{ mt: 3, p: 2, bgcolor: 'action.hover', borderRadius: 1 }}>
             <Typography variant="h5">Answer: <span style={{ fontWeight: 800, color: '#171717' }}>{res1}</span></Typography>
             <Typography variant="caption" color="text.secondary">{val1A}% of {val1B} = {res1}</Typography>
           </Box>
         </Paper>
 
         {/* Calculation 2 */}
-        <Paper elevation={0} sx={{ p: 4, border: '1px solid #E5E5E5', borderRadius: 2 }}>
+        <Paper elevation={0} sx={{ p: 4, border: '1px solid', borderRadius: 2 }}>
           <Typography variant="h6" gutterBottom>2. X is what percent of Y? (Marks / Grades)</Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap', mt: 2 }}>
             <TextField 
@@ -109,13 +109,13 @@ const PercentageCalculator = () => {
             />
             <Typography>?</Typography>
           </Box>
-          <Box sx={{ mt: 3, p: 2, bgcolor: '#f9f9f9', borderRadius: 1 }}>
+          <Box sx={{ mt: 3, p: 2, bgcolor: 'action.hover', borderRadius: 1 }}>
             <Typography variant="h5">Answer: <span style={{ fontWeight: 800, color: '#171717' }}>{res2.toFixed(2)}%</span></Typography>
           </Box>
         </Paper>
 
         {/* Calculation 3 */}
-        <Paper elevation={0} sx={{ p: 4, border: '1px solid #E5E5E5', borderRadius: 2 }}>
+        <Paper elevation={0} sx={{ p: 4, border: '1px solid', borderRadius: 2 }}>
           <Typography variant="h6" gutterBottom>3. Percentage Increase / Decrease</Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap', mt: 2 }}>
             <Typography>From</Typography>
@@ -139,7 +139,7 @@ const PercentageCalculator = () => {
               sx={{ width: 150 }}
             />
           </Box>
-          <Box sx={{ mt: 3, p: 2, bgcolor: '#f9f9f9', borderRadius: 1 }}>
+          <Box sx={{ mt: 3, p: 2, bgcolor: 'action.hover', borderRadius: 1 }}>
             <Typography variant="h5">Answer: <span style={{ fontWeight: 800, color: res3 >= 0 ? '#22c55e' : '#ef4444' }}>{Math.abs(res3).toFixed(2)}% {res3 >= 0 ? 'Increase' : 'Decrease'}</span></Typography>
           </Box>
         </Paper>

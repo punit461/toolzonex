@@ -47,7 +47,7 @@ const ImageToBase64ConverterContent = () => {
             alignItems: 'center', 
             justifyContent: 'center', 
             gap: 2, 
-            bgcolor: '#f8fafc',
+            bgcolor: 'action.hover',
             borderStyle: 'dashed',
             borderWidth: 2
           }}

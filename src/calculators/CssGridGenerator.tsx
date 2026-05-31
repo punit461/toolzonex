@@ -65,7 +65,7 @@ gap: ${gap};`;
         <Paper 
           sx={{ 
             height: 350, 
-            bgcolor: '#f8fafc',
+            bgcolor: 'action.hover',
             border: '2px dashed #cbd5e1',
             display: 'grid',
             gridTemplateColumns: `repeat(${columns}, 1fr)`,

@@ -51,7 +51,7 @@ const TextStatsAnalyzerContent = () => {
   };
 
   const StatBox = ({ label, value }: { label: string, value: string | number }) => (
-    <Paper sx={{ p: 2, textAlign: 'center', bgcolor: 'background.default', border: '1px solid #E5E5E5' }}>
+    <Paper sx={{ p: 2, textAlign: 'center', bgcolor: 'background.default', border: '1px solid' }}>
       <Typography variant="h4" fontWeight="600" color="primary.main" gutterBottom>{value}</Typography>
       <Typography variant="body2" color="text.secondary" fontWeight="500">{label}</Typography>
     </Paper>

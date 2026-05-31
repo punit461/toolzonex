@@ -93,7 +93,7 @@ const MailtoLinkGeneratorContent = () => {
 
       {generatedLink && (
         <Box>
-          <Paper sx={{ p: 2, bgcolor: 'primary.light', color: 'primary.dark' }}>
+          <Paper sx={{ p: 2, bgcolor: 'action.hover', color: 'text.primary' }}>
             <Typography variant="subtitle2" gutterBottom>
               Your Mailto Link:
             </Typography>

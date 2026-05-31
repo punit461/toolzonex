@@ -169,7 +169,7 @@ const CFTCalculator = () => {
 
         {/* Results */}
         <Box>
-          <Box sx={{ p: 4, bgcolor: '#f9f9f9', borderRadius: 2 }}>
+          <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2 }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Combat Readiness Grade</Typography>
             <Typography variant="h2" sx={{ fontWeight: 900, color: overallColor, mb: 3 }}>
               {overallGrade}

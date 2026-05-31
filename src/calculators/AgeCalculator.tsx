@@ -109,7 +109,7 @@ const AgeCalculator = () => {
         </Box>
 
         <Box>
-          <Box sx={{ p: 4, bgcolor: '#f9f9f9', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+          <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Exact Age</Typography>
             
             <Typography variant="h2" sx={{ fontWeight: 800, color: 'primary.main', mb: 2, textAlign: 'center' }}>

@@ -81,7 +81,7 @@ const BMICalculator = () => {
         The standard WHO BMI chart differs slightly from the guidelines recommended for the Indian population. Indians are generally genetically prone to higher abdominal fat and lower muscle mass, putting them at higher risk of lifestyle diseases at lower BMI levels.
       </Typography>
       <br />
-      <Box sx={{ bgcolor: '#f9f9f9', p: 3, borderRadius: 2, border: '1px solid #e5e5e5' }}>
+      <Box sx={{ bgcolor: 'action.hover', p: 3, borderRadius: 2, border: '1px solid' }}>
         <Typography variant="body1"><strong>Underweight:</strong> Below 18.5</Typography>
         <Typography variant="body1"><strong>Normal:</strong> 18.5 - 22.9</Typography>
         <Typography variant="body1"><strong>Overweight:</strong> 23.0 - 24.9</Typography>
@@ -186,14 +186,14 @@ const BMICalculator = () => {
         </Box>
 
         <Box>
-          <Box sx={{ p: 4, bgcolor: '#f9f9f9', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+          <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Your BMI Is</Typography>
             
             <Typography variant="h1" sx={{ fontWeight: 900, fontSize: '5rem', color: color || '#9CA3AF', my: 2 }}>
               {bmi || '—'}
             </Typography>
 
-            <Box sx={{ bgcolor: '#ffffff', px: 3, py: 1, borderRadius: 5, border: `2px solid ${color || '#E5E5E5'}` }}>
+            <Box sx={{ bgcolor: 'background.paper', px: 3, py: 1, borderRadius: 5, border: `2px solid ${color || '#E5E5E5'}` }}>
               <Typography variant="h6" sx={{ color: color || '#9CA3AF', fontWeight: 700, textTransform: 'uppercase' }}>
                 {category || 'Enter details'}
               </Typography>

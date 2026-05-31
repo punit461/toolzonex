@@ -127,7 +127,7 @@ const NumberToWordsConverterContent = () => {
               {copied ? 'Copied!' : 'Copy'}
             </Button>
           </Box>
-          <Box sx={{ p: 4, flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: '#f8fafc' }}>
+          <Box sx={{ p: 4, flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'action.hover' }}>
             <Typography variant="h5" sx={{ textTransform: 'capitalize', textAlign: 'center', fontWeight: 'medium' }}>
               {words || 'Please enter a valid number'}
             </Typography>

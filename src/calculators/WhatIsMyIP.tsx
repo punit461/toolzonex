@@ -7,6 +7,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import CalculatorShell from '../components/CalculatorShell';
 import AdSenseUnit from '../components/AdSenseUnit';
+import ResultCard from '../components/ui/ResultCard';
 
 interface IPData {
   ip?: string;
@@ -98,11 +99,11 @@ const WhatIsMyIPContent = () => {
 
             {ip && !error && (
               <>
-                <Paper sx={{ p: 4, mb: 2, textAlign: 'center', bgcolor: 'primary.light', color: 'primary.dark' }}>
-                  <Typography variant="body2" color="inherit" sx={{ mb: 1, opacity: 0.9 }}>
+                <ResultCard variant="mono" sx={{ mb: 2, textAlign: 'center' }}>
+                  <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
                     Your Public IP Address
                   </Typography>
-                  <Typography variant="h3" sx={{ fontWeight: 700, fontFamily: 'monospace', mb: 2 }}>
+                  <Typography variant="h3" sx={{ fontWeight: 700, fontFamily: 'monospace', mb: 2, color: 'text.primary' }}>
                     {ip}
                   </Typography>
                   <Button 
@@ -110,11 +111,10 @@ const WhatIsMyIPContent = () => {
                     variant="contained"
                     startIcon={copied ? <CheckIcon /> : <ContentCopyIcon />}
                     onClick={copyToClipboard}
-                    sx={{ color: 'inherit' }}
                   >
                     {copied ? 'Copied!' : 'Copy IP'}
                   </Button>
-                </Paper>
+                </ResultCard>
 
                 <Button 
                   variant="outlined" 

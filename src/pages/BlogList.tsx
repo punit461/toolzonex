@@ -7,13 +7,15 @@ import {
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import RouterLink from 'next/link';
+import { allToolBlogs } from '../data/tool-blogs';
 
 // ── Tag taxonomy ───────────────────────────────────────────────────
 export type BlogTag =
   | 'Tax' | 'New Regime' | 'Old Regime' | 'Deductions' | 'HRA'
   | 'Investing' | 'Mutual Funds' | 'SIP' | 'PPF' | 'SSY'
   | 'Budgeting' | 'Credit Score' | 'GST' | 'Real Estate'
-  | 'Retirement' | 'Salary' | 'Gratuity' | 'NPS' | 'Rebate';
+  | 'Retirement' | 'Salary' | 'Gratuity' | 'NPS' | 'Rebate'
+  | 'Developer' | 'Text' | 'Math' | 'Health' | 'Design' | 'Converter' | 'Generator';
 
 interface BlogPost {
   title: string;
@@ -124,9 +126,31 @@ const blogPosts: BlogPost[] = [
   },
 ];
 
+// Map tool blog category to tags
+function toolCategoryToTag(category: string): BlogTag[] {
+  switch (category) {
+    case 'finance': return ['Investing'];
+    case 'health': return ['Health'];
+    case 'utilities': return ['Math'];
+    default: return ['Developer'];
+  }
+}
+
+// Generate blog list entries from tool blogs data
+const toolBlogPosts: BlogPost[] = allToolBlogs.map(t => ({
+  title: t.title,
+  excerpt: t.excerpt,
+  date: t.date,
+  path: `/blog/tools/${t.slug}`,
+  tags: toolCategoryToTag(t.category),
+}));
+
+// Combine both sources
+const allPosts: BlogPost[] = [...blogPosts, ...toolBlogPosts];
+
 // Derive all unique tags from data (preserves insertion order, deduped)
 const ALL_TAGS: BlogTag[] = Array.from(
-  new Set(blogPosts.flatMap(p => p.tags))
+  new Set(allPosts.flatMap(p => p.tags))
 ) as BlogTag[];
 
 const TAG_COLORS: Record<string, 'default' | 'primary' | 'secondary' | 'error' | 'warning' | 'info' | 'success'> = {
@@ -136,6 +160,8 @@ const TAG_COLORS: Record<string, 'default' | 'primary' | 'secondary' | 'error' |
   Budgeting: 'default', 'Credit Score': 'default', GST: 'warning',
   'Real Estate': 'default', Retirement: 'success', Salary: 'info',
   Gratuity: 'info', NPS: 'success', Rebate: 'error',
+  Developer: 'primary', Text: 'default', Math: 'secondary',
+  Health: 'success', Design: 'warning', Converter: 'info', Generator: 'primary',
 };
 
 const BlogList = () => {
@@ -152,7 +178,7 @@ const BlogList = () => {
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim();
-    return blogPosts.filter(post => {
+    return allPosts.filter(post => {
       const matchesSearch =
         !q ||
         post.title.toLowerCase().includes(q) ||
@@ -228,9 +254,9 @@ const BlogList = () => {
 
       {/* Results count */}
       <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
-        {filtered.length === blogPosts.length
-          ? `${blogPosts.length} articles`
-          : `${filtered.length} of ${blogPosts.length} articles`}
+        {filtered.length === allPosts.length
+          ? `${allPosts.length} articles`
+          : `${filtered.length} of ${allPosts.length} articles`}
         {activeTags.size > 0 && ` · filtered by: ${Array.from(activeTags).join(', ')}`}
       </Typography>
 

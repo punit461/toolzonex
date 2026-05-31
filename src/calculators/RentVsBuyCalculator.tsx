@@ -206,7 +206,7 @@ const RentVsBuyCalculator = () => {
         </Box>
 
         <Box>
-          <Box sx={{ p: 4, bgcolor: '#f9f9f9', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column' }}>
+          <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column' }}>
             <Box sx={{ textAlign: 'center', mb: 4 }}>
               <Typography variant="h6" color="text.secondary">Financial Verdict</Typography>
               

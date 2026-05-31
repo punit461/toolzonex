@@ -121,7 +121,7 @@ const ContrastCheckerContent = () => {
         </Paper>
 
         {contrast > 0 && (
-          <Paper variant="outlined" sx={{ p: 3, bgcolor: '#f8fafc' }}>
+          <Paper variant="outlined" sx={{ p: 3, bgcolor: 'action.hover' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
               <Typography variant="h6">Contrast Ratio</Typography>
               <Typography variant="h4" fontWeight="bold" color="primary">{contrast.toFixed(2)} : 1</Typography>

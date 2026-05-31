@@ -64,8 +64,8 @@ const BoxShadowGeneratorContent = () => {
             display: 'flex', 
             alignItems: 'center', 
             justifyContent: 'center',
-            bgcolor: '#f8fafc',
-            border: '1px solid #e2e8f0',
+            bgcolor: 'action.hover',
+            border: '1px solid',
             overflow: 'hidden'
           }}
         >

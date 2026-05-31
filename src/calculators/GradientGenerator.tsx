@@ -60,7 +60,7 @@ const GradientGeneratorContent = () => {
             justifyContent: 'center',
             borderRadius: 2,
             background: gradientString,
-            border: '1px solid #e2e8f0',
+            border: '1px solid',
           }}
         />
 
