@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import ToolBlogTemplate from "../../../../pages/blogs/ToolBlogTemplate";
+import ToolBlogTemplate from "../../../../components/ToolBlogTemplate";
 import { allToolBlogs, getAllToolBlogSlugs, getToolBlogBySlug } from "../../../../data/tool-blogs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
