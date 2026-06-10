@@ -15,10 +15,13 @@ import HomeIcon from '@mui/icons-material/Home';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import SearchIcon from '@mui/icons-material/Search';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+import { useColorMode } from './ColorModeProvider';
 
 interface HideOnScrollProps { children: React.ReactElement }
 const HideOnScroll = ({ children }: HideOnScrollProps) => {
-  const trigger = useScrollTrigger();
+  const trigger = useScrollTrigger({ threshold: 20 });
   return <Slide appear={false} direction="down" in={!trigger}>{children}</Slide>;
 };
 
@@ -217,7 +220,18 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
         color="inherit"
         endIcon={open ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
         onMouseEnter={handleOpen}
-        sx={{ fontWeight: 600, fontSize: '0.9rem', textTransform: 'none', px: 1.5 }}
+        sx={{
+          fontWeight: 500,
+          fontSize: '0.8rem',
+          textTransform: 'none',
+          px: 1.25,
+          py: 0.75,
+          borderRadius: 2,
+          whiteSpace: 'nowrap',
+          transition: 'all 0.2s ease',
+          '&:hover': { bgcolor: 'action.hover' },
+          ...(open && { bgcolor: 'action.selected' }),
+        }}
       >
         {category.label}
       </Button>
@@ -233,14 +247,22 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
         {({ TransitionProps }) => (
           <Grow {...TransitionProps} style={{ transformOrigin: 'top left' }}>
             <Paper
-              elevation={8}
+              elevation={12}
               onMouseEnter={handleMenuMouseEnter}
               onMouseLeave={handleClose}
-              sx={{ mt: 0.5, borderRadius: 2, overflow: 'hidden', minWidth: cols * 240 }}
+              sx={{
+                mt: 1,
+                borderRadius: 3,
+                overflow: 'hidden',
+                minWidth: cols * 240,
+                border: '1px solid',
+                borderColor: 'divider',
+                backdropFilter: 'blur(20px)',
+              }}
             >
               <ClickAwayListener onClickAway={() => setOpen(false)}>
                 <Box>
-                  <Box sx={{ px: 2, py: 1, bgcolor: '#F9F9F9', borderBottom: '1px solid #E5E5E5' }}>
+                  <Box sx={{ px: 2, py: 1, bgcolor: 'action.hover', borderBottom: '1px solid', borderColor: 'divider' }}>
                     <Typography variant="caption" sx={{ fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'text.secondary' }}>
                       {category.label}
                     </Typography>
@@ -317,6 +339,7 @@ const MobileAccordion = ({ category, onClose }: MobileAccordionProps) => {
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const router = useRouter();
+  const { mode, toggleColorMode } = useColorMode();
 
   const allTools = navCategories.flatMap(cat => 
     cat.tools.map(tool => ({ ...tool, category: cat.label }))
@@ -327,32 +350,37 @@ const Header = () => {
       <AppBar
         position="sticky"
         elevation={0}
-        sx={{ backgroundColor: '#FFFFFF', borderBottom: '1px solid #E5E5E5', color: 'text.primary' }}
+        sx={{
+          backgroundColor: (theme) =>
+            theme.palette.mode === 'dark'
+              ? 'rgba(15, 23, 42, 0.85)'
+              : 'rgba(255, 255, 255, 0.8)',
+          backdropFilter: 'blur(12px)',
+          borderBottom: '1px solid',
+          borderColor: 'divider',
+          color: 'text.primary',
+        }}
       >
-        <Toolbar sx={{ maxWidth: '1200px', width: '100%', margin: '0 auto', px: { xs: 2, md: 3 }, minHeight: 64 }}>
+        <Toolbar sx={{ maxWidth: '1280px', width: '100%', margin: '0 auto', px: { xs: 2, md: 3 }, minHeight: 60, gap: 1 }}>
 
           {/* Logo */}
           <Box
             component={RouterLink}
             href="/"
-            sx={{ display: 'flex', alignItems: 'center', textDecoration: 'none', mr: 2 }}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              textDecoration: 'none',
+              mr: 3,
+              transition: 'opacity 0.2s',
+              '&:hover': { opacity: 0.8 },
+            }}
           >
-            <Box component="img" src="/toolzonex/logo.png" alt="ToolZoneX" sx={{ height: 44, width: 'auto' }} />
+            <Box component="img" src="/toolzonex/logo.png" alt="ToolZoneX" sx={{ height: 38, width: 'auto' }} />
           </Box>
 
-          {/* Home button — desktop */}
-          <Button
-            component={RouterLink}
-            href="/"
-            startIcon={<HomeIcon />}
-            color="inherit"
-            sx={{ fontWeight: 600, fontSize: '0.9rem', textTransform: 'none', px: 1.5, display: { xs: 'none', md: 'flex' } }}
-          >
-            Home
-          </Button>
-
           {/* Desktop dropdown nav */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 0.5, alignItems: 'center' }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 0.25, alignItems: 'center' }}>
             {navCategories.map((cat) => (
               <DropdownButton key={cat.label} category={cat} />
             ))}
@@ -360,7 +388,17 @@ const Header = () => {
               component={RouterLink}
               href="/blog"
               color="inherit"
-              sx={{ fontWeight: 600, fontSize: '0.9rem', textTransform: 'none', px: 1.5 }}
+              sx={{
+                fontWeight: 500,
+                fontSize: '0.8rem',
+                textTransform: 'none',
+                px: 1.25,
+                py: 0.75,
+                borderRadius: 2,
+                whiteSpace: 'nowrap',
+                transition: 'all 0.2s ease',
+                '&:hover': { bgcolor: 'action.hover' },
+              }}
             >
               Blog
             </Button>
@@ -369,7 +407,7 @@ const Header = () => {
           <Box sx={{ flexGrow: 1 }} />
 
           {/* Search Bar */}
-          <Box sx={{ display: { xs: 'none', md: 'block' }, ml: 2, width: 280 }}>
+          <Box sx={{ display: { xs: 'none', md: 'block' }, ml: 2, width: 240 }}>
             <Autocomplete
               freeSolo
               options={allTools}
@@ -389,15 +427,20 @@ const Header = () => {
                     ...params.InputProps,
                     startAdornment: (
                       <InputAdornment position="start">
-                        <SearchIcon fontSize="small" sx={{ color: 'text.secondary' }} />
+                        <SearchIcon fontSize="small" sx={{ color: 'text.secondary', opacity: 0.7 }} />
                       </InputAdornment>
                     ),
-                    sx: { 
-                      borderRadius: 8, 
-                      bgcolor: '#f1f5f9', 
+                    sx: {
+                      borderRadius: 10,
+                      bgcolor: 'action.hover',
+                      border: '1px solid',
+                      borderColor: 'divider',
                       '& fieldset': { border: 'none' },
-                      '&:hover': { bgcolor: '#e2e8f0' },
-                      fontSize: '0.9rem'
+                      '&:hover': { borderColor: 'primary.main', bgcolor: 'action.selected' },
+                      '&.Mui-focused': { borderColor: 'primary.main', bgcolor: 'background.paper', boxShadow: '0 0 0 3px rgba(59,130,246,0.1)' },
+                      fontSize: '0.85rem',
+                      height: 36,
+                      transition: 'all 0.2s ease',
                     }
                   }}
                 />
@@ -405,8 +448,30 @@ const Header = () => {
             />
           </Box>
 
+          {/* Dark mode toggle — desktop */}
+          <IconButton
+            onClick={toggleColorMode}
+            color="inherit"
+            sx={{
+              ml: 1.5,
+              display: { xs: 'none', md: 'flex' },
+              width: 36,
+              height: 36,
+              borderRadius: 2,
+              bgcolor: 'action.hover',
+              transition: 'all 0.2s ease',
+              '&:hover': { bgcolor: 'action.selected', transform: 'rotate(15deg)' },
+            }}
+            aria-label="Toggle dark mode"
+          >
+            {mode === 'dark' ? <LightModeOutlinedIcon fontSize="small" /> : <DarkModeOutlinedIcon fontSize="small" />}
+          </IconButton>
+
           {/* Mobile hamburger */}
           <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1, justifyContent: 'flex-end' }}>
+            <IconButton onClick={toggleColorMode} color="inherit" aria-label="Toggle dark mode" sx={{ mr: 0.5 }}>
+              {mode === 'dark' ? <LightModeOutlinedIcon /> : <DarkModeOutlinedIcon />}
+            </IconButton>
             <IconButton onClick={() => setDrawerOpen(true)} color="inherit">
               <MenuIcon />
             </IconButton>

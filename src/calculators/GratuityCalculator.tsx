@@ -104,7 +104,7 @@ const GratuityCalculator = () => {
         </Box>
 
         <Box>
-          <Box sx={{ p: 4, bgcolor: '#f9f9f9', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+          <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             {yearsOfService < 5 ? (
               <Box sx={{ textAlign: 'center' }}>
                 <Typography variant="h5" color="error" gutterBottom sx={{ fontWeight: 700 }}>

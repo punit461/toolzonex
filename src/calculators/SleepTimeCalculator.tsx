@@ -67,7 +67,7 @@ const SleepTimeCalculatorContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       
       {/* If I need to wake up at... */}
-      <Paper variant="outlined" sx={{ p: 4, display: 'flex', flexDirection: 'column', gap: 3, bgcolor: '#f8fafc' }}>
+      <Paper variant="outlined" sx={{ p: 4, display: 'flex', flexDirection: 'column', gap: 3, bgcolor: 'action.hover' }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <WbSunnyIcon color="warning" />
           <Typography variant="h6" fontWeight="bold">I want to wake up at...</Typography>

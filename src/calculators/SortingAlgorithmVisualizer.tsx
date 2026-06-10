@@ -148,7 +148,7 @@ const SortingAlgorithmVisualizerContent = () => {
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
       
       {/* Controls */}
-      <Paper variant="outlined" sx={{ p: 3, bgcolor: '#f8fafc', display: 'flex', gap: 3, flexWrap: 'wrap', alignItems: 'center' }}>
+      <Paper variant="outlined" sx={{ p: 3, bgcolor: 'action.hover', display: 'flex', gap: 3, flexWrap: 'wrap', alignItems: 'center' }}>
         <FormControl size="small" sx={{ minWidth: 200 }}>
           <InputLabel>Algorithm</InputLabel>
           <Select 

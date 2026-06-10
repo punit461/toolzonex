@@ -97,7 +97,7 @@ const VerticalTextGeneratorContent = () => {
               {copied ? 'Copied!' : 'Copy'}
             </Button>
           </Box>
-          <Box sx={{ p: 4, flexGrow: 1, display: 'flex', justifyContent: 'center', bgcolor: '#f8fafc' }}>
+          <Box sx={{ p: 4, flexGrow: 1, display: 'flex', justifyContent: 'center', bgcolor: 'action.hover' }}>
             <Typography 
               variant="h5" 
               sx={{ 

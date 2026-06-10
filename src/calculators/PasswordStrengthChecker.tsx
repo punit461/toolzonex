@@ -77,7 +77,7 @@ const PasswordStrengthCheckerContent = () => {
 
       {/* Rules Panel */}
       <Box>
-        <Paper variant="outlined" sx={{ p: 3, bgcolor: '#f8fafc' }}>
+        <Paper variant="outlined" sx={{ p: 3, bgcolor: 'action.hover' }}>
           <Typography variant="h6" fontWeight="bold" mb={2}>Password Requirements</Typography>
           <List disablePadding>
             {rules.map((rule, idx) => (

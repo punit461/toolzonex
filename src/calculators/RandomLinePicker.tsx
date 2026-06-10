@@ -51,7 +51,7 @@ const RandomLinePickerContent = () => {
           <Typography variant="caption" color="text.secondary">Total valid items: {totalLines}</Typography>
         </Box>
 
-        <Paper variant="outlined" sx={{ p: 2, bgcolor: '#f8fafc' }}>
+        <Paper variant="outlined" sx={{ p: 2, bgcolor: 'action.hover' }}>
           <Typography variant="subtitle2" mb={2}>How many items to pick?</Typography>
           <Box sx={{ px: 2 }}>
             <Slider

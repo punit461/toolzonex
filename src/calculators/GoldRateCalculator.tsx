@@ -100,7 +100,7 @@ const GoldRateCalculator = () => {
         </Box>
 
         <Box>
-          <Box sx={{ p: 4, bgcolor: '#f9f9f9', borderRadius: 2, height: '100%' }}>
+          <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Price Breakdown</Typography>
             
             <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2, mt: 3 }}>

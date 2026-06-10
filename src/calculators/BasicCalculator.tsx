@@ -48,10 +48,10 @@ const BasicCalculatorContent = () => {
 
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-      <Paper sx={{ width: 320, p: 3, display: 'flex', flexDirection: 'column', gap: 2, bgcolor: '#f8fafc' }}>
+      <Paper sx={{ width: 320, p: 3, display: 'flex', flexDirection: 'column', gap: 2, bgcolor: 'action.hover' }}>
         
         {/* Screen */}
-        <Box sx={{ bgcolor: '#fff', p: 2, borderRadius: 1, border: '1px solid #e2e8f0', textAlign: 'right', minHeight: 80 }}>
+        <Box sx={{ bgcolor: 'background.paper', p: 2, borderRadius: 1, border: '1px solid', textAlign: 'right', minHeight: 80 }}>
           <Typography variant="body2" color="text.secondary" sx={{ minHeight: 20 }}>
             {equation}
           </Typography>

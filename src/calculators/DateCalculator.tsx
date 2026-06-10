@@ -129,7 +129,7 @@ const DateCalculator = () => {
             <Button variant="outlined" onClick={() => { const today = new Date().toISOString().split('T')[0]; const plus30 = new Date(Date.now() + 86400000 * 30).toISOString().split('T')[0]; setStartDate(today); setEndDate(plus30); }}>Reset to Today</Button>
           </Box>
           <Box>
-            <Box sx={{ p: 4, bgcolor: '#f9f9f9', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+            <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
               <Typography variant="h6" color="text.secondary" gutterBottom>Duration</Typography>
               
               <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 2 }}>
@@ -184,7 +184,7 @@ const DateCalculator = () => {
             </Box>
           </Box>
           <Box>
-            <Box sx={{ p: 4, bgcolor: '#f9f9f9', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+            <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
               <Typography variant="h6" color="text.secondary" gutterBottom>Result Date</Typography>
               <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', my: 2 }}>
                 {resultDateStr}

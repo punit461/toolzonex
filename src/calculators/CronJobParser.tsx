@@ -30,7 +30,7 @@ const CronJobParserContent = () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4, maxWidth: 800, mx: 'auto' }}>
       
-      <Paper variant="outlined" sx={{ p: { xs: 3, md: 5 }, bgcolor: '#f8fafc', display: 'flex', flexDirection: 'column', gap: 4 }}>
+      <Paper variant="outlined" sx={{ p: { xs: 3, md: 5 }, bgcolor: 'action.hover', display: 'flex', flexDirection: 'column', gap: 4 }}>
         
         <Box>
           <Typography variant="h6" mb={2}>Enter Cron Expression</Typography>

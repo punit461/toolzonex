@@ -63,7 +63,7 @@ const RomanNumeralConverterContent = () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4, maxWidth: 600, mx: 'auto' }}>
       
-      <Paper variant="outlined" sx={{ p: 4, bgcolor: '#f8fafc', display: 'flex', flexDirection: 'column', gap: 2 }}>
+      <Paper variant="outlined" sx={{ p: 4, bgcolor: 'action.hover', display: 'flex', flexDirection: 'column', gap: 2 }}>
         
         <Box sx={{ position: 'relative' }}>
           <Typography variant="subtitle2" mb={1} color="text.secondary">Number (1-3999)</Typography>

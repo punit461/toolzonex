@@ -44,7 +44,7 @@ const EMICalculator = () => {
       <Typography variant="body1">
         EMI (Equated Monthly Installment) is calculated using the formula:
       </Typography>
-      <Box sx={{ my: 2, p: 2, bgcolor: '#f5f5f5', borderRadius: 1, fontFamily: 'monospace' }}>
+      <Box sx={{ my: 2, p: 2, bgcolor: 'action.hover', borderRadius: 1, fontFamily: 'monospace' }}>
         EMI = [P x R x (1+R)^N] / [(1+R)^N - 1]
       </Box>
       <Typography variant="body1">
@@ -152,7 +152,7 @@ const EMICalculator = () => {
         </Box>
 
         <Box>
-          <Box sx={{ p: 4, bgcolor: '#f9f9f9', borderRadius: 2, textAlign: 'center', height: '100%' }}>
+          <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Monthly EMI</Typography>
             {rate <= 0 ? (
               <Typography color="error" sx={{ mt: 2, fontWeight: 600 }}>Please enter a valid interest rate (&gt; 0%)</Typography>

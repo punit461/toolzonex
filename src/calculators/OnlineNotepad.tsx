@@ -102,7 +102,7 @@ const OnlineNotepad = () => {
           value={text}
           onChange={(e) => handleChange(e.target.value)}
           sx={{
-            bgcolor: '#ffffff',
+            bgcolor: 'background.paper',
             '& .MuiInputBase-root': {
               fontFamily: '"Inter", monospace',
               fontSize: '1.1rem',

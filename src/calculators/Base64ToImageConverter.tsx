@@ -67,7 +67,7 @@ const Base64ToImageConverterContent = () => {
 
       {/* Output Panel */}
       <Box>
-        <Paper variant="outlined" sx={{ p: 4, height: '100%', minHeight: 300, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 3, bgcolor: '#f8fafc' }}>
+        <Paper variant="outlined" sx={{ p: 4, height: '100%', minHeight: 300, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 3, bgcolor: 'action.hover' }}>
           
           {!base64String && !error && (
             <Typography color="text.secondary" textAlign="center">

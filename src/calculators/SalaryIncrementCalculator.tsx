@@ -41,7 +41,7 @@ const SalaryIncrementCalculator = () => {
       <Typography variant="body1">
         Your new salary is calculated by adding the increment percentage to your current CTC.
       </Typography>
-      <Box sx={{ my: 2, p: 2, bgcolor: '#f5f5f5', borderRadius: 1, fontFamily: 'monospace' }}>
+      <Box sx={{ my: 2, p: 2, bgcolor: 'action.hover', borderRadius: 1, fontFamily: 'monospace' }}>
         Increment Amount = Current CTC × (Increment % / 100)
         <br />
         New CTC = Current CTC + Increment Amount
@@ -114,7 +114,7 @@ const SalaryIncrementCalculator = () => {
         </Box>
 
         <Box>
-          <Box sx={{ p: 4, bgcolor: '#f9f9f9', borderRadius: 2, textAlign: 'center', height: '100%' }}>
+          <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">New CTC</Typography>
             <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               ₹ {newCTC.toLocaleString('en-IN')}
@@ -152,9 +152,9 @@ const SalaryIncrementCalculator = () => {
       
       <Box sx={{ mt: 6 }}>
         <Typography variant="h4" gutterBottom sx={{ fontSize: '1.5rem', fontWeight: 600 }}>Salary Comparison</Typography>
-        <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid #E5E5E5' }}>
+        <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid' }}>
           <Table>
-            <TableHead sx={{ bgcolor: '#f5f5f5' }}>
+            <TableHead sx={{ bgcolor: 'action.hover' }}>
               <TableRow>
                 <TableCell sx={{ fontWeight: 600 }}>Component</TableCell>
                 <TableCell align="right" sx={{ fontWeight: 600 }}>Current</TableCell>

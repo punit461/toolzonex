@@ -52,7 +52,7 @@ const GSTCalculator = () => {
       </Typography>
 
       <Typography variant="h2">GST Slabs in India</Typography>
-      <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid #E5E5E5', my: 2 }}>
+      <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid', my: 2 }}>
         <Table>
           <TableHead>
             <TableRow>
@@ -134,7 +134,7 @@ const GSTCalculator = () => {
         </Box>
 
         <Box>
-          <Box sx={{ p: 4, bgcolor: '#f9f9f9', borderRadius: 2, height: '100%' }}>
+          <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Calculation Details</Typography>
             
             <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>

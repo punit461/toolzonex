@@ -104,7 +104,7 @@ const Row = ({ label, value, bold, color }: { label: string; value: string; bold
 
 function ResultPanel({ r, label, tds }: { r: Result; label: string; tds: number }) {
   return (
-    <Box sx={{ p: 3, bgcolor: '#F9FAFB', borderRadius: 2, border: '1px solid #E5E5E5', height: '100%' }}>
+    <Box sx={{ p: 3, bgcolor: 'action.hover', borderRadius: 2, border: '1px solid', height: '100%' }}>
       <Typography variant="overline" sx={{ fontWeight: 700, color: 'text.secondary' }}>{label}</Typography>
       <Typography variant="h3" sx={{ fontWeight: 900, color: 'primary.main', my: 1 }}>{fmt(r.totalTax)}</Typography>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>Effective rate: {pct(r.effectiveRate)}</Typography>
@@ -175,7 +175,7 @@ const IncomeTaxCalculator = () => {
       <Typography variant="h2">How India's Income Tax is Calculated</Typography>
       <Typography variant="body1">India uses a slab-based tax system. Your income is taxed at progressively higher rates as it crosses each slab threshold. Only the income <em>within</em> each slab is taxed at that rate — not your entire income.</Typography>
       <Typography variant="h2">New Regime Slabs (FY 2025-26)</Typography>
-      <Paper elevation={0} sx={{ border: '1px solid #E5E5E5', borderRadius: 2, overflow: 'hidden', my: 1 }}>
+      <Paper elevation={0} sx={{ border: '1px solid', borderRadius: 2, overflow: 'hidden', my: 1 }}>
         <Table size="small">
           <TableBody>
             {[['Up to ₹4,00,000','Nil'],['₹4,00,001 – ₹8,00,000','5%'],['₹8,00,001 – ₹12,00,000','10%'],['₹12,00,001 – ₹16,00,000','15%'],['₹16,00,001 – ₹20,00,000','20%'],['₹20,00,001 – ₹24,00,000','25%'],['Above ₹24,00,000','30%']].map(([slab, rate]) => (
@@ -234,7 +234,7 @@ const IncomeTaxCalculator = () => {
         {/* Left: Inputs */}
         <Box>
           {/* Income */}
-          <Accordion defaultExpanded disableGutters elevation={0} sx={{ border: '1px solid #E5E5E5', borderRadius: 2, mb: 2, '&:before': { display: 'none' } }}>
+          <Accordion defaultExpanded disableGutters elevation={0} sx={{ border: '1px solid', borderRadius: 2, mb: 2, '&:before': { display: 'none' } }}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <Typography sx={{ fontWeight: 700 }}>Income Details</Typography>
             </AccordionSummary>
@@ -246,7 +246,7 @@ const IncomeTaxCalculator = () => {
 
           {/* HRA — old regime only */}
           {(regime === 'old' || regime === 'compare') && (
-            <Accordion disableGutters elevation={0} sx={{ border: '1px solid #E5E5E5', borderRadius: 2, mb: 2, '&:before': { display: 'none' } }}>
+            <Accordion disableGutters elevation={0} sx={{ border: '1px solid', borderRadius: 2, mb: 2, '&:before': { display: 'none' } }}>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography sx={{ fontWeight: 700 }}>HRA Exemption <Chip label="Old Regime only" size="small" sx={{ ml: 1, fontSize: '0.7rem' }} /></Typography>
               </AccordionSummary>
@@ -261,7 +261,7 @@ const IncomeTaxCalculator = () => {
 
           {/* Deductions — old regime only */}
           {(regime === 'old' || regime === 'compare') && (
-            <Accordion disableGutters elevation={0} sx={{ border: '1px solid #E5E5E5', borderRadius: 2, mb: 2, '&:before': { display: 'none' } }}>
+            <Accordion disableGutters elevation={0} sx={{ border: '1px solid', borderRadius: 2, mb: 2, '&:before': { display: 'none' } }}>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography sx={{ fontWeight: 700 }}>Deductions <Chip label="Old Regime only" size="small" sx={{ ml: 1, fontSize: '0.7rem' }} /></Typography>
               </AccordionSummary>
@@ -281,7 +281,7 @@ const IncomeTaxCalculator = () => {
           )}
 
           {/* TDS */}
-          <Accordion disableGutters elevation={0} sx={{ border: '1px solid #E5E5E5', borderRadius: 2, mb: 2, '&:before': { display: 'none' } }}>
+          <Accordion disableGutters elevation={0} sx={{ border: '1px solid', borderRadius: 2, mb: 2, '&:before': { display: 'none' } }}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <Typography sx={{ fontWeight: 700 }}>TDS / Advance Tax Paid</Typography>
             </AccordionSummary>

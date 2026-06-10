@@ -185,8 +185,8 @@ const RetirementCalculator = () => {
         </Box>
 
         <Box>
-          <Box sx={{ p: { xs: 2, sm: 4 }, bgcolor: '#f9f9f9', borderRadius: 2, textAlign: 'center', height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <Box sx={{ mb: 4, p: 3, bgcolor: '#fff', borderRadius: 2, border: '1px solid #E5E5E5' }}>
+          <Box sx={{ p: { xs: 2, sm: 4 }, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <Box sx={{ mb: 4, p: 3, bgcolor: 'background.paper', borderRadius: 2, border: '1px solid' }}>
               <Typography variant="subtitle2" color="text.secondary" sx={{ textTransform: 'uppercase', letterSpacing: '0.05em', mb: 1 }}>
                 Retirement Corpus Needed
               </Typography>
@@ -203,11 +203,11 @@ const RetirementCalculator = () => {
             </Box>
 
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 4, textAlign: 'left' }}>
-              <Box sx={{ bgcolor: '#fff', p: 2, borderRadius: 1, border: '1px solid #E5E5E5' }}>
+              <Box sx={{ bgcolor: 'background.paper', p: 2, borderRadius: 1, border: '1px solid' }}>
                 <Typography variant="caption" color="text.secondary" display="block">Current Monthly Exp.</Typography>
                 <Typography variant="body1" fontWeight={600}>₹ {monthlyExpenses.toLocaleString('en-IN')}</Typography>
               </Box>
-              <Box sx={{ bgcolor: '#fff', p: 2, borderRadius: 1, border: '1px solid #E5E5E5' }}>
+              <Box sx={{ bgcolor: 'background.paper', p: 2, borderRadius: 1, border: '1px solid' }}>
                 <Typography variant="caption" color="text.secondary" display="block">Exp. at Retirement (inflated)</Typography>
                 <Typography variant="body1" fontWeight={600}>₹ {futureExpenses.toLocaleString('en-IN')}</Typography>
               </Box>
