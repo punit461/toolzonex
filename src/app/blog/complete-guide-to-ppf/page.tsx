@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PpfGuide from "../../../pages/blogs/PpfGuide";
+import PpfGuide from "../../../views/blogs/PpfGuide";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
 

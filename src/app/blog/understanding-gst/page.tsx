@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import GstImpact from "../../../pages/blogs/GstImpact";
+import GstImpact from "../../../views/blogs/GstImpact";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
 

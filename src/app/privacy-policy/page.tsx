@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PrivacyPolicy from "../../pages/PrivacyPolicy";
+import PrivacyPolicy from "../../views/PrivacyPolicy";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
 

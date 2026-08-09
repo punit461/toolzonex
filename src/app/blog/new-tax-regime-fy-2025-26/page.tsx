@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import NewRegime2025 from "../../../pages/blogs/NewRegime2025";
+import NewRegime2025 from "../../../views/blogs/NewRegime2025";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BlogList from "../../pages/BlogList";
+import BlogList from "../../views/BlogList";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
 
