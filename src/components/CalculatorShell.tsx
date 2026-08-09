@@ -32,7 +32,7 @@ const CalculatorShell = ({ title, description, url, children, content, category 
         </Typography>
       </Box>
 
-      <Box sx={{ mb: 8, p: { xs: 2, md: 4 }, bgcolor: 'background.paper', borderRadius: 2, border: '1px solid #E5E5E5' }}>
+      <Box sx={{ mb: 8, p: { xs: 2, md: 4 }, bgcolor: 'background.paper', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
         {children}
       </Box>
 
