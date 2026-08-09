@@ -10,7 +10,7 @@ interface CalculatorShellProps {
   url: string;
   children: React.ReactNode;
   content: React.ReactNode;
-  category?: 'Finance' | 'Health' | 'Utilities' | 'Tools' | 'Converters' | 'Developer Tools' | 'Generators' | 'Text Tools';
+  category?: 'Finance' | 'Health' | 'Utilities' | 'Tools' | 'Converters' | 'Developer Tools' | 'Generators' | 'Text Tools' | 'AI';
 }
 
 const CalculatorShell = ({ title, description, url, children, content, category = 'Finance' }: CalculatorShellProps) => {
