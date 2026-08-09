@@ -4,6 +4,7 @@ import "./globals.css";
 import ThemeRegistry from "@/components/ThemeRegistry";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Box, Container } from "@mui/material";
 
 const inter = localFont({
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
     description: "Free online calculators for Finance, Health, and Utilities. EMI, SIP, Income Tax, BMI, Gold Rate, PPF, GST and more.",
     images: [
       {
-        url: "/toolzonex/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "ToolZoneX - Free Online Calculators for India",
@@ -70,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ToolZoneX — Smart Tools for Every Decision",
     description: "Free online calculators for Finance, Health, and Utilities.",
-    images: ["/toolzonex/og-image.png"],
+    images: ["/og-image.png"],
     creator: "@toolzonex",
   },
   appleWebApp: {
@@ -105,7 +106,7 @@ const websiteSchema = {
     "name": "ToolZoneX",
     "logo": {
       "@type": "ImageObject",
-      "url": `${SITE_URL}/toolzonex/logo.png`
+      "url": `${SITE_URL}/logo.png`
     }
   }
 };
@@ -121,6 +122,7 @@ export default function RootLayout({
   if (adsensePublisherId && !adsensePublisherId.startsWith('ca-')) {
     adsensePublisherId = `ca-${adsensePublisherId}`;
   }
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '';
 
   return (
     <html lang="en">
@@ -140,8 +142,26 @@ export default function RootLayout({
             />
           </>
         )}
+        {gaMeasurementId && (
+          <>
+            <Script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaMeasurementId}');
+              `}
+            </Script>
+          </>
+        )}
       </head>
       <body className={inter.className}>
+        {gaMeasurementId && <GoogleAnalytics measurementId={gaMeasurementId} />}
         <ThemeRegistry>
           <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
             <Header />

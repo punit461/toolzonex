@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SsyBenefits from "../../../pages/blogs/SsyBenefits";
+import SsyBenefits from "../../../views/blogs/SsyBenefits";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
 
@@ -28,7 +28,7 @@ const ssyBenefitsSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/toolzonex/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
   }
 };
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Section80CGuide from "../../../pages/blogs/Section80CGuide";
+import Section80CGuide from "../../../views/blogs/Section80CGuide";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
 
@@ -28,7 +28,7 @@ const section80CSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/toolzonex/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
   }
 };
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ImproveCibilScore from "../../../pages/blogs/ImproveCibilScore";
+import ImproveCibilScore from "../../../views/blogs/ImproveCibilScore";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
 
@@ -28,7 +28,7 @@ const cibilScoreSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/toolzonex/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
   }
 };
 

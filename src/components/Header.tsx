@@ -61,6 +61,7 @@ const navCategories: NavCategory[] = [
       { label: 'Timer', path: '/utilities/timer' },
       { label: 'Stopwatch', path: '/utilities/stopwatch' },
       { label: 'Focus Timer', path: '/utilities/focus-timer' },
+      { label: 'AI Pomodoro', path: '/tools/ai-pomodoro' },
       { label: 'Current Time Display', path: '/utilities/current-time-display' },
       { label: 'Age Calculator', path: '/utilities/age-calculator' },
       { label: 'Percentage Calculator', path: '/utilities/percentage-calculator' },
@@ -376,7 +377,7 @@ const Header = () => {
               '&:hover': { opacity: 0.8 },
             }}
           >
-            <Box component="img" src="/toolzonex/logo.png" alt="ToolZoneX" sx={{ height: 38, width: 'auto' }} />
+            <Box component="img" src="/logo.png" alt="ToolZoneX" sx={{ height: 38, width: 'auto' }} />
           </Box>
 
           {/* Desktop dropdown nav */}
@@ -482,7 +483,7 @@ const Header = () => {
         <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
           <Box sx={{ width: 280, pt: 2, height: '100%', overflowY: 'auto' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 2, mb: 1 }}>
-              <Box component="img" src="/toolzonex/logo.png" alt="ToolZoneX" sx={{ height: 36 }} />
+              <Box component="img" src="/logo.png" alt="ToolZoneX" sx={{ height: 36 }} />
               <IconButton onClick={() => setDrawerOpen(false)}><CloseIcon /></IconButton>
             </Box>
             <Divider sx={{ mb: 1 }} />

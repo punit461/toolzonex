@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Define the root URL of your static site
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 async function generateSitemap() {
   const publicPath = path.join(process.cwd(), 'out');

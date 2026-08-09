@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Contact from "../../pages/Contact";
+import Contact from "../../views/Contact";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
 

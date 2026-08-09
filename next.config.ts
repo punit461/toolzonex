@@ -2,9 +2,16 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/toolzonex",
   images: {
     unoptimized: true,
+  },
+  eslint: {
+    // Pre-existing repo state had no ESLint config at all, so `next build`
+    // never gated on it. A config now exists (added to verify new code),
+    // but ~380 pre-existing findings across unrelated files shouldn't start
+    // blocking production builds as a side effect — run `npm run lint`
+    // manually instead.
+    ignoreDuringBuilds: true,
   },
   compress: true,
   poweredByHeader: false,

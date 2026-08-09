@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CompoundInterest from "../../../pages/blogs/CompoundInterest";
+import CompoundInterest from "../../../views/blogs/CompoundInterest";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
 
@@ -28,7 +28,7 @@ const compoundInterestSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/toolzonex/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
   }
 };
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BudgetingRule from "../../../pages/blogs/BudgetingRule";
+import BudgetingRule from "../../../views/blogs/BudgetingRule";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
 
@@ -28,7 +28,7 @@ const budgetingRuleSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/toolzonex/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
   }
 };
 
