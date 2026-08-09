@@ -74,6 +74,7 @@ export const categories: ToolCategory[] = [
       { title: 'Retirement Calculator', description: 'Plan your retirement corpus.', path: '/finance/retirement-calculator', icon: <AccountBalanceIcon fontSize="large" color="primary" /> },
       { title: 'Loan Calculator', description: 'Calculate EMI and total interest.', path: '/finance/loan-calculator', icon: <AccountBalanceIcon fontSize="large" color="primary" /> },
       { title: '401(k) Calculator', description: 'Project US retirement balance with employer match.', path: '/finance/401k-calculator', icon: <SavingsIcon fontSize="large" color="primary" /> },
+      { title: 'VAT Calculator', description: 'Add or remove VAT for UK, EU & more.', path: '/finance/vat-calculator', icon: <ReceiptIcon fontSize="large" color="primary" /> },
     ],
   },
   {
