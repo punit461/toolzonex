@@ -5,9 +5,9 @@ import RouterLink from 'next/link';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import BlogShell from '../../components/BlogShell';
-import AdSenseUnit from '../../components/AdSenseUnit';
-import type { ToolBlogMeta } from '../../data/tool-blogs';
+import BlogShell from './BlogShell';
+import AdSenseUnit from './AdSenseUnit';
+import type { ToolBlogMeta } from '../data/tool-blogs';
 
 interface Props {
   blog: ToolBlogMeta;

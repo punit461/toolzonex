@@ -61,6 +61,7 @@ const navCategories: NavCategory[] = [
       { label: 'Timer', path: '/utilities/timer' },
       { label: 'Stopwatch', path: '/utilities/stopwatch' },
       { label: 'Focus Timer', path: '/utilities/focus-timer' },
+      { label: 'AI Pomodoro', path: '/tools/ai-pomodoro' },
       { label: 'Current Time Display', path: '/utilities/current-time-display' },
       { label: 'Age Calculator', path: '/utilities/age-calculator' },
       { label: 'Percentage Calculator', path: '/utilities/percentage-calculator' },

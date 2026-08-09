@@ -1,0 +1,56 @@
+/* Deliberately NOT importing tailwindcss/preflight — this route already sits
+ * under ToolZoneX's global MUI <CssBaseline/> reset (applied in the root
+ * layout for every page); adding Tailwind's own reset on top would double up
+ * on box-sizing/margin/button-appearance resets for no benefit. Utility
+ * classes work identically without it. */
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+
+  /* Productivity Tool palette — teal focus + orange action, from ui-ux-pro-max */
+  --color-primary: #0d9488;
+  --color-primary-hover: #0b7a70;
+  --color-primary-soft: #ccfbf1;
+  --color-secondary: #14b8a6;
+  --color-accent: #f97316;
+  --color-accent-hover: #ea580c;
+  --color-accent-soft: #ffedd5;
+
+  --color-bg: #f0fdfa;
+  --color-surface: #ffffff;
+  --color-surface-muted: #e6fbf8;
+  --color-text: #134e4a;
+  --color-text-muted: #475569;
+  --color-border: #c7e4e0;
+
+  --color-success: #22c55e;
+  --color-success-soft: #dcfce7;
+  --color-danger: #ef4444;
+  --color-danger-soft: #fee2e2;
+  --color-warning: #f59e0b;
+  --color-warning-soft: #fef3c7;
+}
+
+.pomodoro-root {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  background-image: radial-gradient(circle at top, color-mix(in srgb, var(--color-primary) 10%, transparent), transparent 55%);
+  color: var(--color-text);
+}
+
+.pomodoro-root :focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pomodoro-root *,
+  .pomodoro-root *::before,
+  .pomodoro-root *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

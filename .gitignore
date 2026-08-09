@@ -25,3 +25,11 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Python (AIPomodaro/backend)
+__pycache__/
+*.pyc
+.venv
+.pytest_cache/
+.ruff_cache/
+AIPomodaro/*
