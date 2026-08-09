@@ -28,7 +28,7 @@ const oldVsNewTaxSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/toolzonex/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
   }
 };
 
