@@ -18,6 +18,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import { useColorMode } from './ColorModeProvider';
+import { categories as toolCategories } from '@/data/toolCategories';
 
 interface HideOnScrollProps { children: React.ReactElement }
 const HideOnScroll = ({ children }: HideOnScrollProps) => {
@@ -26,167 +27,29 @@ const HideOnScroll = ({ children }: HideOnScrollProps) => {
 };
 
 // ── Shared navigation data ────────────────────────────────────────
+// Derived from the same registry that drives the homepage grid
+// (src/data/toolCategories.tsx) instead of a separate hand-maintained
+// list — the two had already drifted twice (AI Pomodoro and Image
+// Resizer were both missing from this nav after being added to the
+// homepage). Deriving means that can't happen again.
 interface NavTool { label: string; path: string }
 interface NavCategory { label: string; tools: NavTool[] }
 
-const navCategories: NavCategory[] = [
-  {
-    label: 'Finance & Health',
-    tools: [
-      { label: 'EMI Calculator', path: '/finance/emi-calculator' },
-      { label: 'SIP Calculator', path: '/finance/sip-calculator' },
-      { label: 'GST Calculator', path: '/finance/gst-calculator' },
-      { label: 'Income Tax Calculator', path: '/finance/income-tax-calculator' },
-      { label: 'PPF Calculator', path: '/finance/ppf-calculator' },
-      { label: 'Rent vs Buy Calculator', path: '/finance/rent-vs-buy-calculator' },
-      { label: 'Gold Rate Calculator', path: '/finance/gold-calculator' },
-      { label: 'Silver Rate Calculator', path: '/finance/silver-calculator' },
-      { label: 'SSY Calculator', path: '/finance/ssy-calculator' },
-      { label: 'Salary Increment Calculator', path: '/finance/salary-increment-calculator' },
-      { label: 'Retirement Calculator', path: '/finance/retirement-calculator' },
-      { label: 'Loan Calculator', path: '/finance/loan-calculator' },
-      { label: 'BMI Calculator', path: '/health/bmi-calculator' },
-      { label: 'BMR Calculator', path: '/health/bmr-calculator' },
-      { label: 'TDEE Calculator', path: '/health/tdee-calculator' },
-      { label: 'PFT Calculator', path: '/health/pft-calculator' },
-      { label: 'CFT Calculator', path: '/health/cft-calculator' },
-      { label: 'Sleep Time Calculator', path: '/health/sleep-time-calculator' },
-      { label: 'Body Fat Calculator', path: '/health/body-fat-calculator' },
-      { label: 'Calorie Calculator', path: '/health/calorie-calculator' },
-    ],
-  },
-  {
-    label: 'Math & Utilities',
-    tools: [
-      { label: 'Timer', path: '/utilities/timer' },
-      { label: 'Stopwatch', path: '/utilities/stopwatch' },
-      { label: 'Focus Timer', path: '/utilities/focus-timer' },
-      { label: 'AI Pomodoro', path: '/tools/ai-pomodoro' },
-      { label: 'Current Time Display', path: '/utilities/current-time-display' },
-      { label: 'Age Calculator', path: '/utilities/age-calculator' },
-      { label: 'Percentage Calculator', path: '/utilities/percentage-calculator' },
-      { label: 'Date Calculator', path: '/utilities/date-calculator' },
-      { label: 'Margin Calculator', path: '/utilities/margin-calculator' },
-      { label: 'Discount Calculator', path: '/utilities/discount-calculator' },
-      { label: 'Tip Calculator', path: '/utilities/tip-calculator' },
-      { label: 'Aspect Ratio Calculator', path: '/utilities/aspect-ratio-calculator' },
-      { label: 'Rule of Three', path: '/utilities/rule-of-three-calculator' },
-      { label: 'Time Calculator', path: '/utilities/time-calculator' },
-      { label: 'Time Zone Converter', path: '/utilities/time-zone-converter' },
-      { label: 'Basic Calculator', path: '/utilities/basic-calculator' },
-      { label: 'Scientific Calculator', path: '/utilities/scientific-calculator' },
-      { label: 'Prime Number Checker', path: '/utilities/prime-number-checker' },
-      { label: 'Barcode Generator', path: '/utilities/barcode-generator' },
-      { label: 'Game Score Tracker', path: '/utilities/game-score-tracker' },
-      { label: 'Algorithm Visualizer', path: '/utilities/algorithm-visualizer' },
-      { label: 'Alphabet Learning Tool', path: '/utilities/alphabet-learning-tool' },
-      { label: 'Number to Words', path: '/utilities/number-to-words-converter' },
-      { label: 'Roman Numeral Converter', path: '/utilities/roman-numeral-converter' },
-    ],
-  },
-  {
-    label: 'Text & Content',
-    tools: [
-      { label: 'Text Sorter', path: '/tools/text-sorter' },
-      { label: 'Word Counter', path: '/tools/word-counter' },
-      { label: 'Text Reverser', path: '/tools/text-reverser' },
-      { label: 'Duplicates Remover', path: '/tools/duplicates-remover' },
-      { label: 'Duplicate Word Finder', path: '/tools/duplicate-word-finder' },
-      { label: 'Line Numbering', path: '/tools/line-numbering' },
-      { label: 'Text Stats Analyzer', path: '/tools/text-stats-analyzer' },
-      { label: 'String Escaper', path: '/tools/string-escaper' },
-      { label: 'Whitespace Cleaner', path: '/tools/whitespace-cleaner' },
-      { label: 'Keyword Density', path: '/tools/keyword-density-analyzer' },
-      { label: 'Character Distribution', path: '/tools/character-distribution-analyzer' },
-      { label: 'Text Splitter', path: '/tools/text-splitter' },
-      { label: 'Sentence Case Fixer', path: '/tools/sentence-case-fixer' },
-      { label: 'Prefix & Suffix', path: '/tools/line-prefix-suffix-tool' },
-      { label: 'Text Repeater', path: '/tools/text-repeater' },
-      { label: 'Text Encryption', path: '/tools/text-encryption-decryption' },
-      { label: 'Palindrome Checker', path: '/tools/palindrome-checker' },
-      { label: 'Text Case Mixer', path: '/tools/text-case-mixer' },
-      { label: 'Word Wrap Tool', path: '/tools/word-wrap-tool' },
-      { label: 'Password Generator', path: '/tools/password-generator' },
-      { label: 'UUID Generator', path: '/tools/uuid-generator' },
-      { label: 'Random Number Generator', path: '/tools/random-number-generator' },
-      { label: 'Random String Generator', path: '/tools/random-string-generator' },
-      { label: 'Lorem Ipsum Generator', path: '/tools/lorem-ipsum-generator' },
-      { label: 'Random Data Generator', path: '/tools/random-data-generator' },
-      { label: 'Business Name Generator', path: '/tools/business-name-generator' },
-      { label: 'Acronym Generator', path: '/tools/acronym-generator' },
-      { label: 'Hashtag Generator', path: '/tools/hashtag-generator' },
-      { label: 'Coin Flip', path: '/tools/coin-flip' },
-      { label: 'Typing Speed Test', path: '/tools/typing-speed-test' },
-      { label: 'Wheel of Fortune', path: '/tools/wheel-of-fortune-spinner' },
-      { label: 'Sudoku Generator', path: '/tools/sudoku-generator' },
-      { label: 'Crossword Puzzle', path: '/tools/crossword-puzzle-generator' },
-      { label: 'Prompt Builder', path: '/tools/prompt-builder' },
-      { label: 'Multiplication Table', path: '/tools/multiplication-table-generator' },
-      { label: 'Random Line Picker', path: '/tools/random-line-picker' },
-      { label: 'Vertical Text', path: '/tools/vertical-text-generator' },
-    ],
-  },
-  {
-    label: 'Dev & Converters',
-    tools: [
-      { label: 'JSON Formatter', path: '/tools/json-formatter' },
-      { label: 'Regex Tester', path: '/tools/regex-tester' },
-      { label: 'JWT Decoder', path: '/tools/jwt-decoder' },
-      { label: 'CSS Minifier', path: '/tools/css-minifier' },
-      { label: 'JS Minifier', path: '/tools/js-minifier' },
-      { label: 'HTML Minifier', path: '/tools/html-minifier' },
-      { label: 'CSS Grid Generator', path: '/tools/css-grid-generator' },
-      { label: 'Box Shadow Generator', path: '/tools/box-shadow-generator' },
-      { label: 'Gradient Generator', path: '/tools/gradient-generator' },
-      { label: 'Flexbox Generator', path: '/tools/flexbox-generator' },
-      { label: 'QR Code Generator', path: '/tools/qr-code-generator' },
-      { label: 'Cron Job Parser', path: '/tools/cron-job-parser' },
-      { label: 'SQL Formatter', path: '/tools/sql-formatter' },
-      { label: 'JSON to CSV', path: '/tools/json-to-csv' },
-      { label: 'CSV to JSON', path: '/tools/csv-to-json' },
-      { label: 'XML to JSON', path: '/tools/xml-to-json' },
-      { label: 'JSON to XML', path: '/tools/json-to-xml' },
-      { label: 'Base64 Encode/Decode', path: '/tools/base64-encode-decode' },
-      { label: 'URL Encode/Decode', path: '/tools/url-encode-decode' },
-      { label: 'HTML Entity Encode/Decode', path: '/tools/html-entity-encode-decode' },
-      { label: 'Markdown to HTML', path: '/tools/markdown-to-html' },
-      { label: 'PX to REM', path: '/tools/px-to-rem-converter' },
-      { label: 'HEX to RGB', path: '/tools/hex-to-rgb' },
-      { label: 'RGB to HEX', path: '/tools/rgb-to-hex' },
-      { label: 'Binary to Text', path: '/tools/binary-to-text' },
-      { label: 'Text to Binary', path: '/tools/text-to-binary' },
-      { label: 'Morse Code Translator', path: '/tools/morse-code-translator' },
-      { label: 'YAML to JSON', path: '/tools/yaml-to-json-converter' },
-      { label: 'JSON to YAML', path: '/tools/json-to-yaml-converter' },
-      { label: 'Base64 to Image', path: '/tools/base64-to-image' },
-      { label: 'Image to Base64', path: '/tools/image-to-base64' },
-    ],
-  },
-  {
-    label: 'Web Tools',
-    tools: [
-      { label: 'Online Notepad', path: '/tools/online-notepad' },
-      { label: 'Email Extractor', path: '/tools/email-extractor' },
-      { label: 'EXIF Reader', path: '/tools/exif-reader' },
-      { label: 'Image Converter', path: '/tools/image-converter' },
-      { label: 'Mailto Link Generator', path: '/tools/mailto-link-generator' },
-      { label: 'Online Image Editor', path: '/tools/online-image-editor' },
-      { label: 'Phone Validator', path: '/tools/phone-validator' },
-      { label: 'Text Size Calculator', path: '/tools/text-size-calculator' },
-      { label: 'URL Extractor', path: '/tools/url-extractor' },
-      { label: 'User Agent Parser', path: '/tools/user-agent-parser' },
-      { label: 'What is My IP', path: '/tools/what-is-my-ip' },
-      { label: 'WhatsApp Link Generator', path: '/tools/whatsapp-link-generator' },
-      { label: 'Text Diff Tool', path: '/tools/text-diff-tool' },
-      { label: 'Password Strength', path: '/tools/password-strength-checker' },
-      { label: 'Readability Score', path: '/tools/text-readability-score' },
-      { label: 'Word Frequency', path: '/tools/word-frequency-analyzer' },
-      { label: 'Text Merger', path: '/tools/text-merger' },
-      { label: 'Color Palette Generator', path: '/tools/color-palette-generator' },
-      { label: 'Contrast Checker', path: '/tools/contrast-checker' },
-    ],
-  },
+const NAV_GROUPS: { label: string; sourceCategories: string[] }[] = [
+  { label: 'AI Tools', sourceCategories: ['AI'] },
+  { label: 'Finance & Health', sourceCategories: ['Finance', 'Health'] },
+  { label: 'Math & Utilities', sourceCategories: ['Time & Productivity', 'Utilities'] },
+  { label: 'Text & Content', sourceCategories: ['Text Tools', 'Generators'] },
+  { label: 'Dev & Converters', sourceCategories: ['Converters', 'Developer Tools'] },
+  { label: 'Web Tools', sourceCategories: ['Tools'] },
 ];
+
+const navCategories: NavCategory[] = NAV_GROUPS.map((group) => ({
+  label: group.label,
+  tools: toolCategories
+    .filter((cat) => group.sourceCategories.includes(cat.label))
+    .flatMap((cat) => cat.tools.map((tool) => ({ label: tool.title, path: tool.path }))),
+}));
 
 // ── Desktop Mega-Dropdown ──────────────────────────────────────────
 interface DropdownButtonProps { category: NavCategory }

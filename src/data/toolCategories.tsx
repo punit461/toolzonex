@@ -34,14 +34,15 @@ import NumbersIcon from '@mui/icons-material/Numbers';
 import TextFormatIcon from '@mui/icons-material/TextFormat';
 import ArticleIcon from '@mui/icons-material/Article';
 import TimerIcon from '@mui/icons-material/Timer';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
+import MemoryIcon from '@mui/icons-material/Memory';
 
-// Single source of truth for the homepage tool grid (src/app/page.tsx).
-//
-// NOTE: src/components/Header.tsx currently maintains its own separate
-// nav tool list with a different category grouping. The two lists have
-// already drifted once (AI Pomodoro was in the header nav but missing
-// here). Long-term, Header should be migrated to read from a shared
-// flat tool registry too — see the growth plan for details.
+// Single source of truth for the homepage tool grid (src/app/page.tsx)
+// AND the header nav (src/components/Header.tsx, which derives its nav
+// groups from these categories -- see NAV_GROUPS in Header.tsx). Add a
+// tool here once and it appears in both places automatically. Adding a
+// brand-new category label? Add a matching entry to NAV_GROUPS in
+// Header.tsx too, or it won't be reachable from the nav.
 export interface ToolEntry {
   title: string;
   description: string;
@@ -72,6 +73,7 @@ export const categories: ToolCategory[] = [
       { title: 'Salary Increment', description: 'Calculate salary hike percentage.', path: '/finance/salary-increment-calculator', icon: <TrendingUpIcon fontSize="large" color="primary" /> },
       { title: 'Retirement Calculator', description: 'Plan your retirement corpus.', path: '/finance/retirement-calculator', icon: <AccountBalanceIcon fontSize="large" color="primary" /> },
       { title: 'Loan Calculator', description: 'Calculate EMI and total interest.', path: '/finance/loan-calculator', icon: <AccountBalanceIcon fontSize="large" color="primary" /> },
+      { title: '401(k) Calculator', description: 'Project US retirement balance with employer match.', path: '/finance/401k-calculator', icon: <SavingsIcon fontSize="large" color="primary" /> },
     ],
   },
   {
@@ -240,6 +242,14 @@ export const categories: ToolCategory[] = [
       { title: 'QR Code Generator', description: 'Create custom QR codes free.', path: '/tools/qr-code-generator', icon: <ArticleIcon fontSize="large" color="primary" /> },
       { title: 'Cron Job Parser', description: 'Translate cron to plain English.', path: '/tools/cron-job-parser', icon: <ArticleIcon fontSize="large" color="primary" /> },
       { title: 'SQL Formatter', description: 'Beautify messy SQL queries.', path: '/tools/sql-formatter', icon: <ArticleIcon fontSize="large" color="primary" /> },
+    ],
+  },
+  {
+    label: 'AI',
+    color: '#7c3aed',
+    tools: [
+      { title: 'LLM API Cost Calculator', description: 'Estimate GPT, Claude & Gemini token costs.', path: '/ai/llm-cost-calculator', icon: <SmartToyIcon fontSize="large" color="primary" /> },
+      { title: 'GPU Cloud Cost Calculator', description: 'Estimate A100, H100 & RTX cloud GPU rental costs.', path: '/ai/gpu-cost-calculator', icon: <MemoryIcon fontSize="large" color="primary" /> },
     ],
   },
 ];
