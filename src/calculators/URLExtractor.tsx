@@ -159,6 +159,18 @@ const URLExtractor = () => {
         • Audit website links
         • Manage link collections
       </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does it remove duplicate URLs?</Typography>
+      <Typography variant="body1">
+        Yes — the extractor returns only unique URLs found in the pasted text.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Pasting an email signature containing &quot;Visit https://example.com or www.example.org&quot; extracts
+        both links into a clean list.
+      </Typography>
     </>
   );
 

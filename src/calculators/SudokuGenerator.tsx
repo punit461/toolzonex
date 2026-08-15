@@ -151,6 +151,26 @@ const SudokuGenerator = () => {
       <Typography variant="body1">
         Select your desired difficulty level (Easy to Expert) and click "Generate New Puzzle". The system uses a randomized backtracking algorithm to generate a unique, mathematically valid Sudoku grid every single time. You can play directly on screen or click "Print Puzzle" to solve it on paper.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Selecting "Medium" difficulty generates a 9x9 grid with roughly 30-35 clues filled in, leaving the rest
+        for you to solve.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Printing a fresh puzzle for a classroom or puzzle book.</li>
+          <li>Playing Sudoku directly in the browser without an app.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does every generated puzzle have a unique solution?</Typography>
+      <Typography variant="body1">
+        Yes — the generator guarantees each puzzle has exactly one valid solution.
+      </Typography>
     </>
   );
 

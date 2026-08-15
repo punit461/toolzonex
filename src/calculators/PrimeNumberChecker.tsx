@@ -135,6 +135,32 @@ const PrimeNumberChecker = () => {
       <Typography variant="body1">
         A prime number is a whole number greater than 1 whose only divisors are 1 and itself (e.g., 2, 3, 5, 7, 11). Use this simple math utility to instantly check whether a given number is prime or composite.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Type any whole number into the input field and the tool instantly reports whether it&apos;s prime or
+        composite.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Entering 17 confirms it&apos;s prime, while entering 18 shows it&apos;s composite (divisible by 2, 3,
+        6, and 9).
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Verifying math homework or programming exercise results.</li>
+          <li>Exploring number theory concepts like cryptography basics.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is 1 a prime number?</Typography>
+      <Typography variant="body1">
+        No — by definition, prime numbers must be greater than 1, so 1 is neither prime nor composite.
+      </Typography>
     </>
   );
 

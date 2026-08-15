@@ -103,6 +103,32 @@ const UrlEncoder = () => {
       <Typography variant="body1">
         URLs can only be sent over the Internet using the ASCII character set. Since URLs often contain characters outside the ASCII set, the URL has to be converted into a valid format. URL encoding replaces unsafe ASCII characters with a `%` followed by two hexadecimal digits.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste text or a URL into the input field and click Encode (or Decode) to instantly convert it.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        The string &quot;hello world&quot; encodes to <code>hello%20world</code>, safe to use as a URL query
+        parameter.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Safely embedding user input as a query string parameter.</li>
+          <li>Decoding a URL-encoded string copied from browser address bars or API responses.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Do I need to encode an entire URL, or just parts of it?</Typography>
+      <Typography variant="body1">
+        Typically only encode individual query parameter values, not the full URL — encoding slashes and
+        colons in the base URL would break it.
+      </Typography>
     </>
   );
 

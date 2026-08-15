@@ -216,6 +216,31 @@ const Timer = () => {
       <Typography variant="body1">
         A simple, fast, and free online countdown timer. Use it for cooking, working out, studying, or keeping track of presentations. Set a custom time or use our quick presets.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Set your countdown duration (or pick a preset), press start, and the timer counts down with an alert
+        when it reaches zero.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Setting a 10-minute timer for tea steeping counts down and alerts you the moment it&apos;s ready.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Timing a cooking step or workout interval.</li>
+          <li>Keeping a presentation or exam within a set time limit.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Will the timer alert me when it finishes?</Typography>
+      <Typography variant="body1">
+        Yes — the timer plays a sound and shows a visual alert once the countdown reaches zero.
+      </Typography>
     </>
   );
 

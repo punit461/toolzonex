@@ -146,6 +146,20 @@ const MailtoLinkGenerator = () => {
         • Support or inquiry links with pre-written subjects
         • Newsletter signup confirmations
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Entering an address, subject, and body generates a link like
+        <code>mailto:hello@example.com?subject=Question&amp;body=Hi%20there</code> — clicking it opens the
+        user&apos;s email client with everything pre-filled.
+      </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does this send the email automatically?</Typography>
+      <Typography variant="body1">
+        No — clicking a mailto link opens the visitor&apos;s default email app with a pre-filled draft; they
+        still need to hit send themselves.
+      </Typography>
     </>
   );
 

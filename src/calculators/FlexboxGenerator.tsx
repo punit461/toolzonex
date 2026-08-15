@@ -162,6 +162,33 @@ const FlexboxGenerator = () => {
       <Typography variant="body1">
         Master CSS Flexible Box Layout (Flexbox) visually. Use the controls to adjust flex direction, alignment, spacing, and wrapping. The preview window updates in real-time, allowing you to instantly see the effects and copy the generated CSS.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Adjust the direction, justify-content, align-items, and gap controls while watching the live preview,
+        then copy the generated CSS.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Setting direction to row, justify-content to space-between, and align-items to center generates
+        <code>display: flex; justify-content: space-between; align-items: center;</code> — a common navbar layout.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Building navbars, card layouts, or centered content with Flexbox.</li>
+          <li>Learning Flexbox properties by seeing the generated CSS update live.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">When should I use Flexbox instead of Grid?</Typography>
+      <Typography variant="body1">
+        Flexbox is best for one-dimensional layouts (a single row or column); CSS Grid is better for
+        two-dimensional layouts with both rows and columns.
+      </Typography>
     </>
   );
 

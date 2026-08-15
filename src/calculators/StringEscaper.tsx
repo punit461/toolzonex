@@ -144,6 +144,27 @@ const StringEscaper = () => {
           <li><strong>URL Encode/Decode:</strong> Safely encodes strings to be passed as query parameters in URLs (converting spaces to %20, etc).</li>
         </ul>
       </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Escaping <code>He said "hi"</code> for JSON produces <code>He said \&quot;hi\&quot;</code>, safe to
+        embed inside a JSON string value.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Safely embedding user-provided text inside a JSON payload.</li>
+          <li>Escaping special characters before rendering text as HTML to prevent XSS.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Which format should I use for a URL query parameter?</Typography>
+      <Typography variant="body1">
+        Use URL Encode — it converts spaces and special characters into a safe percent-encoded format for use
+        in query strings.
+      </Typography>
     </>
   );
 

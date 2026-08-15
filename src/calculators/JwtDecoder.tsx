@@ -94,6 +94,32 @@ const JwtDecoder = () => {
       <Typography variant="body1">
         JSON Web Tokens (JWT) are an open standard used to share security information between two parties. This free online tool allows you to decode JWTs securely entirely within your browser. **Your token is never sent to any server.**
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste a JWT into the input field and its header and payload are decoded and displayed instantly.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Pasting a JWT reveals its header (algorithm and token type), payload (claims like user ID or expiry),
+        and signature — decoded into readable JSON.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Debugging authentication issues by inspecting a JWT&apos;s claims.</li>
+          <li>Checking a token&apos;s expiry time or user data during development.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does this verify the token&apos;s signature?</Typography>
+      <Typography variant="body1">
+        No — this tool decodes and displays the header and payload only; it doesn&apos;t verify the signature
+        against a secret or public key.
+      </Typography>
     </>
   );
 

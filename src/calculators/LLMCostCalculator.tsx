@@ -124,6 +124,21 @@ const LLMCostCalculator = () => {
         re-billed on every turn.
       </Typography>
 
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Sending 10,000 requests/month, each with 1,000 input tokens and 500 output tokens, gives a rough sense
+        of monthly spend once multiplied by a model&apos;s per-token pricing — enter your own numbers above for
+        an exact estimate.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Budgeting an LLM-powered feature before launch.</li>
+          <li>Comparing costs across OpenAI, Anthropic, and Google models for the same workload.</li>
+        </ul>
+      </Box>
+
       <Typography variant="h2">FAQs</Typography>
       <Typography variant="h3">Is this pricing accurate?</Typography>
       <Typography variant="body1">

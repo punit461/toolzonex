@@ -531,6 +531,18 @@ const QrCodeGenerator = () => {
         Generate QR codes for URLs, text, WiFi networks, vCards, emails, UPI payments, WhatsApp messages, geo locations, calendar events, and more. Customize dot styles, colors, corners, and add your logo. Download as PNG, SVG, or JPEG.
       </Typography>
 
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Choose a QR type, fill in its fields (like a URL or WiFi password), customize the style, and download
+        the generated code.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Entering a website URL and clicking generate produces a scannable QR code that opens that page when
+        scanned with a phone camera.
+      </Typography>
+
       <Typography variant="h2">Supported QR Code Types</Typography>
       <Typography variant="body1">
         • <strong>URL & Text</strong> — Link to any website or embed plain text<br/>
@@ -551,6 +563,21 @@ const QrCodeGenerator = () => {
         • <strong>Colors:</strong> Custom foreground and background colors<br/>
         • <strong>Logo:</strong> Upload your brand logo with adjustable size and automatic dot excavation<br/>
         • <strong>Export:</strong> Download as PNG, SVG, or JPEG; copy to clipboard
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Sharing WiFi credentials at a cafe or office without typing a long password.</li>
+          <li>Adding a scannable link to business cards, flyers, or product packaging.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Do these QR codes expire?</Typography>
+      <Typography variant="body1">
+        No — the QR code itself never expires; it will keep working as long as the underlying data (like a
+        URL) it points to remains valid.
       </Typography>
     </>
   );

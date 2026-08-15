@@ -76,6 +76,14 @@ const BMICalculator = () => {
 
   const content = (
     <>
+      <Typography variant="h2">How to Use the BMI Calculator</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Enter your height and weight (in metric or imperial units).</li>
+          <li>Click calculate to see your BMI value and category.</li>
+        </ul>
+      </Box>
+
       <Typography variant="h2">BMI Categories for Indians</Typography>
       <Typography variant="body1">
         The standard WHO BMI chart differs slightly from the guidelines recommended for the Indian population. Indians are generally genetically prone to higher abdominal fat and lower muscle mass, putting them at higher risk of lifestyle diseases at lower BMI levels.
@@ -91,6 +99,33 @@ const BMICalculator = () => {
       <Typography variant="h2">Is BMI Enough?</Typography>
       <Typography variant="body1">
         While BMI is a useful screening tool, it has limitations. It does not distinguish between fat and muscle mass. Therefore, athletes with high muscle mass might be classified as overweight. It's always best to consult a healthcare provider and measure body fat percentage for a comprehensive health assessment.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A person who is 170cm tall and weighs 65kg has a BMI of 65 / (1.7 × 1.7) ≈ 22.5, which falls in the
+        Normal range on the Indian BMI chart.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>General health screening and weight-category tracking.</li>
+          <li>Setting a baseline before starting a fitness or weight-management plan.</li>
+          <li>Quick reference during a medical checkup.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is BMI accurate for everyone?</Typography>
+      <Typography variant="body1">
+        No — BMI doesn&apos;t account for muscle mass, bone density, or fat distribution, so it can be misleading
+        for athletes, pregnant women, and older adults. It&apos;s best used as a general screening tool.
+      </Typography>
+      <Typography variant="h3">What&apos;s a healthy BMI range?</Typography>
+      <Typography variant="body1">
+        For the Indian BMI chart, 18.5–22.9 is considered normal — slightly lower than the WHO&apos;s global
+        standard of 18.5–24.9, reflecting a higher health risk at lower BMI levels in South Asian populations.
       </Typography>
     </>
   );

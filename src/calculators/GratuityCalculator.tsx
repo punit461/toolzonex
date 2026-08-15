@@ -49,6 +49,27 @@ const GratuityCalculator = () => {
       <Typography variant="body1">
         <em>Note: The Last Drawn Salary includes your Basic Salary + Dearness Allowance (DA). Also, any service over 6 months is rounded up to the next year.</em>
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        An employee with a last drawn salary (Basic + DA) of ₹50,000 and 8 years of service gets a gratuity of
+        (15 × 50,000 × 8) / 26 = ₹2,30,769.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Estimating your gratuity payout before resigning or retiring.</li>
+          <li>Financial planning around a job change after 5+ years of service.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is gratuity taxable?</Typography>
+      <Typography variant="body1">
+        For government employees, gratuity is fully tax-exempt. For private-sector employees covered under the
+        Payment of Gratuity Act, exemption is available up to ₹20 lakh; amounts above that are taxable.
+      </Typography>
     </>
   );
 

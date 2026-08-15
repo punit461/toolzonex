@@ -116,6 +116,33 @@ const WordFrequencyAnalyzer = () => {
       <Typography variant="body1">
         Find out which words are used the most in any text document. This tool counts every word and calculates its frequency percentage. You can optionally ignore common English stop words (like 'the', 'and', 'is') to focus on the unique keywords in your content.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste your text into the input box and a ranked list of words with their frequency counts appears
+        instantly.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Analyzing a 500-word article might show &quot;marketing&quot; appearing 12 times (2.4% frequency) as
+        the top keyword.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Checking keyword repetition in an article for SEO purposes.</li>
+          <li>Analyzing which words dominate a speech or document.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What are stop words and why exclude them?</Typography>
+      <Typography variant="body1">
+        Stop words are common filler words like &quot;the&quot;, &quot;and&quot;, or &quot;is&quot; that carry
+        little meaning on their own — excluding them helps surface the actual topical keywords.
+      </Typography>
     </>
   );
 

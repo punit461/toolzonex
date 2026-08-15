@@ -83,6 +83,20 @@ const GPUCostCalculator = () => {
         high throughput; the extra cost over A100 is usually only worth it at scale.
       </Typography>
 
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Renting a single A100 80GB at $2/hr for 200 hours/month costs roughly $400/month — compare that against
+        an H100 or a multi-GPU setup to see the cost difference for your workload.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Budgeting a model fine-tuning or training run before starting.</li>
+          <li>Comparing on-demand cloud GPU costs across providers and GPU tiers.</li>
+        </ul>
+      </Box>
+
       <Typography variant="h2">FAQs</Typography>
       <Typography variant="h3">Is this pricing accurate?</Typography>
       <Typography variant="body1">

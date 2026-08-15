@@ -189,6 +189,27 @@ const UserAgentParser = () => {
         • Troubleshooting browser-specific problems
         • Understanding visitor technology stack
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Parsing a Chrome-on-Windows user agent string reveals the browser name and version, OS, and rendering
+        engine in a structured breakdown.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Debugging why a page renders differently on a specific browser or device.</li>
+          <li>Analyzing visitor browser/OS data pulled from server logs.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can a user agent string be spoofed?</Typography>
+      <Typography variant="body1">
+        Yes — user agent strings are self-reported by the browser and can be changed by the user or developer
+        tools, so they shouldn&apos;t be relied on for security decisions.
+      </Typography>
     </>
   );
 

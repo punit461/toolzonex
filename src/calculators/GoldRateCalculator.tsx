@@ -33,6 +33,28 @@ const GoldRateCalculator = () => {
       <Typography variant="body1">
         Using our online Gold Rate Calculator ensures you know exactly how much you are paying for the actual gold versus the taxes and labor costs.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        10 grams of 22K gold at ₹6,000/gram = ₹60,000 gold value. At 10% making charges (₹6,000) and 3% GST on
+        ₹66,000 (₹1,980), the final price comes to ₹67,980.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Checking a jeweler&apos;s quoted price against the actual gold rate before buying.</li>
+          <li>Comparing making charges across different jewelers for the same design.</li>
+          <li>Estimating the resale value of gold jewelry you already own.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Why does the final price include GST on making charges too?</Typography>
+      <Typography variant="body1">
+        Indian GST rules apply the 3% rate to the combined value of gold plus making charges, not just the raw
+        gold value — that&apos;s why the tax amount is higher than 3% of the gold price alone.
+      </Typography>
     </>
   );
 

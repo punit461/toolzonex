@@ -102,6 +102,32 @@ const GradientGenerator = () => {
       <Typography variant="body1">
         Visually generate beautiful linear gradients for your web projects. Pick your colors, adjust the angle, and instantly get the CSS code to copy and paste into your stylesheets.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Pick your gradient colors and angle using the controls, preview the result live, then copy the
+        generated CSS.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A 90&deg; gradient from blue to purple generates <code>background: linear-gradient(90deg, #1a56db, #7c3aed);</code> — ready to paste into your CSS.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Designing button, banner, or background gradients for a website.</li>
+          <li>Experimenting with color combinations and angles visually.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I add more than two colors?</Typography>
+      <Typography variant="body1">
+        Check the tool&apos;s color-stop controls — many gradient generators support multiple color stops for
+        more complex gradients.
+      </Typography>
     </>
   );
 

@@ -48,6 +48,7 @@ export function useCameraMonitoring({ enabled, sampleIntervalSec = 5, onEvent }:
   const streamRef = useRef<MediaStream | null>(null)
   const classifierStateRef = useRef<ClassifierState>(createClassifierState())
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const processingRef = useRef(false)
   const onEventRef = useRef(onEvent)
   useEffect(() => {
     onEventRef.current = onEvent
@@ -101,9 +102,22 @@ export function useCameraMonitoring({ enabled, sampleIntervalSec = 5, onEvent }:
         setStatus('active')
 
         intervalRef.current = setInterval(() => {
+          // The first few ticks cold-load multi-megabyte WASM/ML models
+          // (face + hand landmarkers, coco-ssd) which routinely takes longer
+          // than one sample interval. Without this guard, the next tick fires
+          // anyway and starts a second, overlapping detection pass on the
+          // same models mid-load — the reported "camera doesn't start" /
+          // "inaccurate" behavior was these overlapping passes racing each
+          // other and corrupting the classifier's streak-based state instead
+          // of processing clean, sequential samples.
+          if (processingRef.current) return
+          processingRef.current = true
           void (async () => {
             const currentVideo = videoRef.current
-            if (!currentVideo) return
+            if (!currentVideo) {
+              processingRef.current = false
+              return
+            }
 
             try {
               const timestampMs = performance.now()
@@ -122,6 +136,8 @@ export function useCameraMonitoring({ enabled, sampleIntervalSec = 5, onEvent }:
               // silently kill monitoring forever — log and let the next tick
               // retry, but make the failure visible for debugging.
               console.error('[cv] detection sample failed', err)
+            } finally {
+              processingRef.current = false
             }
           })()
         }, sampleIntervalSec * 1000)
@@ -137,6 +153,7 @@ export function useCameraMonitoring({ enabled, sampleIntervalSec = 5, onEvent }:
       cancelled = true
       if (intervalRef.current) clearInterval(intervalRef.current)
       intervalRef.current = null
+      processingRef.current = false
 
       flushClassifier(classifierStateRef.current, sampleIntervalSec).forEach((event) => onEventRef.current(event))
 

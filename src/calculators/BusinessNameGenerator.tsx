@@ -100,6 +100,27 @@ const BusinessNameGenerator = () => {
       <Typography variant="body1">
         Type a keyword related to your industry or idea (like "Cloud" or "Burger") and hit generate. The tool will instantly combine it with modern tech suffixes, prefixes, and corporate keywords to give you catchy, brandable business name ideas. You can also leave the keyword blank for entirely random abstract names.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Entering &quot;Cloud&quot; might generate names like &quot;CloudPeak&quot;, &quot;NimbusCloud&quot;, or
+        &quot;CloudForge&quot; — a mix of prefixes and suffixes combined with your keyword.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Brainstorming startup or product name ideas.</li>
+          <li>Finding inspiration when you&apos;re stuck on branding.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Are these names checked for trademark or domain availability?</Typography>
+      <Typography variant="body1">
+        No — this tool generates name ideas only. Always check trademark databases and domain availability
+        separately before committing to a name.
+      </Typography>
     </>
   );
 

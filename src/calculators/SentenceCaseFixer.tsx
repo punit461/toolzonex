@@ -114,6 +114,25 @@ const SentenceCaseFixer = () => {
           <li><strong>Alternating Case:</strong> Randomly alternates between upper and lowercase for a mocking or meme effect.</li>
         </ul>
       </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        &quot;HELLO there WORLD&quot; converted to Sentence case becomes &quot;Hello there world.&quot;
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Fixing text accidentally typed with Caps Lock on.</li>
+          <li>Converting a heading or title into consistent Title Case.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Will this fix grammar or spelling too?</Typography>
+      <Typography variant="body1">
+        No — this tool only changes letter casing; it does not correct spelling, grammar, or punctuation.
+      </Typography>
     </>
   );
 

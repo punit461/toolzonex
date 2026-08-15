@@ -1016,6 +1016,83 @@ const remainingTools: { slug: string; name: string; route: string; category: Too
   { slug: 'time-zone-converter', name: 'Time Zone Converter', route: '/utilities/time-zone-converter', category: 'utilities' },
   { slug: 'timer', name: 'Online Countdown Timer', route: '/utilities/timer', category: 'utilities' },
   { slug: 'tip-calculator', name: 'Tip Calculator', route: '/utilities/tip-calculator', category: 'utilities' },
+  // AI
+  { slug: 'gpu-cost-calculator', name: 'GPU Cost Calculator', route: '/ai/gpu-cost-calculator', category: 'tools' },
+  { slug: 'llm-cost-calculator', name: 'LLM Cost Calculator', route: '/ai/llm-cost-calculator', category: 'tools' },
+  // Converters
+  { slug: 'area-converter', name: 'Area Converter', route: '/converters/area-converter', category: 'tools' },
+  { slug: 'length-converter', name: 'Length Converter', route: '/converters/length-converter', category: 'tools' },
+  { slug: 'temperature-converter', name: 'Temperature Converter', route: '/converters/temperature-converter', category: 'tools' },
+  { slug: 'time-converter', name: 'Time Converter', route: '/converters/time-converter', category: 'tools' },
+  { slug: 'volume-converter', name: 'Volume Converter', route: '/converters/volume-converter', category: 'tools' },
+  { slug: 'weight-converter', name: 'Weight Converter', route: '/converters/weight-converter', category: 'tools' },
+  // Finance
+  { slug: '401k-calculator', name: '401(k) Calculator', route: '/finance/401k-calculator', category: 'finance' },
+  { slug: 'vat-calculator', name: 'VAT Calculator', route: '/finance/vat-calculator', category: 'finance' },
+  { slug: 'paycheck-calculator', name: 'US Paycheck Calculator', route: '/finance/paycheck-calculator', category: 'finance' },
+  { slug: 'alaska-paycheck-calculator', name: 'Alaska Paycheck Calculator', route: '/finance/alaska-paycheck-calculator', category: 'finance' },
+  { slug: 'arizona-paycheck-calculator', name: 'Arizona Paycheck Calculator', route: '/finance/arizona-paycheck-calculator', category: 'finance' },
+  { slug: 'california-paycheck-calculator', name: 'California Paycheck Calculator', route: '/finance/california-paycheck-calculator', category: 'finance' },
+  { slug: 'colorado-paycheck-calculator', name: 'Colorado Paycheck Calculator', route: '/finance/colorado-paycheck-calculator', category: 'finance' },
+  { slug: 'florida-paycheck-calculator', name: 'Florida Paycheck Calculator', route: '/finance/florida-paycheck-calculator', category: 'finance' },
+  { slug: 'georgia-paycheck-calculator', name: 'Georgia Paycheck Calculator', route: '/finance/georgia-paycheck-calculator', category: 'finance' },
+  { slug: 'illinois-paycheck-calculator', name: 'Illinois Paycheck Calculator', route: '/finance/illinois-paycheck-calculator', category: 'finance' },
+  { slug: 'indiana-paycheck-calculator', name: 'Indiana Paycheck Calculator', route: '/finance/indiana-paycheck-calculator', category: 'finance' },
+  { slug: 'kentucky-paycheck-calculator', name: 'Kentucky Paycheck Calculator', route: '/finance/kentucky-paycheck-calculator', category: 'finance' },
+  { slug: 'massachusetts-paycheck-calculator', name: 'Massachusetts Paycheck Calculator', route: '/finance/massachusetts-paycheck-calculator', category: 'finance' },
+  { slug: 'michigan-paycheck-calculator', name: 'Michigan Paycheck Calculator', route: '/finance/michigan-paycheck-calculator', category: 'finance' },
+  { slug: 'mississippi-paycheck-calculator', name: 'Mississippi Paycheck Calculator', route: '/finance/mississippi-paycheck-calculator', category: 'finance' },
+  { slug: 'nevada-paycheck-calculator', name: 'Nevada Paycheck Calculator', route: '/finance/nevada-paycheck-calculator', category: 'finance' },
+  { slug: 'new-hampshire-paycheck-calculator', name: 'New Hampshire Paycheck Calculator', route: '/finance/new-hampshire-paycheck-calculator', category: 'finance' },
+  { slug: 'new-york-paycheck-calculator', name: 'New York Paycheck Calculator', route: '/finance/new-york-paycheck-calculator', category: 'finance' },
+  { slug: 'north-carolina-paycheck-calculator', name: 'North Carolina Paycheck Calculator', route: '/finance/north-carolina-paycheck-calculator', category: 'finance' },
+  { slug: 'pennsylvania-paycheck-calculator', name: 'Pennsylvania Paycheck Calculator', route: '/finance/pennsylvania-paycheck-calculator', category: 'finance' },
+  { slug: 'south-dakota-paycheck-calculator', name: 'South Dakota Paycheck Calculator', route: '/finance/south-dakota-paycheck-calculator', category: 'finance' },
+  { slug: 'tennessee-paycheck-calculator', name: 'Tennessee Paycheck Calculator', route: '/finance/tennessee-paycheck-calculator', category: 'finance' },
+  { slug: 'texas-paycheck-calculator', name: 'Texas Paycheck Calculator', route: '/finance/texas-paycheck-calculator', category: 'finance' },
+  { slug: 'utah-paycheck-calculator', name: 'Utah Paycheck Calculator', route: '/finance/utah-paycheck-calculator', category: 'finance' },
+  { slug: 'washington-paycheck-calculator', name: 'Washington Paycheck Calculator', route: '/finance/washington-paycheck-calculator', category: 'finance' },
+  { slug: 'wyoming-paycheck-calculator', name: 'Wyoming Paycheck Calculator', route: '/finance/wyoming-paycheck-calculator', category: 'finance' },
+  // Text tools
+  { slug: 'leetspeak-converter', name: 'Leetspeak Converter', route: '/text-tools/leetspeak-converter', category: 'tools' },
+  { slug: 'word-scrambler', name: 'Word Scrambler', route: '/text-tools/word-scrambler', category: 'tools' },
+  // Tools
+  { slug: 'ai-pomodoro', name: 'AI Pomodoro', route: '/tools/ai-pomodoro', category: 'tools' },
+  { slug: 'face-shape-detector', name: 'Face Shape Detector', route: '/tools/face-shape-detector', category: 'tools' },
+  { slug: 'height-comparison', name: 'Height Comparison', route: '/tools/height-comparison', category: 'tools' },
+  { slug: 'csv-to-pdf', name: 'CSV to PDF', route: '/tools/csv-to-pdf', category: 'tools' },
+  { slug: 'delete-pdf-pages', name: 'Delete PDF Pages', route: '/tools/delete-pdf-pages', category: 'tools' },
+  { slug: 'excel-to-pdf', name: 'Excel to PDF', route: '/tools/excel-to-pdf', category: 'tools' },
+  { slug: 'extract-pdf-pages', name: 'Extract PDF Pages', route: '/tools/extract-pdf-pages', category: 'tools' },
+  { slug: 'flatten-pdf', name: 'Flatten PDF', route: '/tools/flatten-pdf', category: 'tools' },
+  { slug: 'html-to-pdf', name: 'HTML to PDF', route: '/tools/html-to-pdf', category: 'tools' },
+  { slug: 'jpg-to-pdf', name: 'JPG to PDF', route: '/tools/jpg-to-pdf', category: 'tools' },
+  { slug: 'merge-pdf', name: 'Merge PDF', route: '/tools/merge-pdf', category: 'tools' },
+  { slug: 'number-pdf-pages', name: 'Add Page Numbers to PDF', route: '/tools/number-pdf-pages', category: 'tools' },
+  { slug: 'organize-pdf', name: 'Organize PDF', route: '/tools/organize-pdf', category: 'tools' },
+  { slug: 'rotate-pdf', name: 'Rotate PDF', route: '/tools/rotate-pdf', category: 'tools' },
+  { slug: 'split-pdf', name: 'Split PDF', route: '/tools/split-pdf', category: 'tools' },
+  { slug: 'text-to-pdf', name: 'Text to PDF', route: '/tools/text-to-pdf', category: 'tools' },
+  { slug: 'watermark-pdf', name: 'Watermark PDF', route: '/tools/watermark-pdf', category: 'tools' },
+  { slug: 'word-to-pdf', name: 'Word to PDF', route: '/tools/word-to-pdf', category: 'tools' },
+  // Utilities / screens
+  { slug: 'black-screen', name: 'Black Screen', route: '/utilities/black-screen', category: 'utilities' },
+  { slug: 'blue-screen', name: 'Blue Screen', route: '/utilities/blue-screen', category: 'utilities' },
+  { slug: 'green-screen', name: 'Green Screen', route: '/utilities/green-screen', category: 'utilities' },
+  { slug: 'red-screen', name: 'Red Screen', route: '/utilities/red-screen', category: 'utilities' },
+  { slug: 'orange-screen', name: 'Orange Screen', route: '/utilities/orange-screen', category: 'utilities' },
+  { slug: 'pink-screen', name: 'Pink Screen', route: '/utilities/pink-screen', category: 'utilities' },
+  { slug: 'purple-screen', name: 'Purple Screen', route: '/utilities/purple-screen', category: 'utilities' },
+  { slug: 'yellow-screen', name: 'Yellow Screen', route: '/utilities/yellow-screen', category: 'utilities' },
+  { slug: 'zoom-lighting-screen', name: 'Zoom Lighting Screen', route: '/utilities/zoom-lighting-screen', category: 'utilities' },
+  { slug: 'tip-screen', name: 'Tip Screen', route: '/utilities/tip-screen', category: 'utilities' },
+  { slug: 'dead-pixel-test', name: 'Dead Pixel Test', route: '/utilities/dead-pixel-test', category: 'utilities' },
+  { slug: 'dvd-screensaver', name: 'DVD Screensaver', route: '/utilities/dvd-screensaver', category: 'utilities' },
+  { slug: 'broken-screen', name: 'Broken Screen Prank', route: '/utilities/broken-screen', category: 'utilities' },
+  { slug: 'windows-10-blue-screen', name: 'Windows 10 Blue Screen Prank', route: '/utilities/windows-10-blue-screen', category: 'utilities' },
+  { slug: 'windows-10-update-screen', name: 'Windows 10 Update Screen Prank', route: '/utilities/windows-10-update-screen', category: 'utilities' },
+  { slug: 'windows-11-blue-screen', name: 'Windows 11 Blue Screen Prank', route: '/utilities/windows-11-blue-screen', category: 'utilities' },
+  { slug: 'windows-11-update-screen', name: 'Windows 11 Update Screen Prank', route: '/utilities/windows-11-update-screen', category: 'utilities' },
 ];
 
 // Generate blog entries for remaining tools and merge with handwritten ones
@@ -1029,6 +1106,11 @@ export const allToolBlogs: ToolBlogMeta[] = [...toolBlogs, ...generatedBlogs];
 /** Lookup by slug */
 export function getToolBlogBySlug(slug: string): ToolBlogMeta | undefined {
   return allToolBlogs.find(b => b.slug === slug);
+}
+
+/** Lookup by the tool's own route (e.g. "/finance/emi-calculator"), for backlinking from the tool page to its blog. */
+export function getToolBlogByRoute(route: string): ToolBlogMeta | undefined {
+  return allToolBlogs.find(b => b.toolRoute === route);
 }
 
 /** All slugs for generateStaticParams */

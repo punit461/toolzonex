@@ -54,6 +54,26 @@ const AgeCalculator = () => {
       <Typography variant="body1">
         Exact age calculation is crucial for various official purposes such as applying for government exams, passport applications, insurance policies, and calculating retirement benefits. Often, age cut-offs are specific down to the exact day.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Someone born on 15 March 1995, checking their age on 14 August 2026, is exactly 31 years, 4 months, and
+        30 days old.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Checking eligibility for exams or jobs with exact age cut-offs.</li>
+          <li>Calculating age for passport, visa, or insurance applications.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does it account for leap years?</Typography>
+      <Typography variant="body1">
+        Yes, the calculation correctly accounts for leap years and varying month lengths.
+      </Typography>
     </>
   );
 

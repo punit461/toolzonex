@@ -76,6 +76,18 @@ const WordCounter = () => {
       <Typography variant="body1">
         Whether you're writing an essay, a blog post, a social media update, or a professional email, keeping track of your word count is essential. Many platforms have strict character limits (like Twitter/X) or specific length requirements for SEO and readability. This free online tool helps you instantly track your progress without needing heavy word processors.
       </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does it count words as I type?</Typography>
+      <Typography variant="body1">
+        Yes — the word, character, sentence, and paragraph counts update live as you type or paste text.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Pasting a 280-character tweet draft shows the exact character count so you know instantly if it fits
+        the platform limit.
+      </Typography>
     </>
   );
 

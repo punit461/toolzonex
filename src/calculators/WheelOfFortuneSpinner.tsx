@@ -203,6 +203,27 @@ const WheelOfFortuneSpinner = () => {
       <Typography variant="body1">
         This customizable spinning wheel acts as a random decision maker. Add your choices (names, prizes, food options) into the list on the left, and click "Spin the Wheel" to randomly select a winner. It's completely free, runs locally in your browser, and supports up to 24 options.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Adding five restaurant names and spinning the wheel randomly lands on one, settling the group&apos;s
+        dinner decision instantly.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Picking a random winner for a classroom activity or giveaway.</li>
+          <li>Deciding between restaurant or activity options with friends.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is the spin result truly random?</Typography>
+      <Typography variant="body1">
+        Yes — the wheel lands on a random segment each spin, giving every option an equal chance proportional
+        to its slice size.
+      </Typography>
     </>
   );
 

@@ -116,7 +116,34 @@ const CssMinifier = () => {
     <>
       <Typography variant="h2">Free CSS Minifier Tool</Typography>
       <Typography variant="body1">
-        Compress your CSS files instantly to reduce loading times and improve your website's performance. This tool removes unnecessary whitespace, comments, and line breaks from your CSS code. 
+        Compress your CSS files instantly to reduce loading times and improve your website's performance. This tool removes unnecessary whitespace, comments, and line breaks from your CSS code.
+      </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste your CSS into the input box and click minify — the tool instantly strips whitespace, comments,
+        and line breaks and gives you a compact output to copy.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        <code>body {'{'} color: red; {'}'}</code> (with formatting and comments) minifies down to
+        <code>body{'{'}color:red{'}'}</code> — smaller file size, same visual result.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Reducing CSS file size before deploying to production.</li>
+          <li>Speeding up page load times by cutting unnecessary bytes.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Will minifying break my CSS?</Typography>
+      <Typography variant="body1">
+        No — minification only removes whitespace, comments, and line breaks; it doesn&apos;t change what the
+        CSS actually does.
       </Typography>
     </>
   );

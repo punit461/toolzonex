@@ -120,6 +120,33 @@ const JsMinifier = () => {
       <Typography variant="body1">
         Reduce your JavaScript payload size and improve load times. This basic client-side minifier strips comments, line breaks, and unnecessary spaces from your JS files instantly. Note: For complex production code, we recommend using a full AST-based minifier like Terser.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste your JavaScript into the input box and click minify to instantly strip comments and unnecessary
+        whitespace, producing a compact output ready to copy.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Multi-line, commented JavaScript with extra whitespace minifies down to a compact single-line output —
+        smaller file size, same behavior.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Quickly shrinking a small script for a prototype or personal project.</li>
+          <li>Removing comments and whitespace before sharing or embedding a snippet.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is this safe for production code?</Typography>
+      <Typography variant="body1">
+        For complex production codebases, a full AST-based minifier like Terser or esbuild is safer and more
+        thorough — this tool is best for quick, simple minification needs.
+      </Typography>
     </>
   );
 

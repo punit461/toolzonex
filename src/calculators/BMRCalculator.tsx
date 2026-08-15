@@ -60,6 +60,33 @@ const BMRCalculator = () => {
       <Typography variant="body1">
         Once you know your BMR, you can calculate your Total Daily Energy Expenditure (TDEE) by multiplying your BMR by an activity factor. Knowing your TDEE helps you figure out how many calories you need to consume to lose, maintain, or gain weight.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A 30-year-old woman, 165cm tall and 60kg, has a BMR (Mifflin-St Jeor) of roughly 1,320 calories/day —
+        the energy her body burns at complete rest, before any activity is factored in.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Setting a calorie baseline before building a diet or fitness plan.</li>
+          <li>Calculating TDEE by combining BMR with an activity multiplier.</li>
+          <li>Understanding how age, weight, and body composition affect metabolism.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is BMR the same as the calories I burn in a day?</Typography>
+      <Typography variant="body1">
+        No — BMR is calories burned at complete rest. Your total daily burn (TDEE) is higher and includes
+        activity, exercise, and digestion.
+      </Typography>
+      <Typography variant="h3">Which formula does this use?</Typography>
+      <Typography variant="body1">
+        The Mifflin-St Jeor equation, widely considered one of the more accurate BMR formulas for the general
+        population.
+      </Typography>
     </>
   );
 

@@ -157,6 +157,33 @@ const TextReadabilityScore = () => {
       <Typography variant="body1">
         Check how easy your text is to read. This tool calculates standard readability metrics including the Flesch Reading Ease score, Flesch-Kincaid Grade Level, and Automated Readability Index (ARI). Perfect for authors, copywriters, and students looking to improve their writing flow.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste your text into the input box and the Flesch Reading Ease, Flesch-Kincaid Grade Level, and ARI
+        scores calculate instantly.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A short, simple paragraph might score 80-90 (easy, 6th-grade level), while dense academic writing often
+        scores below 30 (very difficult, college-graduate level).
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Checking a blog post or article reads at an accessible grade level.</li>
+          <li>Simplifying technical writing for a general audience.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What Flesch Reading Ease score is considered "easy"?</Typography>
+      <Typography variant="body1">
+        Scores of 60-70 are considered plain English, easily understood by 13-15 year olds; scores above 90 are
+        very easy to read, while scores below 30 are considered very difficult (college graduate level).
+      </Typography>
     </>
   );
 

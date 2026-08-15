@@ -115,6 +115,32 @@ const JsonFormatter = () => {
       <Typography variant="body1">
         Instantly format, validate, and minify your JSON data. This tool parses your JSON string, checks for syntax errors, and pretty-prints it with indentation for easy reading. Completely client-side and secure.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste your JSON into the input box — it&apos;s validated and pretty-printed instantly, with syntax
+        errors highlighted if the JSON is malformed.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Pasting <code>{'{'}"name":"Alice","age":30{'}'}</code> and formatting it produces a neatly indented,
+        multi-line JSON object — much easier to read and debug.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Debugging a minified or single-line API response.</li>
+          <li>Validating that a JSON payload is syntactically correct.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What happens if my JSON is invalid?</Typography>
+      <Typography variant="body1">
+        The tool highlights the syntax error so you can locate and fix the exact problem in your JSON.
+      </Typography>
     </>
   );
 

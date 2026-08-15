@@ -278,6 +278,26 @@ const OnlineImageEditor = () => {
         • Flip - Mirror the image horizontally
         • Reset - Return all settings to original values
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Cropping a screenshot to just the relevant area, then bumping brightness up 10%, produces a cleaner
+        image ready to download without opening a full photo editor.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Quickly cropping and adjusting a photo before uploading it to a website or profile.</li>
+          <li>Fixing overexposed or underexposed images with brightness/contrast sliders.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is my image uploaded to a server?</Typography>
+      <Typography variant="body1">
+        No — all editing happens locally in your browser, and the image never leaves your device.
+      </Typography>
     </>
   );
 

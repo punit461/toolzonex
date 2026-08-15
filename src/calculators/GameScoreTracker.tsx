@@ -169,6 +169,32 @@ const GameScoreTracker = () => {
       <Typography variant="body1">
         Ditch the pen and paper! Track scores for board games, card games, sports, or party games online. Add as many players as you need, easily increment or decrement points, and keep an eye on the live leaderboard to see who's winning.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Add each player&apos;s name, then tap + or - to update their score as the game progresses — the
+        leaderboard reorders automatically.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Tracking a 4-player card game, each round&apos;s points are added with a tap, and the leaderboard shows
+        who&apos;s in the lead at a glance.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Keeping score during board games, card games, or trivia nights.</li>
+          <li>Tracking points for a group activity or tournament.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is there a limit on the number of players?</Typography>
+      <Typography variant="body1">
+        No practical limit — add as many players as your game needs.
+      </Typography>
     </>
   );
 

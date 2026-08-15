@@ -128,6 +128,27 @@ const EmailExtractor = () => {
         • Fast and accurate results
         • Works directly in your browser (no uploads)
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Pasting a block of text containing &quot;Contact us at sales@example.com or support@example.com&quot;
+        extracts both addresses into a clean, de-duplicated list.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Pulling contact emails out of a scraped webpage or document.</li>
+          <li>Building a mailing list from pasted text or CSV content.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does it validate that the emails are real?</Typography>
+      <Typography variant="body1">
+        No — it extracts anything matching a valid email address pattern from the text; it doesn&apos;t check
+        whether the address actually exists or can receive mail.
+      </Typography>
     </>
   );
 

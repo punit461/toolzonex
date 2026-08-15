@@ -97,6 +97,31 @@ const BasicCalculator = () => {
       <Typography variant="body1">
         A simple, fast, and free online calculator for standard mathematical operations including addition, subtraction, multiplication, and division. Perfect for quick calculations without leaving your browser.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Click the number and operator buttons (or type on your keyboard) to build an expression, then press
+        equals to see the result instantly.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Enter 24.99 × 3, then press equals to instantly get 74.97 — no need to switch apps or grab a physical calculator.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Quick everyday arithmetic without opening a separate calculator app.</li>
+          <li>Checking totals, splits, or simple math while browsing.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I use my keyboard?</Typography>
+      <Typography variant="body1">
+        Yes, number keys and the standard operators (+, -, *, /, Enter) work directly.
+      </Typography>
     </>
   );
 

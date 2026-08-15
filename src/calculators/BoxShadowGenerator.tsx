@@ -119,6 +119,33 @@ const BoxShadowGenerator = () => {
       <Typography variant="body1">
         Visually generate beautiful CSS box shadows for your web projects. Adjust the horizontal and vertical offsets, blur radius, and spread radius to create the perfect drop shadow or inner shadow. Copy the generated CSS code with one click.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Drag the offset, blur, and spread sliders while watching the live preview, then copy the generated
+        <code>box-shadow</code> CSS with one click.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A subtle card shadow might use <code>box-shadow: 0px 4px 12px rgba(0,0,0,0.15)</code> — adjust the
+        sliders to preview the effect live, then copy the exact CSS.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Designing card, button, or modal shadows for a website.</li>
+          <li>Fine-tuning shadow depth visually instead of guessing CSS values.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What&apos;s the difference between outer and inner shadow?</Typography>
+      <Typography variant="body1">
+        An outer shadow appears behind the element, creating a lifted effect. An inner shadow (using the
+        <code>inset</code> keyword) appears inside the element&apos;s border, creating a recessed effect.
+      </Typography>
     </>
   );
 

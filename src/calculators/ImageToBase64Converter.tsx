@@ -125,6 +125,32 @@ const ImageToBase64Converter = () => {
       <Typography variant="body1">
         Convert any image file (PNG, JPG, SVG, GIF) into a Base64 encoded string. Useful for embedding images directly into HTML, CSS, or JSON payloads.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Upload an image and the tool instantly generates its Base64-encoded string, ready to copy and embed.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A small icon converts to a string like <code>data:image/png;base64,iVBORw0KGgo...</code> — paste this
+        directly into an <code>&lt;img src&gt;</code> or CSS <code>background-image</code> to embed it inline.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Embedding small icons or images directly in HTML/CSS without extra HTTP requests.</li>
+          <li>Including image data in a JSON API payload.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Should I Base64-encode large images?</Typography>
+      <Typography variant="body1">
+        Generally no — Base64 encoding increases file size by about 33%, so it&apos;s best suited for small
+        icons and images, not large photos.
+      </Typography>
     </>
   );
 

@@ -146,6 +146,31 @@ const NumberToWordsConverter = () => {
       <Typography variant="body1">
         Instantly convert any number into standard English words. Useful for writing checks, filling out legal documents, or just finding out how to pronounce extremely large numbers (up to the trillions).
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Type any whole number into the input field and the words spelling it out appear instantly.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Entering 1,024 converts to &quot;One Thousand Twenty-Four&quot;, ready to paste onto a check or legal
+        document.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Writing out the amount in words on a check.</li>
+          <li>Filling legal or financial documents that require numbers spelled out.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What&apos;s the largest number this can convert?</Typography>
+      <Typography variant="body1">
+        The converter supports numbers up into the trillions.
+      </Typography>
     </>
   );
 

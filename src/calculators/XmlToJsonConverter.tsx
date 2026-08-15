@@ -170,6 +170,26 @@ const XmlToJsonConverter = () => {
       <Typography variant="body1">
         Paste your XML data into the input box. The tool uses the native browser DOMParser to safely convert XML nodes and attributes into a structured JSON object. Repeated XML tags are automatically grouped into JSON arrays.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        <code>{'<user id="1"><name>Alice</name></user>'}</code> converts to
+        <code>{'{"user":{"id":"1","name":"Alice"}}'}</code>.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Converting a legacy XML API response into JSON for modern JavaScript code.</li>
+          <li>Migrating configuration files from XML to JSON format.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Are XML attributes preserved in the JSON output?</Typography>
+      <Typography variant="body1">
+        Yes — attributes are included in the resulting JSON object alongside element values.
+      </Typography>
     </>
   );
 

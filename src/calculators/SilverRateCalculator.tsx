@@ -30,6 +30,27 @@ const SilverRateCalculator = () => {
         <li><strong>Making Charges:</strong> For silver, making charges are often higher in percentage terms than gold because of intricate designs.</li>
         <li><strong>GST:</strong> A flat 3% Goods and Services Tax is levied on the total value.</li>
       </ul>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        1kg of silver at ₹75/gram = ₹75,000 silver value. At 12% making charges (₹9,000) and 3% GST on
+        ₹84,000 (₹2,520), the final price comes to ₹86,520.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Checking a jeweler&apos;s quoted price against the actual silver rate before buying.</li>
+          <li>Estimating the cost of silver utensils or coins before purchase.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Why are silver making charges often higher than gold?</Typography>
+      <Typography variant="body1">
+        Silver items often involve more intricate craftsmanship relative to their lower per-gram value, so
+        making charges are commonly expressed as a higher percentage than for gold.
+      </Typography>
     </>
   );
 

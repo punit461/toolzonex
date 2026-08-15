@@ -54,10 +54,30 @@ const EMICalculator = () => {
         <strong>N</strong> = Loan tenure in months
       </Typography>
 
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A ₹10,00,000 loan at 9% annual interest over 20 years (240 months) works out to an EMI of about
+        ₹8,997/month, with total interest of roughly ₹11,59,280 over the loan&apos;s life.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Comparing monthly payments across different loan amounts, rates, or tenures before borrowing.</li>
+          <li>Planning a home, car, or personal loan budget.</li>
+          <li>Understanding how much of each payment goes to interest vs. principal via the amortization schedule.</li>
+        </ul>
+      </Box>
+
       <Typography variant="h2">FAQs</Typography>
       <Typography variant="h3">What happens if interest rates change?</Typography>
       <Typography variant="body1">
         If you have a floating rate loan, your bank may either increase your EMI amount or extend your loan tenure when interest rates rise.
+      </Typography>
+      <Typography variant="h3">Does a longer tenure always mean I pay more?</Typography>
+      <Typography variant="body1">
+        Yes — a longer tenure lowers your monthly EMI but increases the total interest paid over the life of
+        the loan, since interest accrues for longer.
       </Typography>
     </>
   );

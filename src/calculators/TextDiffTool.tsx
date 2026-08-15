@@ -106,6 +106,33 @@ const TextDiffTool = () => {
       <Typography variant="body1">
         Compare two text documents to see exactly what changed. Our diff checker highlights the differences word-by-word, making it easy to spot additions and deletions between versions of an essay, code snippet, or article.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste your original text on the left and the edited version on the right — added and removed words are
+        highlighted instantly.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Comparing &quot;The quick brown fox&quot; with &quot;The quick red fox jumps&quot; highlights
+        &quot;brown&quot; as removed and &quot;red&quot; and &quot;jumps&quot; as added.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Comparing two drafts of an essay or article to see what was edited.</li>
+          <li>Spotting changes between two versions of a code snippet or config file.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does it compare whole words or individual characters?</Typography>
+      <Typography variant="body1">
+        The comparison highlights differences at the word level, making changes easier to read than a
+        character-by-character diff.
+      </Typography>
     </>
   );
 

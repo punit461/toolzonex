@@ -147,6 +147,19 @@ const TextSizeCalculator = () => {
         • Speech writing - Estimate speaking time based on word count
         • Email marketing - Optimize email length for better engagement
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A 500-word blog post takes roughly 2-3 minutes to read at an average reading speed, which the tool
+        calculates automatically as you paste text.
+      </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does the reading time estimate account for different reading speeds?</Typography>
+      <Typography variant="body1">
+        It uses an average adult reading speed (roughly 200-250 words per minute); actual reading time will
+        vary by individual and text complexity.
+      </Typography>
     </>
   );
 

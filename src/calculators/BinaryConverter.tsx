@@ -122,6 +122,26 @@ const BinaryConverter = () => {
       <Typography variant="body1">
         Computers store all data using the binary system, which is a base-2 number system composed of only two digits: 0 and 1. This tool allows you to convert human-readable text into 8-bit binary representation, and vice-versa, making it a great educational tool for understanding how computers process information.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        The letter &quot;A&quot; converts to <code>01000001</code> in 8-bit binary (its ASCII value, 65).
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Learning how computers represent text at the bit level.</li>
+          <li>Decoding binary strings found in puzzles, homework, or low-level programming.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Why 8 bits per character?</Typography>
+      <Typography variant="body1">
+        8 bits (1 byte) can represent 256 values, enough to cover the standard ASCII character set used for
+        basic English text and symbols.
+      </Typography>
     </>
   );
 

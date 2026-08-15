@@ -117,6 +117,32 @@ const HtmlMinifier = () => {
       <Typography variant="body1">
         Compress your HTML payload size by removing unnecessary comments and whitespace between tags. This reduces page weight, bandwidth usage, and improves your Core Web Vitals loading scores.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste your HTML into the input box and click minify to instantly strip comments and unnecessary
+        whitespace, producing a compact output ready to copy.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Multi-line, indented HTML with comments minifies down to a single compact line — the same rendered
+        result, fewer bytes over the wire.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Reducing HTML file size before deploying to production.</li>
+          <li>Cleaning up generated or templated HTML output.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Will minifying affect how my page looks?</Typography>
+      <Typography variant="body1">
+        No — only whitespace and comments are removed; the rendered page looks identical.
+      </Typography>
     </>
   );
 

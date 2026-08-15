@@ -127,6 +127,27 @@ const TextEncryptionDecryption = () => {
           <li><strong>Hexadecimal:</strong> Converts text into its numerical Hex representations.</li>
         </ul>
       </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Encoding &quot;hello&quot; in Base64 produces <code>aGVsbG8=</code>; decoding it returns
+        &quot;hello&quot;.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Encoding binary or text data for safe transmission in APIs or emails.</li>
+          <li>Quickly obfuscating text for puzzles or casual privacy (not real security).</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is Base64 or ROT13 real encryption?</Typography>
+      <Typography variant="body1">
+        No — both are reversible encoding/obfuscation schemes, not cryptographic encryption; anyone can decode
+        them without a key.
+      </Typography>
     </>
   );
 

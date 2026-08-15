@@ -107,6 +107,28 @@ const Base64Converter = () => {
       <Typography variant="body1">
         Base64 is an encoding scheme used to represent binary data in an ASCII string format. It is commonly used when there is a need to encode binary data that needs to be stored and transferred over media that are designed to deal with textual data. This tool supports UTF-8 characters.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        The text &quot;Hello&quot; encodes to &quot;SGVsbG8=&quot; in Base64, and decodes back to
+        &quot;Hello&quot; exactly.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Embedding small binary data (like images) directly in HTML, CSS, or JSON.</li>
+          <li>Encoding data for safe transport in URLs, emails, or APIs that expect text.</li>
+          <li>Decoding Base64 strings found in API responses or config files.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is Base64 encryption?</Typography>
+      <Typography variant="body1">
+        No — Base64 is an encoding, not encryption. It&apos;s trivially reversible and provides no security;
+        it&apos;s meant for safely representing binary data as text, not for hiding information.
+      </Typography>
     </>
   );
 

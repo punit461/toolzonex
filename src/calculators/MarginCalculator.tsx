@@ -125,6 +125,34 @@ const MarginCalculator = () => {
         <br/><br/>
         Use this tool to find your gross profit, margin, and markup instantly.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Enter cost and revenue to calculate profit, margin, and markup — or enter cost and a target margin to
+        find the revenue needed.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A product costing $100 sold for $150 has a $50 gross profit, a 33.33% margin, and a 50% markup — the
+        two percentages differ because margin is measured against revenue while markup is measured against
+        cost.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Setting a selling price that hits a target profit margin.</li>
+          <li>Checking whether a markup percentage delivers the intended margin.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is markup the same as margin?</Typography>
+      <Typography variant="body1">
+        No — for the same sale, markup is always a higher percentage than margin, since it&apos;s calculated on
+        the smaller cost figure rather than the larger revenue figure.
+      </Typography>
     </>
   );
 

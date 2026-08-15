@@ -184,6 +184,19 @@ const ImageResizer = () => {
         • Completely private and secure
         • Free without any watermarks
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Resizing a 4000×3000 photo down to 1200px wide (with aspect ratio locked) produces a 1200×900 image —
+        much smaller file size, same proportions.
+      </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Will resizing reduce image quality?</Typography>
+      <Typography variant="body1">
+        Reducing dimensions doesn&apos;t meaningfully hurt quality for most uses; enlarging an image beyond its
+        original size can make it look soft or blurry.
+      </Typography>
     </>
   );
 

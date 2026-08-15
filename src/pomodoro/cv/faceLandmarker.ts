@@ -1,7 +1,12 @@
 import { FaceLandmarker, FilesetResolver } from '@mediapipe/tasks-vision'
 import type { FaceDetectionResult } from './detectionTypes'
 
-const WASM_BASE_URL = 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm'
+// Pinned to the exact version in package.json — `@latest` would let the CDN
+// silently serve a newer WASM binary than the JS API bundled from
+// node_modules, which breaks (or randomly half-breaks, depending on which
+// version each visitor's browser happens to fetch) the moment MediaPipe
+// publishes a new release, with no code change on our end to explain it.
+const WASM_BASE_URL = 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@1.0.1/wasm'
 const MODEL_URL =
   'https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/latest/face_landmarker.task'
 

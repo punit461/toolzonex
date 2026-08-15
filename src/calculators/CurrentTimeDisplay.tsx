@@ -159,6 +159,33 @@ const CurrentTimeDisplay = () => {
       <Typography variant="body1">
         Check the exact current time in your location and across the globe. Add or remove timezones to keep track of international times for meetings, travel, or global events.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Your local time displays automatically; add other cities or time zones to see their current time
+        side-by-side, updating live.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Adding New York and Tokyo alongside your local city lets you see all three current times at a glance
+        before scheduling a call.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Scheduling meetings across multiple time zones.</li>
+          <li>Checking the current time in a city before calling or traveling there.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does this account for daylight saving time?</Typography>
+      <Typography variant="body1">
+        Yes, times are based on your device&apos;s time zone database, which handles daylight saving
+        transitions automatically.
+      </Typography>
     </>
   );
 

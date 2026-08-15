@@ -166,6 +166,33 @@ const FocusTimer = () => {
       <Typography variant="body1">
         Boost your productivity using the Pomodoro Technique. Work in focused 25-minute bursts (Pomodoros), separated by 5-minute short breaks. After 4 Pomodoros, take a 15-minute long break to recharge.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Press start to begin a 25-minute focus session; the timer automatically switches to a short break, then
+        a longer break after every four sessions.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Four completed 25-minute Pomodoros with 5-minute breaks between them (a full cycle) add up to about 2
+        hours of focused work with built-in recovery time.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Staying focused during deep work or study sessions.</li>
+          <li>Breaking large tasks into manageable, timed chunks.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I change the 25-minute default?</Typography>
+      <Typography variant="body1">
+        Some implementations of the Pomodoro Technique use different durations — check the timer&apos;s
+        settings to adjust work and break lengths to what works for you.
+      </Typography>
     </>
   );
 

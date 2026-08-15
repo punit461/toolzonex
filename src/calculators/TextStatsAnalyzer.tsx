@@ -100,6 +100,26 @@ const TextStatsAnalyzer = () => {
       <Typography variant="body1">
         Paste any text into the box and click "Analyze". The tool will instantly calculate in-depth metrics including vowels, consonants, syllables, average word length, and a Flesch-Kincaid Reading Grade Level estimate.
       </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Checking the reading grade level of an article before publishing.</li>
+          <li>Analyzing word and syllable complexity for language learning materials.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How is average word length calculated?</Typography>
+      <Typography variant="body1">
+        It&apos;s the total character count of all words divided by the total word count.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Pasting a 200-word paragraph instantly returns its vowel/consonant counts, syllable count, and an
+        estimated Flesch-Kincaid grade level.
+      </Typography>
     </>
   );
 

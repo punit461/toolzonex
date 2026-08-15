@@ -160,6 +160,31 @@ const PaycheckCalculator = ({ stateSlug }: Props) => {
           )}
         </ul>
       </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A single filer earning $75,000/year in {stateConfig.name}, paid bi-weekly, can enter that salary and
+        filing status to see federal tax, Social Security, Medicare{stateConfig.hasIncomeTax ? `, and ${stateConfig.name} state tax` : ''} broken
+        out per paycheck, alongside the annual take-home total.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Estimating take-home pay before accepting a job offer in {stateConfig.name}.</li>
+          <li>Comparing net pay across different filing statuses or pay frequencies.</li>
+          <li>Budgeting based on actual per-paycheck income rather than gross salary.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQ</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li><strong>Does this include 401(k) or health insurance deductions?</strong> No, this calculates statutory federal and state payroll taxes only — pre-tax benefit deductions would reduce take-home pay further.</li>
+          <li><strong>Is this exact to the dollar?</strong> It&apos;s a close estimate based on published 2025 tax brackets; actual withholding can vary slightly based on your W-4 elections and employer&apos;s payroll system.</li>
+          {stateConfig.hasIncomeTax && <li><strong>Does this include local or city taxes?</strong> No, only state-level tax is calculated — some cities and counties levy additional local income tax.</li>}
+        </ul>
+      </Box>
     </>
   );
 

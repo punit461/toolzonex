@@ -100,6 +100,11 @@ const LinePrefixSuffix = () => {
         Paste your list into the main text box. Then, specify the exact text you want added to the beginning (prefix) or the end (suffix) of every line. Click the button to apply it instantly to hundreds of lines.
       </Typography>
 
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Adding prefix <code>- </code> to three lines of items turns them into a Markdown bullet list instantly.
+      </Typography>
+
       <Typography variant="h2">Use Cases</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
@@ -108,6 +113,12 @@ const LinePrefixSuffix = () => {
           <li><strong>Data Entry:</strong> Append domain names or extensions to a list of usernames.</li>
         </ul>
       </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I add both a prefix and suffix at once?</Typography>
+      <Typography variant="body1">
+        Yes, set both fields and they&apos;ll be applied to every line simultaneously.
+      </Typography>
     </>
   );
 

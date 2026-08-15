@@ -100,6 +100,26 @@ const CoinFlip = () => {
       <Typography variant="body1">
         This tool uses a secure pseudorandom number generator in your browser (`Math.random()`) to determine the outcome. If the generated number is less than 0.5, it lands on Heads. If it's 0.5 or higher, it lands on Tails. The odds are exactly 50/50.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Click "Flip" and the coin animates before landing on either Heads or Tails with equal 50/50 odds.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Making a quick, unbiased decision between two options.</li>
+          <li>Settling a game or determining who goes first.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is it truly random?</Typography>
+      <Typography variant="body1">
+        It uses your browser&apos;s pseudorandom number generator, which is unpredictable enough for casual use
+        like games and quick decisions, with genuinely even 50/50 odds.
+      </Typography>
     </>
   );
 

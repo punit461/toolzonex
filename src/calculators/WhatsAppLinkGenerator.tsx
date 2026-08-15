@@ -183,6 +183,19 @@ const WhatsAppLinkGenerator = () => {
         • Support and helpline links
         • Marketing and outreach campaigns
       </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does the recipient need my number saved as a contact?</Typography>
+      <Typography variant="body1">
+        No — clicking a wa.me link opens a chat directly, without either party needing to save the other&apos;s
+        number first.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Entering a phone number and the message &quot;Hi, I&apos;m interested in your product&quot; generates a
+        link that opens WhatsApp with that message pre-filled.
+      </Typography>
     </>
   );
 

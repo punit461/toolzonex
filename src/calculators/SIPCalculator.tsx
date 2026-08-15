@@ -50,6 +50,27 @@ const SIPCalculator = () => {
       <Typography variant="body1">
         SIPs benefit from the power of compounding. The returns you earn on your investment generate further returns over time, accelerating the growth of your wealth.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Investing ₹10,000/month for 20 years at an assumed 12% annual return grows to roughly ₹99 lakh, of
+        which only ₹24 lakh is your own invested amount — the rest is compounded growth.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Planning how much to invest monthly to reach a specific financial goal.</li>
+          <li>Comparing the long-term impact of different SIP amounts or durations.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is the return rate guaranteed?</Typography>
+      <Typography variant="body1">
+        No — mutual fund SIP returns are market-linked and not guaranteed. The 10-12% figures used here are
+        illustrative long-term averages for equity funds, not a promised return.
+      </Typography>
     </>
   );
 

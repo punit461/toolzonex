@@ -112,6 +112,33 @@ const PasswordStrengthChecker = () => {
       <Typography variant="body1">
         Check how secure your password is instantly. This tool analyzes your password against common security rules including length, character variety, and complexity. Your password is analyzed securely right here in your browser and is never sent to any server.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Type your password into the input field and the strength meter and rule checklist update live as you
+        type.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A password like &quot;password123&quot; is flagged weak, while &quot;xK9$mP2!vL7&quot; scores strong
+        thanks to its length and mix of character types.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Testing a new password before setting it on an important account.</li>
+          <li>Understanding why a password was rejected as "too weak" by a signup form.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is my password sent anywhere when I type it?</Typography>
+      <Typography variant="body1">
+        No — the analysis runs entirely in your browser using JavaScript, and your password is never
+        transmitted or stored.
+      </Typography>
     </>
   );
 

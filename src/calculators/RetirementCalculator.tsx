@@ -113,6 +113,27 @@ const RetirementCalculator = () => {
         <strong>Pre-Retirement Returns:</strong> The growth rate of your investments while you are earning (e.g., Equity Mutual Funds typically target 10-12%).<br />
         <strong>Post-Retirement Returns:</strong> Once retired, you should shift to safer assets (Debt funds, FDs, SCSS) which typically yield 6-8%.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A 30-year-old planning to retire at 60, with current monthly expenses of ₹40,000 and 6% inflation,
+        would need a retirement corpus well over ₹3 crore to sustain a similar lifestyle for 25+ years post-retirement.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Estimating the retirement corpus you&apos;ll need based on your current expenses.</li>
+          <li>Figuring out how much to invest monthly to reach that corpus by your target retirement age.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Why does inflation matter so much for retirement planning?</Typography>
+      <Typography variant="body1">
+        Because your retirement corpus needs to last decades, even moderate inflation compounds significantly
+        — at 6% inflation, an expense that costs ₹40,000 today will cost roughly ₹80,000 in 12 years.
+      </Typography>
     </>
   );
 

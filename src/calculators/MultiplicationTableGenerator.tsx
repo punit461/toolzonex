@@ -99,6 +99,31 @@ const MultiplicationTableGenerator = () => {
       <Typography variant="body1">
         Whether you are a student memorizing times tables, a parent creating worksheets, or a teacher preparing classroom materials, this generator lets you instantly create and print customized multiplication tables up to 100x100.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Enter the number you want a times table for and the range to display, then generate a clean,
+        printable grid instantly.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Generating a table for 7 up to 12 shows 7×1=7 through 7×12=84 in a clean, printable grid.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Creating printable times-table worksheets for classroom practice.</li>
+          <li>Quick reference while helping a child with multiplication homework.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I print the table directly?</Typography>
+      <Typography variant="body1">
+        Yes — generate the table then use your browser&apos;s print function for a clean printable copy.
+      </Typography>
     </>
   );
 

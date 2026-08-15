@@ -105,6 +105,27 @@ const HashtagGenerator = () => {
       <Typography variant="body1">
         Paste your Instagram caption, tweet, or blog paragraph into the text box. The tool analyzes the text, removes common filler words, and extracts the most relevant keywords as ready-to-copy hashtags. Click a tag to copy it individually, or click "Copy All" to grab the entire list.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        &quot;Just finished a 10k morning run in the mountains&quot; might generate #morningrun #10k
+        #mountains #running.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Generating relevant hashtags for Instagram, TikTok, or Twitter/X posts.</li>
+          <li>Improving post discoverability without manually brainstorming tags.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How many hashtags should I use?</Typography>
+      <Typography variant="body1">
+        It varies by platform — Instagram tolerates many hashtags well, while X/Twitter posts typically read
+        better with just 1-3 relevant ones.
+      </Typography>
     </>
   );
 

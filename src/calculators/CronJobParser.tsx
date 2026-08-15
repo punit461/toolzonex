@@ -90,6 +90,33 @@ const CronJobParser = () => {
       <Typography variant="body1">
         Translate complex Cron expressions into plain English. Useful for verifying background jobs, scheduled tasks, and server maintenance scripts.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste a five-field cron expression into the input box and the tool instantly translates it into a
+        plain-English schedule description.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        The expression <code>0 0 * * 0</code> translates to &quot;At 00:00 on Sunday&quot; — a weekly job that
+        runs at midnight.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Verifying a cron schedule before deploying a scheduled job.</li>
+          <li>Understanding an unfamiliar cron expression found in someone else&apos;s code.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What do the five fields in a cron expression mean?</Typography>
+      <Typography variant="body1">
+        In order: minute, hour, day of month, month, and day of week — each can be a specific value, a range,
+        a list, or an asterisk (*) meaning &quot;every&quot;.
+      </Typography>
     </>
   );
 
