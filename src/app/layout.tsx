@@ -37,6 +37,14 @@ export const metadata: Metadata = {
   authors: [{ name: "ToolZoneX" }],
   creator: "ToolZoneX",
   publisher: "ToolZoneX",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.png',
+  },
   robots: {
     index: true,
     follow: true,

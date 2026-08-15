@@ -4,13 +4,13 @@ import About from "../../views/About";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "About ToolZoneX - Free Online Calculators for India",
-  description: "Learn about ToolZoneX — a free calculator site for finance, health, and utility tools, built for accuracy and ease of use.",
+  title: "About ToolZoneX - 200+ Free Online Calculators & Tools",
+  description: "Learn about ToolZoneX — a free platform of 200+ calculators and utilities for finance, health, and everyday decisions, built India-first and now serving a global audience.",
   keywords: ["about ToolZoneX", "calculator site India", "free online calculators", "our mission", "financial calculators", "health calculators"],
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About ToolZoneX - Free Online Calculators for India",
-    description: "Learn about ToolZoneX - India's free calculator site for finance, health, and utility tools.",
+    title: "About ToolZoneX - 200+ Free Online Calculators & Tools",
+    description: "Learn about ToolZoneX — a free platform of 200+ calculators and utilities for finance, health, and everyday decisions, built India-first and now serving a global audience.",
     url: `${SITE_URL}/about`,
     type: "website",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
