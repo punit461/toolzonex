@@ -26,6 +26,13 @@ async function generateSitemap() {
       if (stat.isDirectory()) {
         crawlDir(fullPath, `${basePath}/${file}`);
       } else if (file.endsWith('.html') && file !== '404.html') {
+        // Skip pages marked noindex (e.g. old-URL redirect stubs) -- a
+        // sitemap should only list canonical, indexable URLs.
+        const html = fs.readFileSync(fullPath, 'utf8');
+        if (/<meta[^>]+name="robots"[^>]+content="[^"]*noindex/i.test(html)) {
+          continue;
+        }
+
         let route = `${basePath}/${file.replace('.html', '')}`;
         // Clean up index routes
         if (route.endsWith('/index')) {

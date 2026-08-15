@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import CurrentTimeDisplay from "../../../calculators/CurrentTimeDisplay";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Current Time Display - World Clock & Local Time",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "View the exact current local time and track timezones across the world with our interactive world clock.",
     url: `${SITE_URL}/utilities/current-time-display`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

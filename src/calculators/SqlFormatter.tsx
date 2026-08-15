@@ -131,9 +131,9 @@ const SqlFormatter = () => {
     <CalculatorShell
       title="SQL Formatter - Beautify SQL Online"
       description="Format and beautify minified SQL queries online. Supports MySQL, PostgreSQL, SQL Server and SQLite."
-      url="/tools/sql-formatter"
+      url="/developer-tools/sql-formatter"
       content={content}
-      category="Tools"
+      category="Developer Tools"
     >
       <SqlFormatterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

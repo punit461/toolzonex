@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import HraExemption from "../../../views/blogs/HraExemption";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "HRA Exemption Calculation - Complete Guide to House Rent Allowance",
-  description: "Step-by-step guide to calculating House Rent Allowance (HRA) exemption under Section 10(13A). Learn how to claim maximum HRA tax benefit with our detailed guide.",
+  title: "HRA Exemption Calculation - Complete Guide",
+  description: "Step-by-step guide to calculating House Rent Allowance (HRA) exemption under Section 10(13A) and claiming the maximum tax benefit.",
   keywords: ["HRA exemption", "House Rent Allowance", "HRA calculation", "Section 10(13A)", "rent relief", "salary tax benefit", "HRA claim rules"],
   alternates: { canonical: "/blog/hra-exemption-calculation" },
   openGraph: {
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Step-by-step guide to calculating House Rent Allowance exemption.",
     url: `${SITE_URL}/blog/hra-exemption-calculation`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

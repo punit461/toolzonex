@@ -105,7 +105,7 @@ const SentenceCaseFixer = () => {
       </Typography>
 
       <Typography variant="h2">Available Case Modes</Typography>
-      <Typography variant="body1">
+      <Box sx={{ typography: 'body1' }}>
         <ul>
           <li><strong>Sentence case:</strong> Capitalizes only the first letter of each sentence.</li>
           <li><strong>lower case:</strong> Converts all letters to lowercase.</li>
@@ -113,7 +113,7 @@ const SentenceCaseFixer = () => {
           <li><strong>Title Case:</strong> Capitalizes the first letter of every single word.</li>
           <li><strong>Alternating Case:</strong> Randomly alternates between upper and lowercase for a mocking or meme effect.</li>
         </ul>
-      </Typography>
+      </Box>
     </>
   );
 
@@ -121,9 +121,9 @@ const SentenceCaseFixer = () => {
     <CalculatorShell
       title="Sentence Case Fixer & Text Case Converter"
       description="Convert text to UPPERCASE, lowercase, Title Case, or Sentence case instantly. Free online text formatting tool."
-      url="/tools/sentence-case-fixer"
+      url="/text-tools/sentence-case-fixer"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <SentenceCaseFixerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

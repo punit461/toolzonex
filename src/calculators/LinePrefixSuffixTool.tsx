@@ -101,13 +101,13 @@ const LinePrefixSuffix = () => {
       </Typography>
 
       <Typography variant="h2">Use Cases</Typography>
-      <Typography variant="body1">
+      <Box sx={{ typography: 'body1' }}>
         <ul>
           <li><strong>Programming:</strong> Wrap a list of words in quotes and commas (e.g., prefix: <code>"</code> and suffix: <code>",</code>) to create a JSON array or SQL list.</li>
           <li><strong>Formatting:</strong> Add bullet points (e.g., prefix: <code>- </code>) to a raw text list for markdown files.</li>
           <li><strong>Data Entry:</strong> Append domain names or extensions to a list of usernames.</li>
         </ul>
-      </Typography>
+      </Box>
     </>
   );
 
@@ -115,9 +115,9 @@ const LinePrefixSuffix = () => {
     <CalculatorShell
       title="Line Prefix & Suffix Tool"
       description="Add text to the beginning or end of every line instantly. Free online list formatting tool for developers."
-      url="/tools/line-prefix-suffix-tool"
+      url="/text-tools/line-prefix-suffix-tool"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <LinePrefixSuffixContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

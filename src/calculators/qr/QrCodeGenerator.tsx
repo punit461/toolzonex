@@ -373,7 +373,7 @@ const QrCodeGeneratorContent = () => {
   return (
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '1fr 380px' }, gap: 4 }}>
       {/* Left: Content & Style Controls */}
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, minWidth: 0 }}>
         
         {/* Content Type Selection */}
         <Paper sx={{ p: 3 }}>
@@ -559,9 +559,9 @@ const QrCodeGenerator = () => {
     <CalculatorShell
       title="QR Code Generator"
       description="Create custom QR codes for URLs, WiFi, vCard, UPI, WhatsApp, email and more. Custom dot styles, colors, logo upload. Free PNG/SVG/JPEG download."
-      url="/tools/qr-code-generator"
+      url="/developer-tools/qr-code-generator"
       content={content}
-      category="Tools"
+      category="Developer Tools"
     >
       <QrCodeGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

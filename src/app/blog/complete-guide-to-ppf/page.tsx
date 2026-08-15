@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PpfGuide from "../../../views/blogs/PpfGuide";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Complete Guide to PPF - Public Provident Fund Investment",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Everything you need to know about investing in the Public Provident Fund.",
     url: `${SITE_URL}/blog/complete-guide-to-ppf`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

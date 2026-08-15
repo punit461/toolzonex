@@ -129,9 +129,9 @@ const BinaryConverter = () => {
     <CalculatorShell
       title="Binary to Text Converter"
       description="Easily convert binary code to plain text or encode text into binary. Free online binary translation tool."
-      url="/tools/binary-to-text"
+      url="/converters/binary-to-text"
       content={content}
-      category="Tools"
+      category="Converters"
     >
       <BinaryConverterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

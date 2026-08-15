@@ -137,13 +137,13 @@ const StringEscaper = () => {
       </Typography>
 
       <Typography variant="h2">Supported Formats</Typography>
-      <Typography variant="body1">
+      <Box sx={{ typography: 'body1' }}>
         <ul>
           <li><strong>JSON Escape/Unescape:</strong> Safely adds or removes backslashes for newlines, quotes, and control characters so strings can be used inside JSON payloads.</li>
           <li><strong>HTML Entities:</strong> Converts special characters like <code>&lt;</code> and <code>&gt;</code> into safe HTML entities like <code>&amp;lt;</code> to prevent cross-site scripting (XSS) rendering issues.</li>
           <li><strong>URL Encode/Decode:</strong> Safely encodes strings to be passed as query parameters in URLs (converting spaces to %20, etc).</li>
         </ul>
-      </Typography>
+      </Box>
     </>
   );
 
@@ -151,9 +151,9 @@ const StringEscaper = () => {
     <CalculatorShell
       title="String Escaper & Encoder"
       description="Escape or unescape strings for JSON, HTML entities, or URL encoding. Free online developer utility."
-      url="/tools/string-escaper"
+      url="/text-tools/string-escaper"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <StringEscaperContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

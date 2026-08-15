@@ -177,9 +177,9 @@ const XmlToJsonConverter = () => {
     <CalculatorShell
       title="XML to JSON Converter"
       description="Convert XML strings and files into formatted JSON instantly. Free online data converter."
-      url="/tools/xml-to-json"
+      url="/converters/xml-to-json"
       content={content}
-      category="Tools"
+      category="Converters"
     >
       <XmlToJsonContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -135,9 +135,9 @@ const KeywordDensityAnalyzer = () => {
     <CalculatorShell
       title="Keyword Density Analyzer"
       description="Check the keyword density of your text for SEO optimization. Free online tool to avoid keyword stuffing."
-      url="/tools/keyword-density-analyzer"
+      url="/text-tools/keyword-density-analyzer"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <KeywordDensityAnalyzerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

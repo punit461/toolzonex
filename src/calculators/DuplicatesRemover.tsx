@@ -103,9 +103,9 @@ const DuplicatesRemover = () => {
     <CalculatorShell
       title="Duplicates Remover"
       description="Remove duplicate lines from text lists instantly. Clean up email lists, keywords, and data entries online for free."
-      url="/tools/duplicates-remover"
+      url="/text-tools/duplicates-remover"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <DuplicatesRemoverContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

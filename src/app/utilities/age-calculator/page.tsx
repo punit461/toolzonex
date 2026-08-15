@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import AgeCalculator from "../../../calculators/AgeCalculator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Age Calculator - Calculate Exact Age in Years, Months, Days",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Calculate exact age in years, months, and days.",
     url: `${SITE_URL}/utilities/age-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

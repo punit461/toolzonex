@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import TextDiffTool from "../../../calculators/TextDiffTool";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Text Diff Tool - Compare Text Online",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Compare two text documents online to see exact differences. Highlights added and removed words instantly.",
     url: `${SITE_URL}/tools/text-diff-tool`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ContrastChecker from "../../../calculators/ContrastChecker";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Contrast Checker - WCAG Color Accessibility",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Check color contrast ratios for WCAG accessibility compliance instantly. Free online contrast checker.",
     url: `${SITE_URL}/tools/contrast-checker`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

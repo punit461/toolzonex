@@ -121,9 +121,9 @@ const PasswordGenerator = () => {
     <CalculatorShell
       title="Secure Password Generator"
       description="Generate strong, secure, and random passwords instantly. Client-side tool that never sends your data to any server."
-      url="/tools/password-generator"
+      url="/generators/password-generator"
       content={content}
-      category="Tools"
+      category="Generators"
     >
       <PasswordGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

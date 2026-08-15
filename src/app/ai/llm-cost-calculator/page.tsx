@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Estimate GPT-4o, Claude, and Gemini API costs from token counts. Compare pricing across models and project monthly spend.",
     url: `${SITE_URL}/ai/llm-cost-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

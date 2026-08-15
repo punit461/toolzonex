@@ -149,7 +149,7 @@ const LLMCostCalculator = () => {
       category="AI"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
-        <Box>
+        <Box sx={{ minWidth: 0 }}>
           <Box sx={{ mb: 3 }}>
             <Typography gutterBottom>Model</Typography>
             <Select
@@ -165,7 +165,7 @@ const LLMCostCalculator = () => {
             </Select>
           </Box>
 
-          <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 3 }}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mb: 3 }}>
             <Box>
               <Typography gutterBottom>Input tokens</Typography>
               <TextField
@@ -252,7 +252,7 @@ const LLMCostCalculator = () => {
               {formatUSD(costPerRequest)}
             </Typography>
 
-            <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 3 }}>
+            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mb: 3 }}>
               <Box>
                 <Typography variant="body2" color="text.secondary">Input Cost</Typography>
                 <Typography variant="h6">{formatUSD(inputCost)}</Typography>

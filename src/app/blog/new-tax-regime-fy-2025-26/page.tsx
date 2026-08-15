@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import NewRegime2025 from "../../../views/blogs/NewRegime2025";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "New Tax Regime FY 2025-26 - Latest Changes and Tax Slabs",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Latest changes and slabs in the new tax regime for FY 2025-26.",
     url: `${SITE_URL}/blog/new-tax-regime-fy-2025-26`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

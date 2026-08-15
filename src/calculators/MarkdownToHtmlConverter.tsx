@@ -133,9 +133,9 @@ const MarkdownToHtmlConverter = () => {
     <CalculatorShell
       title="Markdown to HTML Converter"
       description="Convert Markdown to raw HTML instantly. Free online parser with live web preview."
-      url="/tools/markdown-to-html"
+      url="/converters/markdown-to-html"
       content={content}
-      category="Tools"
+      category="Converters"
     >
       <MarkdownToHtmlContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -1,40 +1,20 @@
 import type { Metadata } from "next";
-import AcronymGenerator from "../../../calculators/AcronymGenerator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const NEW_PATH = "/generators/acronym-generator";
 
 export const metadata: Metadata = {
-  title: "Acronym Generator - Convert Phrases to Abbreviations Online",
-  description: "Instantly convert long phrases or titles into short acronyms. Free online abbreviation maker that ignores stop words.",
-  keywords: ["acronym generator", "abbreviation maker", "phrase to acronym", "create acronym online", "abbreviation generator"],
-  alternates: { canonical: "/tools/acronym-generator" },
-  openGraph: {
-    title: "Acronym Generator - Convert Phrases to Abbreviations Online | ToolZoneX",
-    description: "Instantly convert long phrases or titles into short acronyms. Free online abbreviation maker.",
-    url: `${SITE_URL}/tools/acronym-generator`,
-    type: "article",
-  },
+  title: "Redirecting... - ToolZoneX",
+  robots: { index: false, follow: true },
+  alternates: { canonical: NEW_PATH },
 };
 
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Acronym Generator",
-  "description": "Instantly convert long phrases or titles into short acronyms.",
-  "url": `${SITE_URL}/tools/acronym-generator`,
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
-
-export default function Page() {
+export default function RedirectPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
-      />
-      <AcronymGenerator />
+      <meta httpEquiv="refresh" content={`0; url=${NEW_PATH}`} />
+      <p>
+        This page has moved to <a href={NEW_PATH}>{NEW_PATH}</a>.
+      </p>
     </>
   );
 }

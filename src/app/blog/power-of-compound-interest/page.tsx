@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import CompoundInterest from "../../../views/blogs/CompoundInterest";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "The Power of Compound Interest - How Compounding Creates Wealth",
+  title: "The Power of Compound Interest Explained",
   description: "Learn how compounding works and why starting early is the key to wealth generation. Discover the magic of compound interest for your investments.",
   keywords: ["compound interest", "power of compounding", "wealth creation", "investment returns", "compound growth", "SIP returns", "long term investing"],
   alternates: { canonical: "/blog/power-of-compound-interest" },
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "How compounding works and why starting early is the key to wealth generation.",
     url: `${SITE_URL}/blog/power-of-compound-interest`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

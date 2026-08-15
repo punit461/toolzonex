@@ -1,40 +1,20 @@
 import type { Metadata } from "next";
-import CrosswordPuzzleGenerator from "../../../calculators/CrosswordPuzzleGenerator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const NEW_PATH = "/generators/crossword-puzzle-generator";
 
 export const metadata: Metadata = {
-  title: "Crossword Puzzle Generator - Create Custom Puzzles Online",
-  description: "Create custom printable crossword puzzles online for free. Enter words and clues to generate your own crosswords for school or fun.",
-  keywords: ["crossword puzzle generator", "make a crossword", "custom crossword maker", "printable crosswords", "free crossword generator"],
-  alternates: { canonical: "/tools/crossword-puzzle-generator" },
-  openGraph: {
-    title: "Crossword Puzzle Generator - Create Custom Puzzles Online | ToolZoneX",
-    description: "Create custom printable crossword puzzles online for free.",
-    url: `${SITE_URL}/tools/crossword-puzzle-generator`,
-    type: "article",
-  },
+  title: "Redirecting... - ToolZoneX",
+  robots: { index: false, follow: true },
+  alternates: { canonical: NEW_PATH },
 };
 
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Crossword Puzzle Generator",
-  "description": "Create custom printable crossword puzzles online for free.",
-  "url": `${SITE_URL}/tools/crossword-puzzle-generator`,
-  "applicationCategory": "EducationalApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
-
-export default function Page() {
+export default function RedirectPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
-      />
-      <CrosswordPuzzleGenerator />
+      <meta httpEquiv="refresh" content={`0; url=${NEW_PATH}`} />
+      <p>
+        This page has moved to <a href={NEW_PATH}>{NEW_PATH}</a>.
+      </p>
     </>
   );
 }

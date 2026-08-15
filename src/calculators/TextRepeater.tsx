@@ -107,13 +107,13 @@ const TextRepeater = () => {
       </Typography>
 
       <Typography variant="h2">Uses for a Text Repeater</Typography>
-      <Typography variant="body1">
+      <Box sx={{ typography: 'body1' }}>
         <ul>
           <li><strong>Testing:</strong> Generate dummy text blocks for UI or database testing.</li>
           <li><strong>Formatting:</strong> Create decorative dividers by repeating characters like <code>-</code> or <code>*</code>.</li>
           <li><strong>Messaging:</strong> Spam a phrase or create meme text quickly.</li>
         </ul>
-      </Typography>
+      </Box>
     </>
   );
 
@@ -121,9 +121,9 @@ const TextRepeater = () => {
     <CalculatorShell
       title="Text Repeater"
       description="Repeat a word or phrase up to 100,000 times instantly. Free online text multiplier tool."
-      url="/tools/text-repeater"
+      url="/text-tools/text-repeater"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <TextRepeaterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

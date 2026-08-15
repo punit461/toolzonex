@@ -108,7 +108,7 @@ const GPUCostCalculator = () => {
       category="AI"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
-        <Box>
+        <Box sx={{ minWidth: 0 }}>
           <Box sx={{ mb: 3 }}>
             <Typography gutterBottom>GPU Type</Typography>
             <Select
@@ -167,7 +167,7 @@ const GPUCostCalculator = () => {
               {formatUSD(costPerMonth)}
             </Typography>
 
-            <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2 }}>
               <Box>
                 <Typography variant="body2" color="text.secondary">Cost per Hour</Typography>
                 <Typography variant="h6">{formatUSD(costPerHour)}</Typography>

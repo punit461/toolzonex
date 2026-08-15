@@ -1,40 +1,20 @@
 import type { Metadata } from "next";
-import TypingSpeedTest from "../../../calculators/TypingSpeedTest";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const NEW_PATH = "/generators/typing-speed-test";
 
 export const metadata: Metadata = {
-  title: "Typing Speed Test (WPM) - Check Your Words Per Minute Online",
-  description: "Check your typing speed and accuracy in Words Per Minute (WPM). Free online 60-second typing test to improve keyboard speed.",
-  keywords: ["typing speed test", "wpm test", "words per minute", "keyboard test", "type fast online", "typing accuracy"],
-  alternates: { canonical: "/tools/typing-speed-test" },
-  openGraph: {
-    title: "Typing Speed Test (WPM) - Check Your Words Per Minute Online | ToolZoneX",
-    description: "Check your typing speed and accuracy in Words Per Minute (WPM).",
-    url: `${SITE_URL}/tools/typing-speed-test`,
-    type: "article",
-  },
+  title: "Redirecting... - ToolZoneX",
+  robots: { index: false, follow: true },
+  alternates: { canonical: NEW_PATH },
 };
 
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Typing Speed Test",
-  "description": "Check your typing speed and accuracy in Words Per Minute (WPM).",
-  "url": `${SITE_URL}/tools/typing-speed-test`,
-  "applicationCategory": "EducationalApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
-
-export default function Page() {
+export default function RedirectPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
-      />
-      <TypingSpeedTest />
+      <meta httpEquiv="refresh" content={`0; url=${NEW_PATH}`} />
+      <p>
+        This page has moved to <a href={NEW_PATH}>{NEW_PATH}</a>.
+      </p>
     </>
   );
 }

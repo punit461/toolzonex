@@ -76,7 +76,7 @@ const ScientificCalculatorContent = () => {
         </Box>
 
         {/* Buttons */}
-        <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 1 }}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: { xs: 0.5, sm: 1 }, '& .MuiButton-root': { minWidth: 0, px: { xs: 0.5, sm: 2 } } }}>
           <Button variant="contained" sx={{ bgcolor: '#475569' }} onClick={() => handleMath('sin')}>sin</Button>
           <Button variant="contained" sx={{ bgcolor: '#475569' }} onClick={() => handleMath('cos')}>cos</Button>
           <Button variant="contained" sx={{ bgcolor: '#475569' }} onClick={() => handleMath('tan')}>tan</Button>

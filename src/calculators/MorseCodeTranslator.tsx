@@ -131,9 +131,9 @@ const MorseCodeTranslator = () => {
     <CalculatorShell
       title="Morse Code Translator"
       description="Translate plain text to Morse code or decode Morse code back to text instantly. Free online translator."
-      url="/tools/morse-code-translator"
+      url="/converters/morse-code-translator"
       content={content}
-      category="Tools"
+      category="Converters"
     >
       <MorseCodeContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -105,14 +105,14 @@ const TextReverser = () => {
       </Typography>
 
       <Typography variant="h2">Reversal Modes Explained</Typography>
-      <Typography variant="body1">
+      <Box sx={{ typography: 'body1' }}>
         <ul>
           <li><strong>Reverse Entire Text:</strong> Flips the entire string backwards. The last character becomes the first character.</li>
           <li><strong>Reverse Word Order:</strong> Keeps words intact but reverses their sequence. Great for rearranging lists.</li>
           <li><strong>Reverse Letters in Words:</strong> Reverses the letters inside each word, but keeps the words in their original order.</li>
           <li><strong>Reverse Line Order:</strong> Flips paragraphs or lists upside down. The last line becomes the first line.</li>
         </ul>
-      </Typography>
+      </Box>
     </>
   );
 
@@ -120,9 +120,9 @@ const TextReverser = () => {
     <CalculatorShell
       title="Text Reverser"
       description="Reverse text backwards, reverse words, or flip lines upside down. Free online text reversal tool."
-      url="/tools/text-reverser"
+      url="/text-tools/text-reverser"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <TextReverserContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

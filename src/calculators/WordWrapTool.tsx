@@ -142,9 +142,9 @@ const WordWrapTool = () => {
     <CalculatorShell
       title="Word Wrap Tool"
       description="Automatically wrap text to a specific character limit or column width. Free online text formatter."
-      url="/tools/word-wrap-tool"
+      url="/text-tools/word-wrap-tool"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <WordWrapToolContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

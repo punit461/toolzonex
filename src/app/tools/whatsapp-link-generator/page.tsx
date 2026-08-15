@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import WhatsAppLinkGenerator from "../../../calculators/WhatsAppLinkGenerator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "WhatsApp Link Generator - Create Click-to-Chat Links",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Generate WhatsApp click-to-chat links with pre-filled messages. Free online WhatsApp link generator tool.",
     url: `${SITE_URL}/tools/whatsapp-link-generator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

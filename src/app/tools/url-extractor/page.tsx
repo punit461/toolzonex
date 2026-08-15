@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import URLExtractor from "../../../calculators/URLExtractor";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "URL Extractor - Extract Links from Text",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Extract all URLs from any text. Free online URL extractor tool to find, copy, and open links quickly.",
     url: `${SITE_URL}/tools/url-extractor`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

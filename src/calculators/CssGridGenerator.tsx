@@ -139,9 +139,9 @@ const CssGridGenerator = () => {
     <CalculatorShell
       title="CSS Grid Generator"
       description="Visually generate CSS Grid layouts. Define columns, rows, and gaps, and copy the CSS code instantly."
-      url="/tools/css-grid-generator"
+      url="/developer-tools/css-grid-generator"
       content={content}
-      category="Tools"
+      category="Developer Tools"
     >
       <CssGridGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

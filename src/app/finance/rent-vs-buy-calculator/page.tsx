@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import RentVsBuyCalculator from "../../../calculators/RentVsBuyCalculator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Rent vs Buy Calculator - Make Smart Property Decisions",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Compare renting vs buying a home with this comprehensive calculator.",
     url: `${SITE_URL}/finance/rent-vs-buy-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

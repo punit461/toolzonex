@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import CFTCalculator from "../../../calculators/CFTCalculator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "CFT Calculator - Combat Fitness Test Standards",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Calculate combat fitness test standards.",
     url: `${SITE_URL}/health/cft-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

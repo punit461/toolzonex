@@ -109,9 +109,9 @@ const GradientGenerator = () => {
     <CalculatorShell
       title="Gradient Generator"
       description="Create beautiful CSS linear gradients visually. Pick colors, adjust angles, and copy the CSS background code instantly."
-      url="/tools/gradient-generator"
+      url="/developer-tools/gradient-generator"
       content={content}
-      category="Tools"
+      category="Developer Tools"
     >
       <GradientGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

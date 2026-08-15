@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import TipCalculator from "../../../calculators/TipCalculator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Tip Calculator - Split the Bill & Calculate Gratuity Online",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Quickly calculate restaurant tips and split the bill among friends.",
     url: `${SITE_URL}/utilities/tip-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

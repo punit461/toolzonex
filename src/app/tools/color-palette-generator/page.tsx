@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ColorPaletteGenerator from "../../../calculators/ColorPaletteGenerator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Color Palette Generator - Random Hex Colors",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Generate beautiful random color palettes for web design and art. One click to copy hex codes.",
     url: `${SITE_URL}/tools/color-palette-generator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

@@ -127,9 +127,9 @@ const JsMinifier = () => {
     <CalculatorShell
       title="JavaScript Minifier"
       description="Compress and minify JavaScript code online instantly. Free tool to reduce JS file size and improve website performance."
-      url="/tools/js-minifier"
+      url="/developer-tools/js-minifier"
       content={content}
-      category="Tools"
+      category="Developer Tools"
     >
       <JsMinifierContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

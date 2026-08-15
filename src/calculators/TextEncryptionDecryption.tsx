@@ -120,13 +120,13 @@ const TextEncryptionDecryption = () => {
       </Typography>
 
       <Typography variant="h2">Supported Algorithms</Typography>
-      <Typography variant="body1">
+      <Box sx={{ typography: 'body1' }}>
         <ul>
           <li><strong>Base64:</strong> A standard encoding scheme used to securely transmit data across protocols like email or web forms.</li>
           <li><strong>ROT13:</strong> A simple substitution cipher that replaces a letter with the 13th letter after it. Applying it twice yields the original text.</li>
           <li><strong>Hexadecimal:</strong> Converts text into its numerical Hex representations.</li>
         </ul>
-      </Typography>
+      </Box>
     </>
   );
 
@@ -134,9 +134,9 @@ const TextEncryptionDecryption = () => {
     <CalculatorShell
       title="Text Encryption & Decryption"
       description="Encrypt or decrypt text using Base64, ROT13, and Hexadecimal. Free secure online string cipher tool."
-      url="/tools/text-encryption-decryption"
+      url="/text-tools/text-encryption-decryption"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <TextEncryptionDecryptionContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

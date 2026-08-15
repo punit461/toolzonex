@@ -110,9 +110,9 @@ const UrlEncoder = () => {
     <CalculatorShell
       title="URL Encode and Decode"
       description="Easily URL encode plain text or decode URL encoded strings back to plain text. Free online developer tool."
-      url="/tools/url-encode-decode"
+      url="/converters/url-encode-decode"
       content={content}
-      category="Tools"
+      category="Converters"
     >
       <UrlEncoderContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

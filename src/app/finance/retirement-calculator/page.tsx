@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import RetirementCalculator from "../../../calculators/RetirementCalculator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Retirement Calculator - Plan Your Retirement Corpus",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Calculate retirement corpus and required SIP for secure retirement.",
     url: `${SITE_URL}/finance/retirement-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

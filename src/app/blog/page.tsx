@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import BlogList from "../../views/BlogList";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Personal Finance & Health Blog - Expert Guides & Tips",
-  description: "Expert guides and tips on taxation, saving, investments, PPF, SIP, income tax, budgeting, and health. Stay informed with our comprehensive financial and wellness articles.",
+  description: "Expert guides and tips on taxation, saving, investments, PPF, SIP, income tax, budgeting, and health.",
   keywords: ["personal finance blog", "investment tips", "tax guide", "PPF guide", "SIP guide", "budgeting tips", "health tips", "India finance blog"],
   alternates: { canonical: "/blog" },
   openGraph: {
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Expert guides and tips on taxation, saving, investments, and health.",
     url: `${SITE_URL}/blog`,
     type: "website",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

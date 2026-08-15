@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Section80CGuide from "../../../views/blogs/Section80CGuide";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Section 80C Investment Guide - Best Tax Saving Options",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Best investment options to save tax under Section 80C.",
     url: `${SITE_URL}/blog/section-80c-investment-guide`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

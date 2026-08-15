@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Free VAT calculator to add or remove VAT for the UK, Germany, France, Ireland, and 15+ other countries.",
     url: `${SITE_URL}/finance/vat-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

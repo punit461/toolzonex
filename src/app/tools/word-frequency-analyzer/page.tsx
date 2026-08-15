@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import WordFrequencyAnalyzer from "../../../calculators/WordFrequencyAnalyzer";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Word Frequency Analyzer - Keyword Density Checker",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Find the most frequently used words in a text. Calculate keyword density and word counts instantly online.",
     url: `${SITE_URL}/tools/word-frequency-analyzer`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

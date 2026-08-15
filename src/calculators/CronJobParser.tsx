@@ -41,7 +41,7 @@ const CronJobParserContent = () => {
             placeholder="* * * * *"
             inputProps={{ style: { fontSize: '1.5rem', fontFamily: 'monospace', textAlign: 'center', letterSpacing: '4px' } }}
           />
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 1, px: 2, color: 'text.secondary', typography: 'caption', fontFamily: 'monospace' }}>
+          <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 0.5, mt: 1, px: 2, color: 'text.secondary', typography: 'caption', fontFamily: 'monospace' }}>
             <Typography>Minute</Typography>
             <Typography>Hour</Typography>
             <Typography>Day(Month)</Typography>
@@ -56,7 +56,7 @@ const CronJobParserContent = () => {
           </Typography>
         </Box>
 
-        <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mt: 2 }}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mt: 2 }}>
           <Box>
             <Typography variant="subtitle2" fontWeight="bold">Common Examples:</Typography>
             <ul style={{ paddingLeft: 20, margin: '8px 0', fontSize: '0.9rem' }}>
@@ -97,9 +97,9 @@ const CronJobParser = () => {
     <CalculatorShell
       title="Cron Job Parser - Cron to English Online"
       description="Translate Cron expressions into human-readable plain English instantly. Free online cron parser."
-      url="/tools/cron-job-parser"
+      url="/developer-tools/cron-job-parser"
       content={content}
-      category="Tools"
+      category="Developer Tools"
     >
       <CronJobParserContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import ImproveCibilScore from "../../../views/blogs/ImproveCibilScore";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "How to Improve Your CIBIL Score - Practical Tips for Better Credit",
+  title: "How to Improve Your CIBIL Score - Practical Tips",
   description: "Practical steps to boost your CIBIL score fast. Learn what affects your credit score and proven strategies to improve it for better loan approvals.",
   keywords: ["CIBIL score", "improve CIBIL", "credit score", "CIBIL improvement tips", "credit score boost", "loan approval", "credit report"],
   alternates: { canonical: "/blog/improve-cibil-score" },
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Practical steps to boost your credit score fast.",
     url: `${SITE_URL}/blog/improve-cibil-score`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

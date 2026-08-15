@@ -158,9 +158,9 @@ const SudokuGenerator = () => {
     <CalculatorShell
       title="Sudoku Puzzle Generator"
       description="Generate unlimited, unique, and printable Sudoku puzzles from Easy to Expert difficulties online for free."
-      url="/tools/sudoku-generator"
+      url="/generators/sudoku-generator"
       content={content}
-      category="Tools"
+      category="Generators"
     >
       <SudokuGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

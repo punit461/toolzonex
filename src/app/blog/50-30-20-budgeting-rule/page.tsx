@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import BudgetingRule from "../../../views/blogs/BudgetingRule";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "The 50/30/20 Budgeting Rule - Complete Guide for Financial Success",
-  description: "Learn how to manage your money effectively using the 50/30/20 budgeting rule. A simple yet powerful framework for budgeting, saving, and achieving financial goals.",
+  title: "The 50/30/20 Budgeting Rule Explained",
+  description: "Learn how to manage your money using the 50/30/20 budgeting rule — a simple framework for budgeting, saving, and reaching financial goals.",
   keywords: ["50/30/20 rule", "budgeting rule", "budgeting tips", "personal finance", "savings rule", "budget allocation", "financial planning"],
   alternates: { canonical: "/blog/50-30-20-budgeting-rule" },
   openGraph: {
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Learn how to manage your money effectively using the 50/30/20 budgeting rule.",
     url: `${SITE_URL}/blog/50-30-20-budgeting-rule`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

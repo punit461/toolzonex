@@ -112,9 +112,9 @@ const HashtagGenerator = () => {
     <CalculatorShell
       title="Hashtag Generator"
       description="Extract keywords from text to generate SEO and social media hashtags instantly."
-      url="/tools/hashtag-generator"
+      url="/generators/hashtag-generator"
       content={content}
-      category="Tools"
+      category="Generators"
     >
       <HashtagGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

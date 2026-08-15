@@ -107,9 +107,9 @@ const TextStatsAnalyzer = () => {
     <CalculatorShell
       title="Text Stats Analyzer"
       description="Advanced text analysis tool. Calculate readability, syllables, vowels, consonants, and word length instantly."
-      url="/tools/text-stats-analyzer"
+      url="/text-tools/text-stats-analyzer"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <TextStatsAnalyzerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

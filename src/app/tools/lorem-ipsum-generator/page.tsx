@@ -1,40 +1,20 @@
 import type { Metadata } from "next";
-import LoremIpsumGenerator from "../../../calculators/LoremIpsumGenerator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const NEW_PATH = "/generators/lorem-ipsum-generator";
 
 export const metadata: Metadata = {
-  title: "Lorem Ipsum Generator - Dummy Text Placeholder Online",
-  description: "Generate standard dummy text for UI testing, mockups, and wireframes. Free online Lorem Ipsum placeholder text generator.",
-  keywords: ["lorem ipsum", "dummy text generator", "placeholder text", "generate lorem ipsum", "mockup text"],
-  alternates: { canonical: "/tools/lorem-ipsum-generator" },
-  openGraph: {
-    title: "Lorem Ipsum Generator - Dummy Text Placeholder Online | ToolZoneX",
-    description: "Generate standard dummy text for UI testing, mockups, and wireframes. Free online Lorem Ipsum placeholder text generator.",
-    url: `${SITE_URL}/tools/lorem-ipsum-generator`,
-    type: "article",
-  },
+  title: "Redirecting... - ToolZoneX",
+  robots: { index: false, follow: true },
+  alternates: { canonical: NEW_PATH },
 };
 
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Lorem Ipsum Generator",
-  "description": "Generate standard dummy text for UI testing, mockups, and wireframes.",
-  "url": `${SITE_URL}/tools/lorem-ipsum-generator`,
-  "applicationCategory": "DeveloperApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
-
-export default function Page() {
+export default function RedirectPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
-      />
-      <LoremIpsumGenerator />
+      <meta httpEquiv="refresh" content={`0; url=${NEW_PATH}`} />
+      <p>
+        This page has moved to <a href={NEW_PATH}>{NEW_PATH}</a>.
+      </p>
     </>
   );
 }

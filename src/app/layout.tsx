@@ -13,7 +13,7 @@ const inter = localFont({
   variable: '--font-inter',
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const viewport: Viewport = {
   themeColor: '#1a56db',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     description: "Free online calculators for Finance, Health, and Utilities. EMI, SIP, Income Tax, BMI, Gold Rate, PPF, GST and more.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "ToolZoneX - Free Online Calculators for India",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ToolZoneX — Smart Tools for Every Decision",
     description: "Free online calculators for Finance, Health, and Utilities.",
-    images: ["/og-image.png"],
+    images: ["/og-image.jpg"],
     creator: "@toolzonex",
   },
   appleWebApp: {

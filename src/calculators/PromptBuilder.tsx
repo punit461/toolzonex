@@ -121,9 +121,9 @@ const PromptBuilder = () => {
     <CalculatorShell
       title="AI Prompt Builder"
       description="Create optimized and structured prompts for ChatGPT, Claude, and Gemini to get better AI responses."
-      url="/tools/prompt-builder"
+      url="/generators/prompt-builder"
       content={content}
-      category="Tools"
+      category="Generators"
     >
       <PromptBuilderContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

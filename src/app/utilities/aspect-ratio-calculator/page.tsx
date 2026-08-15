@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import AspectRatioCalculator from "../../../calculators/AspectRatioCalculator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Aspect Ratio Calculator - Find Proportional Dimensions Online",
+  title: "Aspect Ratio Calculator - Proportional Dimensions",
   description: "Calculate proportional dimensions and aspect ratios for images and videos instantly. Free online aspect ratio tool for designers.",
   keywords: ["aspect ratio calculator", "image resize calculator", "proportional dimensions", "16:9 ratio calculator"],
   alternates: { canonical: "/utilities/aspect-ratio-calculator" },
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Calculate proportional dimensions and aspect ratios for images and videos instantly.",
     url: `${SITE_URL}/utilities/aspect-ratio-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

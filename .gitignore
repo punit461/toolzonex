@@ -13,6 +13,7 @@ out
 dist
 dist-ssr
 *.local
+audit-out*/
 
 # Editor directories and files
 .vscode/*

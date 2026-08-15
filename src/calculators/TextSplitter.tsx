@@ -123,13 +123,13 @@ const TextSplitter = () => {
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
-      <Typography variant="body1">
+      <Box sx={{ typography: 'body1' }}>
         <ul>
           <li><strong>Social Media:</strong> Split long paragraphs into 280-character chunks for Twitter/X threads.</li>
           <li><strong>Data Processing:</strong> Split comma-separated values (CSV) into separate items.</li>
           <li><strong>Messaging Limits:</strong> Break huge text files into smaller chunks to bypass character limits in SMS or WhatsApp.</li>
         </ul>
-      </Typography>
+      </Box>
     </>
   );
 
@@ -137,9 +137,9 @@ const TextSplitter = () => {
     <CalculatorShell
       title="Text Splitter"
       description="Split text by characters, lines, or delimiters. Break large texts into smaller chunks online for free."
-      url="/tools/text-splitter"
+      url="/text-tools/text-splitter"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <TextSplitterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import TextSizeCalculator from "../../../calculators/TextSizeCalculator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Text Size Calculator - Analyze Text Statistics",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Analyze text with character count, word count, reading time, and more. Free online text size calculator for content analysis.",
     url: `${SITE_URL}/tools/text-size-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

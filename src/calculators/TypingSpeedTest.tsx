@@ -177,9 +177,9 @@ const TypingSpeedTest = () => {
     <CalculatorShell
       title="Typing Speed Test (WPM)"
       description="Check your typing speed and accuracy in Words Per Minute (WPM). Free online 60-second typing test."
-      url="/tools/typing-speed-test"
+      url="/generators/typing-speed-test"
       content={content}
-      category="Tools"
+      category="Generators"
     >
       <TypingSpeedTestContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
