@@ -134,9 +134,9 @@ const WhitespaceCleaner = () => {
     <CalculatorShell
       title="Whitespace Cleaner"
       description="Remove extra spaces, tabs, and empty lines from text automatically. Free online text formatting tool."
-      url="/tools/whitespace-cleaner"
+      url="/text-tools/whitespace-cleaner"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <WhitespaceCleanerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -107,9 +107,9 @@ const BusinessNameGenerator = () => {
     <CalculatorShell
       title="Business Name Generator"
       description="Generate catchy and brandable business names, app names, and startup ideas instantly."
-      url="/tools/business-name-generator"
+      url="/generators/business-name-generator"
       content={content}
-      category="Tools"
+      category="Generators"
     >
       <BusinessNameGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

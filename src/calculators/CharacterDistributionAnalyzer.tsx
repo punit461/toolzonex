@@ -120,9 +120,9 @@ const CharacterDistributionAnalyzer = () => {
     <CalculatorShell
       title="Character Distribution Analyzer"
       description="Analyze the exact frequency and distribution of every character in your text. Free online character counting tool."
-      url="/tools/character-distribution-analyzer"
+      url="/text-tools/character-distribution-analyzer"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <CharacterDistributionAnalyzerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

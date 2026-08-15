@@ -1,40 +1,20 @@
 import type { Metadata } from "next";
-import TextReverser from "../../../calculators/TextReverser";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const NEW_PATH = "/text-tools/text-reverser";
 
 export const metadata: Metadata = {
-  title: "Text Reverser - Reverse Text, Words, and Lines Online",
-  description: "Reverse text backwards, reverse words, or flip lines upside down. Free online text reversal tool to mirror your text instantly.",
-  keywords: ["text reverser", "reverse text", "flip text", "mirror text", "reverse words", "backwards text generator"],
-  alternates: { canonical: "/tools/text-reverser" },
-  openGraph: {
-    title: "Text Reverser - Reverse Text, Words, and Lines Online | ToolZoneX",
-    description: "Reverse text backwards, reverse words, or flip lines upside down. Free online text reversal tool.",
-    url: `${SITE_URL}/tools/text-reverser`,
-    type: "article",
-  },
+  title: "Redirecting... - ToolZoneX",
+  robots: { index: false, follow: true },
+  alternates: { canonical: NEW_PATH },
 };
 
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Text Reverser",
-  "description": "Reverse text backwards, reverse words, or flip lines upside down. Free online text reversal tool.",
-  "url": `${SITE_URL}/tools/text-reverser`,
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
-
-export default function Page() {
+export default function RedirectPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
-      />
-      <TextReverser />
+      <meta httpEquiv="refresh" content={`0; url=${NEW_PATH}`} />
+      <p>
+        This page has moved to <a href={NEW_PATH}>{NEW_PATH}</a>.
+      </p>
     </>
   );
 }

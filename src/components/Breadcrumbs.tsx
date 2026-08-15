@@ -14,7 +14,7 @@ interface BreadcrumbsProps {
   items: BreadcrumbItem[];
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
   const structuredData = {

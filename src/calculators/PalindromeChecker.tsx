@@ -72,14 +72,14 @@ const PalindromeChecker = () => {
       </Typography>
 
       <Typography variant="h2">Famous Examples</Typography>
-      <Typography variant="body1">
+      <Box sx={{ typography: 'body1' }}>
         <ul>
           <li>"Racecar"</li>
           <li>"A man, a plan, a canal: Panama"</li>
           <li>"Was it a car or a cat I saw?"</li>
           <li>"12321"</li>
         </ul>
-      </Typography>
+      </Box>
     </>
   );
 
@@ -87,9 +87,9 @@ const PalindromeChecker = () => {
     <CalculatorShell
       title="Palindrome Checker"
       description="Check if a word or phrase is a palindrome. Free online text analysis tool."
-      url="/tools/palindrome-checker"
+      url="/text-tools/palindrome-checker"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <PalindromeCheckerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

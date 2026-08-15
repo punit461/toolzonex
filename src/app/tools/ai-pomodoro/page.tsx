@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import TimerClient from './TimerClient'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com'
 
 export const metadata: Metadata = {
   title: 'AI Pomodoro - Focus Timer with Distraction Tracking',
@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     description: 'A focus-aware Pomodoro timer with multiple productivity modes and in-browser distraction detection.',
     url: `${SITE_URL}/tools/ai-pomodoro`,
     type: 'article',
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 }
 

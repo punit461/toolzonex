@@ -128,9 +128,9 @@ const RgbToHexConverter = () => {
     <CalculatorShell
       title="RGB to HEX Converter"
       description="Convert RGB and RGBA color codes to HEX format instantly. Free online color conversion tool with interactive sliders."
-      url="/tools/rgb-to-hex"
+      url="/converters/rgb-to-hex"
       content={content}
-      category="Tools"
+      category="Converters"
     >
       <RgbToHexContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

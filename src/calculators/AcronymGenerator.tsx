@@ -79,9 +79,9 @@ const AcronymGenerator = () => {
     <CalculatorShell
       title="Acronym Generator"
       description="Instantly convert phrases or titles into acronyms. Free online abbreviation maker."
-      url="/tools/acronym-generator"
+      url="/generators/acronym-generator"
       content={content}
-      category="Tools"
+      category="Generators"
     >
       <AcronymGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

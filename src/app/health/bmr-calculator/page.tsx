@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import BMRCalculator from "../../../calculators/BMRCalculator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "BMR Calculator - Basal Metabolic Rate using Mifflin-St Jeor",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Calculate BMR using Mifflin-St Jeor equation.",
     url: `${SITE_URL}/health/bmr-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import FocusTimer from "../../../calculators/FocusTimer";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Pomodoro Focus Timer - Boost Productivity Online",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Boost productivity with this free online Pomodoro timer. Alternate between focused work sessions and short breaks.",
     url: `${SITE_URL}/utilities/focus-timer`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

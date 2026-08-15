@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import GSTCalculator from "../../../calculators/GSTCalculator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "GST Calculator - Add or Remove GST from Amount",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Free GST calculator to add or remove GST from any amount instantly.",
     url: `${SITE_URL}/finance/gst-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

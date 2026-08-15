@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import RomanNumeralConverter from "../../../calculators/RomanNumeralConverter";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Roman Numeral Converter - Numbers to Roman Numerals",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Convert numbers to Roman numerals and vice versa instantly. Free online roman numeral translator.",
     url: `${SITE_URL}/utilities/roman-numeral-converter`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

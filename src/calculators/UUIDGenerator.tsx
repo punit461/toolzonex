@@ -107,9 +107,9 @@ const UUIDGenerator = () => {
     <CalculatorShell
       title="UUID / GUID Generator"
       description="Generate cryptographically secure v4 UUIDs instantly online. Free bulk UUID generator."
-      url="/tools/uuid-generator"
+      url="/generators/uuid-generator"
       content={content}
-      category="Tools"
+      category="Generators"
     >
       <UUIDGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

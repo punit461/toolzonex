@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import SleepTimeCalculator from "../../../calculators/SleepTimeCalculator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Sleep Time Calculator - Sleep Cycle & Bedtime Calculator",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Calculate the best time to go to sleep or wake up based on 90-minute sleep cycles.",
     url: `${SITE_URL}/health/sleep-time-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

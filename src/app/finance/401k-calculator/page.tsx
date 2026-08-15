@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Free 401(k) retirement calculator with employer match and 2026 IRS contribution limits.",
     url: `${SITE_URL}/finance/401k-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

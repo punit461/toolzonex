@@ -139,9 +139,9 @@ const JsonToCsvConverter = () => {
     <CalculatorShell
       title="JSON to CSV Converter"
       description="Convert JSON arrays into CSV format instantly. Free online data conversion tool for developers."
-      url="/tools/json-to-csv"
+      url="/converters/json-to-csv"
       content={content}
-      category="Tools"
+      category="Converters"
     >
       <JsonToCsvContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

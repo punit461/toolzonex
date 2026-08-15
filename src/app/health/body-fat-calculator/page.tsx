@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import BodyFatCalculator from "../../../calculators/BodyFatCalculator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Body Fat Calculator - US Navy Method",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Estimate your body fat percentage and lean body mass online using the US Navy tape measure method.",
     url: `${SITE_URL}/health/body-fat-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

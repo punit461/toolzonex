@@ -131,9 +131,9 @@ const VerticalTextGenerator = () => {
     <CalculatorShell
       title="Vertical Text Generator - Stack Text Vertically"
       description="Convert your text into vertical aesthetic formats for social media and chats instantly."
-      url="/tools/vertical-text-generator"
+      url="/generators/vertical-text-generator"
       content={content}
-      category="Tools"
+      category="Generators"
     >
       <VerticalTextGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

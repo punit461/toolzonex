@@ -126,9 +126,9 @@ const HexToRgbConverter = () => {
     <CalculatorShell
       title="HEX to RGB Converter"
       description="Convert HEX color codes to RGB or RGBA formats instantly. Free online color conversion tool for web developers."
-      url="/tools/hex-to-rgb"
+      url="/converters/hex-to-rgb"
       content={content}
-      category="Tools"
+      category="Converters"
     >
       <HexToRgbContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -159,9 +159,9 @@ const LoremIpsumGenerator = () => {
     <CalculatorShell
       title="Lorem Ipsum Generator"
       description="Generate standard dummy text for UI testing, mockups, and wireframes. Free online Lorem Ipsum placeholder text generator."
-      url="/tools/lorem-ipsum-generator"
+      url="/generators/lorem-ipsum-generator"
       content={content}
-      category="Tools"
+      category="Generators"
     >
       <LoremIpsumGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Estimate cloud GPU rental costs for AI training and inference. Compare A100, H100, RTX 4090, and more.",
     url: `${SITE_URL}/ai/gpu-cost-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PasswordStrengthChecker from "../../../calculators/PasswordStrengthChecker";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Password Strength Checker - Test Your Security",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Check the strength of your password instantly in the browser. Learn how to create secure passwords with our free analyzer.",
     url: `${SITE_URL}/tools/password-strength-checker`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

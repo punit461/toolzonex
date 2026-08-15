@@ -114,9 +114,9 @@ const Base64Converter = () => {
     <CalculatorShell
       title="Base64 Encode and Decode"
       description="Easily encode plain text to Base64 or decode Base64 strings to plain text. Free online Base64 converter."
-      url="/tools/base64-encode-decode"
+      url="/converters/base64-encode-decode"
       content={content}
-      category="Tools"
+      category="Converters"
     >
       <Base64Content />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

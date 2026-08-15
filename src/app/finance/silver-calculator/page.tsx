@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import SilverRateCalculator from "../../../calculators/SilverRateCalculator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Silver Rate Calculator - Silver Price with Making Charges & GST",
+  title: "Silver Rate Calculator - Price with Making Charges",
   description: "Free silver rate calculator to calculate silver price including making charges and GST. Get accurate silver rate calculations for jewelry and investment.",
   keywords: ["silver rate calculator", "silver price", "silver making charges", "silver GST", "silver jewelry price", "silver investment"],
   alternates: { canonical: "/finance/silver-calculator" },
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Calculate silver price including making charges and GST.",
     url: `${SITE_URL}/finance/silver-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

@@ -115,9 +115,9 @@ const HtmlEntityEncoder = () => {
     <CalculatorShell
       title="HTML Entity Encode and Decode"
       description="Easily encode special characters into HTML entities or decode them back to plain text. Free online developer tool."
-      url="/tools/html-entity-encode-decode"
+      url="/converters/html-entity-encode-decode"
       content={content}
-      category="Tools"
+      category="Converters"
     >
       <HtmlEntityEncoderContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

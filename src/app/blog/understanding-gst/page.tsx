@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import GstImpact from "../../../views/blogs/GstImpact";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Understanding GST in India - Complete Guide to GST Slabs & Impact",
+  title: "Understanding GST in India - Slabs & Impact",
   description: "A simple guide to GST slabs, calculations, and its impact on consumers. Understand how GST affects prices and how to calculate GST on any product or service.",
   keywords: ["GST India", "GST slabs", "GST calculation", "GST impact", "goods and services tax", "GST rate", "GST on products", "GST guide"],
   alternates: { canonical: "/blog/understanding-gst" },
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "A simple guide to GST slabs, calculations, and its impact on consumers.",
     url: `${SITE_URL}/blog/understanding-gst`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

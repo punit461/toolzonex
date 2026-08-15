@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import UnderstandingGratuity from "../../../views/blogs/UnderstandingGratuity";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Understanding Gratuity in India - Rules, Eligibility & Tax Benefits",
+  title: "Understanding Gratuity in India - Rules & Tax Benefits",
   description: "Complete guide to gratuity in India: rules, eligibility, calculation, and tax exemptions. Understand your end-of-service gratuity benefits as an employee.",
   keywords: ["gratuity India", "gratuity rules", "gratuity eligibility", "gratuity tax exemption", "gratuity calculation", "employee benefits", "gratuity act"],
   alternates: { canonical: "/blog/understanding-gratuity-india" },
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Rules, eligibility, and tax exemptions for Gratuity in India.",
     url: `${SITE_URL}/blog/understanding-gratuity-india`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

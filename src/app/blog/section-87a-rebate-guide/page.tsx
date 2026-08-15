@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Rebate87A from "../../../views/blogs/Rebate87A";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Section 87A Rebate Guide - How to Pay Zero Income Tax",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "How to claim zero tax using Section 87A rebate.",
     url: `${SITE_URL}/blog/section-87a-rebate-guide`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

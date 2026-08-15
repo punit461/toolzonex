@@ -129,13 +129,13 @@ const RandomNumberGenerator = () => {
       </Typography>
 
       <Typography variant="h2">Common Uses</Typography>
-      <Typography variant="body1">
+      <Box sx={{ typography: 'body1' }}>
         <ul>
           <li><strong>Giveaways & Raffles:</strong> Pick a random winner from a list of entries by picking a random number between 1 and the total number of participants.</li>
           <li><strong>Statistics & Research:</strong> Generate random sample sizes for data analysis.</li>
           <li><strong>Games:</strong> Roll virtual dice (1 to 6) or flip virtual coins (1 to 2).</li>
         </ul>
-      </Typography>
+      </Box>
     </>
   );
 
@@ -143,9 +143,9 @@ const RandomNumberGenerator = () => {
     <CalculatorShell
       title="Random Number Generator"
       description="Generate random numbers instantly between any range. Free online RNG tool for raffles, giveaways, and statistics."
-      url="/tools/random-number-generator"
+      url="/generators/random-number-generator"
       content={content}
-      category="Tools"
+      category="Generators"
     >
       <RandomNumberGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

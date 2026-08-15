@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import NumberToWordsConverter from "../../../calculators/NumberToWordsConverter";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Number to Words Converter - Write Numbers in English",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Convert any number to English words instantly. Perfect for writing checks, legal documents, and large numbers.",
     url: `${SITE_URL}/utilities/number-to-words-converter`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

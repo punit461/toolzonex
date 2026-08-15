@@ -1,40 +1,20 @@
 import type { Metadata } from "next";
-import MorseCodeTranslator from "../../../calculators/MorseCodeTranslator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const NEW_PATH = "/converters/morse-code-translator";
 
 export const metadata: Metadata = {
-  title: "Morse Code Translator - Encode & Decode Online",
-  description: "Translate plain text to Morse code or decode Morse code back to text instantly. Free online translator for International Morse Code.",
-  keywords: ["morse code translator", "morse code decoder", "text to morse code", "morse code converter", "learn morse code"],
-  alternates: { canonical: "/tools/morse-code-translator" },
-  openGraph: {
-    title: "Morse Code Translator - Encode & Decode Online | ToolZoneX",
-    description: "Translate plain text to Morse code or decode Morse code back to text instantly.",
-    url: `${SITE_URL}/tools/morse-code-translator`,
-    type: "article",
-  },
+  title: "Redirecting... - ToolZoneX",
+  robots: { index: false, follow: true },
+  alternates: { canonical: NEW_PATH },
 };
 
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Morse Code Translator",
-  "description": "Translate plain text to Morse code or decode Morse code back to text instantly.",
-  "url": `${SITE_URL}/tools/morse-code-translator`,
-  "applicationCategory": "EducationalApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
-
-export default function Page() {
+export default function RedirectPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
-      />
-      <MorseCodeTranslator />
+      <meta httpEquiv="refresh" content={`0; url=${NEW_PATH}`} />
+      <p>
+        This page has moved to <a href={NEW_PATH}>{NEW_PATH}</a>.
+      </p>
     </>
   );
 }

@@ -128,7 +128,7 @@ const US401kCalculator = () => {
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>
-          <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 3 }}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mb: 3 }}>
             <Box>
               <Typography gutterBottom>Current Age</Typography>
               <TextField
@@ -172,7 +172,7 @@ const US401kCalculator = () => {
             />
           </Box>
 
-          <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 3 }}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mb: 3 }}>
             <Box>
               <Typography gutterBottom>Employer Match</Typography>
               <TextField
@@ -191,7 +191,7 @@ const US401kCalculator = () => {
             </Box>
           </Box>
 
-          <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 3 }}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mb: 3 }}>
             <Box>
               <Typography gutterBottom>Expected Annual Return</Typography>
               <TextField
@@ -220,7 +220,7 @@ const US401kCalculator = () => {
               {formatUSD(projection.finalBalance)}
             </Typography>
 
-            <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 2, mb: 3 }}>
+            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr 1fr' }, gap: 2, mb: 3 }}>
               <Box>
                 <Typography variant="body2" color="text.secondary">Your Contributions</Typography>
                 <Typography variant="h6">{formatUSD(projection.totalContributions)}</Typography>

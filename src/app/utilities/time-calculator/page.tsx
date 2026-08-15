@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import TimeCalculator from "../../../calculators/TimeCalculator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Time Calculator - Add & Subtract Hours, Minutes, Seconds",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Add or subtract days, hours, minutes, and seconds easily.",
     url: `${SITE_URL}/utilities/time-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import SortingAlgorithmVisualizer from "../../../calculators/SortingAlgorithmVisualizer";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Sorting Algorithm Visualizer - Learn Sorting Online",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Visualize how popular sorting algorithms like Bubble Sort and Selection Sort work in real-time. Interactive educational tool.",
     url: `${SITE_URL}/utilities/algorithm-visualizer`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

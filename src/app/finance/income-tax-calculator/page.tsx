@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import IncomeTaxCalculator from "../../../calculators/IncomeTaxCalculator";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Income Tax Calculator - Old vs New Tax Regime FY 2025-26",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Compare tax liability under old and new tax regimes for FY 2025-26.",
     url: `${SITE_URL}/finance/income-tax-calculator`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

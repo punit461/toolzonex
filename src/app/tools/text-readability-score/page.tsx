@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import TextReadabilityScore from "../../../calculators/TextReadabilityScore";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Text Readability Score Calculator - Flesch Kincaid",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Calculate Flesch Reading Ease and Flesch-Kincaid Grade level of any text online. Improve your writing clarity.",
     url: `${SITE_URL}/tools/text-readability-score`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import OnlineImageEditor from "../../../calculators/OnlineImageEditor";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Online Image Editor - Edit Photos in Browser",
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Edit images online with filters, brightness, contrast, rotation, and more. Free browser-based image editor with no installation required.",
     url: `${SITE_URL}/tools/online-image-editor`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

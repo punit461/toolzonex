@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import SipRetirement from "../../../views/blogs/SipRetirement";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "How to Use SIP for Early Retirement - FIRE Guide for India",
-  description: "Learn how to leverage Systematic Investment Plans (SIP) to achieve financial independence and retire early. Complete guide to FIRE (Financial Independence, Retire Early).",
+  description: "Learn how to leverage Systematic Investment Plans (SIP) to achieve financial independence and retire early (FIRE).",
   keywords: ["SIP early retirement", "FIRE India", "financial independence", "retire early", "SIP returns", "mutual fund retirement", "FIRE movement"],
   alternates: { canonical: "/blog/sip-early-retirement" },
   openGraph: {
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: "Learn how to leverage SIPs to achieve financial independence and retire early.",
     url: `${SITE_URL}/blog/sip-early-retirement`,
     type: "article",
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
 };
 

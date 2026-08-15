@@ -129,7 +129,7 @@ const TextSorter = () => {
       </Typography>
 
       <Typography variant="h2">What options are available?</Typography>
-      <Typography variant="body1">
+      <Box sx={{ typography: 'body1' }}>
         You can customize how your text is sorted:
         <ul>
           <li><strong>Ascending/Descending:</strong> Sort alphabetically from A-Z or Z-A.</li>
@@ -137,7 +137,7 @@ const TextSorter = () => {
           <li><strong>Remove Duplicates:</strong> Automatically filter out identical lines from your list.</li>
           <li><strong>Sort by Length:</strong> Ignore alphabetical order and sort purely by the number of characters in each line.</li>
         </ul>
-      </Typography>
+      </Box>
     </>
   );
 
@@ -145,9 +145,9 @@ const TextSorter = () => {
     <CalculatorShell
       title="Text Sorter"
       description="Sort lists alphabetically or by line length. Easily arrange your text in alphabetical order (A-Z or Z-A)."
-      url="/tools/text-sorter"
+      url="/text-tools/text-sorter"
       content={content}
-      category="Tools"
+      category="Text Tools"
     >
       <TextSorterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

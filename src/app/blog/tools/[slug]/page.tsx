@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import ToolBlogTemplate from "../../../../components/ToolBlogTemplate";
 import { allToolBlogs, getAllToolBlogSlugs, getToolBlogBySlug } from "../../../../data/tool-blogs";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://punit461.github.io/toolzonex';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: blog.description,
       url: `${SITE_URL}/blog/tools/${blog.slug}`,
       type: "article",
+      images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
     },
   };
 }
