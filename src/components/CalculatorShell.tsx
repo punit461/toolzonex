@@ -50,7 +50,7 @@ const CalculatorShell = ({ title, description, url, children, content, category 
     <Box>
       <Breadcrumbs
         items={[
-          { label: category },
+          { label: category, href: '/' },
           { label: title }
         ]}
       />
