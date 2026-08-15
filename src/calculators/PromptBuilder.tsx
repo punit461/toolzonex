@@ -114,6 +114,33 @@ const PromptBuilder = () => {
       <Typography variant="body1">
         A structured prompt yields significantly better results from AI models like ChatGPT or Claude. By explicitly defining the Role, Task, Context, Format, and Tone, you give the AI exactly what it needs to produce high-quality, targeted outputs without needing multiple revisions.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Fill in the Role, Task, Context, Format, and Tone fields and the tool assembles them into a single,
+        well-structured prompt ready to paste into your AI chat.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Setting Role to &quot;marketing copywriter&quot;, Task to &quot;write a product tagline&quot;, and Tone
+        to &quot;playful&quot; assembles those into a single structured prompt ready to paste into ChatGPT.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Building consistent, reusable prompt templates for a recurring AI task.</li>
+          <li>Onboarding a team to write more effective prompts for ChatGPT or Claude.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Which AI models does this work with?</Typography>
+      <Typography variant="body1">
+        The generated prompt structure works with any major chat-based AI model, including ChatGPT, Claude, and
+        Gemini.
+      </Typography>
     </>
   );
 

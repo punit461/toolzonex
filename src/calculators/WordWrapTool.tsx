@@ -135,6 +135,18 @@ const WordWrapTool = () => {
       <Typography variant="body1">
         When dealing with plain text documents, terminal outputs, or code comments, standard conventions often dictate that lines should not exceed 80 or 120 columns. This ensures readability across all devices and editors without horizontal scrolling.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A long paragraph wrapped at 80 characters breaks cleanly at word boundaries, matching the classic
+        terminal and code-comment convention.
+      </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does it break words in the middle to fit the line length?</Typography>
+      <Typography variant="body1">
+        No — the tool wraps at word boundaries, so words are never split mid-word.
+      </Typography>
     </>
   );
 

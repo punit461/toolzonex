@@ -179,6 +179,18 @@ const ExifReader = () => {
         improve your photography skills, verify image metadata, or check if location data is embedded. 
         You can also remove EXIF data for privacy before sharing images online.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Uploading a photo from your phone might reveal it was shot on an iPhone 15 Pro at f/1.8, 1/120s, ISO
+        100 — plus GPS coordinates if location services were enabled.
+      </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does this tool upload my photo anywhere?</Typography>
+      <Typography variant="body1">
+        No — the image and its metadata are read entirely in your browser and never leave your device.
+      </Typography>
     </>
   );
 

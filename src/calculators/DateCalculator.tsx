@@ -78,6 +78,32 @@ const DateCalculator = () => {
       <Typography variant="body1">
         Whether you are planning a project timeline, counting down to a vacation, or checking a warranty period, this tool provides instant and accurate results.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Choose "Duration" or "Add/Subtract" mode, enter your date(s) and any years/months/days to add or
+        subtract, and the result updates instantly.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Adding 90 days to 15 January 2026 lands on 15 April 2026. Finding the duration between 1 January 2026
+        and 15 April 2026 gives exactly 104 days.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Calculating a deadline or due date a set number of days out.</li>
+          <li>Finding the exact number of days until an event or between two milestones.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does this account for leap years?</Typography>
+      <Typography variant="body1">
+        Yes, leap years and varying month lengths are handled automatically.
+      </Typography>
     </>
   );
 

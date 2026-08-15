@@ -175,9 +175,30 @@ const ImageConverter = () => {
 
       <Typography variant="h2">Why convert images?</Typography>
       <Typography variant="body1">
-        Converting images between formats helps reduce file size, improve web performance, 
-        ensure compatibility with specific applications, and optimize images for different platforms. 
+        Converting images between formats helps reduce file size, improve web performance,
+        ensure compatibility with specific applications, and optimize images for different platforms.
         This free tool converts images instantly in your browser without uploading to servers.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Converting a large PNG screenshot to WebP typically cuts the file size significantly while keeping
+        visual quality high — ideal for faster-loading web images.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Converting images to WebP for faster website loading.</li>
+          <li>Converting a screenshot or design export into a format required by a specific tool.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is any quality lost in conversion?</Typography>
+      <Typography variant="body1">
+        Converting between lossless formats (like PNG) preserves quality exactly; converting to a lossy format
+        (like JPEG or WebP) can introduce minor compression artifacts depending on the quality setting.
       </Typography>
     </>
   );

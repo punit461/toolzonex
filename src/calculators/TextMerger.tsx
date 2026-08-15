@@ -158,6 +158,33 @@ const TextMerger = () => {
       <Typography variant="body1">
         Combine two lists of text line-by-line instantly. Perfect for combining first names and last names, URLs and parameters, or any two columns of data. Customize the separator to fit your exact needs.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste your two lists, one per box, choose a separator, and the merged result appears line-by-line
+        instantly.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Combining first-name and last-name columns into full names.</li>
+          <li>Merging two spreadsheet columns exported as plain text.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Merging a "First Name" list and a "Last Name" list with a space separator combines &quot;John&quot; and
+        &quot;Smith&quot; into &quot;John Smith&quot; on each line.
+      </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What if my two lists have a different number of lines?</Typography>
+      <Typography variant="body1">
+        Extra lines in the longer list are left unmatched or blank-paired, depending on your settings — for
+        best results, keep both lists the same length.
+      </Typography>
     </>
   );
 

@@ -83,6 +83,21 @@ const VATCalculator = () => {
         Remove VAT: Net = Gross ÷ (1 + Rate)
       </Box>
 
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A UK product priced at £100 (net) with 20% standard VAT becomes £120 (gross). Working backwards, a
+        £120 gross price at 20% VAT has a net price of £100 and £20 of VAT included.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Working out the VAT-inclusive price to quote customers.</li>
+          <li>Extracting the net price and VAT amount from a receipt or invoice.</li>
+          <li>Comparing prices across countries with different VAT rates.</li>
+        </ul>
+      </Box>
+
       <Typography variant="h2">FAQs</Typography>
       <Typography variant="h3">Is this the standard rate or a reduced rate?</Typography>
       <Typography variant="body1">

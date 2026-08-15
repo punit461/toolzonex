@@ -110,6 +110,32 @@ const YamlToJsonConverter = () => {
       <Typography variant="body1">
         Instantly convert YAML configurations into valid JSON format. Useful for developers working with Docker, Kubernetes, or CI/CD pipelines who need to translate YAML files into JSON for APIs or scripting.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste your YAML into the input box and the equivalent JSON output appears instantly, ready to copy.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A YAML snippet like <code>name: app</code> and <code>port: 8080</code> converts to
+        <code>{'{"name":"app","port":8080}'}</code>.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Converting a Kubernetes or Docker Compose YAML config to JSON for scripting.</li>
+          <li>Translating YAML configuration files for use with JSON-only tooling.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does this support nested YAML structures?</Typography>
+      <Typography variant="body1">
+        Yes — nested objects, arrays, and lists in YAML are converted into their equivalent nested JSON
+        structures.
+      </Typography>
     </>
   );
 

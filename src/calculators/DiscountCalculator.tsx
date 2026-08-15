@@ -72,9 +72,29 @@ const DiscountCalculator = () => {
       <Typography variant="body1">
         To calculate a discount, multiply the original price by the discount percentage (as a decimal), then subtract that amount from the original price.
         <br/><br/>
-        For example, a 20% discount on a $100 item: 
-        `$100 * 0.20 = $20 saved`. 
+        For example, a 20% discount on a $100 item:
+        `$100 * 0.20 = $20 saved`.
         The final price is `$100 - $20 = $80`.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A $250 jacket with a 30% discount saves $75, bringing the final price to $175.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Checking the final sale price during shopping.</li>
+          <li>Comparing discount percentages across different stores or deals.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How do I stack multiple discounts?</Typography>
+      <Typography variant="body1">
+        Apply them sequentially, not by adding percentages — a 10% discount followed by another 10% off is a
+        19% total discount, not 20%, since the second discount applies to the already-reduced price.
       </Typography>
     </>
   );

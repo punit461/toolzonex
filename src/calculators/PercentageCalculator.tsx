@@ -39,6 +39,26 @@ const PercentageCalculator = () => {
       <Typography variant="body1">
         Percentages are a fundamental part of daily life, from figuring out a tip at a restaurant to understanding interest rates on your loans.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        20% of 150 is 30; 30 is 20% of 150; and a value moving from 150 to 180 is a 20% increase.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Calculating a discount or sales tax amount while shopping.</li>
+          <li>Working out exam scores or grade percentages.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What&apos;s the difference between percentage change and percentage points?</Typography>
+      <Typography variant="body1">
+        Percentage change measures relative change (e.g., 20% higher), while percentage points measure the raw
+        difference between two percentages (e.g., going from 20% to 25% is a 5 percentage point change).
+      </Typography>
     </>
   );
 

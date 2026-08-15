@@ -142,6 +142,25 @@ const RandomStringGenerator = () => {
       <Typography variant="body1">
         Specify the length of the string you want, how many strings you need, and the types of characters to include (uppercase, lowercase, numbers, or symbols). You can even add a custom character set to restrict generation entirely to your specific letters. Click Generate to produce them instantly.
       </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Generating unique test IDs, API keys, or coupon codes.</li>
+          <li>Creating random tokens for scripts or database seeding.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Generating a 12-character alphanumeric string might produce something like <code>aZ3kT9mQxP2r</code>.
+      </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I restrict output to a custom set of characters?</Typography>
+      <Typography variant="body1">
+        Yes — enter your own character set and the generator will draw exclusively from those characters.
+      </Typography>
     </>
   );
 

@@ -121,6 +121,31 @@ const RgbToHexConverter = () => {
       <Typography variant="body1">
         **RGB** stands for Red, Green, and Blue, representing the intensity of light. **HEX** is a 6-digit hexadecimal representation of a color, often used in HTML and CSS. Use the sliders above to mix your R, G, and B values and instantly get the equivalent HEX code.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Adjust the R, G, and B sliders (or type exact values) and the equivalent HEX code appears instantly.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        RGB (255, 87, 51) converts to the HEX code <code>#FF5733</code>.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Converting a color picked from a design tool into CSS-ready HEX format.</li>
+          <li>Matching brand colors across RGB and HEX-based design systems.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Why do web developers use HEX instead of RGB?</Typography>
+      <Typography variant="body1">
+        HEX codes are more compact and are the standard format for colors in HTML and CSS stylesheets, though
+        both represent the same color values.
+      </Typography>
     </>
   );
 

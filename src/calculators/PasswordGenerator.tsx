@@ -114,6 +114,27 @@ const PasswordGenerator = () => {
       <Typography variant="body1">
         Yes! This tool generates passwords entirely locally in your web browser. It does not send any data to our servers, meaning nobody (not even us) knows the passwords you generate.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A 16-character password with uppercase, lowercase, numbers, and symbols enabled might generate something
+        like <code>xK9$mP2!vL7&amp;nQ4z</code>.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Creating a strong unique password for a new online account.</li>
+          <li>Generating passwords in bulk for a team or shared credentials list.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How long should my password be?</Typography>
+      <Typography variant="body1">
+        Security experts generally recommend at least 12-16 characters with a mix of uppercase, lowercase,
+        numbers, and symbols for strong protection against brute-force attacks.
+      </Typography>
     </>
   );
 

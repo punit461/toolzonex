@@ -49,6 +49,27 @@ const SalaryIncrementCalculator = () => {
       <Typography variant="body1">
         <strong>Note:</strong> This calculator provides the gross CTC impact. Your actual take-home salary will vary based on tax deductions (TDS), PF contributions, and your company's salary structure.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A current CTC of ₹8,00,000 with a 15% increment gets an increment amount of ₹1,20,000, bringing the
+        new CTC to ₹9,20,000.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Checking how a percentage raise translates to your actual new CTC.</li>
+          <li>Comparing offer letters or appraisal increments across different percentages.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is CTC the same as my take-home salary?</Typography>
+      <Typography variant="body1">
+        No — CTC (Cost to Company) includes your gross salary plus employer contributions like PF and
+        insurance. Your actual take-home pay is lower after tax and employee-side deductions.
+      </Typography>
     </>
   );
 

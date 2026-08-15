@@ -170,6 +170,25 @@ const TypingSpeedTest = () => {
       <Typography variant="body1">
         This typing speed test calculates your WPM based on the standard metric where 1 word = 5 keystrokes (including spaces). The timer starts automatically as soon as you type the first letter. Keep your eyes on the target text to maintain high accuracy!
       </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Practicing to improve typing speed and accuracy over time.</li>
+          <li>Testing typing skills for a job application or self-assessment.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What&apos;s a good typing speed?</Typography>
+      <Typography variant="body1">
+        The average typist reaches 40 WPM; professional typists often exceed 65-75 WPM.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Typing a passage of 100 words in 60 seconds without errors gives a result of 100 WPM at 100% accuracy.
+      </Typography>
     </>
   );
 

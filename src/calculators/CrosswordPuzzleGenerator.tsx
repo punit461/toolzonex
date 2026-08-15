@@ -278,6 +278,27 @@ const CrosswordPuzzleGenerator = () => {
       <Typography variant="body1">
         Add a list of words and their corresponding clues using the form on the left. Once you have at least 2 words, click "Generate Puzzle" to automatically arrange them into an intersecting crossword grid. You can then print the puzzle for classroom activities, newsletters, or fun!
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Adding words like &quot;SUN&quot;, &quot;MOON&quot;, and &quot;STAR&quot; with clues automatically
+        arranges them into an intersecting grid, ready to print.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Creating vocabulary puzzles for a classroom or homeschool lesson.</li>
+          <li>Making a custom crossword for a party, newsletter, or team-building activity.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How many words do I need?</Typography>
+      <Typography variant="body1">
+        At least 2 words are required so the grid can intersect them — more words with shared letters produce a
+        denser, more interesting puzzle.
+      </Typography>
     </>
   );
 

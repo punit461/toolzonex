@@ -152,6 +152,27 @@ const LoremIpsumGenerator = () => {
       <Typography variant="body1">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry's standard dummy text ever since the 1500s. It is used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Generating 2 paragraphs produces roughly 60-100 words of placeholder Latin-style text, ready to paste
+        into a design mockup.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Filling design mockups or wireframes with realistic-looking placeholder text.</li>
+          <li>Testing how a layout handles varying amounts of text.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Why use Lorem Ipsum instead of real text?</Typography>
+      <Typography variant="body1">
+        Its neutral, non-meaningful content keeps viewers focused on layout and typography rather than reading
+        the actual words.
+      </Typography>
     </>
   );
 

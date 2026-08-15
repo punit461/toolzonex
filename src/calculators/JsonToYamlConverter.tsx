@@ -110,6 +110,33 @@ const JsonToYamlConverter = () => {
       <Typography variant="body1">
         Instantly convert JSON objects and arrays into human-readable YAML format. Perfect for creating Docker Compose, Kubernetes, and GitHub Actions configurations from existing JSON API responses.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste valid JSON into the input box and the equivalent YAML output is generated instantly, ready to
+        copy.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        <code>{'{'}"name":"Alice","age":30{'}'}</code> converts to:<br />
+        <code>name: Alice<br />age: 30</code>
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Writing Kubernetes manifests, Docker Compose files, or GitHub Actions workflows from JSON data.</li>
+          <li>Converting an API response into a more human-readable config format.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is YAML more readable than JSON?</Typography>
+      <Typography variant="body1">
+        Many find YAML easier to read for config files since it drops braces and quotes in favor of
+        indentation, though both formats represent the same underlying data.
+      </Typography>
     </>
   );
 

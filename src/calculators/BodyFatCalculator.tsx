@@ -182,6 +182,37 @@ const BodyFatCalculator = () => {
       <Typography variant="body1">
         Estimate your body fat percentage using the US Navy method. All you need is a measuring tape to measure your waist, neck, and (for women) hips. This is one of the most accessible ways to track fat loss beyond just looking at the scale.
       </Typography>
+
+      <Typography variant="h2">How to Measure</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Measure your neck circumference just below the larynx.</li>
+          <li>Measure your waist at the navel (men) or the narrowest point (women).</li>
+          <li>Women also measure hip circumference at the widest point.</li>
+          <li>Enter your height, gender, and these measurements to get your estimated body fat %.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A man who is 178cm tall with a 90cm waist and 38cm neck gets an estimated body fat percentage in the
+        &quot;average&quot; range using the US Navy formula.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Tracking body composition changes over time, alongside or instead of weight alone.</li>
+          <li>Getting a body fat estimate without calipers, a scale with sensors, or a DEXA scan.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How accurate is the US Navy method?</Typography>
+      <Typography variant="body1">
+        It&apos;s a reasonable estimate for most people (typically within a few percentage points of more precise
+        methods like DEXA scans), but it can be less accurate for very lean or very muscular individuals.
+      </Typography>
     </>
   );
 

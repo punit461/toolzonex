@@ -163,6 +163,33 @@ const ContrastChecker = () => {
       <Typography variant="body1">
         Check if your text and background colors have enough contrast to be readable by everyone. This tool calculates the contrast ratio according to the Web Content Accessibility Guidelines (WCAG) to ensure your designs are accessible.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Enter or pick a text color and a background color and the tool instantly calculates the contrast ratio
+        and shows whether it passes WCAG AA/AAA thresholds.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Black text (#000000) on a white background (#FFFFFF) has a contrast ratio of 21:1 — the maximum
+        possible — while light gray text on white might fall well below the WCAG AA minimum of 4.5:1.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Checking website text/background color combinations for accessibility compliance.</li>
+          <li>Meeting WCAG AA or AAA standards for a design system or client project.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What contrast ratio do I need?</Typography>
+      <Typography variant="body1">
+        WCAG AA requires at least 4.5:1 for normal text (3:1 for large text). WCAG AAA, a stricter standard,
+        requires 7:1 for normal text.
+      </Typography>
     </>
   );
 

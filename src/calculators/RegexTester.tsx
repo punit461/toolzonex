@@ -153,6 +153,32 @@ const RegexTester = () => {
       <Typography variant="body1">
         Test and debug your regular expressions in real-time. This tool uses JavaScript's native regex engine to evaluate patterns against your test strings, highlighting matches instantly. Secure and fully client-side.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Type a regular expression pattern and a test string, and matches are highlighted live as you type.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Pattern <code>\d+</code> against the string &quot;Order 42, Item 7&quot; highlights &quot;42&quot; and
+        &quot;7&quot; as matches.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Debugging a regex pattern before using it in production code.</li>
+          <li>Validating that a pattern correctly matches or excludes sample strings.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Which regex flavor does this use?</Typography>
+      <Typography variant="body1">
+        It uses standard JavaScript (ECMAScript) regular expression syntax, the same engine used natively in
+        browsers and Node.js.
+      </Typography>
     </>
   );
 

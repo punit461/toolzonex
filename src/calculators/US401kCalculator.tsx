@@ -101,6 +101,21 @@ const US401kCalculator = () => {
         Employer match does not count against your elective deferral limit, only the combined limit.
       </Typography>
 
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A 30-year-old contributing 10% of a $70,000 salary, with a 50% employer match up to 6% of salary, could
+        project a balance well over $500,000 by age 65 assuming steady 7% annual returns.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Deciding how much to contribute to capture your full employer match.</li>
+          <li>Projecting retirement savings under different contribution rates or return assumptions.</li>
+          <li>Understanding how catch-up contributions boost savings after age 50.</li>
+        </ul>
+      </Box>
+
       <Typography variant="h2">FAQs</Typography>
       <Typography variant="h3">What return rate should I assume?</Typography>
       <Typography variant="body1">

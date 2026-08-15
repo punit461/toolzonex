@@ -80,6 +80,21 @@ const PalindromeChecker = () => {
           <li>"12321"</li>
         </ul>
       </Box>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Checking word puzzles or trivia answers.</li>
+          <li>Verifying palindromic numbers or strings for programming exercises.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does capitalization or spacing matter?</Typography>
+      <Typography variant="body1">
+        No — the checker ignores spaces, punctuation, and capitalization so phrases like &quot;A man, a plan, a
+        canal: Panama&quot; are correctly detected as palindromes.
+      </Typography>
     </>
   );
 

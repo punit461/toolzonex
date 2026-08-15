@@ -146,6 +146,36 @@ const CalorieCalculator = () => {
       <Typography variant="body1">
         Find out exactly how many calories you need to eat per day to maintain your weight, lose fat, or gain muscle. This calculator uses the highly accurate Mifflin-St Jeor equation to estimate your Basal Metabolic Rate (BMR) and factors in your activity level.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Enter your age, gender, height, and weight.</li>
+          <li>Select your activity level, from sedentary to very active.</li>
+          <li>Choose a goal — maintain, lose, or gain weight — to see your target daily calories.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A moderately active 28-year-old man, 180cm and 80kg, might need roughly 2,700 calories/day to maintain
+        weight, or around 2,200 to lose about 1lb per week.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Setting a daily calorie target for weight loss, maintenance, or muscle gain.</li>
+          <li>Planning meals or tracking food intake against a personalized goal.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How many calories should I cut to lose weight?</Typography>
+      <Typography variant="body1">
+        A deficit of about 500 calories/day from your maintenance level typically leads to roughly 1lb of weight
+        loss per week — a commonly recommended, sustainable pace.
+      </Typography>
     </>
   );
 

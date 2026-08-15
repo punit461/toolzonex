@@ -139,6 +139,32 @@ const TimeZoneConverter = () => {
       <Typography variant="body1">
         Easily convert your local time to any major timezone around the world. This tool automatically accounts for Daylight Saving Time (DST) changes based on your browser's built-in internationalization engine.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Enter a time and select the source and target time zones, and the converted time appears instantly.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        9:00 AM in New York (EST) converts to 2:00 PM in London (GMT) and 10:00 PM in Tokyo (JST), automatically
+        adjusting for daylight saving where applicable.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Scheduling a meeting across multiple time zones.</li>
+          <li>Checking what time it is for a remote colleague or friend abroad.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does this handle daylight saving time changes automatically?</Typography>
+      <Typography variant="body1">
+        Yes — conversions use your browser&apos;s time zone database, which accounts for daylight saving
+        transitions automatically.
+      </Typography>
     </>
   );
 

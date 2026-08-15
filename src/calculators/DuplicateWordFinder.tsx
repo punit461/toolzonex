@@ -101,6 +101,27 @@ const DuplicateWordFinder = () => {
       <Typography variant="body1">
         Using the same word too frequently can make writing feel repetitive and dull. This tool helps writers, editors, and students identify overused words so they can replace them with synonyms and improve the overall flow and vocabulary of their text.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Pasting an essay that uses &quot;important&quot; six times highlights every occurrence, making it easy
+        to swap some for synonyms like &quot;significant&quot; or &quot;crucial&quot;.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Editing an essay, article, or report to reduce repetitive word choice.</li>
+          <li>Checking for accidental word repetition before submitting written work.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does it count common words like &quot;the&quot; or &quot;and&quot;?</Typography>
+      <Typography variant="body1">
+        Yes, every word is counted — focus on the more meaningful repeated words in your results, since common
+        function words naturally appear often.
+      </Typography>
     </>
   );
 

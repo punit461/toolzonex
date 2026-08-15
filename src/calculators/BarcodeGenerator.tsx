@@ -165,6 +165,35 @@ const BarcodeGenerator = () => {
       <Typography variant="body1">
         Instantly generate standard 1D barcodes for your products, inventory, or personal use. Supports CODE128, CODE39, UPC, EAN, and more. Customize the size and instantly download a high-quality PNG image for free. No signup required.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Entering &quot;123456789012&quot; with format UPC generates a scannable UPC barcode ready to download as
+        a PNG.
+      </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Enter the text or number to encode, and choose a barcode format (CODE128, CODE39, UPC, EAN, etc.).</li>
+          <li>Adjust the size, then download the barcode as a PNG image.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Generating barcodes for small business inventory or product labels.</li>
+          <li>Creating barcodes for personal cataloging or asset tracking.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Which barcode format should I use?</Typography>
+      <Typography variant="body1">
+        CODE128 works for general alphanumeric text, UPC/EAN are standard for retail products, and CODE39 is
+        common in logistics and inventory systems — check what your scanner or platform expects.
+      </Typography>
     </>
   );
 

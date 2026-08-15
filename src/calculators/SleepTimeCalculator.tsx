@@ -181,6 +181,36 @@ const SleepTimeCalculator = () => {
       <Typography variant="body1">
         A good night's sleep consists of 5-6 complete sleep cycles. Waking up in the middle of a sleep cycle can leave you feeling groggy and tired. Use this calculator to find the perfect bedtime based on when you want to wake up, or find out when to set your alarm if you're going to sleep right now.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Choose whether you want to calculate a bedtime or a wake-up time.</li>
+          <li>Enter your target time — the calculator adds ~15 minutes to fall asleep, then works in 90-minute cycles.</li>
+          <li>Pick from the suggested times, each landing at the end of a complete sleep cycle.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        If you need to wake up at 7:00 AM, going to bed around 11:15 PM or 9:45 PM lets you complete 5 or 6
+        full 90-minute cycles, respectively, rather than waking mid-cycle.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Planning bedtime around a fixed wake-up alarm.</li>
+          <li>Figuring out the best time to nap or go to bed after a late night.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Why 90-minute cycles?</Typography>
+      <Typography variant="body1">
+        A full sleep cycle (light sleep, deep sleep, REM) averages about 90 minutes. Waking up at the end of a
+        cycle, rather than in the middle of deep sleep, generally feels less groggy.
+      </Typography>
     </>
   );
 

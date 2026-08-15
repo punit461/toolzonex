@@ -164,8 +164,28 @@ const PhoneValidator = () => {
 
       <Typography variant="h2">Why validate phone numbers?</Typography>
       <Typography variant="body1">
-        Phone validation helps ensure that contact information is correct before storing or using it. 
+        Phone validation helps ensure that contact information is correct before storing or using it.
         It's essential for form validation, contact verification, and preventing invalid data entry.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Selecting "United States" and entering "2025551234" confirms it as a valid 10-digit US number and shows
+        its formatted version and calling code (+1).
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Validating phone numbers in a signup or checkout form before submission.</li>
+          <li>Cleaning up a contact list by checking number formatting per country.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does this confirm the number is active or reachable?</Typography>
+      <Typography variant="body1">
+        No — this checks formatting and structure only, not whether the number is currently in service.
       </Typography>
     </>
   );

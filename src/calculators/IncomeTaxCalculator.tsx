@@ -196,6 +196,30 @@ const IncomeTaxCalculator = () => {
         <li><strong>Section 80E:</strong> Education loan interest — no monetary cap, available 8 years</li>
         <li><strong>HRA Exemption:</strong> Least of actual HRA, rent paid minus 10% of basic, or 50%/40% of basic (metro/non-metro)</li>
       </ul>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A salaried individual earning ₹12,00,000/year under the New Regime pays tax only on income above the
+        relevant slabs, with a Section 87A rebate potentially reducing the effective liability further — enter
+        your exact income and regime here to see the precise breakdown.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Comparing Old Regime vs. New Regime tax liability before choosing.</li>
+          <li>Estimating take-home salary after tax for budgeting.</li>
+          <li>Planning Section 80C/80D investments to reduce Old Regime tax.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Which regime should I choose?</Typography>
+      <Typography variant="body1">
+        The New Regime generally suits those with few deductions/investments, since it offers lower slab rates
+        but no exemptions. The Old Regime can work out better if you have significant 80C, 80D, HRA, or home
+        loan deductions — compare both here to see which is lower for your numbers.
+      </Typography>
     </>
   );
 

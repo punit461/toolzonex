@@ -103,6 +103,27 @@ const RuleOfThreeCalculator = () => {
       <Typography variant="body1">
         The Rule of Three is a mathematical method for finding a fourth, unknown value when three values are known and they are proportional. It is widely used for solving problems related to percentages, ratios, scaling recipes, and currency conversion.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        If 5 apples cost $2, entering those values plus a quantity of 8 apples calculates a cost of $3.20 using
+        direct proportion.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Scaling a recipe up or down while keeping ingredient ratios consistent.</li>
+          <li>Solving proportion word problems for school or work.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What&apos;s the difference between direct and inverse proportion?</Typography>
+      <Typography variant="body1">
+        In direct proportion, both values increase together (more apples cost more); in inverse proportion, one
+        value increases as the other decreases (more workers means less time to finish a job).
+      </Typography>
     </>
   );
 

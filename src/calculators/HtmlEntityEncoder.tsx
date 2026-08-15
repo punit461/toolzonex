@@ -108,6 +108,27 @@ const HtmlEntityEncoder = () => {
       <Typography variant="body1">
         Certain characters like `&lt;` and `&gt;` have special meanings in HTML. If you want a browser to display them as text instead of treating them as tags, you must convert them into HTML entities (e.g., `&#60;` and `&#62;`). This tool safely encodes your strings to prevent XSS and formatting errors.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        The text <code>&lt;div&gt;</code> encodes to <code>&amp;lt;div&amp;gt;</code>, so a browser displays
+        the literal characters instead of interpreting them as an HTML tag.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Safely displaying code snippets or HTML markup as visible text on a webpage.</li>
+          <li>Preventing user-submitted text from being interpreted as HTML (XSS prevention).</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is this enough to prevent XSS attacks on its own?</Typography>
+      <Typography variant="body1">
+        Encoding output is one important layer of defense, but a complete security approach also includes
+        proper input validation and context-aware escaping throughout your application.
+      </Typography>
     </>
   );
 

@@ -117,6 +117,32 @@ const RomanNumeralConverter = () => {
       <Typography variant="body1">
         Convert numbers to Roman numerals or translate Roman numerals back to standard numbers. This bi-directional tool works instantly and supports numbers between 1 and 3999.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Type a number (or a Roman numeral) into the input field and the converted result appears instantly in
+        the other format.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        The number 1994 converts to &quot;MCMXCIV&quot;, and &quot;MCMXCIV&quot; converts back to 1994.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Decoding Roman numerals seen on clocks, movie credits, or monuments.</li>
+          <li>Converting numbers for stylistic use in titles or chapter headings.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Why is there no number for zero in Roman numerals?</Typography>
+      <Typography variant="body1">
+        The classical Roman numeral system had no symbol for zero, which is why this converter supports whole
+        numbers from 1 to 3999.
+      </Typography>
     </>
   );
 

@@ -142,6 +142,25 @@ const JsonToXmlConverter = () => {
       <Typography variant="body1">
         Paste your JSON data into the input box. The tool parses your JSON and maps keys to XML tags. If your JSON has multiple root keys or is an array, it automatically wraps the output in a `&lt;root&gt;` tag to ensure valid XML.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        <code>{'{'}"name":"Alice"{'}'}</code> converts to <code>&lt;root&gt;&lt;name&gt;Alice&lt;/name&gt;&lt;/root&gt;</code>.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Converting a JSON API response into XML for a legacy system.</li>
+          <li>Generating XML config or data files from existing JSON.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How are JSON arrays handled?</Typography>
+      <Typography variant="body1">
+        Array items are typically repeated as sibling XML elements with the same tag name, one per array entry.
+      </Typography>
     </>
   );
 

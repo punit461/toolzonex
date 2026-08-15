@@ -50,6 +50,27 @@ const PPFCalculator = () => {
         - <strong>Maturity Period:</strong> The standard maturity period is 15 years, which can be extended in blocks of 5 years.<br />
         - <strong>Interest Rate:</strong> The interest rate is reviewed by the government every quarter. Currently, it is 7.1% p.a.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Investing ₹1,50,000/year for 15 years at 7.1% annual interest (compounded yearly) grows to a maturity
+        value of roughly ₹40.7 lakh, of which about ₹22.5 lakh is your own contribution.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Planning long-term, tax-free retirement or goal-based savings.</li>
+          <li>Comparing PPF returns against other Section 80C investment options.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is PPF interest taxable?</Typography>
+      <Typography variant="body1">
+        No — PPF falls under the EEE (Exempt-Exempt-Exempt) category: contributions, interest earned, and the
+        maturity amount are all tax-free.
+      </Typography>
     </>
   );
 

@@ -139,6 +139,27 @@ const AspectRatioCalculator = () => {
       <Typography variant="body1">
         An aspect ratio describes the proportional relationship between the width and height of an image or video screen. For example, modern TVs typically use a `16:9` aspect ratio, meaning for every 16 units of width, there are 9 units of height. This calculator helps you resize images while maintaining perfect proportions to prevent distortion.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A 1920×1080 image (16:9) resized to a new width of 1280px should have a height of exactly 720px to
+        maintain the same proportions without stretching.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Resizing images or video for a specific platform without distortion.</li>
+          <li>Finding the correct height when you only know the target width (or vice versa).</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What are common aspect ratios?</Typography>
+      <Typography variant="body1">
+        16:9 (widescreen video), 4:3 (older TVs/monitors), 1:1 (square, social media), and 9:16 (vertical/mobile
+        video) are among the most common.
+      </Typography>
     </>
   );
 

@@ -101,6 +101,26 @@ const TextCaseMixer = () => {
       <Typography variant="body1">
         This tool takes normal text and scrambles the capitalization. It's often used for generating "Mocking Spongebob" meme text, alternating capitalization, or simply swapping the case of every character in a string.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        &quot;hello world&quot; becomes &quot;hElLo wOrLd&quot; in alternating case, the classic mocking meme
+        format.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Creating "Mocking Spongebob" meme text for social media.</li>
+          <li>Generating visually distinct text for emphasis in casual writing.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does this affect the words themselves, only the casing?</Typography>
+      <Typography variant="body1">
+        Only the casing changes — letters, spacing, and word order stay exactly the same.
+      </Typography>
     </>
   );
 

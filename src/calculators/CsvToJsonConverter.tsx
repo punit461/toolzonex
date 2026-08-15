@@ -151,6 +151,26 @@ const CsvToJsonConverter = () => {
       <Typography variant="body1">
         Paste your CSV data into the input box. Ensure the very first row contains your column headers, as these will become the JSON keys. Click "Convert to JSON", and the tool will automatically parse the data, infer numeric types where applicable, and output a clean, formatted JSON array.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A CSV with header <code>name,age</code> and row <code>Alice,30</code> converts to
+        <code>[{'{'}"name": "Alice", "age": 30{'}'}]</code>.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Converting a spreadsheet export into JSON for use in an API or app.</li>
+          <li>Preparing CSV data for import into a JSON-based database or config file.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does it detect number types automatically?</Typography>
+      <Typography variant="body1">
+        Yes, values that look like numbers are converted to JSON numbers rather than left as quoted strings.
+      </Typography>
     </>
   );
 

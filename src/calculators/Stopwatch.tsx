@@ -169,6 +169,31 @@ const Stopwatch = () => {
       <Typography variant="body1">
         A simple, fast, and precise online stopwatch. Features millisecond tracking and lap time recording. Perfect for sports, workouts, studying, or tracking task durations.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Press start to begin timing, tap lap to record split times, and press stop when finished.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Timing a 5K run with lap splits at each kilometer shows your pace for each segment alongside the total
+        elapsed time.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Timing workout intervals or sports drills with lap tracking.</li>
+          <li>Tracking how long a study session or task takes.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does the stopwatch keep running if I close the tab?</Typography>
+      <Typography variant="body1">
+        No — the timer runs in your browser tab, so closing or reloading it will reset the count.
+      </Typography>
     </>
   );
 

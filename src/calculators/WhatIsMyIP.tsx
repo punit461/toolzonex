@@ -204,6 +204,19 @@ const WhatIsMyIP = () => {
         • Monitor remote access to your devices
         • Verify you're connecting from the right location
       </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can this reveal my exact home address?</Typography>
+      <Typography variant="body1">
+        No — an IP address typically reveals only approximate location (city or region level) and your ISP,
+        not a precise street address.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Loading this page instantly displays your current public IP address along with its approximate country
+        and city.
+      </Typography>
     </>
   );
 

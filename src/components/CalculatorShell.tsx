@@ -3,8 +3,10 @@
 import { Box, Typography, Divider, Card, CardActionArea, CardContent } from '@mui/material';
 import React from 'react';
 import Link from 'next/link';
+import ArticleIcon from '@mui/icons-material/Article';
 import Breadcrumbs from './Breadcrumbs';
 import { categories } from '../data/toolCategories';
+import { getToolBlogByRoute } from '../data/tool-blogs';
 
 interface CalculatorShellProps {
   title: string;
@@ -42,6 +44,7 @@ function getRelatedTools(category: string, currentUrl: string) {
 
 const CalculatorShell = ({ title, description, url, children, content, category = 'Finance' }: CalculatorShellProps) => {
   const relatedTools = getRelatedTools(category, url);
+  const blog = getToolBlogByRoute(url);
 
   return (
     <Box>
@@ -70,6 +73,24 @@ const CalculatorShell = ({ title, description, url, children, content, category 
       <Box sx={{ typography: 'body1', '& h2': { mt: 4, mb: 2, fontWeight: 600, fontSize: '2rem' }, '& h3': { mt: 3, mb: 1.5, fontWeight: 600, fontSize: '1.5rem' }, '& p': { mb: 2 } }}>
         {content}
       </Box>
+
+      {blog && (
+        <Card variant="outlined" sx={{ mt: 6 }}>
+          <CardActionArea component={Link} href={`/blog/tools/${blog.slug}`}>
+            <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+              <ArticleIcon color="primary" fontSize="large" />
+              <Box>
+                <Typography variant="subtitle1" fontWeight={600}>
+                  Read the full {title} guide
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {blog.excerpt}
+                </Typography>
+              </Box>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      )}
 
       {relatedTools.length > 0 && (
         <Box sx={{ mt: 6 }}>

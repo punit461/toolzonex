@@ -110,6 +110,25 @@ const TipCalculator = () => {
       <Typography variant="body1">
         Simply enter your total bill amount, select your desired tip percentage, and indicate how many people are splitting the bill. We'll instantly calculate the tip amount, total bill, and exactly how much each person needs to pay.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A $80 bill split 4 ways with a 20% tip works out to a $16 tip, a $96 total, and $24 per person.
+      </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What&apos;s a standard tip percentage?</Typography>
+      <Typography variant="body1">
+        In the US, 15-20% is typical for restaurant service; norms vary by country and service type.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Splitting a restaurant bill evenly among a group of friends.</li>
+          <li>Quickly checking a fair tip amount before paying.</li>
+        </ul>
+      </Box>
     </>
   );
 

@@ -138,6 +138,27 @@ const TextSorter = () => {
           <li><strong>Sort by Length:</strong> Ignore alphabetical order and sort purely by the number of characters in each line.</li>
         </ul>
       </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Sorting &quot;banana, apple, cherry&quot; in ascending order produces &quot;apple, banana,
+        cherry&quot;.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Alphabetizing a list of names, tags, or references.</li>
+          <li>Removing duplicate lines while sorting a dataset.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I sort numerically instead of alphabetically?</Typography>
+      <Typography variant="body1">
+        Use the "Sort by Length" option for numeric-style ordering by character count, or paste numbers as
+        plain lines for standard alphabetical (lexicographic) sorting.
+      </Typography>
     </>
   );
 

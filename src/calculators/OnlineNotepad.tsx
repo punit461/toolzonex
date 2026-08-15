@@ -60,6 +60,18 @@ const OnlineNotepad = () => {
         This is a simple, fast, and free online text editor that works directly in your browser. It requires no login, and we don't save your notes on our servers.
       </Typography>
 
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Start typing in the text area — your notes save automatically to your browser as you go, no account or
+        setup required.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Jot down a quick to-do list or meeting notes, close the tab, and reopen the page later — your text is
+        still there.
+      </Typography>
+
       <Typography variant="h2">Features</Typography>
       <ul>
         <li><strong>Auto-Save:</strong> Your text is automatically saved to your browser's local storage. Even if you accidentally close the tab or refresh the page, your notes will still be here when you return.</li>
@@ -67,6 +79,21 @@ const OnlineNotepad = () => {
         <li><strong>Word & Character Count:</strong> Instantly see how long your text is at the bottom of the editor.</li>
         <li><strong>One-Click Download:</strong> Export your notes as a standard `.txt` file to your computer instantly.</li>
       </ul>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Jotting down quick notes without creating an account or opening a heavy app.</li>
+          <li>Drafting text before pasting it into an email or document.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Will I lose my notes if I close the tab?</Typography>
+      <Typography variant="body1">
+        No — your text is auto-saved to your browser&apos;s local storage, so it&apos;s still there when you
+        come back, as long as you use the same browser and device.
+      </Typography>
     </>
   );
 

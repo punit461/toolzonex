@@ -172,6 +172,34 @@ const AlphabetLearningTool = () => {
       <Typography variant="body1">
         A fun and interactive way for kids to learn the English alphabet. Flip through digital flashcards featuring colorful emojis and hear the pronunciation of each letter and word out loud.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Clicking the letter "B" flips the flashcard to show a bear emoji and plays the pronunciation of
+        &quot;B is for Bear&quot;.
+      </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Click or tap through the flashcards from A to Z.</li>
+          <li>Click the sound icon to hear each letter and its example word pronounced.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Early childhood alphabet and phonics learning.</li>
+          <li>A classroom or homeschool activity for pre-readers.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What age group is this for?</Typography>
+      <Typography variant="body1">
+        Designed for toddlers and young children just starting to learn letters, typically ages 2-6.
+      </Typography>
     </>
   );
 

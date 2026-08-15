@@ -268,6 +268,33 @@ const SortingAlgorithmVisualizer = () => {
       <Typography variant="body1">
         Watch and learn how popular sorting algorithms work behind the scenes. This interactive tool visualizes algorithms like Bubble Sort, Selection Sort, and Insertion Sort in real-time. Adjust the animation speed and generate new random arrays to see how the algorithms behave under different conditions.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Select an algorithm and animation speed, generate a new random array, then press play to watch it sort
+        step by step.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Watching Bubble Sort on a 20-element array visually shows adjacent elements repeatedly swapping until
+        the whole array is in order.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Studying data structures and algorithms coursework visually.</li>
+          <li>Comparing the relative speed and behavior of different sorting algorithms.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Which sorting algorithm is fastest?</Typography>
+      <Typography variant="body1">
+        It depends on the input size and data — for large datasets, algorithms like Merge Sort or Quick Sort
+        generally outperform simpler ones like Bubble Sort, which this visualizer helps make visible.
+      </Typography>
     </>
   );
 

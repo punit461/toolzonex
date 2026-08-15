@@ -98,6 +98,28 @@ const CFTCalculator = () => {
           ))}
         </tbody>
       </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A candidate finishing the 5-mile tactical march in 75 minutes, 65 ammo can lifts, a 1:15 shuttle run,
+        and 4 casualty drag sets would land in the &quot;Good&quot; category across most events.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Tracking training progress ahead of an official CFT assessment.</li>
+          <li>Understanding where you stand against Outstanding/Good/Average benchmarks.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How is the CFT different from the PFT?</Typography>
+      <Typography variant="body1">
+        The PFT measures general fitness (running, push-ups, sit-ups), while the CFT tests combat-specific
+        tasks under load — tactical marching, lifting, sprinting, and casualty drags — closer to real
+        operational demands.
+      </Typography>
     </>
   );
 

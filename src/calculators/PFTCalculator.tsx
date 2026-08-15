@@ -89,6 +89,27 @@ const PFTCalculator = () => {
           ))}
         </tbody>
       </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A candidate running 1.6km in 6:45, doing 35 push-ups, and 30 sit-ups in 2 minutes would land in the
+        &quot;Good&quot; category across most events.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Tracking training progress ahead of NDA, CDS, or police PFT assessments.</li>
+          <li>Comparing your run time, push-ups, and sit-ups against Outstanding/Good/Average benchmarks.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Do all services use the same PFT standards?</Typography>
+      <Typography variant="body1">
+        No — exact distances, time limits, and rep counts vary slightly between the Army, Navy, Air Force, NDA,
+        CDS, and state police recruitment boards. Always check the specific notification for your exam.
+      </Typography>
     </>
   );
 

@@ -117,6 +117,35 @@ const LoanCalculator = () => {
       <Typography variant="body1">
         Calculate your monthly EMI (Equated Monthly Installment), total interest, and total payment amount for personal loans, car loans, or mortgages.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Enter the loan amount, annual interest rate, and tenure.</li>
+          <li>View your monthly EMI, total interest payable, and total repayment amount.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A ₹5,00,000 personal loan at 11% annual interest over 5 years (60 months) works out to an EMI of about
+        ₹10,871/month, with total interest of roughly ₹1,52,260.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Comparing loan offers with different rates or tenures before borrowing.</li>
+          <li>Checking whether a monthly EMI fits your budget before applying.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does prepaying a loan reduce my EMI or tenure?</Typography>
+      <Typography variant="body1">
+        Depends on your lender&apos;s policy — some reduce the tenure while keeping EMI the same, others reduce
+        the EMI while keeping tenure the same. Either way, prepayment reduces total interest paid.
+      </Typography>
     </>
   );
 

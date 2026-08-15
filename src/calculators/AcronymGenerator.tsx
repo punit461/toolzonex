@@ -72,6 +72,26 @@ const AcronymGenerator = () => {
       <Typography variant="body1">
         This tool takes a long phrase or title (like "World Health Organization") and converts it into a concise acronym ("WHO"). It automatically ignores common stop words like "and", "the", and "of" to produce cleaner acronyms.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        &quot;National Aeronautics and Space Administration&quot; becomes &quot;NASA&quot; — the word
+        &quot;and&quot; is automatically skipped.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Creating a short name or brand acronym from a longer company or project name.</li>
+          <li>Generating memorable acronyms for study or presentation titles.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does it always skip small words like &quot;and&quot; and &quot;the&quot;?</Typography>
+      <Typography variant="body1">
+        Yes, common stop words are excluded by default so the acronym reads more naturally.
+      </Typography>
     </>
   );
 

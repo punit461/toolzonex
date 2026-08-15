@@ -130,6 +130,19 @@ const TextSplitter = () => {
           <li><strong>Messaging Limits:</strong> Break huge text files into smaller chunks to bypass character limits in SMS or WhatsApp.</li>
         </ul>
       </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I split by a custom delimiter?</Typography>
+      <Typography variant="body1">
+        Yes — choose a custom delimiter like a comma or pipe character and the tool splits your text at every
+        occurrence.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Splitting a 1000-character block of text at 280 characters produces four chunks, each within the
+        Twitter/X character limit.
+      </Typography>
     </>
   );
 

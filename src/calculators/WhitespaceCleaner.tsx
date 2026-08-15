@@ -127,6 +127,27 @@ const WhitespaceCleaner = () => {
       <Typography variant="body1">
         When copying data from PDFs, emails, or legacy software, text often carries invisible formatting errors like double spaces, random tabs, or trailing spaces. These can break code, ruin database imports, or look unprofessional in documents. This tool sanitizes your text instantly without tedious manual editing.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Text with double spaces, trailing spaces, and blank lines is cleaned into single-spaced,
+        trimmed text ready for a database import or publishing.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Cleaning up text copied from a PDF before pasting it elsewhere.</li>
+          <li>Removing stray tabs and double spaces before a database import.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does this remove line breaks entirely?</Typography>
+      <Typography variant="body1">
+        No — it removes extra blank lines and trailing whitespace while keeping your paragraph structure
+        intact.
+      </Typography>
     </>
   );
 

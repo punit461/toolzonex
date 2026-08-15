@@ -69,6 +69,28 @@ const GSTCalculator = () => {
           </TableBody>
         </Table>
       </TableContainer>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A product priced at ₹1,000 (before tax) with 18% GST costs ₹1,180 after tax — ₹180 is the GST amount.
+        Working backwards, a ₹1,180 GST-inclusive price has a base price of ₹1,000.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Adding GST to a base price when creating an invoice.</li>
+          <li>Extracting the GST amount from a GST-inclusive price on a receipt.</li>
+          <li>Checking which GST slab applies to a product or service.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What&apos;s the difference between CGST, SGST, and IGST?</Typography>
+      <Typography variant="body1">
+        For sales within a state, GST splits equally into CGST (central) and SGST (state). For inter-state
+        sales, IGST applies instead, going to the central government and then apportioned to the destination state.
+      </Typography>
     </>
   );
 

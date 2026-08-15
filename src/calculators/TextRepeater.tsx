@@ -106,7 +106,7 @@ const TextRepeater = () => {
         Simply type the word or phrase you want to duplicate, enter the number of times you want it repeated, and select your formatting preference (adding spaces or new lines). Click "Repeat Text" to generate the string.
       </Typography>
 
-      <Typography variant="h2">Uses for a Text Repeater</Typography>
+      <Typography variant="h2">Common Use Cases</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
           <li><strong>Testing:</strong> Generate dummy text blocks for UI or database testing.</li>
@@ -114,6 +114,18 @@ const TextRepeater = () => {
           <li><strong>Messaging:</strong> Spam a phrase or create meme text quickly.</li>
         </ul>
       </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Repeating &quot;ha&quot; 5 times with spaces produces &quot;ha ha ha ha ha&quot;.
+      </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is there a limit to how many times I can repeat text?</Typography>
+      <Typography variant="body1">
+        The tool supports very high repeat counts, though extremely large outputs may take a moment to render
+        in your browser.
+      </Typography>
     </>
   );
 

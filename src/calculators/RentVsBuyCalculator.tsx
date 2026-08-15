@@ -95,6 +95,27 @@ const RentVsBuyCalculator = () => {
       <Typography variant="body1">
         The break-even point is the year when the net cost of buying a home (Total Payments - Accumulated Equity) becomes lower than the total cost of renting over the same period. If you plan to stay in the home longer than the break-even period, buying is mathematically the better financial choice.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        If a ₹50,000/month rent grows 5% a year, versus a home loan EMI on a ₹80 lakh property, the break-even
+        point might land around year 7-9 depending on down payment, loan rate, and expected home appreciation.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Deciding whether to buy a home or keep renting based on how long you plan to stay.</li>
+          <li>Comparing the opportunity cost of a down payment against continued renting.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does this account for home maintenance and property tax?</Typography>
+      <Typography variant="body1">
+        The calculator focuses on the core EMI-vs-rent and equity comparison — ongoing costs like maintenance,
+        property tax, and insurance add to the true cost of owning and aren&apos;t included by default.
+      </Typography>
     </>
   );
 

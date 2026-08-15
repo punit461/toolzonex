@@ -123,6 +123,27 @@ const TimeCalculator = () => {
       <Typography variant="body1">
         Adding or subtracting time can be tricky because time is not based on a decimal system (base-10). Instead, there are 60 seconds in a minute, 60 minutes in an hour, and 24 hours in a day. This calculator handles the base conversions automatically, allowing you to seamlessly add or subtract days, hours, minutes, and seconds.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Adding 2 hours 45 minutes to 1 hour 30 minutes correctly rolls over to 4 hours 15 minutes, rather than
+        the incorrect decimal sum of 4.75.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Adding up total hours worked across multiple time entries.</li>
+          <li>Calculating elapsed time between two events with mixed units.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I subtract time and get a negative result?</Typography>
+      <Typography variant="body1">
+        Yes — subtracting a larger duration from a smaller one returns a negative result, useful for checking
+        if a deadline has been missed.
+      </Typography>
     </>
   );
 

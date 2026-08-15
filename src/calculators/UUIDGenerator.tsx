@@ -100,6 +100,26 @@ const UUIDGenerator = () => {
       <Typography variant="body1">
         This tool uses the browser's native `crypto.randomUUID()` method, which relies on a cryptographically secure pseudorandom number generator (CSPRNG). It conforms to RFC 4122.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Clicking generate produces a UUID like <code>3fa85f64-5717-4562-b3fc-2c963f66afa6</code>.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Generating unique primary keys for database records.</li>
+          <li>Creating unique identifiers for API requests, sessions, or tracing.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can two generated UUIDs ever collide?</Typography>
+      <Typography variant="body1">
+        The probability is astronomically small — with 122 random bits, collisions are considered practically
+        impossible even across billions of UUIDs.
+      </Typography>
     </>
   );
 

@@ -124,6 +124,32 @@ const VerticalTextGenerator = () => {
       <Typography variant="body1">
         Convert normal horizontal text into vertical text instantly. This tool is perfect for creating aesthetic social media bios, unique chat messages, or artistic text designs. Supports different styles like bold and monospace.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Type your text into the input field and the vertical, stacked version appears instantly, ready to copy.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Typing &quot;Hi&quot; stacks each letter onto its own line, ready to paste into a bio or chat message
+        for a vertical text effect.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Creating an eye-catching vertical text bio for Instagram or TikTok.</li>
+          <li>Adding artistic flair to chat messages or comments.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Will this work on any platform?</Typography>
+      <Typography variant="body1">
+        Yes — the output is plain text with line breaks, so it works anywhere text can be pasted, including
+        social media bios and chat apps.
+      </Typography>
     </>
   );
 

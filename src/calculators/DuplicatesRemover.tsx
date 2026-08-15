@@ -96,6 +96,27 @@ const DuplicatesRemover = () => {
       <Typography variant="body1">
         When dealing with large datasets, mailing lists, SEO keywords, or inventory codes, duplicate entries can cause errors, spam, or inflated metrics. This free online tool helps you clean up your lists instantly without needing complex spreadsheet formulas.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A list containing &quot;apple, banana, apple, cherry&quot; (one per line) becomes &quot;apple, banana,
+        cherry&quot; — the duplicate is removed automatically.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Cleaning up a mailing or contact list before sending a campaign.</li>
+          <li>Removing duplicate keywords, tags, or inventory codes.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is this case-sensitive?</Typography>
+      <Typography variant="body1">
+        By default duplicates are matched exactly as typed — &quot;Apple&quot; and &quot;apple&quot; are treated
+        as different lines unless case-insensitive matching is selected.
+      </Typography>
     </>
   );
 

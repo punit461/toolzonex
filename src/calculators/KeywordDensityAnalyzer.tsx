@@ -128,6 +128,27 @@ const KeywordDensityAnalyzer = () => {
       <Typography variant="body1">
         Keyword density helps search engines understand what your page is about. If your density is too low, search engines might miss your topic. If it's too high (keyword stuffing), you might get penalized. Most SEO experts recommend keeping your primary keyword density between 1% and 3%. This free checker helps you find that perfect balance.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        In a 500-word article, using the phrase &quot;coffee grinder&quot; 10 times gives roughly a 2% keyword
+        density — within the commonly recommended 1-3% range.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Checking a blog post or product page isn&apos;t over-optimized before publishing.</li>
+          <li>Analyzing a competitor&apos;s page for keyword usage patterns.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What&apos;s the ideal keyword density?</Typography>
+      <Typography variant="body1">
+        Most SEO experts suggest 1-3% for a primary keyword — there&apos;s no strict rule, and modern search
+        engines weigh content quality and relevance more than exact keyword percentage.
+      </Typography>
     </>
   );
 

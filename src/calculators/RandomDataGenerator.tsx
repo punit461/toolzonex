@@ -125,6 +125,27 @@ const RandomDataGenerator = () => {
       <Typography variant="body1">
         A random data generator creates realistic, synthetic profiles including mock names, addresses, emails, and phone numbers. This fake data is extremely useful for developers and QA engineers who need to test web forms, populate demo databases, or design UI layouts without risking real user privacy.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Generating 10 records produces 10 realistic-looking fake profiles, each with a name, address, email,
+        and phone number, ready to export.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Populating a demo database with realistic-looking test records.</li>
+          <li>Testing form validation without using real user data.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is this data real?</Typography>
+      <Typography variant="body1">
+        No — all generated names, emails, addresses, and phone numbers are entirely synthetic and do not
+        correspond to real people.
+      </Typography>
     </>
   );
 

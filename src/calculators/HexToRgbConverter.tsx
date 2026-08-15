@@ -119,6 +119,33 @@ const HexToRgbConverter = () => {
       <Typography variant="body1">
         **HEX** is a 6-digit hexadecimal representation of a color, often used in HTML and CSS. **RGB** stands for Red, Green, and Blue, representing the intensity of light used to create the color on screens. This tool instantly converts HEX color codes into RGB or RGBA (including alpha transparency).
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Type or paste a HEX color code into the input field and the equivalent RGB (or RGBA) value appears
+        instantly.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        <code>#1A56DB</code> converts to <code>rgb(26, 86, 219)</code> — the same blue, expressed in a
+        different format.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Converting a design tool&apos;s hex color into RGB for CSS that needs an alpha channel.</li>
+          <li>Translating colors between design specs and code.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Why would I use RGB instead of HEX?</Typography>
+      <Typography variant="body1">
+        RGB(A) lets you specify transparency directly, which plain HEX codes can&apos;t do without an extra
+        alpha value (HEX8).
+      </Typography>
     </>
   );
 

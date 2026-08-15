@@ -121,6 +121,35 @@ const Base64ToImageConverter = () => {
       <Typography variant="body1">
         Decode a Base64 string back into a viewable and downloadable image file. Works with PNG, JPEG, GIF, WebP, and SVG encoded strings.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Pasting a string starting with <code>data:image/png;base64,iVBORw0KGgo...</code> instantly renders the
+        decoded image, ready to download as a PNG file.
+      </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Paste a Base64-encoded image string (with or without the <code>data:image/...</code> prefix).</li>
+          <li>Preview the decoded image and download it as a file.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Viewing an image embedded as Base64 in HTML, CSS, or an API response.</li>
+          <li>Recovering an image file from a Base64 string found in code or a database.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Why isn&apos;t my image decoding correctly?</Typography>
+      <Typography variant="body1">
+        Make sure the string is a complete, valid Base64 encoding of an image — truncated or corrupted strings
+        won&apos;t decode into a viewable image.
+      </Typography>
     </>
   );
 

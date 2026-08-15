@@ -65,6 +65,27 @@ const SSYCalculator = () => {
         <li><strong>Tax Benefits:</strong> Like PPF, SSY falls under the EEE category. Deposits (up to ₹1.5L) get 80C deductions, and the interest and maturity amount are entirely tax-free.</li>
         <li><strong>High Interest Rate:</strong> SSY typically offers higher interest rates compared to PPF and FDs. Currently, it is 8.2% p.a.</li>
       </ul>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Depositing ₹1,50,000/year for 15 years at 8.2% annual interest, then letting the balance grow untouched
+        until the account matures at 21 years, can produce a maturity value well over ₹65 lakh.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Planning long-term savings for a daughter&apos;s education or marriage.</li>
+          <li>Comparing SSY returns against PPF or fixed deposits for the same goal.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I withdraw before the account matures?</Typography>
+      <Typography variant="body1">
+        Partial withdrawal (up to 50%) is allowed once the girl turns 18, for higher education or marriage
+        expenses. Full withdrawal happens at maturity, 21 years from account opening.
+      </Typography>
     </>
   );
 

@@ -113,6 +113,26 @@ const TextReverser = () => {
           <li><strong>Reverse Line Order:</strong> Flips paragraphs or lists upside down. The last line becomes the first line.</li>
         </ul>
       </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        &quot;Hello World&quot; in "Reverse Entire Text" mode becomes &quot;dlroW olleH&quot;.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Creating reversed text for puzzles or novelty messages.</li>
+          <li>Reversing a list&apos;s line order without retyping it manually.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does reversing affect punctuation and spacing?</Typography>
+      <Typography variant="body1">
+        Yes — in full-text reversal mode, every character including punctuation and spaces is reversed along
+        with the letters.
+      </Typography>
     </>
   );
 

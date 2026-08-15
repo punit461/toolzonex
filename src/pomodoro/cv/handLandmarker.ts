@@ -1,7 +1,9 @@
 import { FilesetResolver, HandLandmarker } from '@mediapipe/tasks-vision'
 import type { HandDetectionResult } from './detectionTypes'
 
-const WASM_BASE_URL = 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm'
+// Pinned to the exact version in package.json — see faceLandmarker.ts for why
+// `@latest` here is a live-breakage risk, not just a style nit.
+const WASM_BASE_URL = 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@1.0.1/wasm'
 const MODEL_URL =
   'https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/latest/hand_landmarker.task'
 

@@ -132,6 +132,27 @@ const JsonToCsvConverter = () => {
       <Typography variant="body1">
         Simply paste your JSON array into the left input box. The tool automatically detects all unique keys across the objects and sets them as the CSV header row. Click "Convert to CSV", and your formatted comma-separated values will appear on the right, ready to be copied or downloaded as a `.csv` file.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        <code>[{'{'}"name":"Alice","age":30{'}'}]</code> converts to a CSV with header <code>name,age</code>
+        and row <code>Alice,30</code>.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Converting an API&apos;s JSON response into a spreadsheet-friendly CSV.</li>
+          <li>Preparing JSON data for import into Excel or Google Sheets.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What if objects have different keys?</Typography>
+      <Typography variant="body1">
+        The tool uses the union of all keys across every object as the CSV header, leaving cells blank where a
+        given object doesn&apos;t have that key.
+      </Typography>
     </>
   );
 

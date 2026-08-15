@@ -126,6 +126,27 @@ const MarkdownToHtmlConverter = () => {
       <Typography variant="body1">
         Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by John Gruber in 2004, Markdown is now one of the world's most popular markup languages. This tool quickly converts your Markdown syntax into valid HTML tags.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Typing <code>**bold**</code> and <code># Heading</code> converts to <code>&lt;strong&gt;bold&lt;/strong&gt;</code>
+        and <code>&lt;h1&gt;Heading&lt;/h1&gt;</code>, shown live in the preview panel below.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Converting README or documentation files into HTML for a website.</li>
+          <li>Previewing how Markdown will render before publishing.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does this support GitHub-flavored Markdown extras like tables?</Typography>
+      <Typography variant="body1">
+        It covers the core Markdown syntax (headings, bold/italic, links, lists, code) — extended syntax such
+        as tables or task lists may not be converted.
+      </Typography>
     </>
   );
 

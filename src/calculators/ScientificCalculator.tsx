@@ -124,6 +124,32 @@ const ScientificCalculator = () => {
       <Typography variant="body1">
         Perform advanced mathematical operations right in your browser. This scientific calculator supports trigonometry functions (sin, cos, tan), logarithms (log, ln), exponents, roots, and constants like pi and Euler's number (e).
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Click the number and function buttons (or type on your keyboard) to build an expression, then press
+        equals to see the result.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Calculating sin(30°) returns 0.5, and log(100) returns 2 — advanced functions available with a single
+        button press.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Solving trigonometry or logarithm problems for homework or exams.</li>
+          <li>Quick engineering or physics calculations without installing a calculator app.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does it support degrees and radians?</Typography>
+      <Typography variant="body1">
+        Yes — you can switch the angle mode between degrees and radians for trigonometric functions.
+      </Typography>
     </>
   );
 

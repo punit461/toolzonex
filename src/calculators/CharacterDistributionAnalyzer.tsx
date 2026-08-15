@@ -113,6 +113,27 @@ const CharacterDistributionAnalyzer = () => {
       <Typography variant="body1">
         Paste any text into the box and click "Analyze Characters". The tool will count every single character—including spaces, newlines, numbers, and punctuation—and calculate their exact frequency and percentage across the entire text.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Analyzing &quot;banana&quot; shows &quot;a&quot; appearing 3 times (50%), &quot;n&quot; appearing 2 times
+        (33%), and &quot;b&quot; appearing once (17%).
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Analyzing letter frequency for cryptography or word games like Wordle/Scrabble strategy.</li>
+          <li>Checking text composition for linguistics or writing analysis.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is the analysis case-sensitive?</Typography>
+      <Typography variant="body1">
+        Uppercase and lowercase versions of the same letter are typically counted separately, reflecting the
+        exact characters as typed.
+      </Typography>
     </>
   );
 

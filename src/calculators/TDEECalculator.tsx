@@ -77,6 +77,27 @@ const TDEECalculator = () => {
         - <strong>Lose Weight:</strong> Consume 300-500 calories less than your TDEE (Caloric Deficit).<br />
         - <strong>Gain Muscle:</strong> Consume 300-500 calories more than your TDEE (Caloric Surplus).
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A moderately active person with a BMR of 1,500 and an activity multiplier of 1.55 has a TDEE of about
+        2,325 calories/day — their maintenance calorie level.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Setting a calorie target for weight loss, maintenance, or muscle gain.</li>
+          <li>Adjusting your diet plan as your activity level changes.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How is TDEE different from BMR?</Typography>
+      <Typography variant="body1">
+        BMR is calories burned at complete rest; TDEE adds your activity level on top, giving a more realistic
+        picture of your actual daily calorie burn.
+      </Typography>
     </>
   );
 

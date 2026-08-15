@@ -95,6 +95,35 @@ const ColorPaletteGenerator = () => {
       <Typography variant="body1">
         Generate beautiful random color palettes for your next design project, website, or illustration. Simply click the generate button to create a new 5-color scheme, and click any hex code to copy it instantly.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Clicking generate might produce a palette like <code>#FF6B6B</code>, <code>#4ECDC4</code>,
+        <code>#45B7D1</code>, <code>#FFA07A</code>, <code>#98D8C8</code> — five ready-to-use hex codes.
+      </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Click generate to get a new random 5-color palette.</li>
+          <li>Click any swatch&apos;s hex code to copy it to your clipboard.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Finding color scheme inspiration for a website or design project.</li>
+          <li>Quickly grabbing hex codes for a mockup or illustration.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I lock a color and regenerate the rest?</Typography>
+      <Typography variant="body1">
+        This tool generates a fresh 5-color palette each time — use the copy feature to save colors you like
+        before generating a new set.
+      </Typography>
     </>
   );
 

@@ -124,6 +124,32 @@ const SqlFormatter = () => {
       <Typography variant="body1">
         Beautify and format minified or messy SQL queries. Supports standard SQL, MySQL, PostgreSQL, SQLite, and SQL Server dialects.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste your SQL query into the input box and the formatted, indented version appears instantly.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A single-line query like <code>select * from users where id=1</code> formats into a clean, indented,
+        multi-line statement with capitalized keywords.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Making a minified or copy-pasted SQL query readable before code review.</li>
+          <li>Standardizing SQL formatting across a team&apos;s codebase.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does this validate whether my SQL is correct?</Typography>
+      <Typography variant="body1">
+        No — this tool only reformats indentation and casing for readability; it does not check query
+        correctness or execute the SQL.
+      </Typography>
     </>
   );
 

@@ -93,6 +93,26 @@ const LineNumbering = () => {
       <Typography variant="body1">
         Paste your text into the left box, select whether you want to skip numbering on empty lines, and click "Add Line Numbers". The tool will automatically prepend sequential numbers to each line of your text.
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Three lines of text become &quot;1. First line&quot;, &quot;2. Second line&quot;, &quot;3. Third
+        line&quot; — ready to paste into a numbered reference list.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Numbering code snippets or configuration files for reference.</li>
+          <li>Creating a numbered list from plain text quickly.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I number only non-empty lines?</Typography>
+      <Typography variant="body1">
+        Yes — enable "skip empty lines" and blank lines are left as-is without incrementing the counter.
+      </Typography>
     </>
   );
 

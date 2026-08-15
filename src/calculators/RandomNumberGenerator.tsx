@@ -136,6 +136,18 @@ const RandomNumberGenerator = () => {
           <li><strong>Games:</strong> Roll virtual dice (1 to 6) or flip virtual coins (1 to 2).</li>
         </ul>
       </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Setting a range of 1 to 100 and generating 5 unique numbers might return: 7, 23, 45, 61, 88.
+      </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I generate numbers without duplicates?</Typography>
+      <Typography variant="body1">
+        Yes — disable the "allow duplicates" option to get a set of unique random numbers, similar to a
+        lottery draw.
+      </Typography>
     </>
   );
 

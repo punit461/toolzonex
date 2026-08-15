@@ -114,6 +114,31 @@ const PxToRemConverter = () => {
       <Typography variant="body1">
         REM (Root EM) is a scalable unit in CSS. Unlike pixels, which are absolute, REM units are relative to the root font size of the HTML document (default is 16px). Using REM units makes your websites more accessible, as they scale naturally when a user changes their browser's default font size.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Enter a pixel value (and optionally a custom root font size) and the equivalent rem value is calculated
+        instantly.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        With a 16px root font size, 24px converts to 1.5rem, and 32px converts to 2rem.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Converting fixed-pixel Figma or design specs into responsive CSS rem values.</li>
+          <li>Auditing a stylesheet for accessibility by replacing px with rem.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What if the root font size isn&apos;t 16px?</Typography>
+      <Typography variant="body1">
+        Enter your custom root font size in the tool and the conversion will adjust accordingly.
+      </Typography>
     </>
   );
 

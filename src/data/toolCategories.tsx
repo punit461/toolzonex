@@ -36,6 +36,17 @@ import ArticleIcon from '@mui/icons-material/Article';
 import TimerIcon from '@mui/icons-material/Timer';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import MemoryIcon from '@mui/icons-material/Memory';
+import StraightenIcon from '@mui/icons-material/Straighten';
+import DeviceThermostatIcon from '@mui/icons-material/DeviceThermostat';
+import CropSquareIcon from '@mui/icons-material/CropSquare';
+import LocalDrinkIcon from '@mui/icons-material/LocalDrink';
+import ScaleIcon from '@mui/icons-material/Scale';
+import ScheduleIcon from '@mui/icons-material/Schedule';
+import ShuffleIcon from '@mui/icons-material/Shuffle';
+import FullscreenIcon from '@mui/icons-material/Fullscreen';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import FaceIcon from '@mui/icons-material/Face';
+import HeightIcon from '@mui/icons-material/Height';
 
 // Single source of truth for the homepage tool grid (src/app/page.tsx)
 // AND the header nav (src/components/Header.tsx, which derives its nav
@@ -76,6 +87,7 @@ export const categories: ToolCategory[] = [
       { title: '401(k) Calculator', description: 'Project US retirement balance with employer match.', path: '/finance/401k-calculator', icon: <SavingsIcon fontSize="large" color="primary" /> },
       { title: 'VAT Calculator', description: 'Add or remove VAT for UK, EU & more.', path: '/finance/vat-calculator', icon: <ReceiptIcon fontSize="large" color="primary" /> },
       { title: 'Paycheck Calculator', description: 'US take-home pay by state, after federal tax & FICA.', path: '/finance/paycheck-calculator', icon: <CalculateIcon fontSize="large" color="primary" /> },
+      { title: 'Gratuity Calculator', description: 'Calculate your end-of-service gratuity amount.', path: '/finance/gratuity-calculator', icon: <ReceiptIcon fontSize="large" color="primary" /> },
     ],
   },
   {
@@ -113,6 +125,8 @@ export const categories: ToolCategory[] = [
       { title: 'Margin Calculator', description: 'Calculate profit margin & markup.', path: '/utilities/margin-calculator', icon: <PercentIcon fontSize="large" color="primary" /> },
       { title: 'Discount Calculator', description: 'Calculate final price & savings.', path: '/utilities/discount-calculator', icon: <PercentIcon fontSize="large" color="primary" /> },
       { title: 'Tip Calculator', description: 'Calculate restaurant tips & split bills.', path: '/utilities/tip-calculator', icon: <PercentIcon fontSize="large" color="primary" /> },
+      { title: 'Tip Screen', description: 'Fullscreen tipping display for restaurants & POS.', path: '/utilities/tip-screen', icon: <FullscreenIcon fontSize="large" color="primary" /> },
+      { title: 'Fullscreen Test Screens', description: 'Color screens, pixel test, DVD screensaver & pranks.', path: '/utilities/screen-test', icon: <FullscreenIcon fontSize="large" color="primary" /> },
       { title: 'Aspect Ratio', description: 'Find proportional dimensions.', path: '/utilities/aspect-ratio-calculator', icon: <CropIcon fontSize="large" color="primary" /> },
       { title: 'Rule of Three', description: 'Solve proportional problems.', path: '/utilities/rule-of-three-calculator', icon: <CalculateIcon fontSize="large" color="primary" /> },
       { title: 'Time Calculator', description: 'Add/subtract time durations.', path: '/utilities/time-calculator', icon: <EventIcon fontSize="large" color="primary" /> },
@@ -152,6 +166,9 @@ export const categories: ToolCategory[] = [
       { title: 'Text Merger', description: 'Merge two lists of text line by line.', path: '/tools/text-merger', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
       { title: 'Color Palette Generator', description: 'Generate beautiful random colors.', path: '/tools/color-palette-generator', icon: <ChangeHistoryIcon fontSize="large" color="primary" /> },
       { title: 'Contrast Checker', description: 'Check WCAG color accessibility.', path: '/tools/contrast-checker', icon: <ArticleIcon fontSize="large" color="primary" /> },
+      { title: 'PDF Tools', description: 'Merge, split, rotate, watermark & convert PDFs.', path: '/tools/pdf-tools', icon: <PictureAsPdfIcon fontSize="large" color="primary" /> },
+      { title: 'Face Shape Detector', description: 'Find your face shape from a photo.', path: '/tools/face-shape-detector', icon: <FaceIcon fontSize="large" color="primary" /> },
+      { title: 'Height Comparison', description: 'Compare heights with scaled bars.', path: '/tools/height-comparison', icon: <HeightIcon fontSize="large" color="primary" /> },
     ],
   },
   {
@@ -177,6 +194,8 @@ export const categories: ToolCategory[] = [
       { title: 'Palindrome Checker', description: 'Check if text is a palindrome.', path: '/text-tools/palindrome-checker', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
       { title: 'Text Case Mixer', description: 'Random or alternating casing.', path: '/text-tools/text-case-mixer', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
       { title: 'Word Wrap Tool', description: 'Wrap text to a column limit.', path: '/text-tools/word-wrap-tool', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Word Scrambler', description: 'Scramble letters in words or text.', path: '/text-tools/word-scrambler', icon: <ShuffleIcon fontSize="large" color="primary" /> },
+      { title: 'Leetspeak Converter', description: 'Convert text to 1337 speak.', path: '/text-tools/leetspeak-converter', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
     ],
   },
   {
@@ -225,6 +244,12 @@ export const categories: ToolCategory[] = [
       { title: 'JSON to YAML', description: 'Convert JSON to YAML format.', path: '/converters/json-to-yaml-converter', icon: <ArticleIcon fontSize="large" color="primary" /> },
       { title: 'Base64 to Image', description: 'Decode Base64 strings to images.', path: '/converters/base64-to-image', icon: <ImageIcon fontSize="large" color="primary" /> },
       { title: 'Image to Base64', description: 'Encode images to Base64 strings.', path: '/converters/image-to-base64', icon: <ImageIcon fontSize="large" color="primary" /> },
+      { title: 'Length Converter', description: 'Convert meters, feet, miles, inches & more.', path: '/converters/length-converter', icon: <StraightenIcon fontSize="large" color="primary" /> },
+      { title: 'Temperature Converter', description: 'Convert Celsius, Fahrenheit & Kelvin.', path: '/converters/temperature-converter', icon: <DeviceThermostatIcon fontSize="large" color="primary" /> },
+      { title: 'Area Converter', description: 'Convert square meters, acres, hectares & more.', path: '/converters/area-converter', icon: <CropSquareIcon fontSize="large" color="primary" /> },
+      { title: 'Volume Converter', description: 'Convert liters, gallons, cups & more.', path: '/converters/volume-converter', icon: <LocalDrinkIcon fontSize="large" color="primary" /> },
+      { title: 'Weight Converter', description: 'Convert kilograms, pounds, ounces & more.', path: '/converters/weight-converter', icon: <ScaleIcon fontSize="large" color="primary" /> },
+      { title: 'Time Converter', description: 'Convert seconds, minutes, hours, days & more.', path: '/converters/time-converter', icon: <ScheduleIcon fontSize="large" color="primary" /> },
     ],
   },
   {

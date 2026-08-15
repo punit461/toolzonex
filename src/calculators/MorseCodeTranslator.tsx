@@ -124,6 +124,26 @@ const MorseCodeTranslator = () => {
       <Typography variant="body1">
         Morse code is a method of transmitting text information as a series of on-off tones, lights, or clicks. It uses dots (`.`) and dashes (`-`) to represent the letters of the alphabet, numerals, and punctuation marks. This tool uses standard International Morse Code, separating letters with a space and words with a forward slash (`/`).
       </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Encoding &quot;SOS&quot; produces <code>... --- ...</code>; decoding it back returns &quot;SOS&quot;.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Learning or practicing Morse code for amateur radio licensing.</li>
+          <li>Decoding Morse code messages from puzzles or historical texts.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How are words separated in Morse code?</Typography>
+      <Typography variant="body1">
+        Letters within a word are separated by a single space, and words are separated by a forward slash
+        (<code>/</code>).
+      </Typography>
     </>
   );
 

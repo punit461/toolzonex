@@ -120,6 +120,33 @@ const RandomLinePicker = () => {
       <Typography variant="body1">
         Need to pick a random winner for a giveaway? Looking to randomly select a student's name, a restaurant for dinner, or a task to do next? Just paste your list of items and our random line picker will fairly select one or more items for you.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Paste your list of items, one per line, and click "Pick" to instantly select one or more entries at
+        random.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Picking a random winner from a list of giveaway entrants.</li>
+          <li>Randomly selecting a name, task, or option from a list.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Pasting a list of 20 giveaway entrants and clicking "Pick" instantly selects one at random with equal
+        odds for every entry.
+      </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is the selection truly random and fair?</Typography>
+      <Typography variant="body1">
+        Yes — every line has an equal chance of being picked, using your browser&apos;s random number
+        generator.
+      </Typography>
     </>
   );
 

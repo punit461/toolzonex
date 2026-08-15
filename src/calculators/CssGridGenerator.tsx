@@ -132,6 +132,31 @@ const CssGridGenerator = () => {
       <Typography variant="body1">
         Visually generate CSS Grid layouts. Define your columns, rows, and gaps, and see the grid preview in real-time. Instantly copy the CSS snippet to jumpstart your webpage layouts.
       </Typography>
+
+      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="body1">
+        Set the number of columns, rows, and gap size using the controls, watch the live preview update, then
+        copy the generated CSS Grid code.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        A 3-column, 2-row grid with a 16px gap generates <code>grid-template-columns: repeat(3, 1fr); gap: 16px;</code> — ready to paste directly into your stylesheet.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Prototyping a page or card layout visually before writing CSS by hand.</li>
+          <li>Learning CSS Grid syntax by seeing the generated code update live.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Do I need to know CSS Grid to use this?</Typography>
+      <Typography variant="body1">
+        No — adjust the visual controls and the tool generates the correct CSS Grid syntax for you.
+      </Typography>
     </>
   );
 
