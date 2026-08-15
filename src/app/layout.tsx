@@ -38,8 +38,12 @@ export const metadata: Metadata = {
   creator: "ToolZoneX",
   publisher: "ToolZoneX",
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.png',
   },
   robots: {
     index: true,
