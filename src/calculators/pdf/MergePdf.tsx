@@ -5,16 +5,18 @@ import { Box, Typography, Button, List, ListItem, ListItemText, IconButton, Aler
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { PDFDocument } from 'pdf-lib';
+import { PDFDocument } from '@cantoo/pdf-lib';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 import PdfFileDropzone from './PdfFileDropzone';
 import { downloadBytes, readFileAsArrayBuffer } from './pdfUtils';
+import { usePdfPasswordUnlock } from './usePdfPasswordUnlock';
 
 const MergePdfContent = () => {
   const [files, setFiles] = useState<File[]>([]);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const { unlock, dialog } = usePdfPasswordUnlock();
 
   const addFiles = (newFiles: File[]) => setFiles((prev) => [...prev, ...newFiles]);
   const removeFile = (index: number) => setFiles((prev) => prev.filter((_, i) => i !== index));
@@ -39,14 +41,16 @@ const MergePdfContent = () => {
       const merged = await PDFDocument.create();
       for (const file of files) {
         const bytes = await readFileAsArrayBuffer(file);
-        const doc = await PDFDocument.load(bytes);
+        const doc = await unlock(bytes);
         const pages = await merged.copyPages(doc, doc.getPageIndices());
         pages.forEach((p) => merged.addPage(p));
       }
       const output = await merged.save();
       downloadBytes(output, 'merged.pdf');
     } catch (e) {
-      setError('Could not merge these files. Make sure they are all valid, non-password-protected PDFs.');
+      if (!(e instanceof Error && e.message.includes('cancelled'))) {
+        setError('Could not merge these files. Make sure they are all valid PDFs.');
+      }
     } finally {
       setBusy(false);
     }
@@ -54,6 +58,7 @@ const MergePdfContent = () => {
 
   return (
     <Box>
+      {dialog}
       <PdfFileDropzone multiple onFilesSelected={addFiles} label="PDF file" />
 
       {files.length > 0 && (
@@ -117,7 +122,7 @@ const MergePdf = () => {
         <ul>
           <li><strong>Is my file uploaded to a server?</strong> No — everything happens locally in your browser using JavaScript. Your PDFs are never uploaded anywhere.</li>
           <li><strong>Is there a file size or page limit?</strong> No hard limit is enforced, but very large PDFs may be slower to process since everything runs in your browser&apos;s memory.</li>
-          <li><strong>Can I merge password-protected PDFs?</strong> Not currently — remove the password first using your PDF reader, then merge.</li>
+          <li><strong>Can I merge password-protected PDFs?</strong> Yes — if a file is locked, you&apos;ll be prompted for its password before it&apos;s added to the merge.</li>
         </ul>
       </Box>
     </>

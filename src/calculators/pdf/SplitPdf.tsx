@@ -2,17 +2,19 @@
 
 import { useState } from 'react';
 import { Box, Typography, Button, TextField, Alert } from '@mui/material';
-import { PDFDocument } from 'pdf-lib';
+import { PDFDocument } from '@cantoo/pdf-lib';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 import PdfFileDropzone from './PdfFileDropzone';
 import { downloadBytes, readFileAsArrayBuffer } from './pdfUtils';
+import { usePdfPasswordUnlock } from './usePdfPasswordUnlock';
 
 const SplitPdfContent = () => {
   const [file, setFile] = useState<File | null>(null);
   const [splitAfter, setSplitAfter] = useState('');
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const { unlock, dialog } = usePdfPasswordUnlock();
 
   const handleSplit = async () => {
     setError('');
@@ -23,7 +25,7 @@ const SplitPdfContent = () => {
     setBusy(true);
     try {
       const bytes = await readFileAsArrayBuffer(file);
-      const doc = await PDFDocument.load(bytes);
+      const doc = await unlock(bytes);
       const pageCount = doc.getPageCount();
 
       const breakpoints = splitAfter
@@ -47,7 +49,9 @@ const SplitPdfContent = () => {
         downloadBytes(output, `${baseName}-part${i + 1}.pdf`);
       }
     } catch (e) {
-      setError('Could not split this file. Make sure it is a valid, non-password-protected PDF.');
+      if (!(e instanceof Error && e.message.includes('cancelled'))) {
+        setError('Could not split this file. Make sure it is a valid PDF.');
+      }
     } finally {
       setBusy(false);
     }
@@ -55,6 +59,7 @@ const SplitPdfContent = () => {
 
   return (
     <Box>
+      {dialog}
       <PdfFileDropzone onFilesSelected={(files) => setFile(files[0] ?? null)} label="PDF file" selectedNames={file ? [file.name] : []} />
 
       <Box sx={{ mt: 3 }}>

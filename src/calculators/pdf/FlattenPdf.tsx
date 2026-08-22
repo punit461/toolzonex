@@ -2,17 +2,18 @@
 
 import { useState } from 'react';
 import { Box, Typography, Button, Alert } from '@mui/material';
-import { PDFDocument } from 'pdf-lib';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 import PdfFileDropzone from './PdfFileDropzone';
 import { downloadBytes, readFileAsArrayBuffer } from './pdfUtils';
+import { usePdfPasswordUnlock } from './usePdfPasswordUnlock';
 
 const FlattenPdfContent = () => {
   const [file, setFile] = useState<File | null>(null);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
   const [fieldCount, setFieldCount] = useState<number | null>(null);
+  const { unlock, dialog } = usePdfPasswordUnlock();
 
   const handleFlatten = async () => {
     setError('');
@@ -20,7 +21,7 @@ const FlattenPdfContent = () => {
     setBusy(true);
     try {
       const bytes = await readFileAsArrayBuffer(file);
-      const doc = await PDFDocument.load(bytes);
+      const doc = await unlock(bytes);
       const form = doc.getForm();
       const fields = form.getFields();
       setFieldCount(fields.length);
@@ -35,7 +36,9 @@ const FlattenPdfContent = () => {
       const output = await doc.save();
       downloadBytes(output, file.name.replace(/\.pdf$/i, '') + '-flattened.pdf');
     } catch (e) {
-      setError('Could not flatten this file. Make sure it is a valid, non-password-protected PDF.');
+      if (!(e instanceof Error && e.message.includes('cancelled'))) {
+        setError('Could not flatten this file. Make sure it is a valid PDF.');
+      }
     } finally {
       setBusy(false);
     }
@@ -43,6 +46,7 @@ const FlattenPdfContent = () => {
 
   return (
     <Box>
+      {dialog}
       <PdfFileDropzone onFilesSelected={(files) => { setFile(files[0] ?? null); setFieldCount(null); }} label="PDF file" selectedNames={file ? [file.name] : []} />
 
       {fieldCount !== null && fieldCount > 0 && (

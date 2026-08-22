@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Box, Typography, Button, TextField, Snackbar, Alert } from '@mui/material';
+import { Box, Typography, Button, Snackbar, Alert } from '@mui/material';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
+import LineNumberedTextarea from '../../components/ui/LineNumberedTextarea';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import DeleteIcon from '@mui/icons-material/Delete';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -77,6 +78,7 @@ const OnlineNotepad = () => {
         <li><strong>Auto-Save:</strong> Your text is automatically saved to your browser's local storage. Even if you accidentally close the tab or refresh the page, your notes will still be here when you return.</li>
         <li><strong>Privacy First:</strong> Everything you type stays on your device. We do not transmit your notes to any external database.</li>
         <li><strong>Word & Character Count:</strong> Instantly see how long your text is at the bottom of the editor.</li>
+        <li><strong>Line Numbers:</strong> Every line is numbered on the left, making it easy to reference or count lines in lists, code, or scripts.</li>
         <li><strong>One-Click Download:</strong> Export your notes as a standard `.txt` file to your computer instantly.</li>
       </ul>
 
@@ -116,23 +118,12 @@ const OnlineNotepad = () => {
           </Button>
         </Box>
 
-        <TextField
-          multiline
+        <LineNumberedTextarea
+          value={text}
+          onChange={handleChange}
+          placeholder="Start typing your notes here..."
           minRows={15}
           maxRows={30}
-          fullWidth
-          variant="outlined"
-          placeholder="Start typing your notes here..."
-          value={text}
-          onChange={(e) => handleChange(e.target.value)}
-          sx={{
-            bgcolor: 'background.paper',
-            '& .MuiInputBase-root': {
-              fontFamily: '"Inter", monospace',
-              fontSize: '1.1rem',
-              lineHeight: 1.6,
-            }
-          }}
         />
 
         <Box sx={{ display: 'flex', justifyContent: 'space-between', color: 'text.secondary', px: 1 }}>

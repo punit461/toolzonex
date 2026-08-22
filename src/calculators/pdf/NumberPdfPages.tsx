@@ -2,11 +2,12 @@
 
 import { useState } from 'react';
 import { Box, Typography, Button, Alert, FormControl, InputLabel, Select, MenuItem, TextField } from '@mui/material';
-import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
+import { StandardFonts, rgb } from '@cantoo/pdf-lib';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 import PdfFileDropzone from './PdfFileDropzone';
 import { downloadBytes, readFileAsArrayBuffer } from './pdfUtils';
+import { usePdfPasswordUnlock } from './usePdfPasswordUnlock';
 
 const POSITIONS = {
   'bottom-center': { label: 'Bottom Center' },
@@ -20,6 +21,7 @@ const NumberPdfPagesContent = () => {
   const [startAt, setStartAt] = useState(1);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const { unlock, dialog } = usePdfPasswordUnlock();
 
   const handleNumber = async () => {
     setError('');
@@ -27,7 +29,7 @@ const NumberPdfPagesContent = () => {
     setBusy(true);
     try {
       const bytes = await readFileAsArrayBuffer(file);
-      const doc = await PDFDocument.load(bytes);
+      const doc = await unlock(bytes);
       const font = await doc.embedFont(StandardFonts.Helvetica);
       const margin = 28;
 
@@ -47,7 +49,9 @@ const NumberPdfPagesContent = () => {
       const output = await doc.save();
       downloadBytes(output, file.name.replace(/\.pdf$/i, '') + '-numbered.pdf');
     } catch (e) {
-      setError('Could not number this file. Make sure it is a valid, non-password-protected PDF.');
+      if (!(e instanceof Error && e.message.includes('cancelled'))) {
+        setError('Could not number this file. Make sure it is a valid PDF.');
+      }
     } finally {
       setBusy(false);
     }
@@ -55,6 +59,7 @@ const NumberPdfPagesContent = () => {
 
   return (
     <Box>
+      {dialog}
       <PdfFileDropzone onFilesSelected={(files) => setFile(files[0] ?? null)} label="PDF file" selectedNames={file ? [file.name] : []} />
 
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mt: 3 }}>

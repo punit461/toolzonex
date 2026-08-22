@@ -2,17 +2,18 @@
 
 import { useState } from 'react';
 import { Box, Typography, Button, TextField, Alert } from '@mui/material';
-import { PDFDocument } from 'pdf-lib';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 import PdfFileDropzone from './PdfFileDropzone';
 import { downloadBytes, readFileAsArrayBuffer, parsePageRanges } from './pdfUtils';
+import { usePdfPasswordUnlock } from './usePdfPasswordUnlock';
 
 const DeletePdfPagesContent = () => {
   const [file, setFile] = useState<File | null>(null);
   const [pages, setPages] = useState('');
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const { unlock, dialog } = usePdfPasswordUnlock();
 
   const handleDelete = async () => {
     setError('');
@@ -20,7 +21,7 @@ const DeletePdfPagesContent = () => {
     setBusy(true);
     try {
       const bytes = await readFileAsArrayBuffer(file);
-      const doc = await PDFDocument.load(bytes);
+      const doc = await unlock(bytes);
       const pageCount = doc.getPageCount();
       const toDelete = new Set(parsePageRanges(pages, pageCount));
       if (toDelete.size === 0) { setError('Enter at least one valid page number to delete.'); setBusy(false); return; }
@@ -32,7 +33,9 @@ const DeletePdfPagesContent = () => {
       const output = await doc.save();
       downloadBytes(output, file.name.replace(/\.pdf$/i, '') + '-edited.pdf');
     } catch (e) {
-      setError('Could not edit this file. Make sure it is a valid, non-password-protected PDF.');
+      if (!(e instanceof Error && e.message.includes('cancelled'))) {
+        setError('Could not edit this file. Make sure it is a valid PDF.');
+      }
     } finally {
       setBusy(false);
     }
@@ -40,6 +43,7 @@ const DeletePdfPagesContent = () => {
 
   return (
     <Box>
+      {dialog}
       <PdfFileDropzone onFilesSelected={(files) => setFile(files[0] ?? null)} label="PDF file" selectedNames={file ? [file.name] : []} />
 
       <Box sx={{ mt: 3 }}>

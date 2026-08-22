@@ -2,11 +2,12 @@
 
 import { useState } from 'react';
 import { Box, Typography, Button, Alert, TextField, Slider } from '@mui/material';
-import { PDFDocument, StandardFonts, rgb, degrees } from 'pdf-lib';
+import { StandardFonts, rgb, degrees } from '@cantoo/pdf-lib';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 import PdfFileDropzone from './PdfFileDropzone';
 import { downloadBytes, readFileAsArrayBuffer } from './pdfUtils';
+import { usePdfPasswordUnlock } from './usePdfPasswordUnlock';
 
 const WatermarkPdfContent = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -14,6 +15,7 @@ const WatermarkPdfContent = () => {
   const [opacity, setOpacity] = useState(0.25);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const { unlock, dialog } = usePdfPasswordUnlock();
 
   const handleWatermark = async () => {
     setError('');
@@ -22,7 +24,7 @@ const WatermarkPdfContent = () => {
     setBusy(true);
     try {
       const bytes = await readFileAsArrayBuffer(file);
-      const doc = await PDFDocument.load(bytes);
+      const doc = await unlock(bytes);
       const font = await doc.embedFont(StandardFonts.HelveticaBold);
 
       doc.getPages().forEach((page) => {
@@ -43,7 +45,9 @@ const WatermarkPdfContent = () => {
       const output = await doc.save();
       downloadBytes(output, file.name.replace(/\.pdf$/i, '') + '-watermarked.pdf');
     } catch (e) {
-      setError('Could not watermark this file. Make sure it is a valid, non-password-protected PDF.');
+      if (!(e instanceof Error && e.message.includes('cancelled'))) {
+        setError('Could not watermark this file. Make sure it is a valid PDF.');
+      }
     } finally {
       setBusy(false);
     }
@@ -51,6 +55,7 @@ const WatermarkPdfContent = () => {
 
   return (
     <Box>
+      {dialog}
       <PdfFileDropzone onFilesSelected={(files) => setFile(files[0] ?? null)} label="PDF file" selectedNames={file ? [file.name] : []} />
 
       <Box sx={{ mt: 3 }}>

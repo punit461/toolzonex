@@ -1,13 +1,16 @@
 'use client';
 
-import { useState } from 'react';
-import { Box, Button, Typography, TextField, Paper } from '@mui/material';
+import { useRef, useState } from 'react';
+import { Box, Typography, TextField, Paper } from '@mui/material';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
+import PrintableArea from '../../components/ui/PrintableArea';
+import PrintDownloadButtons from '../../components/ui/PrintDownloadButtons';
 
 const MultiplicationTableGeneratorContent = () => {
   const [baseNumber, setBaseNumber] = useState(7);
   const [upTo, setUpTo] = useState(12);
+  const printRef = useRef<HTMLDivElement>(null);
 
   const generateTable = () => {
     const table = [];
@@ -47,26 +50,24 @@ const MultiplicationTableGeneratorContent = () => {
           InputProps={{ inputProps: { min: 1, max: 100 } }}
         />
 
-        <Button variant="contained" size="large" onClick={() => window.print()}>
-          Print Table
-        </Button>
+        <PrintDownloadButtons targetRef={printRef} fileName={`multiplication-table-${baseNumber}`} printLabel="Print Table" downloadLabel="Download Table" />
       </Box>
 
       {/* Output */}
-      <Box>
+      <PrintableArea ref={printRef}>
         <Typography variant="subtitle1" fontWeight="600" mb={2}>
           Multiplication Table for {baseNumber}
         </Typography>
-        
+
         <Paper sx={{ p: 3, bgcolor: 'background.default', border: '1px solid', borderColor: 'divider', maxHeight: 500, overflowY: 'auto' }}>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
             {tableData.map((row, index) => (
-              <Box 
-                key={index} 
-                sx={{ 
-                  display: 'flex', 
-                  justifyContent: 'space-between', 
-                  p: 1.5, 
+              <Box
+                key={index}
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  p: 1.5,
                   bgcolor: index % 2 === 0 ? 'white' : 'rgba(0,0,0,0.02)',
                   borderRadius: 1,
                   fontSize: '1.2rem',
@@ -86,7 +87,7 @@ const MultiplicationTableGeneratorContent = () => {
             ))}
           </Box>
         </Paper>
-      </Box>
+      </PrintableArea>
 
     </Box>
   );

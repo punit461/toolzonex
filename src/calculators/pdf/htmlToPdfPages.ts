@@ -1,4 +1,4 @@
-import { PDFDocument } from 'pdf-lib';
+import { PDFDocument } from '@cantoo/pdf-lib';
 import html2canvas from 'html2canvas';
 
 // A4 at 96dpi
