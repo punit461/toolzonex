@@ -4,13 +4,13 @@ import KeywordDensityAnalyzer from "../../../calculators/KeywordDensityAnalyzer"
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Keyword Density Analyzer - Free SEO Checker Online",
-  description: "Check the keyword density of your text for SEO optimization. Free online tool to analyze keyword frequency and avoid keyword stuffing.",
-  keywords: ["keyword density analyzer", "keyword density checker", "seo keyword frequency", "word density counter", "avoid keyword stuffing"],
+  title: "Keyword Density Analysis Tool - Free SEO Checker",
+  description: "Run a keyword density analysis on text or webpage copy. See keyword frequency, word count, and percentage usage in a free online SEO checker.",
+  keywords: ["keyword density analysis", "keyword density analyzer", "keyword density checker", "seo keyword frequency", "word density counter", "keyword analyse tool"],
   alternates: { canonical: "/text-tools/keyword-density-analyzer" },
   openGraph: {
-    title: "Keyword Density Analyzer - Free SEO Checker Online | ToolZoneX",
-    description: "Check the keyword density of your text for SEO optimization. Free online tool to analyze keyword frequency.",
+    title: "Keyword Density Analysis Tool - Free SEO Checker | ToolZoneX",
+    description: "Run a keyword density analysis on text or webpage copy. See keyword frequency and percentage usage.",
     url: `${SITE_URL}/text-tools/keyword-density-analyzer`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],

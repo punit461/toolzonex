@@ -4,13 +4,13 @@ import WordCounter from "../../../calculators/WordCounter";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Word Counter - Count Words & Characters Online",
-  description: "Count words, characters, sentences, and paragraphs in real-time. Free online word count tool for writers, SEO, and students.",
+  title: "Word Count Calculator - Free Word Counter Online",
+  description: "Use this free word count calculator to count words, characters, sentences, and paragraphs in real time.",
   keywords: ["word counter", "character counter", "count words", "count characters", "letter count", "text stats", "word calculator", "words calculator", "calculate words", "word count calculator"],
   alternates: { canonical: "/text-tools/word-counter" },
   openGraph: {
-    title: "Word Counter - Count Words & Characters Online | ToolZoneX",
-    description: "Count words, characters, sentences, and paragraphs in real-time. Free online word count tool for writers, SEO, and students.",
+    title: "Word Count Calculator - Free Word Counter Online | ToolZoneX",
+    description: "Count words, characters, sentences, and paragraphs in real time with a free word count calculator.",
     url: `${SITE_URL}/text-tools/word-counter`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],

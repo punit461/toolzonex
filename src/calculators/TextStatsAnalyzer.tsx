@@ -24,17 +24,14 @@ const TextStatsAnalyzerContent = () => {
     const consonants = (text.match(/[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/g) || []).length;
     const numbers = (text.match(/[0-9]/g) || []).length;
     const avgWordLength = wordCount > 0 ? (words.join('').length / wordCount).toFixed(2) : 0;
-    
-    // Readability (approximate Flesch-Kincaid Grade Level)
     const syllables = countSyllables(text);
-    let readability = 0;
-    if (wordCount > 0 && sentences > 0) {
-      readability = 0.39 * (wordCount / sentences) + 11.8 * (syllables / wordCount) - 15.59;
-    }
+    const readingGrade = wordCount > 0 && sentences > 0
+      ? Math.max(0, 0.39 * (wordCount / sentences) + 11.8 * (syllables / wordCount) - 15.59)
+      : 0;
 
     setStats({
       characters, wordCount, sentences, lines, vowels, consonants, numbers, avgWordLength, 
-      syllables, readability: Math.max(0, parseFloat(readability.toFixed(1)))
+      syllables, readingGrade: parseFloat(readingGrade.toFixed(1))
     });
   };
 
@@ -86,7 +83,7 @@ const TextStatsAnalyzerContent = () => {
           <Grid item xs={6} md={3}><StatBox label="Numbers" value={stats.numbers} /></Grid>
           <Grid item xs={6} md={3}><StatBox label="Avg Word Length" value={stats.avgWordLength} /></Grid>
           <Grid item xs={6} md={6}><StatBox label="Total Syllables (Est.)" value={stats.syllables} /></Grid>
-          <Grid item xs={6} md={6}><StatBox label="Reading Grade Level" value={stats.readability} /></Grid>
+          <Grid item xs={6} md={6}><StatBox label="Estimated Reading Grade" value={stats.readingGrade} /></Grid>
         </Grid>
       )}
     </Box>
@@ -98,13 +95,13 @@ const TextStatsAnalyzer = () => {
     <>
       <Typography variant="h2">How to use the Text Stats Analyzer?</Typography>
       <Typography variant="body1">
-        Paste any text into the box and click "Analyze". The tool will instantly calculate in-depth metrics including vowels, consonants, syllables, average word length, and a Flesch-Kincaid Reading Grade Level estimate.
+        Paste any text into the box and click "Analyze". The tool instantly calculates in-depth metrics including vowels, consonants, syllables, average word length, and sentence length.
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
-          <li>Checking the reading grade level of an article before publishing.</li>
+          <li>Reviewing the length and structure of an article before publishing.</li>
           <li>Analyzing word and syllable complexity for language learning materials.</li>
         </ul>
       </Box>
@@ -118,7 +115,7 @@ const TextStatsAnalyzer = () => {
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">
         Pasting a 200-word paragraph instantly returns its vowel/consonant counts, syllable count, and an
-        estimated Flesch-Kincaid grade level.
+        average word length, and average sentence length.
       </Typography>
     </>
   );
@@ -126,7 +123,7 @@ const TextStatsAnalyzer = () => {
   return (
     <CalculatorShell
       title="Text Stats Analyzer"
-      description="Advanced text analysis tool. Calculate readability, syllables, vowels, consonants, and word length instantly."
+      description="Analyze characters, words, syllables, vowels, consonants, and sentence length instantly."
       url="/text-tools/text-stats-analyzer"
       content={content}
       category="Text Tools"

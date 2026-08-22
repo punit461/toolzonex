@@ -1,7 +1,7 @@
 // 2025 state income-tax figures for the pilot states. Sourced from each
 // state's published brackets -- these change periodically, verify against
 // the state's Department of Revenue before relying on this for tax planning.
-import { applyBrackets, type FilingStatus, type TaxBracket } from './federalTax';
+import { applyBrackets, FEDERAL_STANDARD_DEDUCTION, type FilingStatus, type TaxBracket } from './federalTax';
 
 export interface StateTaxConfig {
   slug: string;
@@ -194,6 +194,30 @@ export const STATE_TAX_CONFIGS: Record<string, StateTaxConfig> = {
       headOfHousehold: [{ rate: 0, upTo: 10_000 }, { rate: 0.047, upTo: Infinity }],
     },
     notes: 'No tax on the first $10,000 of taxable income, 4.7% above that.',
+  },
+  idaho: {
+    slug: 'idaho',
+    name: 'Idaho',
+    hasIncomeTax: true,
+    standardDeduction: FEDERAL_STANDARD_DEDUCTION,
+    brackets: { single: flatBracket(0.053), marriedJoint: flatBracket(0.053), headOfHousehold: flatBracket(0.053) },
+    notes: 'Flat 5.3% state tax (cut from 5.695%, effective January 1, 2025). Uses the federal standard deduction.',
+  },
+  iowa: {
+    slug: 'iowa',
+    name: 'Iowa',
+    hasIncomeTax: true,
+    standardDeduction: FEDERAL_STANDARD_DEDUCTION,
+    brackets: { single: flatBracket(0.038), marriedJoint: flatBracket(0.038), headOfHousehold: flatBracket(0.038) },
+    notes: 'Flat 3.8% state tax, effective tax year 2025 (Iowa Senate File 2442). Uses the federal standard deduction.',
+  },
+  louisiana: {
+    slug: 'louisiana',
+    name: 'Louisiana',
+    hasIncomeTax: true,
+    standardDeduction: { single: 12_500, marriedJoint: 25_000, headOfHousehold: 25_000 },
+    brackets: { single: flatBracket(0.03), marriedJoint: flatBracket(0.03), headOfHousehold: flatBracket(0.03) },
+    notes: 'Flat 3% state tax, effective tax year 2025. Personal/dependent exemptions were eliminated and replaced by this larger standard deduction.',
   },
 };
 

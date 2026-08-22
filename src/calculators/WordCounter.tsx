@@ -67,7 +67,7 @@ const WordCounterContent = () => {
 const WordCounter = () => {
   const content = (
     <>
-      <Typography variant="h2">How to use the Word Counter?</Typography>
+      <Typography variant="h2">How to use the Word Count Calculator</Typography>
       <Typography variant="body1">
         Simply type or paste your text into the text area above. As you type, the tool will automatically calculate and display the number of words, characters (with and without spaces), sentences, and paragraphs in real-time.
       </Typography>
@@ -103,8 +103,8 @@ const WordCounter = () => {
 
   return (
     <CalculatorShell
-      title="Word Counter"
-      description="Count words, characters, sentences, and paragraphs in real-time. Free online word count tool for writers and students."
+      title="Word Count Calculator"
+      description="Count words, characters, sentences, and paragraphs in real time. Free online word counter for writers and students."
       url="/text-tools/word-counter"
       content={content}
       category="Text Tools"

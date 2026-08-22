@@ -15,7 +15,8 @@ export type BlogTag =
   | 'Investing' | 'Mutual Funds' | 'SIP' | 'PPF' | 'SSY'
   | 'Budgeting' | 'Credit Score' | 'GST' | 'Real Estate'
   | 'Retirement' | 'Salary' | 'Gratuity' | 'NPS' | 'Rebate'
-  | 'Developer' | 'Text' | 'Math' | 'Health' | 'Design' | 'Converter' | 'Generator';
+  | 'Developer' | 'Text' | 'Math' | 'Health' | 'Design' | 'Converter' | 'Generator'
+  | 'AI' | 'Cloud';
 
 interface BlogPost {
   title: string;
@@ -26,6 +27,34 @@ interface BlogPost {
 }
 
 const blogPosts: BlogPost[] = [
+  {
+    title: "JWT Explained: What's Actually Inside a JSON Web Token",
+    excerpt: 'A JWT looks like random noise, but it\'s just base64url — no secret key needed to read it. Here\'s what\'s actually inside, and the mistake that trips up almost every implementation.',
+    date: 'August 2026',
+    path: '/blog/jwt-explained',
+    tags: ['Developer'],
+  },
+  {
+    title: 'Cron Syntax Cheatsheet: How to Read Any Crontab Schedule',
+    excerpt: 'Five fields, one order, and a handful of special characters — once the pattern clicks, you can read any cron expression at a glance.',
+    date: 'August 2026',
+    path: '/blog/cron-syntax-cheatsheet',
+    tags: ['Developer'],
+  },
+  {
+    title: 'How Much Do LLM API Calls Actually Cost? A Practical Guide',
+    excerpt: 'LLM pricing splits input and output tokens, and the two rarely cost the same. Here\'s how the major providers charge and how to estimate your bill.',
+    date: 'August 2026',
+    path: '/blog/llm-api-pricing-guide',
+    tags: ['AI', 'Developer'],
+  },
+  {
+    title: 'Cloud GPU Pricing Explained: Community Cloud vs. Hyperscalers',
+    excerpt: 'The same H100 can cost 3x more depending on where you rent it. Here\'s why cloud GPU pricing varies so much, and how to think about the tradeoff.',
+    date: 'August 2026',
+    path: '/blog/cloud-gpu-pricing-guide',
+    tags: ['AI', 'Cloud', 'Developer'],
+  },
   {
     title: 'New Tax Regime FY 2025-26: Every Change Explained',
     excerpt: 'Budget 2025 brought new slabs, a higher standard deduction, and a wider rebate. See exactly what changed and how it affects your take-home.',
@@ -162,6 +191,7 @@ const TAG_COLORS: Record<string, 'default' | 'primary' | 'secondary' | 'error' |
   Gratuity: 'info', NPS: 'success', Rebate: 'error',
   Developer: 'primary', Text: 'default', Math: 'secondary',
   Health: 'success', Design: 'warning', Converter: 'info', Generator: 'primary',
+  AI: 'secondary', Cloud: 'info',
 };
 
 const BlogList = () => {

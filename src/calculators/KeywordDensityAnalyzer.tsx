@@ -119,20 +119,22 @@ const KeywordDensityAnalyzerContent = () => {
 const KeywordDensityAnalyzer = () => {
   const content = (
     <>
-      <Typography variant="h2">How to use the Keyword Density Analyzer?</Typography>
+      <Typography variant="h2">Keyword density analysis: how it works</Typography>
       <Typography variant="body1">
         Paste your article, blog post, or webpage copy into the text area and click "Analyze". The tool will instantly count the frequency of all meaningful words (ignoring common stop words like 'the', 'and', etc.) and calculate their percentage compared to the total word count.
       </Typography>
 
-      <Typography variant="h2">Why is Keyword Density Important for SEO?</Typography>
+      <Typography variant="h2">Using keyword density analysis for SEO</Typography>
       <Typography variant="body1">
-        Keyword density helps search engines understand what your page is about. If your density is too low, search engines might miss your topic. If it's too high (keyword stuffing), you might get penalized. Most SEO experts recommend keeping your primary keyword density between 1% and 3%. This free checker helps you find that perfect balance.
+        Use the results to spot repeated terms and to check whether your writing reads naturally. There is no universal
+        ideal percentage: useful content should answer the reader&apos;s question clearly, rather than repeat a phrase to
+        reach a target number. This checker makes those patterns easy to review before publishing.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">
-        In a 500-word article, using the phrase &quot;coffee grinder&quot; 10 times gives roughly a 2% keyword
-        density — within the commonly recommended 1-3% range.
+        In a 500-word article, a word used 10 times has a density of roughly 2%. Review that result in context to
+        make sure the wording is still helpful and natural.
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
@@ -144,18 +146,18 @@ const KeywordDensityAnalyzer = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
-      <Typography variant="h3">What&apos;s the ideal keyword density?</Typography>
+      <Typography variant="h3">What&apos;s a good keyword density?</Typography>
       <Typography variant="body1">
-        Most SEO experts suggest 1-3% for a primary keyword — there&apos;s no strict rule, and modern search
-        engines weigh content quality and relevance more than exact keyword percentage.
+        There is no fixed ideal percentage. Use keyword density as an editing signal, then prioritise relevance,
+        clarity, and complete coverage of the topic.
       </Typography>
     </>
   );
 
   return (
     <CalculatorShell
-      title="Keyword Density Analyzer"
-      description="Check the keyword density of your text for SEO optimization. Free online tool to avoid keyword stuffing."
+      title="Keyword Density Analysis Tool"
+      description="Analyze keyword frequency, word count, and percentage usage in text or webpage copy."
       url="/text-tools/keyword-density-analyzer"
       content={content}
       category="Text Tools"

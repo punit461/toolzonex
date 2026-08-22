@@ -153,7 +153,7 @@ const TextReadabilityScoreContent = () => {
 const TextReadabilityScore = () => {
   const content = (
     <>
-      <Typography variant="h2">Free Text Readability Score Calculator</Typography>
+      <Typography variant="h2">Free Flesch-Kincaid Test and Readability Score</Typography>
       <Typography variant="body1">
         Check how easy your text is to read. This tool calculates standard readability metrics including the Flesch Reading Ease score, Flesch-Kincaid Grade Level, and Automated Readability Index (ARI). Perfect for authors, copywriters, and students looking to improve their writing flow.
       </Typography>
@@ -200,8 +200,8 @@ const TextReadabilityScore = () => {
 
   return (
     <CalculatorShell
-      title="Text Readability Score Calculator"
-      description="Calculate Flesch Reading Ease and Flesch-Kincaid Grade level of any text online. Improve your writing clarity."
+      title="Flesch-Kincaid Test & Readability Score Calculator"
+      description="Calculate Flesch Reading Ease, Flesch-Kincaid grade level, and a readability score from any text."
       url="/tools/text-readability-score"
       content={content}
       category="Tools"

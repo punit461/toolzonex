@@ -122,8 +122,8 @@ const VATCalculator = () => {
 
   return (
     <CalculatorShell
-      title="VAT Calculator"
-      description="Add or remove VAT for the UK, EU, and other countries using current standard rates."
+      title="UK VAT Calculator"
+      description="Add or remove 20% UK VAT, or calculate standard VAT for the EU and other countries."
       url="/finance/vat-calculator"
       content={content}
       category="Finance"

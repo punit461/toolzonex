@@ -4,13 +4,13 @@ import TextReadabilityScore from "../../../calculators/TextReadabilityScore";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Text Readability Score Calculator - Flesch Kincaid",
-  description: "Calculate Flesch Reading Ease and Flesch-Kincaid Grade level of any text online. Improve your writing clarity.",
-  keywords: ["text readability score", "flesch reading ease", "flesch kincaid grade level", "readability calculator", "writing clarity check", "flesch kincaid test", "flesch-kincaid calculator", "flesch kincaid calculator", "reading level calculator"],
+  title: "Flesch-Kincaid Test & Readability Score Calculator",
+  description: "Take a free Flesch-Kincaid test online. Calculate Flesch Reading Ease, grade level, and readability score from any text.",
+  keywords: ["flesch kincaid test", "flesch kincaid readability score", "flesch kincaid readibility score", "text readability score", "flesch reading ease", "flesch kincaid grade level", "readability calculator", "flesch-kincaid calculator", "reading level calculator"],
   alternates: { canonical: "/tools/text-readability-score" },
   openGraph: {
-    title: "Text Readability Score Calculator - Flesch Kincaid | ToolZoneX",
-    description: "Calculate Flesch Reading Ease and Flesch-Kincaid Grade level of any text online. Improve your writing clarity.",
+    title: "Flesch-Kincaid Test & Readability Score Calculator | ToolZoneX",
+    description: "Calculate Flesch Reading Ease, Flesch-Kincaid grade level, and a readability score from any text.",
     url: `${SITE_URL}/tools/text-readability-score`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 const toolSchema = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Text Readability Score Calculator",
-  "description": "Calculate Flesch Reading Ease and Flesch-Kincaid Grade level of any text online.",
+  "name": "Flesch-Kincaid Test & Readability Score Calculator",
+  "description": "Calculate Flesch Reading Ease, Flesch-Kincaid grade level, and a readability score from any text.",
   "url": `${SITE_URL}/tools/text-readability-score`,
   "applicationCategory": "EducationalApplication",
   "operatingSystem": "Web Browser",
