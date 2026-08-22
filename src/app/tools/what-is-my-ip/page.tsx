@@ -6,7 +6,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 export const metadata: Metadata = {
   title: "What Is My IP - Find Your Public IP Address",
   description: "Find your public IP address with location information. Free online IP lookup tool with ISP and geographic data.",
-  keywords: ["what is my ip", "find ip address", "public ip", "ip lookup", "ip location", "my ip address", "ip finder", "ip checker", "what is my ip location", "whats my ip location", "where is my ip location", "my ip address location"],
+  keywords: ["what is my ip", "find ip address", "public ip", "ip lookup", "ip location", "my ip address", "ip finder", "ip checker", "what is my ip location", "whats my ip location", "where is my ip location", "my ip address location", "public ip vs private ip", "ipv4 vs ipv6", "should i change my ip address"],
   alternates: { canonical: "/tools/what-is-my-ip" },
   openGraph: {
     title: "What Is My IP - Find Your Public IP Address | ToolZoneX",
@@ -46,6 +46,16 @@ const faqSchema = {
       "@type": "Question",
       "name": "Why does my IP location show the wrong city?",
       "acceptedAnswer": { "@type": "Answer", "text": "IP geolocation is based on which ISP block your address falls in, not GPS. Mobile networks and VPNs often route traffic through a hub in a different city or region, so the result can be off by tens or hundreds of kilometers." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I change my public IP address?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Usually you don't need to — most home connections are already on a dynamic IP that changes on its own whenever your ISP reassigns addresses, such as after a router restart. You'd deliberately change it to get a fresh address if your current one has been rate-limited or blocked by a site, to route around a region restriction, or for extra privacy on public Wi-Fi. That's typically done through a VPN, a proxy, or by asking your ISP for a new lease." }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between an IPv4 and IPv6 address?",
+      "acceptedAnswer": { "@type": "Answer", "text": "IPv4 addresses look like 203.0.113.42 — four numbers separated by dots — and are the older, more limited format, with roughly 4.3 billion possible addresses, most of which are already allocated. IPv6 addresses look like 2001:db8::8a2e:370:7334 and use a far larger address space to keep pace with the number of internet-connected devices. Most home connections still get an IPv4 address by default, which is why that's typically what you see above; some ISPs and mobile carriers now assign IPv6 alongside or instead of it." }
     }
   ]
 };

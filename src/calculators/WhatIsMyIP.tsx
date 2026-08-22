@@ -191,18 +191,37 @@ const WhatIsMyIP = () => {
 
       <Typography variant="h2">What information can be determined from my IP?</Typography>
       <Typography variant="body1">
-        Your IP address can reveal general location information (country, region, city), your Internet 
+        Your IP address can reveal general location information (country, region, city), your Internet
         Service Provider (ISP), and sometimes your approximate coordinates. However, it does not reveal your exact home address or personal identity.
       </Typography>
 
-      <Typography variant="h2">Why check your IP address?</Typography>
+      <Typography variant="h2">Why check your IP address? How it affects you day-to-day</Typography>
       <Typography variant="body1">
-        • Troubleshoot internet connectivity issues
-        • Verify your VPN or proxy is working
-        • Check if you're being blocked or banned from websites
-        • Understand your network configuration
-        • Monitor remote access to your devices
-        • Verify you're connecting from the right location
+        It's easy to ignore your IP until something depends on it. A few places it actually matters:
+      </Typography>
+      <Box component="ul" sx={{ pl: 3, mb: 2 }}>
+        <Typography component="li" variant="body1" sx={{ mb: 1 }}>
+          <strong>Connectivity and troubleshooting</strong> — a wrong or blacklisted IP is often the first thing to rule out when a site won&apos;t load or a connection keeps dropping.
+        </Typography>
+        <Typography component="li" variant="body1" sx={{ mb: 1 }}>
+          <strong>Security and privacy</strong> — your IP exposes your rough location and ISP to any site you visit, which is worth knowing before logging into something sensitive on an unfamiliar network.
+        </Typography>
+        <Typography component="li" variant="body1" sx={{ mb: 1 }}>
+          <strong>Remote access and gaming</strong> — port forwarding, home server access, and some multiplayer setups need your current public IP to connect correctly.
+        </Typography>
+        <Typography component="li" variant="body1" sx={{ mb: 1 }}>
+          <strong>Hosting and allowlisting</strong> — if you run a server or need to be added to an IP allowlist for a client firewall, office VPN, or admin panel, this is the address you&apos;d hand over.
+        </Typography>
+      </Box>
+
+      <Typography variant="h2">Public IP vs. private IP — what's the difference?</Typography>
+      <Typography variant="body1">
+        The address shown above is your <strong>public IP</strong> — the one your router presents to the wider internet,
+        assigned by your ISP. Every device inside your home or office network (phone, laptop, smart TV) instead gets
+        a <strong>private IP</strong>, typically starting with 192.168.x.x or 10.x.x.x, which only works within that local
+        network and is invisible from outside it. If you need a device&apos;s private IP — say, to set up a printer or
+        reach your router&apos;s admin page — check that device&apos;s network settings instead, since this page always
+        reports the public-facing address.
       </Typography>
 
       <Typography variant="h2">FAQs</Typography>
@@ -221,6 +240,22 @@ const WhatIsMyIP = () => {
         IP geolocation is based on which ISP block your address falls in, not GPS. Mobile networks and VPNs
         often route traffic through a hub in a different city or region, so the result can be off by tens or
         hundreds of kilometers.
+      </Typography>
+      <Typography variant="h3">Should I change my public IP address?</Typography>
+      <Typography variant="body1">
+        Usually you don&apos;t need to — most home connections are already on a dynamic IP that changes on its own
+        whenever your ISP reassigns addresses, such as after a router restart. You&apos;d deliberately change it to get
+        a fresh address if your current one has been rate-limited or blocked by a site, to route around a
+        region restriction, or for extra privacy on public Wi-Fi. That&apos;s typically done through a VPN, a proxy,
+        or by asking your ISP for a new lease.
+      </Typography>
+      <Typography variant="h3">What's the difference between an IPv4 and IPv6 address?</Typography>
+      <Typography variant="body1">
+        IPv4 addresses look like 203.0.113.42 — four numbers separated by dots — and are the older, more limited
+        format, with roughly 4.3 billion possible addresses, most of which are already allocated. IPv6 addresses
+        look like 2001:db8::8a2e:370:7334 and use a far larger address space to keep pace with the number of
+        internet-connected devices. Most home connections still get an IPv4 address by default, which is why
+        that&apos;s typically what you see above; some ISPs and mobile carriers now assign IPv6 alongside or instead of it.
       </Typography>
 
       <Typography variant="h2">Example</Typography>

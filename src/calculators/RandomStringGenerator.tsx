@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import { Box, TextField, Button, Typography, FormControlLabel, Checkbox, Paper } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import RefreshIcon from '@mui/icons-material/Refresh';
@@ -135,6 +135,29 @@ const RandomStringGeneratorContent = () => {
   );
 };
 
+const faqs = [
+  {
+    question: 'Can I restrict output to a custom set of characters?',
+    answer: 'Yes — enter your own character set in the "Custom Characters" field and the generator will draw exclusively from that combined pool (or from just your custom set if you uncheck the built-in options).',
+  },
+  {
+    question: 'Is this generator cryptographically secure?',
+    answer: 'Yes. It uses the Web Crypto API\'s crypto.getRandomValues() rather than Math.random(), so the output has cryptographic-grade randomness — suitable for tokens, API keys, and other secret values, not just cosmetic placeholders.',
+  },
+  {
+    question: 'What\'s the maximum length and quantity I can generate?',
+    answer: 'Up to 1000 characters per string and up to 1000 strings in a single batch, all generated locally in your browser with no server round-trip.',
+  },
+  {
+    question: 'What\'s the difference between this and a UUID generator?',
+    answer: 'A UUID follows a fixed 36-character format (8-4-4-4-12 hex digits) designed to guarantee global uniqueness across systems. This tool instead produces strings of any length and character set you choose — better suited for custom-length tokens, test data, or codes that need to match a specific format.',
+  },
+  {
+    question: 'Does generating many strings at once risk duplicates?',
+    answer: 'For any reasonable string length (8+ characters from a mixed character set), the chance of two identical strings appearing even across the maximum batch of 1000 is negligible — each character is drawn independently using a cryptographically secure random source.',
+  },
+];
+
 const RandomStringGenerator = () => {
   const content = (
     <>
@@ -143,11 +166,22 @@ const RandomStringGenerator = () => {
         Specify the length of the string you want, how many strings you need, and the types of characters to include (uppercase, lowercase, numbers, or symbols). You can even add a custom character set to restrict generation entirely to your specific letters. Click Generate to produce them instantly.
       </Typography>
 
+      <Typography variant="h2">How the randomness works</Typography>
+      <Typography variant="body1">
+        Each character is drawn using the Web Crypto API's <code>crypto.getRandomValues()</code>, the same
+        cryptographically secure random source browsers use for security-sensitive operations — not the weaker
+        <code> Math.random()</code> that many simple generators rely on. Everything runs locally in your browser,
+        so generated strings are never sent to a server.
+      </Typography>
+
       <Typography variant="h2">Common Use Cases</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
           <li>Generating unique test IDs, API keys, or coupon codes.</li>
           <li>Creating random tokens for scripts or database seeding.</li>
+          <li>Producing placeholder usernames or dummy records for QA testing.</li>
+          <li>Generating one-time codes or session identifiers for a prototype.</li>
+          <li>Bulk-creating unique reference codes for a spreadsheet import.</li>
         </ul>
       </Box>
 
@@ -157,10 +191,12 @@ const RandomStringGenerator = () => {
       </Typography>
 
       <Typography variant="h2">FAQs</Typography>
-      <Typography variant="h3">Can I restrict output to a custom set of characters?</Typography>
-      <Typography variant="body1">
-        Yes — enter your own character set and the generator will draw exclusively from those characters.
-      </Typography>
+      {faqs.map((f) => (
+        <Fragment key={f.question}>
+          <Typography variant="h3">{f.question}</Typography>
+          <Typography variant="body1">{f.answer}</Typography>
+        </Fragment>
+      ))}
     </>
   );
 
@@ -171,6 +207,7 @@ const RandomStringGenerator = () => {
       url="/generators/random-string-generator"
       content={content}
       category="Generators"
+      faqs={faqs}
     >
       <RandomStringGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

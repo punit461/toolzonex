@@ -4,12 +4,12 @@ import LLMCostCalculator from "../../../calculators/LLMCostCalculator";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "LLM API Cost Calculator - GPT, Claude & Gemini Token Pricing",
+  title: "LLM Cost Calculator — GPT, Claude & Gemini",
   description: "Free calculator to estimate GPT-4o, Claude, and Gemini API costs from token counts. Compare pricing across models and project monthly spend.",
   keywords: ["LLM cost calculator", "GPT API pricing", "Claude API cost", "Gemini API pricing", "token cost calculator", "AI API pricing", "OpenAI cost calculator", "LLM token calculator"],
   alternates: { canonical: "/ai/llm-cost-calculator" },
   openGraph: {
-    title: "LLM API Cost Calculator - GPT, Claude & Gemini Token Pricing | ToolZoneX",
+    title: "LLM Cost Calculator — GPT, Claude & Gemini Pricing | ToolZoneX",
     description: "Estimate GPT-4o, Claude, and Gemini API costs from token counts. Compare pricing across models and project monthly spend.",
     url: `${SITE_URL}/ai/llm-cost-calculator`,
     type: "article",

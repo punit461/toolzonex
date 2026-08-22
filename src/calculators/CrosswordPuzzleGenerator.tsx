@@ -104,12 +104,11 @@ const CrosswordPuzzleGeneratorContent = () => {
                 if (!newGrid[startR + i][c]) {
                   newGrid[startR + i][c] = { char: item.word[i] };
                 }
-                if (i === 0) {
-                  if (!newGrid[startR][c].num) newGrid[startR][c].num = counter;
-                }
               }
-              newDown.push({ num: newGrid[startR][c].num || counter, clue: item.clue });
-              if (!newGrid[startR][c].num) counter++; // Increment if we actually used it
+              const isNewNumber = !newGrid[startR][c].num;
+              if (isNewNumber) newGrid[startR][c].num = counter;
+              newDown.push({ num: newGrid[startR][c].num!, clue: item.clue });
+              if (isNewNumber) counter++;
               placedThisWord = true;
             }
           }
