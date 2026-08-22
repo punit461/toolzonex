@@ -12,35 +12,37 @@ interface VatCountry {
   code: string;
   name: string;
   standardRate: number;
+  currencySymbol: string;
+  locale: string;
 }
 
 // Standard VAT rates by country (%), checked against official/EU sources
 // August 2026. Rates change with national budgets -- always confirm the
 // current rate with the relevant tax authority before filing or invoicing.
 const COUNTRIES: VatCountry[] = [
-  { code: 'gb', name: 'United Kingdom', standardRate: 20 },
-  { code: 'de', name: 'Germany', standardRate: 19 },
-  { code: 'fr', name: 'France', standardRate: 20 },
-  { code: 'ie', name: 'Ireland', standardRate: 23 },
-  { code: 'es', name: 'Spain', standardRate: 21 },
-  { code: 'it', name: 'Italy', standardRate: 22 },
-  { code: 'nl', name: 'Netherlands', standardRate: 21 },
-  { code: 'be', name: 'Belgium', standardRate: 21 },
-  { code: 'at', name: 'Austria', standardRate: 20 },
-  { code: 'pl', name: 'Poland', standardRate: 23 },
-  { code: 'se', name: 'Sweden', standardRate: 25 },
-  { code: 'dk', name: 'Denmark', standardRate: 25 },
-  { code: 'fi', name: 'Finland', standardRate: 25.5 },
-  { code: 'pt', name: 'Portugal', standardRate: 23 },
-  { code: 'lu', name: 'Luxembourg', standardRate: 17 },
-  { code: 'mt', name: 'Malta', standardRate: 18 },
-  { code: 'hu', name: 'Hungary', standardRate: 27 },
-  { code: 'hr', name: 'Croatia', standardRate: 25 },
-  { code: 'ch', name: 'Switzerland (non-EU)', standardRate: 8.1 },
+  { code: 'gb', name: 'United Kingdom', standardRate: 20, currencySymbol: '£', locale: 'en-GB' },
+  { code: 'de', name: 'Germany', standardRate: 19, currencySymbol: '€', locale: 'de-DE' },
+  { code: 'fr', name: 'France', standardRate: 20, currencySymbol: '€', locale: 'fr-FR' },
+  { code: 'ie', name: 'Ireland', standardRate: 23, currencySymbol: '€', locale: 'en-IE' },
+  { code: 'es', name: 'Spain', standardRate: 21, currencySymbol: '€', locale: 'es-ES' },
+  { code: 'it', name: 'Italy', standardRate: 22, currencySymbol: '€', locale: 'it-IT' },
+  { code: 'nl', name: 'Netherlands', standardRate: 21, currencySymbol: '€', locale: 'nl-NL' },
+  { code: 'be', name: 'Belgium', standardRate: 21, currencySymbol: '€', locale: 'nl-BE' },
+  { code: 'at', name: 'Austria', standardRate: 20, currencySymbol: '€', locale: 'de-AT' },
+  { code: 'pl', name: 'Poland', standardRate: 23, currencySymbol: 'zł', locale: 'pl-PL' },
+  { code: 'se', name: 'Sweden', standardRate: 25, currencySymbol: 'kr', locale: 'sv-SE' },
+  { code: 'dk', name: 'Denmark', standardRate: 25, currencySymbol: 'kr', locale: 'da-DK' },
+  { code: 'fi', name: 'Finland', standardRate: 25.5, currencySymbol: '€', locale: 'fi-FI' },
+  { code: 'pt', name: 'Portugal', standardRate: 23, currencySymbol: '€', locale: 'pt-PT' },
+  { code: 'lu', name: 'Luxembourg', standardRate: 17, currencySymbol: '€', locale: 'fr-LU' },
+  { code: 'mt', name: 'Malta', standardRate: 18, currencySymbol: '€', locale: 'en-MT' },
+  { code: 'hu', name: 'Hungary', standardRate: 27, currencySymbol: 'Ft', locale: 'hu-HU' },
+  { code: 'hr', name: 'Croatia', standardRate: 25, currencySymbol: '€', locale: 'hr-HR' },
+  { code: 'ch', name: 'Switzerland (non-EU)', standardRate: 8.1, currencySymbol: 'CHF', locale: 'de-CH' },
 ];
 
-const formatMoney = (value: number) =>
-  value.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const formatMoney = (value: number, country: VatCountry) =>
+  `${country.currencySymbol} ${value.toLocaleString(country.locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
 const VATCalculator = () => {
   const [countryCode, setCountryCode] = useState('gb');
@@ -148,6 +150,7 @@ const VATCalculator = () => {
               value={amount}
               onFocus={(e) => e.target.select()}
               onChange={(e) => setAmount(e.target.value === '' ? 0 : Number(e.target.value))}
+              slotProps={{ input: { startAdornment: <InputAdornment position="start">{selectedCountry.currencySymbol}</InputAdornment> } }}
             />
           </Box>
 
@@ -195,17 +198,17 @@ const VATCalculator = () => {
               {mode === 'add' ? 'Gross Amount (incl. VAT)' : 'Net Amount (excl. VAT)'}
             </Typography>
             <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
-              {formatMoney(mode === 'add' ? grossAmount : netAmount)}
+              {formatMoney(mode === 'add' ? grossAmount : netAmount, selectedCountry)}
             </Typography>
 
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
               <Box>
                 <Typography variant="body2" color="text.secondary">Net Amount</Typography>
-                <Typography variant="h6">{formatMoney(netAmount)}</Typography>
+                <Typography variant="h6">{formatMoney(netAmount, selectedCountry)}</Typography>
               </Box>
               <Box>
                 <Typography variant="body2" color="text.secondary">VAT ({rate}%)</Typography>
-                <Typography variant="h6">{formatMoney(vatAmount)}</Typography>
+                <Typography variant="h6">{formatMoney(vatAmount, selectedCountry)}</Typography>
               </Box>
             </Box>
           </Box>

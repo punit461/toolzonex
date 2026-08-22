@@ -1,15 +1,17 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Box, TextField, Typography, Slider, InputAdornment } from '@mui/material';
+import { Box, TextField, Typography, Slider, InputAdornment, Select, MenuItem } from '@mui/material';
 import { BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
 import AdSenseUnit from '../components/AdSenseUnit';
+import { CURRENCIES, CurrencyCode, currencySymbol, formatMoney } from './currencyConfig';
 
 const SIPCalculator = () => {
   const [monthlyInvestment, setMonthlyInvestment] = useState<number>(5000);
   const [expectedReturnRate, setExpectedReturnRate] = useState<number>(12);
   const [timePeriod, setTimePeriod] = useState<number>(10);
+  const [currency, setCurrency] = useState<CurrencyCode>('INR');
 
   const { investedAmount, estimatedReturns, totalValue, chartData } = useMemo(() => {
     let currentInvested = 0;
@@ -85,7 +87,19 @@ const SIPCalculator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>
           <Box sx={{ mb: 4 }}>
-            <Typography gutterBottom>Monthly Investment (₹)</Typography>
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <Typography gutterBottom>Monthly Investment</Typography>
+              <Select
+                size="small"
+                value={currency}
+                onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
+                sx={{ minWidth: 110, mb: 1 }}
+              >
+                {CURRENCIES.map((c) => (
+                  <MenuItem key={c.value} value={c.value}>{c.value}</MenuItem>
+                ))}
+              </Select>
+            </Box>
             <TextField
               fullWidth
               variant="outlined"
@@ -95,7 +109,7 @@ const SIPCalculator = () => {
               onChange={(e) => setMonthlyInvestment(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{
                 input: {
-                  startAdornment: <InputAdornment position="start">₹</InputAdornment>,
+                  startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
               }}
             />
@@ -164,17 +178,17 @@ const SIPCalculator = () => {
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Total Value</Typography>
             <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
-              ₹ {totalValue.toLocaleString('en-IN')}
+              {formatMoney(totalValue, currency)}
             </Typography>
 
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 4 }}>
               <Box>
                 <Typography variant="body2" color="text.secondary">Invested Amount</Typography>
-                <Typography variant="h6">₹ {investedAmount.toLocaleString('en-IN')}</Typography>
+                <Typography variant="h6">{formatMoney(investedAmount, currency)}</Typography>
               </Box>
               <Box>
                 <Typography variant="body2" color="text.secondary">Est. Returns</Typography>
-                <Typography variant="h6">₹ {estimatedReturns.toLocaleString('en-IN')}</Typography>
+                <Typography variant="h6">{formatMoney(estimatedReturns, currency)}</Typography>
               </Box>
             </Box>
 
@@ -183,7 +197,7 @@ const SIPCalculator = () => {
                 <BarChart data={chartData}>
                   <XAxis dataKey="year" hide />
                   <YAxis hide />
-                  <RechartsTooltip formatter={(value: any) => `₹ ${value.toLocaleString('en-IN')}`} />
+                  <RechartsTooltip formatter={(value: any) => formatMoney(value, currency)} />
                   <Legend />
                   <Bar dataKey="Invested" stackId="a" fill="#171717" />
                   <Bar dataKey="Returns" stackId="a" fill="#D4AF37" />

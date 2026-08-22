@@ -3,6 +3,11 @@
 // presets (GST only applies in India; other regions use sales tax/VAT or
 // none at all).
 
+import { CurrencyCode, CURRENCIES, currencySymbol, formatMoney } from './currencyConfig';
+
+export { CURRENCIES, currencySymbol, formatMoney };
+export type { CurrencyCode, CurrencyOption } from './currencyConfig';
+
 export type WeightUnit = 'g' | 'kg' | 'ozt';
 
 export interface UnitOption {
@@ -26,30 +31,6 @@ export const RATE_UNITS: UnitOption[] = [
 
 export const gramsFor = (units: UnitOption[], value: string): number =>
   units.find((u) => u.value === value)?.grams ?? 1;
-
-export type CurrencyCode = 'INR' | 'USD' | 'GBP' | 'EUR';
-
-export interface CurrencyOption {
-  value: CurrencyCode;
-  label: string;
-  symbol: string;
-  locale: string;
-}
-
-export const CURRENCIES: CurrencyOption[] = [
-  { value: 'INR', label: 'Indian Rupee (₹)', symbol: '₹', locale: 'en-IN' },
-  { value: 'USD', label: 'US Dollar ($)', symbol: '$', locale: 'en-US' },
-  { value: 'GBP', label: 'British Pound (£)', symbol: '£', locale: 'en-GB' },
-  { value: 'EUR', label: 'Euro (€)', symbol: '€', locale: 'de-DE' },
-];
-
-export const currencySymbol = (code: CurrencyCode): string =>
-  CURRENCIES.find((c) => c.value === code)?.symbol ?? '';
-
-export const formatMoney = (value: number, code: CurrencyCode): string => {
-  const cfg = CURRENCIES.find((c) => c.value === code) ?? CURRENCIES[0];
-  return `${cfg.symbol} ${Math.round(value).toLocaleString(cfg.locale)}`;
-};
 
 export type Region = 'india' | 'us' | 'uk' | 'custom';
 

@@ -1,10 +1,24 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
-import { Box, TextField, Typography, Slider, InputAdornment } from '@mui/material';
+import { Box, TextField, Typography, Slider, InputAdornment, Select, MenuItem } from '@mui/material';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
 import AdSenseUnit from '../components/AdSenseUnit';
+import { CURRENCIES, CurrencyCode, currencySymbol, formatMoney } from './currencyConfig';
+
+const formatBigCurrency = (value: number, currency: CurrencyCode): string => {
+  if (currency === 'INR') return `₹ ${(value / 10000000).toFixed(2)} Cr`;
+  return formatMoney(value, currency);
+};
+
+const compactTick = (value: number, currency: CurrencyCode): string => {
+  if (currency === 'INR') {
+    return value >= 10000000 ? `${(value / 10000000).toFixed(1)}Cr` : `${(value / 100000).toFixed(0)}L`;
+  }
+  const symbol = currencySymbol(currency);
+  return value >= 1000000 ? `${symbol}${(value / 1000000).toFixed(1)}M` : `${symbol}${(value / 1000).toFixed(0)}K`;
+};
 
 const RetirementCalculator = () => {
   const [currentAge, setCurrentAge] = useState<number>(30);
@@ -15,6 +29,7 @@ const RetirementCalculator = () => {
   const [returnPreRetirement, setReturnPreRetirement] = useState<number>(12);
   const [returnPostRetirement, setReturnPostRetirement] = useState<number>(7);
   const [existingCorpus, setExistingCorpus] = useState<number>(500000);
+  const [currency, setCurrency] = useState<CurrencyCode>('INR');
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -147,7 +162,19 @@ const RetirementCalculator = () => {
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' }, gap: 6 }}>
         <Box>
-          <Typography variant="h6" sx={{ mb: 3, fontWeight: 600 }}>Personal Details</Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
+            <Typography variant="h6" sx={{ fontWeight: 600 }}>Personal Details</Typography>
+            <Select
+              size="small"
+              value={currency}
+              onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
+              sx={{ minWidth: 110 }}
+            >
+              {CURRENCIES.map((c) => (
+                <MenuItem key={c.value} value={c.value}>{c.value}</MenuItem>
+              ))}
+            </Select>
+          </Box>
           <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 4 }}>
             <Box>
               <Typography gutterBottom variant="body2">Current Age</Typography>
@@ -166,21 +193,21 @@ const RetirementCalculator = () => {
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography gutterBottom>Current Monthly Expenses (₹)</Typography>
+            <Typography gutterBottom>Current Monthly Expenses</Typography>
             <TextField
               fullWidth variant="outlined" type="number"
               value={Number.isNaN(monthlyExpenses) ? '' : monthlyExpenses} onChange={(e) => setMonthlyExpenses(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
+              slotProps={{ input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
             />
             <Slider value={Number.isNaN(monthlyExpenses) ? 0 : monthlyExpenses} min={10000} max={500000} step={5000} onChange={(_, value) => setMonthlyExpenses(value as number)} sx={{ mt: 2 }} />
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography gutterBottom>Existing Savings / Corpus (₹)</Typography>
+            <Typography gutterBottom>Existing Savings / Corpus</Typography>
             <TextField
               fullWidth variant="outlined" type="number"
               value={Number.isNaN(existingCorpus) ? '' : existingCorpus} onChange={(e) => setExistingCorpus(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
+              slotProps={{ input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
             />
           </Box>
 
@@ -212,25 +239,25 @@ const RetirementCalculator = () => {
                 Retirement Corpus Needed
               </Typography>
               <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 3, fontSize: { xs: '2rem', sm: '2.5rem' } }}>
-                ₹ {(corpusNeeded / 10000000).toFixed(2)} Cr
+                {formatBigCurrency(corpusNeeded, currency)}
               </Typography>
-              
+
               <Typography variant="subtitle2" color="text.secondary" sx={{ textTransform: 'uppercase', letterSpacing: '0.05em', mb: 1, mt: 2 }}>
                 Monthly SIP Required Now
               </Typography>
               <Typography variant="h4" sx={{ fontWeight: 700, color: 'success.main' }}>
-                ₹ {monthlySavingsRequired.toLocaleString('en-IN')}
+                {formatMoney(monthlySavingsRequired, currency)}
               </Typography>
             </Box>
 
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 4, textAlign: 'left' }}>
               <Box sx={{ bgcolor: 'background.paper', p: 2, borderRadius: 1, border: '1px solid' }}>
                 <Typography variant="caption" color="text.secondary" display="block">Current Monthly Exp.</Typography>
-                <Typography variant="body1" fontWeight={600}>₹ {monthlyExpenses.toLocaleString('en-IN')}</Typography>
+                <Typography variant="body1" fontWeight={600}>{formatMoney(monthlyExpenses, currency)}</Typography>
               </Box>
               <Box sx={{ bgcolor: 'background.paper', p: 2, borderRadius: 1, border: '1px solid' }}>
                 <Typography variant="caption" color="text.secondary" display="block">Exp. at Retirement (inflated)</Typography>
-                <Typography variant="body1" fontWeight={600}>₹ {futureExpenses.toLocaleString('en-IN')}</Typography>
+                <Typography variant="body1" fontWeight={600}>{formatMoney(futureExpenses, currency)}</Typography>
               </Box>
             </Box>
 
@@ -241,8 +268,8 @@ const RetirementCalculator = () => {
                   <LineChart data={chartData} margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis dataKey="age" tickFormatter={(value) => `Age ${value}`} />
-                    <YAxis tickFormatter={(value) => value >= 10000000 ? `${(value / 10000000).toFixed(1)}Cr` : `${(value / 100000).toFixed(0)}L`} />
-                    <RechartsTooltip formatter={(value: any) => `₹ ${value.toLocaleString('en-IN')}`} labelFormatter={(value) => `Age ${value}`} />
+                    <YAxis tickFormatter={(value) => compactTick(value, currency)} />
+                    <RechartsTooltip formatter={(value: any) => formatMoney(value, currency)} labelFormatter={(value) => `Age ${value}`} />
                     <Legend />
                     <Line type="monotone" dataKey="Expected Corpus" stroke="#1a56db" strokeWidth={3} dot={false} />
                     <Line type="monotone" dataKey="Total Invested" stroke="#71717A" strokeWidth={2} strokeDasharray="5 5" dot={false} />

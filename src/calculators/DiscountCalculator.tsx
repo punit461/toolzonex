@@ -1,14 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import { Box, TextField, Typography, Paper, InputAdornment } from '@mui/material';
+import { Box, TextField, Typography, Paper, InputAdornment, Select, MenuItem } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
 import AdSenseUnit from '../components/AdSenseUnit';
+import { CURRENCIES, CurrencyCode, currencySymbol, formatMoney } from './currencyConfig';
 
 const DiscountCalculatorContent = () => {
   const [originalPrice, setOriginalPrice] = useState<string>('100');
   const [discountPercent, setDiscountPercent] = useState<string>('20');
-  
+  const [currency, setCurrency] = useState<CurrencyCode>('USD');
+
   const price = parseFloat(originalPrice) || 0;
   const discount = parseFloat(discountPercent) || 0;
 
@@ -20,6 +22,18 @@ const DiscountCalculatorContent = () => {
       
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <Select
+            size="small"
+            value={currency}
+            onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
+            sx={{ minWidth: 110 }}
+          >
+            {CURRENCIES.map((c) => (
+              <MenuItem key={c.value} value={c.value}>{c.value}</MenuItem>
+            ))}
+          </Select>
+        </Box>
         <TextField
           label="Original Price"
           type="number"
@@ -27,7 +41,7 @@ const DiscountCalculatorContent = () => {
           onChange={(e) => setOriginalPrice(e.target.value)}
           fullWidth
           InputProps={{
-            startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
           }}
         />
         <TextField
@@ -48,15 +62,15 @@ const DiscountCalculatorContent = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
             <Typography variant="h6">Final Price</Typography>
-            <Typography variant="h6" fontWeight="bold">${finalPrice.toFixed(2)}</Typography>
+            <Typography variant="h6" fontWeight="bold">{formatMoney(finalPrice, currency)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', border: '1px solid', borderColor: 'divider' }}>
             <Typography variant="subtitle1" color="text.secondary">Amount Saved</Typography>
-            <Typography variant="subtitle1" fontWeight="bold" color="success.main">${savedAmount.toFixed(2)}</Typography>
+            <Typography variant="subtitle1" fontWeight="bold" color="success.main">{formatMoney(savedAmount, currency)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', border: '1px solid', borderColor: 'divider' }}>
             <Typography variant="subtitle1" color="text.secondary">Original Price</Typography>
-            <Typography variant="subtitle1" sx={{ textDecoration: 'line-through' }}>${price.toFixed(2)}</Typography>
+            <Typography variant="subtitle1" sx={{ textDecoration: 'line-through' }}>{formatMoney(price, currency)}</Typography>
           </Paper>
         </Box>
       </Box>

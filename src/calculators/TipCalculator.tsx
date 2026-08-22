@@ -1,15 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import { Box, TextField, Typography, Paper, InputAdornment, Slider } from '@mui/material';
+import { Box, TextField, Typography, Paper, InputAdornment, Slider, Select, MenuItem } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
 import AdSenseUnit from '../components/AdSenseUnit';
+import { CURRENCIES, CurrencyCode, currencySymbol, formatMoney } from './currencyConfig';
 
 const TipCalculatorContent = () => {
   const [billAmount, setBillAmount] = useState<string>('50');
   const [tipPercentage, setTipPercentage] = useState<number>(15);
   const [splitCount, setSplitCount] = useState<number>(1);
-  
+  const [currency, setCurrency] = useState<CurrencyCode>('USD');
+
   const bill = parseFloat(billAmount) || 0;
   
   const tipAmount = bill * (tipPercentage / 100);
@@ -23,6 +25,18 @@ const TipCalculatorContent = () => {
       
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <Select
+            size="small"
+            value={currency}
+            onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
+            sx={{ minWidth: 110 }}
+          >
+            {CURRENCIES.map((c) => (
+              <MenuItem key={c.value} value={c.value}>{c.value}</MenuItem>
+            ))}
+          </Select>
+        </Box>
         <TextField
           label="Bill Amount"
           type="number"
@@ -30,10 +44,10 @@ const TipCalculatorContent = () => {
           onChange={(e) => setBillAmount(e.target.value)}
           fullWidth
           InputProps={{
-            startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
           }}
         />
-        
+
         <Box>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
             <Typography variant="subtitle2" fontWeight="bold">Tip %</Typography>
@@ -76,11 +90,11 @@ const TipCalculatorContent = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
             <Typography variant="h6">Total Bill</Typography>
-            <Typography variant="h6" fontWeight="bold">${totalBill.toFixed(2)}</Typography>
+            <Typography variant="h6" fontWeight="bold">{formatMoney(totalBill, currency)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', border: '1px solid', borderColor: 'divider' }}>
             <Typography variant="subtitle1" color="text.secondary">Tip Amount</Typography>
-            <Typography variant="subtitle1" fontWeight="bold">${tipAmount.toFixed(2)}</Typography>
+            <Typography variant="subtitle1" fontWeight="bold">{formatMoney(tipAmount, currency)}</Typography>
           </Paper>
 
           {splitCount > 1 && (
@@ -88,11 +102,11 @@ const TipCalculatorContent = () => {
               <Typography variant="subtitle2" fontWeight="600" color="text.secondary">Per Person ({splitCount})</Typography>
               <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', border: '1px solid', borderColor: 'divider' }}>
                 <Typography variant="subtitle1" color="text.secondary">Total Per Person</Typography>
-                <Typography variant="subtitle1" fontWeight="bold">${totalPerPerson.toFixed(2)}</Typography>
+                <Typography variant="subtitle1" fontWeight="bold">{formatMoney(totalPerPerson, currency)}</Typography>
               </Paper>
               <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', border: '1px solid', borderColor: 'divider' }}>
                 <Typography variant="subtitle1" color="text.secondary">Tip Per Person</Typography>
-                <Typography variant="subtitle1" fontWeight="bold">${tipPerPerson.toFixed(2)}</Typography>
+                <Typography variant="subtitle1" fontWeight="bold">{formatMoney(tipPerPerson, currency)}</Typography>
               </Paper>
             </Box>
           )}

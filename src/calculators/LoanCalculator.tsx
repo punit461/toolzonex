@@ -1,17 +1,19 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Box, Typography, TextField, Paper, InputAdornment, Grid, Divider } from '@mui/material';
+import { Box, Typography, TextField, Paper, InputAdornment, Grid, Divider, Select, MenuItem } from '@mui/material';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import CalculatorShell from '../components/CalculatorShell';
 import AdSenseUnit from '../components/AdSenseUnit';
+import { CURRENCIES, CurrencyCode, currencySymbol, formatMoney } from './currencyConfig';
 
 const LoanCalculatorContent = () => {
   const [amount, setAmount] = useState<string>('50000');
   const [rate, setRate] = useState<string>('5.5');
   const [years, setYears] = useState<string>('5');
+  const [currency, setCurrency] = useState<CurrencyCode>('USD');
 
   const result = useMemo(() => {
     const principal = parseFloat(amount);
@@ -41,6 +43,18 @@ const LoanCalculatorContent = () => {
       
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <Select
+            size="small"
+            value={currency}
+            onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
+            sx={{ minWidth: 110 }}
+          >
+            {CURRENCIES.map((c) => (
+              <MenuItem key={c.value} value={c.value}>{c.value}</MenuItem>
+            ))}
+          </Select>
+        </Box>
         <TextField
           label="Loan Amount"
           type="number"
@@ -48,7 +62,7 @@ const LoanCalculatorContent = () => {
           onChange={(e) => setAmount(e.target.value)}
           fullWidth
           InputProps={{
-            startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
           }}
         />
         <TextField
@@ -80,7 +94,7 @@ const LoanCalculatorContent = () => {
           <Box sx={{ textAlign: 'center', mb: 4 }}>
             <Typography variant="subtitle1" sx={{ opacity: 0.9 }}>Monthly EMI</Typography>
             <Typography variant="h2" sx={{ fontWeight: 'bold' }}>
-              ${result ? Number(result.emi).toLocaleString() : '0.00'}
+              {result ? formatMoney(Number(result.emi), currency) : formatMoney(0, currency)}
             </Typography>
           </Box>
 
@@ -91,14 +105,14 @@ const LoanCalculatorContent = () => {
               <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <AccountBalanceIcon sx={{ opacity: 0.8, mb: 1 }} />
                 <Typography variant="body2" sx={{ opacity: 0.8 }}>Total Interest</Typography>
-                <Typography variant="h6" fontWeight="bold">${result ? Number(result.totalInterest).toLocaleString() : '0.00'}</Typography>
+                <Typography variant="h6" fontWeight="bold">{result ? formatMoney(Number(result.totalInterest), currency) : formatMoney(0, currency)}</Typography>
               </Box>
             </Grid>
             <Grid item xs={6}>
               <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <AttachMoneyIcon sx={{ opacity: 0.8, mb: 1 }} />
                 <Typography variant="body2" sx={{ opacity: 0.8 }}>Total Payment</Typography>
-                <Typography variant="h6" fontWeight="bold">${result ? Number(result.totalPayment).toLocaleString() : '0.00'}</Typography>
+                <Typography variant="h6" fontWeight="bold">{result ? formatMoney(Number(result.totalPayment), currency) : formatMoney(0, currency)}</Typography>
               </Box>
             </Grid>
           </Grid>

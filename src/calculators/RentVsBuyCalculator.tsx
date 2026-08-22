@@ -1,14 +1,16 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
-import { Box, TextField, Typography, InputAdornment } from '@mui/material';
+import { Box, TextField, Typography, InputAdornment, Select, MenuItem } from '@mui/material';
 import { BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
 import AdSenseUnit from '../components/AdSenseUnit';
+import { CURRENCIES, CurrencyCode, currencySymbol, formatMoney } from './currencyConfig';
 
 const RentVsBuyCalculator = () => {
   const [propertyValue, setPropertyValue] = useState<number>(5000000);
   const [rentAmount, setRentAmount] = useState<number>(20000);
+  const [currency, setCurrency] = useState<CurrencyCode>('INR');
   const [downPaymentPct, setDownPaymentPct] = useState<number>(20);
   const [loanRate, setLoanRate] = useState<number>(8.5);
   const [loanTenure, setLoanTenure] = useState<number>(20);
@@ -130,9 +132,21 @@ const RentVsBuyCalculator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         {/* Rent Section */}
         <Box sx={{ bgcolor: '#f0f9ff', p: 4, borderRadius: 3, border: '1px solid #bae6fd', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
-          <Typography variant="h5" sx={{ mb: 3, color: '#0369a1', fontWeight: 800 }}>Rent Details</Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
+            <Typography variant="h5" sx={{ color: '#0369a1', fontWeight: 800 }}>Rent Details</Typography>
+            <Select
+              size="small"
+              value={currency}
+              onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
+              sx={{ minWidth: 110, bgcolor: 'background.paper' }}
+            >
+              {CURRENCIES.map((c) => (
+                <MenuItem key={c.value} value={c.value}>{c.value}</MenuItem>
+              ))}
+            </Select>
+          </Box>
           <Box sx={{ mb: 4 }}>
-            <Typography gutterBottom fontWeight={600} color="text.secondary">Monthly Rent (₹)</Typography>
+            <Typography gutterBottom fontWeight={600} color="text.secondary">Monthly Rent</Typography>
             <TextField
               fullWidth
               variant="outlined"
@@ -140,7 +154,7 @@ const RentVsBuyCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(rentAmount) ? '' : rentAmount}
               onChange={(e) => setRentAmount(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
+              slotProps={{ input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
             />
           </Box>
           <Box>
@@ -161,7 +175,7 @@ const RentVsBuyCalculator = () => {
         <Box sx={{ bgcolor: '#fefce8', p: 4, borderRadius: 3, border: '1px solid #fef08a', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
           <Typography variant="h5" sx={{ mb: 3, color: '#a16207', fontWeight: 800 }}>Buy Details</Typography>
           <Box sx={{ mb: 4 }}>
-            <Typography gutterBottom fontWeight={600} color="text.secondary">Property Value (₹)</Typography>
+            <Typography gutterBottom fontWeight={600} color="text.secondary">Property Value</Typography>
             <TextField
               fullWidth
               variant="outlined"
@@ -169,7 +183,7 @@ const RentVsBuyCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(propertyValue) ? '' : propertyValue}
               onChange={(e) => setPropertyValue(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
+              slotProps={{ input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
             />
           </Box>
           <Box sx={{ mb: 4, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 3 }}>
@@ -258,7 +272,7 @@ const RentVsBuyCalculator = () => {
                   <BarChart data={chartData}>
                     <XAxis dataKey="year" hide />
                     <YAxis hide />
-                    <RechartsTooltip formatter={(value: any) => `₹ ${value.toLocaleString('en-IN')}`} />
+                    <RechartsTooltip formatter={(value: any) => formatMoney(value, currency)} />
                     <Legend />
                     <Bar dataKey="Rent Cost" fill="#171717" />
                     <Bar dataKey="Net Buy Cost" fill="#D4AF37" />

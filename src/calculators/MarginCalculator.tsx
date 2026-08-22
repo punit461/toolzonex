@@ -1,14 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Box, TextField, Typography, Paper } from '@mui/material';
+import { Box, TextField, Typography, Paper, Select, MenuItem } from '@mui/material';
 import CalculatorShell from '../components/CalculatorShell';
 import AdSenseUnit from '../components/AdSenseUnit';
+import { CURRENCIES, CurrencyCode, currencySymbol, formatMoney } from './currencyConfig';
 
 const MarginCalculatorContent = () => {
   const [cost, setCost] = useState<string>('100');
   const [revenue, setRevenue] = useState<string>('150');
-  
+  const [currency, setCurrency] = useState<CurrencyCode>('USD');
+
   const [grossProfit, setGrossProfit] = useState<string>('50');
   const [margin, setMargin] = useState<string>('33.33');
   const [markup, setMarkup] = useState<string>('50.00');
@@ -65,15 +67,27 @@ const MarginCalculatorContent = () => {
       
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <Select
+            size="small"
+            value={currency}
+            onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
+            sx={{ minWidth: 110 }}
+          >
+            {CURRENCIES.map((c) => (
+              <MenuItem key={c.value} value={c.value}>{c.value}</MenuItem>
+            ))}
+          </Select>
+        </Box>
         <TextField
-          label="Cost ($)"
+          label={`Cost (${currencySymbol(currency)})`}
           type="number"
           value={cost}
           onChange={handleCostChange}
           fullWidth
         />
         <TextField
-          label="Revenue / Selling Price ($)"
+          label={`Revenue / Selling Price (${currencySymbol(currency)})`}
           type="number"
           value={revenue}
           onChange={handleRevenueChange}
@@ -95,7 +109,7 @@ const MarginCalculatorContent = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
             <Typography variant="h6">Gross Profit</Typography>
-            <Typography variant="h6" fontWeight="bold">${grossProfit}</Typography>
+            <Typography variant="h6" fontWeight="bold">{formatMoney(Number(grossProfit) || 0, currency)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', border: '1px solid', borderColor: 'divider' }}>
             <Typography variant="subtitle1" color="text.secondary">Gross Margin</Typography>

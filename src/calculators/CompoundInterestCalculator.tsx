@@ -5,6 +5,7 @@ import { Box, TextField, Typography, Slider, InputAdornment, MenuItem, Select } 
 import { BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
 import AdSenseUnit from '../components/AdSenseUnit';
+import { CURRENCIES, CurrencyCode, currencySymbol, formatMoney } from './currencyConfig';
 
 const FREQUENCIES = [
   { label: 'Annually', value: 1 },
@@ -19,6 +20,7 @@ const CompoundInterestCalculator = () => {
   const [rate, setRate] = useState<number>(10);
   const [years, setYears] = useState<number>(10);
   const [frequency, setFrequency] = useState<number>(1);
+  const [currency, setCurrency] = useState<CurrencyCode>('INR');
 
   const { totalValue, totalInterest, chartData } = useMemo(() => {
     const data = [];
@@ -105,7 +107,19 @@ const CompoundInterestCalculator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>
           <Box sx={{ mb: 4 }}>
-            <Typography gutterBottom>Principal Amount (₹)</Typography>
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <Typography gutterBottom>Principal Amount</Typography>
+              <Select
+                size="small"
+                value={currency}
+                onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
+                sx={{ minWidth: 110, mb: 1 }}
+              >
+                {CURRENCIES.map((c) => (
+                  <MenuItem key={c.value} value={c.value}>{c.value}</MenuItem>
+                ))}
+              </Select>
+            </Box>
             <TextField
               fullWidth
               variant="outlined"
@@ -115,7 +129,7 @@ const CompoundInterestCalculator = () => {
               onChange={(e) => setPrincipal(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{
                 input: {
-                  startAdornment: <InputAdornment position="start">₹</InputAdornment>,
+                  startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
               }}
             />
@@ -197,17 +211,17 @@ const CompoundInterestCalculator = () => {
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Total Value</Typography>
             <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
-              ₹ {totalValue.toLocaleString('en-IN')}
+              {formatMoney(totalValue, currency)}
             </Typography>
 
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 4 }}>
               <Box>
                 <Typography variant="body2" color="text.secondary">Principal</Typography>
-                <Typography variant="h6">₹ {principal.toLocaleString('en-IN')}</Typography>
+                <Typography variant="h6">{formatMoney(principal, currency)}</Typography>
               </Box>
               <Box>
                 <Typography variant="body2" color="text.secondary">Interest Earned</Typography>
-                <Typography variant="h6">₹ {totalInterest.toLocaleString('en-IN')}</Typography>
+                <Typography variant="h6">{formatMoney(totalInterest, currency)}</Typography>
               </Box>
             </Box>
 
@@ -216,7 +230,7 @@ const CompoundInterestCalculator = () => {
                 <BarChart data={chartData}>
                   <XAxis dataKey="year" hide />
                   <YAxis hide />
-                  <RechartsTooltip formatter={(value: any) => `₹ ${value.toLocaleString('en-IN')}`} />
+                  <RechartsTooltip formatter={(value: any) => formatMoney(value, currency)} />
                   <Legend />
                   <Bar dataKey="Principal" stackId="a" fill="#171717" />
                   <Bar dataKey="Interest" stackId="a" fill="#D4AF37" />

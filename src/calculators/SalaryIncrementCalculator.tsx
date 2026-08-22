@@ -1,14 +1,23 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
-import { Box, TextField, Typography, Slider, InputAdornment, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import { Box, TextField, Typography, Slider, InputAdornment, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Select, MenuItem } from '@mui/material';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
 import AdSenseUnit from '../components/AdSenseUnit';
+import { CURRENCIES, CurrencyCode, currencySymbol, formatMoney } from './currencyConfig';
+
+const compactTick = (value: number, currency: CurrencyCode): string => {
+  const symbol = currencySymbol(currency);
+  if (currency === 'INR') return `₹${(value / 100000).toFixed(0)}L`;
+  if (value >= 1000000) return `${symbol}${(value / 1000000).toFixed(1)}M`;
+  return `${symbol}${(value / 1000).toFixed(0)}K`;
+};
 
 const SalaryIncrementCalculator = () => {
   const [currentCTC, setCurrentCTC] = useState<number>(1000000);
   const [incrementPercent, setIncrementPercent] = useState<number>(10);
+  const [currency, setCurrency] = useState<CurrencyCode>('INR');
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -84,7 +93,19 @@ const SalaryIncrementCalculator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>
           <Box sx={{ mb: 4 }}>
-            <Typography gutterBottom>Current CTC (₹ / Year)</Typography>
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <Typography gutterBottom>Current CTC (/ Year)</Typography>
+              <Select
+                size="small"
+                value={currency}
+                onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
+                sx={{ minWidth: 110, mb: 1 }}
+              >
+                {CURRENCIES.map((c) => (
+                  <MenuItem key={c.value} value={c.value}>{c.value}</MenuItem>
+                ))}
+              </Select>
+            </Box>
             <TextField
               fullWidth
               variant="outlined"
@@ -94,7 +115,7 @@ const SalaryIncrementCalculator = () => {
               onChange={(e) => setCurrentCTC(e.target.value === '' ? NaN : Number(e.target.value))}
               slotProps={{
                 input: {
-                  startAdornment: <InputAdornment position="start">₹</InputAdornment>,
+                  startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
               }}
             />
@@ -138,17 +159,17 @@ const SalaryIncrementCalculator = () => {
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">New CTC</Typography>
             <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
-              ₹ {newCTC.toLocaleString('en-IN')}
+              {formatMoney(newCTC, currency)}
             </Typography>
 
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 4 }}>
               <Box>
                 <Typography variant="body2" color="text.secondary">Increment Amount</Typography>
-                <Typography variant="h6" color="success.main">+ ₹ {incrementAmount.toLocaleString('en-IN')}</Typography>
+                <Typography variant="h6" color="success.main">+ {formatMoney(incrementAmount, currency)}</Typography>
               </Box>
               <Box>
                 <Typography variant="body2" color="text.secondary">Monthly Increase</Typography>
-                <Typography variant="h6" color="success.main">+ ₹ {Math.round(monthlyIncrease).toLocaleString('en-IN')}</Typography>
+                <Typography variant="h6" color="success.main">+ {formatMoney(monthlyIncrease, currency)}</Typography>
               </Box>
             </Box>
 
@@ -158,8 +179,8 @@ const SalaryIncrementCalculator = () => {
                   <BarChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis dataKey="name" />
-                    <YAxis tickFormatter={(value) => `₹${(value / 100000).toFixed(0)}L`} />
-                    <RechartsTooltip formatter={(value: any) => `₹ ${value.toLocaleString('en-IN')}`} />
+                    <YAxis tickFormatter={(value) => compactTick(value, currency)} />
+                    <RechartsTooltip formatter={(value: any) => formatMoney(value, currency)} />
                     <Legend />
                     <Bar dataKey="Current CTC" stackId="a" fill="#171717" />
                     <Bar dataKey="Increment Amount" stackId="a" fill="#2e7d32" />
@@ -186,15 +207,15 @@ const SalaryIncrementCalculator = () => {
             <TableBody>
               <TableRow>
                 <TableCell>Annual CTC</TableCell>
-                <TableCell align="right">₹ {currentCTC.toLocaleString('en-IN')}</TableCell>
-                <TableCell align="right">₹ {newCTC.toLocaleString('en-IN')}</TableCell>
-                <TableCell align="right" sx={{ color: 'success.main', fontWeight: 500 }}>+ ₹ {incrementAmount.toLocaleString('en-IN')}</TableCell>
+                <TableCell align="right">{formatMoney(currentCTC, currency)}</TableCell>
+                <TableCell align="right">{formatMoney(newCTC, currency)}</TableCell>
+                <TableCell align="right" sx={{ color: 'success.main', fontWeight: 500 }}>+ {formatMoney(incrementAmount, currency)}</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell>Monthly Gross</TableCell>
-                <TableCell align="right">₹ {Math.round(currentCTC / 12).toLocaleString('en-IN')}</TableCell>
-                <TableCell align="right">₹ {Math.round(newMonthlyCTC).toLocaleString('en-IN')}</TableCell>
-                <TableCell align="right" sx={{ color: 'success.main', fontWeight: 500 }}>+ ₹ {Math.round(monthlyIncrease).toLocaleString('en-IN')}</TableCell>
+                <TableCell align="right">{formatMoney(currentCTC / 12, currency)}</TableCell>
+                <TableCell align="right">{formatMoney(newMonthlyCTC, currency)}</TableCell>
+                <TableCell align="right" sx={{ color: 'success.main', fontWeight: 500 }}>+ {formatMoney(monthlyIncrease, currency)}</TableCell>
               </TableRow>
             </TableBody>
           </Table>

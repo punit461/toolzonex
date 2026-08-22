@@ -1,10 +1,11 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Box, TextField, Typography, Slider, InputAdornment } from '@mui/material';
+import { Box, TextField, Typography, Slider, InputAdornment, Select, MenuItem } from '@mui/material';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from 'recharts';
 import CalculatorShell from '../components/CalculatorShell';
 import AdSenseUnit from '../components/AdSenseUnit';
+import { CURRENCIES, CurrencyCode, currencySymbol, formatMoney } from './currencyConfig';
 
 const COLORS = ['#171717', '#D4AF37'];
 
@@ -12,6 +13,7 @@ const EMICalculator = () => {
   const [principal, setPrincipal] = useState<number>(5000000);
   const [rate, setRate] = useState<number>(8.5);
   const [tenureYears, setTenureYears] = useState<number>(20);
+  const [currency, setCurrency] = useState<CurrencyCode>('INR');
 
   const { emi, totalInterest, totalPayment } = useMemo(() => {
     const p = principal;
@@ -93,7 +95,19 @@ const EMICalculator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>
           <Box sx={{ mb: 4 }}>
-            <Typography gutterBottom>Loan Amount (₹)</Typography>
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <Typography gutterBottom>Loan Amount</Typography>
+              <Select
+                size="small"
+                value={currency}
+                onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
+                sx={{ minWidth: 110, mb: 1 }}
+              >
+                {CURRENCIES.map((c) => (
+                  <MenuItem key={c.value} value={c.value}>{c.value}</MenuItem>
+                ))}
+              </Select>
+            </Box>
             <TextField
               fullWidth
               variant="outlined"
@@ -106,7 +120,7 @@ const EMICalculator = () => {
               }}
               slotProps={{
                 input: {
-                  startAdornment: <InputAdornment position="start">₹</InputAdornment>,
+                  startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
               }}
             />
@@ -178,18 +192,18 @@ const EMICalculator = () => {
               <Typography color="error" sx={{ mt: 2, fontWeight: 600 }}>Please enter a valid interest rate (&gt; 0%)</Typography>
             ) : (
             <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
-              ₹ {emi.toLocaleString('en-IN')}
+              {formatMoney(emi, currency)}
             </Typography>
             )}
 
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 4 }}>
               <Box>
                 <Typography variant="body2" color="text.secondary">Total Interest</Typography>
-                <Typography variant="h6">₹ {totalInterest.toLocaleString('en-IN')}</Typography>
+                <Typography variant="h6">{formatMoney(totalInterest, currency)}</Typography>
               </Box>
               <Box>
                 <Typography variant="body2" color="text.secondary">Total Payment</Typography>
-                <Typography variant="h6">₹ {totalPayment.toLocaleString('en-IN')}</Typography>
+                <Typography variant="h6">{formatMoney(totalPayment, currency)}</Typography>
               </Box>
             </Box>
 
@@ -210,7 +224,7 @@ const EMICalculator = () => {
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Pie>
-                  <RechartsTooltip formatter={(value: any) => `₹ ${value.toLocaleString('en-IN')}`} />
+                  <RechartsTooltip formatter={(value: any) => formatMoney(value, currency)} />
                   <Legend />
                 </PieChart>
               </ResponsiveContainer>
