@@ -126,11 +126,8 @@ const TxtToPdf = () => {
 
   return (
     <CalculatorShell
-      title="Text to PDF"
-      description="Convert plain text into a PDF document. Free, private, runs entirely in your browser."
       url="/tools/text-to-pdf"
       content={content}
-      category="Tools"
     >
       <TxtToPdfContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

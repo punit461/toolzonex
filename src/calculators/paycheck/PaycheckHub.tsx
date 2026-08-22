@@ -17,8 +17,9 @@ const PaycheckHub = () => {
           US Paycheck Calculator by State
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Estimate your take-home pay after federal tax, Social Security, and Medicare — with state-specific
-          tax rules for the states below. More states are being added regularly.
+          Use this paycheck calculator by state to estimate your take-home pay after federal tax, Social
+          Security, and Medicare, plus each state&apos;s own income tax rules. Pick your state below to open its
+          dedicated paycheck calculator. More states are being added regularly.
         </Typography>
       </Box>
 

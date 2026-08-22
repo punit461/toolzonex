@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import PFTCalculator from "../../../calculators/PFTCalculator";
+import PFTCalculator from "../../../calculators/health/PFTCalculator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/health/pft-calculator");
 
-export const metadata: Metadata = {
-  title: "PFT Calculator - Physical Fitness Test Assessment",
-  description: "Free PFT calculator to assess your physical fitness levels with multiple parameters. Track your fitness journey with comprehensive fitness test assessments.",
-  keywords: ["PFT calculator", "physical fitness test", "fitness assessment", "fitness level", "physical fitness", "fitness tracking", "APFT"],
-  alternates: { canonical: "/health/pft-calculator" },
-  openGraph: {
-    title: "PFT Calculator - Physical Fitness Test | ToolZoneX",
-    description: "Assess your physical fitness levels with multiple parameters.",
-    url: `${SITE_URL}/health/pft-calculator`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const pftCalculatorSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "PFT Calculator",
-  "description": "Assess physical fitness levels with multiple parameters.",
-  "url": `${SITE_URL}/health/pft-calculator`,
-  "applicationCategory": "HealthApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(pftCalculatorSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <PFTCalculator />
     </>

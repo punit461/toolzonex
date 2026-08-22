@@ -101,11 +101,8 @@ const DeletePdfPages = () => {
 
   return (
     <CalculatorShell
-      title="Delete PDF Pages"
-      description="Remove specific pages from a PDF. Free, private, runs entirely in your browser."
       url="/tools/delete-pdf-pages"
       content={content}
-      category="Tools"
     >
       <DeletePdfPagesContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

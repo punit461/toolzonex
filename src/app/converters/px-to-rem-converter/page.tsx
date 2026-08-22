@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import PxToRemConverter from "../../../calculators/PxToRemConverter";
+import PxToRemConverter from "../../../calculators/converters/PxToRemConverter";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/converters/px-to-rem-converter");
 
-export const metadata: Metadata = {
-  title: "PX to REM Converter - Free Online CSS Tool",
-  description: "Convert Pixels (px) to REM units instantly for responsive CSS web design. Free online calculator with base size adjustment.",
-  keywords: ["px to rem", "pixels to rem", "css unit converter", "rem calculator", "responsive web design"],
-  alternates: { canonical: "/converters/px-to-rem-converter" },
-  openGraph: {
-    title: "PX to REM Converter - Free Online CSS Tool | ToolZoneX",
-    description: "Convert Pixels (px) to REM units instantly for responsive CSS web design.",
-    url: `${SITE_URL}/converters/px-to-rem-converter`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "PX to REM Converter",
-  "description": "Convert Pixels (px) to REM units instantly for responsive CSS web design.",
-  "url": `${SITE_URL}/converters/px-to-rem-converter`,
-  "applicationCategory": "DeveloperApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <PxToRemConverter />
     </>

@@ -143,7 +143,18 @@ export function useCameraMonitoring({ enabled, sampleIntervalSec = 5, onEvent }:
         }, sampleIntervalSec * 1000)
       } catch (err) {
         if (cancelled) return
-        setStatus(err instanceof DOMException && err.name === 'NotAllowedError' ? 'denied' : 'error')
+        // Logged unconditionally — the badge only ever shows a generic
+        // status, so without this the real DOMException name (camera in use
+        // by another app, no device present, permission denied, etc.) is
+        // unrecoverable for debugging a user-reported failure.
+        console.error('[cv] camera start failed', err)
+        if (err instanceof DOMException && err.name === 'NotAllowedError') {
+          setStatus('denied')
+        } else if (err instanceof DOMException && err.name === 'NotFoundError') {
+          setStatus('unavailable')
+        } else {
+          setStatus('error')
+        }
       }
     }
 

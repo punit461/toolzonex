@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SipRetirement from "../../../views/blogs/SipRetirement";
+import SipRetirement from "../../../components/pages/blogs/SipRetirement";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

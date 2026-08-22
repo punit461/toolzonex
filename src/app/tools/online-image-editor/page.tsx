@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import OnlineImageEditor from "../../../calculators/OnlineImageEditor";
+import OnlineImageEditor from "../../../calculators/tools/OnlineImageEditor";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/tools/online-image-editor");
 
-export const metadata: Metadata = {
-  title: "Online Image Editor - Edit Photos in Browser",
-  description: "Edit images online with filters, brightness, contrast, rotation, and more. Free browser-based image editor with no installation required.",
-  keywords: ["online image editor", "edit photos online", "image filters", "photo editor", "brightness contrast", "image rotation", "crop images", "photo editing tools"],
-  alternates: { canonical: "/tools/online-image-editor" },
-  openGraph: {
-    title: "Online Image Editor - Edit Photos in Browser | ToolZoneX",
-    description: "Edit images online with filters, brightness, contrast, rotation, and more. Free browser-based image editor with no installation required.",
-    url: `${SITE_URL}/tools/online-image-editor`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const onlineImageEditorSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Online Image Editor",
-  "description": "Edit images online with filters, brightness, contrast, rotation, and more. Free browser-based image editor with no installation required.",
-  "url": `${SITE_URL}/tools/online-image-editor`,
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(onlineImageEditorSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <OnlineImageEditor />
     </>

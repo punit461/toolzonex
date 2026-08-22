@@ -1,0 +1,181 @@
+'use client';
+
+import { useState } from 'react';
+import { Box, Button, Typography, TextField, Paper } from '@mui/material';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import CalculatorShell from '../../components/CalculatorShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const simpleMarkdownToHtml = (markdown: string) => {
+  let html = markdown;
+
+  // Escape HTML tags to prevent execution (XSS protection)
+  html = html.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  // Headers
+  html = html.replace(/^###### (.*$)/gim, '<h6>$1</h6>');
+  html = html.replace(/^##### (.*$)/gim, '<h5>$1</h5>');
+  html = html.replace(/^#### (.*$)/gim, '<h4>$1</h4>');
+  html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+  html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+  html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+
+  // Bold & Italic
+  html = html.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');
+  html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+  // Links
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+
+  // Blockquotes
+  html = html.replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>');
+
+  // Inline Code
+  html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+  // Lists
+  html = html.replace(/^\- (.*$)/gim, '<ul><li>$1</li></ul>');
+  html = html.replace(/<\/ul>\n<ul>/g, '\n');
+
+  // Paragraphs (wrap anything not already wrapped in a block tag)
+  const lines = html.split('\n');
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (line.length > 0 && !line.startsWith('<')) {
+      lines[i] = `<p>${line}</p>`;
+    }
+  }
+  
+  return lines.join('\n');
+};
+
+const MarkdownToHtmlContent = () => {
+  const [input, setInput] = useState('# Hello World\n\nThis is a **bold** statement and this is *italic*.\n\n- List item 1\n- List item 2\n\n[ToolZoneX](https://toolzonex.com)');
+  const [output, setOutput] = useState('');
+
+  const processText = () => {
+    setOutput(simpleMarkdownToHtml(input));
+  };
+
+  const copyToClipboard = async () => {
+    if (!output) return;
+    try {
+      await navigator.clipboard.writeText(output);
+    } catch (err) {}
+  };
+
+  return (
+    <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
+      
+      {/* Input Panel */}
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+        <Typography variant="subtitle1" fontWeight="600">Markdown Input:</Typography>
+        <TextField
+          multiline
+          rows={16}
+          fullWidth
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Enter markdown here..."
+          sx={{ '& .MuiInputBase-input': { fontFamily: 'monospace', fontSize: '0.9rem' } }}
+        />
+        
+        <Button variant="contained" size="large" onClick={processText} fullWidth>
+          Convert to HTML
+        </Button>
+      </Box>
+
+      {/* Output Panel */}
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Typography variant="subtitle1" fontWeight="600">Raw HTML Output:</Typography>
+          <Button size="small" startIcon={<ContentCopyIcon />} onClick={copyToClipboard} disabled={!output}>
+            Copy
+          </Button>
+        </Box>
+        <TextField
+          multiline
+          rows={16}
+          fullWidth
+          value={output}
+          InputProps={{ readOnly: true }}
+          placeholder="Raw HTML will appear here..."
+          sx={{ '& .MuiInputBase-input': { fontFamily: 'monospace', fontSize: '0.9rem' } }}
+        />
+      </Box>
+      
+      {/* Preview Panel */}
+      {output && (
+        <Box sx={{ gridColumn: { xs: '1', md: '1 / span 2' }, mt: 2 }}>
+          <Typography variant="subtitle1" fontWeight="600" mb={1}>Live Preview:</Typography>
+          <Paper sx={{ p: 3, border: '1px solid', borderColor: 'divider', minHeight: 150 }}>
+            <div dangerouslySetInnerHTML={{ __html: output }} style={{ fontFamily: 'sans-serif' }} />
+          </Paper>
+        </Box>
+      )}
+
+    </Box>
+  );
+};
+
+const MarkdownToHtmlConverter = () => {
+  const content = (
+    <>
+      <Typography variant="h2">What is Markdown?</Typography>
+      <Typography variant="body1">
+        Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by John Gruber in 2004, Markdown is now one of the world's most popular markup languages. This markdown to html converter online quickly converts your Markdown syntax into valid HTML tags — no install, no sign-up, just paste and convert md to html online instantly.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Typing <code>**bold**</code> and <code># Heading</code> converts to <code>&lt;strong&gt;bold&lt;/strong&gt;</code>
+        and <code>&lt;h1&gt;Heading&lt;/h1&gt;</code>, shown live in the preview panel below.
+      </Typography>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Converting README or documentation files into HTML for a website.</li>
+          <li>Previewing how Markdown will render before publishing.</li>
+          <li>Converting a blog post or notes written in Markdown to HTML online, ready to paste into a CMS.</li>
+          <li>Quickly checking what a snippet of Markdown syntax actually produces in HTML.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Does this support GitHub-flavored Markdown extras like tables?</Typography>
+      <Typography variant="body1">
+        It covers the core Markdown syntax (headings, bold/italic, links, lists, code) — extended syntax such
+        as tables or task lists may not be converted.
+      </Typography>
+      <Typography variant="h3">Is this markdown to html converter online free to use?</Typography>
+      <Typography variant="body1">
+        Yes — it&apos;s completely free, requires no sign-up, and runs entirely in your browser, so nothing you
+        type is uploaded to a server.
+      </Typography>
+      <Typography variant="h3">Can I convert md to html online without installing anything?</Typography>
+      <Typography variant="body1">
+        Yes — just paste or type your Markdown into the input box and click Convert to HTML. There&apos;s
+        nothing to install; it works directly in this page.
+      </Typography>
+      <Typography variant="h3">Can I preview how the HTML will look before copying it?</Typography>
+      <Typography variant="body1">
+        Yes — after converting, a live preview panel renders the generated HTML below the input and output
+        boxes so you can check the formatting before you copy it.
+      </Typography>
+    </>
+  );
+
+  return (
+    <CalculatorShell
+      url="/converters/markdown-to-html"
+      content={content}
+    >
+      <MarkdownToHtmlContent />
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
+    </CalculatorShell>
+  );
+};
+
+export default MarkdownToHtmlConverter;

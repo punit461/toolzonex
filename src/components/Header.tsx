@@ -19,6 +19,7 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import { useColorMode } from './ColorModeProvider';
 import { categories as toolCategories } from '@/data/toolCategories';
+import { toolMatchesQuery } from '@/utils/search';
 
 interface HideOnScrollProps { children: React.ReactElement }
 const HideOnScroll = ({ children }: HideOnScrollProps) => {
@@ -32,23 +33,23 @@ const HideOnScroll = ({ children }: HideOnScrollProps) => {
 // list — the two had already drifted twice (AI Pomodoro and Image
 // Resizer were both missing from this nav after being added to the
 // homepage). Deriving means that can't happen again.
-interface NavTool { label: string; path: string }
+interface NavTool { label: string; path: string; description: string }
 interface NavCategory { label: string; tools: NavTool[] }
 
 const NAV_GROUPS: { label: string; sourceCategories: string[] }[] = [
   { label: 'AI Tools', sourceCategories: ['AI'] },
-  { label: 'Finance & Health', sourceCategories: ['Finance', 'Health'] },
-  { label: 'Math & Utilities', sourceCategories: ['Time & Productivity', 'Utilities'] },
+  { label: 'Finance & Health', sourceCategories: ['Finance', 'Paycheck Calculators', 'Health'] },
+  { label: 'Math & Utilities', sourceCategories: ['Time & Productivity', 'Utilities', 'Screens'] },
   { label: 'Text & Content', sourceCategories: ['Text Tools', 'Generators'] },
   { label: 'Dev & Converters', sourceCategories: ['Converters', 'Developer Tools'] },
-  { label: 'Web Tools', sourceCategories: ['Tools'] },
+  { label: 'Web Tools', sourceCategories: ['Tools', 'PDF Tools'] },
 ];
 
 const navCategories: NavCategory[] = NAV_GROUPS.map((group) => ({
   label: group.label,
   tools: toolCategories
     .filter((cat) => group.sourceCategories.includes(cat.label))
-    .flatMap((cat) => cat.tools.map((tool) => ({ label: tool.title, path: tool.path }))),
+    .flatMap((cat) => cat.tools.map((tool) => ({ label: tool.title, path: tool.path, description: tool.description }))),
 }));
 
 // ── Desktop Mega-Dropdown ──────────────────────────────────────────
@@ -277,6 +278,9 @@ const Header = () => {
               options={allTools}
               groupBy={(option) => option.category}
               getOptionLabel={(option) => typeof option === 'string' ? option : option.label}
+              filterOptions={(options, state) =>
+                options.filter((option) => toolMatchesQuery(`${option.label} ${option.description}`, state.inputValue))
+              }
               onChange={(event, newValue) => {
                 if (typeof newValue === 'object' && newValue !== null) {
                   router.push(newValue.path);

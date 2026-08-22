@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import ExifReader from "../../../calculators/ExifReader";
+import ExifReader from "../../../calculators/tools/ExifReader";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/tools/exif-reader");
 
-export const metadata: Metadata = {
-  title: "EXIF Reader - Read Image Metadata Online",
-  description: "Read and display EXIF metadata from images. Free online EXIF reader tool to extract camera settings, GPS coordinates, and image information.",
-  keywords: ["EXIF reader", "read image metadata", "EXIF data", "image metadata", "camera settings", "GPS coordinates", "photo information", "EXIF viewer"],
-  alternates: { canonical: "/tools/exif-reader" },
-  openGraph: {
-    title: "EXIF Reader - Read Image Metadata Online | ToolZoneX",
-    description: "Read and display EXIF metadata from images. Free online EXIF reader tool to extract camera settings, GPS coordinates, and image information.",
-    url: `${SITE_URL}/tools/exif-reader`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const exifReaderSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "EXIF Reader",
-  "description": "Read and display EXIF metadata from images. Free online EXIF reader tool to extract camera settings, GPS coordinates, and image information.",
-  "url": `${SITE_URL}/tools/exif-reader`,
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(exifReaderSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <ExifReader />
     </>

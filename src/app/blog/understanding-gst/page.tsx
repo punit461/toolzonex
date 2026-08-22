@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import GstImpact from "../../../views/blogs/GstImpact";
+import GstImpact from "../../../components/pages/blogs/GstImpact";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

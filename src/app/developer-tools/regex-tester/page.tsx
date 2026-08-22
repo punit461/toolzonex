@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import RegexTester from "../../../calculators/RegexTester";
+import RegexTester from "../../../calculators/developer-tools/RegexTester";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/developer-tools/regex-tester");
 
-export const metadata: Metadata = {
-  title: "Regex Tester - Online Regular Expression Evaluator",
-  description: "Test, evaluate, and debug regular expressions online. Real-time regex matching and highlighting tool for developers.",
-  keywords: ["regex tester", "regex evaluator", "regular expression online", "regex match", "regex debugger"],
-  alternates: { canonical: "/developer-tools/regex-tester" },
-  openGraph: {
-    title: "Regex Tester - Online Regular Expression Evaluator | ToolZoneX",
-    description: "Test, evaluate, and debug regular expressions online.",
-    url: `${SITE_URL}/developer-tools/regex-tester`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Regex Tester",
-  "description": "Test, evaluate, and debug regular expressions online.",
-  "url": `${SITE_URL}/developer-tools/regex-tester`,
-  "applicationCategory": "DeveloperApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <RegexTester />
     </>

@@ -91,7 +91,11 @@ const FaceShapeDetectorContent = () => {
 const FaceShapeDetector = () => {
   const content = (
     <>
-      <Typography variant="h2">How the Face Shape Detector Works</Typography>
+      <Typography variant="h2">How this face shape calculator works</Typography>
+      <Typography variant="body1">
+        This tool is a free online face shape calculator and face measurement tool — upload a photo and it
+        analyzes your facial proportions to determine your face shape online, right in your browser.
+      </Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
           <li>Upload a clear, front-facing photo of your face.</li>
@@ -104,7 +108,9 @@ const FaceShapeDetector = () => {
       <Typography variant="body1">
         A face that&apos;s noticeably longer than it is wide, with a forehead wider than the jaw and softly
         curved cheekbones, is typically classified as Oval — generally considered the most versatile shape for
-        hairstyles and glasses frames.
+        hairstyles and glasses frames. This works the same as a faceshape finder online for any face — the face
+        shape calculator for female or male faces uses the same proportions, since face shape is a matter of
+        geometry, not gender.
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
@@ -112,6 +118,7 @@ const FaceShapeDetector = () => {
         <ul>
           <li>Finding hairstyles or haircuts that suit your face shape.</li>
           <li>Choosing glasses frames that balance your proportions.</li>
+          <li>Using it as a quick face measurement tool before a makeover or styling consultation.</li>
           <li>General curiosity about facial geometry.</li>
         </ul>
       </Box>
@@ -120,8 +127,10 @@ const FaceShapeDetector = () => {
       <Box sx={{ typography: 'body1' }}>
         <ul>
           <li><strong>Is my photo uploaded to a server?</strong> No — face detection and measurement both run entirely in your browser using an on-device model. Your photo never leaves your device.</li>
-          <li><strong>How accurate is this?</strong> This is a proportion-based estimate, like most face-shape tools (including commercial ones) — it&apos;s meant to be informative and fun, not a precise medical or biometric measurement.</li>
-          <li><strong>Why didn&apos;t it detect a face?</strong> Use a clear, front-facing, well-lit photo where your whole face is visible.</li>
+          <li><strong>How accurate is this face shape calculator?</strong> This is a proportion-based estimate, like most face-shape tools (including commercial ones) — it&apos;s meant to be informative and fun, not a precise medical or biometric measurement.</li>
+          <li><strong>Why didn&apos;t it detect a face?</strong> Use a clear, front-facing, well-lit photo where your whole face is visible, without sunglasses or heavy shadows.</li>
+          <li><strong>Is this the same as the Omni face shape calculator?</strong> No — this is ToolZoneX&apos;s own free face shape calculator, a separate tool from Omni Calculator&apos;s face shape calculator. Both estimate a face shape from proportions, but this one runs entirely in your browser using on-device photo measurement rather than manual inputs.</li>
+          <li><strong>Does this work as a face shape calculator for women and men?</strong> Yes — the measurement is based on facial geometry (length, cheekbone width, jaw width, forehead width), not gender, so it works the same way as a face shape calculator for any face, male or female.</li>
         </ul>
       </Box>
     </>
@@ -129,11 +138,8 @@ const FaceShapeDetector = () => {
 
   return (
     <CalculatorShell
-      title="Face Shape Detector"
-      description="Upload a photo to estimate your face shape -- Oval, Round, Square, Heart, Diamond, or Oblong. Runs entirely in your browser."
       url="/tools/face-shape-detector"
       content={content}
-      category="Tools"
     >
       <FaceShapeDetectorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

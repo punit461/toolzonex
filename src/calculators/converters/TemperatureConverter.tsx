@@ -152,11 +152,8 @@ const TemperatureConverter = () => {
 
   return (
     <CalculatorShell
-      title="Temperature Converter"
-      description="Free temperature converter. Convert between Celsius, Fahrenheit, and Kelvin instantly."
       url="/converters/temperature-converter"
       content={content}
-      category="Converters"
     >
       <TemperatureConverterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

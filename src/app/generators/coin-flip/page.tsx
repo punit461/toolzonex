@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import CoinFlip from "../../../calculators/CoinFlip";
+import CoinFlip from "../../../calculators/generators/CoinFlip";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/generators/coin-flip");
 
-export const metadata: Metadata = {
-  title: "Flip a Coin - Heads or Tails Online",
-  description: "Flip a virtual coin instantly online. Free heads or tails random coin flipper for making quick decisions.",
-  keywords: ["flip a coin", "heads or tails", "virtual coin flip", "random coin flipper", "online coin toss"],
-  alternates: { canonical: "/generators/coin-flip" },
-  openGraph: {
-    title: "Flip a Coin - Heads or Tails Online | ToolZoneX",
-    description: "Flip a virtual coin instantly online.",
-    url: `${SITE_URL}/generators/coin-flip`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Flip a Coin",
-  "description": "Flip a virtual coin instantly online.",
-  "url": `${SITE_URL}/generators/coin-flip`,
-  "applicationCategory": "EntertainmentApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <CoinFlip />
     </>

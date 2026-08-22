@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import PrimeNumberChecker from "../../../calculators/PrimeNumberChecker";
+import PrimeNumberChecker from "../../../calculators/utilities/PrimeNumberChecker";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/utilities/prime-number-checker");
 
-export const metadata: Metadata = {
-  title: "Prime Number Checker - Check Primes Online",
-  description: "Check if a number is a prime number instantly online. Free math utility to find out if a number is prime or composite.",
-  keywords: ["prime number checker", "is it prime", "prime calculator", "prime or composite"],
-  alternates: { canonical: "/utilities/prime-number-checker" },
-  openGraph: {
-    title: "Prime Number Checker - Check Primes Online | ToolZoneX",
-    description: "Check if a number is a prime number instantly online.",
-    url: `${SITE_URL}/utilities/prime-number-checker`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Prime Number Checker",
-  "description": "Check if a number is a prime number instantly online.",
-  "url": `${SITE_URL}/utilities/prime-number-checker`,
-  "applicationCategory": "EducationalApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <PrimeNumberChecker />
     </>

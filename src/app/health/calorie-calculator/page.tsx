@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import CalorieCalculator from "../../../calculators/CalorieCalculator";
+import CalorieCalculator from "../../../calculators/health/CalorieCalculator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/health/calorie-calculator");
 
-export const metadata: Metadata = {
-  title: "Calorie Calculator - Daily Calorie Needs",
-  description: "Calculate your daily calorie needs for weight loss, maintenance, or muscle gain using the accurate Mifflin-St Jeor equation.",
-  keywords: ["calorie calculator", "daily calories", "weight loss calories", "maintenance calories", "tdee calculator"],
-  alternates: { canonical: "/health/calorie-calculator" },
-  openGraph: {
-    title: "Calorie Calculator - Daily Calorie Needs | ToolZoneX",
-    description: "Calculate your daily calorie needs for weight loss, maintenance, or muscle gain.",
-    url: `${SITE_URL}/health/calorie-calculator`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Calorie Calculator",
-  "description": "Calculate your daily calorie needs for weight loss, maintenance, or muscle gain.",
-  "url": `${SITE_URL}/health/calorie-calculator`,
-  "applicationCategory": "HealthApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <CalorieCalculator />
     </>

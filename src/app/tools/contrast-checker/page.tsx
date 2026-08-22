@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import ContrastChecker from "../../../calculators/ContrastChecker";
+import ContrastChecker from "../../../calculators/tools/ContrastChecker";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/tools/contrast-checker");
 
-export const metadata: Metadata = {
-  title: "Contrast Checker - WCAG Color Accessibility",
-  description: "Check color contrast ratios for WCAG accessibility compliance instantly. Free online contrast checker.",
-  keywords: ["contrast checker", "color contrast ratio", "wcag contrast checker", "accessibility color check", "web design contrast"],
-  alternates: { canonical: "/tools/contrast-checker" },
-  openGraph: {
-    title: "Contrast Checker - WCAG Color Accessibility | ToolZoneX",
-    description: "Check color contrast ratios for WCAG accessibility compliance instantly. Free online contrast checker.",
-    url: `${SITE_URL}/tools/contrast-checker`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Contrast Checker",
-  "description": "Check color contrast ratios for WCAG accessibility compliance instantly.",
-  "url": `${SITE_URL}/tools/contrast-checker`,
-  "applicationCategory": "DesignApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <ContrastChecker />
     </>

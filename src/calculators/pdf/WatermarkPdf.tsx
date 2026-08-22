@@ -113,11 +113,8 @@ const WatermarkPdf = () => {
 
   return (
     <CalculatorShell
-      title="Watermark PDF"
-      description="Add a diagonal text watermark to every page of a PDF. Free, private, runs entirely in your browser."
       url="/tools/watermark-pdf"
       content={content}
-      category="Tools"
     >
       <WatermarkPdfContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

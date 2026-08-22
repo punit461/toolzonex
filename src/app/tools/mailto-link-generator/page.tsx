@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import MailtoLinkGenerator from "../../../calculators/MailtoLinkGenerator";
+import MailtoLinkGenerator from "../../../calculators/tools/MailtoLinkGenerator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/tools/mailto-link-generator");
 
-export const metadata: Metadata = {
-  title: "Mailto Link Generator - Create Email Links",
-  description: "Generate mailto links with pre-filled subject, body, CC, and BCC fields. Free online mailto link generator tool.",
-  keywords: ["mailto link generator", "create email links", "mailto links", "email links", "pre-filled emails", "email template generator", "mailto generator", "email link creator"],
-  alternates: { canonical: "/tools/mailto-link-generator" },
-  openGraph: {
-    title: "Mailto Link Generator - Create Email Links | ToolZoneX",
-    description: "Generate mailto links with pre-filled subject, body, CC, and BCC fields. Free online mailto link generator tool.",
-    url: `${SITE_URL}/tools/mailto-link-generator`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const mailtoLinkGeneratorSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Mailto Link Generator",
-  "description": "Generate mailto links with pre-filled subject, body, CC, and BCC fields. Free online mailto link generator tool.",
-  "url": `${SITE_URL}/tools/mailto-link-generator`,
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(mailtoLinkGeneratorSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <MailtoLinkGenerator />
     </>

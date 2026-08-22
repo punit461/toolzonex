@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import ColorPaletteGenerator from "../../../calculators/ColorPaletteGenerator";
+import ColorPaletteGenerator from "../../../calculators/tools/ColorPaletteGenerator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/tools/color-palette-generator");
 
-export const metadata: Metadata = {
-  title: "Color Palette Generator - Random Hex Colors",
-  description: "Generate beautiful random color palettes for web design and art. One click to copy hex codes.",
-  keywords: ["color palette generator", "random colors", "hex code generator", "color scheme generator", "website colors"],
-  alternates: { canonical: "/tools/color-palette-generator" },
-  openGraph: {
-    title: "Color Palette Generator - Random Hex Colors | ToolZoneX",
-    description: "Generate beautiful random color palettes for web design and art. One click to copy hex codes.",
-    url: `${SITE_URL}/tools/color-palette-generator`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Color Palette Generator",
-  "description": "Generate beautiful random color palettes for web design and art.",
-  "url": `${SITE_URL}/tools/color-palette-generator`,
-  "applicationCategory": "DesignApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <ColorPaletteGenerator />
     </>

@@ -101,11 +101,8 @@ const JpgToPdf = () => {
 
   return (
     <CalculatorShell
-      title="JPG to PDF"
-      description="Convert JPG or PNG images into a single PDF, one image per page. Free, private, runs entirely in your browser."
       url="/tools/jpg-to-pdf"
       content={content}
-      category="Tools"
     >
       <JpgToPdfContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

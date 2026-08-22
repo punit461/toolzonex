@@ -85,11 +85,8 @@ const HtmlToPdf = () => {
 
   return (
     <CalculatorShell
-      title="HTML to PDF"
-      description="Convert HTML markup into a PDF document. Free, private, runs entirely in your browser."
       url="/tools/html-to-pdf"
       content={content}
-      category="Tools"
     >
       <HtmlToPdfContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import TextEncryptionDecryption from "../../../calculators/TextEncryptionDecryption";
+import TextEncryptionDecryption from "../../../calculators/text-tools/TextEncryptionDecryption";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/text-tools/text-encryption-decryption");
 
-export const metadata: Metadata = {
-  title: "Text Encryption & Decryption - Base64, ROT13, Hex Online",
-  description: "Encrypt or decrypt text using Base64, ROT13, and Hexadecimal algorithms. Free secure online string cipher tool.",
-  keywords: ["text encryption", "base64 encode", "base64 decode", "rot13 cipher", "hex encoder", "online text decoder"],
-  alternates: { canonical: "/text-tools/text-encryption-decryption" },
-  openGraph: {
-    title: "Text Encryption & Decryption - Base64, ROT13, Hex Online | ToolZoneX",
-    description: "Encrypt or decrypt text using Base64, ROT13, and Hexadecimal algorithms. Free secure online string cipher tool.",
-    url: `${SITE_URL}/text-tools/text-encryption-decryption`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Text Encryption & Decryption",
-  "description": "Encrypt or decrypt text using Base64, ROT13, and Hexadecimal algorithms.",
-  "url": `${SITE_URL}/text-tools/text-encryption-decryption`,
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <TextEncryptionDecryption />
     </>

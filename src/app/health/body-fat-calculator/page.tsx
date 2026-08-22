@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import BodyFatCalculator from "../../../calculators/BodyFatCalculator";
+import BodyFatCalculator from "../../../calculators/health/BodyFatCalculator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/health/body-fat-calculator");
 
-export const metadata: Metadata = {
-  title: "Body Fat Calculator - US Navy Method",
-  description: "Estimate your body fat percentage and lean body mass online using the US Navy tape measure method.",
-  keywords: ["body fat calculator", "us navy body fat", "calculate body fat", "fat percentage", "lean mass calculator"],
-  alternates: { canonical: "/health/body-fat-calculator" },
-  openGraph: {
-    title: "Body Fat Calculator - US Navy Method | ToolZoneX",
-    description: "Estimate your body fat percentage and lean body mass online using the US Navy tape measure method.",
-    url: `${SITE_URL}/health/body-fat-calculator`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Body Fat Calculator",
-  "description": "Estimate your body fat percentage and lean body mass online using the US Navy tape measure method.",
-  "url": `${SITE_URL}/health/body-fat-calculator`,
-  "applicationCategory": "HealthApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <BodyFatCalculator />
     </>

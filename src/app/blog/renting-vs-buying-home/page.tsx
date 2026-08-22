@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import RentingVsBuying from "../../../views/blogs/RentingVsBuying";
+import RentingVsBuying from "../../../components/pages/blogs/RentingVsBuying";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

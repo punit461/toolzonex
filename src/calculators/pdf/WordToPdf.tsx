@@ -86,11 +86,8 @@ const WordToPdf = () => {
 
   return (
     <CalculatorShell
-      title="Word to PDF"
-      description="Convert a .docx Word document into a PDF. Free, private, runs entirely in your browser."
       url="/tools/word-to-pdf"
       content={content}
-      category="Tools"
     >
       <WordToPdfContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

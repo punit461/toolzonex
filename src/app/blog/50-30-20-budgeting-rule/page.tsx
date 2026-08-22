@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BudgetingRule from "../../../views/blogs/BudgetingRule";
+import BudgetingRule from "../../../components/pages/blogs/BudgetingRule";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

@@ -1007,11 +1007,8 @@ const QrCodeGenerator = () => {
 
   return (
     <CalculatorShell
-      title="QR Code Generator"
-      description="Create custom QR codes for URLs, WiFi, vCard, UPI, WhatsApp, email and more. Custom dot styles, colors, logo upload. Free PNG/SVG/JPEG download."
       url="/developer-tools/qr-code-generator"
       content={content}
-      category="Developer Tools"
     >
       <QrCodeGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

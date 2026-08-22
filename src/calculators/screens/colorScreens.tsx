@@ -28,9 +28,19 @@ const EXAMPLES: Record<string, string> = {
 };
 const DEFAULT_EXAMPLE = 'Go fullscreen on a second monitor to use it as a plain, distraction-free backdrop while screen recording or presenting.';
 
+const EXTRA_FAQS: Record<string, { q: string; a: string }[]> = {
+  'Blue Screen': [
+    {
+      q: 'Is this a Blue Screen of Death (BSOD) prank simulator?',
+      a: 'No — this page is a plain, solid blue fullscreen display, not a fake Windows error message. If you\'re looking for a custom blue screen of death or a fake blue screen prank with actual Windows-style error text, use our dedicated Windows Blue Screen prank tool instead, which mimics the real "Your PC ran into a problem" screen.',
+    },
+  ],
+};
+
 function seoContent(colorName: string) {
   const useCases = USE_CASES[colorName] ?? DEFAULT_USE_CASES;
   const example = EXAMPLES[colorName] ?? DEFAULT_EXAMPLE;
+  const extraFaqs = EXTRA_FAQS[colorName] ?? [];
   return (
     <>
       <Typography variant="h2">What is the {colorName}?</Typography>
@@ -62,6 +72,9 @@ function seoContent(colorName: string) {
         <ul>
           <li><strong>Does this work on mobile?</strong> Yes, tap the fullscreen button on any phone or tablet browser.</li>
           <li><strong>Will the color look exactly the same on every screen?</strong> Not necessarily — color rendering varies by display, brightness settings, and color profile.</li>
+          {extraFaqs.map((faq) => (
+            <li key={faq.q}><strong>{faq.q}</strong> {faq.a}</li>
+          ))}
         </ul>
       </Box>
     </>

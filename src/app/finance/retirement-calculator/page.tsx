@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import RetirementCalculator from "../../../calculators/RetirementCalculator";
+import RetirementCalculator from "../../../calculators/finance/RetirementCalculator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/finance/retirement-calculator");
 
-export const metadata: Metadata = {
-  title: "Retirement Calculator - Plan Your Retirement Corpus",
-  description: "Free retirement calculator to calculate the corpus needed for retirement and monthly SIP required. Plan for a secure retirement with accurate projections.",
-  keywords: ["retirement calculator", "retirement corpus", "retirement planning", "retirement SIP", "retirement savings", "pension planning", "retire early"],
-  alternates: { canonical: "/finance/retirement-calculator" },
-  openGraph: {
-    title: "Retirement Calculator - Plan Your Retirement Corpus | ToolZoneX",
-    description: "Calculate retirement corpus and required SIP for secure retirement.",
-    url: `${SITE_URL}/finance/retirement-calculator`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const retirementCalculatorSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Retirement Calculator",
-  "description": "Calculate retirement corpus and required SIP.",
-  "url": `${SITE_URL}/finance/retirement-calculator`,
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(retirementCalculatorSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <RetirementCalculator />
     </>

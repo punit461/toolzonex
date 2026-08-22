@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import SSYCalculator from "../../../calculators/SSYCalculator";
+import SSYCalculator from "../../../calculators/finance/SSYCalculator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/finance/ssy-calculator");
 
-export const metadata: Metadata = {
-  title: "SSY Calculator - Sukanya Samriddhi Yojana Returns",
-  description: "Free SSY calculator to calculate Sukanya Samriddhi Yojana maturity amount. Plan for your daughter's education with this government scheme.",
-  keywords: ["SSY calculator", "Sukanya Samriddhi Yojana", "SSY maturity", "SSY interest rate", "daughter marriage planning", "education fund"],
-  alternates: { canonical: "/finance/ssy-calculator" },
-  openGraph: {
-    title: "SSY Calculator - Sukanya Samriddhi Yojana Returns | ToolZoneX",
-    description: "Calculate Sukanya Samriddhi Yojana maturity amount.",
-    url: `${SITE_URL}/finance/ssy-calculator`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const ssyCalculatorSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "SSY Calculator",
-  "description": "Calculate Sukanya Samriddhi Yojana maturity value.",
-  "url": `${SITE_URL}/finance/ssy-calculator`,
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ssyCalculatorSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <SSYCalculator />
     </>

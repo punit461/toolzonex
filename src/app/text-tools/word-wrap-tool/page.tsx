@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import WordWrapTool from "../../../calculators/WordWrapTool";
+import WordWrapTool from "../../../calculators/text-tools/WordWrapTool";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/text-tools/word-wrap-tool");
 
-export const metadata: Metadata = {
-  title: "Word Wrap Tool - Wrap Text to Column Limit Online",
-  description: "Automatically wrap text to a specific character limit or column width. Free online text formatter to fix long lines without breaking words.",
-  keywords: ["word wrap tool", "wrap text online", "column limit formatter", "80 characters per line", "wrap long text lines"],
-  alternates: { canonical: "/text-tools/word-wrap-tool" },
-  openGraph: {
-    title: "Word Wrap Tool - Wrap Text to Column Limit Online | ToolZoneX",
-    description: "Automatically wrap text to a specific character limit or column width.",
-    url: `${SITE_URL}/text-tools/word-wrap-tool`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Word Wrap Tool",
-  "description": "Automatically wrap text to a specific character limit or column width.",
-  "url": `${SITE_URL}/text-tools/word-wrap-tool`,
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <WordWrapTool />
     </>

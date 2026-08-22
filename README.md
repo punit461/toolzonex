@@ -2,7 +2,7 @@
 
 ToolZoneX is a comprehensive, open-source platform of high-performance calculators and utility tools designed to help users make smarter financial, health, and everyday decisions. Built with **Next.js 15**, **TypeScript**, and **Material UI**, it is optimized for high performance and search engine visibility (SEO) via Static Site Generation (SSG).
 
-🚀 **Live Site:** [https://punit461.github.io/toolzonex/](https://punit461.github.io/toolzonex/)
+🚀 **Live Site:** [https://toolzonex.com](https://toolzonex.com)
 
 ---
 

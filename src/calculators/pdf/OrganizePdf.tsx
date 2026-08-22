@@ -107,11 +107,8 @@ const OrganizePdf = () => {
 
   return (
     <CalculatorShell
-      title="Organize PDF"
-      description="Reorder the pages in a PDF. Free, private, runs entirely in your browser."
       url="/tools/organize-pdf"
       content={content}
-      category="Tools"
     >
       <OrganizePdfContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import GameScoreTracker from "../../../calculators/GameScoreTracker";
+import GameScoreTracker from "../../../calculators/utilities/GameScoreTracker";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/utilities/game-score-tracker");
 
-export const metadata: Metadata = {
-  title: "Game Score Tracker - Online Scoreboard & Leaderboard",
-  description: "Track scores for board games, sports, and party games online. Free multiplayer scoreboard with a live leaderboard.",
-  keywords: ["game score tracker", "online scoreboard", "score keeper", "board game tracker", "party game scores"],
-  alternates: { canonical: "/utilities/game-score-tracker" },
-  openGraph: {
-    title: "Game Score Tracker - Online Scoreboard & Leaderboard | ToolZoneX",
-    description: "Track scores for board games, sports, and party games online. Free multiplayer scoreboard with a live leaderboard.",
-    url: `${SITE_URL}/utilities/game-score-tracker`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Game Score Tracker",
-  "description": "Track scores for board games, sports, and party games online. Free multiplayer scoreboard with a live leaderboard.",
-  "url": `${SITE_URL}/utilities/game-score-tracker`,
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <GameScoreTracker />
     </>

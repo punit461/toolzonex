@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
-import BMICalculator from "../../../calculators/BMICalculator";
+import BMICalculator from "../../../calculators/health/BMICalculator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/health/bmi-calculator");
 
-export const metadata: Metadata = {
-  title: "BMI Calculator - Body Mass Index with Indian Guidelines",
-  description: "Free BMI calculator to calculate Body Mass Index using WHO and Indian BMI standards. Get personalized health insights based on your body mass index.",
-  keywords: ["BMI calculator", "body mass index", "BMI Indian standards", "weight calculator", "health calculator", "BMI check", "obesity calculator"],
-  alternates: { canonical: "/health/bmi-calculator" },
-  openGraph: {
-    title: "BMI Calculator - Body Mass Index with Indian Guidelines | ToolZoneX",
-    description: "Calculate BMI using WHO and Indian BMI standards.",
-    url: `${SITE_URL}/health/bmi-calculator`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const bmiCalculatorSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "BMI Calculator",
-  "description": "Calculate Body Mass Index with Indian guidelines.",
-  "url": `${SITE_URL}/health/bmi-calculator`,
-  "applicationCategory": "HealthApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(bmiCalculatorSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <BMICalculator />
     </>

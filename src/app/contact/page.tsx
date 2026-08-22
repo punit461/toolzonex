@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Contact from "../../views/Contact";
+import Contact from "../../components/pages/Contact";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
