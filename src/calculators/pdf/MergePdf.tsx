@@ -125,11 +125,8 @@ const MergePdf = () => {
 
   return (
     <CalculatorShell
-      title="Merge PDF"
-      description="Combine multiple PDF files into one, in the order you choose. Free, private, runs entirely in your browser."
       url="/tools/merge-pdf"
       content={content}
-      category="Tools"
     >
       <MergePdfContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

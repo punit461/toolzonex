@@ -202,11 +202,8 @@ const ImageResizer = () => {
 
   return (
     <CalculatorShell
-      title="Image Resizer Tool"
-      description="Resize images online for free. Change dimensions of any image while maintaining aspect ratio."
       url="/tools/image-resizer"
       content={content}
-      category="Tools"
     >
       <ImageResizerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

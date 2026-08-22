@@ -138,11 +138,8 @@ const TextDiffTool = () => {
 
   return (
     <CalculatorShell
-      title="Text Diff Tool - Compare Text Online"
-      description="Compare two text documents online to see exact differences. Highlights added and removed words instantly."
       url="/tools/text-diff-tool"
       content={content}
-      category="Tools"
     >
       <TextDiffToolContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

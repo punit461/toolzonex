@@ -155,11 +155,8 @@ const ScientificCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Scientific Calculator"
-      description="Advanced free online scientific calculator. Calculate trigonometry, logarithms, exponents, and more instantly."
       url="/utilities/scientific-calculator"
       content={content}
-      category="Utilities"
     >
       <ScientificCalculatorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

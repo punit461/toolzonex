@@ -129,11 +129,8 @@ const ColorPaletteGenerator = () => {
 
   return (
     <CalculatorShell
-      title="Color Palette Generator - Random Hex Colors"
-      description="Generate beautiful random color palettes for web design and art. One click to copy hex codes."
       url="/tools/color-palette-generator"
       content={content}
-      category="Tools"
     >
       <ColorPaletteGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

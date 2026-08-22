@@ -201,11 +201,8 @@ const PaycheckCalculator = ({ stateSlug }: Props) => {
 
   return (
     <CalculatorShell
-      title={`${stateConfig.name} Paycheck Calculator`}
-      description={`Free ${stateConfig.name} paycheck calculator. Estimate your take-home pay after federal tax, FICA, and state tax.`}
       url={`/finance/${stateConfig.slug}-paycheck-calculator`}
       content={content}
-      category="Finance"
     >
       <PaycheckCalculatorContent stateSlug={stateSlug} />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

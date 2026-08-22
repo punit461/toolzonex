@@ -145,11 +145,8 @@ const GradientLibrary = () => {
 
   return (
     <CalculatorShell
-      title="Gradient Library"
-      description="Find the perfect gradient for your project from a curated, filterable collection."
       url="/developer-tools/gradient-library"
       content={content}
-      category="Developer Tools"
     >
       <GradientLibraryContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

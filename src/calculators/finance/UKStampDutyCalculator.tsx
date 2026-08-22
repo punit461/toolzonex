@@ -128,11 +128,8 @@ const UKStampDutyCalculator = () => {
 
   return (
     <CalculatorShell
-      title="UK Stamp Duty Calculator (SDLT)"
-      description="Calculate Stamp Duty Land Tax for England & Northern Ireland, including first-time buyer relief and the additional-property surcharge."
       url="/finance/uk-stamp-duty-calculator"
       content={content}
-      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

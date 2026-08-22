@@ -150,11 +150,8 @@ const CssMinifier = () => {
 
   return (
     <CalculatorShell
-      title="CSS Minifier"
-      description="Compress and minify CSS code online instantly. Free tool to reduce CSS file size and improve website performance."
       url="/developer-tools/css-minifier"
       content={content}
-      category="Developer Tools"
     >
       <CssMinifierContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

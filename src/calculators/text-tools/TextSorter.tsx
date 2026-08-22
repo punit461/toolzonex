@@ -164,11 +164,8 @@ const TextSorter = () => {
 
   return (
     <CalculatorShell
-      title="Text Sorter"
-      description="Sort lists alphabetically or by line length. Easily arrange your text in alphabetical order (A-Z or Z-A)."
       url="/text-tools/text-sorter"
       content={content}
-      category="Text Tools"
     >
       <TextSorterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

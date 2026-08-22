@@ -238,11 +238,8 @@ const BodyFatCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Body Fat Calculator"
-      description="Estimate your body fat percentage and lean body mass online using the US Navy tape measure method."
       url="/health/body-fat-calculator"
       content={content}
-      category="Health"
     >
       <BodyFatCalculatorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

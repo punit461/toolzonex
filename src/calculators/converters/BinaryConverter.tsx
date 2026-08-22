@@ -115,7 +115,11 @@ const BinaryConverterContent = () => {
   );
 };
 
-const BinaryConverter = () => {
+interface BinaryConverterProps {
+  url?: string;
+}
+
+const BinaryConverter = ({ url = '/converters/binary-to-text' }: BinaryConverterProps) => {
   const content = (
     <>
       <Typography variant="h2">What is Binary Code?</Typography>
@@ -167,11 +171,8 @@ const BinaryConverter = () => {
 
   return (
     <CalculatorShell
-      title="Binary to Text Converter"
-      description="Easily convert binary code to plain text or encode text into binary. Free online binary translation tool."
-      url="/converters/binary-to-text"
+      url={url}
       content={content}
-      category="Converters"
     >
       <BinaryConverterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

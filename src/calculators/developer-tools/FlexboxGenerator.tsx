@@ -194,11 +194,8 @@ const FlexboxGenerator = () => {
 
   return (
     <CalculatorShell
-      title="Flexbox Generator"
-      description="Visually generate CSS Flexbox layouts. Test alignment, wrapping, and direction, then copy the CSS code instantly."
       url="/developer-tools/flexbox-generator"
       content={content}
-      category="Developer Tools"
     >
       <FlexboxGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

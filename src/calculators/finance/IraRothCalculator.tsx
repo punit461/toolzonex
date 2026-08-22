@@ -125,11 +125,8 @@ const IraRothCalculator = () => {
 
   return (
     <CalculatorShell
-      title="IRA & Roth IRA Contribution Calculator"
-      description="Check your 2026 IRA contribution limit, Roth IRA eligibility by income, and Traditional IRA deduction phase-out."
       url="/finance/ira-roth-calculator"
       content={content}
-      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

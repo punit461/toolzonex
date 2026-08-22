@@ -57,11 +57,8 @@ const ColorScreenBase = ({ name, color, hintColor = 'rgba(255,255,255,0.6)' }: P
 const ColorScreen = ({ name, color, hintColor, description, url, seoContent }: Props) => {
   return (
     <CalculatorShell
-      title={name}
-      description={description}
       url={url}
       content={seoContent}
-      category="Utilities"
     >
       <ColorScreenBase name={name} color={color} hintColor={hintColor} />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -248,11 +248,8 @@ const WheelOfFortuneSpinner = () => {
 
   return (
     <CalculatorShell
-      title="Wheel of Fortune Spinner - Random Decision Maker"
-      description="Create a custom spinning wheel to randomly pick names, prizes, or make decisions. Free online random wheel spinner."
       url="/generators/wheel-of-fortune-spinner"
       content={content}
-      category="Generators"
     >
       <WheelOfFortuneSpinnerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

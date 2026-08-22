@@ -337,11 +337,8 @@ const CrosswordPuzzleGenerator = () => {
 
   return (
     <CalculatorShell
-      title="Crossword Puzzle Generator"
-      description="Create custom printable crossword puzzles online for free. Enter words and clues to generate your own crosswords."
       url="/generators/crossword-puzzle-generator"
       content={content}
-      category="Generators"
     >
       <CrosswordPuzzleGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

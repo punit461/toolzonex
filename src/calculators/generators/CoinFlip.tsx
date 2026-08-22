@@ -125,11 +125,8 @@ const CoinFlip = () => {
 
   return (
     <CalculatorShell
-      title="Flip a Coin - Heads or Tails Online"
-      description="Flip a virtual coin instantly online. Free heads or tails random coin flipper for making quick decisions."
       url="/generators/coin-flip"
       content={content}
-      category="Generators"
     >
       <CoinFlipContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

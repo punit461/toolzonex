@@ -144,11 +144,8 @@ const SentenceCaseFixer = () => {
 
   return (
     <CalculatorShell
-      title="Sentence Case Fixer & Text Case Converter"
-      description="Convert text to UPPERCASE, lowercase, Title Case, or Sentence case instantly. Free online text formatting tool."
       url="/text-tools/sentence-case-fixer"
       content={content}
-      category="Text Tools"
     >
       <SentenceCaseFixerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

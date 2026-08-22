@@ -129,11 +129,8 @@ const MultiplicationTableGenerator = () => {
 
   return (
     <CalculatorShell
-      title="Multiplication Table Generator"
-      description="Instantly generate and print custom multiplication times tables for students and teachers."
       url="/generators/multiplication-table-generator"
       content={content}
-      category="Generators"
     >
       <MultiplicationTableGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

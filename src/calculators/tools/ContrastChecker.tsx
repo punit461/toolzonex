@@ -216,11 +216,8 @@ const ContrastChecker = () => {
 
   return (
     <CalculatorShell
-      title="Contrast Checker - WCAG Color Accessibility"
-      description="Check color contrast ratios for WCAG accessibility compliance instantly. Free online contrast checker."
       url="/tools/contrast-checker"
       content={content}
-      category="Tools"
     >
       <ContrastCheckerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

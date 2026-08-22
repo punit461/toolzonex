@@ -148,11 +148,8 @@ const WordFrequencyAnalyzer = () => {
 
   return (
     <CalculatorShell
-      title="Word Frequency Analyzer"
-      description="Find the most frequently used words in a text. Calculate keyword density and word counts instantly online."
       url="/tools/word-frequency-analyzer"
       content={content}
-      category="Tools"
     >
       <WordFrequencyAnalyzerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

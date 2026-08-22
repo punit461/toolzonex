@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
 import WhatsAppLinkGenerator from "../../../calculators/tools/WhatsAppLinkGenerator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/tools/whatsapp-link-generator");
 
-export const metadata: Metadata = {
-  title: "WhatsApp Link Generator - Create Click-to-Chat Links",
-  description: "Generate WhatsApp click-to-chat links with pre-filled messages. Free online WhatsApp link generator tool.",
-  keywords: ["WhatsApp link generator", "create WhatsApp links", "click-to-chat", "WhatsApp business", "WhatsApp contact", "WhatsApp message links", "WhatsApp generator", "WhatsApp buttons"],
-  alternates: { canonical: "/tools/whatsapp-link-generator" },
-  openGraph: {
-    title: "WhatsApp Link Generator - Create Click-to-Chat Links | ToolZoneX",
-    description: "Generate WhatsApp click-to-chat links with pre-filled messages. Free online WhatsApp link generator tool.",
-    url: `${SITE_URL}/tools/whatsapp-link-generator`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const whatsAppLinkGeneratorSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "WhatsApp Link Generator",
-  "description": "Generate WhatsApp click-to-chat links with pre-filled messages. Free online WhatsApp link generator tool.",
-  "url": `${SITE_URL}/tools/whatsapp-link-generator`,
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(whatsAppLinkGeneratorSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <WhatsAppLinkGenerator />
     </>

@@ -124,11 +124,8 @@ const NumberPdfPages = () => {
 
   return (
     <CalculatorShell
-      title="Add Page Numbers to PDF"
-      description="Add page numbers to every page in a PDF. Free, private, runs entirely in your browser."
       url="/tools/number-pdf-pages"
       content={content}
-      category="Tools"
     >
       <NumberPdfPagesContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

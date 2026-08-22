@@ -171,11 +171,8 @@ const PasswordStrengthChecker = () => {
 
   return (
     <CalculatorShell
-      title="Password Strength Checker"
-      description="Check the strength of your password instantly in the browser. Learn how to create secure passwords with our free analyzer."
       url="/tools/password-strength-checker"
       content={content}
-      category="Tools"
     >
       <PasswordStrengthCheckerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

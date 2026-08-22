@@ -170,11 +170,8 @@ const SoundexCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Soundex Calculator"
-      description="Generate the Soundex phonetic code for any word or name — free online Soundex algorithm calculator."
       url="/text-tools/soundex-calculator"
       content={content}
-      category="Text Tools"
     >
       <SoundexCalculatorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -195,11 +195,8 @@ const FontLibrary = () => {
 
   return (
     <CalculatorShell
-      title="Font Library"
-      description="Find the perfect font for your next design project from a searchable Google Fonts library."
       url="/tools/font-library"
       content={content}
-      category="Tools"
     >
       <FontLibraryContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

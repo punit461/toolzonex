@@ -176,11 +176,8 @@ const CsvToJsonConverter = () => {
 
   return (
     <CalculatorShell
-      title="CSV to JSON Converter"
-      description="Convert CSV data into a JSON array instantly. Free online data conversion tool with type inference."
       url="/converters/csv-to-json"
       content={content}
-      category="Converters"
     >
       <CsvToJsonContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

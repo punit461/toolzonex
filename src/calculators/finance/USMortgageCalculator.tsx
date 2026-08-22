@@ -139,11 +139,8 @@ const USMortgageCalculator = () => {
 
   return (
     <CalculatorShell
-      title="US Mortgage Calculator"
-      description="Estimate your full monthly mortgage payment (PITI) with property tax, insurance, PMI, and a year-by-year amortization chart."
       url="/finance/mortgage-calculator"
       content={content}
-      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

@@ -86,11 +86,8 @@ const EMICalculator = () => {
 
   return (
     <CalculatorShell
-      title="EMI Calculator"
-      description="Calculate your monthly EMI for home, car, or personal loans."
       url="/finance/emi-calculator"
       content={content}
-      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

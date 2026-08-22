@@ -137,11 +137,8 @@ const TextRepeater = () => {
 
   return (
     <CalculatorShell
-      title="Text Repeater"
-      description="Repeat a word or phrase up to 100,000 times instantly. Free online text multiplier tool."
       url="/text-tools/text-repeater"
       content={content}
-      category="Text Tools"
     >
       <TextRepeaterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

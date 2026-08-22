@@ -218,11 +218,8 @@ const ExifReader = () => {
 
   return (
     <CalculatorShell
-      title="EXIF Reader"
-      description="Extract and view EXIF metadata from images. See camera settings, lens information, and photo details instantly."
       url="/tools/exif-reader"
       content={content}
-      category="Tools"
     >
       <ExifReaderContent />
 

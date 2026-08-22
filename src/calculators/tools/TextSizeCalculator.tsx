@@ -178,11 +178,8 @@ const TextSizeCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Text Size Calculator - Check Text Size Online"
-      description="Check text size online: character count, word count, byte size, and reading time. Free online text analyzer tool."
       url="/tools/text-size-calculator"
       content={content}
-      category="Tools"
     >
       <TextSizeCalculatorContent />
 

@@ -116,11 +116,8 @@ const GoldRateCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Gold Rate Calculator"
-      description="Calculate the final price of gold in any weight unit and currency, with region-based tax."
       url="/finance/gold-calculator"
       content={content}
-      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

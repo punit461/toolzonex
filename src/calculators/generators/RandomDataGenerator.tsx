@@ -151,11 +151,8 @@ const RandomDataGenerator = () => {
 
   return (
     <CalculatorShell
-      title="Random Data Generator"
-      description="Generate fake names, addresses, emails, and phone numbers for testing and mockups. Free online mock data generator."
       url="/generators/random-data-generator"
       content={content}
-      category="Generators"
     >
       <RandomDataGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

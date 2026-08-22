@@ -122,11 +122,8 @@ const TextStatsAnalyzer = () => {
 
   return (
     <CalculatorShell
-      title="Text Stats Analyzer"
-      description="Analyze characters, words, syllables, vowels, consonants, and sentence length instantly."
       url="/text-tools/text-stats-analyzer"
       content={content}
-      category="Text Tools"
     >
       <TextStatsAnalyzerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

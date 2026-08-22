@@ -76,11 +76,8 @@ const PPFCalculator = () => {
 
   return (
     <CalculatorShell
-      title="PPF Calculator"
-      description="Estimate the maturity amount of your Public Provident Fund (PPF) investments."
       url="/finance/ppf-calculator"
       content={content}
-      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

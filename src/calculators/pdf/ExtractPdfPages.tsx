@@ -100,11 +100,8 @@ const ExtractPdfPages = () => {
 
   return (
     <CalculatorShell
-      title="Extract PDF Pages"
-      description="Pull specific pages out of a PDF into a new file. Free, private, runs entirely in your browser."
       url="/tools/extract-pdf-pages"
       content={content}
-      category="Tools"
     >
       <ExtractPdfPagesContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

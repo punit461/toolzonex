@@ -142,11 +142,8 @@ const ColorMeanings = () => {
 
   return (
     <CalculatorShell
-      title="Color Meanings"
-      description="Browse the list of colors and learn about the psychology and meaning behind each one."
       url="/tools/color-meanings"
       content={content}
-      category="Tools"
     >
       <ColorMeaningsContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

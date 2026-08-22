@@ -149,11 +149,8 @@ const TimeCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Time Calculator"
-      description="Add or subtract days, hours, minutes, and seconds easily. Free online time duration calculator."
       url="/utilities/time-calculator"
       content={content}
-      category="Utilities"
     >
       <TimeCalculatorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

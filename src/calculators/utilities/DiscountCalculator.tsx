@@ -115,11 +115,8 @@ const DiscountCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Discount Calculator"
-      description="Calculate the final price and amount saved after a percentage discount is applied. Free online discount calculator."
       url="/utilities/discount-calculator"
       content={content}
-      category="Utilities"
     >
       <DiscountCalculatorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

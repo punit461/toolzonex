@@ -127,11 +127,8 @@ const DuplicateWordFinder = () => {
 
   return (
     <CalculatorShell
-      title="Duplicate Word Finder"
-      description="Find repeated words in your text to improve your writing and vocabulary. Free online duplicate word checker."
       url="/text-tools/duplicate-word-finder"
       content={content}
-      category="Text Tools"
     >
       <DuplicateWordFinderContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

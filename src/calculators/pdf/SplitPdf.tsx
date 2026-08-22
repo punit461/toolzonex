@@ -116,11 +116,8 @@ const SplitPdf = () => {
 
   return (
     <CalculatorShell
-      title="Split PDF"
-      description="Split a PDF into multiple files at the page numbers you choose. Free, private, runs entirely in your browser."
       url="/tools/split-pdf"
       content={content}
-      category="Tools"
     >
       <SplitPdfContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

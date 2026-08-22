@@ -186,11 +186,8 @@ const MailtoLinkGenerator = () => {
 
   return (
     <CalculatorShell
-      title="Mailto Link Generator"
-      description="Generate mailto links with pre-filled subject, body, CC, and BCC. Free tool for creating email links."
       url="/tools/mailto-link-generator"
       content={content}
-      category="Tools"
     >
       <MailtoLinkGeneratorContent />
 

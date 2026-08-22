@@ -142,11 +142,8 @@ const CFTCalculator = () => {
 
   return (
     <CalculatorShell
-      title="CFT Calculator — Combat Fitness Test"
-      description="Calculate your Combat Fitness Test (CFT) grade for Indian Army and paramilitary forces."
       url="/health/cft-calculator"
       content={content}
-      category="Health"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

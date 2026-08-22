@@ -126,11 +126,8 @@ const TextCaseMixer = () => {
 
   return (
     <CalculatorShell
-      title="Text Case Mixer"
-      description="Convert text into random case, alternating case, or inverse case. Free online meme text generator."
       url="/text-tools/text-case-mixer"
       content={content}
-      category="Text Tools"
     >
       <TextCaseMixerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

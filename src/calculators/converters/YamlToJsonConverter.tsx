@@ -141,11 +141,8 @@ const YamlToJsonConverter = () => {
 
   return (
     <CalculatorShell
-      title="YAML to JSON Converter - Free Developer Tool"
-      description="Convert YAML configurations to JSON format instantly online. Free developer utility."
       url="/converters/yaml-to-json-converter"
       content={content}
-      category="Converters"
     >
       <YamlToJsonConverterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

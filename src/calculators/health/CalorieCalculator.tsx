@@ -181,11 +181,8 @@ const CalorieCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Calorie Calculator"
-      description="Calculate your daily calorie needs for weight loss, maintenance, or muscle gain using the accurate Mifflin-St Jeor equation."
       url="/health/calorie-calculator"
       content={content}
-      category="Health"
     >
       <CalorieCalculatorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

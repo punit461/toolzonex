@@ -97,11 +97,8 @@ const RotatePdf = () => {
 
   return (
     <CalculatorShell
-      title="Rotate PDF"
-      description="Rotate all pages in a PDF by 90, 180, or 270 degrees. Free, private, runs entirely in your browser."
       url="/tools/rotate-pdf"
       content={content}
-      category="Tools"
     >
       <RotatePdfContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

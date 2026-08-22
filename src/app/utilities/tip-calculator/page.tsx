@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
 import TipCalculator from "../../../calculators/utilities/TipCalculator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/utilities/tip-calculator");
 
-export const metadata: Metadata = {
-  title: "Tip Calculator - Split the Bill & Calculate Gratuity Online",
-  description: "Quickly calculate restaurant tips and split the bill among friends. Free online tip calculator with custom percentages.",
-  keywords: ["tip calculator", "gratuity calculator", "split bill calculator", "restaurant tip calculator"],
-  alternates: { canonical: "/utilities/tip-calculator" },
-  openGraph: {
-    title: "Tip Calculator - Split the Bill & Calculate Gratuity Online | ToolZoneX",
-    description: "Quickly calculate restaurant tips and split the bill among friends.",
-    url: `${SITE_URL}/utilities/tip-calculator`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Tip Calculator",
-  "description": "Quickly calculate restaurant tips and split the bill among friends.",
-  "url": `${SITE_URL}/utilities/tip-calculator`,
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <TipCalculator />
     </>

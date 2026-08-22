@@ -321,11 +321,8 @@ const AcronymGenerator = () => {
 
   return (
     <CalculatorShell
-      title="Acronym Generator"
-      description="Instantly convert phrases or titles into acronyms. Free online abbreviation maker."
       url="/generators/acronym-generator"
       content={content}
-      category="Generators"
     >
       <AcronymGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

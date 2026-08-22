@@ -151,11 +151,8 @@ const BoxShadowGenerator = () => {
 
   return (
     <CalculatorShell
-      title="Box Shadow Generator"
-      description="Generate beautiful CSS box shadows visually. Customize offset, blur, and spread, and copy the CSS code instantly."
       url="/developer-tools/box-shadow-generator"
       content={content}
-      category="Developer Tools"
     >
       <BoxShadowGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

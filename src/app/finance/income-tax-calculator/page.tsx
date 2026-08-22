@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
 import IncomeTaxCalculator from "../../../calculators/finance/IncomeTaxCalculator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/finance/income-tax-calculator");
 
-export const metadata: Metadata = {
-  title: "Income Tax Calculator - Old vs New Tax Regime FY 2025-26",
-  description: "Free income tax calculator to compare tax liability under old and new tax regimes. Calculate income tax for FY 2025-26 with latest slabs and deductions.",
-  keywords: ["income tax calculator", "tax regime", "old vs new tax regime", "income tax FY 2025-26", "tax slabs", "tax deduction", "India income tax"],
-  alternates: { canonical: "/finance/income-tax-calculator" },
-  openGraph: {
-    title: "Income Tax Calculator - Old vs New Tax Regime FY 2025-26 | ToolZoneX",
-    description: "Compare tax liability under old and new tax regimes for FY 2025-26.",
-    url: `${SITE_URL}/finance/income-tax-calculator`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const incomeTaxCalculatorSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Income Tax Calculator",
-  "description": "Compare tax liability under old and new tax regimes.",
-  "url": `${SITE_URL}/finance/income-tax-calculator`,
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(incomeTaxCalculatorSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <IncomeTaxCalculator />
     </>

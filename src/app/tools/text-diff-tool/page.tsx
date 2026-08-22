@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
 import TextDiffTool from "../../../calculators/tools/TextDiffTool";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/tools/text-diff-tool");
 
-export const metadata: Metadata = {
-  title: "Text Diff Tool - Compare Text Online",
-  description: "Compare two text documents online to see exact differences. Highlights added and removed words instantly.",
-  keywords: ["text diff", "compare text", "diff checker", "text difference finder", "diff tool online"],
-  alternates: { canonical: "/tools/text-diff-tool" },
-  openGraph: {
-    title: "Text Diff Tool - Compare Text Online | ToolZoneX",
-    description: "Compare two text documents online to see exact differences. Highlights added and removed words instantly.",
-    url: `${SITE_URL}/tools/text-diff-tool`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Text Diff Tool",
-  "description": "Compare two text documents online to see exact differences.",
-  "url": `${SITE_URL}/tools/text-diff-tool`,
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <TextDiffTool />
     </>

@@ -147,7 +147,10 @@ const WindowsScreen = ({ os, variant, title, description, url }: Props) => {
   );
 
   return (
-    <CalculatorShell title={title} description={description} url={url} content={content} category="Utilities">
+    <CalculatorShell
+      url={url}
+      content={content}
+    >
       <WindowsScreenDisplay os={os} variant={variant} />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
     </CalculatorShell>

@@ -125,11 +125,8 @@ const JwtDecoder = () => {
 
   return (
     <CalculatorShell
-      title="JWT Decoder"
-      description="Decode JSON Web Tokens (JWT) safely and securely in your browser. Free online developer tool with no server-side tracking."
       url="/developer-tools/jwt-decoder"
       content={content}
-      category="Developer Tools"
     >
       <JwtDecoderContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

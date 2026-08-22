@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
 import AgeCalculator from "../../../calculators/utilities/AgeCalculator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/utilities/age-calculator");
 
-export const metadata: Metadata = {
-  title: "Age Calculator - Calculate Exact Age in Years, Months, Days",
-  description: "Free age calculator to calculate exact age in years, months, and days. Find your age on any specific date with this accurate date difference calculator.",
-  keywords: ["age calculator", "calculate age", "age in years months days", "date difference", "birthday calculator", "age finder", "date calculator"],
-  alternates: { canonical: "/utilities/age-calculator" },
-  openGraph: {
-    title: "Age Calculator - Calculate Exact Age in Years, Months, Days | ToolZoneX",
-    description: "Calculate exact age in years, months, and days.",
-    url: `${SITE_URL}/utilities/age-calculator`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const ageCalculatorSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Age Calculator",
-  "description": "Calculate exact age in years, months, and days.",
-  "url": `${SITE_URL}/utilities/age-calculator`,
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ageCalculatorSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <AgeCalculator />
     </>

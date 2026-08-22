@@ -315,11 +315,8 @@ const SortingAlgorithmVisualizer = () => {
 
   return (
     <CalculatorShell
-      title="Sorting Algorithm Visualizer - Learn Sorting Online"
-      description="Visualize how popular sorting algorithms like Bubble Sort and Selection Sort work in real-time."
       url="/utilities/algorithm-visualizer"
       content={content}
-      category="Utilities"
     >
       <SortingAlgorithmVisualizerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

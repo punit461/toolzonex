@@ -303,11 +303,8 @@ const OnlineImageEditor = () => {
 
   return (
     <CalculatorShell
-      title="Online Image Editor"
-      description="Free online image editor. Crop, adjust brightness, contrast, saturation, rotate and flip images instantly."
       url="/tools/online-image-editor"
       content={content}
-      category="Tools"
     >
       <OnlineImageEditorContent />
 

@@ -125,11 +125,8 @@ const UUIDGenerator = () => {
 
   return (
     <CalculatorShell
-      title="UUID / GUID Generator"
-      description="Generate cryptographically secure v4 UUIDs instantly online. Free bulk UUID generator."
       url="/generators/uuid-generator"
       content={content}
-      category="Generators"
     >
       <UUIDGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

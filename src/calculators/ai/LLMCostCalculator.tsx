@@ -157,11 +157,8 @@ const LLMCostCalculator = () => {
 
   return (
     <CalculatorShell
-      title="LLM API Cost Calculator"
-      description="Estimate the cost of GPT, Claude, and Gemini API calls from token counts, and compare pricing across models."
       url="/ai/llm-cost-calculator"
       content={content}
-      category="AI"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box sx={{ minWidth: 0 }}>

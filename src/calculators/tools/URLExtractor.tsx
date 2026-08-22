@@ -176,11 +176,8 @@ const URLExtractor = () => {
 
   return (
     <CalculatorShell
-      title="URL Extractor"
-      description="Extract all URLs and links from text. Find and copy all hyperlinks instantly."
       url="/tools/url-extractor"
       content={content}
-      category="Tools"
     >
       <URLExtractorContent />
 

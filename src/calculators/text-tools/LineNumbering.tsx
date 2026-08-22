@@ -129,11 +129,8 @@ const LineNumbering = () => {
 
   return (
     <CalculatorShell
-      title="Line Numbering"
-      description="Automatically add line numbers to text or lists. Free online utility for coding or document formatting."
       url="/text-tools/line-numbering"
       content={content}
-      category="Text Tools"
     >
       <LineNumberingContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

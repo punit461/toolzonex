@@ -140,11 +140,8 @@ const LeetspeakConverter = () => {
 
   return (
     <CalculatorShell
-      title="Leetspeak Converter"
-      description="Convert text to leetspeak (1337 speak) with number substitutions and random casing. Free online text encoder."
       url="/text-tools/leetspeak-converter"
       content={content}
-      category="Text Tools"
     >
       <LeetspeakConverterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

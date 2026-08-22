@@ -184,11 +184,8 @@ const RomanNumeralConverter = () => {
 
   return (
     <CalculatorShell
-      title="Roman Numeral Converter - Numbers to Roman Numerals & Back"
-      description="Convert numbers to Roman numerals, or translate Roman numerals back to regular numbers, instantly. Free bi-directional roman numeral converter and translator."
       url="/utilities/roman-numeral-converter"
       content={content}
-      category="Utilities"
     >
       <RomanNumeralConverterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

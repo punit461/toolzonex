@@ -294,11 +294,8 @@ const WhatIsMyIP = () => {
 
   return (
     <CalculatorShell
-      title="What Is My IP Address"
-      description="Check your public IP address instantly. Find your IP location and ISP information online."
       url="/tools/what-is-my-ip"
       content={content}
-      category="Tools"
     >
       <WhatIsMyIPContent />
 

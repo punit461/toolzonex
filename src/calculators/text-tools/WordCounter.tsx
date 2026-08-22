@@ -117,11 +117,8 @@ const WordCounter = () => {
 
   return (
     <CalculatorShell
-      title="Word Count Calculator"
-      description="Count words, characters, sentences, and paragraphs in real time. Free online word counter for writers and students."
       url="/text-tools/word-counter"
       content={content}
-      category="Text Tools"
     >
       <WordCounterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

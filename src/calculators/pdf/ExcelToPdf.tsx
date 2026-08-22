@@ -131,11 +131,8 @@ const ExcelToPdf = () => {
 
   return (
     <CalculatorShell
-      title="Excel to PDF"
-      description="Convert an Excel spreadsheet into a PDF table. Free, private, runs entirely in your browser."
       url="/tools/excel-to-pdf"
       content={content}
-      category="Tools"
     >
       <ExcelToPdfContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -145,11 +145,8 @@ const BrokenScreen = () => {
 
   return (
     <CalculatorShell
-      title="Broken Screen"
-      description="A fake cracked screen prank overlay. Go fullscreen to prank friends and coworkers -- no real damage."
       url="/utilities/broken-screen"
       content={content}
-      category="Utilities"
     >
       <BrokenScreenContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

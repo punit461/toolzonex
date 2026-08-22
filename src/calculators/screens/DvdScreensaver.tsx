@@ -253,11 +253,8 @@ const DvdScreensaver = () => {
 
   return (
     <CalculatorShell
-      title="DVD Screensaver"
-      description="The classic bouncing DVD logo screensaver, recreated online. Customize the text and go fullscreen."
       url="/utilities/dvd-screensaver"
       content={content}
-      category="Utilities"
     >
       <DvdScreensaverContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

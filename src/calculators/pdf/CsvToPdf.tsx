@@ -131,11 +131,8 @@ const CsvToPdf = () => {
 
   return (
     <CalculatorShell
-      title="CSV to PDF"
-      description="Convert a CSV file into a simple PDF table. Free, private, runs entirely in your browser."
       url="/tools/csv-to-pdf"
       content={content}
-      category="Tools"
     >
       <CsvToPdfContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

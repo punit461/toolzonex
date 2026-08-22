@@ -138,11 +138,8 @@ const FaceShapeDetector = () => {
 
   return (
     <CalculatorShell
-      title="Face Shape Detector"
-      description="Upload a photo to estimate your face shape -- Oval, Round, Square, Heart, Diamond, or Oblong. Runs entirely in your browser."
       url="/tools/face-shape-detector"
       content={content}
-      category="Tools"
     >
       <FaceShapeDetectorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

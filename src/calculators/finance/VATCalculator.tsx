@@ -165,11 +165,8 @@ const VATCalculator = () => {
 
   return (
     <CalculatorShell
-      title="UK VAT Calculator"
-      description="Add or remove 20% UK VAT, or calculate standard VAT for the EU and other countries."
       url="/finance/vat-calculator"
       content={content}
-      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

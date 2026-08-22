@@ -126,11 +126,8 @@ const BMRCalculator = () => {
 
   return (
     <CalculatorShell
-      title="BMR Calculator"
-      description="Calculate your Basal Metabolic Rate (BMR) to understand your resting calorie needs."
       url="/health/bmr-calculator"
       content={content}
-      category="Health"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

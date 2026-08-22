@@ -118,11 +118,8 @@ const DeadPixelTest = () => {
 
   return (
     <CalculatorShell
-      title="Dead Pixel Test"
-      description="Test your monitor for dead or stuck pixels with fullscreen white, black, red, green, and blue screens."
       url="/utilities/dead-pixel-test"
       content={content}
-      category="Utilities"
     >
       <DeadPixelTestContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

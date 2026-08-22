@@ -170,11 +170,8 @@ const TimeZoneConverter = () => {
 
   return (
     <CalculatorShell
-      title="Time Zone Converter"
-      description="Convert your local time to global timezones instantly. Free online time zone calculator."
       url="/utilities/time-zone-converter"
       content={content}
-      category="Utilities"
     >
       <TimeZoneConverterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

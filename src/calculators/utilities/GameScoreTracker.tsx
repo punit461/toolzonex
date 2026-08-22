@@ -200,11 +200,8 @@ const GameScoreTracker = () => {
 
   return (
     <CalculatorShell
-      title="Game Score Tracker"
-      description="Track scores for board games, sports, and party games online. Free multiplayer scoreboard with a live leaderboard."
       url="/utilities/game-score-tracker"
       content={content}
-      category="Utilities"
     >
       <GameScoreTrackerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -201,11 +201,8 @@ const WhatsAppLinkGenerator = () => {
 
   return (
     <CalculatorShell
-      title="WhatsApp Link Generator"
-      description="Generate WhatsApp click-to-chat links with pre-filled messages. Free WhatsApp link creator tool."
       url="/tools/whatsapp-link-generator"
       content={content}
-      category="Tools"
     >
       <WhatsAppLinkGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

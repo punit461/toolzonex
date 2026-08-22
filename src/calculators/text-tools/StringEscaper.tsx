@@ -170,11 +170,8 @@ const StringEscaper = () => {
 
   return (
     <CalculatorShell
-      title="String Escaper & Encoder"
-      description="Escape or unescape strings for JSON, HTML entities, or URL encoding. Free online developer utility."
       url="/text-tools/string-escaper"
       content={content}
-      category="Text Tools"
     >
       <StringEscaperContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

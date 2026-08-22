@@ -244,11 +244,8 @@ const SleepTimeCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Sleep Time Calculator"
-      description="Calculate the best time to go to sleep or wake up based on 90-minute sleep cycles. Wake up feeling refreshed and energized."
       url="/health/sleep-time-calculator"
       content={content}
-      category="Health"
     >
       <SleepTimeCalculatorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

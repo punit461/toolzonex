@@ -199,11 +199,8 @@ const BarcodeGenerator = () => {
 
   return (
     <CalculatorShell
-      title="Barcode Generator"
-      description="Create custom 1D barcodes online instantly. Supports CODE128, UPC, EAN and more. Download high-quality PNGs for free."
       url="/utilities/barcode-generator"
       content={content}
-      category="Utilities"
     >
       <BarcodeGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

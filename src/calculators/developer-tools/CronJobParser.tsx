@@ -122,11 +122,8 @@ const CronJobParser = () => {
 
   return (
     <CalculatorShell
-      title="Cron Job Parser - Cron to English Online"
-      description="Translate Cron expressions into human-readable plain English instantly. Free online cron parser."
       url="/developer-tools/cron-job-parser"
       content={content}
-      category="Developer Tools"
     >
       <CronJobParserContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

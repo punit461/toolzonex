@@ -165,11 +165,8 @@ const LoanCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Loan Calculator - EMI & Mortgage Calculator"
-      description="Calculate your monthly EMI, total interest, and total payment amount for personal loans and mortgages."
       url="/finance/loan-calculator"
       content={content}
-      category="Finance"
     >
       <LoanCalculatorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

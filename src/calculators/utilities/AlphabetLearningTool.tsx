@@ -205,11 +205,8 @@ const AlphabetLearningTool = () => {
 
   return (
     <CalculatorShell
-      title="Alphabet Learning Tool - ABC Flashcards Online"
-      description="Interactive ABC alphabet flashcards for kids. Learn letters with emojis and sound pronunciation."
       url="/utilities/alphabet-learning-tool"
       content={content}
-      category="Utilities"
     >
       <AlphabetLearningToolContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

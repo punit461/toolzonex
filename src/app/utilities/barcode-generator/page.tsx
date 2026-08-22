@@ -1,39 +1,18 @@
 import type { Metadata } from "next";
 import BarcodeGenerator from "../../../calculators/utilities/BarcodeGenerator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+const tool = getTool("/utilities/barcode-generator");
 
-export const metadata: Metadata = {
-  title: "Barcode Generator - Create Free 1D Barcodes",
-  description: "Create custom 1D barcodes online instantly. Supports CODE128, UPC, EAN and more. Download high-quality PNGs for free.",
-  keywords: ["barcode generator", "create barcode", "upc generator", "ean generator", "code128 generator"],
-  alternates: { canonical: "/utilities/barcode-generator" },
-  openGraph: {
-    title: "Barcode Generator - Create Free 1D Barcodes | ToolZoneX",
-    description: "Create custom 1D barcodes online instantly. Supports CODE128, UPC, EAN and more. Download high-quality PNGs for free.",
-    url: `${SITE_URL}/utilities/barcode-generator`,
-    type: "article",
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-};
-
-const toolSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Barcode Generator",
-  "description": "Create custom 1D barcodes online instantly. Supports CODE128, UPC, EAN and more. Download high-quality PNGs for free.",
-  "url": `${SITE_URL}/utilities/barcode-generator`,
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web Browser",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
-};
+export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
       <BarcodeGenerator />
     </>

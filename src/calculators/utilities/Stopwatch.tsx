@@ -199,11 +199,8 @@ const Stopwatch = () => {
 
   return (
     <CalculatorShell
-      title="Online Stopwatch with Laps"
-      description="A simple, fast, and precise online stopwatch with millisecond tracking and lap times. Free productivity tool."
       url="/utilities/stopwatch"
       content={content}
-      category="Utilities"
     >
       <StopwatchContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

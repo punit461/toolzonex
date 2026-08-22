@@ -137,11 +137,8 @@ const BasicCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Basic Calculator"
-      description="A simple, fast, and free online calculator for standard mathematical operations. Perfect for quick everyday math."
       url="/utilities/basic-calculator"
       content={content}
-      category="Utilities"
     >
       <BasicCalculatorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

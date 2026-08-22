@@ -135,11 +135,8 @@ const US401kCalculator = () => {
 
   return (
     <CalculatorShell
-      title="401(k) Retirement Calculator"
-      description="Project your 401(k) balance at retirement, including employer match and 2026 IRS contribution limits."
       url="/finance/401k-calculator"
       content={content}
-      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

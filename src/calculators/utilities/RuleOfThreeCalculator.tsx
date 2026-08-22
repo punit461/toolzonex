@@ -129,11 +129,8 @@ const RuleOfThreeCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Rule of Three Calculator"
-      description="Solve proportions instantly with our Rule of Three calculator. Enter three values to find the fourth unknown value."
       url="/utilities/rule-of-three-calculator"
       content={content}
-      category="Utilities"
     >
       <RuleOfThreeContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

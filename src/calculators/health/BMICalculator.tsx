@@ -140,11 +140,8 @@ const BMICalculator = () => {
 
   return (
     <CalculatorShell
-      title="BMI Calculator"
-      description="Calculate Body Mass Index (BMI) using Indian-specific categories."
       url="/health/bmi-calculator"
       content={content}
-      category="Health"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

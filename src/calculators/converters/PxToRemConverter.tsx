@@ -188,11 +188,8 @@ const PxToRemConverter = () => {
 
   return (
     <CalculatorShell
-      title="PX to REM Converter"
-      description="Convert Pixels (px) to REM units instantly for responsive CSS web design. Free online calculator."
       url="/converters/px-to-rem-converter"
       content={content}
-      category="Converters"
     >
       <PxToRemContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -188,11 +188,8 @@ const MarginCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Margin Calculator"
-      description="Calculate gross profit, profit margin, and markup percentage instantly. Free online margin calculator for businesses."
       url="/utilities/margin-calculator"
       content={content}
-      category="Utilities"
     >
       <MarginCalculatorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

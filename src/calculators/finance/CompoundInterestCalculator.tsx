@@ -100,11 +100,8 @@ const CompoundInterestCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Compound Interest Calculator"
-      description="Calculate how a lump-sum investment grows with the power of compounding, at any compounding frequency."
       url="/finance/compound-interest-calculator"
       content={content}
-      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

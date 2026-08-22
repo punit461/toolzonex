@@ -138,11 +138,8 @@ const TextReverser = () => {
 
   return (
     <CalculatorShell
-      title="Text Reverser"
-      description="Reverse text backwards, reverse words, or flip lines upside down. Free online text reversal tool."
       url="/text-tools/text-reverser"
       content={content}
-      category="Text Tools"
     >
       <TextReverserContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

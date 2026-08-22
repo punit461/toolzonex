@@ -190,11 +190,8 @@ const PrimeNumberChecker = () => {
 
   return (
     <CalculatorShell
-      title="Prime Number Checker"
-      description="Check if a number is a prime number instantly online. Free math utility to find out if a number is prime or composite."
       url="/utilities/prime-number-checker"
       content={content}
-      category="Utilities"
     >
       <PrimeNumberCheckerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

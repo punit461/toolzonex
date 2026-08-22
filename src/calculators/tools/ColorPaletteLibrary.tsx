@@ -148,11 +148,8 @@ const ColorPaletteLibrary = () => {
 
   return (
     <CalculatorShell
-      title="Color Palette Library"
-      description="Browse an expansive list of color palettes and find inspiration for your next project."
       url="/tools/color-palette-library"
       content={content}
-      category="Tools"
     >
       <ColorPaletteLibraryContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

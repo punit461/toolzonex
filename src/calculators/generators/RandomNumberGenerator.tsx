@@ -153,11 +153,8 @@ const RandomNumberGenerator = () => {
 
   return (
     <CalculatorShell
-      title="Random Number Generator"
-      description="Generate random numbers instantly between any range. Free online RNG tool for raffles, giveaways, and statistics."
       url="/generators/random-number-generator"
       content={content}
-      category="Generators"
     >
       <RandomNumberGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

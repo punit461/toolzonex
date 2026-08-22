@@ -156,11 +156,8 @@ const ImageToBase64Converter = () => {
 
   return (
     <CalculatorShell
-      title="Image to Base64 Converter - Encode Image Online"
-      description="Encode image files to Base64 strings instantly. Fast, free online image to data URI converter."
       url="/converters/image-to-base64"
       content={content}
-      category="Converters"
     >
       <ImageToBase64ConverterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

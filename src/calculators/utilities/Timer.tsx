@@ -246,11 +246,8 @@ const Timer = () => {
 
   return (
     <CalculatorShell
-      title="Online Countdown Timer"
-      description="A simple, fast, and free online countdown timer. Perfect for studying, workouts, cooking, and productivity."
       url="/utilities/timer"
       content={content}
-      category="Utilities"
     >
       <TimerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

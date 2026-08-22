@@ -215,11 +215,8 @@ const RegexTester = () => {
 
   return (
     <CalculatorShell
-      title="Regex Tester & Evaluator"
-      description="Test, evaluate, and debug regular expressions online. Real-time regex matching and highlighting tool for developers."
       url="/developer-tools/regex-tester"
       content={content}
-      category="Developer Tools"
     >
       <RegexTesterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

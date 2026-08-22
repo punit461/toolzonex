@@ -165,11 +165,8 @@ const AspectRatioCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Aspect Ratio Calculator"
-      description="Calculate proportional dimensions and aspect ratios for images and videos instantly. Free online aspect ratio tool."
       url="/utilities/aspect-ratio-calculator"
       content={content}
-      category="Utilities"
     >
       <AspectRatioCalculatorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

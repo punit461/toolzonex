@@ -111,11 +111,8 @@ const TDEECalculator = () => {
 
   return (
     <CalculatorShell
-      title="TDEE Calculator"
-      description="Find out your Total Daily Energy Expenditure to understand how many calories you burn."
       url="/health/tdee-calculator"
       content={content}
-      category="Health"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

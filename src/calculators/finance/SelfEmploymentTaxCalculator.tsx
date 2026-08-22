@@ -124,11 +124,8 @@ const SelfEmploymentTaxCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Self-Employment Tax Calculator (1099)"
-      description="Estimate your self-employment tax (Social Security + Medicare) and income tax on freelance or 1099 profit."
       url="/finance/self-employment-tax-calculator"
       content={content}
-      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

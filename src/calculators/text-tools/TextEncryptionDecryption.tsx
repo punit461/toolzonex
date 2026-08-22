@@ -153,11 +153,8 @@ const TextEncryptionDecryption = () => {
 
   return (
     <CalculatorShell
-      title="Text Encryption & Decryption"
-      description="Encrypt or decrypt text using Base64, ROT13, and Hexadecimal. Free secure online string cipher tool."
       url="/text-tools/text-encryption-decryption"
       content={content}
-      category="Text Tools"
     >
       <TextEncryptionDecryptionContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

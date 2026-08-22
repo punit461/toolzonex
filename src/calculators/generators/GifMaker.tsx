@@ -273,11 +273,8 @@ const GifMaker = () => {
 
   return (
     <CalculatorShell
-      title="GIF Maker"
-      description="Turn images and frames into smooth, shareable GIFs — entirely in your browser."
       url="/generators/gif-maker"
       content={content}
-      category="Generators"
     >
       <GifMakerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

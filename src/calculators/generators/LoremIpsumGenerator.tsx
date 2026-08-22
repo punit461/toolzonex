@@ -545,12 +545,8 @@ const LoremIpsumGenerator = () => {
 
   return (
     <CalculatorShell
-      title="Lorem Ipsum Generator"
-      description="Generate standard dummy text for UI testing, mockups, and wireframes. Free online Lorem Ipsum placeholder text generator with custom source text and HTML output."
       url="/generators/lorem-ipsum-generator"
       content={content}
-      category="Generators"
-      faqs={faqs}
     >
       <LoremIpsumGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -6,16 +6,13 @@ import Link from 'next/link';
 import ArticleIcon from '@mui/icons-material/Article';
 import Breadcrumbs from './Breadcrumbs';
 import { categories } from '../data/toolCategories';
+import { getTool } from '../data/toolRegistry';
 import { getToolBlogByRoute } from '../data/tool-blogs';
 
 interface CalculatorShellProps {
-  title: string;
-  description: string;
   url: string;
   children: React.ReactNode;
   content: React.ReactNode;
-  category?: 'Finance' | 'Health' | 'Utilities' | 'Tools' | 'Converters' | 'Developer Tools' | 'Generators' | 'Text Tools' | 'AI';
-  faqs?: { question: string; answer: string }[];
 }
 
 const RELATED_COUNT = 6;
@@ -43,7 +40,9 @@ function getRelatedTools(category: string, currentUrl: string) {
   return related;
 }
 
-const CalculatorShell = ({ title, description, url, children, content, category = 'Finance', faqs }: CalculatorShellProps) => {
+const CalculatorShell = ({ url, children, content }: CalculatorShellProps) => {
+  const entry = getTool(url);
+  const { name: title, description, shellCategory: category, faqs } = entry;
   const relatedTools = getRelatedTools(category, url);
   const blog = getToolBlogByRoute(url);
 

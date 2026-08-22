@@ -191,11 +191,8 @@ const CurrentTimeDisplay = () => {
 
   return (
     <CalculatorShell
-      title="Current Time Display"
-      description="View the exact current local time and track timezones across the world with our interactive world clock."
       url="/utilities/current-time-display"
       content={content}
-      category="Utilities"
     >
       <CurrentTimeDisplayContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

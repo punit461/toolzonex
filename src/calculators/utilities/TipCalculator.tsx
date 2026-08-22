@@ -148,11 +148,8 @@ const TipCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Tip Calculator"
-      description="Quickly calculate restaurant tips and split the bill among friends. Free online tip calculator with custom percentages."
       url="/utilities/tip-calculator"
       content={content}
-      category="Utilities"
     >
       <TipCalculatorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

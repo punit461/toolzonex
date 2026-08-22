@@ -139,11 +139,8 @@ const GPUCostCalculator = () => {
 
   return (
     <CalculatorShell
-      title="GPU Cloud Cost Calculator"
-      description="Estimate the cost of renting cloud GPUs like A100, H100, and RTX 4090 for AI training and inference."
       url="/ai/gpu-cost-calculator"
       content={content}
-      category="AI"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box sx={{ minWidth: 0 }}>

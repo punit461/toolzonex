@@ -166,11 +166,8 @@ const JsonToXmlConverter = () => {
 
   return (
     <CalculatorShell
-      title="JSON to XML Converter"
-      description="Convert JSON strings and files into formatted XML instantly. Free online data converter."
       url="/converters/json-to-xml"
       content={content}
-      category="Converters"
     >
       <JsonToXmlContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

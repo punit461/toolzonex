@@ -144,11 +144,8 @@ const TipScreen = () => {
 
   return (
     <CalculatorShell
-      title="Tip Screen"
-      description="A fullscreen tipping display for restaurants and point-of-sale systems — enter a subtotal and show customers exact tip amounts."
       url="/utilities/tip-screen"
       content={content}
-      category="Utilities"
     >
       <TipScreenContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

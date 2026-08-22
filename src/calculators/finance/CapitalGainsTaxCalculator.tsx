@@ -182,11 +182,8 @@ const CapitalGainsTaxCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Capital Gains Tax Calculator"
-      description="Estimate federal, NIIT, and state tax on a short-term or long-term capital gain using 2026 brackets."
       url="/finance/capital-gains-tax-calculator"
       content={content}
-      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

@@ -178,11 +178,8 @@ const UnitConverter = ({ category }: Props) => {
 
   return (
     <CalculatorShell
-      title={`${category.name} Converter`}
-      description={`Free ${category.name.toLowerCase()} unit converter. Convert between ${category.units.map((u) => u.label.split(' (')[0]).join(', ')}.`}
       url={`/converters/${category.slug}-converter`}
       content={content}
-      category="Converters"
     >
       <UnitConverterContent category={category} />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

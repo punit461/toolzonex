@@ -88,11 +88,8 @@ const SilverRateCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Silver Rate Calculator"
-      description="Calculate the final price of silver in any weight unit and currency, with region-based tax."
       url="/finance/silver-calculator"
       content={content}
-      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

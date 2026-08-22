@@ -178,11 +178,8 @@ const KeywordDensityAnalyzer = () => {
 
   return (
     <CalculatorShell
-      title="Keyword Density Checker - Free SEO Tool"
-      description="Free keyword density checker. Analyze keyword frequency, word count, and percentage usage in text or webpage copy."
       url="/text-tools/keyword-density-analyzer"
       content={content}
-      category="Text Tools"
     >
       <KeywordDensityAnalyzerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

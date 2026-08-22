@@ -201,11 +201,8 @@ const TextMerger = () => {
 
   return (
     <CalculatorShell
-      title="Text Merger - Combine Lists Line by Line"
-      description="Combine two lists of text line by line instantly. Perfect for merging columns of data."
       url="/tools/text-merger"
       content={content}
-      category="Tools"
     >
       <TextMergerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

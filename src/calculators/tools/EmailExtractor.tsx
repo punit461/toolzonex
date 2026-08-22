@@ -154,11 +154,8 @@ const EmailExtractor = () => {
 
   return (
     <CalculatorShell
-      title="Email Extractor"
-      description="Extract all email addresses from any text. Free online tool to find and copy email addresses quickly."
       url="/tools/email-extractor"
       content={content}
-      category="Tools"
     >
       <EmailExtractorContent />
 

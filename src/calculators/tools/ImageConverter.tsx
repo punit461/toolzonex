@@ -205,11 +205,8 @@ const ImageConverter = () => {
 
   return (
     <CalculatorShell
-      title="Image Converter"
-      description="Convert images between PNG, JPEG, and WebP formats. Free online image converter tool."
       url="/tools/image-converter"
       content={content}
-      category="Tools"
     >
       <ImageConverterContent />
 

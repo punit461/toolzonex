@@ -152,11 +152,8 @@ const RandomLinePicker = () => {
 
   return (
     <CalculatorShell
-      title="Random Line Picker - Choose a Random Winner"
-      description="Fairly pick a random name, winner, or item from a list. Free online random line picker."
       url="/generators/random-line-picker"
       content={content}
-      category="Generators"
     >
       <RandomLinePickerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

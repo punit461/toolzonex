@@ -148,11 +148,8 @@ const TextSplitter = () => {
 
   return (
     <CalculatorShell
-      title="Text Splitter"
-      description="Split text by characters, lines, or delimiters. Break large texts into smaller chunks online for free."
       url="/text-tools/text-splitter"
       content={content}
-      category="Text Tools"
     >
       <TextSplitterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

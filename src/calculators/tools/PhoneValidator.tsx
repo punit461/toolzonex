@@ -248,12 +248,8 @@ const PhoneValidator = () => {
 
   return (
     <CalculatorShell
-      title="Phone Number Validator"
-      description="Validate phone numbers and check format. Supports multiple countries with instant validation."
       url="/tools/phone-validator"
       content={content}
-      category="Tools"
-      faqs={faqs}
     >
       <PhoneValidatorContent />
 

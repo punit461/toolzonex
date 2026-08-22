@@ -155,11 +155,8 @@ const Base64ToImageConverter = () => {
 
   return (
     <CalculatorShell
-      title="Base64 to Image Converter - Decode Image Online"
-      description="Decode Base64 strings to image files instantly online. Preview and download PNG/JPEG from Base64 data."
       url="/converters/base64-to-image"
       content={content}
-      category="Converters"
     >
       <Base64ToImageConverterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

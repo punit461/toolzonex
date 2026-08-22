@@ -198,11 +198,8 @@ const FocusTimer = () => {
 
   return (
     <CalculatorShell
-      title="Pomodoro Focus Timer"
-      description="Boost productivity with this free online Pomodoro timer. Alternate between focused work sessions and short breaks to stay fresh."
       url="/utilities/focus-timer"
       content={content}
-      category="Utilities"
     >
       <FocusTimerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

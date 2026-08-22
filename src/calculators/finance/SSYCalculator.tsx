@@ -113,11 +113,8 @@ const SSYCalculator = () => {
 
   return (
     <CalculatorShell
-      title="SSY Calculator"
-      description="Calculate the maturity value of your Sukanya Samriddhi Yojana (SSY) investment for your daughter's future."
       url="/finance/ssy-calculator"
       content={content}
-      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

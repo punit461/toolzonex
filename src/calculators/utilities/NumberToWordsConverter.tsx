@@ -234,11 +234,8 @@ const NumberToWordsConverter = () => {
 
   return (
     <CalculatorShell
-      title="Number to Words Converter - Write Numbers in English Words"
-      description="Convert any whole number to English words instantly — see 23,698, 518,500, and 10,795 spelled out. Perfect for writing checks, legal documents, and large numbers."
       url="/utilities/number-to-words-converter"
       content={content}
-      category="Utilities"
     >
       <NumberToWordsConverterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

@@ -78,11 +78,8 @@ const SIPCalculator = () => {
 
   return (
     <CalculatorShell
-      title="SIP Calculator"
-      description="Estimate the future value of your Systematic Investment Plan."
       url="/finance/sip-calculator"
       content={content}
-      category="Finance"
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>

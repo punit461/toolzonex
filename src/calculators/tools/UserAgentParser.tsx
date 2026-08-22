@@ -215,11 +215,8 @@ const UserAgentParser = () => {
 
   return (
     <CalculatorShell
-      title="User Agent Parser"
-      description="Parse and analyze user agent strings. Identify browser, OS, device, and engine information."
       url="/tools/user-agent-parser"
       content={content}
-      category="Tools"
     >
       <UserAgentParserContent />
 

@@ -130,11 +130,8 @@ const LinePrefixSuffix = () => {
 
   return (
     <CalculatorShell
-      title="Line Prefix & Suffix Tool"
-      description="Add text to the beginning or end of every line instantly. Free online list formatting tool for developers."
       url="/text-tools/line-prefix-suffix-tool"
       content={content}
-      category="Text Tools"
     >
       <LinePrefixSuffixContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

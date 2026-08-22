@@ -146,11 +146,8 @@ const JsonFormatter = () => {
 
   return (
     <CalculatorShell
-      title="JSON Formatter & Validator"
-      description="Format, validate, and minify JSON data instantly in your browser. Free online developer tool."
       url="/developer-tools/json-formatter"
       content={content}
-      category="Developer Tools"
     >
       <JsonFormatterContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

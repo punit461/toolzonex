@@ -100,11 +100,8 @@ const PalindromeChecker = () => {
 
   return (
     <CalculatorShell
-      title="Palindrome Checker"
-      description="Check if a word or phrase is a palindrome. Free online text analysis tool."
       url="/text-tools/palindrome-checker"
       content={content}
-      category="Text Tools"
     >
       <PalindromeCheckerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

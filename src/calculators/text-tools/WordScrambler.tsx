@@ -149,11 +149,8 @@ const WordScrambler = () => {
 
   return (
     <CalculatorShell
-      title="Word Scrambler"
-      description="Scramble the letters in words or text while keeping first and last letters intact. Free online word scrambler."
       url="/text-tools/word-scrambler"
       content={content}
-      category="Text Tools"
     >
       <WordScramblerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

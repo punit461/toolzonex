@@ -206,12 +206,8 @@ const RandomStringGenerator = () => {
 
   return (
     <CalculatorShell
-      title="Random String Generator"
-      description="Generate random alphanumeric strings securely online. Free bulk random text generator."
       url="/generators/random-string-generator"
       content={content}
-      category="Generators"
-      faqs={faqs}
     >
       <RandomStringGeneratorContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

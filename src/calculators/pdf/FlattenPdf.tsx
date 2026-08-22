@@ -95,11 +95,8 @@ const FlattenPdf = () => {
 
   return (
     <CalculatorShell
-      title="Flatten PDF"
-      description="Flatten a PDF's fillable form fields into permanent page content. Free, private, runs entirely in your browser."
       url="/tools/flatten-pdf"
       content={content}
-      category="Tools"
     >
       <FlattenPdfContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

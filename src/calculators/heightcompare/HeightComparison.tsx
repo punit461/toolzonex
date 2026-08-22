@@ -561,11 +561,8 @@ const HeightComparison = () => {
 
   return (
     <CalculatorShell
-      title="Height Comparison Tool"
-      description="Compare heights side by side with proportional scaled bars. Free online height comparison tool."
       url="/tools/height-comparison"
       content={content}
-      category="Tools"
     >
       <HeightComparisonContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

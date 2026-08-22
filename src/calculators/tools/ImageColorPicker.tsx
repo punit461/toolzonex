@@ -266,11 +266,8 @@ const ImageColorPicker = () => {
 
   return (
     <CalculatorShell
-      title="Image Color Picker"
-      description="Create custom color palettes from any image by picking exact HEX colors from its pixels."
       url="/tools/image-color-picker"
       content={content}
-      category="Tools"
     >
       <ImageColorPickerContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

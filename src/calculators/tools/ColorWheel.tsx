@@ -216,11 +216,8 @@ const ColorWheel = () => {
 
   return (
     <CalculatorShell
-      title="Color Wheel"
-      description="Pick a base color and generate complementary, analogous, triadic, and other color harmonies instantly."
       url="/tools/color-wheel"
       content={content}
-      category="Tools"
     >
       <ColorWheelContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

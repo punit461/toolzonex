@@ -226,11 +226,8 @@ const TextReadabilityScore = () => {
 
   return (
     <CalculatorShell
-      title="Flesch-Kincaid Grade Level & Reading Ease Calculator"
-      description="Calculate Flesch Reading Ease, Flesch-Kincaid grade level, and a readability score from any text."
       url="/tools/text-readability-score"
       content={content}
-      category="Tools"
     >
       <TextReadabilityScoreContent />
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
