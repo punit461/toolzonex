@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Stopwatch from "../../../calculators/Stopwatch";
+import Stopwatch from "../../../calculators/utilities/Stopwatch";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

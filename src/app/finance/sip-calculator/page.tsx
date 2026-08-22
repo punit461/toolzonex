@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SIPCalculator from "../../../calculators/SIPCalculator";
+import SIPCalculator from "../../../calculators/finance/SIPCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

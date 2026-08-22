@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BodyFatCalculator from "../../../calculators/BodyFatCalculator";
+import BodyFatCalculator from "../../../calculators/health/BodyFatCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

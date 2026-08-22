@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CoinFlip from "../../../calculators/CoinFlip";
+import CoinFlip from "../../../calculators/generators/CoinFlip";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

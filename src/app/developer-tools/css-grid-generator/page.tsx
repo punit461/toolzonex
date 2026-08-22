@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CssGridGenerator from "../../../calculators/CssGridGenerator";
+import CssGridGenerator from "../../../calculators/developer-tools/CssGridGenerator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

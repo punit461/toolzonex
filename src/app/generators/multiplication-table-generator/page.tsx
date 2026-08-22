@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import MultiplicationTableGenerator from "../../../calculators/MultiplicationTableGenerator";
+import MultiplicationTableGenerator from "../../../calculators/generators/MultiplicationTableGenerator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

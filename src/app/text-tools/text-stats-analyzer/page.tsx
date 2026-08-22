@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TextStatsAnalyzer from "../../../calculators/TextStatsAnalyzer";
+import TextStatsAnalyzer from "../../../calculators/text-tools/TextStatsAnalyzer";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

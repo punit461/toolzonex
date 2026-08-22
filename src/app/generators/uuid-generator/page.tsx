@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import UUIDGenerator from "../../../calculators/UUIDGenerator";
+import UUIDGenerator from "../../../calculators/generators/UUIDGenerator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BarcodeGenerator from "../../../calculators/BarcodeGenerator";
+import BarcodeGenerator from "../../../calculators/utilities/BarcodeGenerator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

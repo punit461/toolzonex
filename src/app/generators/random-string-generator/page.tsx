@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import RandomStringGenerator from "../../../calculators/RandomStringGenerator";
+import RandomStringGenerator from "../../../calculators/generators/RandomStringGenerator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

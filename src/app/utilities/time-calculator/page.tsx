@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TimeCalculator from "../../../calculators/TimeCalculator";
+import TimeCalculator from "../../../calculators/utilities/TimeCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

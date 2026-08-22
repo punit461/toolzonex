@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CFTCalculator from "../../../calculators/CFTCalculator";
+import CFTCalculator from "../../../calculators/health/CFTCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

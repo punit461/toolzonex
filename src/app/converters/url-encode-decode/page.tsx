@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import UrlEncoder from "../../../calculators/UrlEncoder";
+import UrlEncoder from "../../../calculators/converters/UrlEncoder";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

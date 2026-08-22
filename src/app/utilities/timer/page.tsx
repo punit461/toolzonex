@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Timer from "../../../calculators/Timer";
+import Timer from "../../../calculators/utilities/Timer";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

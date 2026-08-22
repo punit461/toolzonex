@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TextDiffTool from "../../../calculators/TextDiffTool";
+import TextDiffTool from "../../../calculators/tools/TextDiffTool";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

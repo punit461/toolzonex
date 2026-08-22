@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import UserAgentParser from "../../../calculators/UserAgentParser";
+import UserAgentParser from "../../../calculators/tools/UserAgentParser";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

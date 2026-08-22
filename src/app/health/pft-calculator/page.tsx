@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PFTCalculator from "../../../calculators/PFTCalculator";
+import PFTCalculator from "../../../calculators/health/PFTCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

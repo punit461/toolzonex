@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import JsonToCsvConverter from "../../../calculators/JsonToCsvConverter";
+import JsonToCsvConverter from "../../../calculators/converters/JsonToCsvConverter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

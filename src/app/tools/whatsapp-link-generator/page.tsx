@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import WhatsAppLinkGenerator from "../../../calculators/WhatsAppLinkGenerator";
+import WhatsAppLinkGenerator from "../../../calculators/tools/WhatsAppLinkGenerator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

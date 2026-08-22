@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import JsMinifier from "../../../calculators/JsMinifier";
+import JsMinifier from "../../../calculators/developer-tools/JsMinifier";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

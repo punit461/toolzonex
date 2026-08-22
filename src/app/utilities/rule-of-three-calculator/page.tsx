@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import RuleOfThreeCalculator from "../../../calculators/RuleOfThreeCalculator";
+import RuleOfThreeCalculator from "../../../calculators/utilities/RuleOfThreeCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

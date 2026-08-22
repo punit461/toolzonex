@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PalindromeChecker from "../../../calculators/PalindromeChecker";
+import PalindromeChecker from "../../../calculators/text-tools/PalindromeChecker";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

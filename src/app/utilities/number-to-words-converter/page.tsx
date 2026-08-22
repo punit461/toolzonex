@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import NumberToWordsConverter from "../../../calculators/NumberToWordsConverter";
+import NumberToWordsConverter from "../../../calculators/utilities/NumberToWordsConverter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

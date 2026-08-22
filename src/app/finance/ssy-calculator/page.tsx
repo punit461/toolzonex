@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SSYCalculator from "../../../calculators/SSYCalculator";
+import SSYCalculator from "../../../calculators/finance/SSYCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BasicCalculator from "../../../calculators/BasicCalculator";
+import BasicCalculator from "../../../calculators/utilities/BasicCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

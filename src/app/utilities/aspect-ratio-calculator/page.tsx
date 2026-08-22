@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import AspectRatioCalculator from "../../../calculators/AspectRatioCalculator";
+import AspectRatioCalculator from "../../../calculators/utilities/AspectRatioCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

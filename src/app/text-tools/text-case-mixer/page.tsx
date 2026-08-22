@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TextCaseMixer from "../../../calculators/TextCaseMixer";
+import TextCaseMixer from "../../../calculators/text-tools/TextCaseMixer";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

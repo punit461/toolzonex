@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import LoremIpsumGenerator from "../../../calculators/LoremIpsumGenerator";
+import LoremIpsumGenerator from "../../../calculators/generators/LoremIpsumGenerator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

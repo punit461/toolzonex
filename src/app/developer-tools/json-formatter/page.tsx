@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import JsonFormatter from "../../../calculators/JsonFormatter";
+import JsonFormatter from "../../../calculators/developer-tools/JsonFormatter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

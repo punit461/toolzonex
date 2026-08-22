@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import FlexboxGenerator from "../../../calculators/FlexboxGenerator";
+import FlexboxGenerator from "../../../calculators/developer-tools/FlexboxGenerator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

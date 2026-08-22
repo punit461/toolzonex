@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import GSTCalculator from "../../../calculators/GSTCalculator";
+import GSTCalculator from "../../../calculators/finance/GSTCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

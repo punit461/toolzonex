@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import KeywordDensityAnalyzer from "../../../calculators/KeywordDensityAnalyzer";
+import KeywordDensityAnalyzer from "../../../calculators/text-tools/KeywordDensityAnalyzer";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

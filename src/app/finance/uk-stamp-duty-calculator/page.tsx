@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import UKStampDutyCalculator from "../../../calculators/UKStampDutyCalculator";
+import UKStampDutyCalculator from "../../../calculators/finance/UKStampDutyCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import RentVsBuyCalculator from "../../../calculators/RentVsBuyCalculator";
+import RentVsBuyCalculator from "../../../calculators/finance/RentVsBuyCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

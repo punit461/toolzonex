@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CompoundInterestCalculator from "../../../calculators/CompoundInterestCalculator";
+import CompoundInterestCalculator from "../../../calculators/finance/CompoundInterestCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

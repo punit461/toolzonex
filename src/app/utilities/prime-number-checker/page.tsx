@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PrimeNumberChecker from "../../../calculators/PrimeNumberChecker";
+import PrimeNumberChecker from "../../../calculators/utilities/PrimeNumberChecker";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

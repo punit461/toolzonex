@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import GPUCostCalculator from "../../../calculators/GPUCostCalculator";
+import GPUCostCalculator from "../../../calculators/ai/GPUCostCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

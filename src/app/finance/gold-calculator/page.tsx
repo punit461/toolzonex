@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import GoldRateCalculator from "../../../calculators/GoldRateCalculator";
+import GoldRateCalculator from "../../../calculators/finance/GoldRateCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import USMortgageCalculator from "../../../calculators/USMortgageCalculator";
+import USMortgageCalculator from "../../../calculators/finance/USMortgageCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

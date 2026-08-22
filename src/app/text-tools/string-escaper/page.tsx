@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import StringEscaper from "../../../calculators/StringEscaper";
+import StringEscaper from "../../../calculators/text-tools/StringEscaper";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ExifReader from "../../../calculators/ExifReader";
+import ExifReader from "../../../calculators/tools/ExifReader";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

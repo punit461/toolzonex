@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import IncomeTaxCalculator from "../../../calculators/IncomeTaxCalculator";
+import IncomeTaxCalculator from "../../../calculators/finance/IncomeTaxCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

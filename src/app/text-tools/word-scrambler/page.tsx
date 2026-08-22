@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import WordScrambler from "../../../calculators/WordScrambler";
+import WordScrambler from "../../../calculators/text-tools/WordScrambler";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

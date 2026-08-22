@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SelfEmploymentTaxCalculator from "../../../calculators/SelfEmploymentTaxCalculator";
+import SelfEmploymentTaxCalculator from "../../../calculators/finance/SelfEmploymentTaxCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

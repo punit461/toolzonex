@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Base64ToImageConverter from "../../../calculators/Base64ToImageConverter";
+import Base64ToImageConverter from "../../../calculators/converters/Base64ToImageConverter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

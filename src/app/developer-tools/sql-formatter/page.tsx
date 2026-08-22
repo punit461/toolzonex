@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SqlFormatter from "../../../calculators/SqlFormatter";
+import SqlFormatter from "../../../calculators/developer-tools/SqlFormatter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

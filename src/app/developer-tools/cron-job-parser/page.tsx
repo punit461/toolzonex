@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CronJobParser from "../../../calculators/CronJobParser";
+import CronJobParser from "../../../calculators/developer-tools/CronJobParser";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

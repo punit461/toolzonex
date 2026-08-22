@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import DiscountCalculator from "../../../calculators/DiscountCalculator";
+import DiscountCalculator from "../../../calculators/utilities/DiscountCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

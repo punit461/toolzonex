@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TextSizeCalculator from "../../../calculators/TextSizeCalculator";
+import TextSizeCalculator from "../../../calculators/tools/TextSizeCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

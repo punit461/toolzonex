@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TDEECalculator from "../../../calculators/TDEECalculator";
+import TDEECalculator from "../../../calculators/health/TDEECalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

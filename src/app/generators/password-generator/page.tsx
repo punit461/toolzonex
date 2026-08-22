@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PasswordGenerator from "../../../calculators/PasswordGenerator";
+import PasswordGenerator from "../../../calculators/generators/PasswordGenerator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

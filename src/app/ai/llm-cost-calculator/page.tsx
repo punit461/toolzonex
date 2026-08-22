@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import LLMCostCalculator from "../../../calculators/LLMCostCalculator";
+import LLMCostCalculator from "../../../calculators/ai/LLMCostCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

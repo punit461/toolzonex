@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ImageColorPicker from "../../../calculators/ImageColorPicker";
+import ImageColorPicker from "../../../calculators/tools/ImageColorPicker";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

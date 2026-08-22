@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import RgbToHexConverter from "../../../calculators/RgbToHexConverter";
+import RgbToHexConverter from "../../../calculators/converters/RgbToHexConverter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

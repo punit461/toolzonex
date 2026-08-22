@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ImageConverter from "../../../calculators/ImageConverter";
+import ImageConverter from "../../../calculators/tools/ImageConverter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

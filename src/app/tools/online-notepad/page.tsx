@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import OnlineNotepad from "../../../calculators/OnlineNotepad";
+import OnlineNotepad from "../../../calculators/tools/OnlineNotepad";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

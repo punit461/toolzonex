@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import RetirementCalculator from "../../../calculators/RetirementCalculator";
+import RetirementCalculator from "../../../calculators/finance/RetirementCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

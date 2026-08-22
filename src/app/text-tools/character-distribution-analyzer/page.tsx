@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CharacterDistributionAnalyzer from "../../../calculators/CharacterDistributionAnalyzer";
+import CharacterDistributionAnalyzer from "../../../calculators/text-tools/CharacterDistributionAnalyzer";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

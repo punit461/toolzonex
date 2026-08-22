@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SentenceCaseFixer from "../../../calculators/SentenceCaseFixer";
+import SentenceCaseFixer from "../../../calculators/text-tools/SentenceCaseFixer";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

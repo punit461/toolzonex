@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import GifMaker from "../../../calculators/GifMaker";
+import GifMaker from "../../../calculators/generators/GifMaker";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

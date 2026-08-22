@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import GameScoreTracker from "../../../calculators/GameScoreTracker";
+import GameScoreTracker from "../../../calculators/utilities/GameScoreTracker";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

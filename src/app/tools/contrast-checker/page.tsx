@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ContrastChecker from "../../../calculators/ContrastChecker";
+import ContrastChecker from "../../../calculators/tools/ContrastChecker";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

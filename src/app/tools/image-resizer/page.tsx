@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ImageResizer from "../../../calculators/ImageResizer";
+import ImageResizer from "../../../calculators/tools/ImageResizer";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

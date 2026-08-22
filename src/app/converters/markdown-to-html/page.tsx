@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import MarkdownToHtmlConverter from "../../../calculators/MarkdownToHtmlConverter";
+import MarkdownToHtmlConverter from "../../../calculators/converters/MarkdownToHtmlConverter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

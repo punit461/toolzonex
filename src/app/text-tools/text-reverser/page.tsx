@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TextReverser from "../../../calculators/TextReverser";
+import TextReverser from "../../../calculators/text-tools/TextReverser";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

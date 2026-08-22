@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import WordCounter from "../../../calculators/WordCounter";
+import WordCounter from "../../../calculators/text-tools/WordCounter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

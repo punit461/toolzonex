@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PPFCalculator from "../../../calculators/PPFCalculator";
+import PPFCalculator from "../../../calculators/finance/PPFCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

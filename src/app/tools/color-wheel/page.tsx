@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ColorWheel from "../../../calculators/ColorWheel";
+import ColorWheel from "../../../calculators/tools/ColorWheel";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

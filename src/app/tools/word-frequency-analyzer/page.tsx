@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import WordFrequencyAnalyzer from "../../../calculators/WordFrequencyAnalyzer";
+import WordFrequencyAnalyzer from "../../../calculators/tools/WordFrequencyAnalyzer";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

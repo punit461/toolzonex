@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TimeZoneConverter from "../../../calculators/TimeZoneConverter";
+import TimeZoneConverter from "../../../calculators/utilities/TimeZoneConverter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

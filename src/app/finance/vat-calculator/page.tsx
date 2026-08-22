@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import VATCalculator from "../../../calculators/VATCalculator";
+import VATCalculator from "../../../calculators/finance/VATCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

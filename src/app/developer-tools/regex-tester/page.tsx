@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import RegexTester from "../../../calculators/RegexTester";
+import RegexTester from "../../../calculators/developer-tools/RegexTester";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

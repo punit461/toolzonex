@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import LoanCalculator from "../../../calculators/LoanCalculator";
+import LoanCalculator from "../../../calculators/finance/LoanCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

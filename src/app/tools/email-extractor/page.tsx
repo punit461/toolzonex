@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import EmailExtractor from "../../../calculators/EmailExtractor";
+import EmailExtractor from "../../../calculators/tools/EmailExtractor";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

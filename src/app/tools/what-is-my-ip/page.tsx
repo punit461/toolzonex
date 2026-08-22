@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import WhatIsMyIP from "../../../calculators/WhatIsMyIP";
+import WhatIsMyIP from "../../../calculators/tools/WhatIsMyIP";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import LineNumbering from "../../../calculators/LineNumbering";
+import LineNumbering from "../../../calculators/text-tools/LineNumbering";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

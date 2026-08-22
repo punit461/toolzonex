@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import AgeCalculator from "../../../calculators/AgeCalculator";
+import AgeCalculator from "../../../calculators/utilities/AgeCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

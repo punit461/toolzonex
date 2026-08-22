@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import DuplicatesRemover from "../../../calculators/DuplicatesRemover";
+import DuplicatesRemover from "../../../calculators/text-tools/DuplicatesRemover";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

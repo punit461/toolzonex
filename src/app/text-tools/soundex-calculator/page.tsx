@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SoundexCalculator from "../../../calculators/SoundexCalculator";
+import SoundexCalculator from "../../../calculators/text-tools/SoundexCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

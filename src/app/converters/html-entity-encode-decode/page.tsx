@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import HtmlEntityEncoder from "../../../calculators/HtmlEntityEncoder";
+import HtmlEntityEncoder from "../../../calculators/converters/HtmlEntityEncoder";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

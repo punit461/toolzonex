@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BinaryConverter from "../../../calculators/BinaryConverter";
+import BinaryConverter from "../../../calculators/converters/BinaryConverter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

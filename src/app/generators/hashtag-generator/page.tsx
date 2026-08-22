@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import HashtagGenerator from "../../../calculators/HashtagGenerator";
+import HashtagGenerator from "../../../calculators/generators/HashtagGenerator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

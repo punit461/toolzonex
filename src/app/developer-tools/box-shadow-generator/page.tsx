@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BoxShadowGenerator from "../../../calculators/BoxShadowGenerator";
+import BoxShadowGenerator from "../../../calculators/developer-tools/BoxShadowGenerator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

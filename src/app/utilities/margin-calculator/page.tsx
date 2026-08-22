@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import MarginCalculator from "../../../calculators/MarginCalculator";
+import MarginCalculator from "../../../calculators/utilities/MarginCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

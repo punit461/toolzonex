@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import RandomLinePicker from "../../../calculators/RandomLinePicker";
+import RandomLinePicker from "../../../calculators/generators/RandomLinePicker";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

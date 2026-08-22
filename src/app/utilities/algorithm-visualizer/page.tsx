@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SortingAlgorithmVisualizer from "../../../calculators/SortingAlgorithmVisualizer";
+import SortingAlgorithmVisualizer from "../../../calculators/utilities/SortingAlgorithmVisualizer";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

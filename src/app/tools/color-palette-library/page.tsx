@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ColorPaletteLibrary from "../../../calculators/ColorPaletteLibrary";
+import ColorPaletteLibrary from "../../../calculators/tools/ColorPaletteLibrary";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

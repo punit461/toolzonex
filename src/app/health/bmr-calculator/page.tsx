@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BMRCalculator from "../../../calculators/BMRCalculator";
+import BMRCalculator from "../../../calculators/health/BMRCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

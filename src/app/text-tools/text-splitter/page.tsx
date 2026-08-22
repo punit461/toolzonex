@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TextSplitter from "../../../calculators/TextSplitter";
+import TextSplitter from "../../../calculators/text-tools/TextSplitter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

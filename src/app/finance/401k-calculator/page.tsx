@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import US401kCalculator from "../../../calculators/US401kCalculator";
+import US401kCalculator from "../../../calculators/finance/US401kCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

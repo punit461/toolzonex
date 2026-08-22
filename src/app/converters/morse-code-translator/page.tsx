@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import MorseCodeTranslator from "../../../calculators/MorseCodeTranslator";
+import MorseCodeTranslator from "../../../calculators/converters/MorseCodeTranslator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

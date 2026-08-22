@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import JsonToXmlConverter from "../../../calculators/JsonToXmlConverter";
+import JsonToXmlConverter from "../../../calculators/converters/JsonToXmlConverter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

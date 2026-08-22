@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CssMinifier from "../../../calculators/CssMinifier";
+import CssMinifier from "../../../calculators/developer-tools/CssMinifier";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

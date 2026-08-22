@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CapitalGainsTaxCalculator from "../../../calculators/CapitalGainsTaxCalculator";
+import CapitalGainsTaxCalculator from "../../../calculators/finance/CapitalGainsTaxCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

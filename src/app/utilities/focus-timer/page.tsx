@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import FocusTimer from "../../../calculators/FocusTimer";
+import FocusTimer from "../../../calculators/utilities/FocusTimer";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

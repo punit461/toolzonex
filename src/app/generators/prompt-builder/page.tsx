@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PromptBuilder from "../../../calculators/PromptBuilder";
+import PromptBuilder from "../../../calculators/generators/PromptBuilder";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import AlphabetLearningTool from "../../../calculators/AlphabetLearningTool";
+import AlphabetLearningTool from "../../../calculators/utilities/AlphabetLearningTool";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

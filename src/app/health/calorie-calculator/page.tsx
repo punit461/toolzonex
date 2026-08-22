@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CalorieCalculator from "../../../calculators/CalorieCalculator";
+import CalorieCalculator from "../../../calculators/health/CalorieCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

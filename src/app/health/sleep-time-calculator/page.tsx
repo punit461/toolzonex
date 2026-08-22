@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SleepTimeCalculator from "../../../calculators/SleepTimeCalculator";
+import SleepTimeCalculator from "../../../calculators/health/SleepTimeCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

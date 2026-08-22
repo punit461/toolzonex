@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TextSorter from "../../../calculators/TextSorter";
+import TextSorter from "../../../calculators/text-tools/TextSorter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

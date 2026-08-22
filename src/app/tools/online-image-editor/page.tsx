@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import OnlineImageEditor from "../../../calculators/OnlineImageEditor";
+import OnlineImageEditor from "../../../calculators/tools/OnlineImageEditor";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

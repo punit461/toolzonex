@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import LinePrefixSuffix from "../../../calculators/LinePrefixSuffixTool";
+import LinePrefixSuffix from "../../../calculators/text-tools/LinePrefixSuffixTool";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

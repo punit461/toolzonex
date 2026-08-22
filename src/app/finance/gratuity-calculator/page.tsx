@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import GratuityCalculator from "../../../calculators/GratuityCalculator";
+import GratuityCalculator from "../../../calculators/finance/GratuityCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ScientificCalculator from "../../../calculators/ScientificCalculator";
+import ScientificCalculator from "../../../calculators/utilities/ScientificCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

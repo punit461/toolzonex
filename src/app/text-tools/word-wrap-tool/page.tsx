@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import WordWrapTool from "../../../calculators/WordWrapTool";
+import WordWrapTool from "../../../calculators/text-tools/WordWrapTool";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

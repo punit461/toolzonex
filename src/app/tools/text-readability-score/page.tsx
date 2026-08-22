@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TextReadabilityScore from "../../../calculators/TextReadabilityScore";
+import TextReadabilityScore from "../../../calculators/tools/TextReadabilityScore";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

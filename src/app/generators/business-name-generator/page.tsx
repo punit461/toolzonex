@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BusinessNameGenerator from "../../../calculators/BusinessNameGenerator";
+import BusinessNameGenerator from "../../../calculators/generators/BusinessNameGenerator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

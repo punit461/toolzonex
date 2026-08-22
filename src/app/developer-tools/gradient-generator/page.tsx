@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import GradientGenerator from "../../../calculators/GradientGenerator";
+import GradientGenerator from "../../../calculators/developer-tools/GradientGenerator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

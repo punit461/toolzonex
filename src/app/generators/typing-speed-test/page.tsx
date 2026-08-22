@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TypingSpeedTest from "../../../calculators/TypingSpeedTest";
+import TypingSpeedTest from "../../../calculators/generators/TypingSpeedTest";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

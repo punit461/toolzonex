@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TextEncryptionDecryption from "../../../calculators/TextEncryptionDecryption";
+import TextEncryptionDecryption from "../../../calculators/text-tools/TextEncryptionDecryption";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

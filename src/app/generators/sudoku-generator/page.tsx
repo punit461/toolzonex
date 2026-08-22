@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SudokuGenerator from "../../../calculators/SudokuGenerator";
+import SudokuGenerator from "../../../calculators/generators/SudokuGenerator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

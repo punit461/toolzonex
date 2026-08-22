@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import LeetspeakConverter from "../../../calculators/LeetspeakConverter";
+import LeetspeakConverter from "../../../calculators/text-tools/LeetspeakConverter";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

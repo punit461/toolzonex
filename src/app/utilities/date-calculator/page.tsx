@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import DateCalculator from "../../../calculators/DateCalculator";
+import DateCalculator from "../../../calculators/utilities/DateCalculator";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

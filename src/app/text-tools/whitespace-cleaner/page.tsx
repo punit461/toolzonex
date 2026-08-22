@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import WhitespaceCleaner from "../../../calculators/WhitespaceCleaner";
+import WhitespaceCleaner from "../../../calculators/text-tools/WhitespaceCleaner";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

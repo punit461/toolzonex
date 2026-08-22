@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TextRepeater from "../../../calculators/TextRepeater";
+import TextRepeater from "../../../calculators/text-tools/TextRepeater";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
