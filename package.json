@@ -10,6 +10,7 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@cantoo/pdf-lib": "^2.9.1",
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
@@ -33,7 +34,7 @@
     "lucide-react": "^1.30.0",
     "mammoth": "^1.12.1",
     "next": "^15.3.2",
-    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.2.108",
     "qr-code-styling": "^1.9.2",
     "qrcode.react": "^4.2.0",
     "react": "^19.0.0",

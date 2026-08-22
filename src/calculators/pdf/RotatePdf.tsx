@@ -2,17 +2,19 @@
 
 import { useState } from 'react';
 import { Box, Typography, Button, ToggleButtonGroup, ToggleButton, Alert } from '@mui/material';
-import { PDFDocument, degrees } from 'pdf-lib';
+import { degrees } from '@cantoo/pdf-lib';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 import PdfFileDropzone from './PdfFileDropzone';
 import { downloadBytes, readFileAsArrayBuffer } from './pdfUtils';
+import { usePdfPasswordUnlock } from './usePdfPasswordUnlock';
 
 const RotatePdfContent = () => {
   const [file, setFile] = useState<File | null>(null);
   const [angle, setAngle] = useState(90);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const { unlock, dialog } = usePdfPasswordUnlock();
 
   const handleRotate = async () => {
     setError('');
@@ -23,7 +25,7 @@ const RotatePdfContent = () => {
     setBusy(true);
     try {
       const bytes = await readFileAsArrayBuffer(file);
-      const doc = await PDFDocument.load(bytes);
+      const doc = await unlock(bytes);
       doc.getPages().forEach((page) => {
         const current = page.getRotation().angle;
         page.setRotation(degrees((current + angle) % 360));
@@ -31,7 +33,9 @@ const RotatePdfContent = () => {
       const output = await doc.save();
       downloadBytes(output, file.name.replace(/\.pdf$/i, '') + '-rotated.pdf');
     } catch (e) {
-      setError('Could not rotate this file. Make sure it is a valid, non-password-protected PDF.');
+      if (!(e instanceof Error && e.message.includes('cancelled'))) {
+        setError('Could not rotate this file. Make sure it is a valid PDF.');
+      }
     } finally {
       setBusy(false);
     }
@@ -39,6 +43,7 @@ const RotatePdfContent = () => {
 
   return (
     <Box>
+      {dialog}
       <PdfFileDropzone onFilesSelected={(files) => setFile(files[0] ?? null)} label="PDF file" selectedNames={file ? [file.name] : []} />
 
       <Box sx={{ mt: 3 }}>

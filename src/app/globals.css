@@ -249,6 +249,33 @@ code {
   }
 }
 
+/*
+ * Scopes window.print() to a single element instead of the whole page.
+ * Any tool that wraps its printable output in the "print-area" class
+ * (see src/components/ui/PrintableArea.tsx) prints only that content --
+ * site header/footer/nav/ads/SEO copy are hidden.
+ */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  /* Some tool output panels scroll on-screen (e.g. a tall generated table) -- don't clip them when printing. */
+  .print-area * {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
 .ticks {
   position: relative;
   width: 100%;

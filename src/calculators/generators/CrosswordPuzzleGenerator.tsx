@@ -1,10 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Box, Button, Typography, TextField, Paper, IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
+import PrintableArea from '../../components/ui/PrintableArea';
+import PrintDownloadButtons from '../../components/ui/PrintDownloadButtons';
 
 interface WordClue {
   word: string;
@@ -23,6 +25,7 @@ const CrosswordPuzzleGeneratorContent = () => {
   const [grid, setGrid] = useState<{char: string, num?: number}[][] | null>(null);
   const [across, setAcross] = useState<{num: number, clue: string}[]>([]);
   const [down, setDown] = useState<{num: number, clue: string}[]>([]);
+  const printRef = useRef<HTMLDivElement>(null);
 
   const handleAddItem = (e: React.FormEvent) => {
     e.preventDefault();
@@ -202,62 +205,64 @@ const CrosswordPuzzleGeneratorContent = () => {
         {grid ? (
           <>
             <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
-              <Button variant="contained" onClick={() => window.print()}>Print Puzzle</Button>
+              <PrintDownloadButtons targetRef={printRef} fileName="crossword-puzzle" printLabel="Print Puzzle" downloadLabel="Download Puzzle" />
             </Box>
 
-            <Box sx={{ display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'flex-start' }}>
-              {/* Grid */}
-              <Paper sx={{ p: 1, bgcolor: 'black', width: 'fit-content' }}>
-                <Box sx={{ 
-                  display: 'grid', 
-                  gridTemplateColumns: `repeat(${grid.length}, 1fr)`,
-                  gap: '1px',
-                  bgcolor: 'black'
-                }}>
-                  {grid.map((row, r) => 
-                    row.map((cell, c) => (
-                      <Box key={`${r}-${c}`} sx={{ 
-                        width: { xs: 20, sm: 25, md: 30 }, 
-                        height: { xs: 20, sm: 25, md: 30 },
-                        bgcolor: cell ? 'white' : 'black',
-                        position: 'relative',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontWeight: 'bold'
-                      }}>
-                        {cell && cell.num && (
-                          <Typography sx={{ position: 'absolute', top: 1, left: 2, fontSize: '0.6rem', lineHeight: 1 }}>
-                            {cell.num}
-                          </Typography>
-                        )}
-                        {/* {cell && cell.char} -> Uncomment to show solution */}
-                      </Box>
-                    ))
-                  )}
-                </Box>
-              </Paper>
+            <PrintableArea ref={printRef}>
+              <Box sx={{ display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'flex-start' }}>
+                {/* Grid */}
+                <Paper sx={{ p: 1, bgcolor: 'black', width: 'fit-content' }}>
+                  <Box sx={{
+                    display: 'grid',
+                    gridTemplateColumns: `repeat(${grid.length}, 1fr)`,
+                    gap: '1px',
+                    bgcolor: 'black'
+                  }}>
+                    {grid.map((row, r) =>
+                      row.map((cell, c) => (
+                        <Box key={`${r}-${c}`} sx={{
+                          width: { xs: 20, sm: 25, md: 30 },
+                          height: { xs: 20, sm: 25, md: 30 },
+                          bgcolor: cell ? 'white' : 'black',
+                          position: 'relative',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          fontWeight: 'bold'
+                        }}>
+                          {cell && cell.num && (
+                            <Typography sx={{ position: 'absolute', top: 1, left: 2, fontSize: '0.6rem', lineHeight: 1 }}>
+                              {cell.num}
+                            </Typography>
+                          )}
+                          {/* {cell && cell.char} -> Uncomment to show solution */}
+                        </Box>
+                      ))
+                    )}
+                  </Box>
+                </Paper>
 
-              {/* Clues */}
-              <Box sx={{ flex: 1, minWidth: 250, display: 'flex', gap: 4 }}>
-                <Box>
-                  <Typography variant="h6" fontWeight="bold" mb={1}>Across</Typography>
-                  {across.map(a => (
-                    <Typography key={a.num} variant="body2" sx={{ mb: 0.5 }}>
-                      <strong>{a.num}.</strong> {a.clue}
-                    </Typography>
-                  ))}
-                </Box>
-                <Box>
-                  <Typography variant="h6" fontWeight="bold" mb={1}>Down</Typography>
-                  {down.map(d => (
-                    <Typography key={d.num} variant="body2" sx={{ mb: 0.5 }}>
-                      <strong>{d.num}.</strong> {d.clue}
-                    </Typography>
-                  ))}
+                {/* Clues */}
+                <Box sx={{ flex: 1, minWidth: 250, display: 'flex', gap: 4 }}>
+                  <Box>
+                    <Typography variant="h6" fontWeight="bold" mb={1}>Across</Typography>
+                    {across.map(a => (
+                      <Typography key={a.num} variant="body2" sx={{ mb: 0.5 }}>
+                        <strong>{a.num}.</strong> {a.clue}
+                      </Typography>
+                    ))}
+                  </Box>
+                  <Box>
+                    <Typography variant="h6" fontWeight="bold" mb={1}>Down</Typography>
+                    {down.map(d => (
+                      <Typography key={d.num} variant="body2" sx={{ mb: 0.5 }}>
+                        <strong>{d.num}.</strong> {d.clue}
+                      </Typography>
+                    ))}
+                  </Box>
                 </Box>
               </Box>
-            </Box>
+            </PrintableArea>
           </>
         ) : (
           <Box sx={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px dashed #ccc', borderRadius: 2 }}>

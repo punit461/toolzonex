@@ -2,17 +2,19 @@
 
 import { useState } from 'react';
 import { Box, Typography, Button, TextField, Alert } from '@mui/material';
-import { PDFDocument } from 'pdf-lib';
+import { PDFDocument } from '@cantoo/pdf-lib';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 import PdfFileDropzone from './PdfFileDropzone';
 import { downloadBytes, readFileAsArrayBuffer } from './pdfUtils';
+import { usePdfPasswordUnlock } from './usePdfPasswordUnlock';
 
 const OrganizePdfContent = () => {
   const [file, setFile] = useState<File | null>(null);
   const [order, setOrder] = useState('');
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const { unlock, dialog } = usePdfPasswordUnlock();
 
   const handleReorder = async () => {
     setError('');
@@ -20,7 +22,7 @@ const OrganizePdfContent = () => {
     setBusy(true);
     try {
       const bytes = await readFileAsArrayBuffer(file);
-      const doc = await PDFDocument.load(bytes);
+      const doc = await unlock(bytes);
       const pageCount = doc.getPageCount();
 
       const newOrder = order.split(',').map((s) => parseInt(s.trim(), 10) - 1);
@@ -39,7 +41,9 @@ const OrganizePdfContent = () => {
       const bytesOut = await output.save();
       downloadBytes(bytesOut, file.name.replace(/\.pdf$/i, '') + '-reordered.pdf');
     } catch (e) {
-      setError('Could not reorder this file. Make sure it is a valid, non-password-protected PDF.');
+      if (!(e instanceof Error && e.message.includes('cancelled'))) {
+        setError('Could not reorder this file. Make sure it is a valid PDF.');
+      }
     } finally {
       setBusy(false);
     }
@@ -47,6 +51,7 @@ const OrganizePdfContent = () => {
 
   return (
     <Box>
+      {dialog}
       <PdfFileDropzone onFilesSelected={(files) => setFile(files[0] ?? null)} label="PDF file" selectedNames={file ? [file.name] : []} />
 
       <Box sx={{ mt: 3 }}>

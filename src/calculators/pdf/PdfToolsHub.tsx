@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Breadcrumbs from '../../components/Breadcrumbs';
 
 const PDF_TOOLS = [
+  { slug: 'pdf-editor', name: 'PDF Editor', desc: 'Visually delete, rotate, reorder, merge & watermark pages.' },
   { slug: 'merge-pdf', name: 'Merge PDF', desc: 'Combine multiple PDFs into one.' },
   { slug: 'split-pdf', name: 'Split PDF', desc: 'Split a PDF into multiple files.' },
   { slug: 'rotate-pdf', name: 'Rotate PDF', desc: 'Rotate all pages by 90/180/270°.' },

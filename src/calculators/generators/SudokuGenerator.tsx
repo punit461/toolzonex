@@ -1,9 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Box, Button, Typography, Paper, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
+import PrintableArea from '../../components/ui/PrintableArea';
+import PrintDownloadButtons from '../../components/ui/PrintDownloadButtons';
 
 // A simple backtracking algorithm to generate a full 9x9 Sudoku grid
 const generateFullGrid = (): number[][] => {
@@ -70,6 +72,7 @@ const removeNumbers = (grid: number[][], difficulty: string): (number | null)[][
 const SudokuGeneratorContent = () => {
   const [difficulty, setDifficulty] = useState('medium');
   const [grid, setGrid] = useState<(number | null)[][]>([]);
+  const printRef = useRef<HTMLDivElement>(null);
 
   const generatePuzzle = () => {
     const fullGrid = generateFullGrid();
@@ -103,43 +106,43 @@ const SudokuGeneratorContent = () => {
         </Button>
       </Box>
 
-      <Paper 
-        sx={{ 
-          p: 2, 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(9, 1fr)', 
-          gap: 0,
-          border: '2px solid black',
-          width: 'fit-content'
-        }}
-      >
-        {grid.map((row, rIndex) => 
-          row.map((cell, cIndex) => (
-            <Box 
-              key={`${rIndex}-${cIndex}`}
-              sx={{
-                width: { xs: 30, sm: 40, md: 50 },
-                height: { xs: 30, sm: 40, md: 50 },
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                border: '1px solid #ccc',
-                borderRight: (cIndex + 1) % 3 === 0 && cIndex !== 8 ? '2px solid black' : '1px solid #ccc',
-                borderBottom: (rIndex + 1) % 3 === 0 && rIndex !== 8 ? '2px solid black' : '1px solid #ccc',
-                fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
-                fontWeight: cell !== null ? 'bold' : 'normal',
-                bgcolor: cell !== null ? '#f5f5f5' : 'white',
-              }}
-            >
-              {cell || ''}
-            </Box>
-          ))
-        )}
-      </Paper>
-      
-      <Button variant="outlined" onClick={() => window.print()}>
-        Print Puzzle
-      </Button>
+      <PrintableArea ref={printRef}>
+        <Paper
+          sx={{
+            p: 2,
+            display: 'grid',
+            gridTemplateColumns: 'repeat(9, 1fr)',
+            gap: 0,
+            border: '2px solid black',
+            width: 'fit-content'
+          }}
+        >
+          {grid.map((row, rIndex) =>
+            row.map((cell, cIndex) => (
+              <Box
+                key={`${rIndex}-${cIndex}`}
+                sx={{
+                  width: { xs: 30, sm: 40, md: 50 },
+                  height: { xs: 30, sm: 40, md: 50 },
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  border: '1px solid #ccc',
+                  borderRight: (cIndex + 1) % 3 === 0 && cIndex !== 8 ? '2px solid black' : '1px solid #ccc',
+                  borderBottom: (rIndex + 1) % 3 === 0 && rIndex !== 8 ? '2px solid black' : '1px solid #ccc',
+                  fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
+                  fontWeight: cell !== null ? 'bold' : 'normal',
+                  bgcolor: cell !== null ? '#f5f5f5' : 'white',
+                }}
+              >
+                {cell || ''}
+              </Box>
+            ))
+          )}
+        </Paper>
+      </PrintableArea>
+
+      <PrintDownloadButtons targetRef={printRef} fileName={`sudoku-${difficulty}`} printLabel="Print Puzzle" downloadLabel="Download Puzzle" />
     </Box>
   );
 };

@@ -2,12 +2,12 @@
 
 import { useState } from 'react';
 import { Box, Typography, Button, Alert, TextField } from '@mui/material';
-import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
+import { PDFDocument, StandardFonts, rgb } from '@cantoo/pdf-lib';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 import { downloadBytes } from './pdfUtils';
 
-function wrapLine(text: string, font: import('pdf-lib').PDFFont, size: number, maxWidth: number): string[] {
+function wrapLine(text: string, font: import('@cantoo/pdf-lib').PDFFont, size: number, maxWidth: number): string[] {
   const words = text.split(' ');
   const lines: string[] = [];
   let current = '';
