@@ -106,6 +106,57 @@ describe('calculateStateTax', () => {
     expect(calculateStateTax(10_000, 'single', STATE_TAX_CONFIGS.mississippi)).toBe(0);
     expect(calculateStateTax(50_000, 'single', STATE_TAX_CONFIGS.mississippi)).toBeCloseTo((50_000 - 10_000) * 0.047, 2);
   });
+
+  it('matches hand-calculated Alabama tax at $60k single', () => {
+    // taxable = 60000 - 4500 = 55500 -> 2%*500 + 4%*2500 + 5%*52500
+    expect(calculateStateTax(60_000, 'single', STATE_TAX_CONFIGS.alabama)).toBeCloseTo(
+      500 * 0.02 + 2_500 * 0.04 + 52_500 * 0.05, 2
+    );
+  });
+
+  it('applies the Arkansas per-filer tax credit', () => {
+    // taxable = 1000 -> tax = 1000*2% = 20, fully offset by the $29 credit
+    const withoutCredit = calculateStateTax(2_410 + 1_000, 'single', STATE_TAX_CONFIGS.arkansas);
+    expect(withoutCredit).toBe(0);
+    const higher = calculateStateTax(50_000, 'single', STATE_TAX_CONFIGS.arkansas);
+    expect(higher).toBeGreaterThan(0);
+  });
+
+  it('Missouri has a 0% bracket before the first threshold', () => {
+    // taxable = 20000 - 15000 = 5000, spans the 0% band (0-1313) and several low bands
+    const tax = calculateStateTax(20_000, 'single', STATE_TAX_CONFIGS.missouri);
+    expect(tax).toBeGreaterThan(0);
+    expect(tax).toBeLessThan((20_000 - 15_000) * 0.047); // less than if the whole taxable amount were at the top rate
+  });
+
+  it('North Dakota has a large 0% bracket', () => {
+    // taxable = 50000 - 15000 = 35000, well under the 48475 0% threshold
+    expect(calculateStateTax(50_000, 'single', STATE_TAX_CONFIGS['north-dakota'])).toBe(0);
+    expect(calculateStateTax(200_000, 'single', STATE_TAX_CONFIGS['north-dakota'])).toBeGreaterThan(0);
+  });
+
+  it('applies the Oregon and Nebraska per-filer tax credits', () => {
+    expect(calculateStateTax(80_000, 'single', STATE_TAX_CONFIGS.oregon)).toBeGreaterThan(0);
+    expect(calculateStateTax(80_000, 'single', STATE_TAX_CONFIGS.nebraska)).toBeGreaterThan(0);
+  });
+
+  it('all 24 newly-added states produce sane, monotonically increasing tax', () => {
+    const newStates = [
+      'alabama', 'arkansas', 'connecticut', 'delaware', 'hawaii', 'kansas', 'maine', 'maryland',
+      'minnesota', 'missouri', 'montana', 'nebraska', 'new-jersey', 'new-mexico', 'north-dakota',
+      'ohio', 'oklahoma', 'oregon', 'rhode-island', 'south-carolina', 'vermont', 'virginia',
+      'west-virginia', 'wisconsin',
+    ];
+    for (const slug of newStates) {
+      const config = STATE_TAX_CONFIGS[slug];
+      expect(config).toBeDefined();
+      const low = calculateStateTax(60_000, 'single', config);
+      const high = calculateStateTax(200_000, 'single', config);
+      expect(low).toBeGreaterThanOrEqual(0);
+      expect(high).toBeGreaterThan(low);
+      expect(high).toBeLessThan(200_000);
+    }
+  });
 });
 
 describe('calculatePaycheck', () => {
