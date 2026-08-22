@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CompoundInterest from "../../../views/blogs/CompoundInterest";
+import CompoundInterest from "../../../components/pages/blogs/CompoundInterest";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

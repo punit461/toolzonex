@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TermsOfService from "../../views/TermsOfService";
+import TermsOfService from "../../components/pages/TermsOfService";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

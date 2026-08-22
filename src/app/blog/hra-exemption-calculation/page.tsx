@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import HraExemption from "../../../views/blogs/HraExemption";
+import HraExemption from "../../../components/pages/blogs/HraExemption";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

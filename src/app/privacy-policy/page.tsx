@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PrivacyPolicy from "../../views/PrivacyPolicy";
+import PrivacyPolicy from "../../components/pages/PrivacyPolicy";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Section80CGuide from "../../../views/blogs/Section80CGuide";
+import Section80CGuide from "../../../components/pages/blogs/Section80CGuide";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

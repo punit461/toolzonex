@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import FAQ from "../../views/FAQ";
+import FAQ from "../../components/pages/FAQ";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

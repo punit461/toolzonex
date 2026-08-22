@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SsyBenefits from "../../../views/blogs/SsyBenefits";
+import SsyBenefits from "../../../components/pages/blogs/SsyBenefits";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

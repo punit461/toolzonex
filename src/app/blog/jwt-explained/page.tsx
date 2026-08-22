@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import JwtExplained from "../../../views/blogs/JwtExplained";
+import JwtExplained from "../../../components/pages/blogs/JwtExplained";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

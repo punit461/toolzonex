@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CloudGpuPricingGuide from "../../../views/blogs/CloudGpuPricingGuide";
+import CloudGpuPricingGuide from "../../../components/pages/blogs/CloudGpuPricingGuide";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

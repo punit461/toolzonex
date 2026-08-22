@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import UnderstandingGratuity from "../../../views/blogs/UnderstandingGratuity";
+import UnderstandingGratuity from "../../../components/pages/blogs/UnderstandingGratuity";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

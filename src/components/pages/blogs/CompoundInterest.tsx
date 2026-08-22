@@ -2,8 +2,8 @@
 
 import { Typography , Box} from '@mui/material';
 import RouterLink from 'next/link';
-import BlogShell, { RelatedTool } from '../../components/BlogShell';
-import AdSenseUnit from '../../components/AdSenseUnit';
+import BlogShell, { RelatedTool } from '../../BlogShell';
+import AdSenseUnit from '../../AdSenseUnit';
 
 const relatedTools: RelatedTool[] = [
   {

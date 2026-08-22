@@ -7,7 +7,7 @@ import {
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import RouterLink from 'next/link';
-import { allToolBlogs } from '../data/tool-blogs';
+import { allToolBlogs } from '../../data/tool-blogs';
 
 // ── Tag taxonomy ───────────────────────────────────────────────────
 export type BlogTag =

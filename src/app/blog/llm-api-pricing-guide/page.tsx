@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import LlmApiPricingGuide from "../../../views/blogs/LlmApiPricingGuide";
+import LlmApiPricingGuide from "../../../components/pages/blogs/LlmApiPricingGuide";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

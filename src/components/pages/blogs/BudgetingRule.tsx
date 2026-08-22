@@ -1,8 +1,8 @@
 'use client';
 
 import { Typography , Box} from '@mui/material';
-import BlogShell, { RelatedTool } from '../../components/BlogShell';
-import AdSenseUnit from '../../components/AdSenseUnit';
+import BlogShell, { RelatedTool } from '../../BlogShell';
+import AdSenseUnit from '../../AdSenseUnit';
 
 const relatedTools: RelatedTool[] = [
   {

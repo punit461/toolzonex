@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import OldVsNewTax from "../../../views/blogs/OldVsNewTax";
+import OldVsNewTax from "../../../components/pages/blogs/OldVsNewTax";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 

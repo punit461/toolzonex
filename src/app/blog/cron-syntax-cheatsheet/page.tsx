@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CronSyntaxCheatsheet from "../../../views/blogs/CronSyntaxCheatsheet";
+import CronSyntaxCheatsheet from "../../../components/pages/blogs/CronSyntaxCheatsheet";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
