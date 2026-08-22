@@ -41,10 +41,10 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'emi-calculator',
     toolName: 'EMI Calculator',
-    title: 'EMI Calculator: How to Calculate Home, Car & Personal Loan EMI',
+    title: 'EMI Calculator — Home, Car & Personal Loan',
     toolRoute: '/finance/emi-calculator',
     category: 'finance',
-    description: 'Learn how EMI is calculated using the reducing balance method. Use our free EMI calculator to plan home, car, and personal loan repayments with amortization schedule.',
+    description: 'Learn how EMI is calculated using the reducing balance method. Plan home, car, and personal loan repayments with a free amortization schedule.',
     keywords: ['emi calculator', 'home loan emi', 'car loan emi', 'personal loan emi', 'emi formula', 'loan calculator india'],
     excerpt: 'Understand the EMI formula and plan your loan repayments with our free calculator.',
     date: 'June 2026',
@@ -61,7 +61,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'sip-calculator',
     toolName: 'SIP Calculator',
-    title: 'SIP Calculator: Estimate Mutual Fund Returns with Systematic Investment',
+    title: 'SIP Calculator — Mutual Fund Returns',
     toolRoute: '/finance/sip-calculator',
     category: 'finance',
     description: 'Calculate potential returns from SIP investments in mutual funds. Understand how compounding works with our free SIP return calculator.',
@@ -81,7 +81,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'compound-interest-calculator',
     toolName: 'Compound Interest Calculator',
-    title: 'Compound Interest Calculator: See the Power of Compounding',
+    title: 'Compound Interest Calculator Online',
     toolRoute: '/finance/compound-interest-calculator',
     category: 'finance',
     description: 'Calculate how a lump-sum investment grows with compound interest. Compare annual, quarterly, monthly, and daily compounding frequencies.',
@@ -101,7 +101,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'income-tax-calculator',
     toolName: 'Income Tax Calculator',
-    title: 'Income Tax Calculator: Old vs New Regime for FY 2025-26 (AY 2026-27)',
+    title: 'Income Tax Calculator — Old vs New Regime',
     toolRoute: '/finance/income-tax-calculator',
     category: 'finance',
     description: 'Calculate your income tax under both Old and New regimes for FY 2025-26. Compare tax liabilities and choose the best regime for your salary structure.',
@@ -121,7 +121,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'gst-calculator',
     toolName: 'GST Calculator',
-    title: 'GST Calculator: Add or Remove GST from Any Amount Instantly',
+    title: 'GST Calculator — Add or Remove GST',
     toolRoute: '/finance/gst-calculator',
     category: 'finance',
     description: 'Calculate GST (Goods and Services Tax) for any amount. Add GST to get inclusive price or remove GST to find base price. Supports 5%, 12%, 18%, and 28% slabs.',
@@ -141,7 +141,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'ppf-calculator',
     toolName: 'PPF Calculator',
-    title: 'PPF Calculator: Calculate Public Provident Fund Maturity Amount',
+    title: 'PPF Calculator — Provident Fund Maturity',
     toolRoute: '/finance/ppf-calculator',
     category: 'finance',
     description: 'Calculate PPF maturity amount and year-wise interest earned. Understand PPF rules, lock-in period, and tax benefits with our free calculator.',
@@ -161,7 +161,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'gold-calculator',
     toolName: 'Gold Rate Calculator',
-    title: 'Gold Rate Calculator: Calculate Gold Price with Making Charges & GST',
+    title: 'Gold Rate Calculator — Live Gold Price',
     toolRoute: '/finance/gold-calculator',
     category: 'finance',
     description: 'Calculate the total cost of gold jewelry including making charges and 3% GST. Find the price per gram for 24K, 22K, and 18K gold.',
@@ -181,7 +181,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'silver-calculator',
     toolName: 'Silver Rate Calculator',
-    title: 'Silver Rate Calculator: Calculate Silver Price with Making & GST',
+    title: 'Silver Rate Calculator — Live Silver Price',
     toolRoute: '/finance/silver-calculator',
     category: 'finance',
     description: 'Calculate the total cost of silver items including making charges and GST. Find silver price per gram and per kilogram.',
@@ -200,7 +200,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'loan-calculator',
     toolName: 'Loan Calculator',
-    title: 'Loan Calculator: Calculate EMI, Total Interest & Amortization',
+    title: 'Loan Calculator — EMI & Amortization',
     toolRoute: '/finance/loan-calculator',
     category: 'finance',
     description: 'Free loan calculator to compute monthly EMI, total interest payable, and complete amortization schedule for any loan type.',
@@ -219,7 +219,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'gratuity-calculator',
     toolName: 'Gratuity Calculator',
-    title: 'Gratuity Calculator: Calculate Your Gratuity Amount Online',
+    title: 'Gratuity Calculator Online',
     toolRoute: '/finance/gratuity-calculator',
     category: 'finance',
     description: 'Calculate gratuity payout based on your last drawn salary and years of service. Understand gratuity eligibility rules and tax exemption limits.',
@@ -238,7 +238,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'salary-increment-calculator',
     toolName: 'Salary Increment Calculator',
-    title: 'Salary Increment Calculator: Calculate CTC & Take-Home After Hike',
+    title: 'Salary Increment Calculator — CTC & Hike',
     toolRoute: '/finance/salary-increment-calculator',
     category: 'finance',
     description: 'Calculate your new salary after increment. See the impact of percentage hike on CTC, gross salary, and take-home pay.',
@@ -257,7 +257,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'rent-vs-buy-calculator',
     toolName: 'Rent vs Buy Calculator',
-    title: 'Rent vs Buy Calculator: Should You Rent or Buy a Home in 2026?',
+    title: 'Rent vs Buy Calculator — Home in 2026',
     toolRoute: '/finance/rent-vs-buy-calculator',
     category: 'finance',
     description: 'Compare the financial outcomes of renting vs buying a home. Factor in EMI, property appreciation, rent inflation, tax benefits, and opportunity cost.',
@@ -276,7 +276,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'retirement-calculator',
     toolName: 'Retirement Calculator',
-    title: 'Retirement Calculator: How Much Do You Need to Retire in India?',
+    title: 'Retirement Calculator for India',
     toolRoute: '/finance/retirement-calculator',
     category: 'finance',
     description: 'Calculate your retirement corpus requirement based on current expenses, inflation, and expected returns. Plan for a comfortable post-retirement life.',
@@ -295,7 +295,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'ssy-calculator',
     toolName: 'SSY Calculator',
-    title: 'SSY Calculator: Sukanya Samriddhi Yojana Returns & Benefits',
+    title: 'SSY Calculator — Sukanya Samriddhi Yojana',
     toolRoute: '/finance/ssy-calculator',
     category: 'finance',
     description: 'Calculate Sukanya Samriddhi Yojana maturity amount. Understand SSY interest rates, deposit rules, and tax benefits for your daughter\'s future.',
@@ -319,7 +319,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'bmi-calculator',
     toolName: 'BMI Calculator',
-    title: 'BMI Calculator: Check Your Body Mass Index with Indian Guidelines',
+    title: 'BMI Calculator: Indian & WHO Guidelines',
     toolRoute: '/health/bmi-calculator',
     category: 'health',
     description: 'Calculate your BMI and understand what it means for your health. Includes Indian/Asian BMI guidelines which differ from WHO standards.',
@@ -339,7 +339,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'bmr-calculator',
     toolName: 'BMR Calculator',
-    title: 'BMR Calculator: Find Your Basal Metabolic Rate (Mifflin-St Jeor)',
+    title: 'BMR Calculator — Mifflin-St Jeor Formula',
     toolRoute: '/health/bmr-calculator',
     category: 'health',
     description: 'Calculate your Basal Metabolic Rate (BMR) using the Mifflin-St Jeor equation. Understand the minimum calories your body needs at rest.',
@@ -359,7 +359,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'calorie-calculator',
     toolName: 'Calorie Calculator',
-    title: 'Calorie Calculator: Daily Calorie Needs for Weight Loss & Gain',
+    title: 'Calorie Calculator — Daily Calorie Needs',
     toolRoute: '/health/calorie-calculator',
     category: 'health',
     description: 'Calculate your daily calorie requirements based on age, weight, height, and activity level. Get targets for weight loss, maintenance, and muscle gain.',
@@ -378,7 +378,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'body-fat-calculator',
     toolName: 'Body Fat Calculator',
-    title: 'Body Fat Calculator: Estimate Body Fat % Using US Navy Method',
+    title: 'Body Fat Calculator — US Navy Method',
     toolRoute: '/health/body-fat-calculator',
     category: 'health',
     description: 'Estimate your body fat percentage using the US Navy circumference method. Simple measurements, no equipment needed.',
@@ -397,7 +397,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'tdee-calculator',
     toolName: 'TDEE Calculator',
-    title: 'TDEE Calculator: Total Daily Energy Expenditure for Fitness Goals',
+    title: 'TDEE Calculator — Daily Energy Expenditure',
     toolRoute: '/health/tdee-calculator',
     category: 'health',
     description: 'Calculate your Total Daily Energy Expenditure (TDEE) based on BMR and activity level. Essential for weight loss, maintenance, or muscle gain planning.',
@@ -416,7 +416,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'sleep-time-calculator',
     toolName: 'Sleep Time Calculator',
-    title: 'Sleep Time Calculator: Find Your Ideal Bedtime & Wake-Up Time',
+    title: 'Sleep Time Calculator — Ideal Bedtime',
     toolRoute: '/health/sleep-time-calculator',
     category: 'health',
     description: 'Calculate optimal bedtime and wake-up times based on 90-minute sleep cycles. Wake up feeling refreshed by completing full sleep cycles.',
@@ -435,7 +435,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'cft-calculator',
     toolName: 'CFT Calculator',
-    title: 'CFT Calculator: USMC Combat Fitness Test Scoring Standards',
+    title: 'CFT Calculator — USMC Combat Fitness Test',
     toolRoute: '/health/cft-calculator',
     category: 'health',
     description: 'Calculate your USMC Combat Fitness Test (CFT) score. Includes Movement to Contact, Ammunition Lift, and Maneuver Under Fire scoring tables.',
@@ -454,7 +454,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'pft-calculator',
     toolName: 'PFT Calculator',
-    title: 'PFT Calculator: USMC Physical Fitness Test Score Assessment',
+    title: 'PFT Calculator — USMC Fitness Test Score',
     toolRoute: '/health/pft-calculator',
     category: 'health',
     description: 'Calculate your USMC Physical Fitness Test (PFT) score. Includes pull-ups/push-ups, crunches/plank, and 3-mile run scoring.',
@@ -477,7 +477,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'age-calculator',
     toolName: 'Age Calculator',
-    title: 'Age Calculator: Calculate Exact Age in Years, Months & Days',
+    title: 'Age Calculator — Exact Age in Years & Days',
     toolRoute: '/utilities/age-calculator',
     category: 'utilities',
     description: 'Calculate your exact age down to years, months, and days. Find days until next birthday, total days lived, and age on any future date.',
@@ -496,7 +496,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'date-calculator',
     toolName: 'Date Calculator',
-    title: 'Date Calculator: Days Between Dates & Add/Subtract Days',
+    title: 'Date Calculator — Days Between Dates',
     toolRoute: '/utilities/date-calculator',
     category: 'utilities',
     description: 'Calculate the number of days between two dates or add/subtract days from a date. Perfect for deadline planning and date arithmetic.',
@@ -515,7 +515,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'percentage-calculator',
     toolName: 'Percentage Calculator',
-    title: 'Percentage Calculator: Calculate Percentages Easily',
+    title: 'Percentage Calculator: Calculate Percentages',
     toolRoute: '/utilities/percentage-calculator',
     category: 'utilities',
     description: 'Calculate percentages instantly. Find X% of Y, what percentage X is of Y, and percentage increase/decrease between values.',
@@ -534,7 +534,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'discount-calculator',
     toolName: 'Discount Calculator',
-    title: 'Discount Calculator: Find Final Price & Savings After Discount',
+    title: 'Discount Calculator — Price After Discount',
     toolRoute: '/utilities/discount-calculator',
     category: 'utilities',
     description: 'Calculate the final price after applying a discount percentage. See how much you save on any purchase with single or stacked discounts.',
@@ -575,7 +575,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'json-formatter',
     toolName: 'JSON Formatter',
-    title: 'JSON Formatter & Validator: Beautify and Validate JSON Online',
+    title: 'JSON Formatter & Validator Online',
     toolRoute: '/developer-tools/json-formatter',
     category: 'tools',
     description: 'Format, validate, and beautify JSON data online. Detect syntax errors, pretty-print with custom indentation, and minify JSON.',
@@ -594,7 +594,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'base64-encode-decode',
     toolName: 'Base64 Encoder/Decoder',
-    title: 'Base64 Encode & Decode: Free Online Converter Tool',
+    title: 'Base64 Encode & Decode Online',
     toolRoute: '/converters/base64-encode-decode',
     category: 'tools',
     description: 'Encode text to Base64 or decode Base64 strings instantly. Supports UTF-8 encoding for international characters.',
@@ -613,7 +613,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'qr-code-generator',
     toolName: 'QR Code Generator',
-    title: 'QR Code Generator: Create Custom QR Codes with Logo, WiFi, vCard, UPI',
+    title: 'QR Code Generator — Logo, WiFi & vCard',
     toolRoute: '/developer-tools/qr-code-generator',
     category: 'tools',
     description: 'Generate QR codes for URLs, WiFi, vCard, UPI, WhatsApp, email, crypto and more. Custom dot styles, colors, logo upload. Free PNG/SVG/JPEG download.',
@@ -633,7 +633,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'password-generator',
     toolName: 'Password Generator',
-    title: 'Password Generator: Create Strong Random Passwords Online',
+    title: 'Password Generator — Strong Random Passwords',
     toolRoute: '/generators/password-generator',
     category: 'tools',
     description: 'Generate cryptographically secure random passwords with customizable length, character types, and exclusions. All generated client-side.',
@@ -652,7 +652,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'word-counter',
     toolName: 'Word Counter',
-    title: 'Word Counter: Count Words, Characters & Sentences Online',
+    title: 'Word Counter — Words, Characters & Sentences',
     toolRoute: '/text-tools/word-counter',
     category: 'tools',
     description: 'Count words, characters, sentences, and paragraphs in your text. Estimate reading time and check text statistics instantly.',
@@ -672,7 +672,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'regex-tester',
     toolName: 'Regex Tester',
-    title: 'Regex Tester: Test Regular Expressions Online with Live Matching',
+    title: 'Regex Tester — Live Regex Matching Online',
     toolRoute: '/developer-tools/regex-tester',
     category: 'tools',
     description: 'Test and debug regular expressions with live highlighting. See matches, groups, and flags in real-time. Supports JavaScript regex syntax.',
@@ -691,7 +691,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'uuid-generator',
     toolName: 'UUID Generator',
-    title: 'UUID Generator: Create Secure Version 4 UUIDs Online',
+    title: 'UUID Generator — Secure v4 UUIDs Online',
     toolRoute: '/generators/uuid-generator',
     category: 'tools',
     description: 'Generate cryptographically secure UUID v4 identifiers. Create single or bulk UUIDs for databases, APIs, and distributed systems.',
@@ -710,7 +710,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'jwt-decoder',
     toolName: 'JWT Decoder',
-    title: 'JWT Decoder: Decode and Inspect JSON Web Tokens Securely',
+    title: 'JWT Decoder — Decode JSON Web Tokens',
     toolRoute: '/developer-tools/jwt-decoder',
     category: 'tools',
     description: 'Decode JWT tokens to view header, payload, and claims. Inspect expiration, issuer, and custom claims — all processed client-side.',
@@ -729,7 +729,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'what-is-my-ip',
     toolName: 'What Is My IP',
-    title: 'What Is My IP: Find Your Public IP Address & Location',
+    title: 'What Is My IP — Public IP & Location',
     toolRoute: '/tools/what-is-my-ip',
     category: 'tools',
     description: 'Find your public IP address instantly. See your IPv4/IPv6 address, ISP, city, country, and approximate location.',
@@ -749,7 +749,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'image-converter',
     toolName: 'Image Converter',
-    title: 'Image Converter: Convert Between PNG, JPEG, WebP & More',
+    title: 'Image Converter — PNG, JPEG, WebP & More',
     toolRoute: '/tools/image-converter',
     category: 'tools',
     description: 'Convert images between PNG, JPEG, WebP, and other formats instantly in your browser. No upload needed — all processing happens locally.',
@@ -768,7 +768,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'css-minifier',
     toolName: 'CSS Minifier',
-    title: 'CSS Minifier: Compress and Optimize CSS Code Online',
+    title: 'CSS Minifier — Compress & Optimize CSS',
     toolRoute: '/developer-tools/css-minifier',
     category: 'tools',
     description: 'Minify CSS code by removing whitespace, comments, and unnecessary characters. Reduce file size for faster page loads.',
@@ -806,7 +806,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'color-palette-generator',
     toolName: 'Color Palette Generator',
-    title: 'Color Palette Generator: Random Beautiful Color Schemes',
+    title: 'Color Palette Generator — Random Schemes',
     toolRoute: '/tools/color-palette-generator',
     category: 'tools',
     description: 'Generate random color palettes for design projects. Get harmonious color combinations with hex codes, RGB values, and copy-ready formats.',
@@ -844,7 +844,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'image-resizer',
     toolName: 'Image Resizer',
-    title: 'Image Resizer: Resize Photos in Your Browser — Free & Private',
+    title: 'Image Resizer — Resize Photos in Browser',
     toolRoute: '/tools/image-resizer',
     category: 'tools',
     description: 'Resize images to exact dimensions or percentage. Maintain aspect ratio, set quality, and download — all processing happens in your browser.',
@@ -863,7 +863,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'csv-to-json',
     toolName: 'CSV to JSON',
-    title: 'CSV to JSON Converter: Transform Spreadsheet Data to JSON',
+    title: 'CSV to JSON Converter Online',
     toolRoute: '/converters/csv-to-json',
     category: 'tools',
     description: 'Convert CSV data to JSON format instantly. Supports custom delimiters, headers as keys, and nested JSON structures.',
@@ -882,7 +882,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'hex-to-rgb',
     toolName: 'HEX to RGB Converter',
-    title: 'HEX to RGB Converter: Convert Color Codes Instantly',
+    title: 'HEX to RGB Converter Online',
     toolRoute: '/converters/hex-to-rgb',
     category: 'tools',
     description: 'Convert HEX color codes to RGB values and vice versa. See color preview, copy CSS values, and explore color variations.',
@@ -902,7 +902,7 @@ export const toolBlogs: ToolBlogMeta[] = [
   {
     slug: 'contrast-checker',
     toolName: 'Contrast Checker',
-    title: 'Contrast Checker: WCAG Color Accessibility Compliance Tool',
+    title: 'Contrast Checker — WCAG Accessibility',
     toolRoute: '/tools/contrast-checker',
     category: 'tools',
     description: 'Check color contrast ratios for WCAG 2.1 accessibility compliance. Ensure your text/background combinations meet AA and AAA standards.',
@@ -918,6 +918,139 @@ export const toolBlogs: ToolBlogMeta[] = [
       { q: 'What counts as "large text"?', a: 'Text that is 18pt (24px) or larger, OR 14pt (18.67px) bold or larger.' },
     ],
   },
+  {
+    slug: 'color-wheel',
+    toolName: 'Color Wheel',
+    title: 'Color Wheel — Complementary & Triadic Colors',
+    toolRoute: '/tools/color-wheel',
+    category: 'tools',
+    description: 'Pick a base color and generate complementary, analogous, triadic, and other color harmonies instantly using classic color theory rules.',
+    keywords: ['color wheel', 'color harmony generator', 'complementary colors', 'triadic colors', 'analogous colors'],
+    excerpt: 'Pick a base color and see complementary, analogous, and triadic combinations instantly.',
+    date: 'August 2026',
+    intro: 'Pick a base color and instantly see matching combinations using classic color theory rules — complementary, analogous, triadic, split-complementary, tetradic, and monochromatic. Click any swatch to copy its HEX code.',
+    howToUse: ['Drag the Hue slider to set your base color', 'Fine-tune Saturation and Lightness if needed', 'Pick a harmony rule (complementary, analogous, triadic, and more)', 'Click any swatch on the wheel or the strip below to copy its HEX value'],
+    features: ['Six color harmony rules built on classic color theory', 'Live wheel visualization with marked harmony positions', 'Adjustable saturation and lightness', 'One-click HEX copy for every generated swatch'],
+    useCases: ['Choosing a primary/accent color pairing for a brand or UI', 'Building a balanced palette for illustrations or data visualizations', 'Learning color theory rules interactively'],
+    faq: [
+      { q: "What's the difference between complementary and analogous?", a: 'Complementary colors sit opposite each other on the wheel (high contrast, good for accents). Analogous colors sit close together (30° apart), producing a calmer, more harmonious look.' },
+      { q: 'What does the monochromatic option do?', a: 'It keeps the same hue but varies the lightness, giving you a set of tints and shades of a single color — useful for shadows, hover states, or subtle UI variation.' },
+    ],
+  },
+  {
+    slug: 'image-color-picker',
+    toolName: 'Image Color Picker',
+    title: 'Image Color Picker — Extract HEX Colors',
+    toolRoute: '/tools/image-color-picker',
+    category: 'tools',
+    description: 'Create custom color palettes from any image. Upload a photo and pick exact HEX colors straight from the pixels, with automatic dominant-color extraction.',
+    keywords: ['image color picker', 'extract colors from image', 'eyedropper tool', 'color picker from photo', 'image palette generator'],
+    excerpt: 'Upload a photo and get its dominant colors automatically, plus a pixel-accurate eyedropper.',
+    date: 'August 2026',
+    intro: 'Upload any image and its dominant colors are extracted automatically. Hover to preview the exact HEX value under your cursor, click to add specific pixels of your own, then copy any swatch for use in your design tools.',
+    howToUse: ['Drag and drop an image onto the box, or click to browse', 'A palette of the image\'s most common colors appears immediately under "Colors in This Image"', 'Move your mouse over the image to preview any pixel\'s color live', 'Click on the image to add that exact color to a "Colors You Picked" palette', 'Click the copy icon on any swatch to grab its HEX code'],
+    features: ['Automatic dominant-color extraction on upload', 'Pixel-accurate hover preview and click-to-pick eyedropper', 'Runs entirely client-side via the Canvas API — nothing is uploaded', 'One-click HEX copy for every swatch'],
+    useCases: ['Extracting brand colors from a logo or photo', "Matching a website's color scheme to a reference image", 'Building a mood board palette from inspiration photos'],
+    faq: [
+      { q: 'Is my image uploaded to a server?', a: 'No. The image is decoded and read entirely in your browser using the Canvas API — it never leaves your device.' },
+      { q: 'Why is the color slightly different from what I expected?', a: 'Compressed image formats (like JPEG) can shift pixel colors slightly due to compression artifacts. For exact color matching, use a PNG source image where possible.' },
+    ],
+  },
+  {
+    slug: 'color-meanings',
+    toolName: 'Color Meanings',
+    title: 'Color Meanings — Color Psychology Guide',
+    toolRoute: '/tools/color-meanings',
+    category: 'tools',
+    description: 'Browse the list of colors and learn about color meanings and psychology for branding and design.',
+    keywords: ['color meanings', 'color psychology', 'what colors mean', 'color symbolism', 'brand color guide'],
+    excerpt: 'What red, blue, gold, and every other color actually signal in branding and design.',
+    date: 'August 2026',
+    intro: 'Every color carries associations shaped by culture, nature, and psychology. This guide breaks down what common colors typically signal in branding and design, so you can choose colors on purpose rather than by accident.',
+    howToUse: ['Browse the grid of colors', 'Click any swatch to see its meaning and psychology', 'Click the copy icon to grab its HEX code', 'Use it as a reference when picking a primary color for a brand or project'],
+    features: ['18 common colors with plain-language psychology write-ups', 'One-click HEX copy for every color', 'Covers both common Western associations and design use'],
+    useCases: ["Choosing a brand's primary color based on the emotion it should evoke", 'Understanding why competitors in an industry cluster around certain colors', "Briefing a designer or client on the reasoning behind a color choice"],
+    faq: [
+      { q: 'Do color meanings apply the same way in every culture?', a: 'No. These meanings reflect common Western associations. For example, white signals purity in many Western contexts but mourning in parts of East Asia — always sanity-check colors against your target audience\'s culture.' },
+      { q: 'Should I pick a color purely based on its meaning?', a: 'Meaning is one input. Also weigh brand differentiation, accessibility/contrast, and how the color performs across your actual UI before committing to it.' },
+    ],
+  },
+  {
+    slug: 'color-palette-library',
+    toolName: 'Color Palette Library',
+    title: 'Color Palette Library — Curated Palettes',
+    toolRoute: '/tools/color-palette-library',
+    category: 'tools',
+    description: 'Browse an expansive list of color palettes and find inspiration for your next design project.',
+    keywords: ['color palette library', 'color palette ideas', 'curated color palettes', 'design color inspiration', 'color scheme examples'],
+    excerpt: 'A curated, filterable gallery of ready-made palettes — copy one color or the whole set.',
+    date: 'August 2026',
+    intro: 'Browse a curated collection of ready-made color palettes for your next project — from vibrant neons to muted earthy tones. Filter by style and copy any color, or the whole palette, in one click.',
+    howToUse: ['Filter palettes by tag — warm, cool, pastel, vibrant, and more', 'Click an individual swatch to copy its HEX code', 'Click the copy icon on a card to copy every color in that palette at once'],
+    features: ['16 curated, hand-picked palettes across multiple styles', 'Tag-based filtering', 'Copy a single HEX code or an entire palette at once'],
+    useCases: ['Finding a ready-made palette instead of generating random colors', 'Getting inspiration for a brand, website, or illustration project', 'Quickly copying a cohesive set of HEX codes for a design system'],
+    faq: [
+      { q: 'How is this different from the Color Palette Generator?', a: 'The generator creates random palettes on demand. This library is a curated, hand-picked collection you can browse and filter — useful when you want proven combinations rather than random ones.' },
+      { q: 'Can I use these palettes commercially?', a: "Yes — color combinations aren't copyrightable, so every palette here is free to use in personal or commercial projects." },
+    ],
+  },
+  {
+    slug: 'gradient-library',
+    toolName: 'Gradient Library',
+    title: 'Gradient Library — Ready-to-Use CSS Gradients',
+    toolRoute: '/developer-tools/gradient-library',
+    category: 'tools',
+    description: 'Find the perfect gradient for your project from a curated, filterable collection of ready-to-use CSS gradients.',
+    keywords: ['gradient library', 'css gradients', 'gradient examples', 'gradient presets', 'background gradient ideas'],
+    excerpt: 'A curated, filterable gallery of CSS gradients — click to copy the ready-to-paste CSS.',
+    date: 'August 2026',
+    intro: 'Browse a curated collection of ready-to-use CSS gradients — from warm sunsets to deep space tones. Filter by style and copy the CSS in one click.',
+    howToUse: ['Filter gradients by tag — warm, cool, pastel, vibrant, dark', 'Click any gradient card to copy its ready-to-paste CSS declaration', 'Paste it directly into a stylesheet or a component style prop'],
+    features: ['16 curated linear gradients across multiple moods', 'Tag-based filtering', 'One-click copy of production-ready CSS'],
+    useCases: ['Finding a ready-made gradient for a hero section or button', 'Getting design inspiration without tweaking colors from scratch', 'Quickly grabbing production-ready CSS for a landing page'],
+    faq: [
+      { q: 'How is this different from the Gradient Generator?', a: 'The Gradient Generator lets you build a custom two-color gradient from scratch. This library is a curated, hand-picked collection of finished gradients you can browse and copy directly.' },
+      { q: 'Can I tweak a gradient after copying it?', a: "Yes — paste the copied CSS into the Gradient Generator's color pickers, or edit the HEX values and angle directly in your stylesheet." },
+    ],
+  },
+  {
+    slug: 'font-library',
+    toolName: 'Font Library',
+    title: 'Font Library — Browse Google Fonts',
+    toolRoute: '/tools/font-library',
+    category: 'tools',
+    description: 'Find the perfect font for your next design project. Search, filter, and preview a curated library of Google Fonts.',
+    keywords: ['font library', 'google fonts browser', 'font preview tool', 'typeface finder', 'font pairing'],
+    excerpt: 'Search and preview a curated Google Fonts library with your own text, then copy the CSS.',
+    date: 'August 2026',
+    intro: 'Browse a curated library of Google Fonts across Sans-serif, Serif, Display, Handwriting, and Monospace categories. Preview each one with your own text and copy the CSS to use it instantly.',
+    howToUse: ['Search by name or filter by category', 'Type your own text into the preview box to see how every font renders it', 'Click the copy icon next to a font to grab its font-family CSS declaration'],
+    features: ['35 curated Google Fonts across 5 categories', 'Live preview with your own custom text', 'One-click font-family CSS copy'],
+    useCases: ['Choosing a heading and body font pairing for a website', 'Previewing how a logotype or brand name looks in different typefaces', 'Finding a free Google Font as an alternative to a paid typeface'],
+    faq: [
+      { q: 'Are these fonts free to use?', a: 'Yes — every font listed here is hosted on Google Fonts and free for personal and commercial use.' },
+      { q: 'How do I actually add a font to my website?', a: "Copy the font-family CSS from this tool, then include the matching Google Fonts <link> tag (from fonts.google.com) in your page's <head> so the browser loads the font file." },
+    ],
+  },
+  {
+    slug: 'gif-maker',
+    toolName: 'GIF Maker',
+    title: 'GIF Maker — Turn Images into a GIF',
+    toolRoute: '/generators/gif-maker',
+    category: 'tools',
+    description: 'Turn images and frames into smooth, shareable GIFs. Free browser-based GIF maker — no upload, no watermark.',
+    keywords: ['gif maker', 'create animated gif', 'image to gif', 'gif generator', 'make a gif online'],
+    excerpt: 'Turn a sequence of photos into a shareable animated GIF, entirely in your browser.',
+    date: 'August 2026',
+    intro: 'Turn a sequence of images into a smooth, shareable animated GIF — right in your browser. Upload your frames, set the order and timing, and download the finished animation.',
+    howToUse: ['Drop 2 or more images onto the upload area, or click to browse', 'Reorder frames with the up/down arrows, or remove ones you don\'t want', 'Adjust the frame delay and quality', 'Click Generate GIF, then preview and download the result'],
+    features: ['Drag-and-drop multi-image upload with manual reordering', 'Adjustable frame delay and encoding quality', 'Client-side GIF encoding via a Web Worker — nothing is uploaded to a server', 'Instant preview and download'],
+    useCases: ['Turning a burst-mode photo sequence into a shareable animation', 'Creating a simple animated logo or product showcase from static frames', 'Making reaction GIFs from a handful of images'],
+    faq: [
+      { q: 'Are my images uploaded to a server?', a: 'No — every frame is loaded and encoded entirely in your browser. Nothing is uploaded anywhere.' },
+      { q: 'Why does a lower quality number look better?', a: "The quality setting controls the GIF encoder's color sampling interval — a lower number samples more colors (better image quality, larger file, slower to generate)." },
+    ],
+  },
 ];
 
 /**
@@ -926,10 +1059,17 @@ export const toolBlogs: ToolBlogMeta[] = [
  */
 function generateGenericToolBlog(slug: string, toolName: string, route: string, category: ToolBlogMeta['category']): ToolBlogMeta {
   const cleanName = toolName.replace(/ - .*$/, '').trim();
+  // Keep the rendered <title> (name + " | ToolZoneX" from the layout template)
+  // under ~60 characters so Google doesn't truncate it — drop the suffix
+  // entirely for names already long enough on their own (e.g. state paycheck
+  // calculators) rather than let every long name overflow the same way.
+  const SITE_SUFFIX_LENGTH = ' | ToolZoneX'.length;
+  const suffix = ' — Free Online Tool';
+  const title = cleanName.length + suffix.length + SITE_SUFFIX_LENGTH <= 60 ? `${cleanName}${suffix}` : cleanName;
   return {
     slug,
     toolName: cleanName,
-    title: `${cleanName}: Free Online Tool — How to Use & Features`,
+    title,
     toolRoute: route,
     category,
     description: `Use our free ${cleanName} online. Learn how it works, key features, and practical use cases. No sign-up required.`,

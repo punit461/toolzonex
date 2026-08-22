@@ -6,7 +6,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com'
 export const metadata: Metadata = {
   title: 'AI Pomodoro - Focus Timer with Distraction Tracking',
   description:
-    'A focus-aware Pomodoro timer with multiple productivity modes, in-browser distraction detection, and session analytics. Free, private, runs entirely in your browser.',
+    'A focus-aware Pomodoro timer with multiple productivity modes, in-browser distraction detection, and session analytics. Free and private.',
   keywords: ['pomodoro timer', 'focus timer', 'productivity timer', 'deep work timer', 'distraction tracking'],
   alternates: { canonical: '/tools/ai-pomodoro' },
   openGraph: {

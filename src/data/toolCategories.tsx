@@ -14,6 +14,9 @@ import PercentIcon from '@mui/icons-material/Percent';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import DiamondIcon from '@mui/icons-material/Diamond';
 import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
+import ColorLensIcon from '@mui/icons-material/ColorLens';
+import PaletteIcon from '@mui/icons-material/Palette';
+import GradientIcon from '@mui/icons-material/Gradient';
 import NoteAltIcon from '@mui/icons-material/NoteAlt';
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
@@ -205,7 +208,12 @@ export const categories: ToolCategory[] = [
       { title: 'Word Frequency', description: 'Find the most used words in text.', path: '/tools/word-frequency-analyzer', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
       { title: 'Text Merger', description: 'Merge two lists of text line by line.', path: '/tools/text-merger', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
       { title: 'Color Palette Generator', description: 'Generate beautiful random colors.', path: '/tools/color-palette-generator', icon: <ChangeHistoryIcon fontSize="large" color="primary" /> },
+      { title: 'Color Palette Library', description: 'Browse curated color palettes for inspiration.', path: '/tools/color-palette-library', icon: <PaletteIcon fontSize="large" color="primary" /> },
+      { title: 'Color Wheel', description: 'Generate complementary, triadic & other color harmonies.', path: '/tools/color-wheel', icon: <ColorLensIcon fontSize="large" color="primary" /> },
+      { title: 'Image Color Picker', description: 'Create custom color palettes from any image.', path: '/tools/image-color-picker', icon: <ColorLensIcon fontSize="large" color="primary" /> },
+      { title: 'Color Meanings', description: 'Browse colors and learn what they symbolize.', path: '/tools/color-meanings', icon: <PaletteIcon fontSize="large" color="primary" /> },
       { title: 'Contrast Checker', description: 'Check WCAG color accessibility.', path: '/tools/contrast-checker', icon: <ArticleIcon fontSize="large" color="primary" /> },
+      { title: 'Font Library', description: 'Find the perfect font for your next design project.', path: '/tools/font-library', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
       { title: 'PDF Tools', description: 'Merge, split, rotate, watermark & convert PDFs.', path: '/tools/pdf-tools', icon: <PictureAsPdfIcon fontSize="large" color="primary" /> },
       { title: 'Merge PDF', description: 'Combine multiple PDFs into one.', path: '/tools/merge-pdf', icon: <PictureAsPdfIcon fontSize="large" color="primary" /> },
       { title: 'Split PDF', description: 'Split a PDF into multiple files.', path: '/tools/split-pdf', icon: <PictureAsPdfIcon fontSize="large" color="primary" /> },
@@ -262,6 +270,7 @@ export const categories: ToolCategory[] = [
       { title: 'Random Number', description: 'Generate random numbers.', path: '/generators/random-number-generator', icon: <NumbersIcon fontSize="large" color="primary" /> },
       { title: 'Random String', description: 'Generate random strings.', path: '/generators/random-string-generator', icon: <TextFormatIcon fontSize="large" color="primary" /> },
       { title: 'Lorem Ipsum', description: 'Generate dummy text.', path: '/generators/lorem-ipsum-generator', icon: <ArticleIcon fontSize="large" color="primary" /> },
+      { title: 'GIF Maker', description: 'Turn images and frames into shareable GIFs.', path: '/generators/gif-maker', icon: <ImageIcon fontSize="large" color="primary" /> },
       { title: 'Random Data', description: 'Generate fake names & addresses.', path: '/generators/random-data-generator', icon: <ArticleIcon fontSize="large" color="primary" /> },
       { title: 'Business Name', description: 'Generate startup name ideas.', path: '/generators/business-name-generator', icon: <TextFormatIcon fontSize="large" color="primary" /> },
       { title: 'Acronym Generator', description: 'Convert phrases to acronyms.', path: '/generators/acronym-generator', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
@@ -320,6 +329,7 @@ export const categories: ToolCategory[] = [
       { title: 'CSS Grid Generator', description: 'Visually generate CSS Grids.', path: '/developer-tools/css-grid-generator', icon: <ChangeHistoryIcon fontSize="large" color="primary" /> },
       { title: 'Box Shadow Generator', description: 'Create CSS drop shadows.', path: '/developer-tools/box-shadow-generator', icon: <ChangeHistoryIcon fontSize="large" color="primary" /> },
       { title: 'Gradient Generator', description: 'Generate CSS linear gradients.', path: '/developer-tools/gradient-generator', icon: <ChangeHistoryIcon fontSize="large" color="primary" /> },
+      { title: 'Gradient Library', description: 'Browse curated, ready-to-use CSS gradients.', path: '/developer-tools/gradient-library', icon: <GradientIcon fontSize="large" color="primary" /> },
       { title: 'Flexbox Generator', description: 'Generate CSS Flexbox layouts.', path: '/developer-tools/flexbox-generator', icon: <ChangeHistoryIcon fontSize="large" color="primary" /> },
       { title: 'QR Code Generator', description: 'Create custom QR codes free.', path: '/developer-tools/qr-code-generator', icon: <ArticleIcon fontSize="large" color="primary" /> },
       { title: 'Cron Job Parser', description: 'Translate cron to plain English.', path: '/developer-tools/cron-job-parser', icon: <ArticleIcon fontSize="large" color="primary" /> },

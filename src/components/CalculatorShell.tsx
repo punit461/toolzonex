@@ -15,6 +15,7 @@ interface CalculatorShellProps {
   children: React.ReactNode;
   content: React.ReactNode;
   category?: 'Finance' | 'Health' | 'Utilities' | 'Tools' | 'Converters' | 'Developer Tools' | 'Generators' | 'Text Tools' | 'AI';
+  faqs?: { question: string; answer: string }[];
 }
 
 const RELATED_COUNT = 6;
@@ -42,12 +43,28 @@ function getRelatedTools(category: string, currentUrl: string) {
   return related;
 }
 
-const CalculatorShell = ({ title, description, url, children, content, category = 'Finance' }: CalculatorShellProps) => {
+const CalculatorShell = ({ title, description, url, children, content, category = 'Finance', faqs }: CalculatorShellProps) => {
   const relatedTools = getRelatedTools(category, url);
   const blog = getToolBlogByRoute(url);
 
+  const faqSchema = faqs && faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  } : null;
+
   return (
     <Box>
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <Breadcrumbs
         items={[
           { label: category, href: '/' },

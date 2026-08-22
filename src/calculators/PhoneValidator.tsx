@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import { Box, TextField, Button, Typography, Paper, Alert, Grid, Chip } from '@mui/material';
 import { parsePhoneNumber, isValidPhoneNumber, CountryCode, getCountryCallingCode, getCountries } from 'libphonenumber-js';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
@@ -147,46 +147,87 @@ const PhoneValidatorContent = () => {
   );
 };
 
+const faqs = [
+  {
+    question: 'Does this confirm the number is active or reachable?',
+    answer: 'No — this checks formatting and structure only, not whether the number is currently in service. To confirm a number is reachable you\'d need to actually send it an SMS or call, which this tool does not do.',
+  },
+  {
+    question: 'What phone number formats does it accept?',
+    answer: 'You can type a local number (e.g. "9876543210") with the matching country selected from the dropdown, or an international number starting with "+" and the country code (e.g. "+91 9876543210") — the "+" prefix is recognized automatically regardless of which country is selected.',
+  },
+  {
+    question: 'Is my phone number sent to a server or stored anywhere?',
+    answer: 'No. Validation runs entirely in your browser using the open-source libphonenumber-js library — the same number-formatting logic Google uses internally. Nothing you type is transmitted, logged, or stored.',
+  },
+  {
+    question: 'What do the "Mobile", "Fixed Line", and "VOIP" number types mean?',
+    answer: 'The number type is inferred from the numbering plan for that country: Mobile means a cellular number, Fixed Line means a landline, and VOIP/Toll-Free/Premium Rate cover internet-based or special-service numbers. Some countries share overlapping ranges, so this is shown as "unknown" when it can\'t be determined precisely.',
+  },
+  {
+    question: 'Why does a number that looks correct show as invalid?',
+    answer: 'The most common causes are: the wrong country selected in the dropdown, a missing or extra digit for that country\'s expected length, or a leading "0" that should be dropped when dialing internationally. Try re-entering the number in full international format with a "+" instead.',
+  },
+  {
+    question: 'Can I validate a number without knowing which country it belongs to?',
+    answer: 'Yes — type the number with its "+" country code prefix (e.g. "+44 20 7946 0958") and the tool will parse and validate it correctly no matter which country is selected in the dropdown.',
+  },
+];
+
 const PhoneValidator = () => {
   const content = (
     <>
       <Typography variant="h2">What is phone validation?</Typography>
       <Typography variant="body1">
-        Phone number validation checks if a phone number is formatted correctly and valid for the selected country. 
-        This tool verifies the structure, length, and format of phone numbers.
+        Phone number validation checks if a phone number is formatted correctly and valid for the selected country.
+        This tool verifies the structure, length, and format of phone numbers using libphonenumber-js — the same
+        parsing library behind Google's own phone number formatting — entirely in your browser.
       </Typography>
 
       <Typography variant="h2">How to validate a phone number?</Typography>
       <Typography variant="body1">
-        Select your country from the dropdown, enter the phone number, and click "Validate". 
+        Select your country from the dropdown, enter the phone number, and click "Validate".
         The tool will display the formatted number, country code, calling code, and number type.
       </Typography>
 
       <Typography variant="h2">Why validate phone numbers?</Typography>
       <Typography variant="body1">
         Phone validation helps ensure that contact information is correct before storing or using it.
-        It's essential for form validation, contact verification, and preventing invalid data entry.
+        It's essential for form validation, contact verification, and preventing invalid data entry —
+        catching typos and malformed numbers before they reach your database or trigger a failed SMS/OTP send.
+      </Typography>
+
+      <Typography variant="h2">Supported countries and number types</Typography>
+      <Typography variant="body1">
+        The validator covers every country and territory in the international numbering plan (ITU-T E.164),
+        from the country dropdown. For each valid number it also detects the likely number type — mobile,
+        fixed line, VOIP, toll-free, or premium rate — based on that country's numbering ranges.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">
         Selecting "United States" and entering "2025551234" confirms it as a valid 10-digit US number and shows
-        its formatted version and calling code (+1).
+        its formatted version (+1 202-555-1234), country code (US), and calling code (+1).
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
           <li>Validating phone numbers in a signup or checkout form before submission.</li>
-          <li>Cleaning up a contact list by checking number formatting per country.</li>
+          <li>Cleaning up a contact list or CRM export by checking number formatting per country.</li>
+          <li>QA-testing how a phone input field handles different country formats.</li>
+          <li>Sanity-checking a customer's number before triggering an SMS or WhatsApp OTP send.</li>
+          <li>Normalizing user-entered numbers into a consistent international format for storage.</li>
         </ul>
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
-      <Typography variant="h3">Does this confirm the number is active or reachable?</Typography>
-      <Typography variant="body1">
-        No — this checks formatting and structure only, not whether the number is currently in service.
-      </Typography>
+      {faqs.map((f) => (
+        <Fragment key={f.question}>
+          <Typography variant="h3">{f.question}</Typography>
+          <Typography variant="body1">{f.answer}</Typography>
+        </Fragment>
+      ))}
     </>
   );
 
@@ -197,6 +238,7 @@ const PhoneValidator = () => {
       url="/tools/phone-validator"
       content={content}
       category="Tools"
+      faqs={faqs}
     >
       <PhoneValidatorContent />
 
