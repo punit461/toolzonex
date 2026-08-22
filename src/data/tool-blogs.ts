@@ -79,6 +79,26 @@ export const toolBlogs: ToolBlogMeta[] = [
     ],
   },
   {
+    slug: 'compound-interest-calculator',
+    toolName: 'Compound Interest Calculator',
+    title: 'Compound Interest Calculator: See the Power of Compounding',
+    toolRoute: '/finance/compound-interest-calculator',
+    category: 'finance',
+    description: 'Calculate how a lump-sum investment grows with compound interest. Compare annual, quarterly, monthly, and daily compounding frequencies.',
+    keywords: ['compound interest calculator', 'power of compounding', 'compounding calculator', 'interest on interest', 'lump sum investment calculator'],
+    excerpt: 'See exactly how much a one-time investment grows over the years thanks to compounding.',
+    date: 'August 2026',
+    intro: 'Compound interest is interest calculated on both the original principal and the interest already earned — "interest on interest." Unlike simple interest, which stays flat, compound growth accelerates the longer money is left invested, which is why the power of compounding rewards starting early more than investing a larger amount later.',
+    howToUse: ['Enter the principal (lump-sum) amount', 'Set the expected annual interest rate', 'Choose the investment duration in years', 'Pick a compounding frequency (annual, quarterly, monthly, or daily)', 'View the projected total value and interest earned'],
+    features: ['Supports annual, semi-annual, quarterly, monthly, and daily compounding', 'Shows principal vs. interest-earned breakdown', 'Interactive year-by-year growth chart', 'Uses the standard A = P(1 + r/n)^(nt) formula'],
+    useCases: ['Projecting fixed deposit or lump-sum investment growth', 'Comparing how compounding frequency changes the final amount', 'Understanding why starting to invest early matters so much', 'Teaching the math behind compound growth'],
+    faq: [
+      { q: 'What is the power of compounding?', a: 'It refers to how compound interest causes an investment to grow faster over time, since each period\'s interest is added to the principal and itself starts earning interest — the growth curve gets steeper the longer money stays invested.' },
+      { q: 'Does compounding frequency really make a big difference?', a: 'At the same nominal rate, more frequent compounding (e.g. monthly vs. annually) produces a slightly higher return, but the difference is modest — the rate and time horizon matter far more.' },
+      { q: 'Is this the same as a SIP calculator?', a: 'No — this tool models a single lump-sum investment. For regular monthly contributions, use the SIP Calculator instead.' },
+    ],
+  },
+  {
     slug: 'income-tax-calculator',
     toolName: 'Income Tax Calculator',
     title: 'Income Tax Calculator: Old vs New Regime for FY 2025-26 (AY 2026-27)',
@@ -323,7 +343,7 @@ export const toolBlogs: ToolBlogMeta[] = [
     toolRoute: '/health/bmr-calculator',
     category: 'health',
     description: 'Calculate your Basal Metabolic Rate (BMR) using the Mifflin-St Jeor equation. Understand the minimum calories your body needs at rest.',
-    keywords: ['bmr calculator', 'basal metabolic rate', 'mifflin st jeor', 'calories at rest', 'metabolism calculator'],
+    keywords: ['bmr calculator', 'basal metabolic rate', 'mifflin st jeor', 'calories at rest', 'metabolism calculator', 'mifflin st jeor calculator', 'mifflin st jeor equation calculator'],
     excerpt: 'Find out how many calories your body burns at rest with the Mifflin-St Jeor formula.',
     date: 'June 2026',
     intro: 'Your Basal Metabolic Rate (BMR) is the number of calories your body needs to perform basic life-sustaining functions like breathing, circulation, and cell production while at complete rest. Knowing your BMR is the foundation for any calorie-based diet plan.',
@@ -333,6 +353,7 @@ export const toolBlogs: ToolBlogMeta[] = [
     faq: [
       { q: 'What is the Mifflin-St Jeor formula?', a: 'For men: BMR = 10×weight(kg) + 6.25×height(cm) - 5×age - 5. For women: same but -161 instead of -5.' },
       { q: 'How is BMR different from TDEE?', a: 'BMR is calories at complete rest. TDEE (Total Daily Energy Expenditure) includes all physical activity on top of BMR.' },
+      { q: 'Is this a Mifflin-St Jeor calculator?', a: 'Yes — this tool uses the Mifflin-St Jeor equation specifically, which is generally considered more accurate than the older Harris-Benedict formula.' },
     ],
   },
   {
@@ -635,7 +656,7 @@ export const toolBlogs: ToolBlogMeta[] = [
     toolRoute: '/text-tools/word-counter',
     category: 'tools',
     description: 'Count words, characters, sentences, and paragraphs in your text. Estimate reading time and check text statistics instantly.',
-    keywords: ['word counter', 'character counter', 'word count online', 'text statistics', 'reading time calculator'],
+    keywords: ['word counter', 'character counter', 'word count online', 'text statistics', 'reading time calculator', 'word calculator', 'words calculator', 'word count calculator'],
     excerpt: 'Count words, characters, sentences, and get reading time for any text instantly.',
     date: 'June 2026',
     intro: 'Whether you\'re writing an essay with a word limit, crafting a tweet within character count, or estimating article reading time, our word counter gives you all the text statistics you need in real-time.',
@@ -645,6 +666,7 @@ export const toolBlogs: ToolBlogMeta[] = [
     faq: [
       { q: 'How is reading time calculated?', a: 'Based on average adult reading speed of 200-250 words per minute.' },
       { q: 'Do special characters count as words?', a: 'Words are sequences of characters separated by spaces. Hyphenated words count as one word.' },
+      { q: 'Is a word counter the same as a word calculator?', a: 'Yes — both terms describe the same function: counting (or "calculating") the words, characters, sentences, and paragraphs in a piece of text.' },
     ],
   },
   {
@@ -711,7 +733,7 @@ export const toolBlogs: ToolBlogMeta[] = [
     toolRoute: '/tools/what-is-my-ip',
     category: 'tools',
     description: 'Find your public IP address instantly. See your IPv4/IPv6 address, ISP, city, country, and approximate location.',
-    keywords: ['what is my ip', 'my ip address', 'find my ip', 'public ip address', 'ip lookup'],
+    keywords: ['what is my ip', 'my ip address', 'find my ip', 'public ip address', 'ip lookup', 'what is my ip location', 'whats my ip location', 'my ip address location', 'where is my ip location'],
     excerpt: 'Instantly find your public IP address with ISP and geolocation details.',
     date: 'June 2026',
     intro: 'Your public IP address is how the internet identifies your connection. It reveals your approximate location and ISP. Our tool shows your IP instantly along with geolocation data — useful for troubleshooting networks, VPN verification, and security audits.',
@@ -721,6 +743,7 @@ export const toolBlogs: ToolBlogMeta[] = [
     faq: [
       { q: 'Can my IP address reveal my exact location?', a: 'No. IP geolocation is approximate — typically accurate to city level. It cannot pinpoint your street address.' },
       { q: 'Why do I see a different IP on VPN?', a: 'VPNs route your traffic through their servers, so websites see the VPN server\'s IP instead of yours.' },
+      { q: 'How do I check my IP address location?', a: 'Just open the tool page — it auto-detects your public IP and its approximate country, region, and city the moment it loads, with no button to click.' },
     ],
   },
   {
@@ -863,7 +886,7 @@ export const toolBlogs: ToolBlogMeta[] = [
     toolRoute: '/converters/hex-to-rgb',
     category: 'tools',
     description: 'Convert HEX color codes to RGB values and vice versa. See color preview, copy CSS values, and explore color variations.',
-    keywords: ['hex to rgb', 'color converter', 'hex color to rgb', 'rgb to hex', 'css color converter'],
+    keywords: ['hex to rgb', 'color converter', 'hex color to rgb', 'rgb to hex', 'css color converter', 'hex to rgb color', 'hex code to rgb', 'rgb hex'],
     excerpt: 'Convert between HEX and RGB color formats with live preview.',
     date: 'June 2026',
     intro: 'Web developers constantly switch between HEX (#FF5733) and RGB (rgb(255, 87, 51)) color formats. Our converter handles both directions instantly with a live color preview and copy-ready CSS values.',
@@ -873,6 +896,7 @@ export const toolBlogs: ToolBlogMeta[] = [
     faq: [
       { q: 'What is the difference between HEX and RGB?', a: 'They represent the same color differently. HEX uses base-16 (#RRGGBB), RGB uses 0-255 decimal values. Both define red, green, blue channels.' },
       { q: 'What about HSL?', a: 'HSL (Hue, Saturation, Lightness) is another format. You can use our color palette tools for HSL conversion.' },
+      { q: 'How do I convert a HEX color code to RGB?', a: 'Paste the HEX code into the converter — the RGB and RGBA equivalents appear instantly, with a live preview swatch and one-click copy.' },
     ],
   },
   {

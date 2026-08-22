@@ -184,6 +184,17 @@ const TextReadabilityScore = () => {
         Scores of 60-70 are considered plain English, easily understood by 13-15 year olds; scores above 90 are
         very easy to read, while scores below 30 are considered very difficult (college graduate level).
       </Typography>
+      <Typography variant="h3">What is the Flesch-Kincaid test?</Typography>
+      <Typography variant="body1">
+        It&apos;s actually two related formulas — the Flesch Reading Ease score (0-100, higher is easier) and
+        the Flesch-Kincaid Grade Level (an approximate US school grade needed to understand the text). This
+        calculator computes both at once from the same text.
+      </Typography>
+      <Typography variant="h3">Is there a free Flesch-Kincaid calculator?</Typography>
+      <Typography variant="body1">
+        Yes — this tool is free, requires no sign-up, and runs entirely in your browser, so pasted text is
+        never uploaded to a server.
+      </Typography>
     </>
   );
 

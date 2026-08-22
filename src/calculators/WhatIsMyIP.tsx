@@ -211,6 +211,17 @@ const WhatIsMyIP = () => {
         No — an IP address typically reveals only approximate location (city or region level) and your ISP,
         not a precise street address.
       </Typography>
+      <Typography variant="h3">How do I find my IP address location?</Typography>
+      <Typography variant="body1">
+        This page detects it automatically — as soon as it loads, your public IP address and its approximate
+        country, region, and city appear above, with no sign-up or extra steps required.
+      </Typography>
+      <Typography variant="h3">Why does my IP location show the wrong city?</Typography>
+      <Typography variant="body1">
+        IP geolocation is based on which ISP block your address falls in, not GPS. Mobile networks and VPNs
+        often route traffic through a hub in a different city or region, so the result can be off by tens or
+        hundreds of kilometers.
+      </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">

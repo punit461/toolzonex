@@ -87,6 +87,11 @@ const BMRCalculator = () => {
         The Mifflin-St Jeor equation, widely considered one of the more accurate BMR formulas for the general
         population.
       </Typography>
+      <Typography variant="h3">Is this a Mifflin-St Jeor calculator?</Typography>
+      <Typography variant="body1">
+        Yes — every result on this page is computed with the Mifflin-St Jeor equation rather than the older
+        (less accurate) Harris-Benedict formula.
+      </Typography>
     </>
   );
 
