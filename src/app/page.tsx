@@ -5,14 +5,14 @@ import { Box, Typography, Card, CardContent, TextField, InputAdornment, Chip, Ca
 import RouterLink from 'next/link';
 import SearchIcon from '@mui/icons-material/Search';
 import { categories } from '@/data/toolCategories';
+import { toolMatchesQuery } from '@/utils/search';
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredCategories = categories.map(category => {
-    const filteredTools = category.tools.filter(tool => 
-      tool.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-      tool.description.toLowerCase().includes(searchTerm.toLowerCase())
+    const filteredTools = category.tools.filter(tool =>
+      toolMatchesQuery(`${tool.title} ${tool.description}`, searchTerm)
     );
     return { ...category, tools: filteredTools };
   }).filter(category => category.tools.length > 0);

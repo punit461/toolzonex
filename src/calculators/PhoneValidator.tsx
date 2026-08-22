@@ -8,6 +8,9 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import CalculatorShell from '../components/CalculatorShell';
 import AdSenseUnit from '../components/AdSenseUnit';
 
+const regionNames = new Intl.DisplayNames(['en'], { type: 'region' });
+const countryName = (code: string) => regionNames.of(code) || code;
+
 const PhoneValidatorContent = () => {
   const [phone, setPhone] = useState('');
   const [country, setCountry] = useState<CountryCode>('IN');
@@ -65,7 +68,7 @@ const PhoneValidatorContent = () => {
         >
           {countries.map((c) => (
             <option key={c} value={c}>
-              {c} (+{getCountryCallingCode(c)})
+              {countryName(c)} ({c}, +{getCountryCallingCode(c)})
             </option>
           ))}
         </TextField>
@@ -117,10 +120,10 @@ const PhoneValidatorContent = () => {
               </Grid>
               <Grid item xs={6}>
                 <Typography variant="caption" color="text.secondary">
-                  Country Code
+                  Country
                 </Typography>
                 <Typography variant="body1" sx={{ fontWeight: 500 }}>
-                  {result.country || 'N/A'}
+                  {result.country ? `${countryName(result.country)} (${result.country})` : 'N/A'}
                 </Typography>
               </Grid>
               <Grid item xs={6}>

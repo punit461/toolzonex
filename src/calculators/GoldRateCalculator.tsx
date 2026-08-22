@@ -1,37 +1,59 @@
 'use client';
 
 import { useState } from 'react';
-import { Box, TextField, Typography, InputAdornment } from '@mui/material';
+import { Box, TextField, Typography, InputAdornment, Link, Stack, Select, MenuItem } from '@mui/material';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import CalculatorShell from '../components/CalculatorShell';
 import AdSenseUnit from '../components/AdSenseUnit';
+import {
+  WEIGHT_UNITS, RATE_UNITS, REGIONS, CURRENCIES, gramsFor, formatMoney, currencySymbol,
+  Region, CurrencyCode,
+} from './preciousMetalConfig';
 
 const GoldRateCalculator = () => {
-  const [weight, setWeight] = useState<number>(10); // in grams
-  const [ratePer10g, setRatePer10g] = useState<number>(75000);
+  const [weight, setWeight] = useState<number>(10);
+  const [weightUnit, setWeightUnit] = useState('g');
+  const [rate, setRate] = useState<number>(75000);
+  const [rateUnit, setRateUnit] = useState('g10');
   const [makingChargesPct, setMakingChargesPct] = useState<number>(8);
-  const [gstPct, setGstPct] = useState<number>(3); // Standard GST on gold is 3%
+  const [region, setRegion] = useState<Region>('india');
+  const [taxPct, setTaxPct] = useState<number>(3);
+  const [customCurrency, setCustomCurrency] = useState<CurrencyCode>('USD');
+
+  const regionConfig = REGIONS.find((r) => r.value === region) ?? REGIONS[0];
+  const currency = region === 'custom' ? customCurrency : regionConfig.currency;
+
+  const handleRegionChange = (value: Region) => {
+    setRegion(value);
+    const preset = REGIONS.find((r) => r.value === value);
+    if (preset) setTaxPct(preset.defaultTaxPct);
+  };
 
   // Calculations
-  const ratePerGram = ratePer10g / 10;
-  const goldValue = weight * ratePerGram;
+  const weightInGrams = weight * gramsFor(WEIGHT_UNITS, weightUnit);
+  const pricePerGram = rate / gramsFor(RATE_UNITS, rateUnit);
+  const goldValue = weightInGrams * pricePerGram;
   const makingCharges = (goldValue * makingChargesPct) / 100;
   const taxableValue = goldValue + makingCharges;
-  const gstAmount = (taxableValue * gstPct) / 100;
-  const totalPrice = taxableValue + gstAmount;
+  const taxAmount = (taxableValue * taxPct) / 100;
+  const totalPrice = taxableValue + taxAmount;
 
   const content = (
     <>
       <Typography variant="h2">How to calculate the price of gold jewelry?</Typography>
       <Typography variant="body1">
-        Buying gold in India is a cultural tradition and a financial investment. However, the final price you pay at the jeweler is higher than the spot gold rate. Here is the formula:
+        Buying gold is both a cultural tradition and a financial investment in many countries. However, the final
+        price you pay at the jeweler is higher than the spot gold rate. Here is the formula:
       </Typography>
       <ul>
-        <li><strong>Gold Value:</strong> Weight (in grams) × Rate per gram</li>
+        <li><strong>Gold Value:</strong> Weight × Rate per unit weight (converted to the same unit)</li>
         <li><strong>Making Charges:</strong> Usually a percentage of the gold value (ranging from 5% to 20% depending on the design).</li>
-        <li><strong>GST:</strong> A flat 3% Goods and Services Tax is levied on the total value (Gold Value + Making Charges).</li>
+        <li><strong>Tax:</strong> {regionConfig.taxNote}</li>
       </ul>
       <Typography variant="body1">
-        Using our online Gold Rate Calculator ensures you know exactly how much you are paying for the actual gold versus the taxes and labor costs.
+        Use the region selector to switch between India&apos;s GST, US sales tax, UK VAT, or a custom rate for
+        anywhere else — the calculator also accepts gold quoted per gram, per 10 grams, per kilogram, or per troy
+        ounce (the global bullion convention), and item weight in grams, kilograms, or troy ounces.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
@@ -46,14 +68,23 @@ const GoldRateCalculator = () => {
           <li>Checking a jeweler&apos;s quoted price against the actual gold rate before buying.</li>
           <li>Comparing making charges across different jewelers for the same design.</li>
           <li>Estimating the resale value of gold jewelry you already own.</li>
+          <li>Converting a world spot price (quoted per troy ounce) into a local per-gram price.</li>
         </ul>
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
-      <Typography variant="h3">Why does the final price include GST on making charges too?</Typography>
+      <Typography variant="h3">Why does the final price include tax on making charges too?</Typography>
       <Typography variant="body1">
-        Indian GST rules apply the 3% rate to the combined value of gold plus making charges, not just the raw
-        gold value — that&apos;s why the tax amount is higher than 3% of the gold price alone.
+        In India, GST rules apply the 3% rate to the combined value of gold plus making charges, not just the raw
+        gold value — that&apos;s why the tax amount is higher than 3% of the gold price alone. Other regions apply
+        tax similarly to the full jeweler invoice, though investment-grade bullion is often taxed differently from
+        jewelry — check your local rules.
+      </Typography>
+      <Typography variant="h3">What is a troy ounce and why does the world price use it?</Typography>
+      <Typography variant="body1">
+        A troy ounce (31.1034768 grams) is the standard unit for pricing precious metals internationally — it&apos;s
+        what you&apos;ll see quoted on goldprice.org and most bullion dealers outside India. Select &quot;Troy Ounce&quot;
+        as the rate unit to plug in a world spot price directly.
       </Typography>
     </>
   );
@@ -61,7 +92,7 @@ const GoldRateCalculator = () => {
   return (
     <CalculatorShell
       title="Gold Rate Calculator"
-      description="Calculate the exact final price of gold jewelry including making charges and GST."
+      description="Calculate the final price of gold in any weight unit and currency, with region-based tax."
       url="/finance/gold-calculator"
       content={content}
       category="Finance"
@@ -69,29 +100,80 @@ const GoldRateCalculator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>
           <Box sx={{ mb: 4 }}>
-            <Typography gutterBottom>Gold Weight (Grams)</Typography>
-            <TextField
-              fullWidth
-              variant="outlined"
-              type="number"
-              value={Number.isNaN(weight) ? '' : weight}
-              onChange={(e) => setWeight(e.target.value === '' ? NaN : Number(e.target.value))}
-              onFocus={(e) => e.target.select()}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">g</InputAdornment> } }}
-            />
+            <Typography gutterBottom>Region</Typography>
+            <Select fullWidth value={region} onChange={(e) => handleRegionChange(e.target.value as Region)}>
+              {REGIONS.map((r) => (
+                <MenuItem key={r.value} value={r.value}>{r.label}</MenuItem>
+              ))}
+            </Select>
           </Box>
-          
+
+          {region === 'custom' && (
+            <Box sx={{ mb: 4 }}>
+              <Typography gutterBottom>Currency</Typography>
+              <Select fullWidth value={customCurrency} onChange={(e) => setCustomCurrency(e.target.value as CurrencyCode)}>
+                {CURRENCIES.map((c) => (
+                  <MenuItem key={c.value} value={c.value}>{c.label}</MenuItem>
+                ))}
+              </Select>
+            </Box>
+          )}
+
           <Box sx={{ mb: 4 }}>
-            <Typography gutterBottom>Gold Rate (Per 10 Grams)</Typography>
-            <TextField
-              fullWidth
-              variant="outlined"
-              type="number"
-              value={Number.isNaN(ratePer10g) ? '' : ratePer10g}
-              onChange={(e) => setRatePer10g(e.target.value === '' ? NaN : Number(e.target.value))}
-              onFocus={(e) => e.target.select()}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
-            />
+            <Typography gutterBottom>Gold Weight</Typography>
+            <Stack direction="row" spacing={1.5}>
+              <TextField
+                fullWidth
+                variant="outlined"
+                type="number"
+                value={Number.isNaN(weight) ? '' : weight}
+                onChange={(e) => setWeight(e.target.value === '' ? NaN : Number(e.target.value))}
+                onFocus={(e) => e.target.select()}
+              />
+              <Select value={weightUnit} onChange={(e) => setWeightUnit(e.target.value)} sx={{ minWidth: 150 }}>
+                {WEIGHT_UNITS.map((u) => (
+                  <MenuItem key={u.value} value={u.value}>{u.label}</MenuItem>
+                ))}
+              </Select>
+            </Stack>
+          </Box>
+
+          <Box sx={{ mb: 4 }}>
+            <Typography gutterBottom>Gold Rate</Typography>
+            <Stack direction="row" spacing={1.5}>
+              <TextField
+                fullWidth
+                variant="outlined"
+                type="number"
+                value={Number.isNaN(rate) ? '' : rate}
+                onChange={(e) => setRate(e.target.value === '' ? NaN : Number(e.target.value))}
+                onFocus={(e) => e.target.select()}
+                slotProps={{ input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
+              />
+              <Select value={rateUnit} onChange={(e) => setRateUnit(e.target.value)} sx={{ minWidth: 150 }}>
+                {RATE_UNITS.map((u) => (
+                  <MenuItem key={u.value} value={u.value}>{u.label}</MenuItem>
+                ))}
+              </Select>
+            </Stack>
+            <Stack direction="row" spacing={2} sx={{ mt: 1 }}>
+              <Link
+                href="https://goldprice.org/gold-price-india.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5, fontSize: '0.85rem' }}
+              >
+                Check today&apos;s India rate <OpenInNewIcon sx={{ fontSize: 14 }} />
+              </Link>
+              <Link
+                href="https://goldprice.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5, fontSize: '0.85rem' }}
+              >
+                World rate <OpenInNewIcon sx={{ fontSize: 14 }} />
+              </Link>
+            </Stack>
           </Box>
 
           <Box sx={{ mb: 4 }}>
@@ -108,41 +190,44 @@ const GoldRateCalculator = () => {
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography gutterBottom>GST on Gold (%)</Typography>
+            <Typography gutterBottom>{regionConfig.taxLabel} (%)</Typography>
             <TextField
               fullWidth
               variant="outlined"
               type="number"
-              value={Number.isNaN(gstPct) ? '' : gstPct}
-              onChange={(e) => setGstPct(e.target.value === '' ? NaN : Number(e.target.value))}
+              value={Number.isNaN(taxPct) ? '' : taxPct}
+              onChange={(e) => setTaxPct(e.target.value === '' ? NaN : Number(e.target.value))}
               onFocus={(e) => e.target.select()}
               slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
+            <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 0.5 }}>
+              {regionConfig.taxNote}
+            </Typography>
           </Box>
         </Box>
 
         <Box>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Price Breakdown</Typography>
-            
+
             <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2, mt: 3 }}>
               <Typography>Value of Gold</Typography>
-              <Typography sx={{ fontWeight: 500 }}>₹ {Math.round(goldValue).toLocaleString('en-IN')}</Typography>
+              <Typography sx={{ fontWeight: 500 }}>{formatMoney(goldValue, currency)}</Typography>
             </Box>
-            
+
             <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
               <Typography>Making Charges</Typography>
-              <Typography sx={{ fontWeight: 500 }}>+ ₹ {Math.round(makingCharges).toLocaleString('en-IN')}</Typography>
+              <Typography sx={{ fontWeight: 500 }}>+ {formatMoney(makingCharges, currency)}</Typography>
             </Box>
-            
+
             <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2, pb: 2, borderBottom: '1px solid #E5E5E5' }}>
-              <Typography>GST ({gstPct}%)</Typography>
-              <Typography sx={{ fontWeight: 500 }}>+ ₹ {Math.round(gstAmount).toLocaleString('en-IN')}</Typography>
+              <Typography>{regionConfig.taxLabel} ({taxPct}%)</Typography>
+              <Typography sx={{ fontWeight: 500 }}>+ {formatMoney(taxAmount, currency)}</Typography>
             </Box>
 
             <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 3 }}>
               <Typography variant="h6" sx={{ fontWeight: 700 }}>Total Final Price</Typography>
-              <Typography variant="h4" color="primary.main" sx={{ fontWeight: 800 }}>₹ {Math.round(totalPrice).toLocaleString('en-IN')}</Typography>
+              <Typography variant="h4" color="primary.main" sx={{ fontWeight: 800 }}>{formatMoney(totalPrice, currency)}</Typography>
             </Box>
           </Box>
         </Box>
