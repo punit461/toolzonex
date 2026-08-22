@@ -82,6 +82,16 @@ const WordCounter = () => {
       <Typography variant="body1">
         Yes — the word, character, sentence, and paragraph counts update live as you type or paste text.
       </Typography>
+      <Typography variant="h3">Is this the same as a word calculator?</Typography>
+      <Typography variant="body1">
+        Yes — &quot;word calculator&quot; and &quot;word counter&quot; describe the same thing here. This tool
+        calculates the exact word, character, sentence, and paragraph totals for whatever text you paste in.
+      </Typography>
+      <Typography variant="h3">How do I calculate the number of words in a document?</Typography>
+      <Typography variant="body1">
+        Paste the full text into the box above — there&apos;s no length limit, and the word count updates
+        instantly without needing to open Word or Google Docs.
+      </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">

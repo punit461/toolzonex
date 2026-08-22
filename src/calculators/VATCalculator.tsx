@@ -110,6 +110,11 @@ const VATCalculator = () => {
         Rates are checked against official/EU sources as of August 2026 but change with national budgets —
         always confirm the current rate before invoicing or filing.
       </Typography>
+      <Typography variant="h3">How do I calculate VAT from a gross amount?</Typography>
+      <Typography variant="body1">
+        Switch to &quot;Remove VAT&quot; mode above and enter the gross (VAT-inclusive) figure — the calculator
+        divides it by (1 + rate) to show the net price and the VAT amount separately.
+      </Typography>
     </>
   );
 

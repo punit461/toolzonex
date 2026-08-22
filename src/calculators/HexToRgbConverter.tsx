@@ -146,6 +146,11 @@ const HexToRgbConverter = () => {
         RGB(A) lets you specify transparency directly, which plain HEX codes can&apos;t do without an extra
         alpha value (HEX8).
       </Typography>
+      <Typography variant="h3">How do I convert a HEX color code to RGB?</Typography>
+      <Typography variant="body1">
+        Type or paste the HEX code (with or without the leading #) into the field above — the RGB and RGBA
+        values are calculated and shown instantly, with one-click copy buttons for each.
+      </Typography>
     </>
   );
 

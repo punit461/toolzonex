@@ -282,6 +282,23 @@ const Header = () => {
                   router.push(newValue.path);
                 }
               }}
+              slotProps={{
+                popper: { placement: 'bottom-end' },
+                paper: {
+                  sx: {
+                    width: 340,
+                    maxWidth: '90vw',
+                    mt: 1,
+                    borderRadius: 2,
+                  },
+                },
+                listbox: {
+                  sx: {
+                    maxHeight: 420,
+                    '& .MuiAutocomplete-option': { whiteSpace: 'normal' },
+                  },
+                },
+              }}
               renderInput={(params) => (
                 <TextField
                   {...params}
