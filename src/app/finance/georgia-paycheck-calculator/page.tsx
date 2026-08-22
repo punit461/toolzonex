@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../../../calculators/paycheck/PaycheckCalculator";
+import { STATE_SEO_CONTENT } from "../../../calculators/paycheck/stateSeoContent";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Georgia Paycheck Calculator - Take-Home Pay",
   description: "Free Georgia paycheck calculator. See net pay after federal tax, state tax, Social Security, and Medicare.",
-  keywords: ["georgia paycheck calculator", "georgia salary calculator", "georgia take home pay", "georgia tax calculator", "net pay calculator georgia"],
+  keywords: ["georgia paycheck calculator", "georgia salary calculator", "georgia take home pay", "georgia tax calculator", "net pay calculator georgia", "paycheck calculator georgia", "ga paycheck calculator"],
   alternates: { canonical: "/finance/georgia-paycheck-calculator" },
   openGraph: {
     title: "Georgia Paycheck Calculator - Take-Home Pay | ToolZoneX",
@@ -28,12 +29,26 @@ const calculatorSchema = {
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": STATE_SEO_CONTENT.georgia!.faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+  })),
+};
+
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(calculatorSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <PaycheckCalculator stateSlug="georgia" />
     </>

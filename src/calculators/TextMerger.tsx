@@ -156,7 +156,7 @@ const TextMerger = () => {
     <>
       <Typography variant="h2">Free Online Text & List Merger</Typography>
       <Typography variant="body1">
-        Combine two lists of text line-by-line instantly. Perfect for combining first names and last names, URLs and parameters, or any two columns of data. Customize the separator to fit your exact needs.
+        Combine two lists of text line-by-line instantly. Perfect for combining first names and last names, URLs and parameters, or any two columns of data. Customize the separator to fit your exact needs — use it as a simple list combiner, a text combiner for two paragraphs, or a string append tool online when you need to join text pairs quickly.
       </Typography>
 
       <Typography variant="h2">How to Use It</Typography>
@@ -180,6 +180,17 @@ const TextMerger = () => {
       </Typography>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is this the same as a list combiner?</Typography>
+      <Typography variant="body1">
+        Yes — this tool works as a list combiner, pairing each line of List 1 with the matching line of List 2
+        so you can merge two columns without spreadsheet formulas.
+      </Typography>
+      <Typography variant="h3">Can I use this as a text combiner or string append tool online?</Typography>
+      <Typography variant="body1">
+        Yes — enter your first block of text as List 1 and the text you want appended as List 2, choose a
+        separator (or none), and the tool acts as a text combiner or string append tool, joining each pair of
+        lines into one string.
+      </Typography>
       <Typography variant="h3">What if my two lists have a different number of lines?</Typography>
       <Typography variant="body1">
         Extra lines in the longer list are left unmatched or blank-paired, depending on your settings — for

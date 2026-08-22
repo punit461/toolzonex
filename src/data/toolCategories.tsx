@@ -309,6 +309,7 @@ export const categories: ToolCategory[] = [
       { title: 'Word Wrap Tool', description: 'Wrap text to a column limit.', path: '/text-tools/word-wrap-tool', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
       { title: 'Word Scrambler', description: 'Scramble letters in words or text.', path: '/text-tools/word-scrambler', icon: <ShuffleIcon fontSize="large" color="primary" /> },
       { title: 'Leetspeak Converter', description: 'Convert text to 1337 speak.', path: '/text-tools/leetspeak-converter', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
+      { title: 'Soundex Calculator', description: 'Generate phonetic codes for names & words.', path: '/text-tools/soundex-calculator', icon: <TextFieldsIcon fontSize="large" color="primary" /> },
     ],
   },
   {

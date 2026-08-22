@@ -120,12 +120,13 @@ const BinaryConverter = () => {
     <>
       <Typography variant="h2">What is Binary Code?</Typography>
       <Typography variant="body1">
-        Computers store all data using the binary system, which is a base-2 number system composed of only two digits: 0 and 1. This tool allows you to convert human-readable text into 8-bit binary representation, and vice-versa, making it a great educational tool for understanding how computers process information.
+        Computers store all data using the binary system, which is a base-2 number system composed of only two digits: 0 and 1. This tool is a two-way <strong>binary translator</strong> — it converts binary code to text (decode mode) and converts human-readable text into 8-bit binary (encode mode), making it a great educational tool for understanding how computers process information.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">
-        The letter &quot;A&quot; converts to <code>01000001</code> in 8-bit binary (its ASCII value, 65).
+        The letter &quot;A&quot; converts to <code>01000001</code> in 8-bit binary (its ASCII value, 65). Paste
+        <code>01001000 01100101 01101100 01101100 01101111</code> in decode mode to get back &quot;Hello&quot;.
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
@@ -133,6 +134,8 @@ const BinaryConverter = () => {
         <ul>
           <li>Learning how computers represent text at the bit level.</li>
           <li>Decoding binary strings found in puzzles, homework, or low-level programming.</li>
+          <li>Converting binary code to text when a message, file name, or challenge is given in 1s and 0s.</li>
+          <li>Encoding a short message into binary for a puzzle, gift, or novelty project.</li>
         </ul>
       </Box>
 
@@ -141,6 +144,23 @@ const BinaryConverter = () => {
       <Typography variant="body1">
         8 bits (1 byte) can represent 256 values, enough to cover the standard ASCII character set used for
         basic English text and symbols.
+      </Typography>
+      <Typography variant="h3">How do I convert binary code to text?</Typography>
+      <Typography variant="body1">
+        Make sure the tool is in &quot;Binary to Text&quot; (decode) mode, paste your space-separated binary
+        (e.g. <code>01001000 01100101</code>) into the input box, and click &quot;Convert to Text&quot; — this
+        acts as the translator for binary, turning each 8-bit group back into its matching character.
+      </Typography>
+      <Typography variant="h3">What format does the binary input need to be in?</Typography>
+      <Typography variant="body1">
+        Each character should be represented as an 8-bit binary group (only 0s and 1s), with a single space
+        between groups — for example <code>01001000 01101001</code> decodes to &quot;Hi&quot;. Binary that
+        isn&apos;t space-separated or contains characters other than 0 and 1 will show an error.
+      </Typography>
+      <Typography variant="h3">Is &quot;bimary translator&quot; the same tool?</Typography>
+      <Typography variant="body1">
+        Yes — &quot;bimary&quot; is a common typo for &quot;binary.&quot; This binary-to-text translator works
+        the same either way: paste your binary or text and convert.
       </Typography>
     </>
   );

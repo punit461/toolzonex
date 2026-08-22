@@ -143,6 +143,11 @@ const WordWrapTool = () => {
       </Typography>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is this the same as a "wordwrap" tool?</Typography>
+      <Typography variant="body1">
+        Yes — &quot;wordwrap&quot; and &quot;word wrap&quot; both refer to automatically breaking long lines of
+        text at a set character or column width, which is exactly what this tool does.
+      </Typography>
       <Typography variant="h3">Does it break words in the middle to fit the line length?</Typography>
       <Typography variant="body1">
         No — the tool wraps at word boundaries, so words are never split mid-word.

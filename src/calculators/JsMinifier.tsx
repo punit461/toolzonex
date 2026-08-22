@@ -118,13 +118,14 @@ const JsMinifier = () => {
     <>
       <Typography variant="h2">Free JavaScript Minifier Tool</Typography>
       <Typography variant="body1">
-        Reduce your JavaScript payload size and improve load times. This basic client-side minifier strips comments, line breaks, and unnecessary spaces from your JS files instantly. Note: For complex production code, we recommend using a full AST-based minifier like Terser.
+        Reduce your JavaScript payload size and improve load times. This basic client-side minifier strips comments, line breaks, and unnecessary spaces from your JS files instantly — a quick way to minify js online or compress js without a build pipeline. Note: For complex production code, we recommend using a full AST-based minifier like Terser.
       </Typography>
 
       <Typography variant="h2">How to Use It</Typography>
       <Typography variant="body1">
         Paste your JavaScript into the input box and click minify to instantly strip comments and unnecessary
-        whitespace, producing a compact output ready to copy.
+        whitespace, producing a compact output ready to copy. This works as a fast javascript minify / javascript
+        compress tool with no sign-up and no software to install — everything runs locally in your browser.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
@@ -138,6 +139,8 @@ const JsMinifier = () => {
         <ul>
           <li>Quickly shrinking a small script for a prototype or personal project.</li>
           <li>Removing comments and whitespace before sharing or embedding a snippet.</li>
+          <li>Minimizing JS pasted into a &lt;script&gt; tag to trim page weight without a build step.</li>
+          <li>Comparing original vs. minified byte size before deciding whether to bother compressing further.</li>
         </ul>
       </Box>
 
@@ -146,6 +149,23 @@ const JsMinifier = () => {
       <Typography variant="body1">
         For complex production codebases, a full AST-based minifier like Terser or esbuild is safer and more
         thorough — this tool is best for quick, simple minification needs.
+      </Typography>
+      <Typography variant="h3">Can I minify js online without installing anything?</Typography>
+      <Typography variant="body1">
+        Yes — paste your JavaScript into the input box and click Minify JS. Everything runs in your browser, so
+        there&apos;s nothing to install and no build tooling required.
+      </Typography>
+      <Typography variant="h3">What does this JavaScript minify / compress js tool actually remove?</Typography>
+      <Typography variant="body1">
+        It strips comments (both <code>//</code> and <code>/* */</code> styles), collapses extra whitespace and
+        line breaks, and removes unnecessary spaces around operators and punctuation — reducing file size
+        without changing behavior for typical scripts.
+      </Typography>
+      <Typography variant="h3">Does minimizing JS change how my code runs?</Typography>
+      <Typography variant="body1">
+        It shouldn&apos;t — minifying only removes comments and formatting whitespace, not logic. However, this
+        is a basic regex-based minifier, not a full parser, so always test minified output before deploying it,
+        especially for complex code.
       </Typography>
     </>
   );

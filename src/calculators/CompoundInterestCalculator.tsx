@@ -56,7 +56,9 @@ const CompoundInterestCalculator = () => {
       <Typography variant="body1">
         Because each period&apos;s interest gets added back to the principal, growth accelerates over time
         rather than staying flat — the effect becomes dramatic over long horizons like 15-30 years, which is why
-        starting early matters more than the exact amount invested.
+        starting early matters more than the exact amount invested. This power compounding effect is exactly
+        what the calculator below visualizes: adjust the principal, rate, years, or compounding frequency and
+        watch how much of the final total comes from interest rather than your original deposit.
       </Typography>
 
       <Typography variant="h2">Formula</Typography>

@@ -159,15 +159,17 @@ const ContrastCheckerContent = () => {
 const ContrastChecker = () => {
   const content = (
     <>
-      <Typography variant="h2">WCAG Color Contrast Checker</Typography>
+      <Typography variant="h2">WCAG Color Contrast Checker & Tester</Typography>
       <Typography variant="body1">
-        Check if your text and background colors have enough contrast to be readable by everyone. This tool calculates the contrast ratio according to the Web Content Accessibility Guidelines (WCAG) to ensure your designs are accessible.
+        Check if your text and background colors have enough contrast to be readable by everyone. This WCAG
+        color checker calculates the contrast ratio according to the Web Content Accessibility Guidelines
+        (WCAG) so you can verify web accessibility color compliance before you ship a design.
       </Typography>
 
-      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="h2">How to Check Color Contrast Ratio</Typography>
       <Typography variant="body1">
         Enter or pick a text color and a background color and the tool instantly calculates the contrast ratio
-        and shows whether it passes WCAG AA/AAA thresholds.
+        and shows whether it passes WCAG AA/AAA thresholds for normal and large text.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
@@ -181,14 +183,33 @@ const ContrastChecker = () => {
         <ul>
           <li>Checking website text/background color combinations for accessibility compliance.</li>
           <li>Meeting WCAG AA or AAA standards for a design system or client project.</li>
+          <li>Using an accessibility calculator to review a site before an ADA compliance audit.</li>
+          <li>Running a quick accessibility color check on brand colors before finalizing a style guide.</li>
         </ul>
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What is WCAG and why does contrast matter?</Typography>
+      <Typography variant="body1">
+        WCAG (Web Content Accessibility Guidelines) is the standard used to measure whether website color
+        combinations are readable by people with low vision or color blindness. This tool calculates the WCAG
+        contrast ratio between your text and background colors so you can check compliance before publishing.
+      </Typography>
       <Typography variant="h3">What contrast ratio do I need?</Typography>
       <Typography variant="body1">
         WCAG AA requires at least 4.5:1 for normal text (3:1 for large text). WCAG AAA, a stricter standard,
-        requires 7:1 for normal text.
+        requires 7:1 for normal text (4.5:1 for large text).
+      </Typography>
+      <Typography variant="h3">Is this an ADA compliance contrast checker?</Typography>
+      <Typography variant="body1">
+        The ADA itself doesn&apos;t specify a technical contrast formula, but WCAG AA (4.5:1 for normal text) is
+        the standard most commonly used to demonstrate ADA-related web accessibility compliance in the US.
+        Checking your contrast ratio against WCAG AA with this tool is a reasonable way to help meet that bar.
+      </Typography>
+      <Typography variant="h3">How do I check color contrast ratio for accessibility?</Typography>
+      <Typography variant="body1">
+        Enter your text color and background color as hex codes above — the contrast ratio, along with WCAG AA
+        and AAA pass/fail results for both normal and large text, calculates instantly.
       </Typography>
     </>
   );

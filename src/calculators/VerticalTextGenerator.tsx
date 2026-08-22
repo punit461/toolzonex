@@ -145,6 +145,11 @@ const VerticalTextGenerator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I copy and paste the vertical text anywhere?</Typography>
+      <Typography variant="body1">
+        Yes — click &quot;Copy&quot; on the result panel and it&apos;s ready for vertical text copy and paste
+        into Instagram bios, TikTok captions, Discord, or any text field that accepts plain text.
+      </Typography>
       <Typography variant="h3">Will this work on any platform?</Typography>
       <Typography variant="body1">
         Yes — the output is plain text with line breaks, so it works anywhere text can be pasted, including

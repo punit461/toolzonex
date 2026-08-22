@@ -28,12 +28,33 @@ const tdeeCalculatorSchema = {
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does TDEE stand for?",
+      "acceptedAnswer": { "@type": "Answer", "text": "TDEE stands for Total Daily Energy Expenditure — the total number of calories your body burns in a full day, combining your resting metabolism (BMR) with all activity, exercise, and digestion." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is TDEE different from BMR?",
+      "acceptedAnswer": { "@type": "Answer", "text": "BMR is calories burned at complete rest; TDEE (Total Daily Energy Expenditure) adds your activity level on top, giving a more realistic picture of your actual daily calorie burn." }
+    }
+  ]
+};
+
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(tdeeCalculatorSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <TDEECalculator />
     </>

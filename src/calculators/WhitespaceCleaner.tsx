@@ -143,6 +143,12 @@ const WhitespaceCleaner = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How do I get rid of spaces in my text?</Typography>
+      <Typography variant="body1">
+        Paste your text in, tick &quot;Remove multiple spaces between words&quot; and &quot;Trim spaces at
+        beginning and end of lines&quot;, then click &quot;Clean Whitespace&quot; — that&apos;s the fastest way
+        to get rid of spaces, double spaces, and stray tabs in one pass.
+      </Typography>
       <Typography variant="h3">Does this remove line breaks entirely?</Typography>
       <Typography variant="body1">
         No — it removes extra blank lines and trailing whitespace while keeping your paragraph structure

@@ -153,32 +153,51 @@ const TextReadabilityScoreContent = () => {
 const TextReadabilityScore = () => {
   const content = (
     <>
-      <Typography variant="h2">Free Flesch-Kincaid Test and Readability Score</Typography>
+      <Typography variant="h2">Free Flesch-Kincaid Grade Level & Reading Ease Calculator</Typography>
       <Typography variant="body1">
-        Check how easy your text is to read. This tool calculates standard readability metrics including the Flesch Reading Ease score, Flesch-Kincaid Grade Level, and Automated Readability Index (ARI). Perfect for authors, copywriters, and students looking to improve their writing flow.
+        Check how easy your text is to read with a free Flesch-Kincaid readability checker. This tool calculates
+        the standard Flesch Reading Ease score, the Flesch-Kincaid Grade Level, and the Automated Readability
+        Index (ARI) — the same readability scores used by editors, teachers, and content writers. Perfect for
+        authors, copywriters, and students who want to check reading level before publishing.
       </Typography>
 
-      <Typography variant="h2">How to Use It</Typography>
+      <Typography variant="h2">How to Use This Flesch-Kincaid Readability Checker</Typography>
       <Typography variant="body1">
-        Paste your text into the input box and the Flesch Reading Ease, Flesch-Kincaid Grade Level, and ARI
-        scores calculate instantly.
+        Paste your text into the input box and the Flesch Reading Ease score, Flesch-Kincaid Grade Level, and
+        ARI score all calculate instantly — no sign-up, no upload, and no limit on text length.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">
-        A short, simple paragraph might score 80-90 (easy, 6th-grade level), while dense academic writing often
-        scores below 30 (very difficult, college-graduate level).
+        A short, simple paragraph might score 80-90 on the Flesch Reading Ease scale (easy, roughly 6th-grade
+        level), while dense academic writing often scores below 30 (very difficult, college-graduate level). A
+        Flesch-Kincaid Grade Level of 8.0 means the text is written at roughly an 8th-grade reading level.
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
-          <li>Checking a blog post or article reads at an accessible grade level.</li>
-          <li>Simplifying technical writing for a general audience.</li>
+          <li>Checking a blog post or article reads at an accessible grade level before publishing.</li>
+          <li>Simplifying technical writing for a general audience using writing level analysis.</li>
+          <li>Using a readability tool to confirm marketing copy is easy to scan.</li>
+          <li>Checking the reading level of school assignments, textbooks, or training material.</li>
         </ul>
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What does the Flesch-Kincaid Grade Level number mean?</Typography>
+      <Typography variant="body1">
+        It&apos;s an approximate US school grade level needed to understand the text. For example, a
+        Flesch-Kincaid Grade Level of 8.0 means the text should be readable by an average 8th grader (around age
+        13). This calculator works it out from your text&apos;s average sentence length and average syllables
+        per word using the formula: 0.39 × (words ÷ sentences) + 11.8 × (syllables ÷ words) − 15.59.
+      </Typography>
+      <Typography variant="h3">What does a Flesch Reading Ease score of 0-100 mean?</Typography>
+      <Typography variant="body1">
+        The Flesch Reading Ease score runs from 0 to 100 — the higher the number, the easier the text is to
+        read. Roughly: 90-100 is very easy (5th-grade level), 60-70 is plain English (8th-9th grade), 30-50 is
+        difficult (college level), and below 30 is very difficult (college-graduate/professional level).
+      </Typography>
       <Typography variant="h3">What Flesch Reading Ease score is considered "easy"?</Typography>
       <Typography variant="body1">
         Scores of 60-70 are considered plain English, easily understood by 13-15 year olds; scores above 90 are
@@ -188,7 +207,14 @@ const TextReadabilityScore = () => {
       <Typography variant="body1">
         It&apos;s actually two related formulas — the Flesch Reading Ease score (0-100, higher is easier) and
         the Flesch-Kincaid Grade Level (an approximate US school grade needed to understand the text). This
-        calculator computes both at once from the same text.
+        calculator computes both at once from the same text, plus the Automated Readability Index (ARI) as a
+        third readability score.
+      </Typography>
+      <Typography variant="h3">Is a readability checker the same as a Flesch-Kincaid calculator?</Typography>
+      <Typography variant="body1">
+        Yes — &quot;readability checker&quot;, &quot;readability score calculator&quot;, &quot;reading level
+        calculator&quot;, and &quot;Flesch-Kincaid calculator&quot; all describe this same kind of tool. It
+        analyzes sentence length and syllable count to score how easy your text is to read.
       </Typography>
       <Typography variant="h3">Is there a free Flesch-Kincaid calculator?</Typography>
       <Typography variant="body1">
@@ -200,7 +226,7 @@ const TextReadabilityScore = () => {
 
   return (
     <CalculatorShell
-      title="Flesch-Kincaid Test & Readability Score Calculator"
+      title="Flesch-Kincaid Grade Level & Reading Ease Calculator"
       description="Calculate Flesch Reading Ease, Flesch-Kincaid grade level, and a readability score from any text."
       url="/tools/text-readability-score"
       content={content}

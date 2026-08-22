@@ -28,12 +28,33 @@ const toolSchema = {
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I add a prefix to text?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Paste your text or list into the box, type the text you want at the start of every line into the \"Prefix\" field, and click \"Apply Prefix & Suffix\". To add a prefix to text without a suffix, just leave the suffix field empty." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add both a prefix and suffix at once?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, set both fields and they'll be applied to every line simultaneously." }
+    }
+  ]
+};
+
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <LinePrefixSuffix />
     </>

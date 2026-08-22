@@ -67,14 +67,16 @@ const WordCounterContent = () => {
 const WordCounter = () => {
   const content = (
     <>
-      <Typography variant="h2">How to use the Word Count Calculator</Typography>
+      <Typography variant="h2">How to use this online word count calculator</Typography>
       <Typography variant="body1">
-        Simply type or paste your text into the text area above. As you type, the tool will automatically calculate and display the number of words, characters (with and without spaces), sentences, and paragraphs in real-time.
+        Simply type or paste your text into the text area above. As you type, this online word count tool
+        automatically calculates and displays the number of words, characters (with and without spaces),
+        sentences, and paragraphs in real-time — no upload, no sign-up.
       </Typography>
 
-      <Typography variant="h2">Why use a Word Counter?</Typography>
+      <Typography variant="h2">Why use a word counter?</Typography>
       <Typography variant="body1">
-        Whether you're writing an essay, a blog post, a social media update, or a professional email, keeping track of your word count is essential. Many platforms have strict character limits (like Twitter/X) or specific length requirements for SEO and readability. This free online tool helps you instantly track your progress without needing heavy word processors.
+        Whether you're writing an essay, a blog post, a social media update, or a professional email, keeping track of your word count is essential. Many platforms have strict character limits (like Twitter/X) or specific length requirements for SEO and readability. This free online word count tool helps you instantly track your progress without needing heavy word processors.
       </Typography>
 
       <Typography variant="h2">FAQs</Typography>
@@ -84,13 +86,25 @@ const WordCounter = () => {
       </Typography>
       <Typography variant="h3">Is this the same as a word calculator?</Typography>
       <Typography variant="body1">
-        Yes — &quot;word calculator&quot; and &quot;word counter&quot; describe the same thing here. This tool
-        calculates the exact word, character, sentence, and paragraph totals for whatever text you paste in.
+        Yes — &quot;word calculator&quot;, &quot;words counter&quot;, and &quot;word counter&quot; describe the
+        same thing here. This tool calculates the exact word, character, sentence, and paragraph totals for
+        whatever text you paste in.
       </Typography>
       <Typography variant="h3">How do I calculate the number of words in a document?</Typography>
       <Typography variant="body1">
         Paste the full text into the box above — there&apos;s no length limit, and the word count updates
         instantly without needing to open Word or Google Docs.
+      </Typography>
+      <Typography variant="h3">How many words is this text?</Typography>
+      <Typography variant="body1">
+        Paste it into the box above — the word count, along with character, sentence, and paragraph counts,
+        appears immediately and updates live as you edit.
+      </Typography>
+      <Typography variant="h3">How do I convert words to characters?</Typography>
+      <Typography variant="body1">
+        There&apos;s no fixed ratio since word length varies, but English averages roughly 5-6 characters per
+        word including the space after it — so 300 words is typically around 1,500-1,800 characters. For an
+        exact count of your own text, paste it above and read the word and character counts side by side.
       </Typography>
 
       <Typography variant="h2">Example</Typography>

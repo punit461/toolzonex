@@ -6,7 +6,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 export const metadata: Metadata = {
   title: "Phone Validator - Validate Phone Numbers",
   description: "Validate and format phone numbers for multiple countries. Free online phone number validator with country code support.",
-  keywords: ["phone validator", "validate phone numbers", "phone number format", "country codes", "phone number checker", "international phone validation", "phone format checker", "mobile number validator"],
+  keywords: ["phone validator", "validate phone numbers", "phone number format", "country codes", "phone number checker", "international phone validation", "phone format checker", "mobile number validator", "phonevalidator", "cell phone validator", "validate phone number online", "phone number verification tool", "phone number verification tools", "check phone number validity", "validate phone number", "check phone validity", "validator number", "mobile number validation", "telephone number validation", "phone number validity", "validating phone numbers", "check if telephone number is valid", "best phone number validator"],
   alternates: { canonical: "/tools/phone-validator" },
   openGraph: {
     title: "Phone Validator - Validate Phone Numbers | ToolZoneX",

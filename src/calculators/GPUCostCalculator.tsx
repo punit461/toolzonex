@@ -98,6 +98,30 @@ const GPUCostCalculator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How much does it cost to rent an A100 GPU per hour?</Typography>
+      <Typography variant="body1">
+        On community cloud marketplaces, an A100 40GB runs about {formatUSD(GPUS.find((g) => g.id === 'a100-40')!.perHour)}/hr
+        and an A100 80GB about {formatUSD(GPUS.find((g) => g.id === 'a100-80')!.perHour)}/hr. Hyperscalers like
+        AWS/Azure charge more per GPU — roughly {formatUSD(GPUS.find((g) => g.id === 'a100-hyperscaler')!.perHour)}/hr
+        for an A100 80GB — but bundle enterprise SLAs, networking, and support. Select an A100 option above to see
+        the exact rate and your projected monthly/yearly spend.
+      </Typography>
+      <Typography variant="h3">What's the hourly price for cloud GPU rental?</Typography>
+      <Typography variant="body1">
+        It depends heavily on the card and provider tier: budget/inference cards like the T4 start around
+        {' '}{formatUSD(GPUS.find((g) => g.id === 't4')!.perHour)}/hr, mid-range cards like the RTX 4090 or A10
+        run {formatUSD(GPUS.find((g) => g.id === 'rtx4090')!.perHour)}-{formatUSD(GPUS.find((g) => g.id === 'a10')!.perHour)}/hr,
+        and high-end training cards like the A100 and H100 run roughly {formatUSD(GPUS.find((g) => g.id === 'a100-40')!.perHour)}
+        {' '}to {formatUSD(GPUS.find((g) => g.id === 'h100-hyperscaler')!.perHour)}/hr depending on the exact GPU
+        and whether it&apos;s a community-cloud or hyperscaler instance. Use the &quot;Compare across GPU
+        types&quot; table below to see every rate at once, sorted cheapest first.
+      </Typography>
+      <Typography variant="h3">How do I estimate my GPU rental cost over a month?</Typography>
+      <Typography variant="body1">
+        Enter your GPU type, how many you need, and expected hours per month (730 hrs/mo for always-on, roughly
+        160 hrs/mo for business-hours-only usage) — the calculator multiplies hourly rate × quantity × hours to
+        project your monthly and yearly cost, so you can track and compare GPU rental cost before committing.
+      </Typography>
       <Typography variant="h3">Is this pricing accurate?</Typography>
       <Typography variant="body1">
         These are approximate on-demand rates checked against public provider pricing as of August 2026. GPU cloud

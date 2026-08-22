@@ -65,6 +65,19 @@ const GratuityCalculator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What is gratuity in India?</Typography>
+      <Typography variant="body1">
+        Gratuity is a lump-sum payment an employer makes to an employee as a reward for continuous, long-term
+        service, governed by the Payment of Gratuity Act, 1972. It&apos;s paid on resignation, retirement,
+        superannuation, or death/disablement, and is separate from your regular salary, PF, or bonus — this
+        calculator estimates that amount using the statutory formula above.
+      </Typography>
+      <Typography variant="h3">Who is eligible for gratuity?</Typography>
+      <Typography variant="body1">
+        You&apos;re generally eligible once you&apos;ve completed at least 5 continuous years of service with the
+        same employer. The 5-year requirement is waived if employment ends due to death or disablement — enter
+        your years of service above and the calculator will flag whether you&apos;re eligible.
+      </Typography>
       <Typography variant="h3">Is gratuity taxable?</Typography>
       <Typography variant="body1">
         For government employees, gratuity is fully tax-exempt. For private-sector employees covered under the

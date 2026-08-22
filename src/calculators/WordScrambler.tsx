@@ -138,6 +138,7 @@ const WordScrambler = () => {
       <Typography variant="h2">FAQ</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
+          <li><strong>Is this the same as a text scrambler or &quot;scramblinator&quot;?</strong> Yes — this tool is a text scrambler (sometimes searched as a &quot;scramblinator&quot;) that jumbles the letters in each word while leaving spacing and word order untouched.</li>
           <li><strong>Why are short words left unchanged?</strong> Words under 4 letters don&apos;t have enough middle letters to scramble meaningfully.</li>
           <li><strong>Is the scramble the same every time?</strong> No, each click produces a new random shuffle.</li>
           <li><strong>Is my text uploaded anywhere?</strong> No — scrambling happens entirely in your browser.</li>

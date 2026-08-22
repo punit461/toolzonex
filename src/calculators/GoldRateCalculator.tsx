@@ -40,20 +40,23 @@ const GoldRateCalculator = () => {
 
   const content = (
     <>
-      <Typography variant="h2">How to calculate the price of gold jewelry?</Typography>
+      <Typography variant="h2">How to calculate gold price per gram (with making charges and GST)</Typography>
       <Typography variant="body1">
-        Buying gold is both a cultural tradition and a financial investment in many countries. However, the final
-        price you pay at the jeweler is higher than the spot gold rate. Here is the formula:
+        Buying gold jewellery is both a cultural tradition and a financial investment in many countries. However,
+        the final price you pay at the jeweler is higher than the spot gold rate. To calculate the gold price by
+        weight, use this formula:
       </Typography>
       <ul>
-        <li><strong>Gold Value:</strong> Weight × Rate per unit weight (converted to the same unit)</li>
+        <li><strong>Gold Value:</strong> Weight × Rate per unit weight (converted to the same unit) — this is how you calculate the gold rate per gram from a per-10-gram or per-kilogram quote.</li>
         <li><strong>Making Charges:</strong> Usually a percentage of the gold value (ranging from 5% to 20% depending on the design).</li>
         <li><strong>Tax:</strong> {regionConfig.taxNote}</li>
       </ul>
       <Typography variant="body1">
-        Use the region selector to switch between India&apos;s GST, US sales tax, UK VAT, or a custom rate for
-        anywhere else — the calculator also accepts gold quoted per gram, per 10 grams, per kilogram, or per troy
-        ounce (the global bullion convention), and item weight in grams, kilograms, or troy ounces.
+        Use the region selector to switch between India&apos;s GST (gold calculator with GST), US sales tax, UK
+        VAT, or a custom rate for anywhere else — the calculator also accepts gold quoted per gram, per 10 grams,
+        per kilogram, or per troy ounce (the global bullion convention), and item weight in grams, kilograms, or
+        troy ounces, so it works as a gold jewellery calculator for India as well as international gold cost per
+        gram calculations.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
@@ -73,12 +76,34 @@ const GoldRateCalculator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
-      <Typography variant="h3">Why does the final price include tax on making charges too?</Typography>
+      <Typography variant="h3">How do making charges work on gold jewellery in India?</Typography>
+      <Typography variant="body1">
+        Making charges are what the jeweller charges for turning raw gold into a finished piece of jewellery,
+        usually quoted as a percentage of the gold value (commonly 5-20% depending on the design&apos;s
+        complexity) or sometimes as a flat rate per gram. Use the <strong>Making Charges (%)</strong> field above —
+        it&apos;s applied on top of the gold value, exactly like on a jeweller&apos;s invoice.
+      </Typography>
+      <Typography variant="h3">How does GST apply to gold jewellery purchases?</Typography>
       <Typography variant="body1">
         In India, GST rules apply the 3% rate to the combined value of gold plus making charges, not just the raw
-        gold value — that&apos;s why the tax amount is higher than 3% of the gold price alone. Other regions apply
-        tax similarly to the full jeweler invoice, though investment-grade bullion is often taxed differently from
-        jewelry — check your local rules.
+        gold value — that&apos;s why the tax amount is higher than 3% of the gold price alone. Selecting
+        &quot;India&quot; as the region defaults the tax field to 3%, but you can edit it if your invoice shows a
+        different rate. Other regions apply tax similarly to the full jeweler invoice, though investment-grade
+        bullion is often taxed differently from jewelry — check your local rules.
+      </Typography>
+      <Typography variant="h3">What&apos;s the difference between 18K, 22K, and 24K gold pricing?</Typography>
+      <Typography variant="body1">
+        Karat measures gold purity: 24K is 99.9% pure, 22K is about 91.6% pure, and 18K is about 75% pure — the
+        rest is other metals alloyed in for durability. Because purity drives price, each karat trades at a
+        different rate per gram. This calculator doesn&apos;t look up karat-specific rates automatically — enter
+        the per-gram (or per-10-gram) rate your jeweller quotes for the specific karat you&apos;re pricing.
+      </Typography>
+      <Typography variant="h3">Does the sell-back price differ from the buy price?</Typography>
+      <Typography variant="body1">
+        Yes. When buying, you pay gold value + making charges + tax. When selling gold jewellery back, most
+        jewellers only pay for the gold&apos;s weight and purity — making charges and GST are usually not
+        refunded, and some deduct extra for wastage or purity testing. To estimate a sell/resale price here, set
+        Making Charges and tax to 0% and enter the buyback rate your jeweller quotes.
       </Typography>
       <Typography variant="h3">What is a troy ounce and why does the world price use it?</Typography>
       <Typography variant="body1">

@@ -131,8 +131,16 @@ const WindowsScreen = ({ os, variant, title, description, url }: Props) => {
       <Typography variant="h2">FAQ</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
-          <li><strong>Does this actually affect the computer?</strong> No — it&apos;s just a fullscreen webpage that looks like a Windows error or update screen. Closing the tab or pressing Esc returns everything to normal instantly.</li>
+          <li><strong>Does this actually affect the computer?</strong> No — it&apos;s just a fullscreen webpage that looks like a Windows {variant === 'bsod' ? 'error' : 'update'} screen. Closing the tab or pressing Esc returns everything to normal instantly.</li>
           <li><strong>Will this trigger a real restart or update?</strong> No, nothing on the device is touched.</li>
+          {variant === 'update' ? (
+            <>
+              <li><strong>How do I set up this Windows {os} update screen prank on a coworker&apos;s PC?</strong> Open this page on their screen while they&apos;re away, click &quot;Click to Fullscreen&quot; (or press F), and leave it running — the spinning &quot;Working on updates&quot; percentage looks convincing at a glance. Press Esc together to reveal the prank when they get back.</li>
+              <li><strong>Does the update percentage actually progress?</strong> Yes — for visual realism, the percentage counter animates up and loops, just like a real Windows update screen, even though nothing is actually being installed.</li>
+            </>
+          ) : (
+            <li><strong>Looking for a Windows Blue Screen of Death prank instead?</strong> This page shows the update spinner — for the classic &quot;:( Your PC ran into a problem&quot; error screen, use the matching Windows {os} Blue Screen prank tool.</li>
+          )}
         </ul>
       </Box>
     </>

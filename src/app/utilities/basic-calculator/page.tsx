@@ -6,7 +6,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 export const metadata: Metadata = {
   title: "Basic Calculator - Free Online Math Calculator",
   description: "A simple, fast, and free online calculator for standard mathematical operations. Perfect for quick everyday math.",
-  keywords: ["online calculator", "basic calculator", "math calculator", "addition subtraction calculator"],
+  keywords: ["online calculator", "basic calculator", "math calculator", "addition subtraction calculator", "basic operations calculator", "simple online calculator", "normal calculator online"],
   alternates: { canonical: "/utilities/basic-calculator" },
   openGraph: {
     title: "Basic Calculator - Free Online Math Calculator | ToolZoneX",
@@ -28,12 +28,28 @@ const toolSchema = {
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does this basic calculator have a percentage button?",
+      "acceptedAnswer": { "@type": "Answer", "text": "This basic calculator covers the four standard operations — addition, subtraction, multiplication, and division — without a dedicated percentage button. For percentage math (discounts, tax, percentage change), use the dedicated Percentage Calculator instead." }
+    },
+  ]
+};
+
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <BasicCalculator />
     </>

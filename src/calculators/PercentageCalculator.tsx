@@ -54,6 +54,13 @@ const PercentageCalculator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How do I calculate percentage over or under a target?</Typography>
+      <Typography variant="body1">
+        Use calculator #2 below (&quot;X is what % of Y?&quot;) with your actual value as X and your target value
+        as Y. The result is actual-as-a-percentage-of-target: anything above 100% means you exceeded the target,
+        and anything below 100% means you fell short. For example, actual sales of 120 against a target of 100
+        gives 120% — that&apos;s 20 percentage points over target.
+      </Typography>
       <Typography variant="h3">What&apos;s the difference between percentage change and percentage points?</Typography>
       <Typography variant="body1">
         Percentage change measures relative change (e.g., 20% higher), while percentage points measure the raw
@@ -106,7 +113,7 @@ const PercentageCalculator = () => {
 
         {/* Calculation 2 */}
         <Paper elevation={0} sx={{ p: 4, border: '1px solid', borderRadius: 2 }}>
-          <Typography variant="h6" gutterBottom>2. X is what percent of Y? (Marks / Grades)</Typography>
+          <Typography variant="h6" gutterBottom>2. X is what percent of Y? (Marks, Grades, or Actual vs. Target)</Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap', mt: 2 }}>
             <TextField 
               type="number"

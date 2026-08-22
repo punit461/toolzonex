@@ -95,13 +95,15 @@ const BasicCalculator = () => {
     <>
       <Typography variant="h2">Free Online Calculator</Typography>
       <Typography variant="body1">
-        A simple, fast, and free online calculator for standard mathematical operations including addition, subtraction, multiplication, and division. Perfect for quick calculations without leaving your browser.
+        A simple, normal online calculator for standard mathematical operations including addition, subtraction,
+        multiplication, and division. This basic operations calculator is perfect for quick everyday math without
+        leaving your browser or reaching for a physical calculator.
       </Typography>
 
       <Typography variant="h2">How to Use It</Typography>
       <Typography variant="body1">
-        Click the number and operator buttons (or type on your keyboard) to build an expression, then press
-        equals to see the result instantly.
+        Click the number and operator buttons to build an expression, then press equals to see the result
+        instantly. Use &quot;Clear&quot; to reset and start a new calculation.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
@@ -118,9 +120,17 @@ const BasicCalculator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
-      <Typography variant="h3">Can I use my keyboard?</Typography>
+      <Typography variant="h3">Does this calculator have a percentage sign?</Typography>
       <Typography variant="body1">
-        Yes, number keys and the standard operators (+, -, *, /, Enter) work directly.
+        This basic calculator keeps to the four standard operations (+, −, ×, ÷) and doesn&apos;t have a dedicated
+        percentage button. For percentage calculations — discounts, tax, percentage change, and more — use the{' '}
+        <a href="/utilities/percentage-calculator">Percentage Calculator</a> instead.
+      </Typography>
+      <Typography variant="h3">Is this a simple calculator or does it support advanced functions?</Typography>
+      <Typography variant="body1">
+        This is a simple, normal calculator for the four basic operations — it doesn&apos;t include scientific
+        functions like square roots, exponents, or trigonometry. It&apos;s built for quick, everyday arithmetic
+        rather than advanced calculations.
       </Typography>
     </>
   );

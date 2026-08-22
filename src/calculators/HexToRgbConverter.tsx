@@ -115,21 +115,29 @@ const HexToRgbContent = () => {
 const HexToRgbConverter = () => {
   const content = (
     <>
-      <Typography variant="h2">HEX vs RGB Color Models</Typography>
+      <Typography variant="h2">What is a HEX to RGB converter?</Typography>
       <Typography variant="body1">
-        **HEX** is a 6-digit hexadecimal representation of a color, often used in HTML and CSS. **RGB** stands for Red, Green, and Blue, representing the intensity of light used to create the color on screens. This tool instantly converts HEX color codes into RGB or RGBA (including alpha transparency).
+        <strong>HEX</strong> is a 6-digit (or 3/8-digit) hexadecimal representation of a color, often used in
+        HTML and CSS. <strong>RGB</strong> stands for Red, Green, and Blue, representing the intensity of light
+        used to create the color on screens — the same numbers used by the sRGB color space that browsers and
+        design tools default to. This hex to rgb color converter instantly turns any hexadecimal color code
+        into RGB or RGBA (including alpha transparency), so you can convert a hex color code to RGB, convert hexa
+        to rgb, or get the hex code for an RGB color without doing the math by hand.
       </Typography>
 
       <Typography variant="h2">How to Use It</Typography>
       <Typography variant="body1">
-        Type or paste a HEX color code into the input field and the equivalent RGB (or RGBA) value appears
-        instantly.
+        Type or paste a HEX color code — with or without the leading # — into the input field, and the
+        equivalent RGB and RGBA values appear instantly with one-click copy buttons. It works the same whether
+        you type a 3-character shorthand (#0F0), a standard 6-character code (#00FF00), or an 8-character code
+        with alpha (#00FF00CC).
       </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">
         <code>#1A56DB</code> converts to <code>rgb(26, 86, 219)</code> — the same blue, expressed in a
-        different format.
+        different format. A shorthand code like <code>#0F0</code> expands to <code>#00FF00</code> first, then
+        converts to <code>rgb(0, 255, 0)</code>.
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
@@ -137,6 +145,8 @@ const HexToRgbConverter = () => {
         <ul>
           <li>Converting a design tool&apos;s hex color into RGB for CSS that needs an alpha channel.</li>
           <li>Translating colors between design specs and code.</li>
+          <li>Converting a hexadecimal color code to RGB for use in JavaScript, Canvas, or SVG properties that expect RGB/RGBA.</li>
+          <li>Checking the RGB (sRGB) breakdown of a brand or UI color supplied only as a hex code.</li>
         </ul>
       </Box>
 
@@ -150,6 +160,30 @@ const HexToRgbConverter = () => {
       <Typography variant="body1">
         Type or paste the HEX code (with or without the leading #) into the field above — the RGB and RGBA
         values are calculated and shown instantly, with one-click copy buttons for each.
+      </Typography>
+      <Typography variant="h3">Is hex to RGB the same as hex to sRGB?</Typography>
+      <Typography variant="body1">
+        Yes. On the web, &quot;RGB&quot; almost always means sRGB — the standard color space used by CSS, HTML,
+        and most displays — so converting a hex code to RGB and converting it to sRGB give you identical
+        numbers.
+      </Typography>
+      <Typography variant="h3">Does this tool work for &quot;hex naar rgb&quot; or other non-English searches?</Typography>
+      <Typography variant="body1">
+        Yes — hex color codes and RGB values are the same everywhere, so whether you search hex naar rgb
+        (Dutch), hex colour to rgb (UK spelling), or hexadecimal color code to rgb, you just paste the hex code
+        and get the same RGB output. No translation needed.
+      </Typography>
+      <Typography variant="h3">Does it support 3-character shorthand or 8-character hex codes with alpha?</Typography>
+      <Typography variant="body1">
+        Yes — it accepts 3-character shorthand hex (e.g. #03F), standard 6-character hex (e.g. #0033FF), and
+        8-character hex with an alpha channel (e.g. #0033FFCC), automatically expanding shorthand codes before
+        converting.
+      </Typography>
+      <Typography variant="h3">What&apos;s the difference between the RGB and RGBA output?</Typography>
+      <Typography variant="body1">
+        RGB gives the red, green, and blue channel values only. RGBA adds a fourth alpha value for opacity,
+        taken from an 8-character hex code if one is entered — useful when you need a color code for RGB with
+        transparency in CSS.
       </Typography>
     </>
   );

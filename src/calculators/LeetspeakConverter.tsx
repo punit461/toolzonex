@@ -101,7 +101,10 @@ const LeetspeakConverter = () => {
       <Typography variant="h2">How to use the Leetspeak Converter?</Typography>
       <Typography variant="body1">
         Type or paste your text, choose whether to substitute letters with number lookalikes and/or randomize
-        letter case, and click &quot;Convert Text&quot;. Great for usernames, stylized text, or classic &quot;1337 speak&quot;.
+        letter case, and click &quot;Convert Text&quot;. This works as an <strong>l33t translator</strong> for
+        any word or phrase — great for usernames, stylized text, or classic &quot;1337 speak.&quot; It also
+        doubles as a <strong>leet name generator</strong>: type your name in and convert it into a stylized
+        1337 version for gamertags and handles.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
@@ -109,14 +112,16 @@ const LeetspeakConverter = () => {
         <ul>
           <li><strong>Input:</strong> iloveindia</li>
           <li><strong>Output:</strong> something like 1l0v31Nd1A — vowels and lookalike letters become numbers, the rest get randomized case.</li>
+          <li><strong>Name input:</strong> Alex → something like 4l3X, a ready-to-use leet username.</li>
         </ul>
       </Box>
 
       <Typography variant="h2">Common Use Cases</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
-          <li>Creating stylized usernames or gamertags.</li>
+          <li>Creating stylized usernames or gamertags with a leet name generator.</li>
           <li>Nostalgic &quot;1337 speak&quot; text for forums, chat, or social media bios.</li>
+          <li>Translating regular text into l33t speak for memes, chat, or forum posts.</li>
           <li>Obfuscating text to bypass simple keyword filters (for legitimate, non-abusive uses).</li>
         </ul>
       </Box>
@@ -125,6 +130,7 @@ const LeetspeakConverter = () => {
       <Box sx={{ typography: 'body1' }}>
         <ul>
           <li><strong>Can I convert leetspeak back to normal text?</strong> Not with this tool — it&apos;s one-way, since number substitutions aren&apos;t always reversible unambiguously.</li>
+          <li><strong>Can I use this as a leet name generator for my username?</strong> Yes — type your name (or any word) into the input box and convert it; the result is a ready-to-use 1337-style name or gamertag.</li>
           <li><strong>Why does the same input give different output each time?</strong> The random-case option randomizes on every conversion — turn it off for consistent, repeatable output.</li>
           <li><strong>Is my text uploaded anywhere?</strong> No — conversion happens entirely in your browser.</li>
         </ul>

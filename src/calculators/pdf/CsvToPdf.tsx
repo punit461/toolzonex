@@ -90,10 +90,14 @@ const CsvToPdf = () => {
   const content = (
     <>
       <Typography variant="h2">How to Convert CSV to PDF</Typography>
+      <Typography variant="body1">
+        Need to csv convert to pdf quickly? This free tool turns any CSV file into a clean, printable PDF table
+        in two steps, entirely in your browser.
+      </Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
           <li>Upload a CSV file.</li>
-          <li>Click <strong>Convert to PDF</strong> — the data is laid out as a simple table, with the first row bolded as a header.</li>
+          <li>Click <strong>Convert to PDF</strong> — the data is laid out as a simple table, with the first row bolded as a header, and the PDF downloads automatically.</li>
         </ul>
       </Box>
 
@@ -108,6 +112,8 @@ const CsvToPdf = () => {
         <ul>
           <li>Sharing a spreadsheet export as a read-only PDF.</li>
           <li>Printing tabular data without opening a spreadsheet app.</li>
+          <li>Converting a CSV data export into a PDF attachment for an email or report.</li>
+          <li>Turning raw CSV data from an API or database export into something non-technical readers can open directly.</li>
         </ul>
       </Box>
 
@@ -116,6 +122,8 @@ const CsvToPdf = () => {
         <ul>
           <li><strong>Does it preserve cell formatting or formulas?</strong> No, this is a plain-text table conversion — formulas, colors, and formatting from the original spreadsheet aren&apos;t preserved.</li>
           <li><strong>Is my file uploaded anywhere?</strong> No — conversion happens entirely in your browser.</li>
+          <li><strong>How do I csv convert to pdf on this page?</strong> Upload your .csv file using the file picker, then click &quot;Convert to PDF&quot; — the file downloads automatically as a landscape PDF table with the first row bolded as a header.</li>
+          <li><strong>Is there a size or row limit for the CSV file?</strong> There&apos;s no hard limit — the tool adds new pages automatically as rows fill the page, so a large CSV will simply produce a multi-page PDF.</li>
         </ul>
       </Box>
     </>

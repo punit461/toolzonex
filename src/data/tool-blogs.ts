@@ -1235,6 +1235,7 @@ const remainingTools: { slug: string; name: string; route: string; category: Too
   { slug: 'random-string-generator', name: 'Random String Generator', route: '/generators/random-string-generator', category: 'tools' },
   { slug: 'rgb-to-hex', name: 'RGB to HEX Converter', route: '/converters/rgb-to-hex', category: 'tools' },
   { slug: 'sentence-case-fixer', name: 'Sentence Case Fixer', route: '/text-tools/sentence-case-fixer', category: 'tools' },
+  { slug: 'soundex-calculator', name: 'Soundex Calculator', route: '/text-tools/soundex-calculator', category: 'tools' },
   { slug: 'sql-formatter', name: 'SQL Formatter', route: '/developer-tools/sql-formatter', category: 'tools' },
   { slug: 'string-escaper', name: 'String Escaper & Encoder', route: '/text-tools/string-escaper', category: 'tools' },
   { slug: 'sudoku-generator', name: 'Sudoku Generator', route: '/generators/sudoku-generator', category: 'tools' },

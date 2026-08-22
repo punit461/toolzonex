@@ -144,6 +144,27 @@ const RetirementCalculator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How do I calculate when I can retire?</Typography>
+      <Typography variant="body1">
+        Enter your current age, target retirement age, and current monthly expenses above — the calculator
+        projects the corpus you&apos;ll need at that retirement age (after inflation) and the monthly SIP
+        required to reach it from your existing savings. If the required SIP looks unaffordable, try a later
+        retirement age or lower projected expenses to see when the plan becomes realistic for you.
+      </Typography>
+      <Typography variant="h3">How do I calculate my retirement needs?</Typography>
+      <Typography variant="body1">
+        Retirement needs are calculated by inflating your current monthly expenses forward to your retirement
+        age, then working out how large a corpus is needed so that money (invested at a safer post-retirement
+        return) can cover those inflated expenses for the rest of your expected lifespan. This tool runs that
+        calculation automatically from the inputs above — see &quot;Exp. at Retirement (inflated)&quot; and
+        &quot;Retirement Corpus Needed&quot; in the results.
+      </Typography>
+      <Typography variant="h3">How much money do I need to retire?</Typography>
+      <Typography variant="body1">
+        It depends on your current expenses, years left until retirement, inflation, and how long retirement
+        needs to last — there&apos;s no single number that applies to everyone. Use the &quot;Retirement Corpus
+        Needed&quot; figure above as your personalized estimate based on the details you enter.
+      </Typography>
       <Typography variant="h3">Why does inflation matter so much for retirement planning?</Typography>
       <Typography variant="body1">
         Because your retirement corpus needs to last decades, even moderate inflation compounds significantly

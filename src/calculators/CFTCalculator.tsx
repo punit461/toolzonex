@@ -73,7 +73,11 @@ const CFTCalculator = () => {
         <li><strong>Casualty Drag:</strong> Dragging a simulated casualty a set distance, testing functional strength under pressure.</li>
       </ul>
 
-      <Typography variant="h2">Standard Benchmarks</Typography>
+      <Typography variant="h2">CFT Score Chart / Table (Standard Benchmarks)</Typography>
+      <Typography variant="body1">
+        The table below is the full CFT score chart — use it to see exactly which band (Outstanding, Good, or
+        Average) each of your event results falls into.
+      </Typography>
       <Box component="table" sx={{ width: '100%', borderCollapse: 'collapse', mt: 1 }}>
         <thead>
           <tr>
@@ -114,6 +118,12 @@ const CFTCalculator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Where is the CFT score chart / table?</Typography>
+      <Typography variant="body1">
+        The &quot;CFT Score Chart / Table&quot; section above lists the Outstanding, Good, and Average bands for
+        every event — tactical march, ammo can lifts, 300m shuttle run, and casualty drag. Enter your own
+        numbers in the calculator to see your grade against that chart instantly.
+      </Typography>
       <Typography variant="h3">How is the CFT different from the PFT?</Typography>
       <Typography variant="body1">
         The PFT measures general fitness (running, push-ups, sit-ups), while the CFT tests combat-specific

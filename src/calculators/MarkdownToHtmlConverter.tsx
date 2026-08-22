@@ -124,7 +124,7 @@ const MarkdownToHtmlConverter = () => {
     <>
       <Typography variant="h2">What is Markdown?</Typography>
       <Typography variant="body1">
-        Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by John Gruber in 2004, Markdown is now one of the world's most popular markup languages. This tool quickly converts your Markdown syntax into valid HTML tags.
+        Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by John Gruber in 2004, Markdown is now one of the world's most popular markup languages. This markdown to html converter online quickly converts your Markdown syntax into valid HTML tags — no install, no sign-up, just paste and convert md to html online instantly.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
@@ -138,6 +138,8 @@ const MarkdownToHtmlConverter = () => {
         <ul>
           <li>Converting README or documentation files into HTML for a website.</li>
           <li>Previewing how Markdown will render before publishing.</li>
+          <li>Converting a blog post or notes written in Markdown to HTML online, ready to paste into a CMS.</li>
+          <li>Quickly checking what a snippet of Markdown syntax actually produces in HTML.</li>
         </ul>
       </Box>
 
@@ -146,6 +148,21 @@ const MarkdownToHtmlConverter = () => {
       <Typography variant="body1">
         It covers the core Markdown syntax (headings, bold/italic, links, lists, code) — extended syntax such
         as tables or task lists may not be converted.
+      </Typography>
+      <Typography variant="h3">Is this markdown to html converter online free to use?</Typography>
+      <Typography variant="body1">
+        Yes — it&apos;s completely free, requires no sign-up, and runs entirely in your browser, so nothing you
+        type is uploaded to a server.
+      </Typography>
+      <Typography variant="h3">Can I convert md to html online without installing anything?</Typography>
+      <Typography variant="body1">
+        Yes — just paste or type your Markdown into the input box and click Convert to HTML. There&apos;s
+        nothing to install; it works directly in this page.
+      </Typography>
+      <Typography variant="h3">Can I preview how the HTML will look before copying it?</Typography>
+      <Typography variant="body1">
+        Yes — after converting, a live preview panel renders the generated HTML below the input and output
+        boxes so you can check the formatting before you copy it.
       </Typography>
     </>
   );

@@ -81,6 +81,28 @@ const SSYCalculator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What is the SSY scheme?</Typography>
+      <Typography variant="body1">
+        Sukanya Samriddhi Yojana (SSY) is a government-backed small savings scheme launched under the &quot;Beti
+        Bachao, Beti Padhao&quot; campaign. It lets parents or guardians open a savings account for a girl child
+        below age 10 to build a fund for her future education and marriage expenses, combining a high interest
+        rate with full tax exemption.
+      </Typography>
+      <Typography variant="h3">How is SSY interest calculated?</Typography>
+      <Typography variant="body1">
+        Interest is calculated annually at the government-notified rate (currently 8.2% p.a.) and compounded once
+        a year, added on top of that year&apos;s balance plus deposits. This calculator applies the same annual
+        compounding to your yearly investment across the 15-year deposit window and the remaining years the
+        balance keeps earning interest until the account matures at 21 years — shown year-by-year in the chart
+        above.
+      </Typography>
+      <Typography variant="h3">What are the benefits of an SSY account?</Typography>
+      <Typography variant="body1">
+        SSY typically offers a higher interest rate than PPF or fixed deposits, falls under the EEE (Exempt-Exempt-Exempt)
+        tax category so deposits up to ₹1.5 lakh qualify for a Section 80C deduction, and both the interest earned
+        and the maturity amount are entirely tax-free. It&apos;s also backed by the Government of India, making it
+        a low-risk option for a daughter&apos;s long-term goals.
+      </Typography>
       <Typography variant="h3">Can I withdraw before the account matures?</Typography>
       <Typography variant="body1">
         Partial withdrawal (up to 50%) is allowed once the girl turns 18, for higher education or marriage

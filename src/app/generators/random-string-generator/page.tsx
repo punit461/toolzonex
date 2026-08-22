@@ -6,7 +6,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 export const metadata: Metadata = {
   title: "Random String Generator - Create Alphanumeric Strings Online",
   description: "Generate random alphanumeric strings securely online. Free bulk random text generator for passwords, tokens, and testing.",
-  keywords: ["random string generator", "generate string", "alphanumeric generator", "random text generator", "secure string generator"],
+  keywords: ["random string generator", "generate string", "alphanumeric generator", "random text generator", "secure string generator", "generate random alphanumeric", "random alphanumeric character generator", "generate string online", "random sting generator"],
   alternates: { canonical: "/generators/random-string-generator" },
   openGraph: {
     title: "Random String Generator - Create Alphanumeric Strings Online | ToolZoneX",

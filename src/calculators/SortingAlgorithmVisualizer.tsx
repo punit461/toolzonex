@@ -295,6 +295,21 @@ const SortingAlgorithmVisualizer = () => {
         It depends on the input size and data — for large datasets, algorithms like Merge Sort or Quick Sort
         generally outperform simpler ones like Bubble Sort, which this visualizer helps make visible.
       </Typography>
+      <Typography variant="h3">Is this an online sort algorithm tool, or do I need to install anything?</Typography>
+      <Typography variant="body1">
+        It&apos;s fully online — this algorithm visualizer runs entirely in your browser, with nothing to
+        download or install. Just pick an algorithm and press play.
+      </Typography>
+      <Typography variant="h3">Is there a sorting algorithm visualiser with adjustable speed?</Typography>
+      <Typography variant="body1">
+        Yes — use the Animation Speed slider to slow the visualiser down and study each comparison and swap
+        step by step, or speed it up to see the full sort complete in a couple of seconds.
+      </Typography>
+      <Typography variant="h3">Is this algorithm visualizer online free to use?</Typography>
+      <Typography variant="body1">
+        Yes, it&apos;s completely free with no sign-up — generate a new random array and run Bubble Sort,
+        Selection Sort, or Insertion Sort as many times as you like.
+      </Typography>
     </>
   );
 

@@ -177,9 +177,9 @@ const SleepTimeCalculatorContent = () => {
 const SleepTimeCalculator = () => {
   const content = (
     <>
-      <Typography variant="h2">Sleep Cycle Calculator</Typography>
+      <Typography variant="h2">Sleep Cycle & Bedtime Calculator</Typography>
       <Typography variant="body1">
-        A good night's sleep consists of 5-6 complete sleep cycles. Waking up in the middle of a sleep cycle can leave you feeling groggy and tired. Use this calculator to find the perfect bedtime based on when you want to wake up, or find out when to set your alarm if you're going to sleep right now.
+        A good night's sleep consists of 5-6 complete sleep cycles. Waking up in the middle of a sleep cycle can leave you feeling groggy and tired. Use this sleep clock calculator to find the perfect bedtime based on when you want to wake up, or find out when to set your alarm if you're going to sleep right now — it also works as a simple sleeping-hours calculator for any two times you enter.
       </Typography>
 
       <Typography variant="h2">How to Use It</Typography>
@@ -191,17 +191,28 @@ const SleepTimeCalculator = () => {
         </ul>
       </Box>
 
-      <Typography variant="h2">Example</Typography>
+      <Typography variant="h2">Example — How Many Hours of Sleep Is That?</Typography>
       <Typography variant="body1">
         If you need to wake up at 7:00 AM, going to bed around 11:15 PM or 9:45 PM lets you complete 5 or 6
-        full 90-minute cycles, respectively, rather than waking mid-cycle.
+        full 90-minute cycles, respectively, rather than waking mid-cycle. Beyond cycle planning, this bedtime
+        calculator can also just answer the plain arithmetic question of &quot;how many hours of sleep is that?&quot;
+        for a given bedtime and wake time:
       </Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Sleep at 9:00 PM, wake at 5:00 AM → <strong>8 hours</strong> of sleep.</li>
+          <li>Sleep at 10:00 PM, wake at 5:00 AM → <strong>7 hours</strong> of sleep.</li>
+          <li>Sleep at 12:00 AM (midnight), wake at 8:00 AM → <strong>8 hours</strong> of sleep.</li>
+          <li>Sleep at 10:00 PM, wake at 7:00 AM → <strong>9 hours</strong> of sleep.</li>
+        </ul>
+      </Box>
 
       <Typography variant="h2">Common Use Cases</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
-          <li>Planning bedtime around a fixed wake-up alarm.</li>
+          <li>Planning bedtime around a fixed wake-up alarm (bedtime calculator).</li>
           <li>Figuring out the best time to nap or go to bed after a late night.</li>
+          <li>Quickly checking how many hours of sleep you got (or will get) between two clock times.</li>
         </ul>
       </Box>
 
@@ -210,6 +221,23 @@ const SleepTimeCalculator = () => {
       <Typography variant="body1">
         A full sleep cycle (light sleep, deep sleep, REM) averages about 90 minutes. Waking up at the end of a
         cycle, rather than in the middle of deep sleep, generally feels less groggy.
+      </Typography>
+      <Typography variant="h3">How many hours of sleep is 9pm to 5am?</Typography>
+      <Typography variant="body1">
+        Sleeping from 9:00 PM to 5:00 AM is <strong>8 hours</strong> of sleep — that&apos;s 5 complete 90-minute
+        sleep cycles plus a little extra.
+      </Typography>
+      <Typography variant="h3">If I sleep at 10 and wake up at 5, how many hours is that?</Typography>
+      <Typography variant="body1">
+        Sleeping from 10:00 PM to 5:00 AM is <strong>7 hours</strong> of sleep.
+      </Typography>
+      <Typography variant="h3">If I sleep at 12 and wake up at 8, how many hours is that?</Typography>
+      <Typography variant="body1">
+        Sleeping from 12:00 AM (midnight) to 8:00 AM is <strong>8 hours</strong> of sleep.
+      </Typography>
+      <Typography variant="h3">How many hours of sleep is 10 to 7?</Typography>
+      <Typography variant="body1">
+        Sleeping from 10:00 PM to 7:00 AM is <strong>9 hours</strong> of sleep.
       </Typography>
     </>
   );

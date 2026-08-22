@@ -199,15 +199,16 @@ const WheelOfFortuneSpinnerContent = () => {
 const WheelOfFortuneSpinner = () => {
   const content = (
     <>
-      <Typography variant="h2">How to use the Wheel of Fortune?</Typography>
+      <Typography variant="h2">How to use the Wheel of Fortune wheel generator?</Typography>
       <Typography variant="body1">
-        This customizable spinning wheel acts as a random decision maker. Add your choices (names, prizes, food options) into the list on the left, and click "Spin the Wheel" to randomly select a winner. It's completely free, runs locally in your browser, and supports up to 24 options.
+        This customizable spinning wheel acts as a random decision maker and picker. Add your choices (names, prizes, food options) into the list on the left, and click "Spin the Wheel" to randomly select a winner. It's completely free, runs locally in your browser, and supports up to 24 options — use it as a general-purpose wheel of fortune generator for any list of items you need to pick from at random.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">
         Adding five restaurant names and spinning the wheel randomly lands on one, settling the group&apos;s
-        dinner decision instantly.
+        dinner decision instantly. Add employee names for a raffle picker, or task names to randomly assign
+        chores.
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
@@ -215,6 +216,8 @@ const WheelOfFortuneSpinner = () => {
         <ul>
           <li>Picking a random winner for a classroom activity or giveaway.</li>
           <li>Deciding between restaurant or activity options with friends.</li>
+          <li>Using the wheel as a name picker for raffles, contests, or icebreakers.</li>
+          <li>Building a custom prize wheel for a livestream, party, or promotion.</li>
         </ul>
       </Box>
 
@@ -223,6 +226,22 @@ const WheelOfFortuneSpinner = () => {
       <Typography variant="body1">
         Yes — the wheel lands on a random segment each spin, giving every option an equal chance proportional
         to its slice size.
+      </Typography>
+      <Typography variant="h3">Is this a wheel of fortune generator or a picker wheel?</Typography>
+      <Typography variant="body1">
+        Both — you generate a custom wheel from your own list of options, and each spin acts as a random
+        picker that selects one entry from that wheel. Use it to build a wheel for names, prizes, decisions,
+        or anything else you need to pick at random.
+      </Typography>
+      <Typography variant="h3">How many options can I add to the wheel?</Typography>
+      <Typography variant="body1">
+        Up to 24 items, with a minimum of 2 needed to spin. Each item becomes an equally-sized slice unless
+        you add more or fewer entries, which resizes the slices automatically.
+      </Typography>
+      <Typography variant="h3">Can I save or share my wheel?</Typography>
+      <Typography variant="body1">
+        The wheel is built entirely in your browser for the current session — add your list, spin as many
+        times as you like, and remove or edit entries between spins.
       </Typography>
     </>
   );

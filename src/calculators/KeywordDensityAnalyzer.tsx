@@ -119,16 +119,19 @@ const KeywordDensityAnalyzerContent = () => {
 const KeywordDensityAnalyzer = () => {
   const content = (
     <>
-      <Typography variant="h2">Keyword density analysis: how it works</Typography>
+      <Typography variant="h2">Free keyword density checker: how it works</Typography>
       <Typography variant="body1">
-        Paste your article, blog post, or webpage copy into the text area and click "Analyze". The tool will instantly count the frequency of all meaningful words (ignoring common stop words like 'the', 'and', etc.) and calculate their percentage compared to the total word count.
+        Paste your article, blog post, or webpage copy into the text area and click &quot;Analyze&quot;. This free
+        keyword density checker instantly counts the frequency of all meaningful words (ignoring common stop
+        words like &apos;the&apos;, &apos;and&apos;, etc.) and calculates their percentage compared to the total
+        word count — no sign-up needed.
       </Typography>
 
-      <Typography variant="h2">Using keyword density analysis for SEO</Typography>
+      <Typography variant="h2">Using this SEO keyword checker for keyword density analysis</Typography>
       <Typography variant="body1">
         Use the results to spot repeated terms and to check whether your writing reads naturally. There is no universal
         ideal percentage: useful content should answer the reader&apos;s question clearly, rather than repeat a phrase to
-        reach a target number. This checker makes those patterns easy to review before publishing.
+        reach a target number. This keyword density tool makes those patterns easy to review before publishing.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
@@ -142,22 +145,41 @@ const KeywordDensityAnalyzer = () => {
         <ul>
           <li>Checking a blog post or product page isn&apos;t over-optimized before publishing.</li>
           <li>Analyzing a competitor&apos;s page for keyword usage patterns.</li>
+          <li>Using a free keyword density checker before submitting content to a client or CMS.</li>
+          <li>Running a quick SEO keyword checker on page copy alongside a manual review.</li>
         </ul>
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is there a free keyword density checker?</Typography>
+      <Typography variant="body1">
+        Yes — this keyword density checker is completely free, works on any text or webpage copy you paste in,
+        and requires no sign-up.
+      </Typography>
       <Typography variant="h3">What&apos;s a good keyword density?</Typography>
       <Typography variant="body1">
         There is no fixed ideal percentage. Use keyword density as an editing signal, then prioritise relevance,
         clarity, and complete coverage of the topic.
+      </Typography>
+      <Typography variant="h3">Is a keyword density checker the same as an SEO keyword checker?</Typography>
+      <Typography variant="body1">
+        Yes — this tool works as both. It finds every meaningful keyword in your text, counts how often each one
+        appears, and calculates its density (percentage) so you can spot over-optimization or missing keyword
+        coverage before publishing.
+      </Typography>
+      <Typography variant="h3">How do I find keyword density online?</Typography>
+      <Typography variant="body1">
+        Paste your article, blog post, or webpage copy into the box and click &quot;Analyze Keyword
+        Density&quot; — the tool instantly lists every keyword&apos;s count and density percentage, ranked from
+        most to least frequent.
       </Typography>
     </>
   );
 
   return (
     <CalculatorShell
-      title="Keyword Density Analysis Tool"
-      description="Analyze keyword frequency, word count, and percentage usage in text or webpage copy."
+      title="Keyword Density Checker - Free SEO Tool"
+      description="Free keyword density checker. Analyze keyword frequency, word count, and percentage usage in text or webpage copy."
       url="/text-tools/keyword-density-analyzer"
       content={content}
       category="Text Tools"

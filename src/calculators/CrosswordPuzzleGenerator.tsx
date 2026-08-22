@@ -273,15 +273,21 @@ const CrosswordPuzzleGeneratorContent = () => {
 const CrosswordPuzzleGenerator = () => {
   const content = (
     <>
-      <Typography variant="h2">How to create a Crossword Puzzle?</Typography>
+      <Typography variant="h2">How to create a crossword puzzle</Typography>
       <Typography variant="body1">
-        Add a list of words and their corresponding clues using the form on the left. Once you have at least 2 words, click "Generate Puzzle" to automatically arrange them into an intersecting crossword grid. You can then print the puzzle for classroom activities, newsletters, or fun!
+        This free crossword puzzle generator with clues lets you build a custom crossword maker puzzle from
+        scratch in your browser — no software or account needed. Add a list of words and their corresponding
+        clues using the form on the left. Once you have at least 2 words, click &quot;Generate Puzzle&quot; to
+        automatically arrange them into an intersecting cross puzzle grid. You can then print the puzzle for
+        classroom activities, newsletters, or fun!
       </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">
         Adding words like &quot;SUN&quot;, &quot;MOON&quot;, and &quot;STAR&quot; with clues automatically
-        arranges them into an intersecting grid, ready to print.
+        arranges them into an intersecting grid, ready to print. Want a random crossword generator experience
+        instead? Type in any random assortment of words and clues — the layout engine works the same way
+        regardless of subject.
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
@@ -289,6 +295,8 @@ const CrosswordPuzzleGenerator = () => {
         <ul>
           <li>Creating vocabulary puzzles for a classroom or homeschool lesson.</li>
           <li>Making a custom crossword for a party, newsletter, or team-building activity.</li>
+          <li>Building a themed cross word puzzle for a birthday, holiday, or trivia night.</li>
+          <li>Making your own crosswords in another language — the grid works with any alphabet-based words, including a kruiswoordpuzzel (Dutch crossword puzzle).</li>
         </ul>
       </Box>
 
@@ -297,6 +305,32 @@ const CrosswordPuzzleGenerator = () => {
       <Typography variant="body1">
         At least 2 words are required so the grid can intersect them — more words with shared letters produce a
         denser, more interesting puzzle.
+      </Typography>
+      <Typography variant="h3">Does this include a clue generator, or do I write my own clues?</Typography>
+      <Typography variant="body1">
+        You write your own clue for each word — this keeps the puzzle accurate for your specific topic, whether
+        it&apos;s spelling words, vocabulary terms, or trivia. Once entered, the tool works as the crossword
+        puzzle clue generator layout engine, automatically numbering and arranging the across and down clues to
+        match the grid.
+      </Typography>
+      <Typography variant="h3">Is this a random crossword generator?</Typography>
+      <Typography variant="body1">
+        The grid layout is generated automatically from whatever words and clues you provide, arranging them
+        into intersecting rows and columns. For a randomly-themed puzzle, just enter a random assortment of
+        words and clues, or start from the built-in demo set and swap in your own.
+      </Typography>
+      <Typography variant="h3">Can I use this as a kruiswoordpuzzel generator to make a Dutch crossword?</Typography>
+      <Typography variant="body1">
+        Yes — the grid engine works with any word made of letters, so this doubles as a kruiswoordpuzzel
+        generator: just enter Dutch words and clues to build a kruiswoordpuzzel (Dutch for crossword puzzle)
+        online, the same way you&apos;d kruiswoordpuzzel maken online in any dedicated Dutch tool. The interface
+        itself stays in English, but the words and clues you enter can be in any language, so it works just as
+        well as a way to kruiswoordpuzzel online maken as it does for English puzzles.
+      </Typography>
+      <Typography variant="h3">Can I print my custom crossword maker puzzle?</Typography>
+      <Typography variant="body1">
+        Yes — once generated, click &quot;Print Puzzle&quot; to print the grid and clue list directly from your
+        browser, ready for a classroom, newsletter, or party activity.
       </Typography>
     </>
   );

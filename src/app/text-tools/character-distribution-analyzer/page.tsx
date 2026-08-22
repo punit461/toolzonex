@@ -6,7 +6,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 export const metadata: Metadata = {
   title: "Character Distribution Analyzer - Letter Frequency Counter",
   description: "Analyze the exact frequency and distribution of every character in your text. Free online character counting and letter frequency tool.",
-  keywords: ["character distribution analyzer", "letter frequency counter", "character count tool", "text frequency analysis", "letter statistics"],
+  keywords: ["character distribution analyzer", "letter frequency counter", "character count tool", "text frequency analysis", "letter statistics", "letter frequency online"],
   alternates: { canonical: "/text-tools/character-distribution-analyzer" },
   openGraph: {
     title: "Character Distribution Analyzer - Letter Frequency Counter | ToolZoneX",
@@ -28,12 +28,33 @@ const toolSchema = {
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I check letter frequency online with this tool?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — paste your text and every letter, digit, space, and punctuation mark is broken out in the results table with its count and percentage, so you can check letter frequency online without downloading any software." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the analysis case-sensitive?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Uppercase and lowercase versions of the same letter are typically counted separately, reflecting the exact characters as typed." }
+    }
+  ]
+};
+
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <CharacterDistributionAnalyzer />
     </>

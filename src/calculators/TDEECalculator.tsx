@@ -66,9 +66,12 @@ const TDEECalculator = () => {
 
   const content = (
     <>
-      <Typography variant="h2">What is TDEE?</Typography>
+      <Typography variant="h2">What is TDEE? (Total Daily Energy Expenditure)</Typography>
       <Typography variant="body1">
-        Total Daily Energy Expenditure (TDEE) is an estimation of how many calories you burn per day when exercise is taken into account. It is calculated by first figuring out your Basal Metabolic Rate (BMR), then multiplying that value by an activity multiplier.
+        <strong>TDEE stands for Total Daily Energy Expenditure</strong> — an estimation of how many calories you
+        burn per day when exercise and daily activity are taken into account. It is calculated by first figuring
+        out your Basal Metabolic Rate (BMR) using the Mifflin-St Jeor equation, then multiplying that value by an
+        activity multiplier: <strong>Total Daily Energy Expenditure = BMR × activity multiplier</strong>.
       </Typography>
 
       <Typography variant="h2">How to use your TDEE?</Typography>
@@ -93,10 +96,15 @@ const TDEECalculator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What does TDEE stand for?</Typography>
+      <Typography variant="body1">
+        TDEE stands for <strong>Total Daily Energy Expenditure</strong> — the total number of calories your body
+        burns in a full day, combining your resting metabolism (BMR) with all activity, exercise, and digestion.
+      </Typography>
       <Typography variant="h3">How is TDEE different from BMR?</Typography>
       <Typography variant="body1">
-        BMR is calories burned at complete rest; TDEE adds your activity level on top, giving a more realistic
-        picture of your actual daily calorie burn.
+        BMR is calories burned at complete rest; TDEE (Total Daily Energy Expenditure) adds your activity level
+        on top, giving a more realistic picture of your actual daily calorie burn.
       </Typography>
     </>
   );

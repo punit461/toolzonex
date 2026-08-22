@@ -64,7 +64,11 @@ const PFTCalculator = () => {
         The Physical Fitness Test (PFT) is a standardised assessment used by the Indian Army, Navy, Air Force, NDA, CDS, and state police services to evaluate a candidate's physical fitness. It typically consists of a timed run, push-ups, and sit-ups.
       </Typography>
 
-      <Typography variant="h2">Standard Benchmarks</Typography>
+      <Typography variant="h2">Standard Benchmarks — PFT Score Sheet</Typography>
+      <Typography variant="body1">
+        The table below works as a PFT score sheet / score chart: find your event, then match your run time
+        or rep count to the Outstanding, Good, or Average column.
+      </Typography>
       <Box component="table" sx={{ width: '100%', borderCollapse: 'collapse', mt: 1 }}>
         <thead>
           <tr>
@@ -105,6 +109,18 @@ const PFTCalculator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Where is the PFT score sheet?</Typography>
+      <Typography variant="body1">
+        The &quot;Standard Benchmarks — PFT Score Sheet&quot; table above lists Outstanding, Good, and Average
+        cutoffs for the 1.6km run, 2.4km run, push-ups, and sit-ups. Enter your results in the calculator to
+        get your grade instantly instead of looking them up by hand.
+      </Typography>
+      <Typography variant="h3">How does PFT scoring work?</Typography>
+      <Typography variant="body1">
+        Each event — run time, push-up count, sit-up count — is scored independently against the thresholds in
+        the score sheet above (Outstanding, Good, Average, Below Standard). Your overall PFT grade is set by
+        your weakest event, so a fast run won&apos;t offset a Below Standard push-up count.
+      </Typography>
       <Typography variant="h3">Do all services use the same PFT standards?</Typography>
       <Typography variant="body1">
         No — exact distances, time limits, and rep counts vary slightly between the Army, Navy, Air Force, NDA,

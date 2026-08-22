@@ -115,41 +115,77 @@ const RomanNumeralConverter = () => {
     <>
       <Typography variant="h2">Roman Numeral Converter</Typography>
       <Typography variant="body1">
-        Convert numbers to Roman numerals or translate Roman numerals back to standard numbers. This bi-directional tool works instantly and supports numbers between 1 and 3999.
+        Convert a number to Roman numerals, or convert Roman numerals back to regular (Arabic) numbers — this
+        tool works as both a <strong>number to roman numeral converter</strong> and a{' '}
+        <strong>roman numeral to number converter</strong> at the same time. It&apos;s fully bi-directional: type
+        into either field and the other updates instantly. It supports whole numbers between 1 and 3999, the
+        range the classical Roman numeral system can represent.
       </Typography>
 
       <Typography variant="h2">How to Use It</Typography>
       <Typography variant="body1">
-        Type a number (or a Roman numeral) into the input field and the converted result appears instantly in
-        the other format.
+        To convert a number to roman numerals, type a whole number (1-3999) into the &quot;Number&quot; field —
+        the Roman numeral translation appears instantly below it. To go the other way and translate roman
+        numerals to english (regular numbers), type letters like &quot;MCMXCIV&quot; into the &quot;Roman
+        Numeral&quot; field and the equivalent number appears instantly above it. There&apos;s no need to switch
+        modes — the calculator detects which field you&apos;re typing in and converts automatically in that
+        direction.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">
-        The number 1994 converts to &quot;MCMXCIV&quot;, and &quot;MCMXCIV&quot; converts back to 1994.
+        Converting a number to roman numerals: the number 1994 converts to &quot;MCMXCIV&quot;, and 2024
+        converts to &quot;MMXXIV&quot;. Converting roman numerals to numbers (the reverse direction): &quot;MCMXCIV&quot;
+        translates back to 1994, and &quot;XIV&quot; translates to the regular number 14.
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
-          <li>Decoding Roman numerals seen on clocks, movie credits, or monuments.</li>
-          <li>Converting numbers for stylistic use in titles or chapter headings.</li>
+          <li>Converting a birth year, wedding date, or anniversary into Roman numerals for an engraving, tattoo, or gift.</li>
+          <li>Translating a Roman numeral date on a ring, monument, clock face, or movie credit back into a regular number you can actually read.</li>
+          <li>Converting numbers for stylistic use in titles, chapter headings, or Super Bowl/Olympic-style event numbering.</li>
+          <li>Checking homework or quiz answers that ask you to convert numbers to Roman numerals or vice versa.</li>
+          <li>Looking up what a specific Roman numeral, like &quot;XL&quot; or &quot;MCM&quot;, means in ordinary numbers.</li>
         </ul>
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How do I convert a number to Roman numerals?</Typography>
+      <Typography variant="body1">
+        Type your number into the &quot;Number&quot; field (any whole number from 1 to 3999) and the Roman
+        numeral translation appears immediately in the &quot;Roman Numeral&quot; field below — no extra steps
+        or button presses needed.
+      </Typography>
+      <Typography variant="h3">Can I convert Roman numerals back to regular numbers with this tool?</Typography>
+      <Typography variant="body1">
+        Yes — this tool converts in both directions. Type the Roman numeral (like &quot;MCMXCIV&quot; or
+        &quot;XIV&quot;) into the &quot;Roman Numeral&quot; field and the regular (decimal) number appears
+        instantly in the &quot;Number&quot; field — this is the same as translating Roman numerals to English
+        or converting a Roman number to an English number.
+      </Typography>
+      <Typography variant="h3">What is the Roman numeral for 2024?</Typography>
+      <Typography variant="body1">
+        2024 in Roman numerals is &quot;MMXXIV&quot; (M + M + XX + IV = 1000 + 1000 + 20 + 4). You can enter any
+        year into the Number field to see its Roman numeral equivalent the same way.
+      </Typography>
       <Typography variant="h3">Why is there no number for zero in Roman numerals?</Typography>
       <Typography variant="body1">
         The classical Roman numeral system had no symbol for zero, which is why this converter supports whole
         numbers from 1 to 3999.
+      </Typography>
+      <Typography variant="h3">What&apos;s the largest number I can convert to Roman numerals?</Typography>
+      <Typography variant="body1">
+        This converter supports numbers up to 3999 (MMMCMXCIX), which is the practical limit of standard Roman
+        numeral notation without adding special overline symbols for larger values.
       </Typography>
     </>
   );
 
   return (
     <CalculatorShell
-      title="Roman Numeral Converter - Numbers to Roman Numerals"
-      description="Convert numbers to Roman numerals and vice versa instantly. Free online roman numeral translator."
+      title="Roman Numeral Converter - Numbers to Roman Numerals & Back"
+      description="Convert numbers to Roman numerals, or translate Roman numerals back to regular numbers, instantly. Free bi-directional roman numeral converter and translator."
       url="/utilities/roman-numeral-converter"
       content={content}
       category="Utilities"

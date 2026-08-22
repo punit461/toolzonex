@@ -131,13 +131,20 @@ const MarginCalculator = () => {
     <>
       <Typography variant="h2">Margin vs Markup</Typography>
       <Typography variant="body1">
-        **Margin** (Gross Margin) is the percentage of revenue that is profit. 
-        `Margin = (Revenue - Cost) / Revenue * 100`
-        <br/><br/>
-        **Markup** is the percentage applied to the cost price to reach the selling price.
-        `Markup = (Revenue - Cost) / Cost * 100`
-        <br/><br/>
-        Use this tool to find your gross profit, margin, and markup instantly.
+        <strong>Margin</strong> (Gross Margin) is the percentage of revenue that is profit:
+      </Typography>
+      <Box sx={{ my: 1, p: 2, bgcolor: 'action.hover', borderRadius: 1, fontFamily: 'monospace', fontSize: '0.9rem' }}>
+        Margin = (Revenue − Cost) / Revenue × 100
+      </Box>
+      <Typography variant="body1">
+        <strong>Markup</strong> is the percentage applied to the cost price to reach the selling price:
+      </Typography>
+      <Box sx={{ my: 1, p: 2, bgcolor: 'action.hover', borderRadius: 1, fontFamily: 'monospace', fontSize: '0.9rem' }}>
+        Markup = (Revenue − Cost) / Cost × 100
+      </Box>
+      <Typography variant="body1">
+        Both describe the same profit in dollar terms, but as different percentages — use this tool to find your
+        gross profit, margin, and markup instantly, and see how the two percentages diverge for your numbers.
       </Typography>
 
       <Typography variant="h2">How to Use It</Typography>
@@ -164,8 +171,17 @@ const MarginCalculator = () => {
       <Typography variant="h2">FAQs</Typography>
       <Typography variant="h3">Is markup the same as margin?</Typography>
       <Typography variant="body1">
-        No — for the same sale, markup is always a higher percentage than margin, since it&apos;s calculated on
-        the smaller cost figure rather than the larger revenue figure.
+        No — margin is profit as a percentage of <strong>revenue</strong> (the selling price), while markup is
+        profit as a percentage of <strong>cost</strong>. For the same sale, markup is always the higher number
+        because it&apos;s calculated on the smaller cost figure rather than the larger revenue figure. In the
+        results panel above, &quot;Gross Margin&quot; and &quot;Markup&quot; are shown side by side for exactly
+        this reason — a 33% margin and a 50% markup can describe the same $100-cost, $150-revenue sale.
+      </Typography>
+      <Typography variant="h3">How do I calculate margin percentage?</Typography>
+      <Typography variant="body1">
+        Margin percentage = (Revenue − Cost) ÷ Revenue × 100. Enter your Cost and Revenue in the fields above and
+        the Gross Margin (%) field updates automatically — or edit the Gross Margin field directly with a target
+        percentage to see the Revenue you&apos;d need to charge to hit it.
       </Typography>
     </>
   );

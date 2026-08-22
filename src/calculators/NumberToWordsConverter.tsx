@@ -83,8 +83,25 @@ const NumberToWordsConverterContent = () => {
     return result.trim();
   };
 
-  const cleanNum = parseInt(numberInput.replace(/,/g, ''), 10);
-  const words = isNaN(cleanNum) ? '' : convertShortScale(cleanNum);
+  const digitWords = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+
+  const convertToWords = (input: string): string => {
+    const cleaned = input.replace(/,/g, '');
+    const [wholePart, decimalPart] = cleaned.split('.');
+
+    const whole = wholePart === '' || wholePart === '-' ? 0 : parseInt(wholePart, 10);
+    if (isNaN(whole)) return '';
+
+    let result = convertShortScale(whole);
+    if (decimalPart !== undefined) {
+      if (decimalPart === '') return result;
+      const decimalWords = decimalPart.split('').map((d) => digitWords[Number(d)]).join(' ');
+      result += ' point ' + decimalWords;
+    }
+    return result;
+  };
+
+  const words = convertToWords(numberInput);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(words);
@@ -100,13 +117,20 @@ const NumberToWordsConverterContent = () => {
         <TextField
           label="Enter a Number"
           value={numberInput}
-          onChange={(e) => setNumberInput(e.target.value.replace(/[^0-9,-]/g, ''))}
+          onChange={(e) => {
+            const cleaned = e.target.value.replace(/[^0-9,.-]/g, '');
+            const firstDot = cleaned.indexOf('.');
+            const sanitized = firstDot === -1
+              ? cleaned
+              : cleaned.slice(0, firstDot + 1) + cleaned.slice(firstDot + 1).replace(/\./g, '');
+            setNumberInput(sanitized);
+          }}
           fullWidth
-          placeholder="e.g. 123456"
+          placeholder="e.g. 123456 or 367.5"
           inputProps={{ style: { fontSize: '1.5rem', padding: '16px' } }}
         />
         <Typography variant="body2" color="text.secondary">
-          Supports numbers up to 999 trillion.
+          Supports whole numbers up to 999 trillion, plus decimals (e.g. 367.5).
         </Typography>
       </Box>
 
@@ -144,40 +168,74 @@ const NumberToWordsConverter = () => {
     <>
       <Typography variant="h2">Number to Words Converter</Typography>
       <Typography variant="body1">
-        Instantly convert any number into standard English words. Useful for writing checks, filling out legal documents, or just finding out how to pronounce extremely large numbers (up to the trillions).
+        Instantly convert any whole number into standard English words — the same as writing numbers in words,
+        spelling numbers out in letters, or converting an amount into words for a check. Useful for writing
+        checks, filling out legal or financial documents, double-checking homework, or just finding out how to
+        pronounce extremely large numbers (up to the trillions).
       </Typography>
 
       <Typography variant="h2">How to Use It</Typography>
       <Typography variant="body1">
-        Type any whole number into the input field and the words spelling it out appear instantly.
+        Type any whole number into the input field — with or without comma separators — and the English words
+        spelling it out appear instantly on the right. This works for small numbers like 24 as well as large
+        ones like 518,500 or 23,698.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">
-        Entering 1,024 converts to &quot;One Thousand Twenty-Four&quot;, ready to paste onto a check or legal
-        document.
+        Entering 1,024 converts to &quot;one thousand twenty-four&quot;, ready to paste onto a check or legal
+        document. A few more worked examples: <strong>23,698</strong> in words is &quot;twenty-three thousand,
+        six hundred ninety-eight&quot;. <strong>518,500</strong> in words is &quot;five hundred eighteen
+        thousand, five hundred&quot;. <strong>10,795</strong> in words is &quot;ten thousand, seven hundred
+        ninety-five&quot;.
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
-          <li>Writing out the amount in words on a check.</li>
-          <li>Filling legal or financial documents that require numbers spelled out.</li>
+          <li>Writing out the amount in words on a check, e.g. spelling out &quot;518,500&quot; as &quot;five hundred eighteen thousand, five hundred&quot;.</li>
+          <li>Filling legal or financial documents that require numbers spelled out in letters instead of digits.</li>
+          <li>Converting an invoice or contract total into words to match the numeric amount.</li>
+          <li>Checking how to say or pronounce a large number, like a big population or budget figure.</li>
+          <li>Helping students learn how numbers are written out in English words.</li>
         </ul>
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How do I convert a number to words in English?</Typography>
+      <Typography variant="body1">
+        Type the number into the input field (digits only, commas are fine) and the English word form appears
+        immediately in the results panel — no button press needed. This works the same whether you think of it
+        as converting a number to words, writing a number in letters, or spelling a number out.
+      </Typography>
+      <Typography variant="h3">What is 23,698 in words?</Typography>
+      <Typography variant="body1">
+        23,698 in words is &quot;twenty-three thousand, six hundred ninety-eight&quot;.
+      </Typography>
+      <Typography variant="h3">What is 518,500 in words?</Typography>
+      <Typography variant="body1">
+        518,500 in words is &quot;five hundred eighteen thousand, five hundred&quot;.
+      </Typography>
+      <Typography variant="h3">What is 10,795 in words?</Typography>
+      <Typography variant="body1">
+        10,795 in words is &quot;ten thousand, seven hundred ninety-five&quot;.
+      </Typography>
+      <Typography variant="h3">Does this tool convert decimal numbers, like 367.5, to words?</Typography>
+      <Typography variant="body1">
+        Yes — enter a decimal point and the digits after it are read out individually, the standard way decimals
+        are spoken. <strong>367.5</strong> in words is &quot;three hundred sixty-seven point five&quot;.
+      </Typography>
       <Typography variant="h3">What&apos;s the largest number this can convert?</Typography>
       <Typography variant="body1">
-        The converter supports numbers up into the trillions.
+        The converter supports whole numbers up into the trillions (just under 1 quadrillion).
       </Typography>
     </>
   );
 
   return (
     <CalculatorShell
-      title="Number to Words Converter - Write Numbers in English"
-      description="Convert any number to English words instantly. Perfect for writing checks, legal documents, and large numbers."
+      title="Number to Words Converter - Write Numbers in English Words"
+      description="Convert any whole number to English words instantly — see 23,698, 518,500, and 10,795 spelled out. Perfect for writing checks, legal documents, and large numbers."
       url="/utilities/number-to-words-converter"
       content={content}
       category="Utilities"

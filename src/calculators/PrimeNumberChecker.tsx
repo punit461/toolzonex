@@ -131,15 +131,15 @@ const PrimeNumberCheckerContent = () => {
 const PrimeNumberChecker = () => {
   const content = (
     <>
-      <Typography variant="h2">Prime Number Checker</Typography>
+      <Typography variant="h2">Prime Number Checker &amp; Prime Counter</Typography>
       <Typography variant="body1">
-        A prime number is a whole number greater than 1 whose only divisors are 1 and itself (e.g., 2, 3, 5, 7, 11). Use this simple math utility to instantly check whether a given number is prime or composite.
+        A prime number is a whole number greater than 1 whose only divisors are 1 and itself (e.g., 2, 3, 5, 7, 11). Use this simple math utility — a quick prime counter for one number at a time — to instantly check whether a given number is prime or composite.
       </Typography>
 
       <Typography variant="h2">How to Use It</Typography>
       <Typography variant="body1">
         Type any whole number into the input field and the tool instantly reports whether it&apos;s prime or
-        composite.
+        composite, showing at least one factor if it&apos;s composite.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
@@ -153,6 +153,8 @@ const PrimeNumberChecker = () => {
         <ul>
           <li>Verifying math homework or programming exercise results.</li>
           <li>Exploring number theory concepts like cryptography basics.</li>
+          <li>Using it as a quick prime counter to check a handful of candidate numbers one by one.</li>
+          <li>Double-checking a &quot;is this number prime&quot; question while coding a sieve or factorization algorithm.</li>
         </ul>
       </Box>
 
@@ -160,6 +162,28 @@ const PrimeNumberChecker = () => {
       <Typography variant="h3">Is 1 a prime number?</Typography>
       <Typography variant="body1">
         No — by definition, prime numbers must be greater than 1, so 1 is neither prime nor composite.
+      </Typography>
+      <Typography variant="h3">Is this a prime counter that lists all primes in a range?</Typography>
+      <Typography variant="body1">
+        This tool checks one number at a time rather than counting or listing every prime within a range —
+        enter each number you want checked and it instantly reports whether it&apos;s prime, plus a factor if
+        it isn&apos;t.
+      </Typography>
+      <Typography variant="h3">Is 2 a prime number, since it&apos;s even?</Typography>
+      <Typography variant="body1">
+        Yes — 2 is prime and is the only even prime number. Every other even number is divisible by 2, which
+        disqualifies it, but 2 itself only has the divisors 1 and 2.
+      </Typography>
+      <Typography variant="h3">What&apos;s the largest number this checker can handle?</Typography>
+      <Typography variant="body1">
+        It works reliably up to Number.MAX_SAFE_INTEGER (about 9 quadrillion) in the browser. Beyond that,
+        floating-point precision limits make the result unreliable, so the tool shows a warning instead of a
+        potentially wrong answer.
+      </Typography>
+      <Typography variant="h3">Why isn&apos;t 0 a prime number?</Typography>
+      <Typography variant="body1">
+        0 has infinitely many divisors (every whole number divides evenly into 0), which contradicts the
+        definition of a prime having exactly two divisors — 1 and itself. So 0 is neither prime nor composite.
       </Typography>
     </>
   );

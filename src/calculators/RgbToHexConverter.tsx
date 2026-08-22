@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Box, Button, Typography, TextField, Paper, Slider } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import NextLink from 'next/link';
 import CalculatorShell from '../components/CalculatorShell';
 import AdSenseUnit from '../components/AdSenseUnit';
 
@@ -117,19 +118,27 @@ const RgbToHexContent = () => {
 const RgbToHexConverter = () => {
   const content = (
     <>
-      <Typography variant="h2">RGB vs HEX Color Models</Typography>
+      <Typography variant="h2">What is an RGB to HEX converter?</Typography>
       <Typography variant="body1">
-        **RGB** stands for Red, Green, and Blue, representing the intensity of light. **HEX** is a 6-digit hexadecimal representation of a color, often used in HTML and CSS. Use the sliders above to mix your R, G, and B values and instantly get the equivalent HEX code.
+        <strong>RGB</strong> stands for Red, Green, and Blue, representing the intensity of light used to build
+        a color on screen. <strong>HEX</strong> is a 6-digit hexadecimal representation of that same color,
+        often used in HTML and CSS. This rgb to hex converter mixes your R, G, and B values (0-255 each) and
+        instantly generates the matching HEX code — the conversion rgb hex developers reach for whenever a
+        design spec, image picker, or JavaScript object gives them RGB numbers but the stylesheet needs a hex
+        color code.
       </Typography>
 
       <Typography variant="h2">How to Use It</Typography>
       <Typography variant="body1">
-        Adjust the R, G, and B sliders (or type exact values) and the equivalent HEX code appears instantly.
+        Adjust the R, G, and B sliders (or type exact 0-255 values) and the equivalent HEX code appears
+        instantly with a copy button. Drag the opacity slider too if you need an 8-character HEX8 code that
+        includes alpha transparency.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">
-        RGB (255, 87, 51) converts to the HEX code <code>#FF5733</code>.
+        RGB (255, 87, 51) converts to the HEX code <code>#FF5733</code>. Each channel is converted to a 2-digit
+        hexadecimal value individually — 255 → FF, 87 → 57, 51 → 33 — then joined together.
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
@@ -137,6 +146,8 @@ const RgbToHexConverter = () => {
         <ul>
           <li>Converting a color picked from a design tool into CSS-ready HEX format.</li>
           <li>Matching brand colors across RGB and HEX-based design systems.</li>
+          <li>Turning an RGB value copied from a canvas, image editor, or eyedropper tool into a hex color code.</li>
+          <li>Building a HEX8 code with a specific opacity for CSS backgrounds and overlays.</li>
         </ul>
       </Box>
 
@@ -145,6 +156,31 @@ const RgbToHexConverter = () => {
       <Typography variant="body1">
         HEX codes are more compact and are the standard format for colors in HTML and CSS stylesheets, though
         both represent the same color values.
+      </Typography>
+      <Typography variant="h3">How do I convert RGB to a HEX color code?</Typography>
+      <Typography variant="body1">
+        Move the R, G, and B sliders (or type exact 0-255 values) above and the equivalent HEX code is
+        generated instantly, with a one-click copy button — no manual conversion rgb hex math required.
+      </Typography>
+      <Typography variant="h3">I searched for a color code to RGB value — is this the right tool?</Typography>
+      <Typography variant="body1">
+        If you already have RGB numbers and want the HEX code, yes — this rgb to hex converter does exactly
+        that. If you have a hex code and want the RGB value instead, use our{' '}
+        <Typography component={NextLink} href="/converters/hex-to-rgb" sx={{ color: 'primary.main', fontWeight: 600 }}>
+          HEX to RGB converter
+        </Typography>
+        , which converts in the opposite direction.
+      </Typography>
+      <Typography variant="h3">Does this tool convert RGBA (with transparency) to HEX?</Typography>
+      <Typography variant="body1">
+        Yes — adjust the alpha (opacity) slider along with R, G, and B, and the tool appends the alpha channel
+        as an extra two hex digits, producing an 8-character HEX8 code.
+      </Typography>
+      <Typography variant="h3">What&apos;s the formula behind an RGB to HEX conversion?</Typography>
+      <Typography variant="body1">
+        Each of the R, G, and B values (0-255) is converted individually to a 2-digit base-16 (hexadecimal)
+        number, then the three pairs are joined with a # in front. For example, RGB(255, 87, 51) becomes
+        #FF5733.
       </Typography>
     </>
   );

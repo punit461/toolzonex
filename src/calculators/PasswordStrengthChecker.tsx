@@ -108,15 +108,15 @@ const PasswordStrengthCheckerContent = () => {
 const PasswordStrengthChecker = () => {
   const content = (
     <>
-      <Typography variant="h2">Free Password Strength Checker</Typography>
+      <Typography variant="h2">Free Password Strength Checker &amp; Complexity Checker</Typography>
       <Typography variant="body1">
-        Check how secure your password is instantly. This tool analyzes your password against common security rules including length, character variety, and complexity. Your password is analyzed securely right here in your browser and is never sent to any server.
+        Check how secure your password is instantly. This password complexity checker analyzes your password against common security rules including length, character variety, and complexity. Your password is analyzed securely right here in your browser and is never sent to any server.
       </Typography>
 
       <Typography variant="h2">How to Use It</Typography>
       <Typography variant="body1">
         Type your password into the input field and the strength meter and rule checklist update live as you
-        type.
+        type — a quick password test strength check with no signup, no upload, and no waiting.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
@@ -130,6 +130,8 @@ const PasswordStrengthChecker = () => {
         <ul>
           <li>Testing a new password before setting it on an important account.</li>
           <li>Understanding why a password was rejected as "too weak" by a signup form.</li>
+          <li>Using it as a password security tester before reusing or updating a company or personal account password.</li>
+          <li>Comparing a few candidate passwords side by side to pick the strongest one.</li>
         </ul>
       </Box>
 
@@ -138,6 +140,31 @@ const PasswordStrengthChecker = () => {
       <Typography variant="body1">
         No — the analysis runs entirely in your browser using JavaScript, and your password is never
         transmitted or stored.
+      </Typography>
+      <Typography variant="h3">Is this a real password complexity checker or just a length counter?</Typography>
+      <Typography variant="body1">
+        It&apos;s a full password complexity checker — it scores length tiers, character variety (uppercase,
+        lowercase, numbers, symbols), and penalizes passwords made of only letters or only numbers, rather than
+        just counting characters.
+      </Typography>
+      <Typography variant="h3">How does this password test strength scoring work?</Typography>
+      <Typography variant="body1">
+        Points are added for length milestones (8+, 12+, 16+ characters) and for including uppercase letters,
+        lowercase letters, numbers, and symbols, then reduced for passwords using only one character type. The
+        total maps to a Very Weak, Weak, Good, or Strong rating shown on the meter.
+      </Typography>
+      <Typography variant="h3">Can I trust an online password security tester with my real password?</Typography>
+      <Typography variant="body1">
+        This tester never sends your password over the network or saves it anywhere — the entire check runs
+        client-side in your browser&apos;s memory and disappears when you leave the page. Still, as a general
+        rule with any online tool, avoid testing a password you&apos;re currently using and change it afterward
+        if you do.
+      </Typography>
+      <Typography variant="h3">What makes a password actually strong?</Typography>
+      <Typography variant="body1">
+        Length matters more than complexity tricks — a long passphrase of unrelated words is typically stronger
+        and easier to remember than a short password with substituted symbols. Aim for at least 12-16 characters
+        mixing letter case, numbers, and symbols, and avoid reusing the same password across multiple accounts.
       </Typography>
     </>
   );

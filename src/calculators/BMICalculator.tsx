@@ -117,6 +117,14 @@ const BMICalculator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is this a BMI calculator for India?</Typography>
+      <Typography variant="body1">
+        Yes — this calculator uses the lower Indian/Asian BMI classification thresholds shown above (Underweight
+        below 18.5, Normal 18.5-22.9, Overweight 23-24.9, Obese 25 and above) rather than the standard WHO global
+        cutoffs (which set the overweight threshold at 25 and obese at 30). It works for anyone, anywhere — just
+        enter your height and weight in metric or imperial units; there&apos;s no region lock or language
+        requirement.
+      </Typography>
       <Typography variant="h3">Is BMI accurate for everyone?</Typography>
       <Typography variant="body1">
         No — BMI doesn&apos;t account for muscle mass, bone density, or fat distribution, so it can be misleading

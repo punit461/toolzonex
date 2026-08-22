@@ -115,6 +115,12 @@ const LinePrefixSuffix = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How do I add a prefix to text?</Typography>
+      <Typography variant="body1">
+        Paste your text or list into the box, type the text you want at the start of every line into the
+        &quot;Prefix&quot; field, and click &quot;Apply Prefix &amp; Suffix&quot;. To add a prefix to text
+        without a suffix, just leave the suffix field empty.
+      </Typography>
       <Typography variant="h3">Can I add both a prefix and suffix at once?</Typography>
       <Typography variant="body1">
         Yes, set both fields and they&apos;ll be applied to every line simultaneously.

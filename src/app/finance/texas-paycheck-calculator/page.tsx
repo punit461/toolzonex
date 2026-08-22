@@ -1,12 +1,21 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../../../calculators/paycheck/PaycheckCalculator";
+import { STATE_SEO_CONTENT } from "../../../calculators/paycheck/stateSeoContent";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Texas Paycheck Calculator - Estimate Your Take-Home Pay",
   description: "Free Texas paycheck calculator. Texas has no state income tax — see net pay after federal tax, Social Security, and Medicare.",
-  keywords: ["texas paycheck calculator", "texas salary calculator", "texas take home pay", "texas tax calculator", "net pay calculator texas"],
+  keywords: [
+    "texas paycheck calculator",
+    "paycheck calculator texas",
+    "texas salary calculator",
+    "texas take home pay",
+    "texas tax calculator",
+    "net pay calculator texas",
+    "paycheck estimator texas",
+  ],
   alternates: { canonical: "/finance/texas-paycheck-calculator" },
   openGraph: {
     title: "Texas Paycheck Calculator - Estimate Your Take-Home Pay | ToolZoneX",
@@ -28,12 +37,26 @@ const calculatorSchema = {
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": STATE_SEO_CONTENT.texas!.faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+  })),
+};
+
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(calculatorSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <PaycheckCalculator stateSlug="texas" />
     </>

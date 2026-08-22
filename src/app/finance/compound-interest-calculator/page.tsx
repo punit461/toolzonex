@@ -6,7 +6,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 export const metadata: Metadata = {
   title: "Compound Interest Calculator - Power of Compounding",
   description: "Free compound interest calculator to see how a lump-sum investment grows with the power of compounding. Choose annual, quarterly, monthly, or daily compounding.",
-  keywords: ["compound interest calculator", "power of compounding", "compounding calculator", "interest on interest", "lump sum investment calculator"],
+  keywords: ["compound interest calculator", "power of compounding", "power compounding", "compounding calculator", "interest on interest", "lump sum investment calculator"],
   alternates: { canonical: "/finance/compound-interest-calculator" },
   openGraph: {
     title: "Compound Interest Calculator - Power of Compounding | ToolZoneX",

@@ -111,7 +111,7 @@ const CharacterDistributionAnalyzer = () => {
     <>
       <Typography variant="h2">How to use the Character Distribution Analyzer?</Typography>
       <Typography variant="body1">
-        Paste any text into the box and click "Analyze Characters". The tool will count every single character—including spaces, newlines, numbers, and punctuation—and calculate their exact frequency and percentage across the entire text.
+        Paste any text into the box and click "Analyze Characters". The tool will count every single character—including spaces, newlines, numbers, and punctuation—and calculate their exact frequency and percentage across the entire text. It works as a letter frequency online tool too — just check the table for the count and density of each individual letter.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
@@ -129,6 +129,12 @@ const CharacterDistributionAnalyzer = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I check letter frequency online with this tool?</Typography>
+      <Typography variant="body1">
+        Yes — paste your text and every letter, digit, space, and punctuation mark is broken out in the results
+        table with its count and percentage, so you can check letter frequency online without downloading any
+        software.
+      </Typography>
       <Typography variant="h3">Is the analysis case-sensitive?</Typography>
       <Typography variant="body1">
         Uppercase and lowercase versions of the same letter are typically counted separately, reflecting the

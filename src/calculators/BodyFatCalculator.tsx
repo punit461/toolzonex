@@ -178,18 +178,22 @@ const BodyFatCalculatorContent = () => {
 const BodyFatCalculator = () => {
   const content = (
     <>
-      <Typography variant="h2">Free Body Fat Calculator</Typography>
+      <Typography variant="h2">Free Body Fat Calculator (Tape Measure Method)</Typography>
       <Typography variant="body1">
-        Estimate your body fat percentage using the US Navy method. All you need is a measuring tape to measure your waist, neck, and (for women) hips. This is one of the most accessible ways to track fat loss beyond just looking at the scale.
+        Estimate your body fat percentage using the US Navy tape measure method. All you need is a flexible
+        measuring tape to measure your waist, neck, and (for women) hips — no calipers, smart scale, or DEXA
+        scan required. This is one of the most accessible ways to track fat loss beyond just looking at the
+        scale.
       </Typography>
 
-      <Typography variant="h2">How to Measure</Typography>
+      <Typography variant="h2">How to Measure (Body Fat Tape Measure Guide)</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
           <li>Measure your neck circumference just below the larynx.</li>
           <li>Measure your waist at the navel (men) or the narrowest point (women).</li>
           <li>Women also measure hip circumference at the widest point.</li>
           <li>Enter your height, gender, and these measurements to get your estimated body fat %.</li>
+          <li>Keep the tape snug but not compressing the skin, and measure at the same time of day for consistent tracking.</li>
         </ul>
       </Box>
 
@@ -208,10 +212,26 @@ const BodyFatCalculator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
-      <Typography variant="h3">How accurate is the US Navy method?</Typography>
+      <Typography variant="h3">How accurate is the US Navy body fat calculator?</Typography>
       <Typography variant="body1">
-        It&apos;s a reasonable estimate for most people (typically within a few percentage points of more precise
-        methods like DEXA scans), but it can be less accurate for very lean or very muscular individuals.
+        It&apos;s a reasonable estimate for most people — typically within a few percentage points of more precise
+        methods like DEXA scans or hydrostatic (underwater) weighing — but it is an estimate, not a lab
+        measurement. Because it infers body fat from circumference measurements rather than measuring fat
+        tissue directly, accuracy drops for very lean athletes, very muscular individuals, and people with
+        unusual body-fat distribution. Use it consistently (same tape, same technique, same time of day) to
+        track trends rather than treating any single reading as exact.
+      </Typography>
+      <Typography variant="h3">Is the Navy body fat calculator accurate enough to trust?</Typography>
+      <Typography variant="body1">
+        For general fitness tracking, yes — it&apos;s a well-studied, widely used method that&apos;s accurate enough
+        to show whether you&apos;re gaining or losing fat over weeks and months. If you need clinical precision
+        (e.g. for a medical or research purpose), a DEXA scan or hydrostatic weighing will give a more exact
+        number.
+      </Typography>
+      <Typography variant="h3">What do I need for this tape measure body fat calculator?</Typography>
+      <Typography variant="body1">
+        Just a flexible measuring tape and your height. You&apos;ll measure neck and waist circumference (plus hip
+        circumference for women) and enter them above — no calipers, scale, or equipment beyond the tape.
       </Typography>
     </>
   );

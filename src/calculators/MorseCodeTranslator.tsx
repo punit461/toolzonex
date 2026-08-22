@@ -122,12 +122,14 @@ const MorseCodeTranslator = () => {
     <>
       <Typography variant="h2">How does Morse Code work?</Typography>
       <Typography variant="body1">
-        Morse code is a method of transmitting text information as a series of on-off tones, lights, or clicks. It uses dots (`.`) and dashes (`-`) to represent the letters of the alphabet, numerals, and punctuation marks. This tool uses standard International Morse Code, separating letters with a space and words with a forward slash (`/`).
+        Morse code is a method of transmitting text information as a series of on-off tones, lights, or clicks. It uses dots (`.`) and dashes (`-`) to represent the letters of the alphabet, numerals, and punctuation marks. This tool works as a two-way <strong>Morse code translator</strong> — use it to translate Morse code back into plain text, or to translate plain text into Morse code — using standard International Morse Code, separating letters with a space and words with a forward slash (`/`).
       </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">
         Encoding &quot;SOS&quot; produces <code>... --- ...</code>; decoding it back returns &quot;SOS&quot;.
+        Paste either the text or the dots-and-dashes into the input box, pick the matching mode, and click
+        translate.
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
@@ -135,6 +137,8 @@ const MorseCodeTranslator = () => {
         <ul>
           <li>Learning or practicing Morse code for amateur radio licensing.</li>
           <li>Decoding Morse code messages from puzzles or historical texts.</li>
+          <li>Translating Morse code found in movies, games, or escape rooms back into readable text.</li>
+          <li>Converting a message into Morse code to send over a radio, light, or sound signal.</li>
         </ul>
       </Box>
 
@@ -143,6 +147,27 @@ const MorseCodeTranslator = () => {
       <Typography variant="body1">
         Letters within a word are separated by a single space, and words are separated by a forward slash
         (<code>/</code>).
+      </Typography>
+      <Typography variant="h3">How do I translate Morse code back into text?</Typography>
+      <Typography variant="body1">
+        Switch to &quot;decode&quot; mode, paste the Morse code (dots and dashes, with letters separated by
+        spaces and words separated by a slash) into the input box, and click &quot;Translate to Text&quot; —
+        the plain-text result appears on the right, ready to copy.
+      </Typography>
+      <Typography variant="h3">How do I translate text into Morse code?</Typography>
+      <Typography variant="body1">
+        Switch to &quot;encode&quot; mode, type or paste your message, and click &quot;Translate to Morse&quot;
+        — each letter, number, and common punctuation mark is converted to its dot-dash equivalent.
+      </Typography>
+      <Typography variant="h3">Is this the same as a &quot;mos code&quot; translator?</Typography>
+      <Typography variant="body1">
+        Yes — &quot;mos code&quot; is a common misspelling of &quot;Morse code.&quot; This translator works the
+        same way no matter how you search for it: paste your text or code above and hit translate.
+      </Typography>
+      <Typography variant="h3">Is this Morse code translator free to use?</Typography>
+      <Typography variant="body1">
+        Yes — translation happens instantly in your browser, it&apos;s completely free to use, and no signup or
+        installation is required.
       </Typography>
     </>
   );

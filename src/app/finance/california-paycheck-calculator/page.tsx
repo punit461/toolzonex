@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../../../calculators/paycheck/PaycheckCalculator";
+import { STATE_SEO_CONTENT } from "../../../calculators/paycheck/stateSeoContent";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "California Paycheck Calculator - Estimate Your Take-Home Pay",
   description: "Free California paycheck calculator. See net pay after federal tax, state tax, Social Security, and Medicare, by pay period.",
-  keywords: ["california paycheck calculator", "california salary calculator", "california take home pay", "california tax calculator", "net pay calculator california"],
+  keywords: ["california paycheck calculator", "california salary calculator", "california take home pay", "california tax calculator", "net pay calculator california", "california payroll calculator", "ca paycheck calculator"],
   alternates: { canonical: "/finance/california-paycheck-calculator" },
   openGraph: {
     title: "California Paycheck Calculator - Estimate Your Take-Home Pay | ToolZoneX",
@@ -28,12 +29,26 @@ const calculatorSchema = {
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": STATE_SEO_CONTENT.california!.faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+  })),
+};
+
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(calculatorSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <PaycheckCalculator stateSlug="california" />
     </>

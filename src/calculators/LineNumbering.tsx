@@ -109,6 +109,17 @@ const LineNumbering = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Is this the same as a line number calculator?</Typography>
+      <Typography variant="body1">
+        Yes — people search for a &quot;line number calculator&quot; when they want sequential numbers added to
+        a list or document; this tool does exactly that, working out and inserting the correct number for
+        every line automatically.
+      </Typography>
+      <Typography variant="h3">How do I add line numbers to my text?</Typography>
+      <Typography variant="body1">
+        Paste your text into the box, choose your numbering options (skip empty lines, dot or no dot after the
+        number), and click &quot;Add Line Numbers&quot; — every line gets numbered instantly.
+      </Typography>
       <Typography variant="h3">Can I number only non-empty lines?</Typography>
       <Typography variant="body1">
         Yes — enable "skip empty lines" and blank lines are left as-is without incrementing the counter.

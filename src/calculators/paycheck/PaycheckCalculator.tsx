@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { Fragment, useMemo, useState } from 'react';
 import {
   Box, TextField, Typography, InputAdornment, Select, MenuItem,
   FormControl, InputLabel, Divider,
@@ -10,6 +10,7 @@ import AdSenseUnit from '../../components/AdSenseUnit';
 import type { FilingStatus } from './federalTax';
 import { STATE_TAX_CONFIGS } from './stateTax';
 import { calculatePaycheck, forPeriod, type PayFrequency } from './paycheckEngine';
+import { STATE_SEO_CONTENT } from './stateSeoContent';
 
 const formatUSD = (value: number) =>
   `$${Math.round(value).toLocaleString('en-US')}`;
@@ -137,6 +138,7 @@ const PaycheckCalculatorContent = ({ stateSlug }: Props) => {
 
 const PaycheckCalculator = ({ stateSlug }: Props) => {
   const stateConfig = STATE_TAX_CONFIGS[stateSlug];
+  const seoContent = STATE_SEO_CONTENT[stateSlug];
 
   const content = (
     <>
@@ -146,6 +148,9 @@ const PaycheckCalculator = ({ stateSlug }: Props) => {
         {stateConfig.hasIncomeTax ? ` ${stateConfig.name} state income tax` : ` — since ${stateConfig.name} has no state income tax, none is deducted here`}.
         Enter your gross annual salary, choose your filing status, and see your net pay broken down by pay period.
       </Typography>
+      {seoContent?.extraIntro && (
+        <Typography variant="body1">{seoContent.extraIntro}</Typography>
+      )}
 
       <Typography variant="h2">How is my {stateConfig.name} paycheck calculated?</Typography>
       <Box sx={{ typography: 'body1' }}>
@@ -174,6 +179,7 @@ const PaycheckCalculator = ({ stateSlug }: Props) => {
           <li>Estimating take-home pay before accepting a job offer in {stateConfig.name}.</li>
           <li>Comparing net pay across different filing statuses or pay frequencies.</li>
           <li>Budgeting based on actual per-paycheck income rather than gross salary.</li>
+          {seoContent?.extraUseCases?.map((useCase) => <li key={useCase}>{useCase}</li>)}
         </ul>
       </Box>
 
@@ -182,7 +188,12 @@ const PaycheckCalculator = ({ stateSlug }: Props) => {
         <ul>
           <li><strong>Does this include 401(k) or health insurance deductions?</strong> No, this calculates statutory federal and state payroll taxes only — pre-tax benefit deductions would reduce take-home pay further.</li>
           <li><strong>Is this exact to the dollar?</strong> It&apos;s a close estimate based on published 2025 tax brackets; actual withholding can vary slightly based on your W-4 elections and employer&apos;s payroll system.</li>
-          {stateConfig.hasIncomeTax && <li><strong>Does this include local or city taxes?</strong> No, only state-level tax is calculated — some cities and counties levy additional local income tax.</li>}
+          {stateConfig.hasIncomeTax && !seoContent?.faqs.some((faq) => /local|city|nyc/i.test(faq.q)) && (
+            <li><strong>Does this include local or city taxes?</strong> No, only state-level tax is calculated — some cities and counties levy additional local income tax.</li>
+          )}
+          {seoContent?.faqs.map((faq) => (
+            <li key={faq.q}><strong>{faq.q}</strong> {faq.a}</li>
+          ))}
         </ul>
       </Box>
     </>

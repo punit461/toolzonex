@@ -166,11 +166,12 @@ const ExifReader = () => {
         the photo was taken. Most smartphones and digital cameras automatically add EXIF data to photos.
       </Typography>
 
-      <Typography variant="h2">How to use the EXIF Reader?</Typography>
+      <Typography variant="h2">How to view EXIF online</Typography>
       <Typography variant="body1">
-        Click the "Select Image" button to upload a photo from your device. The tool will automatically 
-        extract and display all EXIF data embedded in the image. This includes camera model, lens information, 
-        exposure settings, and GPS coordinates (if available).
+        Click the "Select Image" button to upload a photo from your device. The tool will automatically
+        extract and display all EXIF data embedded in the image. This includes camera model, lens information,
+        exposure settings, and GPS coordinates (if available) — everything you need to view exif online, with
+        no install and no account required.
       </Typography>
 
       <Typography variant="h2">Why check EXIF data?</Typography>
@@ -190,6 +191,27 @@ const ExifReader = () => {
       <Typography variant="h3">Does this tool upload my photo anywhere?</Typography>
       <Typography variant="body1">
         No — the image and its metadata are read entirely in your browser and never leave your device.
+      </Typography>
+      <Typography variant="h3">Can I view EXIF online without installing any software?</Typography>
+      <Typography variant="body1">
+        Yes — this page lets you view exif online directly: just select a photo from your device and the
+        camera settings, timestamp, and GPS data (if present) appear instantly. Nothing to install, no
+        account needed.
+      </Typography>
+      <Typography variant="h3">What image formats does this EXIF viewer support?</Typography>
+      <Typography variant="body1">
+        It reads EXIF metadata from JPEG, TIFF, and most RAW-derived formats exported by cameras and phones.
+        PNG and WebP files usually don&apos;t carry EXIF data unless it was specifically preserved during export.
+      </Typography>
+      <Typography variant="h3">Why does my photo show no EXIF data?</Typography>
+      <Typography variant="body1">
+        Many apps and social platforms strip EXIF data on upload or export for privacy. Screenshots and
+        edited/re-saved images also typically lose their original metadata.
+      </Typography>
+      <Typography variant="h3">Can I see GPS location data from a photo?</Typography>
+      <Typography variant="body1">
+        Yes, if the photo has location data embedded (common on smartphones with location services enabled),
+        the latitude and longitude coordinates are displayed alongside the other EXIF fields.
       </Typography>
     </>
   );

@@ -147,9 +147,12 @@ const SudokuGeneratorContent = () => {
 const SudokuGenerator = () => {
   const content = (
     <>
-      <Typography variant="h2">How to use the Sudoku Generator?</Typography>
+      <Typography variant="h2">How to use the online Sudoku generator</Typography>
       <Typography variant="body1">
-        Select your desired difficulty level (Easy to Expert) and click "Generate New Puzzle". The system uses a randomized backtracking algorithm to generate a unique, mathematically valid Sudoku grid every single time. You can play directly on screen or click "Print Puzzle" to solve it on paper.
+        Select your desired difficulty level (Easy to Expert) and click "Generate New Puzzle". This random
+        sudoku generator uses a randomized backtracking algorithm to build a unique, mathematically valid Sudoku
+        grid every single time — no two puzzles are ever the same. You can play directly on screen or click
+        "Print Puzzle" to solve it on paper.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
@@ -162,7 +165,9 @@ const SudokuGenerator = () => {
       <Box sx={{ typography: 'body1' }}>
         <ul>
           <li>Printing a fresh puzzle for a classroom or puzzle book.</li>
-          <li>Playing Sudoku directly in the browser without an app.</li>
+          <li>Playing Sudoku directly in the browser without an app or sign-up, as an online sudoku generator.</li>
+          <li>Using it as a sudoku game generator for a puzzle night, needing a fresh grid on demand.</li>
+          <li>Generating an unlimited supply of random puzzles at a chosen difficulty for practice.</li>
         </ul>
       </Box>
 
@@ -170,6 +175,21 @@ const SudokuGenerator = () => {
       <Typography variant="h3">Does every generated puzzle have a unique solution?</Typography>
       <Typography variant="body1">
         Yes — the generator guarantees each puzzle has exactly one valid solution.
+      </Typography>
+      <Typography variant="h3">Is this a random sudoku generator?</Typography>
+      <Typography variant="body1">
+        Yes — every puzzle is built by randomly filling a valid 9x9 grid with a backtracking algorithm and then
+        randomly removing numbers to match your chosen difficulty, so no two puzzles are the same.
+      </Typography>
+      <Typography variant="h3">Can I play this online sudoku generator directly in the browser?</Typography>
+      <Typography variant="body1">
+        Yes — the puzzle is generated and displayed instantly on the page. There&apos;s nothing to install; just
+        pick a difficulty and start filling in the grid on screen, or print it to solve on paper.
+      </Typography>
+      <Typography variant="h3">What difficulty levels does this sudoku game generator support?</Typography>
+      <Typography variant="body1">
+        Four levels — Easy, Medium, Hard, and Expert — each removing a different number of starting clues from
+        the solved grid, from roughly 30 blanks on Easy up to 60 on Expert.
       </Typography>
     </>
   );

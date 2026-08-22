@@ -152,8 +152,20 @@ const PhoneValidatorContent = () => {
 
 const faqs = [
   {
+    question: 'Is this a phone number verification tool?',
+    answer: 'It\'s a validator, not a verification tool in the SMS/OTP sense — it checks that a number is correctly formatted and structurally valid for its country, instantly and for free, using the same logic phone networks use to route calls. It does not confirm the number is currently active or reachable; that requires actually sending it an SMS or call, which real phone number verification tools do but this one intentionally does not (so nothing is sent, logged, or charged).',
+  },
+  {
     question: 'Does this confirm the number is active or reachable?',
     answer: 'No — this checks formatting and structure only, not whether the number is currently in service. To confirm a number is reachable you\'d need to actually send it an SMS or call, which this tool does not do.',
+  },
+  {
+    question: 'What makes this a good phone number validator?',
+    answer: 'It validates every country and territory in the international numbering plan, runs the check instantly in your browser using libphonenumber-js — the same phone-formatting library Google uses internally — and it\'s free with no sign-up, rate limit, or data sent to a server. That combination of accuracy, speed, and privacy is what to look for in a phone number validator.',
+  },
+  {
+    question: 'Can I use this as a cell phone validator or only for landlines?',
+    answer: 'Both. Enter any number and the tool validates it regardless of type, then reports back whether it\'s a mobile (cell) number, a fixed line, VOIP, toll-free, or premium rate number based on that country\'s numbering plan — so it works equally well as a cell phone validator or a general telephone number validator.',
   },
   {
     question: 'What phone number formats does it accept?',

@@ -137,6 +137,10 @@ const RandomStringGeneratorContent = () => {
 
 const faqs = [
   {
+    question: 'How do I generate random alphanumeric strings online?',
+    answer: 'Keep "Uppercase Letters", "Lowercase Letters", and "Numbers" checked (and leave Symbols unchecked) to use this as a random alphanumeric character generator — set your desired length and quantity, then click Generate. Since everything runs in your browser, it works as a way to generate string online with no download or sign-up.',
+  },
+  {
     question: 'Can I restrict output to a custom set of characters?',
     answer: 'Yes — enter your own character set in the "Custom Characters" field and the generator will draw exclusively from that combined pool (or from just your custom set if you uncheck the built-in options).',
   },
@@ -163,7 +167,7 @@ const RandomStringGenerator = () => {
     <>
       <Typography variant="h2">How to generate random strings?</Typography>
       <Typography variant="body1">
-        Specify the length of the string you want, how many strings you need, and the types of characters to include (uppercase, lowercase, numbers, or symbols). You can even add a custom character set to restrict generation entirely to your specific letters. Click Generate to produce them instantly.
+        Specify the length of the string you want, how many strings you need, and the types of characters to include (uppercase, lowercase, numbers, or symbols). Used as an alphanumeric generator, it's the fastest way to generate random alphanumeric text for tokens or test data. You can even add a custom character set to restrict generation entirely to your specific letters. Click Generate to produce them instantly.
       </Typography>
 
       <Typography variant="h2">How the randomness works</Typography>

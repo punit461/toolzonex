@@ -129,6 +129,12 @@ const SentenceCaseFixer = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How do I do a quick caps fix on my text?</Typography>
+      <Typography variant="body1">
+        Paste the text, pick &quot;Sentence case&quot;, &quot;lower case&quot;, or &quot;UPPER CASE&quot; from
+        the Case Mode dropdown, and click &quot;Convert Text&quot; — a one-click caps fix for text typed with
+        Caps Lock stuck on or pasted from an all-caps source.
+      </Typography>
       <Typography variant="h3">Will this fix grammar or spelling too?</Typography>
       <Typography variant="body1">
         No — this tool only changes letter casing; it does not correct spelling, grammar, or punctuation.

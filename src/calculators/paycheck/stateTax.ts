@@ -73,12 +73,20 @@ export const STATE_TAX_CONFIGS: Record<string, StateTaxConfig> = {
   texas: { slug: 'texas', name: 'Texas', hasIncomeTax: false },
   florida: { slug: 'florida', name: 'Florida', hasIncomeTax: false },
   washington: { slug: 'washington', name: 'Washington', hasIncomeTax: false },
-  nevada: { slug: 'nevada', name: 'Nevada', hasIncomeTax: false },
+  nevada: {
+    slug: 'nevada',
+    name: 'Nevada',
+    hasIncomeTax: false,
+  },
   tennessee: { slug: 'tennessee', name: 'Tennessee', hasIncomeTax: false },
   wyoming: { slug: 'wyoming', name: 'Wyoming', hasIncomeTax: false },
   'south-dakota': { slug: 'south-dakota', name: 'South Dakota', hasIncomeTax: false },
   alaska: { slug: 'alaska', name: 'Alaska', hasIncomeTax: false },
-  'new-hampshire': { slug: 'new-hampshire', name: 'New Hampshire', hasIncomeTax: false },
+  'new-hampshire': {
+    slug: 'new-hampshire',
+    name: 'New Hampshire',
+    hasIncomeTax: false,
+  },
   pennsylvania: {
     slug: 'pennsylvania',
     name: 'Pennsylvania',

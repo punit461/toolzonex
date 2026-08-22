@@ -257,6 +257,32 @@ const WhatIsMyIP = () => {
         internet-connected devices. Most home connections still get an IPv4 address by default, which is why
         that&apos;s typically what you see above; some ISPs and mobile carriers now assign IPv6 alongside or instead of it.
       </Typography>
+      <Typography variant="h3">Where&apos;s my IP address and what&apos;s my current location?</Typography>
+      <Typography variant="body1">
+        Your public IP address and current location appear automatically above, with no need to search
+        elsewhere — this page detects it live. If you&apos;re wondering where&apos;s my IP or where&apos;s my IP
+        location, look at the IP box for the address itself and the Location Information panel just below it
+        for your approximate country, region, and city.
+      </Typography>
+      <Typography variant="h3">How do I find my public IP address?</Typography>
+      <Typography variant="body1">
+        Just open this page — your public IP is found and displayed automatically, no sign-up or extra clicks
+        required. If you&apos;ve changed networks or reconnected to Wi-Fi and want the very latest reading, click
+        &quot;Refresh&quot; to find your public IP address again immediately.
+      </Typography>
+      <Typography variant="h3">How do I check my IP address and location together?</Typography>
+      <Typography variant="body1">
+        This page checks both at once: your public IP appears at the top, and the Location Information panel
+        beneath it shows the country, region, city, and ISP tied to that address — so you don&apos;t need a
+        separate lookup to check your IP location.
+      </Typography>
+      <Typography variant="h3">What is my public IP address right now?</Typography>
+      <Typography variant="body1">
+        The number shown at the top of this page under &quot;Your Public IP Address&quot; is your current public
+        IP, detected the moment the page loads. It can change over time — most home connections are on a
+        dynamic IP — so if you want to confirm what it is right now rather than an older cached result, hit
+        Refresh.
+      </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">

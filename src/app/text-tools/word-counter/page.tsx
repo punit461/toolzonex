@@ -5,8 +5,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
   title: "Word Count Calculator - Free Word Counter Online",
-  description: "Use this free word count calculator to count words, characters, sentences, and paragraphs in real time.",
-  keywords: ["word counter", "character counter", "count words", "count characters", "letter count", "text stats", "word calculator", "words calculator", "calculate words", "word count calculator"],
+  description: "Use this free online word count tool to count words, characters, sentences, and paragraphs in real time. Just paste your text and see the count instantly.",
+  keywords: ["word counter", "word count calculator", "online word count calculator", "words counter online", "word count typer", "words count calculator", "online word count tool", "online word count", "count the word", "how many words is this", "words calculation", "word count text", "word count", "words and characters count", "letter word counter", "words to characters", "character counter", "count words", "count characters", "letter count", "text stats", "word calculator", "words calculator", "calculate words"],
   alternates: { canonical: "/text-tools/word-counter" },
   openGraph: {
     title: "Word Count Calculator - Free Word Counter Online | ToolZoneX",
@@ -46,6 +46,16 @@ const faqSchema = {
       "@type": "Question",
       "name": "How do I calculate the number of words in a document?",
       "acceptedAnswer": { "@type": "Answer", "text": "Paste the full text into the box above — there's no length limit, and the word count updates instantly without needing to open Word or Google Docs." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many words is this text?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Paste it into the box above — the word count (along with character, sentence, and paragraph counts) appears immediately, updating live as you edit." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert words to characters?",
+      "acceptedAnswer": { "@type": "Answer", "text": "There's no fixed ratio since word length varies, but English averages roughly 5-6 characters per word including the space after it — so 300 words is typically around 1,500-1,800 characters. For an exact count of your own text, paste it above and read the word and character counts side by side." }
     }
   ]
 };

@@ -128,13 +128,15 @@ const MailtoLinkGenerator = () => {
     <>
       <Typography variant="h2">What is a mailto link?</Typography>
       <Typography variant="body1">
-        A mailto link is a special HTML link that opens the user's default email client when clicked. 
-        It can pre-fill recipient email, subject line, body text, CC, and BCC fields automatically.
+        A mailto link is a special HTML link that opens the user's default email client when clicked.
+        It can pre-fill recipient email, subject line, body text, CC, and BCC fields automatically. This
+        <strong> mailto link generator</strong> — also searched for as a mailto link creator, mail to generator,
+        or email mailto generator — builds that link for you so you don't have to hand-write and URL-encode it.
       </Typography>
 
       <Typography variant="h2">How to generate a mailto link?</Typography>
       <Typography variant="body1">
-        Enter the recipient's email address and optionally add subject, body, CC, and BCC fields. 
+        Enter the recipient's email address and optionally add subject, body, CC, and BCC fields.
         Click "Generate Link" to create your mailto link. You can then copy the link and use it in your website or documents.
       </Typography>
 
@@ -159,6 +161,25 @@ const MailtoLinkGenerator = () => {
       <Typography variant="body1">
         No — clicking a mailto link opens the visitor&apos;s default email app with a pre-filled draft; they
         still need to hit send themselves.
+      </Typography>
+      <Typography variant="h3">Will this work as a link creator for Gmail?</Typography>
+      <Typography variant="body1">
+        This tool generates a standard <code>mailto:</code> link, not a Gmail-specific compose URL. If the
+        person clicking the link has Gmail set as their device&apos;s default mail handler (or uses Gmail&apos;s
+        browser extension for mailto links), it will open a Gmail compose window — otherwise it opens whatever
+        email client is set as default. It isn&apos;t a dedicated Gmail link generator, but it works with
+        Gmail wherever Gmail is the default handler.
+      </Typography>
+      <Typography variant="h3">Do I need to fill in every field?</Typography>
+      <Typography variant="body1">
+        No — only the recipient email address is required. Subject, body, CC, and BCC are all optional; leave
+        any of them blank and they&apos;re simply omitted from the generated link.
+      </Typography>
+      <Typography variant="h3">Can I use this mailto link creator on my website?</Typography>
+      <Typography variant="body1">
+        Yes — paste the generated link as the <code>href</code> of an <code>&lt;a&gt;</code> tag (or a button)
+        on your site. Clicking it opens the visitor&apos;s email client with the recipient, subject, and body
+        already filled in.
       </Typography>
     </>
   );

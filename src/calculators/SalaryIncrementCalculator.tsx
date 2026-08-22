@@ -74,6 +74,18 @@ const SalaryIncrementCalculator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How do I use this as a CTC increment calculator?</Typography>
+      <Typography variant="body1">
+        Enter your current CTC and the increment percentage you were offered — the calculator multiplies your
+        current CTC by that percentage to get the increment amount, then adds it back to show your new CTC and
+        its monthly equivalent, exactly as used above.
+      </Typography>
+      <Typography variant="h3">How is increment percentage on CTC calculated?</Typography>
+      <Typography variant="body1">
+        Increment percentage = (New CTC − Current CTC) ÷ Current CTC × 100. If you already know your old and new
+        CTC and want the percentage rather than the new amount, subtract the two figures, divide by the old CTC,
+        and multiply by 100.
+      </Typography>
       <Typography variant="h3">Is CTC the same as my take-home salary?</Typography>
       <Typography variant="body1">
         No — CTC (Cost to Company) includes your gross salary plus employer contributions like PF and

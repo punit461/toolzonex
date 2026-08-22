@@ -126,16 +126,17 @@ const TextSizeCalculatorContent = () => {
 const TextSizeCalculator = () => {
   const content = (
     <>
-      <Typography variant="h2">What is text analysis?</Typography>
+      <Typography variant="h2">What is text size analysis?</Typography>
       <Typography variant="body1">
-        Text analysis provides detailed statistics about written content, including character count, 
-        word count, sentence count, paragraph count, and estimated reading/speaking time.
+        Text size analysis provides detailed statistics about written content, including character count,
+        word count, byte size, sentence count, paragraph count, and estimated reading/speaking time.
       </Typography>
 
-      <Typography variant="h2">How to analyze text?</Typography>
+      <Typography variant="h2">How to check text size online</Typography>
       <Typography variant="body1">
-        Paste or type your text into the input field. The tool instantly displays statistics including 
-        character count (with and without spaces), word count, sentence count, paragraphs, lines, and estimated reading time.
+        Paste or type your text into the input field. The tool instantly displays statistics including
+        character count (with and without spaces), word count, byte size, sentence count, paragraphs, lines,
+        and estimated reading time — all calculated locally in your browser.
       </Typography>
 
       <Typography variant="h2">Use cases for text analysis</Typography>
@@ -155,6 +156,18 @@ const TextSizeCalculator = () => {
       </Typography>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How do I check text size online?</Typography>
+      <Typography variant="body1">
+        Paste or type your text into the box above — character count (with and without spaces), word count,
+        sentence count, paragraphs, lines, byte size, and estimated reading/speaking time all calculate
+        instantly, with nothing uploaded to a server.
+      </Typography>
+      <Typography variant="h3">What counts as "text size" — words, characters, or bytes?</Typography>
+      <Typography variant="body1">
+        This tool measures all three: character count (with and without spaces), word count, and the actual
+        byte size of the text (useful for checking limits in databases, APIs, or file uploads), alongside
+        sentence, paragraph, and line counts.
+      </Typography>
       <Typography variant="h3">Does the reading time estimate account for different reading speeds?</Typography>
       <Typography variant="body1">
         It uses an average adult reading speed (roughly 200-250 words per minute); actual reading time will
@@ -165,8 +178,8 @@ const TextSizeCalculator = () => {
 
   return (
     <CalculatorShell
-      title="Text Size Calculator"
-      description="Analyze text with character count, word count, reading time and more. Free online text analyzer tool."
+      title="Text Size Calculator - Check Text Size Online"
+      description="Check text size online: character count, word count, byte size, and reading time. Free online text analyzer tool."
       url="/tools/text-size-calculator"
       content={content}
       category="Tools"

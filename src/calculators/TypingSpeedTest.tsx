@@ -176,6 +176,8 @@ const TypingSpeedTest = () => {
         <ul>
           <li>Practicing to improve typing speed and accuracy over time.</li>
           <li>Testing typing skills for a job application or self-assessment.</li>
+          <li>Quickly checking your WPM before a timed data-entry or transcription job.</li>
+          <li>Warming up your fingers and finding your baseline WPM before a longer practice session.</li>
         </ul>
       </Box>
 
@@ -183,6 +185,24 @@ const TypingSpeedTest = () => {
       <Typography variant="h3">What&apos;s a good typing speed?</Typography>
       <Typography variant="body1">
         The average typist reaches 40 WPM; professional typists often exceed 65-75 WPM.
+      </Typography>
+      <Typography variant="h3">How do I check my WPM?</Typography>
+      <Typography variant="body1">
+        Just start typing the highlighted passage above — the 60-second timer starts on your first keystroke,
+        and your WPM and accuracy update live as you type, so you can check your WPM without clicking anything
+        extra.
+      </Typography>
+      <Typography variant="h3">How can I measure my typing speed accurately?</Typography>
+      <Typography variant="body1">
+        Type naturally for the full 60 seconds rather than stopping early — WPM is measured over the whole test
+        window using the standard 5-keystrokes-per-word convention, so a longer, uninterrupted run gives a more
+        accurate reading than a few quick words. Run it a few times and take the average, since typing speed
+        naturally varies test to test.
+      </Typography>
+      <Typography variant="h3">Is there a quick WPM checker I can use right now?</Typography>
+      <Typography variant="body1">
+        Yes — this page is a free, instant WPM checker. No sign-up, no download: click into the text box and
+        start typing to find your WPM in under a minute.
       </Typography>
 
       <Typography variant="h2">Example</Typography>

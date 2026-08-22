@@ -121,6 +121,12 @@ const TextRepeater = () => {
       </Typography>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">Can I use this as a name multiplier or sentence multiplier?</Typography>
+      <Typography variant="body1">
+        Yes — this tool works as a general text multiplier, so it doubles as a name multiplier (repeating a
+        single name many times) or a sentence multiplier (repeating a full sentence). Just type the name or
+        sentence in the input box and set how many times to multiply text.
+      </Typography>
       <Typography variant="h3">Is there a limit to how many times I can repeat text?</Typography>
       <Typography variant="body1">
         The tool supports very high repeat counts, though extremely large outputs may take a moment to render

@@ -94,7 +94,7 @@ const DuplicatesRemover = () => {
 
       <Typography variant="h2">Why remove duplicates?</Typography>
       <Typography variant="body1">
-        When dealing with large datasets, mailing lists, SEO keywords, or inventory codes, duplicate entries can cause errors, spam, or inflated metrics. This free online tool helps you clean up your lists instantly without needing complex spreadsheet formulas.
+        When dealing with large datasets, mailing lists, SEO keywords, or inventory codes, duplicate entries can cause errors, spam, or inflated metrics. This free online tool helps you clean up your lists instantly without needing complex spreadsheet formulas — a quick way to remove duplicates from a list online, whether that list is names, emails, or duplicate numbers.
       </Typography>
 
       <Typography variant="h2">Example</Typography>
@@ -112,6 +112,22 @@ const DuplicatesRemover = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">How do I remove duplicates from a list online?</Typography>
+      <Typography variant="body1">
+        Paste your list into the input box (one item per line) and click &quot;Remove Duplicate Lines&quot;.
+        This tool works entirely in your browser, so there&apos;s nothing to install and nothing is uploaded —
+        it&apos;s a fast way to remove duplicates from a list online for free.
+      </Typography>
+      <Typography variant="h3">How do I delete duplicates online for free?</Typography>
+      <Typography variant="body1">
+        This page is free to use with no sign-up: paste your text, click the button, and copy the cleaned
+        result. It works for any plain-text list — names, emails, keywords, or codes.
+      </Typography>
+      <Typography variant="h3">Can I remove duplicate numbers with this tool?</Typography>
+      <Typography variant="body1">
+        Yes — put one number per line and the tool removes duplicate numbers the same way it removes duplicate
+        words or lines, keeping only the first occurrence of each.
+      </Typography>
       <Typography variant="h3">Is this case-sensitive?</Typography>
       <Typography variant="body1">
         By default duplicates are matched exactly as typed — &quot;Apple&quot; and &quot;apple&quot; are treated

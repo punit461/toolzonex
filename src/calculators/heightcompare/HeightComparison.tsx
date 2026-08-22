@@ -477,8 +477,10 @@ const HeightComparison = () => {
     <>
       <Typography variant="h2">How to Use the Height Comparison Tool</Typography>
       <Typography variant="body1">
-        This tool is built to be quick to pick up: no sign-up, no complicated settings, just add
-        entries and read the chart. Here&apos;s the whole workflow in three steps.
+        This height comparer is built to be quick to pick up: no sign-up, no complicated settings, just add
+        entries and read the chart of proportionally scaled bars. Use it as a general height comparison website
+        for comparing size and size proportions between any two or more things — people, animals, vehicles, or
+        landmarks. Here&apos;s the whole workflow in three steps.
       </Typography>
       <Typography variant="h3" sx={{ mt: 2 }}>Step 1: Add your people or reference objects</Typography>
       <Box sx={{ typography: 'body1' }}>
@@ -547,6 +549,8 @@ const HeightComparison = () => {
           <li><strong>Can I see centimeters and feet/inches at the same time?</strong> Yes -- the chart always shows both a cm axis and a ft/in axis together, regardless of which unit you&apos;re typing values in.</li>
           <li><strong>Can I customize the color of each entry?</strong> Yes, click the color dot next to any entry to choose from the palette or set a custom color.</li>
           <li><strong>Can I save or share my comparison?</strong> Yes, use the Download PNG button to export the chart as an image you can save or share anywhere.</li>
+          <li><strong>Can I compare average female and male height side by side?</strong> Yes &mdash; search the preset library for &quot;Average Adult Female&quot; and &quot;Average Adult Male&quot; (US and World averages are both included), add them both to the chart, and the tool renders a female and male height comparison with proportionally scaled bars.</li>
+          <li><strong>Is this the same as a general size comparison maker?</strong> This tool focuses specifically on height (vertical size), not full 2D/3D size or scale comparisons &mdash; it works as a height comparison website for people, animals, vehicles, and objects, using proportionally scaled bars rather than silhouette overlays.</li>
           <li><strong>Do I need to create an account?</strong> No. The tool is free and works entirely in your browser -- nothing is saved or uploaded unless you choose to download the PNG.</li>
           <li><strong>Is there a limit to how tall or short something can be?</strong> No hard limit -- the chart scales to whatever you add, from a house cat to a skyscraper.</li>
           <li><strong>Does it work on mobile?</strong> Yes, the tool is fully responsive and works on phones, tablets, and desktops.</li>

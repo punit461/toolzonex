@@ -76,9 +76,11 @@ const VATCalculator = () => {
       <Typography variant="h2">How VAT is calculated</Typography>
       <Typography variant="body1">
         VAT (Value Added Tax) is a consumption tax applied at each stage of the supply chain in the UK, EU, and
-        many other countries. To <strong>add VAT</strong> to a net (pre-tax) price: multiply by the rate and add
-        it to the original amount. To <strong>remove VAT</strong> from a gross (VAT-inclusive) price: divide the
-        gross amount by (1 + rate) to find the net amount, then subtract.
+        many other countries. This tool works as both a <strong>net VAT calculator</strong> — add VAT to a net
+        (pre-tax) price by multiplying by the rate and adding it to the original amount — and an{' '}
+        <strong>exclude VAT calculator</strong> or vat included calculator, which removes VAT from a
+        VAT-inclusive gross price by dividing the gross amount by (1 + rate) to find the net amount, then
+        subtracting to get the VAT portion.
       </Typography>
       <Box sx={{ my: 2, p: 2, bgcolor: 'action.hover', borderRadius: 1, fontFamily: 'monospace', fontSize: '0.9rem' }}>
         Add VAT: Gross = Net × (1 + Rate)<br />
@@ -88,15 +90,19 @@ const VATCalculator = () => {
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">
         A UK product priced at £100 (net) with 20% standard VAT becomes £120 (gross). Working backwards, a
-        £120 gross price at 20% VAT has a net price of £100 and £20 of VAT included.
+        £120 gross price at 20% VAT has a net price of £100 and £20 of VAT included. As a smaller example,
+        a £10 net price at 20% VAT has a VAT amount of £2, making the gross total £12 — and a £400 net
+        price at 20% VAT has a VAT amount of £80, making the gross total £480.
       </Typography>
 
       <Typography variant="h2">Common Use Cases</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
-          <li>Working out the VAT-inclusive price to quote customers.</li>
+          <li>Working out the VAT-inclusive (gross) price to quote customers.</li>
           <li>Extracting the net price and VAT amount from a receipt or invoice.</li>
           <li>Comparing prices across countries with different VAT rates.</li>
+          <li>Working out the VAT amount on a quote or invoice, such as &quot;5500 plus VAT&quot;.</li>
+          <li>Checking the VAT portion separately from import duty when costing goods from abroad.</li>
         </ul>
       </Box>
 
@@ -116,6 +122,43 @@ const VATCalculator = () => {
       <Typography variant="body1">
         Switch to &quot;Remove VAT&quot; mode above and enter the gross (VAT-inclusive) figure — the calculator
         divides it by (1 + rate) to show the net price and the VAT amount separately.
+      </Typography>
+      <Typography variant="h3">How do I add VAT to a price?</Typography>
+      <Typography variant="body1">
+        Select &quot;Add VAT&quot; mode, enter the net amount excluding VAT, and choose the correct rate — the
+        calculator multiplies the net price by the VAT rate and adds it to give the VAT-inclusive gross total.
+        For example, adding 20% UK VAT to £5,500 (&quot;5500 plus VAT&quot;) comes to £6,600.
+      </Typography>
+      <Typography variant="h3">How do I remove VAT from a price?</Typography>
+      <Typography variant="body1">
+        Select &quot;Remove VAT&quot; mode and enter the gross (VAT-inclusive) price. The calculator divides it
+        by (1 + rate) to give you the price excluding VAT — the net amount — along with the VAT portion that
+        was included in the original figure.
+      </Typography>
+      <Typography variant="h3">What&apos;s the difference between net, VAT, and gross amounts?</Typography>
+      <Typography variant="body1">
+        The <strong>net</strong> amount excludes VAT — it&apos;s the price before tax. The <strong>gross</strong>{' '}
+        amount is VAT-inclusive (net + VAT), which is what is meant by &quot;net of VAT&quot; and what a vat
+        included calculator or net VAT calculator shows side by side once you enter your figure.
+      </Typography>
+      <Typography variant="h3">How is VAT calculated as a percentage?</Typography>
+      <Typography variant="body1">
+        VAT is calculated by multiplying the net price by the VAT rate as a decimal (rate ÷ 100). For example,
+        the VAT amount on £10 at the UK&apos;s 20% rate is £10 × 0.20 = £2, and VAT on £400 works out to £80.
+        The formula is: VAT amount = Net price × (Rate ÷ 100).
+      </Typography>
+      <Typography variant="h3">Does this calculator include import duty?</Typography>
+      <Typography variant="body1">
+        No — this is a VAT calculator, not a combined duty and VAT calculator. Import duty (customs duty) is a
+        separate charge based on the goods&apos; commodity code and country of origin, worked out independently
+        of VAT. If you&apos;re importing goods, check the duty rate with your customs authority first, then use
+        this tool to calculate the VAT amount on top.
+      </Typography>
+      <Typography variant="h3">Can I use a custom VAT rate, like 5%?</Typography>
+      <Typography variant="body1">
+        Yes — click &quot;Use a custom rate instead&quot; below the amount field and enter any percentage, such
+        as 5% for a reduced rate, and the calculator will add or remove VAT using that figure instead of the
+        selected country&apos;s standard rate.
       </Typography>
     </>
   );
