@@ -19,6 +19,7 @@ const MAJOR_CURRENCIES = [
   { code: 'SGD', label: 'Singapore Dollar (SGD)' },
   { code: 'NZD', label: 'New Zealand Dollar (NZD)' },
   { code: 'HKD', label: 'Hong Kong Dollar (HKD)' },
+  { code: 'KRW', label: 'South Korean Won (KRW)' },
 ];
 
 const CurrencyConverter = () => {
@@ -85,6 +86,11 @@ const CurrencyConverter = () => {
         you change the &quot;From&quot; currency, and are cached for the session so switching the
         &quot;To&quot; currency doesn&apos;t trigger another network request.
       </Typography>
+      <Alert severity="info" sx={{ my: 2 }}>
+        Exchange rates on this page refresh once per day (not tick-by-tick), so the figure shown is a close
+        estimate rather than a live market feed. For a dedicated Korean Won calculator with quick preset
+        amounts, see the <a href="/finance/krw-to-usd-converter">KRW to USD converter</a>.
+      </Alert>
 
       <Typography variant="h2">Formula</Typography>
       <Box sx={{ my: 2, p: 2, bgcolor: 'action.hover', borderRadius: 1, fontFamily: 'monospace', fontSize: '0.9rem' }}>
