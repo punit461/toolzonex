@@ -144,6 +144,7 @@ const remainingTools: { slug: string; name: string; route: string; category: Too
   { slug: 'volume-converter', name: 'Volume Converter', route: '/converters/volume-converter', category: 'tools' },
   { slug: 'weight-converter', name: 'Weight Converter', route: '/converters/weight-converter', category: 'tools' },
   // Finance
+  { slug: 'currency-converter', name: 'Currency Converter', route: '/finance/currency-converter', category: 'finance' },
   { slug: '401k-calculator', name: '401(k) Calculator', route: '/finance/401k-calculator', category: 'finance' },
   { slug: 'vat-calculator', name: 'VAT Calculator', route: '/finance/vat-calculator', category: 'finance' },
   { slug: 'mortgage-calculator', name: 'US Mortgage Calculator', route: '/finance/mortgage-calculator', category: 'finance' },
