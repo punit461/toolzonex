@@ -36,7 +36,7 @@ const CurrencyConverter = () => {
     setLoading(true);
     setError(null);
 
-    fetch(`https://api.frankfurter.app/latest?from=${fromCurrency}`)
+    fetch(`https://api.frankfurter.dev/v1/latest?from=${fromCurrency}`)
       .then((res) => {
         if (!res.ok) throw new Error('Request failed');
         return res.json();
