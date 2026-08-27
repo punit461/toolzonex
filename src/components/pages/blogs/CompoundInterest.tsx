@@ -26,6 +26,8 @@ const CompoundInterest = () => {
       url="/blog/power-of-compound-interest"
       date="May 2026"
       relatedTools={relatedTools}
+      slug="power-of-compound-interest"
+      category="finance"
     >
       <Typography variant="body1">
         "Compound interest is the eighth wonder of the world. He who understands it, earns it... he who doesn't... pays it." — often attributed to Albert Einstein.

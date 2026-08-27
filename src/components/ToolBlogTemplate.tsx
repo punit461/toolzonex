@@ -7,6 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import BlogShell from './BlogShell';
 import AdSenseUnit from './AdSenseUnit';
+import RelatedArticles from './RelatedArticles';
 import type { ToolBlogMeta } from '../data/tool-blogs';
 
 interface Props {
@@ -113,6 +114,8 @@ const ToolBlogTemplate = ({ blog }: Props) => {
       </Box>
 
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
+
+      <RelatedArticles currentSlug={blog.slug} category={blog.category} />
     </BlogShell>
   );
 };

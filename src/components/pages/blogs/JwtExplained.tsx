@@ -21,6 +21,8 @@ const JwtExplained = () => {
       url="/blog/jwt-explained"
       date="August 2026"
       relatedTools={relatedTools}
+      slug="jwt-explained"
+      category="tools"
     >
       <Typography variant="body1">
         A JSON Web Token looks like a wall of gibberish — <code>eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NSJ9.abc123</code>

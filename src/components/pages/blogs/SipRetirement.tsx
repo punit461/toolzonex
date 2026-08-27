@@ -26,6 +26,8 @@ const SipRetirement = () => {
       url="/blog/sip-early-retirement"
       date="April 2026"
       relatedTools={relatedTools}
+      slug="sip-early-retirement"
+      category="finance"
     >
       <Typography variant="body1">
         Retiring early isn't just a pipe dream for the ultra-wealthy. With the right strategy and a disciplined approach, anyone can achieve financial independence and retire early (FIRE). In India, one of the most effective tools for building this kind of wealth is the Systematic Investment Plan (SIP) in mutual funds.

@@ -21,6 +21,8 @@ const UnderstandingGratuity = () => {
       url="/blog/understanding-gratuity-india"
       date="May 2026"
       relatedTools={relatedTools}
+      slug="understanding-gratuity-india"
+      category="finance"
     >
       <Typography variant="body1">
         Gratuity is a financial reward provided by an employer to an employee for rendering continuous service for a certain period. It acts as a significant financial buffer when you switch jobs or retire, but many employees don't fully understand how it works.

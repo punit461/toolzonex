@@ -21,6 +21,8 @@ const OldVsNewTax = () => {
       url="/blog/old-vs-new-tax-regime"
       date="April 2026"
       relatedTools={relatedTools}
+      slug="old-vs-new-tax-regime"
+      category="finance"
     >
       <Typography variant="body1">
         Filing income tax returns in India comes with a major decision: Should you opt for the Old Tax Regime or the New Tax Regime? The government introduced the New Regime to simplify taxes, but the Old Regime remains popular for its deductions. Here is how to decide which one is right for you.

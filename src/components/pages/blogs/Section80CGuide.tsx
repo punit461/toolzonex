@@ -25,6 +25,8 @@ const Section80CGuide = () => (
     url="/blog/section-80c-investment-guide"
     date="April 2026"
     relatedTools={relatedTools}
+    slug="section-80c-investment-guide"
+    category="finance"
   >
     <Typography variant="body1">
       Section 80C is the single most popular tax-saving provision in India. It allows you to deduct up to ₹1,50,000 from your taxable income by investing in or paying for a prescribed list of instruments and expenses. At a 30% tax rate with cess, this saves up to <strong>₹46,800 per year</strong>.

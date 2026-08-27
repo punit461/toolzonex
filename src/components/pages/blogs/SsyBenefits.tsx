@@ -21,6 +21,8 @@ const SsyBenefits = () => {
       url="/blog/sukanya-samriddhi-yojana-benefits"
       date="May 2026"
       relatedTools={relatedTools}
+      slug="sukanya-samriddhi-yojana-benefits"
+      category="finance"
     >
       <Typography variant="body1">
         Launched under the Government of India's "Beti Bachao, Beti Padhao" campaign, the Sukanya Samriddhi Yojana (SSY) is one of the most powerful tax-saving investment schemes available today. It is exclusively designed to help parents build a substantial corpus for their daughter's higher education and marriage.

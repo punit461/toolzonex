@@ -20,6 +20,8 @@ const HraExemption = () => (
     url="/blog/hra-exemption-calculation"
     date="April 2026"
     relatedTools={relatedTools}
+    slug="hra-exemption-calculation"
+    category="finance"
   >
     <Typography variant="body1">
       For salaried employees living in rented accommodation, HRA exemption can save tens of thousands in taxes each year. However, the calculation involves three competing limits — and the least of the three wins.

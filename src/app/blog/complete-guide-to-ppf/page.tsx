@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PpfGuide from "../../../components/pages/blogs/PpfGuide";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog/complete-guide-to-ppf`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Complete Guide to PPF - Public Provident Fund | ToolZoneX",
+    description: "Everything you need to know about investing in the Public Provident Fund.",
+    images: [`${SITE_URL}/og-image.jpg`],
+    creator: "@toolzonex",
   },
 };
 
@@ -40,6 +48,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ppfGuideSchema) }}
       />
+      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "Complete Guide to PPF" }]} />
       <PpfGuide />
     </>
   );

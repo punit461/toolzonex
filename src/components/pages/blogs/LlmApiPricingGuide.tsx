@@ -26,6 +26,8 @@ const LlmApiPricingGuide = () => {
       url="/blog/llm-api-pricing-guide"
       date="August 2026"
       relatedTools={relatedTools}
+      slug="llm-api-pricing-guide"
+      category="tools"
     >
       <Typography variant="body1">
         If you&apos;ve ever been surprised by an OpenAI, Anthropic, or Google Gemini bill, it&apos;s usually

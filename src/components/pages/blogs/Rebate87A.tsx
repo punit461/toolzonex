@@ -20,6 +20,8 @@ const Rebate87A = () => (
     url="/blog/section-87a-rebate-guide"
     date="April 2026"
     relatedTools={relatedTools}
+    slug="section-87a-rebate-guide"
+    category="finance"
   >
     <Typography variant="body1">
       Section 87A is one of the most powerful but misunderstood provisions in Indian income tax law. It allows eligible taxpayers to receive a rebate that can reduce their entire tax liability to zero. For FY 2025-26, the New Regime has made this even more generous.

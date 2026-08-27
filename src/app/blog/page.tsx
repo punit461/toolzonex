@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BlogList from "../../components/pages/BlogList";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog`,
     type: "website",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Personal Finance & Health Blog - Expert Guides & Tips | ToolZoneX",
+    description: "Expert guides and tips on taxation, saving, investments, and health.",
+    images: [`${SITE_URL}/og-image.jpg`],
+    creator: "@toolzonex",
   },
 };
 
@@ -37,6 +45,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListingSchema) }}
       />
+      <Breadcrumbs items={[{ label: "Blog" }]} />
       <BlogList />
     </>
   );

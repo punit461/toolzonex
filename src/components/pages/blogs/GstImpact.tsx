@@ -21,6 +21,8 @@ const GstImpact = () => {
       url="/blog/understanding-gst"
       date="March 2026"
       relatedTools={relatedTools}
+      slug="understanding-gst"
+      category="finance"
     >
       <Typography variant="body1">
         The Goods and Services Tax (GST) was introduced in India to replace a complex web of indirect taxes like VAT, Service Tax, and Excise Duty. While it aimed for "One Nation, One Tax," its implementation has significantly changed how small businesses operate.

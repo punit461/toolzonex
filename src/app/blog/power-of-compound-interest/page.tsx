@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CompoundInterest from "../../../components/pages/blogs/CompoundInterest";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog/power-of-compound-interest`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Power of Compound Interest | ToolZoneX",
+    description: "How compounding works and why starting early is the key to wealth generation.",
+    images: [`${SITE_URL}/og-image.jpg`],
+    creator: "@toolzonex",
   },
 };
 
@@ -40,6 +48,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(compoundInterestSchema) }}
       />
+      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "The Power of Compound Interest" }]} />
       <CompoundInterest />
     </>
   );
