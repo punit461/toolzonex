@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HraExemption from "../../../components/pages/blogs/HraExemption";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog/hra-exemption-calculation`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HRA Exemption Calculation - Complete Guide | ToolZoneX",
+    description: "Step-by-step guide to calculating House Rent Allowance exemption.",
+    images: [`${SITE_URL}/og-image.jpg`],
+    creator: "@toolzonex",
   },
 };
 
@@ -40,6 +48,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(hraExemptionSchema) }}
       />
+      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "HRA Exemption Calculation" }]} />
       <HraExemption />
     </>
   );

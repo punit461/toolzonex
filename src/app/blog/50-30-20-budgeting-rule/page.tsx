@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BudgetingRule from "../../../components/pages/blogs/BudgetingRule";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog/50-30-20-budgeting-rule`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The 50/30/20 Budgeting Rule - Complete Guide | ToolZoneX",
+    description: "Learn how to manage your money effectively using the 50/30/20 budgeting rule.",
+    images: [`${SITE_URL}/og-image.jpg`],
+    creator: "@toolzonex",
   },
 };
 
@@ -40,6 +48,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(budgetingRuleSchema) }}
       />
+      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "The 50/30/20 Budgeting Rule Explained" }]} />
       <BudgetingRule />
     </>
   );

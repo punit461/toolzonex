@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Rebate87A from "../../../components/pages/blogs/Rebate87A";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog/section-87a-rebate-guide`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Section 87A Rebate Guide - How to Pay Zero Income Tax | ToolZoneX",
+    description: "How to claim zero tax using Section 87A rebate.",
+    images: [`${SITE_URL}/og-image.jpg`],
+    creator: "@toolzonex",
   },
 };
 
@@ -40,6 +48,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(section87ASchema) }}
       />
+      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "Section 87A Rebate Guide" }]} />
       <Rebate87A />
     </>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import TermsOfService from "../../components/pages/TermsOfService";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -15,8 +16,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service - ToolZoneX",
+    description: "Terms and conditions for using ToolZoneX tools and calculators.",
+    images: [`${SITE_URL}/og-image.jpg`],
+    creator: "@toolzonex",
+  },
 };
 
 export default function Page() {
-  return <TermsOfService />;
+  return (
+    <>
+      <Breadcrumbs items={[{ label: "Terms of Service" }]} />
+      <TermsOfService />
+    </>
+  );
 }

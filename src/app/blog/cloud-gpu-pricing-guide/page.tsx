@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CloudGpuPricingGuide from "../../../components/pages/blogs/CloudGpuPricingGuide";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog/cloud-gpu-pricing-guide`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cloud GPU Pricing Explained: Community Cloud vs. Hyperscalers | ToolZoneX",
+    description: "The same GPU can cost 3x more depending on where you rent it — here's why, and how to think about the tradeoff.",
+    images: [`${SITE_URL}/og-image.jpg`],
+    creator: "@toolzonex",
   },
 };
 
@@ -40,6 +48,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "Cloud GPU Pricing Guide" }]} />
       <CloudGpuPricingGuide />
     </>
   );

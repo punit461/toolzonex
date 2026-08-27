@@ -4,8 +4,5 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 
-# Sitemap location
+# Sitemaps
 Sitemap: https://toolzonex.com/sitemap.xml
-
-# Crawl delay (optional, be nice to servers)
-Crawl-delay: 1

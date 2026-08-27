@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import OldVsNewTax from "../../../components/pages/blogs/OldVsNewTax";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog/old-vs-new-tax-regime`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Old vs New Tax Regime: Which is Better? | ToolZoneX",
+    description: "A comprehensive comparison to help you choose the best tax regime.",
+    images: [`${SITE_URL}/og-image.jpg`],
+    creator: "@toolzonex",
   },
 };
 
@@ -40,6 +48,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(oldVsNewTaxSchema) }}
       />
+      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "Old vs New Tax Regime: Which is Better for You?" }]} />
       <OldVsNewTax />
     </>
   );

@@ -30,6 +30,8 @@ const BudgetingRule = () => {
       url="/blog/50-30-20-budgeting-rule"
       date="March 2026"
       relatedTools={relatedTools}
+      slug="50-30-20-budgeting-rule"
+      category="finance"
     >
       <Typography variant="body1">
         Budgeting doesn't have to mean tracking every single penny on a complicated spreadsheet. If you find traditional budgeting overwhelming, the 50/30/20 rule is the perfect starting point for taking control of your finances.

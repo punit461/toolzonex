@@ -26,6 +26,8 @@ const RentingVsBuying = () => {
       url="/blog/renting-vs-buying-home"
       date="May 2026"
       relatedTools={relatedTools}
+      slug="renting-vs-buying-home"
+      category="finance"
     >
       <Typography variant="body1">
         The "Rent vs Buy" debate is one of the most emotional financial discussions in India. For generations, buying a home has been seen as the ultimate symbol of security. However, changing economic realities and rising real estate prices are making many millennials rethink this paradigm.

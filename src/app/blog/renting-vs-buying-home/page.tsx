@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import RentingVsBuying from "../../../components/pages/blogs/RentingVsBuying";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog/renting-vs-buying-home`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Renting vs Buying a Home - Financial Analysis | ToolZoneX",
+    description: "Financial analysis to help you decide between renting and buying real estate.",
+    images: [`${SITE_URL}/og-image.jpg`],
+    creator: "@toolzonex",
   },
 };
 
@@ -40,6 +48,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(rentingVsBuyingSchema) }}
       />
+      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "Renting vs Buying a Home" }]} />
       <RentingVsBuying />
     </>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CronSyntaxCheatsheet from "../../../components/pages/blogs/CronSyntaxCheatsheet";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog/cron-syntax-cheatsheet`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cron Syntax Cheatsheet: How to Read Any Crontab Schedule | ToolZoneX",
+    description: "Five fields, one order — a complete reference for reading and writing cron expressions.",
+    images: [`${SITE_URL}/og-image.jpg`],
+    creator: "@toolzonex",
   },
 };
 
@@ -40,6 +48,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "Cron Syntax Cheatsheet" }]} />
       <CronSyntaxCheatsheet />
     </>
   );

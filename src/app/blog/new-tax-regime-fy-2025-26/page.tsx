@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import NewRegime2025 from "../../../components/pages/blogs/NewRegime2025";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog/new-tax-regime-fy-2025-26`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "New Tax Regime FY 2025-26 - Latest Changes | ToolZoneX",
+    description: "Latest changes and slabs in the new tax regime for FY 2025-26.",
+    images: [`${SITE_URL}/og-image.jpg`],
+    creator: "@toolzonex",
   },
 };
 
@@ -40,6 +48,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(newTaxRegimeSchema) }}
       />
+      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "New Tax Regime FY 2025-26" }]} />
       <NewRegime2025 />
     </>
   );

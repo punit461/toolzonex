@@ -26,6 +26,8 @@ const PpfGuide = () => {
       url="/blog/complete-guide-to-ppf"
       date="May 2026"
       relatedTools={relatedTools}
+      slug="complete-guide-to-ppf"
+      category="finance"
     >
       <Typography variant="body1">
         Despite the rise of mutual funds and direct equity investing, the Public Provident Fund (PPF) remains a cornerstone of the average Indian's retirement portfolio. But what makes it so special?

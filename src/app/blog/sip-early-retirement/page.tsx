@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SipRetirement from "../../../components/pages/blogs/SipRetirement";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog/sip-early-retirement`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How to Use SIP for Early Retirement | ToolZoneX",
+    description: "Learn how to leverage SIPs to achieve financial independence and retire early.",
+    images: [`${SITE_URL}/og-image.jpg`],
+    creator: "@toolzonex",
   },
 };
 
@@ -40,6 +48,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(sipRetirementSchema) }}
       />
+      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "How to Use SIP for Early Retirement" }]} />
       <SipRetirement />
     </>
   );

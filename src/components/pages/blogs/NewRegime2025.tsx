@@ -20,6 +20,8 @@ const NewRegime2025 = () => (
     url="/blog/new-tax-regime-fy-2025-26"
     date="April 2026"
     relatedTools={relatedTools}
+    slug="new-tax-regime-fy-2025-26"
+    category="finance"
   >
     <Typography variant="body1">
       The Union Budget 2025 made the New Tax Regime significantly more attractive. If you haven't revisited your tax planning for FY 2025-26, now is the time. Here is a complete breakdown of what changed and what it means for your wallet.

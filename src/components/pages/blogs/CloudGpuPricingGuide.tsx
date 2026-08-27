@@ -26,6 +26,8 @@ const CloudGpuPricingGuide = () => {
       url="/blog/cloud-gpu-pricing-guide"
       date="August 2026"
       relatedTools={relatedTools}
+      slug="cloud-gpu-pricing-guide"
+      category="tools"
     >
       <Typography variant="body1">
         If you&apos;ve shopped for cloud GPUs to train or self-host a model, you&apos;ve probably noticed the

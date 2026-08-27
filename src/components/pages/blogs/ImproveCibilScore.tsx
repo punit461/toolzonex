@@ -20,6 +20,8 @@ const ImproveCibilScore = () => {
       url="/blog/improve-cibil-score"
       date="May 2026"
       relatedTools={relatedTools}
+      slug="improve-cibil-score"
+      category="finance"
     >
       <Typography variant="body1">
         Your CIBIL score is a three-digit number ranging from 300 to 900 that summarizes your credit history. A score above 750 is generally considered excellent and can unlock low-interest home and personal loans. But what if your score is low?

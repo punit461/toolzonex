@@ -21,6 +21,8 @@ const CronSyntaxCheatsheet = () => {
       url="/blog/cron-syntax-cheatsheet"
       date="August 2026"
       relatedTools={relatedTools}
+      slug="cron-syntax-cheatsheet"
+      category="tools"
     >
       <Typography variant="body1">
         Every cron schedule — whether it&apos;s a Linux crontab entry, a Kubernetes CronJob, or a GitHub Actions

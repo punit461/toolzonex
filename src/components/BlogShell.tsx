@@ -3,6 +3,7 @@
 import { Box, Container, Typography, Breadcrumbs, Link, Paper, Grid, Button } from '@mui/material';
 import RouterLink from 'next/link';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import RelatedArticles from './RelatedArticles';
 
 export interface RelatedTool {
   label: string;
@@ -18,11 +19,13 @@ interface BlogShellProps {
   author?: string;
   children: React.ReactNode;
   relatedTools?: RelatedTool[];
+  slug?: string;
+  category?: string;
 }
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
-const BlogShell = ({ title, description, url, date, author = "ToolZoneX Team", children, relatedTools }: BlogShellProps) => {
+const BlogShell = ({ title, description, url, date, author = "ToolZoneX Team", children, relatedTools, slug, category }: BlogShellProps) => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -130,6 +133,10 @@ const BlogShell = ({ title, description, url, date, author = "ToolZoneX Team", c
             ))}
           </Grid>
         </Box>
+      )}
+
+      {slug && category && (
+        <RelatedArticles currentSlug={slug} category={category} />
       )}
     </Container>
   );

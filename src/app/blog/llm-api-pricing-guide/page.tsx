@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LlmApiPricingGuide from "../../../components/pages/blogs/LlmApiPricingGuide";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/blog/llm-api-pricing-guide`,
     type: "article",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How Much Do LLM API Calls Actually Cost? | ToolZoneX",
+    description: "LLM pricing splits input and output tokens, and the two rarely cost the same — here's how to estimate your bill.",
+    images: [`${SITE_URL}/og-image.jpg`],
+    creator: "@toolzonex",
   },
 };
 
@@ -40,6 +48,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "LLM API Pricing Guide" }]} />
       <LlmApiPricingGuide />
     </>
   );
