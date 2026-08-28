@@ -88,8 +88,13 @@ const CurrencyConverter = () => {
       </Typography>
       <Alert severity="info" sx={{ my: 2 }}>
         Exchange rates on this page refresh once per day (not tick-by-tick), so the figure shown is a close
-        estimate rather than a live market feed. For a dedicated Korean Won calculator with quick preset
-        amounts, see the <a href="/finance/krw-to-usd-converter">KRW to USD converter</a>.
+        estimate rather than a live market feed. For a dedicated calculator with quick preset amounts, see the{' '}
+        <a href="/finance/krw-to-usd-converter">KRW to USD converter</a>,{' '}
+        <a href="/finance/gbp-to-inr-converter">GBP to INR converter</a>,{' '}
+        <a href="/finance/aud-to-inr-converter">AUD to INR converter</a>,{' '}
+        <a href="/finance/cad-to-inr-converter">CAD to INR converter</a>,{' '}
+        <a href="/finance/usd-to-aud-converter">USD to AUD converter</a>, or{' '}
+        <a href="/finance/usd-to-cad-converter">USD to CAD converter</a>.
       </Alert>
 
       <Typography variant="h2">Formula</Typography>

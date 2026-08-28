@@ -89,9 +89,9 @@ India search behavior skews toward **size-specific** and **brand-alternative** l
 ## Suggested Priority Order
 1. Strengthen the 5 near-page-1 pages in Phase 1 (fastest ROI, no new build).
 2. Retarget the BMR calculator page at the `bmr calculator` head term (110k vol @ KD 25 — biggest single opportunity).
-3. Ship GPA/CGPA calculator alongside SGPA, targeting VIT and Indian-university phrasing.
-4. Add CSS/HTML minifier + JS/CSS/HTML beautifier as siblings to the existing JS minifier.
-5. Split the PDF tool into size-specific compress/merge/split landing pages rather than one generic page.
+3. ✅ **Done (2026-08-28, via `tools-gap-analysis-roadmap.md` Phase 3):** GPA (`/utilities/gpa-calculator`) and CGPA (`/utilities/cgpa-calculator`) calculators shipped alongside the existing SGPA calculator. Indian-university phrasing (VIT, percentage↔GPA) not yet specifically targeted in their copy — worth a follow-up pass if this is still a priority.
+4. ✅ **Done (2026-08-28):** CSS Beautifier, CSS Minifier, HTML Beautifier, **JS Beautifier** (`/developer-tools/javascript-beautifier`), and SQL/JSON/HTML minifiers all live — the full minifier/beautifier cluster is now shipped. Still technically missing the `unminify js/css/html` framing, but each beautifier covers the unminify use case directly.
+5. Split the PDF tool into size-specific compress/merge/split landing pages rather than one generic page — not done; `/tools/compress-pdf` shipped as one generic page (Phase 1), not size-specific variants.
 
 ## Phase 3: Category-Wide Gap Sweep (in progress, started 2026-08-26)
 
