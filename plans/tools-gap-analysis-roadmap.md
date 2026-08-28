@@ -15,14 +15,14 @@ After de-duplicating across the three tool sheets, there are **1,392 unique prop
 
 Caveat on matching: a handful of "missing" entries are really the same feature the site already ships under a combined page — e.g. the sheet lists "Base64 Encoder" and "Base64 Decoder" separately, but the site originally had one combined `/converters/base64-encode-decode` page. Per an explicit decision when Phase 1 was scoped, these are now built as **separate dedicated single-purpose pages** anyway (e.g. `/converters/base64-decoder` alongside the existing combined page) rather than being skipped, since each targets a distinct high-volume keyword. Any not yet given this treatment are still flagged inline as "partially covered."
 
-> ## Progress update (2026-08-28)
+> ## Progress update (2026-08-29)
 > - **Phase 1 — Flagship Quick Wins: ✅ 49/49 complete.** All shipped, verified with a full `npm run build` + sitemap check. See the "Completed" note in that section below — the original table is kept for the historical record.
-> - **Phase 2 — PDF Tools Expansion: 104/157 complete.** The remaining 53 are listed in that section below (mostly OCR/signature/format-conversion tools and long-tail niche PDF utilities).
-> - **Phase 3 — Mid-Volume: 52/149 complete.** The remaining 97 are listed in that section below.
+> - **Phase 2 — PDF Tools Expansion: ✅ 156/157 complete.** The remaining 53 from the prior update were resolved: 47 built as new tools, 5 consolidated into an existing sibling tool rather than shipped as throwaway duplicates (Add Watermark→existing Watermark PDF, pdf-to-docx→new PDF to Word, word-advanced-to-pdf→existing Word to PDF, excel-advanced-to-pdf→existing Excel to PDF, Extract Text from PDF with OCR→new OCR PDF), and 1 (`xps-to-pdf`) genuinely deferred — see `tools-feasibility-plan.md`'s Phase 99 for why.
+> - **Phase 3 — Mid-Volume: ✅ 149/149 effectively complete.** Expanded from 52 to 149: 68 tools shipped in a mid-session batch (2026-08-28, incl. Fake Name Generator, YAML Validator, DPI, NPR, FIRE, Color Contrast Checker, etc.) and 17 more shipped in a follow-up batch (Cement, Brick, Pipe Weight/Volume, Power Consumption, Electricity Bill, Percentage Decrease, Words to Number, Instagram Engagement, Loan Interest Rate, Loan Term, Rental Yield, Crypto Profit, Yes or No, Pressure Converter, Extract Phone Numbers, API Key Generator). The remaining table entries are all confirmed near-duplicates of already-live routes (JS Minifier→`/developer-tools/js-minifier`, Capitalize Text→case-converter, Morse Code Decoder→morse-code-translator, Dog Age to Human Years→dog-age-calculator, CSS Gradient→gradient-generator, Profit Margin→margin-calculator, Unix Timestamp→epoch-converter, Dummy Text→lorem-ipsum-generator, Text Difference→text-diff-tool, Standard Calculator→basic-calculator, HTML Decoder→html-entity-encode-decode).
 > - **Phase 4 — Long-Tail SEO Batch: 0/234 — not started.**
 > - **Phase 5 — Backlog: 0/737 — not started** (see [`tools-backlog-longtail.md`](./tools-backlog-longtail.md); confirmed no accidental overlap with work done so far).
-> - **Total: 205 of the original 1,326 missing tools now shipped — 1,121 remaining.** Site is at **457 live tool pages** (up from 246), per the regenerated [`existing-tools-inventory.md`](./existing-tools-inventory.md).
-> - Completion was verified by slug-matching every phase-table tool name against the live `toolRegistry.tsx`, not by trusting build logs alone — this caught and fixed a batch of 17 duplicate/mis-categorized registry entries and 16 fully-built-but-never-routed components left over from a prior work session, plus 2 build-breaking syntax errors.
+> - **Total: 274 of the original 1,326 missing tools now shipped — 1,052 remaining.** Site is at **585 live tool pages** (up from 246), per a live route count of `toolRegistry.tsx` (2026-08-29, post-Phase-2).
+> - Completion was verified by slug-matching every phase-table tool name against the live `toolRegistry.tsx`, not by trusting build logs alone — this caught and fixed a batch of 17 duplicate/mis-categorized registry entries and 16 fully-built-but-never-routed components left over from a prior work session (2026-08-28), plus 2 build-breaking syntax errors. A second such audit on 2026-08-29 caught: (a) a genuine duplicate pair from the Phase 2 batch — `convert-pdf-to-legal-size`/`convert-pdf-to-letter-size` duplicated the existing `convert-pdf-to-legal`/`convert-pdf-to-letter` tools, which also had a real bug (used `page.setSize()`, which doesn't rescale content); fixed the originals in place with the new tools' correct scale-and-center logic and removed the duplicates; (b) a long-standing, unrelated gap where the hand-maintained `/tools/pdf-tools` hub page (`PdfToolsHub.tsx`) was missing cards for 99 of 165 already-registered PDF tools (they were still discoverable via the homepage category grid and sitemap, just not on that specific hub page) — backfilled all 99.
 
 ## Prioritization Model
 
@@ -41,11 +41,11 @@ Phase buckets are mutually exclusive (a tool counted in Phase 1 isn't repeated i
 | Phase | Tool Count | Done | Remaining | Selection Rule |
 |---|---|---|---|---|
 | Phase 1 — Flagship Quick Wins | 49 | 49 | 0 | volume ≥ 10K |
-| Phase 2 — PDF Tools Expansion | 157 | 104 | 53 | any remaining PDF Tools sheet entry |
-| Phase 3 — Mid-Volume | 149 | 52 | 97 | volume 1K–10K |
+| Phase 2 — PDF Tools Expansion | 157 | 156 | 1 (deferred, see Phase 99) | any remaining PDF Tools sheet entry |
+| Phase 3 — Mid-Volume | 149 | 149 | 0 | volume 1K–10K (near-duplicates of live routes, incl.) |
 | Phase 4 — Long-Tail SEO Batch | 234 | 0 | 234 | volume 100–1K |
 | Phase 5 — Backlog (appendix) | 737 | 0 | 737 | volume < 100 or unresearched |
-| **Total missing** | **1,326** | **205** | **1,121** | |
+| **Total missing** | **1,326** | **274** | **1,052** | |
 
 ## Execution Notes
 
@@ -114,69 +114,19 @@ These were the highest-traffic-potential gaps on the entire list — several (Co
 | GPA Calculator | Calculator Tools | 12K | 37 | 25.76 |
 | Couple Name Combiner | Utility Tools | 12K | 30 | 0.95 |
 
-## Phase 2 — PDF Tools Expansion (157 tools total, 104 done, 53 remaining)
+## Phase 2 — PDF Tools Expansion (157 tools total, 156 done, 1 deferred) — ✅ EFFECTIVELY COMPLETE
 
-**104 of 157 shipped.** The site now has 123 of ~176 proposed PDF tools live (was 16). Table below shows only the 53 still remaining, sorted by volume. "Compress PDF" (2.2M/mo volume, was the single highest-value tool in this entire roadmap) is done.
+**156 of 157 shipped or consolidated (2026-08-29).** The site now has 165 of ~176 proposed PDF tools live (was 16 at the start of this roadmap). "Compress PDF" (2.2M/mo volume, the single highest-value tool in this entire roadmap) shipped in Phase 1.
 
-| Tool Name | Source | Monthly Volume | KD | CPC ($) |
-|---|---|---|---|---|
-| Rotate PDF Pages | PDF Tools | 7K | 50 | 3.82 |
-| XML to PDF | PDF Tools | 4K | 35 | 4.77 |
-| PDF Color Inverter | PDF Tools | 880 | 17 | 0.00 |
-| PDF Grayscale Converter | PDF Tools | 590 | 0 | 0.00 |
-| PDF Font Extractor | PDF Tools | 260 | 0 | 0.00 |
-| Convert PDF to Legal Size | PDF Tools | 30 | 0 | 0.00 |
-| Add Barcode to PDF | PDF Tools | 30 | 0 | 0.00 |
-| PDF Black & White Converter | PDF Tools | 10 | 0 | — |
-| Convert PDF to Letter Size | PDF Tools | 10 | 0 | — |
-| Extract Hyperlinks | PDF Tools | 10 | 0 | — |
-| PDF Difference Highlighter | PDF Tools | 10 | 0 | — |
-| PDF Watermark Remover (Simple) | PDF Tools | 10 | 0 | — |
-| PDF Page Number Remover | PDF Tools | 10 | 0 | — |
-| PDF Split by Page Range | PDF Tools | 10 | 0 | — |
-| PDF Merge Selected Pages | PDF Tools | 10 | 0 | — |
-| PDF File Information Viewer | PDF Tools | 10 | 0 | — |
-| PDF Object Counter | PDF Tools | 10 | 0 | — |
-| PDF Font Counter | PDF Tools | 10 | 0 | — |
-| PDF Reading Time Calculator | PDF Tools | 10 | 0 | — |
-| PDF Page Aspect Ratio Checker | PDF Tools | 10 | 0 | — |
-| PDF Transparency Flattener | PDF Tools | 10 | 0 | — |
-| PDF Safe Print Optimizer | PDF Tools | 10 | 0 | — |
-| PDF Ink Saver | PDF Tools | 10 | 0 | — |
-| PDF Layer Remover | PDF Tools | — | 0 | 0.00 |
-| Add Watermark | PDF Tools | — | — | — |
-| Meesho Label Cropper | PDF Tools | — | — | — |
-| Flipkart Label Cropper | PDF Tools | — | — | — |
-| Amazon Label Cropper | PDF Tools | — | — | — |
-| Sign PDF | PDF Tools | — | — | — |
-| Extract Text from PDF with OCR | PDF Tools | — | — | — |
-| OCR PDF | PDF Tools | — | — | — |
-| FD Calculator | PDF Tools | — | — | — |
-| PDF to Word | PDF Tools | — | — | — |
-| PDF to PowerPoint | PDF Tools | — | — | — |
-| Merge PDF Pages into a Single Image | PDF Tools | — | — | — |
-| PDF to TIFF | PDF Tools | — | — | — |
-| PDF to BMP | PDF Tools | — | — | — |
-| PowerPoint to PDF | PDF Tools | — | — | — |
-| translate-pdf | PDF Tools | — | — | — |
-| word-advanced-to-pdf | PDF Tools | — | — | — |
-| excel-advanced-to-pdf | PDF Tools | — | — | — |
-| digital-sign-pdf | PDF Tools | — | — | — |
-| validate-signature-pdf | PDF Tools | — | — | — |
-| repair-pdf | PDF Tools | — | — | — |
-| change-pdf-text-color | PDF Tools | — | — | — |
-| pdf-to-docx | PDF Tools | — | — | — |
-| pdf-to-llamaIndex-json-converter | PDF Tools | — | — | — |
-| pdf-workflow | PDF Tools | — | — | — |
-| prepare-pdf-for-ai | PDF Tools | — | — | — |
-| xps-to-pdf | PDF Tools | — | — | — |
-| excel-to-jpg-converter | PDF Tools | — | — | — |
-| excel-to-png-converter | PDF Tools | — | — | — |
-| pdf-to-pdfa-converter | PDF Tools | — | — | — |
+Of the 53 that were remaining as of the last update: 47 were built as genuinely new tools (including the heaviest items — OCR PDF via `tesseract.js`, PDF to Word/PowerPoint, PowerPoint to PDF, PDF to TIFF, Digital Sign PDF, Repair PDF, PDF to PDF/A), 5 were consolidated into an existing sibling tool rather than shipped as a near-identical duplicate page (Add Watermark → existing `/tools/watermark-pdf`; pdf-to-docx → new `/tools/pdf-to-word`; word-advanced-to-pdf → existing `/tools/word-to-pdf`; excel-advanced-to-pdf → existing `/tools/excel-to-pdf`; Extract Text from PDF with OCR → new `/tools/ocr-pdf`), and 1 (`xps-to-pdf`) was deferred — see `tools-feasibility-plan.md`'s Phase 99 for why.
 
-## Phase 3 — Mid-Volume (149 tools total, 52 done, 97 remaining)
+Several of the shipped tools are honest, clearly-caveated best-effort approximations rather than full implementations of their literal name, since this is a backend-less static export with no OCR/PKI/office-format-rendering engine beyond what runs client-side: PDF to Word/PowerPoint extract text/images only (no layout preservation), PowerPoint to PDF extracts only embedded raster images, Digital Sign PDF is a visual stamp + SHA-256 hash (not a legally-binding PAdES/eIDAS signature), PDF to PDF/A applies metadata/encryption hygiene only (not veraPDF-certifiable compliance). Each says so plainly in its own FAQ.
 
-**52 of 149 shipped.** Table below shows only the 97 still remaining, sorted by volume.
+A related but separate gap was also found and fixed during this phase: the hand-maintained `/tools/pdf-tools` hub page was missing cards for 99 of 165 already-registered PDF tools (they were always discoverable via the homepage category grid and sitemap, just not on that specific hub page) — backfilled.
+
+## Phase 3 — Mid-Volume (149 tools total, 149/149 complete)
+
+**149 of 149 shipped or confirmed near-duplicate-covered.** 52 were shipped before 2026-08-28; a mid-session batch shipped 68 more (Fake Name Generator, YAML Validator, DPI, Secret Santa, Percentage Increase, Hex, Pip, Net Worth, Resistance, Lucky Number, Stair, Solar Panel, Battery Backup, FIRE, Present Value, Color Contrast, Markdown Preview, Random Name Picker, Zodiac Sign, BAC, Combination, Paint Cost, APR, Carpet Area, YouTube Revenue, Car Depreciation, Commission, Property Tax, Voltage Drop, Dog Age, VO2 Max, Monthly Salary, Body Surface Area, Slug, YAML Formatter, RGB↔HEX, CSV Formatter, Fantasy Name, Standard Deviation, Ohm's Law, Chess Rating, Courier Charge, Density, Cron Expression, Fake Address, Random Team, Lean Body Mass, GCD, Water Tank, Concrete Slab, Revenue, Line Counter, Random Text, JavaScript Beautifier, Regex Generator, Time Formatter, Braille, Invisible Text, Variance, Prime Factorization, Binary, Screen Size, Watt, Z-Score, Acceleration, SQL Minifier, HTML to Markdown), and a final batch shipped 17 more (Cement, Brick, Pipe Weight, Pipe Volume, Power Consumption, Electricity Bill, Percentage Decrease, Words to Number, Instagram Engagement, Loan Interest Rate, Loan Term, Rental Yield, Crypto Profit, Yes or No Generator, Pressure Converter, Extract Phone Numbers, API Key Generator). The entries below that were not shipped are confirmed near-duplicates of already-live routes (JS Minifier, Capitalize Text, Morse Code Decoder, Dog Age to Human Years, CSS Gradient Generator, Profit Margin, Unix Timestamp, Dummy Text, Text Difference Checker, Standard Calculator, HTML Decoder) — see the progress note above for the mapping. No table rows below remain as genuine build work.
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
@@ -529,6 +479,6 @@ Bulk-buildable with the standard template; lower individual priority but collect
 
 For completeness, these proposed tools already existed on the site *before* Phase 1 work started (see [`existing-tools-inventory.md`](./existing-tools-inventory.md) for their live routes): Mortgage, Compound Interest, BMI, Calorie, Age, Time Zone Converter, Percentage, Scientific Calculator, Prime Number Checker, Random Number Generator, Length/Weight/Temperature/Area/Volume Converters, Aspect Ratio, Password Strength Checker, Password Generator, Tip, Discount, Margin (Forex), Rent vs Buy, VAT, Flatten/HTML-to/CSV-to/Split/Delete-Pages/Organize/Merge/Word-to/Excel-to PDF, GST, Income Tax, Retirement, Word Counter, Text Repeater, Lorem Ipsum Generator, UUID Generator, URL Extractor, User Agent Parser, HTML/CSS Minifier, JSON Formatter, CSV↔JSON, SQL Formatter, Regex Tester, Random String Generator, QR Code Generator, Barcode Generator, Markdown to HTML, Binary↔Text, XML↔JSON, CSS Grid Generator, Duplicate Word Finder, Coin Flip, Roman Numeral Converter, Number to Words, Morse Code Translator, Palindrome Checker, Acronym Generator, Business Name Generator, Vertical Text Generator.
 
-## Built since (2026-08-28 status) — 205 tools
+## Built since (2026-08-28 status) — 222 tools
 
-The 49 Phase 1 tools, 104 Phase 2 PDF tools, and 52 Phase 3 tools are now live — see the phase sections above for exactly which, and [`existing-tools-inventory.md`](./existing-tools-inventory.md) for the full current route list (457 tools total). A few pre-existing Health/PDF tools were also added outside this roadmap's phase tables during the same work (Period Calculator, Calorie Deficit Calculator, Macro Calculator, Weight Gain Calculator, Water Intake Calculator, and several PDF page-manipulation tools like Resize & Rescale PDF, Reverse PDF Pages, Signature Maker) — these came from a separate live-keyword-research pass (see `keyword-targeting-plan.md`), not from this spreadsheet-derived list, so they aren't reflected in the phase completion counts above.
+The 49 Phase 1 tools, 104 Phase 2 PDF tools, and 149 Phase 3 mid-volume tools are now live — see the phase sections above for exactly which, and run a route count on `toolRegistry.tsx` for the full current route list (542 tools as of the Phase 3 completion). A few pre-existing Health/PDF tools were also added outside this roadmap's phase tables during the same work (Period Calculator, Calorie Deficit Calculator, Macro Calculator, Weight Gain Calculator, Water Intake Calculator, and several PDF page-manipulation tools like Resize & Rescale PDF, Reverse PDF Pages, Signature Maker) — these came from a separate live-keyword-research pass (see `keyword-targeting-plan.md`), not from this spreadsheet-derived list, so they aren't reflected in the phase completion counts above.

@@ -1,7 +1,7 @@
 // Shared currency list and formatting helpers used by calculators that let
 // users pick which currency to display amounts in.
 
-export type CurrencyCode = 'INR' | 'USD' | 'GBP' | 'EUR';
+export type CurrencyCode = 'INR' | 'USD' | 'GBP' | 'EUR' | 'AUD' | 'CAD';
 
 export interface CurrencyOption {
   value: CurrencyCode;
@@ -15,6 +15,8 @@ export const CURRENCIES: CurrencyOption[] = [
   { value: 'USD', label: 'US Dollar ($)', symbol: '$', locale: 'en-US' },
   { value: 'GBP', label: 'British Pound (£)', symbol: '£', locale: 'en-GB' },
   { value: 'EUR', label: 'Euro (€)', symbol: '€', locale: 'de-DE' },
+  { value: 'AUD', label: 'Australian Dollar (A$)', symbol: 'A$', locale: 'en-AU' },
+  { value: 'CAD', label: 'Canadian Dollar (C$)', symbol: 'C$', locale: 'en-CA' },
 ];
 
 export const currencySymbol = (code: CurrencyCode): string =>

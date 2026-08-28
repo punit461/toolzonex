@@ -31,6 +31,7 @@
     "js-yaml": "^4.1.1",
     "jsbarcode": "^3.12.3",
     "jsqr": "^1.4.0",
+    "jszip": "^3.10.1",
     "libphonenumber-js": "^1.12.42",
     "lucide-react": "^1.30.0",
     "mammoth": "^1.12.1",
@@ -43,6 +44,7 @@
     "react-image-crop": "^11.0.10",
     "recharts": "^2.15.3",
     "sql-formatter": "^15.8.0",
+    "tesseract.js": "^7.0.0",
     "ua-parser-js": "^2.0.9",
     "xlsx": "^0.18.5",
     "zustand": "^5.0.14"

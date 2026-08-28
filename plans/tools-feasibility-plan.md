@@ -6,7 +6,7 @@
 
 ## The short answer
 
-**1,325 of the 1,326 missing tools are technically feasible on the current architecture. Only 1 goes to Phase 99.**
+**1,324 of the 1,326 missing tools are technically feasible on the current architecture. Only 2 go to Phase 99.**
 
 This is a smaller "impossible" pile than expected, and it's worth explaining why: almost every tool in the source spreadsheet is fundamentally a *pure function* — take user-entered input (numbers, text, a file), transform it, show the result. That class of problem runs entirely in the browser. The site already carries a capable client-side toolkit for the harder cases:
 
@@ -24,13 +24,14 @@ A static site *can't* do exactly three categories of thing, none of which show u
 
 Everything else — including things that *sound* server-side, like "PDF to Word," "OCR," "Digital Sign PDF," or "Compress PDF" — is solvable with WASM/canvas/library work entirely in the browser. It may be a lot of *engineering effort*, but effort isn't the same axis as "impossible," which is what this document is trying to separate out.
 
-## Phase 99 — Not Feasible on This Architecture (1 tool)
+## Phase 99 — Not Feasible on This Architecture (2 tools)
 
 | Tool | Source | Why |
 |---|---|---|
 | URL Redirect Checker | Utility Tools | Needs to inspect HTTP redirect headers of arbitrary third-party URLs. Browsers block reading cross-origin redirect chains via CORS unless the target site opts in (almost none do) -- there's no reliable client-only way to build this without a backend proxy to fetch on the user's behalf. |
+| xps-to-pdf | PDF Tools | XPS pages are primarily vector text drawn via `<Glyphs>` runs, not full-page embedded raster images. The honest fallback used for similar formats in this batch (extract embedded images, one PDF page per image — used for `powerpoint-to-pdf`) would silently produce blank or near-empty pages for the vast majority of real XPS documents, which is worse than not shipping it. Deferred during the Phase 2 batch (2026-08-29) rather than shipping something misleading; revisit only if a lightweight XPS content-stream parser becomes available. |
 
-That's it — one tool. Everything else proposed stays in its original priority phase from the gap-analysis roadmap.
+That's it — two tools. Everything else proposed stays in its original priority phase from the gap-analysis roadmap.
 
 ## Reading the new "Effort" column
 
@@ -100,169 +101,13 @@ Table kept below for the effort-tier reference data, not as a work queue — see
 | GPA Calculator | Calculator Tools | 12K | Easy |  |
 | Couple Name Combiner | Utility Tools | 12K | Easy |  |
 
-## Phase 2 — PDF Tools Expansion (157 total, 104 done, 53 remaining)
+## Phase 2 — PDF Tools Expansion (157 total, 156 done, 1 deferred) — EFFECTIVELY COMPLETE
 
-**104 of 157 shipped** — see [`tools-gap-analysis-roadmap.md`](./tools-gap-analysis-roadmap.md) for status. Table below shows effort tiers for the 53 still remaining.
+See [`tools-gap-analysis-roadmap.md`](./tools-gap-analysis-roadmap.md) for status. The one remaining item (`xps-to-pdf`) moved to Phase 99 above.
 
-| Tool Name | Source | Volume | Effort | Notes |
-|---|---|---|---|---|
-| Rotate PDF Pages | PDF Tools | 7K | Medium |  |
-| XML to PDF | PDF Tools | 4K | Medium |  |
-| PDF Color Inverter | PDF Tools | 880 | Complex |  |
-| PDF Grayscale Converter | PDF Tools | 590 | Complex |  |
-| PDF Font Extractor | PDF Tools | 260 | Complex |  |
-| Convert PDF to Legal Size | PDF Tools | 30 | Easy |  |
-| Add Barcode to PDF | PDF Tools | 30 | Medium |  |
-| PDF Black & White Converter | PDF Tools | 10 | Complex |  |
-| Convert PDF to Letter Size | PDF Tools | 10 | Easy |  |
-| Extract Hyperlinks | PDF Tools | 10 | Medium |  |
-| PDF Difference Highlighter | PDF Tools | 10 | Complex |  |
-| PDF Watermark Remover (Simple) | PDF Tools | 10 | Complex |  |
-| PDF Page Number Remover | PDF Tools | 10 | Complex |  |
-| PDF Split by Page Range | PDF Tools | 10 | Easy |  |
-| PDF Merge Selected Pages | PDF Tools | 10 | Easy |  |
-| PDF File Information Viewer | PDF Tools | 10 | Easy |  |
-| PDF Object Counter | PDF Tools | 10 | Complex |  |
-| PDF Font Counter | PDF Tools | 10 | Easy |  |
-| PDF Reading Time Calculator | PDF Tools | 10 | Easy |  |
-| PDF Page Aspect Ratio Checker | PDF Tools | 10 | Easy |  |
-| PDF Transparency Flattener | PDF Tools | 10 | Complex |  |
-| PDF Safe Print Optimizer | PDF Tools | 10 | Complex |  |
-| PDF Ink Saver | PDF Tools | 10 | Complex |  |
-| PDF Layer Remover | PDF Tools | — | Complex |  |
-| Add Watermark | PDF Tools | — | Medium |  |
-| Meesho Label Cropper | PDF Tools | — | Medium |  |
-| Flipkart Label Cropper | PDF Tools | — | Medium |  |
-| Amazon Label Cropper | PDF Tools | — | Medium |  |
-| Sign PDF | PDF Tools | — | Medium |  |
-| Extract Text from PDF with OCR | PDF Tools | — | Complex |  |
-| OCR PDF | PDF Tools | — | Complex |  |
-| FD Calculator | PDF Tools | — | Medium |  |
-| PDF to Word | PDF Tools | — | Complex |  |
-| PDF to PowerPoint | PDF Tools | — | Complex |  |
-| Merge PDF Pages into a Single Image | PDF Tools | — | Medium |  |
-| PDF to TIFF | PDF Tools | — | Complex |  |
-| PDF to BMP | PDF Tools | — | Medium |  |
-| PowerPoint to PDF | PDF Tools | — | Complex |  |
-| translate-pdf | PDF Tools | — | Medium | Feasible via a free, keyless, CORS-enabled API (e.g. MyMemory) called directly from the browser -- but it's rate/quota-limited per visitor IP since there's no backend to pool or cache requests. Fine for light use, will hit limits under real traffic. |
-| word-advanced-to-pdf | PDF Tools | — | Complex |  |
-| excel-advanced-to-pdf | PDF Tools | — | Medium |  |
-| digital-sign-pdf | PDF Tools | — | Complex |  |
-| validate-signature-pdf | PDF Tools | — | Complex |  |
-| repair-pdf | PDF Tools | — | Complex |  |
-| change-pdf-text-color | PDF Tools | — | Complex |  |
-| pdf-to-docx | PDF Tools | — | Complex |  |
-| pdf-to-llamaIndex-json-converter | PDF Tools | — | Medium |  |
-| pdf-workflow | PDF Tools | — | Medium |  |
-| prepare-pdf-for-ai | PDF Tools | — | Medium |  |
-| xps-to-pdf | PDF Tools | — | Complex |  |
-| excel-to-jpg-converter | PDF Tools | — | Medium |  |
-| excel-to-png-converter | PDF Tools | — | Medium |  |
-| pdf-to-pdfa-converter | PDF Tools | — | Complex |  |
+## Phase 3 — Mid-Volume (149 total, 149 done) — EFFECTIVELY COMPLETE
 
-## Phase 3 — Mid-Volume (149 total, 52 done, 97 remaining)
-
-**52 of 149 shipped** — see [`tools-gap-analysis-roadmap.md`](./tools-gap-analysis-roadmap.md) for status. Table below shows effort tiers for the 97 still remaining.
-
-| Tool Name | Source | Volume | Effort | Notes |
-|---|---|---|---|---|
-| Fake Name Generator | Utility Tools | 7K | Easy |  |
-| YAML Validator | Utility Tools | 7K | Easy |  |
-| Waist to Hip Ratio Calculator | Calculator Tools | 5K | Easy |  |
-| DPI Calculator | Calculator Tools | 4K | Easy |  |
-| Secret Santa Generator | Utility Tools | 4K | Easy |  |
-| Percentage Increase Calculator | Calculator Tools | 4K | Easy |  |
-| Hex Calculator | Calculator Tools | 4K | Easy |  |
-| Pip Calculator | Calculator Tools | 4K | Easy |  |
-| Net Worth Calculator | Calculator Tools | 4K | Easy |  |
-| Resistance Calculator | Calculator Tools | 4K | Easy |  |
-| JavaScript Minifier | Utility Tools | 4K | Easy |  |
-| Lucky Number Calculator | Calculator Tools | 3K | Easy |  |
-| Stair Calculator | Calculator Tools | 3K | Easy |  |
-| Solar Panel Calculator | Calculator Tools | 3K | Easy |  |
-| Battery Backup Calculator | Calculator Tools | 3K | Easy |  |
-| FIRE Calculator | Calculator Tools | 3K | Easy |  |
-| Present Value Calculator | Calculator Tools | 3K | Easy |  |
-| Color Contrast Checker | Utility Tools | 3K | Easy |  |
-| Markdown Preview | Utility Tools | 3K | Easy |  |
-| Random Name Picker | Utility Tools | 3K | Easy |  |
-| Zodiac Sign Finder | Utility Tools | 3K | Easy |  |
-| BAC Calculator | Calculator Tools | 2K | Easy |  |
-| Combination Calculator | Calculator Tools | 2K | Easy |  |
-| Paint Cost Calculator | Calculator Tools | 2K | Easy |  |
-| APR Calculator | Calculator Tools | 2K | Easy |  |
-| Carpet Area Calculator | Calculator Tools | 2K | Easy |  |
-| YouTube Revenue Calculator | Calculator Tools | 2K | Easy |  |
-| Car Depreciation Calculator | Calculator Tools | 2K | Easy |  |
-| Capitalize Text | Utility Tools | 2K | Easy |  |
-| Morse Code Decoder | Utility Tools | 2K | Easy |  |
-| Extract Phone Numbers | Utility Tools | 2K | Easy |  |
-| Words to Number Converter | Utility Tools | 2K | Easy |  |
-| Dog Age to Human Years | Utility Tools | 2K | Easy |  |
-| Yes or No Generator | Utility Tools | 2K | Easy |  |
-| Percentage Decrease Calculator | Calculator Tools | 2K | Easy |  |
-| Cement Calculator | Calculator Tools | 2K | Easy |  |
-| Brick Calculator | Calculator Tools | 2K | Easy |  |
-| Commission Calculator | Calculator Tools | 2K | Easy |  |
-| Property Tax Calculator | Calculator Tools | 2K | Easy |  |
-| Voltage Drop Calculator | Calculator Tools | 2K | Easy |  |
-| Dog Age Calculator | Calculator Tools | 2K | Easy |  |
-| VO2 Max Calculator | Calculator Tools | 2K | Easy |  |
-| Monthly Salary Calculator | Calculator Tools | 2K | Easy |  |
-| Loan Interest Rate Calculator | Calculator Tools | 2K | Easy |  |
-| Body Surface Area Calculator | Calculator Tools | 2K | Easy |  |
-| Slug Generator | Utility Tools | 2K | Easy |  |
-| YAML Formatter | Utility Tools | 2K | Easy |  |
-| RGB to HEX Converter | Utility Tools | 2K | Easy |  |
-| CSV Formatter | Utility Tools | 2K | Easy |  |
-| CSS Gradient Generator | Utility Tools | 2K | Easy |  |
-| Fantasy Name Generator | Utility Tools | 2K | Easy |  |
-| Standard Deviation Calculator | Calculator Tools | 2K | Easy |  |
-| Profit Margin Calculator | Calculator Tools | 2K | Easy |  |
-| Pipe Weight Calculator | Calculator Tools | 2K | Easy |  |
-| Ohm's Law Calculator | Calculator Tools | 2K | Easy |  |
-| Chess Rating Calculator | Calculator Tools | 2K | Easy |  |
-| Courier Charge Calculator | Calculator Tools | 2K | Easy |  |
-| Density Calculator | Calculator Tools | 2K | Easy |  |
-| Power Consumption Calculator | Calculator Tools | 2K | Easy |  |
-| Electricity Bill Calculator | Calculator Tools | 2K | Easy |  |
-| Cron Expression Generator | Utility Tools | 2K | Easy |  |
-| Unix Timestamp Converter | Utility Tools | 2K | Easy |  |
-| HEX to RGB Converter | Utility Tools | 2K | Easy |  |
-| Dummy Text Generator | Utility Tools | 2K | Easy |  |
-| Fake Address Generator | Utility Tools | 2K | Easy |  |
-| Text Difference Checker | Utility Tools | 2K | Easy |  |
-| Random Team Generator | Utility Tools | 2K | Easy |  |
-| Lean Body Mass Calculator | Calculator Tools | 1K | Easy |  |
-| GCD Calculator | Calculator Tools | 1K | Easy |  |
-| Pressure Converter | Calculator Tools | 1K | Easy |  |
-| Crypto Profit Calculator | Calculator Tools | 1K | Easy |  |
-| Pipe Volume Calculator | Calculator Tools | 1K | Easy |  |
-| Loan Term Calculator | Calculator Tools | 1K | Easy |  |
-| Water Tank Capacity Calculator | Calculator Tools | 1K | Easy |  |
-| Concrete Slab Calculator | Calculator Tools | 1K | Easy |  |
-| Revenue Calculator | Calculator Tools | 1K | Easy |  |
-| Line Counter | Utility Tools | 1K | Easy |  |
-| Random Text Generator | Utility Tools | 1K | Easy |  |
-| JavaScript Beautifier | Utility Tools | 1K | Easy |  |
-| Regex Generator | Utility Tools | 1K | Easy |  |
-| Time Formatter | Utility Tools | 1K | Easy |  |
-| Braille Translator | Utility Tools | 1K | Easy |  |
-| Invisible Text Generator | Utility Tools | 1K | Easy |  |
-| Standard Calculator | Calculator Tools | 1K | Easy |  |
-| Variance Calculator | Calculator Tools | 1K | Easy |  |
-| Prime Factorization Calculator | Calculator Tools | 1K | Easy |  |
-| Binary Calculator | Calculator Tools | 1K | Easy |  |
-| Screen Size Calculator | Calculator Tools | 1K | Easy |  |
-| Rental Yield Calculator | Calculator Tools | 1K | Easy |  |
-| Watt Calculator | Calculator Tools | 1K | Easy |  |
-| Instagram Engagement Calculator | Calculator Tools | 1K | Easy |  |
-| Z-Score Calculator | Calculator Tools | 1K | Easy |  |
-| Acceleration Calculator | Calculator Tools | 1K | Easy |  |
-| HTML Decoder | Utility Tools | 1K | Easy |  |
-| SQL Minifier | Utility Tools | 1K | Easy |  |
-| HTML to Markdown | Utility Tools | 1K | Easy |  |
-| API Key Generator | Utility Tools | 1K | Easy |  |
+See [`tools-gap-analysis-roadmap.md`](./tools-gap-analysis-roadmap.md) for status (136 shipped directly, 13 confirmed near-duplicate-covered by existing tools).
 
 ## Phase 4 — Long-Tail SEO Batch
 
