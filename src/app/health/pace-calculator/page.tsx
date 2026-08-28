@@ -1,0 +1,20 @@
+import type { Metadata } from "next";
+import PaceCalculator from "../../../calculators/health/PaceCalculator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
+
+const tool = getTool("/health/pace-calculator");
+
+export const metadata: Metadata = buildToolMetadata(tool);
+
+export default function Page() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
+      />
+      <PaceCalculator />
+    </>
+  );
+}

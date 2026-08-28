@@ -1,0 +1,161 @@
+'use client';
+
+import { useState } from 'react';
+import { Box, TextField, Typography, Button, Paper, IconButton } from '@mui/material';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import CalculatorShell from '../../components/CalculatorShell';
+import AdSenseUnit from '../../components/AdSenseUnit';
+
+const CssBeautifierContent = () => {
+  const [input, setInput] = useState('');
+  const [output, setOutput] = useState('');
+  const [error, setError] = useState('');
+  const [copied, setCopied] = useState(false);
+
+  const beautify = () => {
+    setError('');
+    setCopied(false);
+    if (!input.trim()) {
+      setOutput('');
+      return;
+    }
+
+    try {
+      setOutput(formatCss(input));
+    } catch (e: any) {
+      setError(e.message || 'Failed to format CSS');
+      setOutput('');
+    }
+  };
+
+  const formatCss = (css: string): string => {
+    let formatted = '';
+    let indent = 0;
+    const tab = '  ';
+
+    const cleaned = css
+      .replace(/\/\*[\s\S]*?\*\//g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    let i = 0;
+    while (i < cleaned.length) {
+      const ch = cleaned[i];
+
+      if (ch === '{') {
+        formatted += ' {\n';
+        indent++;
+        formatted += tab.repeat(indent);
+        i++;
+      } else if (ch === '}') {
+        indent = Math.max(0, indent - 1);
+        formatted = formatted.trimEnd() + '\n' + tab.repeat(indent) + '}\n';
+        if (indent === 0) formatted += '\n';
+        formatted += tab.repeat(indent);
+        i++;
+      } else if (ch === ';') {
+        formatted += ';\n' + tab.repeat(indent);
+        i++;
+      } else if (ch === ':' && indent > 0) {
+        formatted += ': ';
+        i++;
+        while (i < cleaned.length && cleaned[i] === ' ') i++;
+      } else {
+        formatted += ch;
+        i++;
+      }
+    }
+
+    return formatted.replace(/\n{3,}/g, '\n\n').trim() + '\n';
+  };
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(output);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {}
+  };
+
+  return (
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+      <TextField
+        label="Minified or Unformatted CSS"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        multiline
+        rows={8}
+        fullWidth
+        placeholder="Paste your CSS here..."
+        sx={{ fontFamily: 'monospace' }}
+      />
+
+      <Button variant="contained" onClick={beautify} size="large">
+        Beautify CSS
+      </Button>
+
+      {error && (
+        <Paper sx={{ p: 2, bgcolor: 'error.light', color: 'error.contrastText' }}>
+          <Typography>{error}</Typography>
+        </Paper>
+      )}
+
+      {output && (
+        <Paper variant="outlined" sx={{ p: 2 }}>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+            <Typography variant="subtitle1" fontWeight={600}>Formatted CSS</Typography>
+            <Button size="small" startIcon={<ContentCopyIcon />} onClick={copyToClipboard}>
+              {copied ? 'Copied!' : 'Copy'}
+            </Button>
+          </Box>
+          <Paper sx={{ p: 2, bgcolor: 'grey.50', fontFamily: 'monospace', whiteSpace: 'pre-wrap', overflow: 'auto', maxHeight: 500 }}>
+            {output}
+          </Paper>
+        </Paper>
+      )}
+    </Box>
+  );
+};
+
+const CssBeautifier = () => {
+  const content = (
+    <>
+      <Typography variant="h2">How to Use the CSS Beautifier</Typography>
+      <Typography variant="body1">
+        Paste your minified or unformatted CSS into the input box and click &quot;Beautify CSS&quot;. The tool adds proper indentation, newlines after selectors and properties, and formats the CSS for easy reading and editing.
+      </Typography>
+
+      <Typography variant="h2">Example</Typography>
+      <Typography variant="body1">
+        Input: <code>.btn{'{'}color:red;background:#fff;padding:10px{'}'}</code> becomes a properly indented multi-line block with each property on its own line.
+      </Typography>
+
+      <Typography variant="h2">FAQs</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li><strong>Does this modify my CSS values?</strong> No — only whitespace and formatting are changed. All property values, selectors, and rules remain exactly the same.</li>
+          <li><strong>Does it strip comments?</strong> Yes — CSS comments (<code>/* ... */</code>) are removed to produce cleaner output. Keep your original if you need the comments.</li>
+          <li><strong>Does it validate CSS?</strong> This tool only formats CSS — it does not validate whether the CSS is syntactically correct.</li>
+        </ul>
+      </Box>
+
+      <Typography variant="h2">Common Use Cases</Typography>
+      <Box sx={{ typography: 'body1' }}>
+        <ul>
+          <li>Reading minified CSS generated by build tools or preprocessors.</li>
+          <li>Preparing CSS for manual editing or code review.</li>
+          <li>Formatting concatenated CSS files for better readability.</li>
+        </ul>
+      </Box>
+    </>
+  );
+
+  return (
+    <CalculatorShell url="/developer-tools/css-beautifier" content={content}>
+      <CssBeautifierContent />
+      <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
+    </CalculatorShell>
+  );
+};
+
+export default CssBeautifier;

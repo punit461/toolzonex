@@ -44,7 +44,9 @@ A handful of tools carry a **Notes** entry — these are feasible, but only if s
 
 ---
 
-## Phase 1 — Flagship Quick Wins
+## Phase 1 — Flagship Quick Wins — ✅ COMPLETE (49/49 shipped, 2026-08-28)
+
+Table kept below for the effort-tier reference data, not as a work queue — see [`tools-gap-analysis-roadmap.md`](./tools-gap-analysis-roadmap.md) for current status.
 
 | Tool Name | Source | Volume | Effort | Notes |
 |---|---|---|---|---|
@@ -98,241 +100,92 @@ A handful of tools carry a **Notes** entry — these are feasible, but only if s
 | GPA Calculator | Calculator Tools | 12K | Easy |  |
 | Couple Name Combiner | Utility Tools | 12K | Easy |  |
 
-## Phase 2 — PDF Tools Expansion
+## Phase 2 — PDF Tools Expansion (157 total, 104 done, 53 remaining)
+
+**104 of 157 shipped** — see [`tools-gap-analysis-roadmap.md`](./tools-gap-analysis-roadmap.md) for status. Table below shows effort tiers for the 53 still remaining.
 
 | Tool Name | Source | Volume | Effort | Notes |
 |---|---|---|---|---|
-| Add Page Numbers to PDF | PDF Tools | 10K | Medium |  |
 | Rotate PDF Pages | PDF Tools | 7K | Medium |  |
 | XML to PDF | PDF Tools | 4K | Medium |  |
-| PDF to CSV | PDF Tools | 4K | Medium |  |
-| PDF to HTML | PDF Tools | 4K | Medium |  |
-| Convert PDF to A4 | PDF Tools | 2K | Easy |  |
-| Resize PDF Pages | PDF Tools | 1K | Easy |  |
 | PDF Color Inverter | PDF Tools | 880 | Complex |  |
-| PDF Metadata Editor | PDF Tools | 720 | Medium |  |
-| PDF Metadata Viewer | PDF Tools | 590 | Easy |  |
 | PDF Grayscale Converter | PDF Tools | 590 | Complex |  |
-| Compare Two PDFs | PDF Tools | 590 | Medium |  |
-| PDF Metadata Remover | PDF Tools | 480 | Medium |  |
-| Remove PDF Bookmarks | PDF Tools | 320 | Medium |  |
 | PDF Font Extractor | PDF Tools | 260 | Complex |  |
-| Remove PDF Margins | PDF Tools | 260 | Medium |  |
-| PDF Page Counter | PDF Tools | 210 | Easy |  |
-| PDF DPI Checker | PDF Tools | 210 | Easy |  |
-| Remove Hyperlinks | PDF Tools | 90 | Medium |  |
-| PDF Booklet Creator | PDF Tools | 70 | Medium |  |
-| Reverse PDF Pages | PDF Tools | 50 | Easy |  |
 | Convert PDF to Legal Size | PDF Tools | 30 | Easy |  |
-| Add QR Code to PDF | PDF Tools | 30 | Medium |  |
 | Add Barcode to PDF | PDF Tools | 30 | Medium |  |
-| Duplicate PDF Pages | PDF Tools | 20 | Easy |  |
-| Flip PDF Horizontally | PDF Tools | 20 | Medium |  |
-| Remove Header & Footer | PDF Tools | 20 | Medium |  |
-| Remove Cover Page | PDF Tools | 20 | Easy |  |
-| Extract PDF Bookmarks | PDF Tools | 20 | Medium |  |
-| PDF Split by Size | PDF Tools | 20 | Medium |  |
-| PDF Attachment Extractor | PDF Tools | 20 | Medium |  |
-| PDF File Size Viewer | PDF Tools | 10 | Easy |  |
-| PDF Version Checker | PDF Tools | 10 | Easy |  |
-| PDF Password Strength Checker | PDF Tools | 10 | Easy |  |
-| PDF Page Size Detector | PDF Tools | 10 | Easy |  |
-| PDF Orientation Detector | PDF Tools | 10 | Easy |  |
-| PDF Font Viewer | PDF Tools | 10 | Easy |  |
-| PDF Color Detector | PDF Tools | 10 | Medium |  |
 | PDF Black & White Converter | PDF Tools | 10 | Complex |  |
-| Remove Blank Pages | PDF Tools | 10 | Medium |  |
-| Detect Blank Pages | PDF Tools | 10 | Medium |  |
-| Insert Blank Pages | PDF Tools | 10 | Easy |  |
-| Mirror PDF Pages | PDF Tools | 10 | Medium |  |
-| Flip PDF Vertically | PDF Tools | 10 | Medium |  |
 | Convert PDF to Letter Size | PDF Tools | 10 | Easy |  |
-| Add PDF Footer | PDF Tools | 10 | Easy |  |
-| Add PDF Border | PDF Tools | 10 | Easy |  |
-| Remove PDF Border | PDF Tools | 10 | Medium |  |
-| Add PDF Margins | PDF Tools | 10 | Medium |  |
-| Add Cover Page | PDF Tools | 10 | Easy |  |
-| Add Blank Last Page | PDF Tools | 10 | Easy |  |
-| Add Date to PDF | PDF Tools | 10 | Easy |  |
-| Add Timestamp to PDF | PDF Tools | 10 | Easy |  |
 | Extract Hyperlinks | PDF Tools | 10 | Medium |  |
-| PDF Bookmark Viewer | PDF Tools | 10 | Easy |  |
-| PDF Outline Viewer | PDF Tools | 10 | Easy |  |
 | PDF Difference Highlighter | PDF Tools | 10 | Complex |  |
-| PDF Thumbnail Sheet | PDF Tools | 10 | Easy |  |
-| PDF Contact Sheet Generator | PDF Tools | 10 | Easy |  |
-| PDF Preview Generator | PDF Tools | 10 | Easy |  |
 | PDF Watermark Remover (Simple) | PDF Tools | 10 | Complex |  |
 | PDF Page Number Remover | PDF Tools | 10 | Complex |  |
 | PDF Split by Page Range | PDF Tools | 10 | Easy |  |
 | PDF Merge Selected Pages | PDF Tools | 10 | Easy |  |
-| PDF Recompress Images | PDF Tools | 10 | Medium |  |
-| PDF Image Quality Optimizer | PDF Tools | 10 | Medium |  |
-| PDF Image Resolution Changer | PDF Tools | 10 | Medium |  |
 | PDF File Information Viewer | PDF Tools | 10 | Easy |  |
 | PDF Object Counter | PDF Tools | 10 | Complex |  |
-| PDF Image Counter | PDF Tools | 10 | Easy |  |
-| PDF Link Counter | PDF Tools | 10 | Easy |  |
 | PDF Font Counter | PDF Tools | 10 | Easy |  |
-| PDF Text Statistics | PDF Tools | 10 | Easy |  |
 | PDF Reading Time Calculator | PDF Tools | 10 | Easy |  |
-| PDF Keyword Frequency | PDF Tools | 10 | Easy |  |
 | PDF Page Aspect Ratio Checker | PDF Tools | 10 | Easy |  |
-| PDF Page Dimension Viewer | PDF Tools | 10 | Easy |  |
-| PDF Rotation Detector | PDF Tools | 10 | Easy |  |
 | PDF Transparency Flattener | PDF Tools | 10 | Complex |  |
-| PDF Annotation Remover | PDF Tools | 10 | Medium |  |
-| PDF Comment Extractor | PDF Tools | 10 | Medium |  |
-| PDF Attachment Remover | PDF Tools | 10 | Medium |  |
-| PDF Embedded Image Exporter | PDF Tools | 10 | Medium |  |
-| PDF Page Crop by Pixels | PDF Tools | 10 | Easy |  |
 | PDF Safe Print Optimizer | PDF Tools | 10 | Complex |  |
-| PDF Poster Creator | PDF Tools | 10 | Medium |  |
-| PDF N-Up Creator | PDF Tools | 10 | Medium |  |
-| PDF Duplex Print Optimizer | PDF Tools | 10 | Medium |  |
 | PDF Ink Saver | PDF Tools | 10 | Complex |  |
-| Add PDF Header | PDF Tools | — | Easy |  |
 | PDF Layer Remover | PDF Tools | — | Complex |  |
 | Add Watermark | PDF Tools | — | Medium |  |
 | Meesho Label Cropper | PDF Tools | — | Medium |  |
 | Flipkart Label Cropper | PDF Tools | — | Medium |  |
 | Amazon Label Cropper | PDF Tools | — | Medium |  |
-| Protect PDF | PDF Tools | — | Medium |  |
-| Unlock PDF | PDF Tools | — | Medium |  |
 | Sign PDF | PDF Tools | — | Medium |  |
-| Redact PDF | PDF Tools | — | Medium |  |
-| Online PDF Viewer | PDF Tools | — | Easy |  |
 | Extract Text from PDF with OCR | PDF Tools | — | Complex |  |
-| Create Blank PDF | PDF Tools | — | Easy |  |
-| Annotate PDF | PDF Tools | — | Medium |  |
-| Fill & Sign PDF | PDF Tools | — | Medium |  |
 | OCR PDF | PDF Tools | — | Complex |  |
-| Crop PDF | PDF Tools | — | Easy |  |
-| Crop Aadhar Card | PDF Tools | — | Medium |  |
-| PDF to XML | PDF Tools | — | Medium |  |
 | FD Calculator | PDF Tools | — | Medium |  |
-| Passport Size Photo Maker | PDF Tools | — | Medium |  |
-| Signature Maker Online | PDF Tools | — | Medium |  |
-| Image Resizer Online | PDF Tools | — | Medium |  |
-| Image Compressor | PDF Tools | — | Medium |  |
-| Image to PDF | PDF Tools | — | Medium |  |
 | PDF to Word | PDF Tools | — | Complex |  |
-| PDF to Excel | PDF Tools | — | Medium |  |
 | PDF to PowerPoint | PDF Tools | — | Complex |  |
-| PDF to Image | PDF Tools | — | Easy |  |
-| PDF to PNG | PDF Tools | — | Easy |  |
-| PDF to JPG | PDF Tools | — | Easy |  |
-| PDF to WEBP | PDF Tools | — | Easy |  |
 | Merge PDF Pages into a Single Image | PDF Tools | — | Medium |  |
-| Extract Images from PDF | PDF Tools | — | Medium |  |
-| PDF Thumbnail Generator | PDF Tools | — | Easy |  |
 | PDF to TIFF | PDF Tools | — | Complex |  |
 | PDF to BMP | PDF Tools | — | Medium |  |
-| PDF Snapshot Tool | PDF Tools | — | Easy |  |
 | PowerPoint to PDF | PDF Tools | — | Complex |  |
 | translate-pdf | PDF Tools | — | Medium | Feasible via a free, keyless, CORS-enabled API (e.g. MyMemory) called directly from the browser -- but it's rate/quota-limited per visitor IP since there's no backend to pool or cache requests. Fine for light use, will hit limits under real traffic. |
-| pdf-rasterizer | PDF Tools | — | Easy |  |
-| pdf-sanitizer | PDF Tools | — | Medium |  |
-| remove-pdf-images | PDF Tools | — | Medium |  |
 | word-advanced-to-pdf | PDF Tools | — | Complex |  |
 | excel-advanced-to-pdf | PDF Tools | — | Medium |  |
-| pdf-to-base64 | PDF Tools | — | Easy |  |
 | digital-sign-pdf | PDF Tools | — | Complex |  |
 | validate-signature-pdf | PDF Tools | — | Complex |  |
 | repair-pdf | PDF Tools | — | Complex |  |
-| remove-restrictions | PDF Tools | — | Medium |  |
-| pdf-style-editor | PDF Tools | — | Medium |  |
-| add-overlay-to-pdf-online | PDF Tools | — | Medium |  |
-| add-stamp-to-pdf-page | PDF Tools | — | Medium |  |
 | change-pdf-text-color | PDF Tools | — | Complex |  |
-| email-to-pdf | PDF Tools | — | Medium |  |
-| enhance-pdf-online-free | PDF Tools | — | Medium |  |
-| generate-electronic-pdf-invoice | PDF Tools | — | Medium |  |
-| pdf-builder | PDF Tools | — | Medium |  |
 | pdf-to-docx | PDF Tools | — | Complex |  |
-| pdf-margin-adjuster | PDF Tools | — | Medium |  |
 | pdf-to-llamaIndex-json-converter | PDF Tools | — | Medium |  |
 | pdf-workflow | PDF Tools | — | Medium |  |
 | prepare-pdf-for-ai | PDF Tools | — | Medium |  |
-| resize-and-rescale-pdf-online | PDF Tools | — | Medium |  |
 | xps-to-pdf | PDF Tools | — | Complex |  |
 | excel-to-jpg-converter | PDF Tools | — | Medium |  |
 | excel-to-png-converter | PDF Tools | — | Medium |  |
 | pdf-to-pdfa-converter | PDF Tools | — | Complex |  |
 
-## Phase 3 — Mid-Volume
+## Phase 3 — Mid-Volume (149 total, 52 done, 97 remaining)
+
+**52 of 149 shipped** — see [`tools-gap-analysis-roadmap.md`](./tools-gap-analysis-roadmap.md) for status. Table below shows effort tiers for the 97 still remaining.
 
 | Tool Name | Source | Volume | Effort | Notes |
 |---|---|---|---|---|
-| Fraction Calculator | Calculator Tools | 10K | Easy |  |
-| Position Size Calculator | Calculator Tools | 10K | Easy |  |
-| Recurring Deposit Calculator | Calculator Tools | 10K | Easy |  |
-| Land Area Calculator | Calculator Tools | 10K | Easy |  |
-| HTML Beautifier | Utility Tools | 10K | Easy |  |
-| Date Formatter | Utility Tools | 10K | Easy |  |
-| Markdown Editor | Utility Tools | 10K | Easy |  |
-| Brand Name Generator | Utility Tools | 10K | Easy |  |
-| Days Between Dates Calculator | Calculator Tools | 8K | Easy |  |
-| Lot Size Calculator | Calculator Tools | 8K | Easy |  |
-| APY Calculator | Calculator Tools | 8K | Easy |  |
-| Percentile Calculator | Calculator Tools | 8K | Easy |  |
-| ROI Calculator | Calculator Tools | 7K | Easy |  |
-| Ideal Weight Calculator | Calculator Tools | 7K | Easy |  |
-| Protein Intake Calculator | Calculator Tools | 7K | Easy |  |
-| Pace Calculator | Calculator Tools | 7K | Easy |  |
-| Education Loan Calculator | Calculator Tools | 7K | Easy |  |
-| Steel Weight Calculator | Calculator Tools | 7K | Easy |  |
-| PSU Calculator | Calculator Tools | 7K | Easy |  |
 | Fake Name Generator | Utility Tools | 7K | Easy |  |
 | YAML Validator | Utility Tools | 7K | Easy |  |
-| SQL Beautifier | Utility Tools | 7K | Easy |  |
-| Small Text Generator | Utility Tools | 7K | Easy |  |
-| Business Days Calculator | Calculator Tools | 5K | Easy |  |
 | Waist to Hip Ratio Calculator | Calculator Tools | 5K | Easy |  |
-| Matrix Calculator | Calculator Tools | 5K | Easy |  |
-| Cubic Equation Solver | Calculator Tools | 5K | Easy |  |
-| Concrete Calculator | Calculator Tools | 5K | Easy |  |
-| Bonus Calculator | Calculator Tools | 5K | Easy |  |
-| Future Value Calculator | Calculator Tools | 5K | Easy |  |
-| Sample Size Calculator | Calculator Tools | 5K | Easy |  |
-| Flip Text | Utility Tools | 5K | Easy |  |
-| XML Validator | Utility Tools | 5K | Easy |  |
-| XML Viewer | Utility Tools | 5K | Easy |  |
-| Username Generator | Utility Tools | 5K | Easy |  |
-| Nickname Generator | Utility Tools | 5K | Easy |  |
-| Birthday Countdown | Utility Tools | 5K | Easy |  |
-| One Rep Max Calculator | Calculator Tools | 4K | Easy |  |
 | DPI Calculator | Calculator Tools | 4K | Easy |  |
-| GUID Generator | Utility Tools | 4K | Easy |  |
-| Robots.txt Generator | Utility Tools | 4K | Easy |  |
-| Keyword Density Checker | Utility Tools | 4K | Easy |  |
-| JSON Minifier | Utility Tools | 4K | Easy |  |
-| Remove Emojis | Utility Tools | 4K | Easy |  |
-| Baby Name Generator | Utility Tools | 4K | Easy |  |
 | Secret Santa Generator | Utility Tools | 4K | Easy |  |
-| Macro Calculator | Calculator Tools | 4K | Easy |  |
 | Percentage Increase Calculator | Calculator Tools | 4K | Easy |  |
 | Hex Calculator | Calculator Tools | 4K | Easy |  |
 | Pip Calculator | Calculator Tools | 4K | Easy |  |
 | Net Worth Calculator | Calculator Tools | 4K | Easy |  |
 | Resistance Calculator | Calculator Tools | 4K | Easy |  |
 | JavaScript Minifier | Utility Tools | 4K | Easy |  |
-| Random Letter Generator | Utility Tools | 4K | Easy |  |
-| Word Splitter | Utility Tools | 4K | Easy |  |
-| Download Time Calculator | Calculator Tools | 3K | Easy |  |
 | Lucky Number Calculator | Calculator Tools | 3K | Easy |  |
 | Stair Calculator | Calculator Tools | 3K | Easy |  |
 | Solar Panel Calculator | Calculator Tools | 3K | Easy |  |
 | Battery Backup Calculator | Calculator Tools | 3K | Easy |  |
 | FIRE Calculator | Calculator Tools | 3K | Easy |  |
 | Present Value Calculator | Calculator Tools | 3K | Easy |  |
-| URL Encoder | Utility Tools | 3K | Easy |  |
-| CSS Beautifier | Utility Tools | 3K | Easy |  |
-| CSV Viewer | Utility Tools | 3K | Easy |  |
 | Color Contrast Checker | Utility Tools | 3K | Easy |  |
 | Markdown Preview | Utility Tools | 3K | Easy |  |
 | Random Name Picker | Utility Tools | 3K | Easy |  |
-| Upside Down Text Generator | Utility Tools | 3K | Easy |  |
 | Zodiac Sign Finder | Utility Tools | 3K | Easy |  |
 | BAC Calculator | Calculator Tools | 2K | Easy |  |
 | Combination Calculator | Calculator Tools | 2K | Easy |  |
@@ -364,7 +217,6 @@ A handful of tools carry a **Notes** entry — these are feasible, but only if s
 | CSV Formatter | Utility Tools | 2K | Easy |  |
 | CSS Gradient Generator | Utility Tools | 2K | Easy |  |
 | Fantasy Name Generator | Utility Tools | 2K | Easy |  |
-| Water Intake Calculator | Calculator Tools | 2K | Easy |  |
 | Standard Deviation Calculator | Calculator Tools | 2K | Easy |  |
 | Profit Margin Calculator | Calculator Tools | 2K | Easy |  |
 | Pipe Weight Calculator | Calculator Tools | 2K | Easy |  |
@@ -379,7 +231,6 @@ A handful of tools carry a **Notes** entry — these are feasible, but only if s
 | HEX to RGB Converter | Utility Tools | 2K | Easy |  |
 | Dummy Text Generator | Utility Tools | 2K | Easy |  |
 | Fake Address Generator | Utility Tools | 2K | Easy |  |
-| YAML to JSON | Utility Tools | 2K | Easy |  |
 | Text Difference Checker | Utility Tools | 2K | Easy |  |
 | Random Team Generator | Utility Tools | 2K | Easy |  |
 | Lean Body Mass Calculator | Calculator Tools | 1K | Easy |  |
@@ -411,7 +262,6 @@ A handful of tools carry a **Notes** entry — these are feasible, but only if s
 | HTML Decoder | Utility Tools | 1K | Easy |  |
 | SQL Minifier | Utility Tools | 1K | Easy |  |
 | HTML to Markdown | Utility Tools | 1K | Easy |  |
-| JSON to YAML | Utility Tools | 1K | Easy |  |
 | API Key Generator | Utility Tools | 1K | Easy |  |
 
 ## Phase 4 — Long-Tail SEO Batch
