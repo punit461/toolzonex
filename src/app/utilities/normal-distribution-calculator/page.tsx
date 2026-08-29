@@ -1,0 +1,19 @@
+import type { Metadata } from "next";
+import NormalDistributionCalculator from "../../../calculators/utilities/NormalDistributionCalculator";
+import { getTool } from "../../../data/toolRegistry";
+import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
+
+const tool = getTool("/utilities/normal-distribution-calculator");
+export const metadata: Metadata = buildToolMetadata(tool);
+
+export default function Page() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
+      />
+      <NormalDistributionCalculator />
+    </>
+  );
+}
