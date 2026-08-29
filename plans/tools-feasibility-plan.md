@@ -109,243 +109,32 @@ See [`tools-gap-analysis-roadmap.md`](./tools-gap-analysis-roadmap.md) for statu
 
 See [`tools-gap-analysis-roadmap.md`](./tools-gap-analysis-roadmap.md) for status (136 shipped directly, 13 confirmed near-duplicate-covered by existing tools).
 
-## Phase 4 — Long-Tail SEO Batch
+## Phase 4 — Long-Tail SEO Batch (234 total, 213 done, 21 flagged, all Easy tier)
+
+See [`tools-gap-analysis-roadmap.md`](./tools-gap-analysis-roadmap.md) for the full breakdown of what the 21 remaining rows actually are (1 infeasible, 4 already covered under a different name, 8 unfinished from an interrupted Developer Tools batch, 8 genuine small misses). Table below is just the effort-tier reference for those 21.
 
 | Tool Name | Source | Volume | Effort | Notes |
 |---|---|---|---|---|
-| Budget Planner | Calculator Tools | 880 | Easy |  |
-| Heart Rate Calculator | Calculator Tools | 880 | Easy |  |
-| Power Converter | Calculator Tools | 880 | Easy |  |
-| Sand Calculator | Calculator Tools | 880 | Easy |  |
-| Zodiac Calculator | Calculator Tools | 880 | Easy |  |
-| Bitcoin Mining Calculator | Calculator Tools | 880 | Easy |  |
-| Aquarium Volume Calculator | Calculator Tools | 880 | Easy |  |
-| Sales Tax Calculator | Calculator Tools | 880 | Easy |  |
-| Binary Decoder | Utility Tools | 880 | Easy |  |
 | JSON Tree Viewer | Utility Tools | 880 | Easy |  |
-| Random Color Generator | Utility Tools | 880 | Easy |  |
-| RGB to CMYK Converter | Utility Tools | 880 | Easy |  |
-| Hex to Text | Utility Tools | 880 | Easy |  |
 | CSS Box Shadow Generator | Utility Tools | 880 | Easy |  |
-| Extract URLs | Utility Tools | 880 | Easy |  |
-| Name Picker Wheel | Utility Tools | 880 | Easy |  |
-| Random Country Generator | Utility Tools | 880 | Easy |  |
-| Decimal to Fraction Calculator | Calculator Tools | 720 | Easy |  |
-| Fuel Consumption Calculator | Calculator Tools | 720 | Easy |  |
-| Gear Ratio Calculator | Calculator Tools | 720 | Easy |  |
-| Working Capital Calculator | Calculator Tools | 720 | Easy |  |
-| Wire Size Calculator | Calculator Tools | 720 | Easy |  |
-| Unit Price Calculator | Calculator Tools | 720 | Easy |  |
-| Cost of Living Calculator | Calculator Tools | 720 | Easy |  |
-| EBITDA Calculator | Calculator Tools | 720 | Easy |  |
-| Reverse Text | Utility Tools | 720 | Easy |  |
-| HTML Encoder | Utility Tools | 720 | Easy |  |
 | ROT13 Decoder | Utility Tools | 720 | Easy |  |
-| Random Username Generator | Utility Tools | 720 | Easy |  |
-| CMYK to RGB Converter | Utility Tools | 720 | Easy |  |
-| BBCode to HTML | Utility Tools | 720 | Easy |  |
-| HTML to BBCode | Utility Tools | 720 | Easy |  |
-| Text to Hex | Utility Tools | 720 | Easy |  |
-| Permutation Calculator | Calculator Tools | 590 | Easy |  |
-| Speed Converter | Calculator Tools | 590 | Easy |  |
-| Markup Calculator | Calculator Tools | 590 | Easy |  |
-| Rule of 72 Calculator | Calculator Tools | 590 | Easy |  |
 | Fertilizer Calculator | Calculator Tools | 590 | Easy |  |
-| Reverse Tax Calculator | Calculator Tools | 590 | Easy |  |
-| Torque Calculator | Calculator Tools | 590 | Easy |  |
-| Wavelength Calculator | Calculator Tools | 590 | Easy |  |
-| Battery Charging Time Calculator | Calculator Tools | 590 | Easy |  |
-| Bond Yield Calculator | Calculator Tools | 590 | Easy |  |
-| Reading Time Calculator | Utility Tools | 590 | Easy |  |
-| Text Cleaner | Utility Tools | 590 | Easy |  |
-| ASCII to Text | Utility Tools | 590 | Easy |  |
-| Text to Unicode | Utility Tools | 590 | Easy |  |
-| Unicode to Text | Utility Tools | 590 | Easy |  |
 | XML Pretty Print | Utility Tools | 590 | Easy |  |
-| SQL Validator | Utility Tools | 590 | Easy |  |
-| CSS Filter Generator | Utility Tools | 590 | Easy |  |
-| Extract Numbers | Utility Tools | 590 | Easy |  |
-| Remove Special Characters | Utility Tools | 590 | Easy |  |
-| Merge Text Files | Utility Tools | 590 | Easy |  |
 | Cat Age to Human Years | Utility Tools | 590 | Easy |  |
-| Shoe Size Converter | Utility Tools | 590 | Easy |  |
-| Lucky Number Generator | Utility Tools | 590 | Easy |  |
-| Mode Calculator | Calculator Tools | 480 | Easy |  |
-| Probability Calculator | Calculator Tools | 480 | Easy |  |
-| Gross Profit Calculator | Calculator Tools | 480 | Easy |  |
-| Dividend Yield Calculator | Calculator Tools | 480 | Easy |  |
-| Down Payment Calculator | Calculator Tools | 480 | Easy |  |
-| Flight Time Calculator | Calculator Tools | 480 | Easy |  |
-| LED Resistor Calculator | Calculator Tools | 480 | Easy |  |
-| Linear Regression Calculator | Calculator Tools | 480 | Easy |  |
-| Geometric Mean Calculator | Calculator Tools | 480 | Easy |  |
-| Velocity Calculator | Calculator Tools | 480 | Easy |  |
-| Frequency Calculator | Calculator Tools | 480 | Easy |  |
-| Effective Interest Rate Calculator | Calculator Tools | 480 | Easy |  |
-| Sentence Counter | Utility Tools | 480 | Easy |  |
-| MD5 Hash Generator | Utility Tools | 480 | Easy |  |
-| URL Parser | Utility Tools | 480 | Easy |  |
-| Meta Tag Generator | Utility Tools | 480 | Easy |  |
-| Open Graph Generator | Utility Tools | 480 | Easy |  |
-| EAN-13 Barcode Generator | Utility Tools | 480 | Easy |  |
-| Text to ASCII | Utility Tools | 480 | Easy |  |
-| Regex Cheat Sheet | Utility Tools | 480 | Easy |  |
 | Zalgo Text Generator | Utility Tools | 480 | Easy |  |
-| Anagram Checker | Utility Tools | 480 | Easy |  |
-| Random Animal Generator | Utility Tools | 480 | Easy |  |
-| Lottery Number Generator | Utility Tools | 480 | Easy |  |
-| Bingo Card Generator | Utility Tools | 480 | Easy |  |
-| Countdown Calculator | Calculator Tools | 390 | Easy |  |
-| Trip Cost Calculator | Calculator Tools | 390 | Easy |  |
-| Paint Calculator | Calculator Tools | 390 | Easy |  |
-| Hash Rate Calculator | Calculator Tools | 390 | Easy |  |
-| Paper Weight Calculator | Calculator Tools | 390 | Easy |  |
-| Exam Score Calculator | Calculator Tools | 390 | Easy |  |
-| Cat Age Calculator | Calculator Tools | 390 | Easy |  |
-| Wedding Budget Calculator | Calculator Tools | 390 | Easy |  |
-| CPC Calculator | Calculator Tools | 390 | Easy |  |
-| ROAS Calculator | Calculator Tools | 390 | Easy |  |
-| Payroll Calculator | Calculator Tools | 390 | Easy |  |
-| House Affordability Calculator | Calculator Tools | 390 | Easy |  |
-| Payback Period Calculator | Calculator Tools | 390 | Easy |  |
-| Percent Error Calculator | Calculator Tools | 390 | Easy |  |
-| Work Calculator | Calculator Tools | 390 | Easy |  |
-| Final Grade Calculator | Calculator Tools | 390 | Easy |  |
-| Calories Burned Walking Calculator | Calculator Tools | 390 | Easy |  |
-| Remove Empty Lines | Utility Tools | 390 | Easy |  |
-| Password Hash Generator | Utility Tools | 390 | Easy |  |
-| SHA256 Hash Generator | Utility Tools | 390 | Easy |  |
-| Binary Encoder | Utility Tools | 390 | Easy |  |
-| HEX Color Generator | Utility Tools | 390 | Easy |  |
-| RGB Color Generator | Utility Tools | 390 | Easy |  |
-| TSV to CSV Converter | Utility Tools | 390 | Easy |  |
-| Leap Year Checker | Utility Tools | 390 | Easy |  |
-| Text Divider | Utility Tools | 390 | Easy |  |
-| Team Name Generator | Utility Tools | 390 | Easy |  |
-| Retirement / SIP Calculator | Calculator Tools | 320 | Easy |  |
-| Break-Even Point Calculator | Calculator Tools | 320 | Easy |  |
-| BMR & TDEE Calculator | Calculator Tools | 320 | Easy |  |
-| Energy Converter | Calculator Tools | 320 | Easy |  |
-| Tile Calculator | Calculator Tools | 320 | Easy |  |
-| Flooring Calculator | Calculator Tools | 320 | Easy |  |
-| Internet Speed Calculator | Calculator Tools | 320 | Easy |  |
-| Split Bill Calculator | Calculator Tools | 320 | Easy |  |
-| Cashback Calculator | Calculator Tools | 320 | Easy |  |
-| Current Ratio Calculator | Calculator Tools | 320 | Easy |  |
-| Swimming Pool Volume Calculator | Calculator Tools | 320 | Easy |  |
-| Hourly to Salary Calculator | Calculator Tools | 320 | Easy |  |
-| Salary to Hourly Calculator | Calculator Tools | 320 | Easy |  |
-| Ratio Simplifier | Calculator Tools | 320 | Easy |  |
-| Force Calculator | Calculator Tools | 320 | Easy |  |
-| Wind Load Calculator | Calculator Tools | 320 | Easy |  |
-| Target Heart Rate Calculator | Calculator Tools | 320 | Easy |  |
-| Speaking Time Calculator | Utility Tools | 320 | Easy |  |
-| Remove Duplicate Lines | Utility Tools | 320 | Easy |  |
-| Remove Extra Spaces | Utility Tools | 320 | Easy |  |
-| CSS Animation Generator | Utility Tools | 320 | Easy |  |
-| Truth or Dare Generator | Utility Tools | 320 | Easy |  |
-| EV Charging Cost Calculator | Calculator Tools | 260 | Easy |  |
 | Tire Size Calculator | Calculator Tools | 260 | Easy |  |
 | Gravel Calculator | Calculator Tools | 260 | Easy |  |
-| Risk Reward Calculator | Calculator Tools | 260 | Easy |  |
-| Asphalt Calculator | Calculator Tools | 260 | Easy |  |
-| AC BTU Calculator | Calculator Tools | 260 | Easy |  |
-| Annual Salary Calculator | Calculator Tools | 260 | Easy |  |
-| Customer Lifetime Value Calculator | Calculator Tools | 260 | Easy |  |
-| Pipe Flow Calculator | Calculator Tools | 260 | Easy |  |
-| Weighted Average Calculator | Calculator Tools | 260 | Easy |  |
-| Kinetic Energy Calculator | Calculator Tools | 260 | Easy |  |
-| Bond Price Calculator | Calculator Tools | 260 | Easy |  |
-| Calories Burned Running Calculator | Calculator Tools | 260 | Easy |  |
 | Twitter Card Generator | Utility Tools | 260 | Easy |  |
 | YAML Viewer | Utility Tools | 260 | Easy |  |
-| Word Frequency Counter | Utility Tools | 260 | Easy |  |
-| Alphabetical Sorter | Utility Tools | 260 | Easy |  |
 | Roman Numeral Generator | Utility Tools | 260 | Easy |  |
-| Ethereum Mining Calculator | Calculator Tools | 210 | Easy |  |
-| CPU Bottleneck Calculator | Calculator Tools | 210 | Easy |  |
-| Child Height Predictor | Calculator Tools | 210 | Easy |  |
-| Pace to Speed Calculator | Calculator Tools | 210 | Easy |  |
-| Travel Budget Calculator | Calculator Tools | 210 | Easy |  |
-| Economic Order Quantity Calculator | Calculator Tools | 210 | Easy |  |
-| Inventory Days Calculator | Calculator Tools | 210 | Easy |  |
-| Normal Distribution Calculator | Calculator Tools | 210 | Easy |  |
-| Momentum Calculator | Calculator Tools | 210 | Easy |  |
-| Inductance Calculator | Calculator Tools | 210 | Easy |  |
-| Calories Burned Cycling Calculator | Calculator Tools | 210 | Easy |  |
-| Wall Area Calculator | Calculator Tools | 210 | Easy |  |
-| UUID Validator | Utility Tools | 210 | Easy |  |
-| CSS Clip Path Generator | Utility Tools | 210 | Easy |  |
-| Remove Punctuation | Utility Tools | 210 | Easy |  |
-| Random Emoji Generator | Utility Tools | 210 | Easy |  |
-| Wide Text Generator | Utility Tools | 210 | Easy |  |
-| Birthstone Finder | Utility Tools | 210 | Easy |  |
-| Horsepower Calculator | Calculator Tools | 170 | Easy |  |
-| Pixel Density Calculator | Calculator Tools | 170 | Easy |  |
-| Fixed Deposit Maturity Calculator | Calculator Tools | 170 | Easy |  |
 | Rental ROI Calculator | Calculator Tools | 170 | Easy |  |
-| Baby Growth Calculator | Calculator Tools | 170 | Easy |  |
-| FOV Calculator | Calculator Tools | 170 | Easy |  |
-| Rebar Calculator | Calculator Tools | 170 | Easy |  |
-| Inverter Size Calculator | Calculator Tools | 170 | Easy |  |
-| Mortgage Down Payment Calculator | Calculator Tools | 170 | Easy |  |
-| Weighted Grade Calculator | Calculator Tools | 170 | Easy |  |
-| Confidence Interval Calculator | Calculator Tools | 170 | Easy |  |
-| Correlation Coefficient Calculator | Calculator Tools | 170 | Easy |  |
-| Capacitance Calculator | Calculator Tools | 170 | Easy |  |
-| Fake Profile Generator | Utility Tools | 170 | Easy |  |
-| Store Name Generator | Utility Tools | 170 | Easy |  |
-| Bra Size Converter | Utility Tools | 170 | Easy |  |
-| Excuse Generator | Utility Tools | 170 | Easy |  |
-| Step to Distance Calculator | Calculator Tools | 140 | Easy |  |
-| Net Profit Calculator | Calculator Tools | 140 | Easy |  |
-| Loan Affordability Calculator | Calculator Tools | 140 | Easy |  |
-| Refinance Calculator | Calculator Tools | 140 | Easy |  |
-| Focal Length Calculator | Calculator Tools | 140 | Easy |  |
-| Paver Calculator | Calculator Tools | 140 | Easy |  |
-| Curtain Size Calculator | Calculator Tools | 140 | Easy |  |
-| Financial Independence Calculator | Calculator Tools | 140 | Easy |  |
-| Ceiling Fan Size Calculator | Calculator Tools | 140 | Easy |  |
-| Cash Flow Calculator | Calculator Tools | 140 | Easy |  |
-| Property Appreciation Calculator | Calculator Tools | 140 | Easy |  |
-| Harmonic Mean Calculator | Calculator Tools | 140 | Easy |  |
-| Potential Energy Calculator | Calculator Tools | 140 | Easy |  |
-| Semester Percentage Calculator | Calculator Tools | 140 | Easy |  |
-| Body Frame Size Calculator | Calculator Tools | 140 | Easy |  |
 | CSV Validator | Utility Tools | 140 | Easy |  |
-| CSS Text Shadow Generator | Utility Tools | 140 | Easy |  |
-| Word List Generator | Utility Tools | 140 | Easy |  |
-| Keyword Extractor | Utility Tools | 140 | Easy |  |
-| Text Similarity Checker | Utility Tools | 140 | Easy |  |
-| Random City Generator | Utility Tools | 140 | Easy |  |
-| Upload Time Calculator | Calculator Tools | 110 | Easy |  |
-| Sale Price Calculator | Calculator Tools | 110 | Easy |  |
-| Credit Utilization Calculator | Calculator Tools | 110 | Easy |  |
-| Beam Load Calculator | Calculator Tools | 110 | Easy |  |
-| kWh Cost Calculator | Calculator Tools | 110 | Easy |  |
-| UPS Runtime Calculator | Calculator Tools | 110 | Easy |  |
-| RAM Calculator | Calculator Tools | 110 | Easy |  |
 | Monitor PPI Calculator | Calculator Tools | 110 | Easy |  |
-| Mulch Calculator | Calculator Tools | 110 | Easy |  |
-| Leave Balance Calculator | Calculator Tools | 110 | Easy |  |
-| CPA Calculator | Calculator Tools | 110 | Easy |  |
-| Savings Goal Calculator | Calculator Tools | 110 | Easy |  |
-| Mortgage Affordability Calculator | Calculator Tools | 110 | Easy |  |
-| Room Volume Calculator | Calculator Tools | 110 | Easy |  |
-| Conversion Rate Calculator | Calculator Tools | 110 | Easy |  |
-| Business Valuation Calculator | Calculator Tools | 110 | Easy |  |
-| Scale Factor Calculator | Calculator Tools | 110 | Easy |  |
-| Morse Code Encoder | Utility Tools | 110 | Easy |  |
 | Color Blindness Simulator | Utility Tools | 110 | Easy |  |
-| Code128 Barcode Generator | Utility Tools | 110 | Easy |  |
-| Random Hash Generator | Utility Tools | 110 | Easy |  |
 | CSS Triangle Generator | Utility Tools | 110 | Easy |  |
-| Extract Email Addresses | Utility Tools | 110 | Easy |  |
 | Random Decision Maker | Utility Tools | 110 | Easy |  |
 | WiFi Password QR Generator | Utility Tools | 110 | Easy |  |
-| Calendar Generator | Utility Tools | 110 | Easy |  |
 | Contrast Color Finder | Utility Tools | 110 | Easy |  |
-| Anniversary Countdown | Utility Tools | 110 | Easy |  |
 
 ## Phase 5 — Backlog (reference only, see [`tools-backlog-longtail.md`](./tools-backlog-longtail.md) for full context)
 

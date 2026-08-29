@@ -15,14 +15,14 @@ After de-duplicating across the three tool sheets, there are **1,392 unique prop
 
 Caveat on matching: a handful of "missing" entries are really the same feature the site already ships under a combined page — e.g. the sheet lists "Base64 Encoder" and "Base64 Decoder" separately, but the site originally had one combined `/converters/base64-encode-decode` page. Per an explicit decision when Phase 1 was scoped, these are now built as **separate dedicated single-purpose pages** anyway (e.g. `/converters/base64-decoder` alongside the existing combined page) rather than being skipped, since each targets a distinct high-volume keyword. Any not yet given this treatment are still flagged inline as "partially covered."
 
-> ## Progress update (2026-08-29)
+> ## Progress update (2026-08-29, revised)
 > - **Phase 1 — Flagship Quick Wins: ✅ 49/49 complete.** All shipped, verified with a full `npm run build` + sitemap check. See the "Completed" note in that section below — the original table is kept for the historical record.
 > - **Phase 2 — PDF Tools Expansion: ✅ 156/157 complete.** The remaining 53 from the prior update were resolved: 47 built as new tools, 5 consolidated into an existing sibling tool rather than shipped as throwaway duplicates (Add Watermark→existing Watermark PDF, pdf-to-docx→new PDF to Word, word-advanced-to-pdf→existing Word to PDF, excel-advanced-to-pdf→existing Excel to PDF, Extract Text from PDF with OCR→new OCR PDF), and 1 (`xps-to-pdf`) genuinely deferred — see `tools-feasibility-plan.md`'s Phase 99 for why.
 > - **Phase 3 — Mid-Volume: ✅ 149/149 effectively complete.** Expanded from 52 to 149: 68 tools shipped in a mid-session batch (2026-08-28, incl. Fake Name Generator, YAML Validator, DPI, NPR, FIRE, Color Contrast Checker, etc.) and 17 more shipped in a follow-up batch (Cement, Brick, Pipe Weight/Volume, Power Consumption, Electricity Bill, Percentage Decrease, Words to Number, Instagram Engagement, Loan Interest Rate, Loan Term, Rental Yield, Crypto Profit, Yes or No, Pressure Converter, Extract Phone Numbers, API Key Generator). The remaining table entries are all confirmed near-duplicates of already-live routes (JS Minifier→`/developer-tools/js-minifier`, Capitalize Text→case-converter, Morse Code Decoder→morse-code-translator, Dog Age to Human Years→dog-age-calculator, CSS Gradient→gradient-generator, Profit Margin→margin-calculator, Unix Timestamp→epoch-converter, Dummy Text→lorem-ipsum-generator, Text Difference→text-diff-tool, Standard Calculator→basic-calculator, HTML Decoder→html-entity-encode-decode).
-> - **Phase 4 — Long-Tail SEO Batch: 0/234 — not started.**
+> - **Phase 4 — Long-Tail SEO Batch: 213/234 done.** Built across 12 sequential batches (Finance ×55, Health ×11, Utilities ×77, Converters ×15, Text Tools ×20, Generators ×22, Developer Tools ×19 of ~27 — see that section below for the 21 still-open rows and what each actually is).
 > - **Phase 5 — Backlog: 0/737 — not started** (see [`tools-backlog-longtail.md`](./tools-backlog-longtail.md); confirmed no accidental overlap with work done so far).
-> - **Total: 274 of the original 1,326 missing tools now shipped — 1,052 remaining.** Site is at **585 live tool pages** (up from 246), per a live route count of `toolRegistry.tsx` (2026-08-29, post-Phase-2).
-> - Completion was verified by slug-matching every phase-table tool name against the live `toolRegistry.tsx`, not by trusting build logs alone — this caught and fixed a batch of 17 duplicate/mis-categorized registry entries and 16 fully-built-but-never-routed components left over from a prior work session (2026-08-28), plus 2 build-breaking syntax errors. A second such audit on 2026-08-29 caught: (a) a genuine duplicate pair from the Phase 2 batch — `convert-pdf-to-legal-size`/`convert-pdf-to-letter-size` duplicated the existing `convert-pdf-to-legal`/`convert-pdf-to-letter` tools, which also had a real bug (used `page.setSize()`, which doesn't rescale content); fixed the originals in place with the new tools' correct scale-and-center logic and removed the duplicates; (b) a long-standing, unrelated gap where the hand-maintained `/tools/pdf-tools` hub page (`PdfToolsHub.tsx`) was missing cards for 99 of 165 already-registered PDF tools (they were still discoverable via the homepage category grid and sitemap, just not on that specific hub page) — backfilled all 99.
+> - **Total: 487 of the original 1,326 missing tools now shipped — 839 remaining** (1,318 once Phase 99's 2 infeasible tools are excluded from the denominator). Site is at **812 live tool pages** (up from 246), per a live route count of `toolRegistry.tsx` (2026-08-29).
+> - Completion was verified by slug-matching every phase-table tool name against the live `toolRegistry.tsx`, not by trusting build logs alone — this caught and fixed a batch of 17 duplicate/mis-categorized registry entries and 16 fully-built-but-never-routed components left over from a prior work session (2026-08-28), plus 2 build-breaking syntax errors. A second such audit on 2026-08-29 caught: (a) a genuine duplicate pair from the Phase 2 batch — `convert-pdf-to-legal-size`/`convert-pdf-to-letter-size` duplicated the existing `convert-pdf-to-legal`/`convert-pdf-to-letter` tools, which also had a real bug (used `page.setSize()`, which doesn't rescale content); fixed the originals in place with the new tools' correct scale-and-center logic and removed the duplicates; (b) a long-standing, unrelated gap where the hand-maintained `/tools/pdf-tools` hub page (`PdfToolsHub.tsx`) was missing cards for 99 of 165 already-registered PDF tools — backfilled all 99. A third audit (2026-08-29, later same day) on the completed Phase 4 batch found the site fully consistent: 0 duplicate registry routes, 0 registry entries missing a page, 0 orphaned components across all ~758 component files and ~812 registry entries — the cleanest handoff state yet, despite two of the twelve batches getting cut off mid-run by API rate limits (both later confirmed to have actually finished writing all their files before the interruption landed).
 
 ## Prioritization Model
 
@@ -43,9 +43,9 @@ Phase buckets are mutually exclusive (a tool counted in Phase 1 isn't repeated i
 | Phase 1 — Flagship Quick Wins | 49 | 49 | 0 | volume ≥ 10K |
 | Phase 2 — PDF Tools Expansion | 157 | 156 | 1 (deferred, see Phase 99) | any remaining PDF Tools sheet entry |
 | Phase 3 — Mid-Volume | 149 | 149 | 0 | volume 1K–10K (near-duplicates of live routes, incl.) |
-| Phase 4 — Long-Tail SEO Batch | 234 | 0 | 234 | volume 100–1K |
+| Phase 4 — Long-Tail SEO Batch | 234 | 213 | 21 | volume 100–1K |
 | Phase 5 — Backlog (appendix) | 737 | 0 | 737 | volume < 100 or unresearched |
-| **Total missing** | **1,326** | **274** | **1,052** | |
+| **Total missing** | **1,326** | **487** | **839** | |
 
 ## Execution Notes
 
@@ -228,246 +228,38 @@ A related but separate gap was also found and fixed during this phase: the hand-
 | HTML to Markdown | Utility Tools | 1K | 61 | 0.00 |
 | API Key Generator | Utility Tools | 1K | 39 | 17.17 |
 
-## Phase 4 — Long-Tail SEO Batch (234 tools, volume 100–1K/mo)
+## Phase 4 — Long-Tail SEO Batch (234 tools total, 213 done, 21 still flagged)
 
-Bulk-buildable with the standard template; lower individual priority but collectively meaningful traffic and internal-linking surface area.
+**213 of 234 shipped**, across 12 sequential category batches (Finance, Health, Utilities ×4, Converters, Text Tools, Generators, Developer Tools). Table below shows the 21 rows this roadmap's slug-matcher still flags as not-live; breaking those down honestly rather than just calling the phase done:
+
+- **1 is permanently infeasible**: `URL Redirect Checker` — see Phase 99 in `tools-feasibility-plan.md`.
+- **4 are false negatives** — already covered live under a different name/page than the slug-matcher expects: Cat Age to Human Years → `cat-age-calculator`, Rental ROI Calculator → `rental-property-roi-calculator`, CSS Box Shadow Generator → the pre-existing `box-shadow-generator`, Monitor PPI Calculator → `pixel-density-calculator` (explicitly consolidated by the batch agent as a duplicate).
+- **8 are the unfinished tail of the Developer Tools batch**, which got cut off by an API rate limit partway through: JSON Tree Viewer (or its JSON Schema Generator alternate), XML Pretty Print, YAML Viewer, Roman Numeral Generator (or Unix Timestamp Generator alternate), Color Blindness Simulator, CSS Triangle Generator, WiFi Password QR Generator, Contrast Color Finder.
+- **8 are genuine small gaps** that fell through the cracks across other category batches — nobody actively decided to skip these, they were just missed: ROT13 Decoder, Fertilizer Calculator, Zalgo Text Generator, Tire Size Calculator, Gravel Calculator, Twitter Card Generator, CSV Validator, Random Decision Maker.
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Budget Planner | Calculator Tools | 880 | 70 | 38.16 |
-| Heart Rate Calculator | Calculator Tools | 880 | 48 | 5.72 |
-| Power Converter | Calculator Tools | 880 | 35 | 21.94 |
-| Sand Calculator | Calculator Tools | 880 | 11 | 0.00 |
-| Zodiac Calculator | Calculator Tools | 880 | 57 | 4.77 |
-| Bitcoin Mining Calculator | Calculator Tools | 880 | 38 | 11.45 |
-| Aquarium Volume Calculator | Calculator Tools | 880 | 19 | 0.00 |
-| Sales Tax Calculator | Calculator Tools | 880 | 54 | 0.00 |
-| Binary Decoder | Utility Tools | 880 | 32 | 0.00 |
 | JSON Tree Viewer | Utility Tools | 880 | 59 | 0.00 |
-| Random Color Generator | Utility Tools | 880 | 50 | 0.00 |
-| RGB to CMYK Converter | Utility Tools | 880 | 0 | 0.00 |
-| Hex to Text | Utility Tools | 880 | 63 | 0.00 |
 | CSS Box Shadow Generator | Utility Tools | 880 | 37 | 0.00 |
-| Extract URLs | Utility Tools | 880 | 0 | 53.43 |
-| Name Picker Wheel | Utility Tools | 880 | 77 | 0.95 |
-| Random Country Generator | Utility Tools | 880 | 45 | 0.00 |
-| Decimal to Fraction Calculator | Calculator Tools | 720 | 37 | 0.00 |
-| Fuel Consumption Calculator | Calculator Tools | 720 | 35 | 0.00 |
-| Gear Ratio Calculator | Calculator Tools | 720 | 41 | 0.00 |
-| Working Capital Calculator | Calculator Tools | 720 | 0 | 64.87 |
-| Wire Size Calculator | Calculator Tools | 720 | 34 | 18.13 |
-| Unit Price Calculator | Calculator Tools | 720 | 17 | 0.00 |
-| Cost of Living Calculator | Calculator Tools | 720 | 69 | 0.00 |
-| EBITDA Calculator | Calculator Tools | 720 | 0 | 30.53 |
-| Reverse Text | Utility Tools | 720 | 40 | 0.00 |
-| HTML Encoder | Utility Tools | 720 | 0 | 0.00 |
 | ROT13 Decoder | Utility Tools | 720 | 57 | 0.00 |
-| Random Username Generator | Utility Tools | 720 | 43 | 0.00 |
-| CMYK to RGB Converter | Utility Tools | 720 | 0 | 0.00 |
-| BBCode to HTML | Utility Tools | 720 | 0 | 0.00 |
-| HTML to BBCode | Utility Tools | 720 | 17 | 0.00 |
-| Text to Hex | Utility Tools | 720 | 42 | 0.00 |
-| Permutation Calculator | Calculator Tools | 590 | 31 | 0.00 |
-| Speed Converter | Calculator Tools | 590 | 50 | 0.00 |
-| Markup Calculator | Calculator Tools | 590 | 24 | 0.00 |
-| Rule of 72 Calculator | Calculator Tools | 590 | 52 | 8.59 |
 | Fertilizer Calculator | Calculator Tools | 590 | 23 | 44.84 |
-| Reverse Tax Calculator | Calculator Tools | 590 | 23 | 0.00 |
-| Torque Calculator | Calculator Tools | 590 | 28 | 0.00 |
-| Wavelength Calculator | Calculator Tools | 590 | 30 | 0.00 |
-| Battery Charging Time Calculator | Calculator Tools | 590 | 0 | 0.00 |
-| Bond Yield Calculator | Calculator Tools | 590 | 29 | 18.13 |
-| Reading Time Calculator | Utility Tools | 590 | 44 | 0.00 |
-| Text Cleaner | Utility Tools | 590 | 29 | 0.00 |
-| ASCII to Text | Utility Tools | 590 | 32 | 0.00 |
-| Text to Unicode | Utility Tools | 590 | 0 | 0.00 |
-| Unicode to Text | Utility Tools | 590 | 0 | 0.00 |
 | XML Pretty Print | Utility Tools | 590 | 41 | 0.00 |
-| SQL Validator | Utility Tools | 590 | 24 | 113.53 |
-| CSS Filter Generator | Utility Tools | 590 | 14 | 0.00 |
-| Extract Numbers | Utility Tools | 590 | 0 | 0.00 |
-| Remove Special Characters | Utility Tools | 590 | 24 | 0.00 |
-| Merge Text Files | Utility Tools | 590 | 20 | 0.00 |
 | Cat Age to Human Years | Utility Tools | 590 | 0 | 0.00 |
-| Shoe Size Converter | Utility Tools | 590 | 0 | 0.95 |
-| Lucky Number Generator | Utility Tools | 590 | 58 | 0.00 |
-| Mode Calculator | Calculator Tools | 480 | 30 | 0.00 |
-| Probability Calculator | Calculator Tools | 480 | 43 | 0.00 |
-| Gross Profit Calculator | Calculator Tools | 480 | 46 | 0.00 |
-| Dividend Yield Calculator | Calculator Tools | 480 | 31 | 0.00 |
-| Down Payment Calculator | Calculator Tools | 480 | 73 | 1.91 |
-| Flight Time Calculator | Calculator Tools | 480 | 32 | 0.00 |
-| LED Resistor Calculator | Calculator Tools | 480 | 36 | 0.95 |
-| Linear Regression Calculator | Calculator Tools | 480 | 28 | 0.00 |
-| Geometric Mean Calculator | Calculator Tools | 480 | 24 | 0.00 |
-| Velocity Calculator | Calculator Tools | 480 | 23 | 0.00 |
-| Frequency Calculator | Calculator Tools | 480 | 33 | 0.00 |
-| Effective Interest Rate Calculator | Calculator Tools | 480 | 48 | 0.00 |
-| Sentence Counter | Utility Tools | 480 | 19 | 0.95 |
-| MD5 Hash Generator | Utility Tools | 480 | 29 | 0.00 |
-| URL Parser | Utility Tools | 480 | 54 | 0.00 |
-| Meta Tag Generator | Utility Tools | 480 | 32 | 61.06 |
-| Open Graph Generator | Utility Tools | 480 | 42 | 0.00 |
-| EAN-13 Barcode Generator | Utility Tools | 480 | 0 | 9.54 |
-| Text to ASCII | Utility Tools | 480 | 41 | 0.00 |
-| Regex Cheat Sheet | Utility Tools | 480 | 44 | 0.95 |
 | Zalgo Text Generator | Utility Tools | 480 | 25 | 0.00 |
-| Anagram Checker | Utility Tools | 480 | 42 | 0.00 |
-| Random Animal Generator | Utility Tools | 480 | 26 | 0.00 |
-| Lottery Number Generator | Utility Tools | 480 | 57 | 0.00 |
-| Bingo Card Generator | Utility Tools | 480 | 61 | 0.00 |
-| Countdown Calculator | Calculator Tools | 390 | 75 | 0.00 |
-| Trip Cost Calculator | Calculator Tools | 390 | 45 | 13.36 |
-| Paint Calculator | Calculator Tools | 390 | 32 | 25.76 |
-| Hash Rate Calculator | Calculator Tools | 390 | 67 | 13.36 |
-| Paper Weight Calculator | Calculator Tools | 390 | 13 | 0.00 |
-| Exam Score Calculator | Calculator Tools | 390 | 29 | 0.00 |
-| Cat Age Calculator | Calculator Tools | 390 | 29 | 0.00 |
-| Wedding Budget Calculator | Calculator Tools | 390 | 22 | 17.17 |
-| CPC Calculator | Calculator Tools | 390 | 27 | 0.00 |
-| ROAS Calculator | Calculator Tools | 390 | 0 | 404.51 |
-| Payroll Calculator | Calculator Tools | 390 | 59 | 36.25 |
-| House Affordability Calculator | Calculator Tools | 390 | 65 | 16.22 |
-| Payback Period Calculator | Calculator Tools | 390 | 42 | 0.00 |
-| Percent Error Calculator | Calculator Tools | 390 | 34 | 0.00 |
-| Work Calculator | Calculator Tools | 390 | 58 | 0.00 |
-| Final Grade Calculator | Calculator Tools | 390 | 50 | 0.00 |
-| Calories Burned Walking Calculator | Calculator Tools | 390 | 46 | 5.72 |
-| Remove Empty Lines | Utility Tools | 390 | 24 | 0.00 |
-| Password Hash Generator | Utility Tools | 390 | 45 | 0.00 |
-| SHA256 Hash Generator | Utility Tools | 390 | 28 | 0.00 |
-| Binary Encoder | Utility Tools | 390 | 25 | 0.00 |
 | URL Redirect Checker | Utility Tools | 390 | 48 | 119.25 |
-| HEX Color Generator | Utility Tools | 390 | 92 | 0.00 |
-| RGB Color Generator | Utility Tools | 390 | 85 | 0.00 |
-| TSV to CSV Converter | Utility Tools | 390 | 17 | 0.00 |
-| Leap Year Checker | Utility Tools | 390 | 0 | 0.00 |
-| Text Divider | Utility Tools | 390 | 0 | 0.00 |
-| Team Name Generator | Utility Tools | 390 | 35 | 3.82 |
-| Retirement / SIP Calculator | Calculator Tools | 320 | 0 | 20.03 |
-| Break-Even Point Calculator | Calculator Tools | 320 | 0 | 0.00 |
-| BMR & TDEE Calculator | Calculator Tools | 320 | 0 | 5.72 |
-| Energy Converter | Calculator Tools | 320 | 43 | 0.00 |
-| Tile Calculator | Calculator Tools | 320 | 31 | 12.40 |
-| Flooring Calculator | Calculator Tools | 320 | 16 | 0.00 |
-| Internet Speed Calculator | Calculator Tools | 320 | 70 | 0.00 |
-| Split Bill Calculator | Calculator Tools | 320 | 19 | 16.22 |
-| Cashback Calculator | Calculator Tools | 320 | 0 | 0.00 |
-| Current Ratio Calculator | Calculator Tools | 320 | 33 | 0.00 |
-| Swimming Pool Volume Calculator | Calculator Tools | 320 | 23 | 0.00 |
-| Hourly to Salary Calculator | Calculator Tools | 320 | 0 | 0.00 |
-| Salary to Hourly Calculator | Calculator Tools | 320 | 45 | 0.00 |
-| Ratio Simplifier | Calculator Tools | 320 | 39 | 0.00 |
-| Force Calculator | Calculator Tools | 320 | 25 | 0.00 |
-| Wind Load Calculator | Calculator Tools | 320 | 28 | 0.00 |
-| Target Heart Rate Calculator | Calculator Tools | 320 | 43 | 0.00 |
-| Speaking Time Calculator | Utility Tools | 320 | 32 | 0.00 |
-| Remove Duplicate Lines | Utility Tools | 320 | 33 | 0.00 |
-| Remove Extra Spaces | Utility Tools | 320 | 24 | 0.00 |
-| CSS Animation Generator | Utility Tools | 320 | 38 | 97.31 |
-| Truth or Dare Generator | Utility Tools | 320 | 23 | 0.00 |
-| EV Charging Cost Calculator | Calculator Tools | 260 | 25 | 0.00 |
 | Tire Size Calculator | Calculator Tools | 260 | 57 | 0.00 |
 | Gravel Calculator | Calculator Tools | 260 | 18 | 0.00 |
-| Risk Reward Calculator | Calculator Tools | 260 | 20 | 0.00 |
-| Asphalt Calculator | Calculator Tools | 260 | 18 | 0.00 |
-| AC BTU Calculator | Calculator Tools | 260 | 23 | 0.00 |
-| Annual Salary Calculator | Calculator Tools | 260 | 50 | 0.00 |
-| Customer Lifetime Value Calculator | Calculator Tools | 260 | 0 | 47.70 |
-| Pipe Flow Calculator | Calculator Tools | 260 | 20 | 40.07 |
-| Weighted Average Calculator | Calculator Tools | 260 | 36 | 0.00 |
-| Kinetic Energy Calculator | Calculator Tools | 260 | 34 | 0.00 |
-| Bond Price Calculator | Calculator Tools | 260 | 43 | 18.13 |
-| Calories Burned Running Calculator | Calculator Tools | 260 | 43 | 4.77 |
 | Twitter Card Generator | Utility Tools | 260 | 12 | 0.00 |
 | YAML Viewer | Utility Tools | 260 | 36 | 0.00 |
-| Word Frequency Counter | Utility Tools | 260 | 23 | 0.00 |
-| Alphabetical Sorter | Utility Tools | 260 | 0 | 0.00 |
 | Roman Numeral Generator | Utility Tools | 260 | 29 | 0.00 |
-| Ethereum Mining Calculator | Calculator Tools | 210 | 57 | 0.00 |
-| CPU Bottleneck Calculator | Calculator Tools | 210 | 52 | 0.00 |
-| Child Height Predictor | Calculator Tools | 210 | 44 | 249.95 |
-| Pace to Speed Calculator | Calculator Tools | 210 | 38 | 0.00 |
-| Travel Budget Calculator | Calculator Tools | 210 | 22 | 9.54 |
-| Economic Order Quantity Calculator | Calculator Tools | 210 | 35 | 0.00 |
-| Inventory Days Calculator | Calculator Tools | 210 | 0 | 0.00 |
-| Normal Distribution Calculator | Calculator Tools | 210 | 39 | 1.91 |
-| Momentum Calculator | Calculator Tools | 210 | 24 | 0.00 |
-| Inductance Calculator | Calculator Tools | 210 | 30 | 0.00 |
-| Calories Burned Cycling Calculator | Calculator Tools | 210 | 37 | 0.00 |
-| Wall Area Calculator | Calculator Tools | 210 | 21 | 0.00 |
-| UUID Validator | Utility Tools | 210 | 22 | 0.00 |
-| CSS Clip Path Generator | Utility Tools | 210 | 43 | 0.00 |
-| Remove Punctuation | Utility Tools | 210 | 19 | 0.00 |
-| Random Emoji Generator | Utility Tools | 210 | 23 | 0.00 |
-| Wide Text Generator | Utility Tools | 210 | 29 | 0.00 |
-| Birthstone Finder | Utility Tools | 210 | 33 | 5.72 |
-| Horsepower Calculator | Calculator Tools | 170 | 19 | 0.00 |
-| Pixel Density Calculator | Calculator Tools | 170 | 44 | 0.00 |
-| Fixed Deposit Maturity Calculator | Calculator Tools | 170 | 57 | 18.13 |
 | Rental ROI Calculator | Calculator Tools | 170 | 21 | 0.00 |
-| Baby Growth Calculator | Calculator Tools | 170 | 37 | 247.09 |
-| FOV Calculator | Calculator Tools | 170 | 20 | 0.00 |
-| Rebar Calculator | Calculator Tools | 170 | 23 | 0.00 |
-| Inverter Size Calculator | Calculator Tools | 170 | 12 | 0.00 |
-| Mortgage Down Payment Calculator | Calculator Tools | 170 | 0 | 5.72 |
-| Weighted Grade Calculator | Calculator Tools | 170 | 38 | 0.00 |
-| Confidence Interval Calculator | Calculator Tools | 170 | 39 | 0.00 |
-| Correlation Coefficient Calculator | Calculator Tools | 170 | 20 | 0.00 |
-| Capacitance Calculator | Calculator Tools | 170 | 22 | 0.00 |
-| Fake Profile Generator | Utility Tools | 170 | 66 | 0.00 |
-| Store Name Generator | Utility Tools | 170 | 70 | 4.77 |
-| Bra Size Converter | Utility Tools | 170 | 31 | 3.82 |
-| Excuse Generator | Utility Tools | 170 | 14 | 0.00 |
-| Step to Distance Calculator | Calculator Tools | 140 | 0 | 3.82 |
-| Net Profit Calculator | Calculator Tools | 140 | 38 | 0.00 |
-| Loan Affordability Calculator | Calculator Tools | 140 | 60 | 8.59 |
-| Refinance Calculator | Calculator Tools | 140 | 70 | 0.00 |
-| Focal Length Calculator | Calculator Tools | 140 | 24 | 0.00 |
-| Paver Calculator | Calculator Tools | 140 | 0 | 0.00 |
-| Curtain Size Calculator | Calculator Tools | 140 | 22 | 0.00 |
-| Financial Independence Calculator | Calculator Tools | 140 | 27 | 11.45 |
-| Ceiling Fan Size Calculator | Calculator Tools | 140 | 15 | 0.00 |
-| Cash Flow Calculator | Calculator Tools | 140 | 41 | 0.00 |
-| Property Appreciation Calculator | Calculator Tools | 140 | 17 | 0.00 |
-| Harmonic Mean Calculator | Calculator Tools | 140 | 14 | 0.00 |
-| Potential Energy Calculator | Calculator Tools | 140 | 17 | 0.00 |
-| Semester Percentage Calculator | Calculator Tools | 140 | 27 | 0.00 |
-| Body Frame Size Calculator | Calculator Tools | 140 | 0 | 0.00 |
 | CSV Validator | Utility Tools | 140 | 27 | 0.00 |
-| CSS Text Shadow Generator | Utility Tools | 140 | 18 | 0.00 |
-| Word List Generator | Utility Tools | 140 | 0 | 0.00 |
-| Keyword Extractor | Utility Tools | 140 | 0 | 0.00 |
-| Text Similarity Checker | Utility Tools | 140 | 36 | 0.00 |
-| Random City Generator | Utility Tools | 140 | 47 | 0.00 |
-| Upload Time Calculator | Calculator Tools | 110 | 0 | 0.00 |
-| Sale Price Calculator | Calculator Tools | 110 | 30 | 0.00 |
-| Credit Utilization Calculator | Calculator Tools | 110 | 48 | 0.00 |
-| Beam Load Calculator | Calculator Tools | 110 | 32 | 0.00 |
-| kWh Cost Calculator | Calculator Tools | 110 | 0 | 0.00 |
-| UPS Runtime Calculator | Calculator Tools | 110 | 0 | 0.00 |
-| RAM Calculator | Calculator Tools | 110 | 28 | 0.00 |
 | Monitor PPI Calculator | Calculator Tools | 110 | 36 | 0.00 |
-| Mulch Calculator | Calculator Tools | 110 | 0 | 0.00 |
-| Leave Balance Calculator | Calculator Tools | 110 | 24 | 0.00 |
-| CPA Calculator | Calculator Tools | 110 | 23 | 0.00 |
-| Savings Goal Calculator | Calculator Tools | 110 | 38 | 0.00 |
-| Mortgage Affordability Calculator | Calculator Tools | 110 | 64 | 5.72 |
-| Room Volume Calculator | Calculator Tools | 110 | 25 | 0.00 |
-| Conversion Rate Calculator | Calculator Tools | 110 | 42 | 0.00 |
-| Business Valuation Calculator | Calculator Tools | 110 | 33 | 24.80 |
-| Scale Factor Calculator | Calculator Tools | 110 | 38 | 0.00 |
-| Morse Code Encoder | Utility Tools | 110 | 42 | 0.00 |
 | Color Blindness Simulator | Utility Tools | 110 | 0 | 0.00 |
-| Code128 Barcode Generator | Utility Tools | 110 | 0 | 98.26 |
-| Random Hash Generator | Utility Tools | 110 | 18 | 0.00 |
 | CSS Triangle Generator | Utility Tools | 110 | 0 | 0.00 |
-| Extract Email Addresses | Utility Tools | 110 | 0 | 0.00 |
 | Random Decision Maker | Utility Tools | 110 | 16 | 0.00 |
 | WiFi Password QR Generator | Utility Tools | 110 | 32 | 0.95 |
-| Calendar Generator | Utility Tools | 110 | 40 | 58.20 |
 | Contrast Color Finder | Utility Tools | 110 | 68 | 0.00 |
-| Anniversary Countdown | Utility Tools | 110 | 25 | 0.00 |
 
 ## Phase 5 — Backlog
 
