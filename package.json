@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/generate-sitemap.mjs",
+    "build": "NODE_OPTIONS=--max-old-space-size=8192 next build && node scripts/generate-sitemap.mjs",
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run"

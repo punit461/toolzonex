@@ -5,6 +5,14 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // Site has grown to 800+ static pages sharing one large toolRegistry
+  // module; the default worker parallelism during page-data collection
+  // was duplicating enough of that module across workers to OOM CI
+  // runners. Capping workers trades some build time for a bounded
+  // memory footprint.
+  experimental: {
+    cpus: 2,
+  },
   eslint: {
     // Pre-existing repo state had no ESLint config at all, so `next build`
     // never gated on it. A config now exists (added to verify new code),
