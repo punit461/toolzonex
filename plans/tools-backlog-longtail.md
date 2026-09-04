@@ -6,21 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Roofing Calculator | Calculator Tools | 40 | 0 | 23.85 |
-| Exposure Calculator | Calculator Tools | 40 | 0 | 0.00 |
-| Cable Length Calculator | Calculator Tools | 40 | 0 | 20.03 |
-| Sound Delay Calculator | Calculator Tools | 40 | 0 | 0.00 |
-| WiFi QR Generator | Utility Tools | 40 | 0 | 1.91 |
-| CSS Border Radius Generator | Utility Tools | 40 | 0 | 0.00 |
-| Bubble Text Generator | Utility Tools | 40 | 0 | 0.00 |
-| Daily Fiber Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Cooking Time Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Marathon Time Predictor | Calculator Tools | 30 | 0 | 0.00 |
-| Freelancer Hourly Rate Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Freelancer Tax Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Email Marketing ROI Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Daily Wage Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Weekly Salary Calculator | Calculator Tools | 30 | 0 | 0.00 |
 | Real Rate of Return Calculator | Calculator Tools | 30 | 0 | 0.00 |
 | Mortgage Recast Calculator | Calculator Tools | 30 | 0 | 0.00 |
 | Fuel Savings Calculator | Calculator Tools | 30 | 0 | 0.00 |
