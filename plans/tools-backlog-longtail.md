@@ -6,25 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Camera Megapixel Calculator | Calculator Tools | 10 | 0 | — |
-| Circle of Confusion Calculator | Calculator Tools | 10 | 0 | 0.00 |
-| Printer DPI Calculator | Calculator Tools | 10 | 0 | — |
-| Ink Usage Calculator | Calculator Tools | 10 | 0 | — |
-| Coffee Ratio Calculator | Calculator Tools | 10 | 0 | 0.00 |
-| Recipe Converter | Calculator Tools | 10 | 0 | 0.00 |
-| Baking Pan Converter | Calculator Tools | 10 | 0 | — |
-| XP Calculator | Calculator Tools | 10 | 0 | 0.00 |
-| Minecraft Circle Calculator | Calculator Tools | 10 | 0 | — |
-| Hiking Time Calculator | Calculator Tools | 10 | 0 | — |
-| Hotel Cost Calculator | Calculator Tools | 10 | 0 | 0.00 |
-| Fuel Split Calculator | Calculator Tools | 10 | 0 | — |
-| Project Cost Calculator | Calculator Tools | 10 | 0 | 0.00 |
-| Invoice Total Calculator | Calculator Tools | 10 | 0 | — |
-| YouTube Thumbnail Ratio Calculator | Calculator Tools | 10 | 0 | — |
-| TikTok Engagement Calculator | Calculator Tools | 10 | 0 | — |
-| Bulk Discount Calculator | Calculator Tools | 10 | 0 | 0.00 |
-| Coupon Savings Calculator | Calculator Tools | 10 | 0 | — |
-| Cashback vs Discount Calculator | Calculator Tools | 10 | 0 | — |
 | Loan Interest Comparison Calculator | Calculator Tools | 10 | 0 | — |
 | Extra Payment Savings Calculator | Calculator Tools | 10 | 0 | — |
 | Vehicle Loan Affordability Calculator | Calculator Tools | 10 | 0 | — |
