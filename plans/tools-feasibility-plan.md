@@ -109,32 +109,17 @@ See [`tools-gap-analysis-roadmap.md`](./tools-gap-analysis-roadmap.md) for statu
 
 See [`tools-gap-analysis-roadmap.md`](./tools-gap-analysis-roadmap.md) for status (136 shipped directly, 13 confirmed near-duplicate-covered by existing tools).
 
-## Phase 4 — Long-Tail SEO Batch (234 total, 213 done, 21 flagged, all Easy tier)
+## Phase 4 — Long-Tail SEO Batch (234 total, 228 done, 6 flagged, all Easy tier) — EFFECTIVELY COMPLETE
 
-See [`tools-gap-analysis-roadmap.md`](./tools-gap-analysis-roadmap.md) for the full breakdown of what the 21 remaining rows actually are (1 infeasible, 4 already covered under a different name, 8 unfinished from an interrupted Developer Tools batch, 8 genuine small misses). Table below is just the effort-tier reference for those 21.
+See [`tools-gap-analysis-roadmap.md`](./tools-gap-analysis-roadmap.md) for the full breakdown of the 6 remaining rows (1 infeasible, 4 already covered under a different name, 1 genuine deliberately-deferred gap: Color Blindness Simulator). Table below is just the effort-tier reference for those 6.
 
 | Tool Name | Source | Volume | Effort | Notes |
 |---|---|---|---|---|
-| JSON Tree Viewer | Utility Tools | 880 | Easy |  |
 | CSS Box Shadow Generator | Utility Tools | 880 | Easy |  |
-| ROT13 Decoder | Utility Tools | 720 | Easy |  |
-| Fertilizer Calculator | Calculator Tools | 590 | Easy |  |
-| XML Pretty Print | Utility Tools | 590 | Easy |  |
 | Cat Age to Human Years | Utility Tools | 590 | Easy |  |
-| Zalgo Text Generator | Utility Tools | 480 | Easy |  |
-| Tire Size Calculator | Calculator Tools | 260 | Easy |  |
-| Gravel Calculator | Calculator Tools | 260 | Easy |  |
-| Twitter Card Generator | Utility Tools | 260 | Easy |  |
-| YAML Viewer | Utility Tools | 260 | Easy |  |
-| Roman Numeral Generator | Utility Tools | 260 | Easy |  |
 | Rental ROI Calculator | Calculator Tools | 170 | Easy |  |
-| CSV Validator | Utility Tools | 140 | Easy |  |
 | Monitor PPI Calculator | Calculator Tools | 110 | Easy |  |
-| Color Blindness Simulator | Utility Tools | 110 | Easy |  |
-| CSS Triangle Generator | Utility Tools | 110 | Easy |  |
-| Random Decision Maker | Utility Tools | 110 | Easy |  |
-| WiFi Password QR Generator | Utility Tools | 110 | Easy |  |
-| Contrast Color Finder | Utility Tools | 110 | Easy |  |
+| Color Blindness Simulator | Utility Tools | 110 | Easy | Needs canvas pixel-manipulation with simulation matrices — deferred for a focused pass, not an effort-tier miscall. |
 
 ## Phase 5 — Backlog (reference only, see [`tools-backlog-longtail.md`](./tools-backlog-longtail.md) for full context)
 
