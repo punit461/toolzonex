@@ -6,37 +6,7 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Overtime Pay Calculator | Calculator Tools | 90 | 0 | 0.00 |
-| Room Lighting Calculator | Calculator Tools | 90 | 0 | 0.00 |
-| Burn Rate Calculator | Calculator Tools | 90 | 0 | 0.00 |
-| Startup Equity Calculator | Calculator Tools | 90 | 0 | 0.00 |
-| Paragraph Counter | Utility Tools | 90 | 0 | 0.95 |
-| HEX to CMYK Converter | Utility Tools | 90 | 0 | 0.00 |
-| Random Color Palette Generator | Utility Tools | 90 | 0 | 0.00 |
-| Holiday Countdown | Utility Tools | 90 | 0 | 0.00 |
-| Wallpaper Calculator | Calculator Tools | 70 | 0 | 0.00 |
-| Rent Affordability Calculator | Calculator Tools | 70 | 0 | 0.00 |
-| Generator Size Calculator | Calculator Tools | 70 | 0 | 0.00 |
-| Study Time Calculator | Calculator Tools | 70 | 0 | 0.00 |
-| Wallpaper Roll Calculator | Calculator Tools | 70 | 0 | 0.00 |
-| Swimming Pace Calculator | Calculator Tools | 70 | 0 | 0.00 |
-| Safety Stock Calculator | Calculator Tools | 70 | 0 | 0.00 |
-| Deck Board Calculator | Calculator Tools | 70 | 0 | 0.00 |
-| Pet Name Generator | Utility Tools | 70 | 0 | 0.00 |
-| Clan Name Generator | Utility Tools | 70 | 0 | 0.00 |
-| Dare Generator | Utility Tools | 70 | 0 | 0.00 |
-| Compression Ratio Calculator | Calculator Tools | 50 | 0 | 0.00 |
-| Employee Cost Calculator | Calculator Tools | 50 | 0 | 0.00 |
-| YouTube CPM Calculator | Calculator Tools | 50 | 0 | 0.00 |
-| Debt Service Coverage Ratio Calculator | Calculator Tools | 50 | 0 | 0.00 |
-| Water Flow Rate Calculator | Calculator Tools | 50 | 0 | 0.00 |
-| To-Do List Generator | Utility Tools | 50 | 0 | 0.00 |
-| Country Code Finder | Utility Tools | 50 | 0 | 0.00 |
-| Ring Size Converter | Utility Tools | 50 | 0 | 28.62 |
-| Clothing Size Converter | Utility Tools | 50 | 0 | 0.00 |
 | Roofing Calculator | Calculator Tools | 40 | 0 | 23.85 |
-| Credit Card Payoff Calculator | Calculator Tools | 40 | 0 | 0.00 |
-| Balloon Payment Calculator | Calculator Tools | 40 | 0 | 0.00 |
 | Exposure Calculator | Calculator Tools | 40 | 0 | 0.00 |
 | Cable Length Calculator | Calculator Tools | 40 | 0 | 20.03 |
 | Sound Delay Calculator | Calculator Tools | 40 | 0 | 0.00 |
