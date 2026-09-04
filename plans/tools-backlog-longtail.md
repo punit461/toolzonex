@@ -6,23 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Backpack Weight Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Ceiling Paint Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Window Area Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Drywall Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Insulation Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Revenue Growth Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Operating Margin Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Warehouse Space Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Packaging Cost Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Fence Material Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Deck Material Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Computer Electricity Cost Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Laptop Battery Life Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Internet Data Usage Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Cloud Storage Cost Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Interest Coverage Ratio Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Inventory Carrying Cost Calculator | Calculator Tools | 20 | 0 | 0.00 |
 | Sales Forecast Calculator | Calculator Tools | 20 | 0 | 0.00 |
 | Customer Retention Rate Calculator | Calculator Tools | 20 | 0 | 0.00 |
 | Break-Even Units Calculator | Calculator Tools | 20 | 0 | 0.00 |
