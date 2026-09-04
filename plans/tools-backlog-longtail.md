@@ -6,36 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Room Perimeter Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Stair Stringer Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Appliance Wattage Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Trim Text | Utility Tools | 30 | 0 | 0.00 |
-| SHA1 Hash Generator | Utility Tools | 30 | 0 | 0.00 |
-| Canonical URL Generator | Utility Tools | 30 | 0 | 0.00 |
-| Text to URL Encode | Utility Tools | 30 | 0 | 0.00 |
-| CURL Command Generator | Utility Tools | 30 | 0 | 0.00 |
-| Character Frequency Counter | Utility Tools | 30 | 0 | 0.00 |
-| Longest Word Finder | Utility Tools | 30 | 0 | 0.00 |
-| Time Zone Finder | Utility Tools | 30 | 0 | 0.00 |
-| Name Splitter | Utility Tools | 30 | 0 | 0.00 |
-| Random Language Generator | Utility Tools | 30 | 0 | 0.00 |
-| Random Fruit Generator | Utility Tools | 30 | 0 | 0.00 |
-| Would You Rather Generator | Utility Tools | 30 | 0 | 0.00 |
-| Compliment Generator | Utility Tools | 30 | 0 | 0.00 |
-| Daily Carb Intake Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Daily Fat Intake Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Storage Converter | Calculator Tools | 20 | 0 | 0.00 |
-| Inventory Turnover Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Debt to Equity Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Lease vs Buy Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Credit Score Estimator | Calculator Tools | 20 | 0 | 0.00 |
-| College Savings Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Column Load Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Depth of Field Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Banner Size Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Pizza Size Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| School Grade Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Gaming Sensitivity Calculator | Calculator Tools | 20 | 0 | 0.00 |
 | Concrete Block Calculator | Calculator Tools | 20 | 0 | 0.00 |
 | Topsoil Calculator | Calculator Tools | 20 | 0 | 0.00 |
 | Lawn Area Calculator | Calculator Tools | 20 | 0 | 0.00 |
