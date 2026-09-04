@@ -6,21 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Real Rate of Return Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Mortgage Recast Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Fuel Savings Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Air Purifier Size Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| LED Wattage Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Profit Per Unit Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Cost Per Unit Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Pallet Load Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Air Conditioner Running Cost Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Freight Cost Calculator | Calculator Tools | 30 | 0 | 89.68 |
-| Cost Per Lead Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Compost Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Irrigation Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Classroom Capacity Calculator | Calculator Tools | 30 | 0 | 0.00 |
-| Current Yield Calculator | Calculator Tools | 30 | 0 | 0.00 |
 | Room Perimeter Calculator | Calculator Tools | 30 | 0 | 0.00 |
 | Stair Stringer Calculator | Calculator Tools | 30 | 0 | 0.00 |
 | Appliance Wattage Calculator | Calculator Tools | 30 | 0 | 0.00 |

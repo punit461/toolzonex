@@ -16,5 +16,6 @@
 | Batch | Tools | Status |
 |---|---|---|
 | 1 | Roofing, Exposure, Cable Length, Sound Delay, CSS Border Radius, Bubble Text, Daily Fiber, Cooking Time, Marathon Time Predictor, Freelancer Hourly Rate, Email Marketing ROI, Daily Wage Calculators/Generators (12 built) — WiFi QR, Freelancer Tax, and Weekly Salary skipped as already fully covered by existing tools | done (2026-09) |
+| 2 | Real Rate of Return, Mortgage Recast, Profit Per Unit, AC Running Cost, Freight Cost, Cost Per Lead, Fuel Savings, Air Purifier Size, LED Wattage, Pallet Load, Compost, Irrigation, Classroom Capacity Calculators (13 built) — Cost Per Unit and Current Yield skipped as already fully covered by Unit Price Calculator and Bond Yield Calculator respectively | done (2026-09) |
 
 (Rows get appended here as each batch ships, each with a done/pending status — this table is the running record of what's actually been built from Phase 5 incrementally, separate from the two earlier larger opportunistic batches already reflected in `existing-tools-inventory.md`.)
