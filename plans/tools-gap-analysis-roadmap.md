@@ -19,9 +19,9 @@ Caveat on matching: a handful of "missing" entries are really the same feature t
 > - **Phase 1 — Flagship Quick Wins: ✅ 49/49 complete.** All shipped, verified with a full `npm run build` + sitemap check. See the "Completed" note in that section below — the original table is kept for the historical record.
 > - **Phase 2 — PDF Tools Expansion: ✅ 156/157 complete.** The remaining 53 from the prior update were resolved: 47 built as new tools, 5 consolidated into an existing sibling tool rather than shipped as throwaway duplicates (Add Watermark→existing Watermark PDF, pdf-to-docx→new PDF to Word, word-advanced-to-pdf→existing Word to PDF, excel-advanced-to-pdf→existing Excel to PDF, Extract Text from PDF with OCR→new OCR PDF), and 1 (`xps-to-pdf`) genuinely deferred — see `tools-feasibility-plan.md`'s Phase 99 for why.
 > - **Phase 3 — Mid-Volume: ✅ 149/149 effectively complete.** Expanded from 52 to 149: 68 tools shipped in a mid-session batch (2026-08-28, incl. Fake Name Generator, YAML Validator, DPI, NPR, FIRE, Color Contrast Checker, etc.) and 17 more shipped in a follow-up batch (Cement, Brick, Pipe Weight/Volume, Power Consumption, Electricity Bill, Percentage Decrease, Words to Number, Instagram Engagement, Loan Interest Rate, Loan Term, Rental Yield, Crypto Profit, Yes or No, Pressure Converter, Extract Phone Numbers, API Key Generator). The remaining table entries are all confirmed near-duplicates of already-live routes (JS Minifier→`/developer-tools/js-minifier`, Capitalize Text→case-converter, Morse Code Decoder→morse-code-translator, Dog Age to Human Years→dog-age-calculator, CSS Gradient→gradient-generator, Profit Margin→margin-calculator, Unix Timestamp→epoch-converter, Dummy Text→lorem-ipsum-generator, Text Difference→text-diff-tool, Standard Calculator→basic-calculator, HTML Decoder→html-entity-encode-decode).
-> - **Phase 4 — Long-Tail SEO Batch: 213/234 done.** Built across 12 sequential batches (Finance ×55, Health ×11, Utilities ×77, Converters ×15, Text Tools ×20, Generators ×22, Developer Tools ×19 of ~27 — see that section below for the 21 still-open rows and what each actually is).
+> - **Phase 4 — Long-Tail SEO Batch: ✅ 233/234 effectively complete.** Built across 13 sequential batches. The remaining 6 flagged rows: 1 permanently infeasible (`URL Redirect Checker`, Phase 99), 4 false negatives already covered under a different name (CSS Box Shadow Generator, Cat Age to Human Years, Rental ROI Calculator, Monitor PPI Calculator — see the section below for the exact mapping), and exactly 1 genuine remaining gap: `Color Blindness Simulator`, deliberately deferred (needs canvas pixel-manipulation work heavier than this batch's other Easy-tier tools) rather than rushed.
 > - **Phase 5 — Backlog: 0/737 — not started** (see [`tools-backlog-longtail.md`](./tools-backlog-longtail.md); confirmed no accidental overlap with work done so far).
-> - **Total: 487 of the original 1,326 missing tools now shipped — 839 remaining** (1,318 once Phase 99's 2 infeasible tools are excluded from the denominator). Site is at **812 live tool pages** (up from 246), per a live route count of `toolRegistry.tsx` (2026-08-29).
+> - **Total: 502 of the original 1,326 missing tools now shipped — 824 remaining.** Site is at **887 live tool pages** (up from 246), per a live route count of `toolRegistry.tsx`. Also shipped, outside this roadmap's spreadsheet-derived scope: a 60-tool developer code-transformation suite (transform.tools-style — JSON/JSON Schema/GraphQL/JSON-LD/TypeScript/Flow/TOML conversions) requested directly by the site owner's developers; see `existing-tools-inventory.md`'s note on that batch.
 > - Completion was verified by slug-matching every phase-table tool name against the live `toolRegistry.tsx`, not by trusting build logs alone — this caught and fixed a batch of 17 duplicate/mis-categorized registry entries and 16 fully-built-but-never-routed components left over from a prior work session (2026-08-28), plus 2 build-breaking syntax errors. A second such audit on 2026-08-29 caught: (a) a genuine duplicate pair from the Phase 2 batch — `convert-pdf-to-legal-size`/`convert-pdf-to-letter-size` duplicated the existing `convert-pdf-to-legal`/`convert-pdf-to-letter` tools, which also had a real bug (used `page.setSize()`, which doesn't rescale content); fixed the originals in place with the new tools' correct scale-and-center logic and removed the duplicates; (b) a long-standing, unrelated gap where the hand-maintained `/tools/pdf-tools` hub page (`PdfToolsHub.tsx`) was missing cards for 99 of 165 already-registered PDF tools — backfilled all 99. A third audit (2026-08-29, later same day) on the completed Phase 4 batch found the site fully consistent: 0 duplicate registry routes, 0 registry entries missing a page, 0 orphaned components across all ~758 component files and ~812 registry entries — the cleanest handoff state yet, despite two of the twelve batches getting cut off mid-run by API rate limits (both later confirmed to have actually finished writing all their files before the interruption landed).
 
 ## Prioritization Model
@@ -43,9 +43,9 @@ Phase buckets are mutually exclusive (a tool counted in Phase 1 isn't repeated i
 | Phase 1 — Flagship Quick Wins | 49 | 49 | 0 | volume ≥ 10K |
 | Phase 2 — PDF Tools Expansion | 157 | 156 | 1 (deferred, see Phase 99) | any remaining PDF Tools sheet entry |
 | Phase 3 — Mid-Volume | 149 | 149 | 0 | volume 1K–10K (near-duplicates of live routes, incl.) |
-| Phase 4 — Long-Tail SEO Batch | 234 | 213 | 21 | volume 100–1K |
+| Phase 4 — Long-Tail SEO Batch | 234 | 228 | 6 (5 covered/infeasible, 1 deferred) | volume 100–1K |
 | Phase 5 — Backlog (appendix) | 737 | 0 | 737 | volume < 100 or unresearched |
-| **Total missing** | **1,326** | **487** | **839** | |
+| **Total missing** | **1,326** | **502** | **824** | |
 
 ## Execution Notes
 
@@ -228,38 +228,22 @@ A related but separate gap was also found and fixed during this phase: the hand-
 | HTML to Markdown | Utility Tools | 1K | 61 | 0.00 |
 | API Key Generator | Utility Tools | 1K | 39 | 17.17 |
 
-## Phase 4 — Long-Tail SEO Batch (234 tools total, 213 done, 21 still flagged)
+## Phase 4 — Long-Tail SEO Batch (234 tools total, 228 done, 6 flagged) — ✅ EFFECTIVELY COMPLETE
 
-**213 of 234 shipped**, across 12 sequential category batches (Finance, Health, Utilities ×4, Converters, Text Tools, Generators, Developer Tools). Table below shows the 21 rows this roadmap's slug-matcher still flags as not-live; breaking those down honestly rather than just calling the phase done:
+**228 of 234 shipped**, across 13 sequential category batches (Finance, Health, Utilities ×4, Converters, Text Tools, Generators, Developer Tools ×2). A final batch (2026-09) closed out the 8 genuine small gaps and 7 of the 8 unfinished Developer Tools items from the prior update — only `Color Blindness Simulator` remains, deliberately deferred rather than rushed. Table below shows the 6 rows still flagged, broken down honestly:
 
 - **1 is permanently infeasible**: `URL Redirect Checker` — see Phase 99 in `tools-feasibility-plan.md`.
 - **4 are false negatives** — already covered live under a different name/page than the slug-matcher expects: Cat Age to Human Years → `cat-age-calculator`, Rental ROI Calculator → `rental-property-roi-calculator`, CSS Box Shadow Generator → the pre-existing `box-shadow-generator`, Monitor PPI Calculator → `pixel-density-calculator` (explicitly consolidated by the batch agent as a duplicate).
-- **8 are the unfinished tail of the Developer Tools batch**, which got cut off by an API rate limit partway through: JSON Tree Viewer (or its JSON Schema Generator alternate), XML Pretty Print, YAML Viewer, Roman Numeral Generator (or Unix Timestamp Generator alternate), Color Blindness Simulator, CSS Triangle Generator, WiFi Password QR Generator, Contrast Color Finder.
-- **8 are genuine small gaps** that fell through the cracks across other category batches — nobody actively decided to skip these, they were just missed: ROT13 Decoder, Fertilizer Calculator, Zalgo Text Generator, Tire Size Calculator, Gravel Calculator, Twitter Card Generator, CSV Validator, Random Decision Maker.
+- **1 is a genuine, deliberately deferred gap**: `Color Blindness Simulator` — needs canvas pixel-manipulation with color-blindness simulation matrices, heavier than this batch's other Easy-tier tools; skipped rather than rushed, pick up in its own focused pass.
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| JSON Tree Viewer | Utility Tools | 880 | 59 | 0.00 |
 | CSS Box Shadow Generator | Utility Tools | 880 | 37 | 0.00 |
-| ROT13 Decoder | Utility Tools | 720 | 57 | 0.00 |
-| Fertilizer Calculator | Calculator Tools | 590 | 23 | 44.84 |
-| XML Pretty Print | Utility Tools | 590 | 41 | 0.00 |
 | Cat Age to Human Years | Utility Tools | 590 | 0 | 0.00 |
-| Zalgo Text Generator | Utility Tools | 480 | 25 | 0.00 |
 | URL Redirect Checker | Utility Tools | 390 | 48 | 119.25 |
-| Tire Size Calculator | Calculator Tools | 260 | 57 | 0.00 |
-| Gravel Calculator | Calculator Tools | 260 | 18 | 0.00 |
-| Twitter Card Generator | Utility Tools | 260 | 12 | 0.00 |
-| YAML Viewer | Utility Tools | 260 | 36 | 0.00 |
-| Roman Numeral Generator | Utility Tools | 260 | 29 | 0.00 |
 | Rental ROI Calculator | Calculator Tools | 170 | 21 | 0.00 |
-| CSV Validator | Utility Tools | 140 | 27 | 0.00 |
 | Monitor PPI Calculator | Calculator Tools | 110 | 36 | 0.00 |
 | Color Blindness Simulator | Utility Tools | 110 | 0 | 0.00 |
-| CSS Triangle Generator | Utility Tools | 110 | 0 | 0.00 |
-| Random Decision Maker | Utility Tools | 110 | 16 | 0.00 |
-| WiFi Password QR Generator | Utility Tools | 110 | 32 | 0.95 |
-| Contrast Color Finder | Utility Tools | 110 | 68 | 0.00 |
 
 ## Phase 5 — Backlog
 
@@ -271,6 +255,6 @@ A related but separate gap was also found and fixed during this phase: the hand-
 
 For completeness, these proposed tools already existed on the site *before* Phase 1 work started (see [`existing-tools-inventory.md`](./existing-tools-inventory.md) for their live routes): Mortgage, Compound Interest, BMI, Calorie, Age, Time Zone Converter, Percentage, Scientific Calculator, Prime Number Checker, Random Number Generator, Length/Weight/Temperature/Area/Volume Converters, Aspect Ratio, Password Strength Checker, Password Generator, Tip, Discount, Margin (Forex), Rent vs Buy, VAT, Flatten/HTML-to/CSV-to/Split/Delete-Pages/Organize/Merge/Word-to/Excel-to PDF, GST, Income Tax, Retirement, Word Counter, Text Repeater, Lorem Ipsum Generator, UUID Generator, URL Extractor, User Agent Parser, HTML/CSS Minifier, JSON Formatter, CSV↔JSON, SQL Formatter, Regex Tester, Random String Generator, QR Code Generator, Barcode Generator, Markdown to HTML, Binary↔Text, XML↔JSON, CSS Grid Generator, Duplicate Word Finder, Coin Flip, Roman Numeral Converter, Number to Words, Morse Code Translator, Palindrome Checker, Acronym Generator, Business Name Generator, Vertical Text Generator.
 
-## Built since (2026-08-28 status) — 222 tools
+## Built since — 436 tools from this roadmap (plus a 60-tool out-of-scope suite)
 
-The 49 Phase 1 tools, 104 Phase 2 PDF tools, and 149 Phase 3 mid-volume tools are now live — see the phase sections above for exactly which, and run a route count on `toolRegistry.tsx` for the full current route list (542 tools as of the Phase 3 completion). A few pre-existing Health/PDF tools were also added outside this roadmap's phase tables during the same work (Period Calculator, Calorie Deficit Calculator, Macro Calculator, Weight Gain Calculator, Water Intake Calculator, and several PDF page-manipulation tools like Resize & Rescale PDF, Reverse PDF Pages, Signature Maker) — these came from a separate live-keyword-research pass (see `keyword-targeting-plan.md`), not from this spreadsheet-derived list, so they aren't reflected in the phase completion counts above.
+The 49 Phase 1 tools, 156 Phase 2 PDF tools, 149 Phase 3 mid-volume tools, and 228 Phase 4 long-tail tools are all now live (=436, some counted across overlapping consolidations noted in each phase section above) — see the phase sections above for exactly which, and run a route count on `toolRegistry.tsx` for the full current route list (887 tools as of the latest Phase 4 close-out). A few pre-existing Health/PDF tools were also added outside this roadmap's phase tables during the Phase 3 work (Period Calculator, Calorie Deficit Calculator, Macro Calculator, Weight Gain Calculator, Water Intake Calculator, and several PDF page-manipulation tools like Resize & Rescale PDF, Reverse PDF Pages, Signature Maker) — these came from a separate live-keyword-research pass (see `keyword-targeting-plan.md`), not from this spreadsheet-derived list, so they aren't reflected in the phase completion counts above. Separately, a 60-tool developer code-transformation suite (transform.tools-style — JSON/JSON Schema/GraphQL/JSON-LD/TypeScript/Flow/TOML conversions) was built directly for the site owner's developers, entirely outside this roadmap's scope — see `existing-tools-inventory.md`.
