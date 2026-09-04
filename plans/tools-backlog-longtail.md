@@ -6,25 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Loan Interest Comparison Calculator | Calculator Tools | 10 | 0 | — |
-| Extra Payment Savings Calculator | Calculator Tools | 10 | 0 | — |
-| Vehicle Loan Affordability Calculator | Calculator Tools | 10 | 0 | — |
-| EV vs Petrol Cost Calculator | Calculator Tools | 10 | 0 | — |
-| Motorcycle Fuel Cost Calculator | Calculator Tools | 10 | 0 | — |
-| Road Trip Fuel Budget Calculator | Calculator Tools | 10 | 0 | — |
-| Door Area Calculator | Calculator Tools | 10 | 0 | — |
-| Return on Assets (ROA) Calculator | Calculator Tools | 10 | 0 | — |
-| Return on Equity (ROE) Calculator | Calculator Tools | 10 | 0 | — |
-| Accounts Receivable Days Calculator | Calculator Tools | 10 | 0 | — |
-| Accounts Payable Days Calculator | Calculator Tools | 10 | 0 | — |
-| Working Days Salary Calculator | Calculator Tools | 10 | 0 | — |
-| Shift Differential Pay Calculator | Calculator Tools | 10 | 0 | — |
-| Double Time Pay Calculator | Calculator Tools | 10 | 0 | — |
-| Night Shift Pay Calculator | Calculator Tools | 10 | 0 | — |
-| Freelance Project Profit Calculator | Calculator Tools | 10 | 0 | — |
-| Client Retainer Calculator | Calculator Tools | 10 | 0 | — |
-| Hourly Billing Calculator | Calculator Tools | 10 | 0 | — |
-| Break-Even Sales Calculator | Calculator Tools | 10 | 0 | — |
 | Inventory Value Calculator | Calculator Tools | 10 | 0 | 0.00 |
 | Shipping Cost Estimator | Calculator Tools | 10 | 0 | 42.93 |
 | Carton Capacity Calculator | Calculator Tools | 10 | 0 | — |
