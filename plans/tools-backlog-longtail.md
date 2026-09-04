@@ -6,24 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Secure Token Generator | Utility Tools | 20 | 0 | 0.00 |
-| CHMOD Generator | Utility Tools | 20 | 0 | 0.00 |
-| CSP Generator | Utility Tools | 20 | 0 | 0.00 |
-| Favicon HTML Generator | Utility Tools | 20 | 0 | 0.00 |
-| Apple Touch Icon Generator | Utility Tools | 20 | 0 | 0.00 |
-| CSS Transform Generator | Utility Tools | 20 | 0 | 0.00 |
-| CSS Flexbox Generator | Utility Tools | 20 | 0 | 0.00 |
-| Reverse Word Order | Utility Tools | 20 | 0 | 0.00 |
-| Name Initials Generator | Utility Tools | 20 | 0 | 0.00 |
-| NATO Alphabet Converter | Utility Tools | 20 | 0 | 0.00 |
-| Contact QR Generator | Utility Tools | 20 | 0 | 18.13 |
-| Pangram Checker | Utility Tools | 20 | 0 | 0.00 |
-| Sentence Splitter | Utility Tools | 20 | 0 | 0.00 |
-| Space to Tab Converter | Utility Tools | 20 | 0 | 0.00 |
-| Checklist Generator | Utility Tools | 20 | 0 | 59.15 |
-| Grocery List Generator | Utility Tools | 20 | 0 | 0.00 |
-| Packing List Generator | Utility Tools | 20 | 0 | 0.00 |
-| Bucket List Generator | Utility Tools | 20 | 0 | 0.00 |
 | File Extension Finder | Utility Tools | 20 | 0 | 0.00 |
 | File Type Identifier | Utility Tools | 20 | 0 | 0.00 |
 | Unicode Character Lookup | Utility Tools | 20 | 0 | 0.00 |
