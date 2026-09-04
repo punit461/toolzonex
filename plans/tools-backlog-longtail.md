@@ -6,24 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Sales Forecast Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Customer Retention Rate Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Break-Even Units Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Contribution Margin Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Sales Target Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Operating Cash Flow Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Closing Cost Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Garden Soil Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Tree Height Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Fuse Size Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Appliance Running Cost Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Refrigerator Size Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Binomial Probability Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Centripetal Force Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Speaker Distance Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| File Compression Ratio Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Snow Load Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Dividend Payout Ratio Calculator | Calculator Tools | 20 | 0 | 0.00 |
 | Debt Ratio Calculator | Calculator Tools | 20 | 0 | 0.00 |
 | Healthy Weight Range Calculator | Calculator Tools | 20 | 0 | 0.00 |
 | Resting Heart Rate Calculator | Calculator Tools | 20 | 0 | 0.00 |
