@@ -6,31 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Debt Ratio Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Healthy Weight Range Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Resting Heart Rate Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Home Energy Usage Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Ceiling Area Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Fence Post Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Sod Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Tile Grout Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Plywood Sheet Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| CRC32 Generator | Utility Tools | 20 | 0 | 0.00 |
-| ROT13 Encoder | Utility Tools | 20 | 0 | 0.00 |
-| HTTP Header Viewer | Utility Tools | 20 | 0 | 0.00 |
-| Unix Timestamp Generator | Utility Tools | 20 | 0 | 0.00 |
-| Random PIN Generator | Utility Tools | 20 | 0 | 0.00 |
-| RGB to HSL Converter | Utility Tools | 20 | 0 | 0.00 |
-| CMYK to HEX Converter | Utility Tools | 20 | 0 | 0.00 |
-| Fake Phone Generator | Utility Tools | 20 | 0 | 0.00 |
-| Fake Company Generator | Utility Tools | 20 | 0 | 0.00 |
-| vCard QR Generator | Utility Tools | 20 | 0 | 9.54 |
-| HTML Escape Tool | Utility Tools | 20 | 0 | 0.00 |
-| INI Formatter | Utility Tools | 20 | 0 | 0.00 |
-| HTML Pretty Print | Utility Tools | 20 | 0 | 0.00 |
-| CSS Pretty Print | Utility Tools | 20 | 0 | 0.00 |
-| JavaScript Pretty Print | Utility Tools | 20 | 0 | 0.00 |
-| Regex Replace Tester | Utility Tools | 20 | 0 | 0.00 |
 | Secure Token Generator | Utility Tools | 20 | 0 | 0.00 |
 | CHMOD Generator | Utility Tools | 20 | 0 | 0.00 |
 | CSP Generator | Utility Tools | 20 | 0 | 0.00 |
