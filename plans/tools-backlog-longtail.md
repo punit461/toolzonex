@@ -6,29 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| File Extension Finder | Utility Tools | 20 | 0 | 0.00 |
-| File Type Identifier | Utility Tools | 20 | 0 | 0.00 |
-| Unicode Character Lookup | Utility Tools | 20 | 0 | 0.00 |
-| Initials Generator | Utility Tools | 20 | 0 | 0.95 |
-| Unique Words Finder | Utility Tools | 20 | 0 | 0.00 |
-| Random Hobby Generator | Utility Tools | 20 | 0 | 0.00 |
-| Country Code Lookup | Utility Tools | 20 | 0 | 0.00 |
-| Emoji Counter | Utility Tools | 20 | 0 | 0.00 |
-| Unicode Character Finder | Utility Tools | 20 | 0 | 0.00 |
-| Age Difference Finder | Utility Tools | 20 | 0 | 0.00 |
-| Hat Size Converter | Utility Tools | 20 | 0 | 0.00 |
-| License Plate Generator | Utility Tools | 20 | 0 | 0.00 |
-| Never Have I Ever Generator | Utility Tools | 20 | 0 | 0.00 |
-| Truth Generator | Utility Tools | 20 | 0 | 0.00 |
-| Loan EMI / Monthly Payment Calculator | Calculator Tools | 10 | 0 | — |
-| Car Loan / Auto Loan Calculator | Calculator Tools | 10 | 0 | — |
-| Savings & Investment Calculator | Calculator Tools | 10 | 0 | — |
-| NPV & IRR Calculator | Calculator Tools | 10 | 0 | — |
-| Debt Payoff Calculator | Calculator Tools | 10 | 0 | 0.00 |
-| Salary / Take-Home Pay Calculator | Calculator Tools | 10 | 0 | — |
-| Quick Ratio Calculator | Calculator Tools | 10 | 0 | — |
-| Built-up Area Calculator | Calculator Tools | 10 | 0 | — |
-| Super Built-up Area Calculator | Calculator Tools | 10 | 0 | — |
 | Camera Megapixel Calculator | Calculator Tools | 10 | 0 | — |
 | Circle of Confusion Calculator | Calculator Tools | 10 | 0 | 0.00 |
 | Printer DPI Calculator | Calculator Tools | 10 | 0 | — |
