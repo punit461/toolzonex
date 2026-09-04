@@ -15,6 +15,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import SearchIcon from '@mui/icons-material/Search';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import { useColorMode } from './ColorModeProvider';
@@ -34,7 +35,8 @@ const HideOnScroll = ({ children }: HideOnScrollProps) => {
 // Resizer were both missing from this nav after being added to the
 // homepage). Deriving means that can't happen again.
 interface NavTool { label: string; path: string; description: string }
-interface NavCategory { label: string; tools: NavTool[] }
+interface DashboardLink { label: string; path: string }
+interface NavCategory { label: string; tools: NavTool[]; dashboardLinks: DashboardLink[] }
 
 const NAV_GROUPS: { label: string; sourceCategories: string[] }[] = [
   { label: 'AI Tools', sourceCategories: ['AI'] },
@@ -45,12 +47,51 @@ const NAV_GROUPS: { label: string; sourceCategories: string[] }[] = [
   { label: 'Web Tools', sourceCategories: ['Tools', 'PDF Tools'] },
 ];
 
-const navCategories: NavCategory[] = NAV_GROUPS.map((group) => ({
-  label: group.label,
-  tools: toolCategories
-    .filter((cat) => group.sourceCategories.includes(cat.label))
-    .flatMap((cat) => cat.tools.map((tool) => ({ label: tool.title, path: tool.path, description: tool.description }))),
-}));
+// Maps each source category (Batch 1's per-category dashboards) to its
+// dashboard route -- categories that share one dashboard (e.g. Paycheck
+// Calculators folds into Finance) map to the same path so a nav group
+// spanning them only produces one "view all" link, not a duplicate.
+const CATEGORY_DASHBOARD_ROUTES: Record<string, string> = {
+  Finance: '/finance',
+  'Paycheck Calculators': '/finance',
+  Health: '/health',
+  Utilities: '/utilities',
+  'Time & Productivity': '/utilities',
+  Screens: '/utilities',
+  Converters: '/converters',
+  'Text Tools': '/text-tools',
+  Generators: '/generators',
+  'Developer Tools': '/developer-tools',
+  Tools: '/tools',
+  'PDF Tools': '/tools/pdf-tools',
+  AI: '/ai',
+};
+
+const DASHBOARD_LABELS: Record<string, string> = {
+  '/finance': 'Finance',
+  '/health': 'Health',
+  '/utilities': 'Utilities',
+  '/converters': 'Converters',
+  '/text-tools': 'Text Tools',
+  '/generators': 'Generators',
+  '/developer-tools': 'Developer Tools',
+  '/tools': 'Tools',
+  '/tools/pdf-tools': 'PDF Tools',
+  '/ai': 'AI',
+};
+
+const navCategories: NavCategory[] = NAV_GROUPS.map((group) => {
+  const dashboardPaths = Array.from(
+    new Set(group.sourceCategories.map((cat) => CATEGORY_DASHBOARD_ROUTES[cat]).filter(Boolean))
+  );
+  return {
+    label: group.label,
+    tools: toolCategories
+      .filter((cat) => group.sourceCategories.includes(cat.label))
+      .flatMap((cat) => cat.tools.map((tool) => ({ label: tool.title, path: tool.path, description: tool.description }))),
+    dashboardLinks: dashboardPaths.map((path) => ({ label: DASHBOARD_LABELS[path], path })),
+  };
+});
 
 // ── Desktop Mega-Dropdown ──────────────────────────────────────────
 interface DropdownButtonProps { category: NavCategory }
@@ -152,6 +193,22 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
                       </React.Fragment>
                     ))}
                   </Box>
+                  {category.dashboardLinks.length > 0 && (
+                    <MenuList sx={{ py: 0.5, borderTop: '1px solid', borderColor: 'divider' }}>
+                      {category.dashboardLinks.map((link) => (
+                        <MenuItem
+                          key={link.path}
+                          component={RouterLink}
+                          href={link.path}
+                          onClick={() => setOpen(false)}
+                          sx={{ fontSize: '0.8rem', py: 0.75, borderRadius: 1, mx: 0.5, fontWeight: 700, color: 'primary.main' }}
+                        >
+                          View all {link.label} tools
+                          <ArrowForwardIcon sx={{ fontSize: '0.9rem', ml: 0.75 }} />
+                        </MenuItem>
+                      ))}
+                    </MenuList>
+                  )}
                 </Box>
               </ClickAwayListener>
             </Paper>
@@ -190,6 +247,20 @@ const MobileAccordion = ({ category, onClose }: MobileAccordionProps) => {
               <ListItemText
                 primary={tool.label}
                 slotProps={{ primary: { sx: { fontSize: '0.85rem', color: 'text.secondary' } } }}
+              />
+            </ListItemButton>
+          ))}
+          {category.dashboardLinks.map((link) => (
+            <ListItemButton
+              key={link.path}
+              component={RouterLink}
+              href={link.path}
+              onClick={onClose}
+              sx={{ pl: 4, py: 0.6, borderTop: '1px solid', borderColor: 'divider' }}
+            >
+              <ListItemText
+                primary={`View all ${link.label} tools →`}
+                slotProps={{ primary: { sx: { fontSize: '0.85rem', fontWeight: 700, color: 'primary.main' } } }}
               />
             </ListItemButton>
           ))}

@@ -17,6 +17,18 @@ interface CalculatorShellProps {
 
 const RELATED_COUNT = 6;
 
+const CATEGORY_DASHBOARD_ROUTES: Record<string, string> = {
+  Finance: '/finance',
+  Health: '/health',
+  Utilities: '/utilities',
+  Converters: '/converters',
+  'Text Tools': '/text-tools',
+  Generators: '/generators',
+  'Developer Tools': '/developer-tools',
+  Tools: '/tools',
+  'PDF Tools': '/tools/pdf-tools',
+};
+
 /**
  * Picks a deterministic window of "next N" tools after the current one in
  * its category (wrapping around), rather than always the same first N --
@@ -66,7 +78,7 @@ const CalculatorShell = ({ url, children, content }: CalculatorShellProps) => {
       )}
       <Breadcrumbs
         items={[
-          { label: category, href: '/' },
+          { label: category, href: CATEGORY_DASHBOARD_ROUTES[category] ?? '/' },
           { label: title }
         ]}
       />
