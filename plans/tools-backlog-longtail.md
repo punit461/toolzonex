@@ -6,23 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Concrete Block Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Topsoil Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Lawn Area Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Fence Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Heater Size Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Pet Food Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Horse Feed Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Cycling Power Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Luggage Weight Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Party Budget Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Event Cost Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Sales Commission Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Shift Hours Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Social Media ROI Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Customer Acquisition Cost Calculator | Calculator Tools | 20 | 0 | 0.00 |
-| Used Car Cost Calculator | Calculator Tools | 20 | 0 | 20.99 |
-| Vacation Savings Calculator | Calculator Tools | 20 | 0 | 0.00 |
 | Backpack Weight Calculator | Calculator Tools | 20 | 0 | 0.00 |
 | Ceiling Paint Calculator | Calculator Tools | 20 | 0 | 0.00 |
 | Window Area Calculator | Calculator Tools | 20 | 0 | 0.00 |
