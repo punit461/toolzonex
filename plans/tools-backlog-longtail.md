@@ -6,26 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Customer Churn Rate Calculator | Calculator Tools | 10 | 0 | — |
-| Runway Calculator | Calculator Tools | 10 | 0 | — |
-| Lawn Seed Calculator | Calculator Tools | 10 | 0 | — |
-| Tank Filling Time Calculator | Calculator Tools | 10 | 0 | — |
-| Microwave Power Calculator | Calculator Tools | 10 | 0 | — |
-| Air Fryer Cooking Time Calculator | Calculator Tools | 10 | 0 | — |
-| Rice Cooking Calculator | Calculator Tools | 10 | 0 | — |
-| Pasta Portion Calculator | Calculator Tools | 10 | 0 | — |
-| Cake Serving Calculator | Calculator Tools | 10 | 0 | 0.00 |
-| Drink Quantity Calculator | Calculator Tools | 10 | 0 | — |
-| Party Food Quantity Calculator | Calculator Tools | 10 | 0 | — |
-| Wedding Seating Calculator | Calculator Tools | 10 | 0 | — |
-| Library Shelf Space Calculator | Calculator Tools | 10 | 0 | — |
-| Storage Box Capacity Calculator | Calculator Tools | 10 | 0 | — |
-| Warehouse Capacity Calculator | Calculator Tools | 10 | 0 | — |
-| Inflation Adjusted Price Calculator | Calculator Tools | 10 | 0 | 0.00 |
-| Interquartile Range Calculator | Calculator Tools | 10 | 0 | 0.00 |
-| Screen Viewing Distance Calculator | Calculator Tools | 10 | 0 | — |
-| Camera Crop Factor Calculator | Calculator Tools | 10 | 0 | — |
-| Memory Card Capacity Calculator | Calculator Tools | 10 | 0 | 0.00 |
 | Rainfall Collection Calculator | Calculator Tools | 10 | 0 | — |
 | Occupancy Load Calculator | Calculator Tools | 10 | 0 | 0.00 |
 | Earnings Per Share (EPS) Calculator | Calculator Tools | 10 | 0 | — |
