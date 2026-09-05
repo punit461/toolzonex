@@ -6,36 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Acronym Expander | Utility Tools | 10 | 0 | 0.00 |
-| Text Deduplicator | Utility Tools | 10 | 0 | — |
-| Text Chunk Generator | Utility Tools | 10 | 0 | — |
-| Stop Word Remover | Utility Tools | 10 | 0 | — |
-| Common Words Finder | Utility Tools | 10 | 0 | — |
-| Text Alphabetizer | Utility Tools | 10 | 0 | — |
-| Random Profession Generator | Utility Tools | 10 | 0 | — |
-| Random Vegetable Generator | Utility Tools | 10 | 0 | 0.00 |
-| Color Palette Extractor (Text) | Utility Tools | 10 | 0 | — |
-| CSS Color Name Finder | Utility Tools | 10 | 0 | — |
-| Web Safe Color Generator | Utility Tools | 10 | 0 | — |
-| Gradient Color Palette Generator | Utility Tools | 10 | 0 | — |
-| Hex Color Validator | Utility Tools | 10 | 0 | — |
-| RGB Color Validator | Utility Tools | 10 | 0 | — |
-| File Name Sanitizer | Utility Tools | 10 | 0 | — |
-| Duplicate File Name Checker | Utility Tools | 10 | 0 | — |
-| File Extension Extractor | Utility Tools | 10 | 0 | — |
-| File Name Shortener | Utility Tools | 10 | 0 | 0.00 |
-| Currency Symbol Finder | Utility Tools | 10 | 0 | — |
-| Language Name Lookup | Utility Tools | 10 | 0 | — |
-| Time Zone Reference | Utility Tools | 10 | 0 | — |
-| Emoji Search Tool | Utility Tools | 10 | 0 | — |
-| Emoji Category Browser | Utility Tools | 10 | 0 | — |
-| Emoji Copy Tool | Utility Tools | 10 | 0 | — |
-| Emoji Meaning Finder | Utility Tools | 10 | 0 | — |
-| Unicode Block Viewer | Utility Tools | 10 | 0 | — |
-| ASCII Character Viewer | Utility Tools | 10 | 0 | — |
-| Symbol Picker | Utility Tools | 10 | 0 | — |
-| Pet Age Converter | Utility Tools | 10 | 0 | — |
-| Chinese Zodiac Finder | Utility Tools | 10 | 0 | 0.00 |
 | Birth Flower Finder | Utility Tools | 10 | 0 | — |
 | Blood Type Compatibility Checker | Utility Tools | 10 | 0 | — |
 | Neck Tie Length Guide | Utility Tools | 10 | 0 | — |
