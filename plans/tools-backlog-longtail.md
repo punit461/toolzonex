@@ -6,26 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Rainfall Collection Calculator | Calculator Tools | 10 | 0 | — |
-| Occupancy Load Calculator | Calculator Tools | 10 | 0 | 0.00 |
-| Earnings Per Share (EPS) Calculator | Calculator Tools | 10 | 0 | — |
-| Price to Book (P/B) Ratio Calculator | Calculator Tools | 10 | 0 | — |
-| Inventory Turn Days Calculator | Calculator Tools | 10 | 0 | — |
-| Economic Value Added (EVA) Calculator | Calculator Tools | 10 | 0 | — |
-| Weighted GPA Calculator | Calculator Tools | 10 | 0 | 0.00 |
-| Required Exam Score Calculator | Calculator Tools | 10 | 0 | — |
-| Attendance Percentage Required Calculator | Calculator Tools | 10 | 0 | — |
-| Study Hours Planner Calculator | Calculator Tools | 10 | 0 | — |
-| Reading Progress Calculator | Calculator Tools | 10 | 0 | — |
-| Pages Per Day Calculator | Calculator Tools | 10 | 0 | — |
-| Ideal Sleep Duration Calculator | Calculator Tools | 10 | 0 | — |
-| Water Heating Cost Calculator | Calculator Tools | 10 | 0 | — |
-| Light Bulb Savings Calculator | Calculator Tools | 10 | 0 | — |
-| Garden Bed Calculator | Calculator Tools | 10 | 0 | — |
-| Seed Spacing Calculator | Calculator Tools | 10 | 0 | — |
-| Rain Gutter Capacity Calculator | Calculator Tools | 10 | 0 | — |
-| Gravel Coverage Calculator | Calculator Tools | 10 | 0 | 0.00 |
-| Sand Coverage Calculator | Calculator Tools | 10 | 0 | — |
 | Topsoil Coverage Calculator | Calculator Tools | 10 | 0 | — |
 | Extension Cord Load Calculator | Calculator Tools | 10 | 0 | — |
 | Sort Text Lines | Utility Tools | 10 | 0 | — |
