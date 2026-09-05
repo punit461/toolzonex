@@ -25,6 +25,7 @@
     "@tensorflow/tfjs": "^4.22.0",
     "@types/diff": "^7.0.2",
     "@types/js-yaml": "^4.0.9",
+    "bcryptjs": "^3.0.3",
     "cronstrue": "^3.14.0",
     "diff": "^9.0.0",
     "exifr": "^7.1.3",

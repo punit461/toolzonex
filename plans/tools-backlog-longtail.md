@@ -6,26 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Birth Flower Finder | Utility Tools | 10 | 0 | — |
-| Blood Type Compatibility Checker | Utility Tools | 10 | 0 | — |
-| Neck Tie Length Guide | Utility Tools | 10 | 0 | — |
-| Password Pronunciation Tool | Utility Tools | 10 | 0 | — |
-| Conversation Starter Generator | Utility Tools | 10 | 0 | — |
-| Icebreaker Question Generator | Utility Tools | 10 | 0 | — |
-| Apology Generator | Utility Tools | 10 | 0 | — |
-| Lucky Color Finder | Utility Tools | 10 | 0 | — |
-| Mood Picker | Utility Tools | 10 | 0 | — |
-| Daily Challenge Generator | Utility Tools | 10 | 0 | — |
-| Goal Tracker Generator | Utility Tools | 10 | 0 | — |
-| Inventory Profit Calculator | Calculator Tools | — | 0 | 0.00 |
-| Aspect Ratio Simplifier | Calculator Tools | — | 0 | 0.00 |
-| Price to Earnings (P/E) Ratio Calculator | Calculator Tools | — | 0 | 0.00 |
-| Mulch Depth Calculator | Calculator Tools | — | 0 | 0.00 |
-| Find & Replace Text | Utility Tools | — | 0 | 0.00 |
-| URL Decode Text | Utility Tools | — | 0 | 0.00 |
-| XML Escape Tool | Utility Tools | — | 0 | 0.00 |
-| BCrypt Hash Generator | Utility Tools | — | 0 | 0.00 |
-| HTTP Status Code Lookup | Utility Tools | — | 0 | 0.00 |
 | Currency Code Finder | Utility Tools | — | 0 | 0.00 |
 | Password Pronounce Generator | Utility Tools | — | — | — |
 | Username Cleaner | Utility Tools | — | — | — |
