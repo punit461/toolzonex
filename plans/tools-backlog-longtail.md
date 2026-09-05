@@ -6,34 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Countdown List Generator | Utility Tools | — | — | — |
-| Priority List Generator | Utility Tools | — | — | — |
-| Decision List Generator | Utility Tools | — | — | — |
-| Wish List Generator | Utility Tools | — | — | — |
-| Movie Watchlist Generator | Utility Tools | — | — | — |
-| Book Reading List Generator | Utility Tools | — | — | — |
-| TV Series Tracker | Utility Tools | — | — | — |
-| Game Backlog Tracker | Utility Tools | — | — | — |
-| Event Guest List Generator | Utility Tools | — | — | — |
-| Seating List Generator | Utility Tools | — | — | — |
-| Nickname Combiner | Utility Tools | — | — | — |
-| Initials Logo Generator | Utility Tools | — | — | — |
-| Monogram Generator | Utility Tools | — | — | — |
-| Name Alphabetizer | Utility Tools | — | — | — |
-| Name Deduplicator | Utility Tools | — | — | — |
-| Guest Name Randomizer | Utility Tools | — | — | — |
-| Attendance List Generator | Utility Tools | — | — | — |
-| RSVP List Generator | Utility Tools | — | — | — |
-| Seating Number Generator | Utility Tools | — | — | — |
-| Queue Number Generator | Utility Tools | — | — | — |
-| Token Number Generator | Utility Tools | — | — | — |
-| Serial Number Generator | Utility Tools | — | — | — |
-| Coupon Code Generator | Utility Tools | — | — | — |
-| Voucher Code Generator | Utility Tools | — | — | — |
-| Reference Number Generator | Utility Tools | — | — | — |
-| Order ID Generator | Utility Tools | — | — | — |
-| Tracking Number Generator | Utility Tools | — | — | — |
-| Barcode Number Generator | Utility Tools | — | — | — |
 | Batch Number Generator | Utility Tools | — | — | — |
 | Product SKU Generator | Utility Tools | — | — | — |
 | Inventory Code Generator | Utility Tools | — | — | — |
