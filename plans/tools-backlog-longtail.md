@@ -6,68 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Topsoil Coverage Calculator | Calculator Tools | 10 | 0 | — |
-| Extension Cord Load Calculator | Calculator Tools | 10 | 0 | — |
-| Sort Text Lines | Utility Tools | 10 | 0 | — |
-| URL Slug Cleaner | Utility Tools | 10 | 0 | — |
-| Nano ID Generator | Utility Tools | 10 | 0 | — |
-| SHA512 Hash Generator | Utility Tools | 10 | 0 | — |
-| MIME Type Checker | Utility Tools | 10 | 0 | — |
-| Cron Expression Parser | Utility Tools | 10 | 0 | — |
-| Timezone List Viewer | Utility Tools | 10 | 0 | — |
-| HSL to RGB Converter | Utility Tools | 10 | 0 | — |
-| HEX to HSV Converter | Utility Tools | 10 | 0 | — |
-| HSV to HEX Converter | Utility Tools | 10 | 0 | — |
-| Email QR Generator | Utility Tools | 10 | 0 | — |
-| SMS QR Generator | Utility Tools | 10 | 0 | — |
-| Phone QR Generator | Utility Tools | 10 | 0 | — |
-| WhatsApp QR Generator | Utility Tools | 10 | 0 | — |
-| Text Escape Tool | Utility Tools | 10 | 0 | — |
-| Text Unescape Tool | Utility Tools | 10 | 0 | — |
-| HTML Unescape Tool | Utility Tools | 10 | 0 | — |
-| XML Unescape Tool | Utility Tools | 10 | 0 | — |
-| CSV Minifier | Utility Tools | 10 | 0 | — |
-| CSV to TSV Converter | Utility Tools | 10 | 0 | — |
-| TOML Formatter | Utility Tools | 10 | 0 | — |
-| SQL Keywords Uppercase | Utility Tools | 10 | 0 | — |
-| SQL Keywords Lowercase | Utility Tools | 10 | 0 | — |
-| Regex Escape Tool | Utility Tools | 10 | 0 | — |
-| UUID Bulk Generator | Utility Tools | 10 | 0 | — |
-| Secret Key Generator | Utility Tools | 10 | 0 | — |
-| SHA224 Generator | Utility Tools | 10 | 0 | — |
-| SHA384 Generator | Utility Tools | 10 | 0 | — |
-| RIPEMD160 Generator | Utility Tools | 10 | 0 | — |
-| Adler32 Generator | Utility Tools | 10 | 0 | — |
-| Unix Permissions Converter | Utility Tools | 10 | 0 | — |
-| File Permission Viewer | Utility Tools | 10 | 0 | — |
-| MIME Type Finder | Utility Tools | 10 | 0 | — |
-| HTTP Request Builder | Utility Tools | 10 | 0 | — |
-| HSTS Header Generator | Utility Tools | 10 | 0 | — |
-| X-Robots Header Generator | Utility Tools | 10 | 0 | — |
-| OpenSearch Generator | Utility Tools | 10 | 0 | — |
-| Manifest.json Generator | Utility Tools | 10 | 0 | 0.00 |
-| Browserconfig.xml Generator | Utility Tools | 10 | 0 | — |
-| CSS Glassmorphism Generator | Utility Tools | 10 | 0 | — |
-| CSS Neumorphism Generator | Utility Tools | 10 | 0 | — |
-| Extract Hashtags | Utility Tools | 10 | 0 | — |
-| Keep Only Letters | Utility Tools | 10 | 0 | — |
-| Keep Only Numbers | Utility Tools | 10 | 0 | — |
-| Shuffle Text | Utility Tools | 10 | 0 | 0.00 |
-| Add Prefix to Lines | Utility Tools | 10 | 0 | — |
-| Add Suffix to Lines | Utility Tools | 10 | 0 | — |
-| Remove Prefix from Lines | Utility Tools | 10 | 0 | — |
-| Remove Suffix from Lines | Utility Tools | 10 | 0 | — |
-| Emoji Text Converter | Utility Tools | 10 | 0 | — |
-| Text Case Analyzer | Utility Tools | 10 | 0 | — |
-| Shortest Word Finder | Utility Tools | 10 | 0 | — |
-| Isogram Checker | Utility Tools | 10 | 0 | — |
-| Text Length Checker | Utility Tools | 10 | 0 | 0.95 |
-| Reading Level Checker | Utility Tools | 10 | 0 | 0.00 |
-| Text Columnizer | Utility Tools | 10 | 0 | — |
-| Text List Cleaner | Utility Tools | 10 | 0 | — |
-| Duplicate Line Highlighter | Utility Tools | 10 | 0 | — |
-| Consecutive Space Finder | Utility Tools | 10 | 0 | — |
-| Tab to Space Converter | Utility Tools | 10 | 0 | — |
 | Remove Blank Paragraphs | Utility Tools | 10 | 0 | — |
 | Text Statistics Viewer | Utility Tools | 10 | 0 | — |
 | Daily Planner Generator | Utility Tools | 10 | 0 | — |
