@@ -6,26 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Inventory Value Calculator | Calculator Tools | 10 | 0 | 0.00 |
-| Shipping Cost Estimator | Calculator Tools | 10 | 0 | 42.93 |
-| Carton Capacity Calculator | Calculator Tools | 10 | 0 | — |
-| Room Paint Cost Calculator | Calculator Tools | 10 | 0 | — |
-| Driveway Area Calculator | Calculator Tools | 10 | 0 | — |
-| Refrigerator Energy Cost Calculator | Calculator Tools | 10 | 0 | — |
-| Washing Machine Running Cost Calculator | Calculator Tools | 10 | 0 | — |
-| TV Electricity Cost Calculator | Calculator Tools | 10 | 0 | — |
-| Smartphone Charging Cost Calculator | Calculator Tools | 10 | 0 | — |
-| Video Streaming Data Calculator | Calculator Tools | 10 | 0 | — |
-| Music Streaming Data Calculator | Calculator Tools | 10 | 0 | — |
-| Printer Ink Cost Calculator | Calculator Tools | 10 | 0 | — |
-| Copy Paper Requirement Calculator | Calculator Tools | 10 | 0 | — |
-| Business Card Quantity Calculator | Calculator Tools | 10 | 0 | — |
-| Banner Printing Cost Calculator | Calculator Tools | 10 | 0 | — |
-| Sticker Printing Cost Calculator | Calculator Tools | 10 | 0 | — |
-| Label Printing Cost Calculator | Calculator Tools | 10 | 0 | — |
-| Packaging Weight Calculator | Calculator Tools | 10 | 0 | — |
-| Loan to Value (LTV) Calculator | Calculator Tools | 10 | 0 | — |
-| Inventory Shrinkage Calculator | Calculator Tools | 10 | 0 | 0.00 |
 | Customer Churn Rate Calculator | Calculator Tools | 10 | 0 | — |
 | Runway Calculator | Calculator Tools | 10 | 0 | — |
 | Lawn Seed Calculator | Calculator Tools | 10 | 0 | — |
