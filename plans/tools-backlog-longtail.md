@@ -6,26 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Remove Blank Paragraphs | Utility Tools | 10 | 0 | — |
-| Text Statistics Viewer | Utility Tools | 10 | 0 | — |
-| Daily Planner Generator | Utility Tools | 10 | 0 | — |
-| Weekly Planner Generator | Utility Tools | 10 | 0 | — |
-| Monthly Planner Generator | Utility Tools | 10 | 0 | — |
-| Habit Tracker Generator | Utility Tools | 10 | 0 | — |
-| Meeting Notes Template Generator | Utility Tools | 10 | 0 | — |
-| Shopping List Generator | Utility Tools | 10 | 0 | — |
-| Birthday Reminder List Generator | Utility Tools | 10 | 0 | — |
-| Password List Organizer | Utility Tools | 10 | 0 | — |
-| File Name Cleaner | Utility Tools | 10 | 0 | — |
-| File Name Generator | Utility Tools | 10 | 0 | 0.00 |
-| ZIP Code Finder (Offline Database) | Utility Tools | 10 | 0 | — |
-| Language Code Finder | Utility Tools | 10 | 0 | — |
-| Week Number Finder | Utility Tools | 10 | 0 | — |
-| Day Name Finder | Utility Tools | 10 | 0 | — |
-| Month Name Converter | Utility Tools | 10 | 0 | — |
-| ASCII Table Viewer | Utility Tools | 10 | 0 | — |
-| MIME Type Reference | Utility Tools | 10 | 0 | — |
-| Name Formatter | Utility Tools | 10 | 0 | — |
 | Acronym Expander | Utility Tools | 10 | 0 | 0.00 |
 | Text Deduplicator | Utility Tools | 10 | 0 | — |
 | Text Chunk Generator | Utility Tools | 10 | 0 | — |
