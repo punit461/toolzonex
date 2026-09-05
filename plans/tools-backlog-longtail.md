@@ -6,42 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Gift List Generator | Utility Tools | — | — | — |
-| Wish Tracker | Utility Tools | — | — | — |
-| Savings Goal Tracker | Utility Tools | — | — | — |
-| Habit Streak Tracker | Utility Tools | — | — | — |
-| Reading Progress Tracker | Utility Tools | — | — | — |
-| Water Drinking Tracker | Utility Tools | — | — | — |
-| Medication Reminder List | Utility Tools | — | — | — |
-| Emergency Contact Card Generator | Utility Tools | — | — | — |
-| ICE Contact Card Generator | Utility Tools | — | — | — |
-| Personal Information Card Generator | Utility Tools | — | — | — |
-| Password Mask Generator | Utility Tools | — | — | — |
-| PIN Code Generator | Utility Tools | — | — | — |
-| Nickname Shortener | Utility Tools | — | — | — |
-| Name Prefix Generator | Utility Tools | — | — | — |
-| Name Suffix Generator | Utility Tools | — | — | — |
-| Duplicate Contact Finder | Utility Tools | — | — | — |
-| Contact Name Formatter | Utility Tools | — | — | — |
-| Phone Number Formatter | Utility Tools | — | — | — |
-| Phone Number Cleaner | Utility Tools | — | — | — |
-| Number Sequence Generator | Utility Tools | — | — | — |
-| Ticket Stub Generator | Utility Tools | — | — | — |
-| Attendance Sheet Generator | Utility Tools | — | — | — |
-| Name Badge Generator | Utility Tools | — | — | — |
-| Visitor Pass Generator | Utility Tools | — | — | — |
-| Volunteer List Generator | Utility Tools | — | — | — |
-| Duty Roster Generator | Utility Tools | — | — | — |
-| Shift Schedule Generator | Utility Tools | — | — | — |
-| Appointment List Generator | Utility Tools | — | — | — |
-| Reservation List Generator | Utility Tools | — | — | — |
-| Contact Card Generator | Utility Tools | — | — | — |
-| Family Tree List Generator | Utility Tools | — | — | — |
-| Family Member List | Utility Tools | — | — | — |
-| Emergency Checklist | Utility Tools | — | — | — |
-| Travel Essentials Checklist | Utility Tools | — | — | — |
-| Vacation Planner | Utility Tools | — | — | — |
-| Weekend Planner | Utility Tools | — | — | — |
 | Study Schedule Generator | Utility Tools | — | — | — |
 | Homework Planner | Utility Tools | — | — | — |
 | Assignment Tracker | Utility Tools | — | — | — |
