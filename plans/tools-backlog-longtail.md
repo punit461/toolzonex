@@ -6,42 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Name Separator | Utility Tools | — | — | — |
-| Duplicate Name Finder | Utility Tools | — | — | — |
-| Guest List Randomizer | Utility Tools | — | — | — |
-| Event Ticket Number Generator | Utility Tools | — | — | — |
-| Queue Position Generator | Utility Tools | — | — | — |
-| Lucky Draw Name Picker | Utility Tools | — | — | — |
-| Contest Winner Picker | Utility Tools | — | — | — |
-| Classroom Group Maker | Utility Tools | — | — | — |
-| Seating Chart Generator | Utility Tools | — | — | — |
-| Chore Assignment Generator | Utility Tools | — | — | — |
-| Household Task List Generator | Utility Tools | — | — | — |
-| Daily Routine Generator | Utility Tools | — | — | — |
-| Morning Routine Generator | Utility Tools | — | — | — |
-| Evening Routine Generator | Utility Tools | — | — | — |
-| Cleaning Checklist Generator | Utility Tools | — | — | — |
-| Moving Checklist Generator | Utility Tools | — | — | — |
-| Travel Checklist Generator | Utility Tools | — | — | — |
-| Picnic Checklist Generator | Utility Tools | — | — | — |
-| Camping Checklist Generator | Utility Tools | — | — | — |
-| Wedding Checklist Generator | Utility Tools | — | — | — |
-| Birthday Party Checklist Generator | Utility Tools | — | — | — |
-| Study Checklist Generator | Utility Tools | — | — | — |
-| Exam Revision Checklist | Utility Tools | — | — | — |
-| Bookmarks Organizer | Utility Tools | — | — | — |
-| Folder Structure Generator | Utility Tools | — | — | — |
-| File List Generator | Utility Tools | — | — | — |
-| Playlist Organizer | Utility Tools | — | — | — |
-| Reading Log Generator | Utility Tools | — | — | — |
-| Movie Collection Organizer | Utility Tools | — | — | — |
-| Game Collection Organizer | Utility Tools | — | — | — |
-| Contact List Formatter | Utility Tools | — | — | — |
-| Address List Formatter | Utility Tools | — | — | — |
-| Phone List Formatter | Utility Tools | — | — | — |
-| Shopping Priority List | Utility Tools | — | — | — |
-| Meal Planner Generator | Utility Tools | — | — | — |
-| Recipe Organizer | Utility Tools | — | — | — |
 | Gift List Generator | Utility Tools | — | — | — |
 | Wish Tracker | Utility Tools | — | — | — |
 | Savings Goal Tracker | Utility Tools | — | — | — |
