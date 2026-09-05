@@ -6,46 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Currency Code Finder | Utility Tools | — | 0 | 0.00 |
-| Password Pronounce Generator | Utility Tools | — | — | — |
-| Username Cleaner | Utility Tools | — | — | — |
-| Username Formatter | Utility Tools | — | — | — |
-| Username Availability Formatter | Utility Tools | — | — | — |
-| Initials Extractor | Utility Tools | — | — | — |
-| Initials Avatar Generator | Utility Tools | — | — | — |
-| Text Mirror Generator | Utility Tools | — | — | — |
-| Diagonal Text Generator | Utility Tools | — | — | — |
-| Text Frame Generator | Utility Tools | — | — | — |
-| Text Box Generator | Utility Tools | — | — | — |
-| Decorative Divider Generator | Utility Tools | — | — | — |
-| Bullet Symbol Picker | Utility Tools | — | — | — |
-| Special Character Picker | Utility Tools | — | — | — |
-| Unicode Symbol Picker | Utility Tools | — | — | — |
-| Currency Symbol Picker | Utility Tools | — | — | — |
-| Mathematical Symbol Picker | Utility Tools | — | — | — |
-| Arrow Symbol Generator | Utility Tools | — | — | — |
-| Checkmark Symbol Generator | Utility Tools | — | — | — |
-| Star Symbol Generator | Utility Tools | — | — | — |
-| Heart Symbol Generator | Utility Tools | — | — | — |
-| Trademark Symbol Generator | Utility Tools | — | — | — |
-| Degree Symbol Generator | Utility Tools | — | — | — |
-| Bullet List Formatter | Utility Tools | — | — | — |
-| Numbered List Formatter | Utility Tools | — | — | — |
-| Quote Formatter | Utility Tools | — | — | — |
-| Citation Formatter | Utility Tools | — | — | — |
-| Paragraph Indenter | Utility Tools | — | — | — |
-| Paragraph Outdenter | Utility Tools | — | — | — |
-| Line Break Inserter | Utility Tools | — | — | — |
-| Remove Consecutive Blank Lines | Utility Tools | — | — | — |
-| Alphabet Index Generator | Utility Tools | — | — | — |
-| Keyword List Cleaner | Utility Tools | — | — | — |
-| Comma List Generator | Utility Tools | — | — | — |
-| Pipe Separated List Generator | Utility Tools | — | — | — |
-| Semicolon List Generator | Utility Tools | — | — | — |
-| Text to Bullet List | Utility Tools | — | — | — |
-| Text to Numbered List | Utility Tools | — | — | — |
-| Duplicate List Item Finder | Utility Tools | — | — | — |
-| List Item Counter | Utility Tools | — | — | — |
 | Countdown List Generator | Utility Tools | — | — | — |
 | Priority List Generator | Utility Tools | — | — | — |
 | Decision List Generator | Utility Tools | — | — | — |
