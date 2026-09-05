@@ -6,42 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Batch Number Generator | Utility Tools | — | — | — |
-| Product SKU Generator | Utility Tools | — | — | — |
-| Inventory Code Generator | Utility Tools | — | — | — |
-| Label Text Generator | Utility Tools | — | — | — |
-| Product Tag Generator | Utility Tools | — | — | — |
-| Bookmark Name Generator | Utility Tools | — | — | — |
-| Folder Name Generator | Utility Tools | — | — | — |
-| Project Name Generator | Utility Tools | — | — | — |
-| Event Name Generator | Utility Tools | — | — | — |
-| Contest Name Generator | Utility Tools | — | — | — |
-| Playlist Name Generator | Utility Tools | — | — | — |
-| Group Name Generator | Utility Tools | — | — | — |
-| WiFi Network Name Generator | Utility Tools | — | — | — |
-| Pet Breed Finder | Utility Tools | — | — | — |
-| Dog Breed Finder | Utility Tools | — | — | — |
-| Cat Breed Finder | Utility Tools | — | — | — |
-| Country Flag Finder | Utility Tools | — | — | — |
-| Flag Emoji Finder | Utility Tools | — | — | — |
-| Country Capital Finder | Utility Tools | — | — | — |
-| Currency Symbol Lookup | Utility Tools | — | — | — |
-| International Dial Code Finder | Utility Tools | — | — | — |
-| Time Format Converter | Utility Tools | — | — | — |
-| Date Format Converter | Utility Tools | — | — | — |
-| Weekend Finder | Utility Tools | — | — | — |
-| Holiday List Generator | Utility Tools | — | — | — |
-| Festival Greeting Generator | Utility Tools | — | — | — |
-| Greeting Card Message Generator | Utility Tools | — | — | — |
-| Thank You Message Generator | Utility Tools | — | — | — |
-| Congratulations Message Generator | Utility Tools | — | — | — |
-| Invitation Message Generator | Utility Tools | — | — | — |
-| Good Morning Message Generator | Utility Tools | — | — | — |
-| Good Night Message Generator | Utility Tools | — | — | — |
-| Password Hint Generator | Utility Tools | — | — | — |
-| Username Case Converter | Utility Tools | — | — | — |
-| Name Case Converter | Utility Tools | — | — | — |
-| Signature Text Formatter | Utility Tools | — | — | — |
 | Name Separator | Utility Tools | — | — | — |
 | Duplicate Name Finder | Utility Tools | — | — | — |
 | Guest List Randomizer | Utility Tools | — | — | — |
