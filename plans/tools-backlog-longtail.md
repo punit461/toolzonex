@@ -6,50 +6,7 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Expense Category Organizer | Utility Tools | — | — | — |
-| Bill Payment Checklist | Utility Tools | — | — | — |
-| Subscription Tracker | Utility Tools | — | — | — |
-| Warranty Expiry Tracker | Utility Tools | — | — | — |
-| Document Expiry Reminder | Utility Tools | — | — | — |
-| Password Change Reminder | Utility Tools | — | — | — |
-| License Renewal Tracker | Utility Tools | — | — | — |
-| Domain Renewal Reminder | Utility Tools | — | — | — |
-| Vehicle Document Checklist | Utility Tools | — | — | — |
-| Travel Document Checklist | Utility Tools | — | — | — |
-| Luggage Inventory List | Utility Tools | — | — | — |
-| Hotel Packing Checklist | Utility Tools | — | — | — |
-| Flight Packing Checklist | Utility Tools | — | — | — |
-| Camping Gear Checklist | Utility Tools | — | — | — |
-| Hiking Gear Checklist | Utility Tools | — | — | — |
-| Photography Gear Checklist | Utility Tools | — | — | — |
-| Gaming Setup Checklist | Utility Tools | — | — | — |
-| Streaming Setup Checklist | Utility Tools | — | — | — |
-| Home Office Checklist | Utility Tools | — | — | — |
-| Workspace Organizer | Utility Tools | — | — | — |
-| Desk Setup Checklist | Utility Tools | — | — | — |
-| Digital Declutter Checklist | Utility Tools | — | — | — |
-| Name Alphabet Converter | Utility Tools | — | — | — |
-| Text Duplicate Remover | Utility Tools | — | — | — |
-| Blank Character Remover | Utility Tools | — | — | — |
-| Invisible Character Detector | Utility Tools | — | — | — |
-| Unicode Space Remover | Utility Tools | — | — | — |
-| Filename Slug Generator | Utility Tools | — | — | — |
-| Safe Filename Generator | Utility Tools | — | — | — |
-| File Name Numbering Tool | Utility Tools | — | — | — |
-| Sequential File Name Generator | Utility Tools | — | — | — |
-| Duplicate Filename Remover | Utility Tools | — | — | — |
-| Bookmark Organizer | Utility Tools | — | — | — |
-| Favorite Links Organizer | Utility Tools | — | — | — |
-| Browser Tab List Generator | Utility Tools | — | — | — |
-| Reading Queue Organizer | Utility Tools | — | — | — |
-| Watch Later List Generator | Utility Tools | — | — | — |
-| Listening Queue Generator | Utility Tools | — | — | — |
-| Habit Checklist Generator | Utility Tools | — | — | — |
-| Project Checklist Generator | Utility Tools | — | — | — |
-| Event Timeline Generator | Utility Tools | — | — | — |
-| Daily Task Prioritizer | Utility Tools | — | — | — |
 | Decision Wheel Generator | Utility Tools | — | — | — |
-| Random Seating Generator | Utility Tools | — | — | — |
 | Secret Code Generator | Utility Tools | — | — | — |
 | Secret Message Encoder | Utility Tools | — | — | — |
 | Secret Message Decoder | Utility Tools | — | — | — |
