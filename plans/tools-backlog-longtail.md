@@ -6,58 +6,6 @@ This is a reference pool, not a committed roadmap phase — see the "Phase 5" no
 
 | Tool Name | Source | Monthly Volume | KD | CPC ($) |
 |---|---|---|---|---|
-| Study Schedule Generator | Utility Tools | — | — | — |
-| Homework Planner | Utility Tools | — | — | — |
-| Assignment Tracker | Utility Tools | — | — | — |
-| Reading Challenge Generator | Utility Tools | — | — | — |
-| Vocabulary List Generator | Utility Tools | — | — | — |
-| Flashcard Text Generator | Utility Tools | — | — | — |
-| Book Summary Template | Utility Tools | — | — | — |
-| Note Organizer | Utility Tools | — | — | — |
-| Journal Template Generator | Utility Tools | — | — | — |
-| Daily Reflection Template | Utility Tools | — | — | — |
-| Goal Checklist Generator | Utility Tools | — | — | — |
-| Progress Checklist | Utility Tools | — | — | — |
-| Achievement Tracker | Utility Tools | — | — | — |
-| Milestone Planner | Utility Tools | — | — | — |
-| Reading Wish List | Utility Tools | — | — | — |
-| Movie Night Planner | Utility Tools | — | — | — |
-| Music Playlist Planner | Utility Tools | — | — | — |
-| Gift Reminder List | Utility Tools | — | — | — |
-| Birthday Gift Planner | Utility Tools | — | — | — |
-| Party Guest Planner | Utility Tools | — | — | — |
-| Festival Packing List | Utility Tools | — | — | — |
-| Donation List Generator | Utility Tools | — | — | — |
-| Volunteer Schedule Generator | Utility Tools | — | — | — |
-| Community Event Planner | Utility Tools | — | — | — |
-| Pantry Inventory List | Utility Tools | — | — | — |
-| Refrigerator Inventory | Utility Tools | — | — | — |
-| Freezer Inventory | Utility Tools | — | — | — |
-| Household Inventory List | Utility Tools | — | — | — |
-| Medicine Inventory List | Utility Tools | — | — | — |
-| First Aid Checklist | Utility Tools | — | — | — |
-| Vehicle Maintenance Log | Utility Tools | — | — | — |
-| Fuel Log Book | Utility Tools | — | — | — |
-| Car Service History Tracker | Utility Tools | — | — | — |
-| Bike Maintenance Checklist | Utility Tools | — | — | — |
-| Home Maintenance Checklist | Utility Tools | — | — | — |
-| Garden Planner | Utility Tools | — | — | — |
-| Plant Watering Schedule | Utility Tools | — | — | — |
-| Pet Care Checklist | Utility Tools | — | — | — |
-| Pet Vaccination Record | Utility Tools | — | — | — |
-| Baby Feeding Log | Utility Tools | — | — | — |
-| Baby Sleep Tracker | Utility Tools | — | — | — |
-| Family Chore Chart | Utility Tools | — | — | — |
-| School Supply Checklist | Utility Tools | — | — | — |
-| College Packing Checklist | Utility Tools | — | — | — |
-| Office Supply Checklist | Utility Tools | — | — | — |
-| Meeting Attendance Register | Utility Tools | — | — | — |
-| Visitor Log Book | Utility Tools | — | — | — |
-| Employee Shift Roster | Utility Tools | — | — | — |
-| Staff Contact Directory | Utility Tools | — | — | — |
-| Customer List Organizer | Utility Tools | — | — | — |
-| Supplier Contact List | Utility Tools | — | — | — |
-| Vendor Directory | Utility Tools | — | — | — |
 | Expense Category Organizer | Utility Tools | — | — | — |
 | Bill Payment Checklist | Utility Tools | — | — | — |
 | Subscription Tracker | Utility Tools | — | — | — |
