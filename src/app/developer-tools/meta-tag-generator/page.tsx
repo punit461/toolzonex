@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MetaTagGenerator from "../../../calculators/developer-tools/MetaTagGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-meta-tag-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/meta-tag-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

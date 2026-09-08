@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import NetWorthCalculator from "../../../calculators/finance/NetWorthCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-net-worth-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/finance/net-worth-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

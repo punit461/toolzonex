@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PasswordStrengthChecker from "../../../calculators/tools/PasswordStrengthChecker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-password-strength-checker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/password-strength-checker");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

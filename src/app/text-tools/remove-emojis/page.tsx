@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RemoveEmojis from "../../../calculators/text-tools/RemoveEmojis";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-remove-emojis";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/remove-emojis");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

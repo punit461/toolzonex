@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ExposureCalculator from "../../../calculators/utilities/ExposureCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-exposure-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/exposure-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

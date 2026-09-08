@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RedactPdf from "../../../calculators/pdf/RedactPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-redact-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/redact-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

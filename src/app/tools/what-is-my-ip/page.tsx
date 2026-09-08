@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WhatIsMyIP from "../../../calculators/tools/WhatIsMyIP";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-what-is-my-ip";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/what-is-my-ip");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

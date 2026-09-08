@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AspectRatioCalculator from "../../../calculators/utilities/AspectRatioCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-aspect-ratio-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/aspect-ratio-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfKeywordFrequency from "../../../calculators/pdf/PdfKeywordFrequency";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-keyword-frequency";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-keyword-frequency");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

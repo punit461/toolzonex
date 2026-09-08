@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PasswordPronunciationTool from "../../../calculators/text-tools/PasswordPronunciationTool";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-password-pronunciation-tool";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/password-pronunciation-tool");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

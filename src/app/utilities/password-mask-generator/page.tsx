@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PasswordMaskGenerator from "../../../calculators/utilities/PasswordMaskGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-password-mask-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/password-mask-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

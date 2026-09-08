@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import InsertBlankPages from "../../../calculators/pdf/InsertBlankPages";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-insert-blank-pages";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/insert-blank-pages");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

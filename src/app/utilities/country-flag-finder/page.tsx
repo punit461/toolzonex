@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import CountryFlagFinder from "../../../calculators/utilities/CountryFlagFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-country-flag-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/country-flag-finder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

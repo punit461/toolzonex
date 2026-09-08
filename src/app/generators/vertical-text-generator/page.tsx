@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import VerticalTextGenerator from "../../../calculators/generators/VerticalTextGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-vertical-text-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/vertical-text-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

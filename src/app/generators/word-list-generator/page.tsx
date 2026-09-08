@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WordListGenerator from "../../../calculators/generators/WordListGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-word-list-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/word-list-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

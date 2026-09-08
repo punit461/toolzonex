@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import BirthFlowerFinder from "../../../calculators/utilities/BirthFlowerFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-birth-flower-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/birth-flower-finder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

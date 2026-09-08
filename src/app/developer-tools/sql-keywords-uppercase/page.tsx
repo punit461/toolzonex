@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import SqlKeywordsUppercase from "../../../calculators/developer-tools/SqlKeywordsUppercase";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-sql-keywords-uppercase";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/sql-keywords-uppercase");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

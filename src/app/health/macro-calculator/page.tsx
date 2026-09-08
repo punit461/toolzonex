@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MacroCalculator from "../../../calculators/health/MacroCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-macro-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/macro-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

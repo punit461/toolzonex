@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import CsvFormatter from "../../../calculators/developer-tools/CsvFormatter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-csv-formatter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/csv-formatter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

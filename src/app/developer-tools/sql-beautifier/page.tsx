@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SqlBeautifier from "../../../calculators/developer-tools/SqlBeautifier";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-sql-beautifier";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/sql-beautifier");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

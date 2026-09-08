@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PermutationCalculator from "../../../calculators/utilities/PermutationCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-permutation-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/permutation-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

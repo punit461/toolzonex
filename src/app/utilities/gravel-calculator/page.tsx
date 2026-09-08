@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GravelCalculator from "../../../calculators/utilities/GravelCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-gravel-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/gravel-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

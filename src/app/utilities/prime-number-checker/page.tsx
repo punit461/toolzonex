@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PrimeNumberChecker from "../../../calculators/utilities/PrimeNumberChecker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-prime-number-checker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/prime-number-checker");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

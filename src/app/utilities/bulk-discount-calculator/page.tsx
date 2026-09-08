@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BulkDiscountCalculator from "../../../calculators/utilities/BulkDiscountCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-bulk-discount-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/bulk-discount-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

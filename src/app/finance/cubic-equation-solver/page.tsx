@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CubicEquationSolver from "../../../calculators/finance/CubicEquationSolver";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-cubic-equation-solver";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/cubic-equation-solver");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

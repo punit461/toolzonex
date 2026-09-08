@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FocusTimer from "../../../calculators/utilities/FocusTimer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-focus-timer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/focus-timer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RefrigeratorEnergyCostCalculator from "../../../calculators/utilities/RefrigeratorEnergyCostCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-refrigerator-energy-cost-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/refrigerator-energy-cost-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

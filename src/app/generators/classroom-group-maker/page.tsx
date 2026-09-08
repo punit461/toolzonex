@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ClassroomGroupMaker from "../../../calculators/generators/ClassroomGroupMaker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-classroom-group-maker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/classroom-group-maker");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

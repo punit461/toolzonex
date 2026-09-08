@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import UniqueWordsFinder from "../../../calculators/text-tools/UniqueWordsFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-unique-words-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/unique-words-finder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

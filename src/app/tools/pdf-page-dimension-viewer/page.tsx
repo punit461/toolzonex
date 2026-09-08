@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfPageDimensionViewer from "../../../calculators/pdf/PdfPageDimensionViewer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-page-dimension-viewer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-page-dimension-viewer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

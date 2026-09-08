@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import AsciiTableViewer from "../../../calculators/developer-tools/AsciiTableViewer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-ascii-table-viewer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/ascii-table-viewer");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

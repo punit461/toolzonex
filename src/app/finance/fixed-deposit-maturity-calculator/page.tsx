@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FixedDepositMaturityCalculator from "../../../calculators/finance/FixedDepositMaturityCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-fixed-deposit-maturity-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/fixed-deposit-maturity-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

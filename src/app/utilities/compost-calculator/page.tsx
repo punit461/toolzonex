@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CompostCalculator from "../../../calculators/utilities/CompostCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-compost-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/compost-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

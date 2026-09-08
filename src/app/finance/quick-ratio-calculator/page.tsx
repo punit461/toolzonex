@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import QuickRatioCalculator from "../../../calculators/finance/QuickRatioCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-quick-ratio-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/finance/quick-ratio-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

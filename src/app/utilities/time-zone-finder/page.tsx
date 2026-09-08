@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import TimeZoneFinder from "../../../calculators/utilities/TimeZoneFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-time-zone-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/time-zone-finder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

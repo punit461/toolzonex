@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfVersionChecker from "../../../calculators/pdf/PdfVersionChecker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-version-checker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-version-checker");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

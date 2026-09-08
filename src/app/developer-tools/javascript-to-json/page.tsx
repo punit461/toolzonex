@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JavascriptToJson from "../../../calculators/developer-tools/JavascriptToJson";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-javascript-to-json";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/javascript-to-json");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

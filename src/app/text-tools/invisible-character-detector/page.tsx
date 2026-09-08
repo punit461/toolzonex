@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import InvisibleCharacterDetector from "../../../calculators/text-tools/InvisibleCharacterDetector";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-invisible-character-detector";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/invisible-character-detector");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

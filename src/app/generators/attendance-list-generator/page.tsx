@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import AttendanceListGenerator from "../../../calculators/generators/AttendanceListGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-attendance-list-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/attendance-list-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

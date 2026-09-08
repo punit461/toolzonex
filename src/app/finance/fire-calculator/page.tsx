@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import FireCalculator from "../../../calculators/finance/FireCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-fire-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/finance/fire-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

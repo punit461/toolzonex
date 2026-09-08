@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import WaterDrinkingTracker from "../../../calculators/utilities/WaterDrinkingTracker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-water-drinking-tracker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/water-drinking-tracker");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

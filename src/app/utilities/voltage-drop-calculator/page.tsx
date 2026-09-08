@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import VoltageDropCalculator from "../../../calculators/utilities/VoltageDropCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-voltage-drop-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/voltage-drop-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

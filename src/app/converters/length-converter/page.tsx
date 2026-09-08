@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LengthConverter from "../../../calculators/converters/LengthConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-length-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/length-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

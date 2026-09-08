@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LoanInterestComparisonCalculator from "../../../calculators/finance/LoanInterestComparisonCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-loan-interest-comparison-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/loan-interest-comparison-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

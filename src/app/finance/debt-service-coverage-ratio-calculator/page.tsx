@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DebtServiceCoverageRatioCalculator from "../../../calculators/finance/DebtServiceCoverageRatioCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-debt-service-coverage-ratio-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/debt-service-coverage-ratio-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

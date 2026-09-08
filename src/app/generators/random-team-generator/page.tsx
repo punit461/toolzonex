@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RandomTeamGenerator from "../../../calculators/generators/RandomTeamGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-random-team-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/random-team-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

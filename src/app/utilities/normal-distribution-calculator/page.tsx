@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import NormalDistributionCalculator from "../../../calculators/utilities/NormalDistributionCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-normal-distribution-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/normal-distribution-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

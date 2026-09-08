@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GeometricMeanCalculator from "../../../calculators/utilities/GeometricMeanCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-geometric-mean-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/geometric-mean-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

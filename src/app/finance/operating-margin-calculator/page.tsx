@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import OperatingMarginCalculator from "../../../calculators/finance/OperatingMarginCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-operating-margin-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/operating-margin-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CaloriesBurnedCyclingCalculator from "../../../calculators/health/CaloriesBurnedCyclingCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-calories-burned-cycling-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/calories-burned-cycling-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

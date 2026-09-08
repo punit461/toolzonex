@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RandomLinePicker from "../../../calculators/generators/RandomLinePicker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-random-line-picker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/random-line-picker");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

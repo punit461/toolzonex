@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HtmlBeautifier from "../../../calculators/developer-tools/HtmlBeautifier";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-html-beautifier";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/html-beautifier");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

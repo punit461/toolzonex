@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ScaleFactorCalculator from "../../../calculators/utilities/ScaleFactorCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-scale-factor-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/scale-factor-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

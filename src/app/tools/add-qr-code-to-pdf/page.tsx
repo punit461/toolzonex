@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AddQrCodeToPdf from "../../../calculators/pdf/AddQrCodeToPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-add-qr-code-to-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/add-qr-code-to-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

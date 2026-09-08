@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import SalesTaxCalculator from "../../../calculators/utilities/SalesTaxCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-sales-tax-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/sales-tax-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

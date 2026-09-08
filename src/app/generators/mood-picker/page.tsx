@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import MoodPicker from "../../../calculators/generators/MoodPicker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-mood-picker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/mood-picker");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

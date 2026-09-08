@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import APYCalculator from "../../../calculators/finance/APYCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-apy-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/apy-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

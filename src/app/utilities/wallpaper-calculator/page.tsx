@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WallpaperCalculator from "../../../calculators/utilities/WallpaperCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-wallpaper-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/wallpaper-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { BlueScreen } from "../../../calculators/screens/colorScreens";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-blue-screen";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/blue-screen");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

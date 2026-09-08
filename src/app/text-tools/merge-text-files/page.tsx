@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import MergeTextFiles from "../../../calculators/text-tools/MergeTextFiles";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-merge-text-files";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/merge-text-files");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

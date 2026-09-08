@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RemoveExtraSpaces from "../../../calculators/text-tools/RemoveExtraSpaces";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-remove-extra-spaces";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/remove-extra-spaces");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

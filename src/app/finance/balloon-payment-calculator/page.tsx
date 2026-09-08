@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BalloonPaymentCalculator from "../../../calculators/finance/BalloonPaymentCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-balloon-payment-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/balloon-payment-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import StockAverageCalculator from "../../../calculators/finance/StockAverageCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-stock-average-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/stock-average-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

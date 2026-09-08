@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ReturnOnAssetsCalculator from "../../../calculators/finance/ReturnOnAssetsCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-return-on-assets-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/return-on-assets-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

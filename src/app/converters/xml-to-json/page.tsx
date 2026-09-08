@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import XmlToJsonConverter from "../../../calculators/converters/XmlToJsonConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-xml-to-json";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/xml-to-json");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

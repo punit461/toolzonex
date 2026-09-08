@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BubbleTextGenerator from "../../../calculators/generators/BubbleTextGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-bubble-text-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/bubble-text-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

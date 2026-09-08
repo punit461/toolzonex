@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SoundexCalculator from "../../../calculators/text-tools/SoundexCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-soundex-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/soundex-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

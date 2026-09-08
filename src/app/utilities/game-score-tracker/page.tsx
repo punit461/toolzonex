@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GameScoreTracker from "../../../calculators/utilities/GameScoreTracker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-game-score-tracker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/game-score-tracker");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

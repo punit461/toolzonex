@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import BodySurfaceAreaCalculator from "../../../calculators/health/BodySurfaceAreaCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-body-surface-area-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/health/body-surface-area-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ColorMeanings from "../../../calculators/tools/ColorMeanings";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-color-meanings";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/color-meanings");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

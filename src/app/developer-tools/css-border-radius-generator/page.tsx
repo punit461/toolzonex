@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CssBorderRadiusGenerator from "../../../calculators/developer-tools/CssBorderRadiusGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-css-border-radius-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/css-border-radius-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

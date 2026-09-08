@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import CaesarCipherEncoderDecoder from "../../../calculators/converters/CaesarCipherEncoderDecoder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-caesar-cipher-encoder-decoder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/converters/caesar-cipher-encoder-decoder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

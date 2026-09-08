@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import OhmsLawCalculator from "../../../calculators/utilities/OhmsLawCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-ohms-law-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/ohms-law-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

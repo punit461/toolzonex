@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DuplicateWordFinder from "../../../calculators/text-tools/DuplicateWordFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-duplicate-word-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/duplicate-word-finder");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

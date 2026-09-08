@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FancyTextGenerator from "../../../calculators/text-tools/FancyTextGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-fancy-text-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/fancy-text-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

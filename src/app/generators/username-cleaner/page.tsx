@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import UsernameCleaner from "../../../calculators/generators/UsernameCleaner";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-username-cleaner";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/username-cleaner");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

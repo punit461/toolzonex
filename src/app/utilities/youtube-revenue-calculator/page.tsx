@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import YouTubeRevenueCalculator from "../../../calculators/utilities/YouTubeRevenueCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-youtube-revenue-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/youtube-revenue-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

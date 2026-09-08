@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ReverseText from "../../../calculators/text-tools/ReverseText";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-reverse-text";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/reverse-text");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

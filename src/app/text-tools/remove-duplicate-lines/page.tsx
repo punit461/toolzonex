@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RemoveDuplicateLines from "../../../calculators/text-tools/RemoveDuplicateLines";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-remove-duplicate-lines";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/remove-duplicate-lines");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfToLlamaIndexJson from "../../../calculators/pdf/PdfToLlamaIndexJson";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-to-llamaindex-json";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-to-llamaindex-json");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import BillPaymentChecklist from "../../../calculators/generators/BillPaymentChecklist";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-bill-payment-checklist";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/bill-payment-checklist");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

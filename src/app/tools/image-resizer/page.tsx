@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ImageResizer from "../../../calculators/tools/ImageResizer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-image-resizer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/image-resizer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

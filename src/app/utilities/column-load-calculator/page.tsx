@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ColumnLoadCalculator from "../../../calculators/utilities/ColumnLoadCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-column-load-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/column-load-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

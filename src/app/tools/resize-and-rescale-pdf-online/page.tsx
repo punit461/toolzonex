@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ResizeAndRescalePdf from "../../../calculators/pdf/ResizeAndRescalePdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-resize-and-rescale-pdf-online";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/resize-and-rescale-pdf-online");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

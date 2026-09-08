@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PdfBookletCreator from "../../../calculators/pdf/PdfBookletCreator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-booklet-creator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/pdf-booklet-creator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

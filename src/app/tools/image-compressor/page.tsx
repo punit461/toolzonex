@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ImageCompressor from "../../../calculators/pdf/ImageCompressor";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-image-compressor";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/image-compressor");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

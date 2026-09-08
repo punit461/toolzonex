@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TextEncryptionDecryption from "../../../calculators/text-tools/TextEncryptionDecryption";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-text-encryption-decryption";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/text-encryption-decryption");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

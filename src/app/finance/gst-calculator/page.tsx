@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GSTCalculator from "../../../calculators/finance/GSTCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-gst-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/gst-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

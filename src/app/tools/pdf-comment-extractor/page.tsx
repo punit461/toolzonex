@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfCommentExtractor from "../../../calculators/pdf/PdfCommentExtractor";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-comment-extractor";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-comment-extractor");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

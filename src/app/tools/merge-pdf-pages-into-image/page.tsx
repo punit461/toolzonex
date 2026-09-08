@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MergePdfPagesIntoImage from "../../../calculators/pdf/MergePdfPagesIntoImage";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-merge-pdf-pages-into-image";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/merge-pdf-pages-into-image");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

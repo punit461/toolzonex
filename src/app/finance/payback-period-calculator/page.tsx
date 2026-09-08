@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PaybackPeriodCalculator from "../../../calculators/finance/PaybackPeriodCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-payback-period-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/payback-period-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

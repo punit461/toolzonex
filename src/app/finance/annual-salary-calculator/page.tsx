@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AnnualSalaryCalculator from "../../../calculators/finance/AnnualSalaryCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-annual-salary-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/annual-salary-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

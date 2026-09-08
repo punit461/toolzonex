@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import BarcodeNumberGenerator from "../../../calculators/generators/BarcodeNumberGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-barcode-number-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/barcode-number-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

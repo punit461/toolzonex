@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JsonToMobxStateTree from "../../../calculators/developer-tools/JsonToMobxStateTree";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-json-to-mobx-state-tree";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/json-to-mobx-state-tree");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DecimalToFractionCalculator from "../../../calculators/utilities/DecimalToFractionCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-decimal-to-fraction-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/decimal-to-fraction-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

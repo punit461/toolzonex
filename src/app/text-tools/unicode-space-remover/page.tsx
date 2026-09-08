@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import UnicodeSpaceRemover from "../../../calculators/text-tools/UnicodeSpaceRemover";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-unicode-space-remover";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/unicode-space-remover");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

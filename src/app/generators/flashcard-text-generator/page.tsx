@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import FlashcardTextGenerator from "../../../calculators/generators/FlashcardTextGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-flashcard-text-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/flashcard-text-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

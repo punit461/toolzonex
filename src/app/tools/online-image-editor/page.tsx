@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import OnlineImageEditor from "../../../calculators/tools/OnlineImageEditor";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-online-image-editor";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/online-image-editor");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

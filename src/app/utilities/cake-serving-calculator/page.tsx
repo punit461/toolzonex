@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CakeServingCalculator from "../../../calculators/utilities/CakeServingCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-cake-serving-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/cake-serving-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

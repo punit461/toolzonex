@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WaterFlowRateCalculator from "../../../calculators/utilities/WaterFlowRateCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-water-flow-rate-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/water-flow-rate-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

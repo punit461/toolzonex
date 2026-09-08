@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RemoveRestrictions from "../../../calculators/pdf/RemoveRestrictions";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-remove-restrictions";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/remove-restrictions");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

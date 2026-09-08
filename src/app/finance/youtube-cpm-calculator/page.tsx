@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import YoutubeCpmCalculator from "../../../calculators/finance/YoutubeCpmCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-youtube-cpm-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/youtube-cpm-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

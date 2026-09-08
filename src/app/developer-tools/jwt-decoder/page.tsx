@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JwtDecoder from "../../../calculators/developer-tools/JwtDecoder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-jwt-decoder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/jwt-decoder");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import BloodTypeCompatibilityChecker from "../../../calculators/utilities/BloodTypeCompatibilityChecker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-blood-type-compatibility-checker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/blood-type-compatibility-checker");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

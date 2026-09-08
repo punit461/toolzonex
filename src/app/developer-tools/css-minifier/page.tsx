@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CssMinifier from "../../../calculators/developer-tools/CssMinifier";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-css-minifier";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/css-minifier");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

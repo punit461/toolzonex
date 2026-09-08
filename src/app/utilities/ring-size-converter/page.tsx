@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RingSizeConverter from "../../../calculators/utilities/RingSizeConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-ring-size-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/ring-size-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

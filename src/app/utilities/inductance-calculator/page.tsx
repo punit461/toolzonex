@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import InductanceCalculator from "../../../calculators/utilities/InductanceCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-inductance-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/inductance-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

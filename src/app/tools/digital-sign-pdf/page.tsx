@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DigitalSignPdf from "../../../calculators/pdf/DigitalSignPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-digital-sign-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/digital-sign-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

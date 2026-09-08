@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AsciiToText from "../../../calculators/converters/AsciiToText";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-ascii-to-text";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/ascii-to-text");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

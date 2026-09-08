@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ShiftDifferentialPayCalculator from "../../../calculators/finance/ShiftDifferentialPayCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-shift-differential-pay-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/shift-differential-pay-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

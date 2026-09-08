@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MorseCodeTranslator from "../../../calculators/converters/MorseCodeTranslator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-morse-code-translator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/morse-code-translator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

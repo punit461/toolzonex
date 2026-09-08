@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ForceCalculator from "../../../calculators/utilities/ForceCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-force-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/force-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

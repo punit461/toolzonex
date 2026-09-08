@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LotSizeCalculator from "../../../calculators/finance/LotSizeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-lot-size-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/lot-size-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

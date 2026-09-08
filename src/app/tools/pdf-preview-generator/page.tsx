@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PdfPreviewGenerator from "../../../calculators/pdf/PdfPreviewGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-preview-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/pdf-preview-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

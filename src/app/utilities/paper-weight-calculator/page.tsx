@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PaperWeightCalculator from "../../../calculators/utilities/PaperWeightCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-paper-weight-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/paper-weight-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

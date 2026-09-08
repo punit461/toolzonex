@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TiktokEngagementCalculator from "../../../calculators/utilities/TiktokEngagementCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-tiktok-engagement-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/tiktok-engagement-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

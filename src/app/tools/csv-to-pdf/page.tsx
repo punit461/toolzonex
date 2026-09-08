@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CsvToPdf from "../../../calculators/pdf/CsvToPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-csv-to-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/csv-to-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

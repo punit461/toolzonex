@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfPasswordStrengthChecker from "../../../calculators/pdf/PdfPasswordStrengthChecker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-password-strength-checker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-password-strength-checker");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

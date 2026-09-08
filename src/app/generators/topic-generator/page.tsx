@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import TopicGenerator from "../../../calculators/generators/TopicGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-topic-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/topic-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

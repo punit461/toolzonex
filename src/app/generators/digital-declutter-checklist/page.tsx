@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DigitalDeclutterChecklist from "../../../calculators/generators/DigitalDeclutterChecklist";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-digital-declutter-checklist";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/digital-declutter-checklist");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

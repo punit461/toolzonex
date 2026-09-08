@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SignatureMakerOnline from "../../../calculators/pdf/SignatureMakerOnline";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-signature-maker-online";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/signature-maker-online");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

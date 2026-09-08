@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SmartphoneChargingCostCalculator from "../../../calculators/utilities/SmartphoneChargingCostCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-smartphone-charging-cost-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/smartphone-charging-cost-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

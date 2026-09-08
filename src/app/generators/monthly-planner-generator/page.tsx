@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import MonthlyPlannerGenerator from "../../../calculators/generators/MonthlyPlannerGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-monthly-planner-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/monthly-planner-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RebarCalculator from "../../../calculators/utilities/RebarCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-rebar-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/rebar-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

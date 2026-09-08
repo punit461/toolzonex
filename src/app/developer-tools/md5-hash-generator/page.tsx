@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Md5HashGenerator from "../../../calculators/developer-tools/Md5HashGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-md5-hash-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/md5-hash-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

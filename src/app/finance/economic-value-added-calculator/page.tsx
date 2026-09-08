@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import EconomicValueAddedCalculator from "../../../calculators/finance/EconomicValueAddedCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-economic-value-added-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/finance/economic-value-added-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

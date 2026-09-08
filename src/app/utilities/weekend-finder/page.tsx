@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import WeekendFinder from "../../../calculators/utilities/WeekendFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-weekend-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/weekend-finder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

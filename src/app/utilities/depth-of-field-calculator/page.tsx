@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DepthOfFieldCalculator from "../../../calculators/utilities/DepthOfFieldCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-depth-of-field-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/depth-of-field-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TemperatureConverter from "../../../calculators/converters/TemperatureConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-temperature-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/temperature-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

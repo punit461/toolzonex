@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { ZoomLightingScreen } from "../../../calculators/screens/colorScreens";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-zoom-lighting-screen";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/zoom-lighting-screen");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

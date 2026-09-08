@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DateCalculator from "../../../calculators/utilities/DateCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-date-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/date-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

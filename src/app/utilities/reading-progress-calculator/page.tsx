@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ReadingProgressCalculator from "../../../calculators/utilities/ReadingProgressCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-reading-progress-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/reading-progress-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

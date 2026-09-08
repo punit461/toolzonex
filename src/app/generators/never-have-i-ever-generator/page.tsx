@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import NeverHaveIEverGenerator from "../../../calculators/generators/NeverHaveIEverGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-never-have-i-ever-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/never-have-i-ever-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

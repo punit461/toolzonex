@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfPageNumberRemover from "../../../calculators/pdf/PdfPageNumberRemover";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-page-number-remover";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-page-number-remover");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

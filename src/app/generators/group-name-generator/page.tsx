@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import GroupNameGenerator from "../../../calculators/generators/GroupNameGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-group-name-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/group-name-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

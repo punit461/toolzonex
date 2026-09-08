@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Sha224Generator from "../../../calculators/developer-tools/Sha224Generator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-sha224-hash-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/sha224-hash-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

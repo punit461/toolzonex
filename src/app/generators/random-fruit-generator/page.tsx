@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RandomFruitGenerator from "../../../calculators/generators/RandomFruitGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-random-fruit-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/random-fruit-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

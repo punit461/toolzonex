@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HeaterSizeCalculator from "../../../calculators/utilities/HeaterSizeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-heater-size-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/heater-size-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

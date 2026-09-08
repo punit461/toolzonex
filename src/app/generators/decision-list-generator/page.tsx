@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DecisionListGenerator from "../../../calculators/generators/DecisionListGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-decision-list-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/decision-list-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import EmojiTextConverter from "../../../calculators/text-tools/EmojiTextConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-emoji-text-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/emoji-text-converter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

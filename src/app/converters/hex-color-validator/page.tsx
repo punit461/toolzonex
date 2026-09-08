@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HexColorValidator from "../../../calculators/converters/HexColorValidator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-hex-color-validator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/hex-color-validator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

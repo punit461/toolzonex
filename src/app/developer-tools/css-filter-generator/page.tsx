@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CssFilterGenerator from "../../../calculators/developer-tools/CssFilterGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-css-filter-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/css-filter-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

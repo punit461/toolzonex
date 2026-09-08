@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import WallAreaCalculator from "../../../calculators/utilities/WallAreaCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-wall-area-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/wall-area-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

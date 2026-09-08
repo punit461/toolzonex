@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import CanonicalUrlGenerator from "../../../calculators/developer-tools/CanonicalUrlGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-canonical-url-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/canonical-url-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

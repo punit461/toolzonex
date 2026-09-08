@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JsonLdToNormalized from "../../../calculators/developer-tools/JsonLdToNormalized";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-jsonld-to-normalized";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/jsonld-to-normalized");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

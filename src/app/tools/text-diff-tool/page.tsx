@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TextDiffTool from "../../../calculators/tools/TextDiffTool";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-text-diff-tool";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/text-diff-tool");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

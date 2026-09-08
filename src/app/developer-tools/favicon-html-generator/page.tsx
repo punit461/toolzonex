@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import FaviconHtmlGenerator from "../../../calculators/developer-tools/FaviconHtmlGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-favicon-html-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/favicon-html-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

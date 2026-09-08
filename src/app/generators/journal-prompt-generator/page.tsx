@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import JournalPromptGenerator from "../../../calculators/generators/JournalPromptGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-journal-prompt-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/journal-prompt-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TwitterCardGenerator from "../../../calculators/developer-tools/TwitterCardGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-twitter-card-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/twitter-card-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

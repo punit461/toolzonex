@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfSanitizer from "../../../calculators/pdf/PdfSanitizer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-sanitizer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-sanitizer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RentalYieldCalculator from "../../../calculators/finance/RentalYieldCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-rental-yield-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/rental-yield-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

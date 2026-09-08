@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Windows11BsodScreen } from "../../../calculators/screens/windowsScreens";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-windows-11-blue-screen";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/windows-11-blue-screen");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

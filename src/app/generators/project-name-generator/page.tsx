@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ProjectNameGenerator from "../../../calculators/generators/ProjectNameGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-project-name-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/project-name-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

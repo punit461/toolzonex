@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import EventCostCalculator from "../../../calculators/finance/EventCostCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-event-cost-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/event-cost-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

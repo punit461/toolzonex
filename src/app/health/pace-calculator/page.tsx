@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PaceCalculator from "../../../calculators/health/PaceCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-pace-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/pace-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

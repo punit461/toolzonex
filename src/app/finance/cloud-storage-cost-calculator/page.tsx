@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CloudStorageCostCalculator from "../../../calculators/finance/CloudStorageCostCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-cloud-storage-cost-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/cloud-storage-cost-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

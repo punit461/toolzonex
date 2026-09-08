@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import TrackingNumberGenerator from "../../../calculators/generators/TrackingNumberGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-tracking-number-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/tracking-number-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

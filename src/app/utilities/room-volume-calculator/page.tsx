@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RoomVolumeCalculator from "../../../calculators/utilities/RoomVolumeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-room-volume-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/room-volume-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

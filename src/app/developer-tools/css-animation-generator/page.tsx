@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CssAnimationGenerator from "../../../calculators/developer-tools/CssAnimationGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-css-animation-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/css-animation-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

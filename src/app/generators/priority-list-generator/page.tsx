@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PriorityListGenerator from "../../../calculators/generators/PriorityListGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-priority-list-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/priority-list-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

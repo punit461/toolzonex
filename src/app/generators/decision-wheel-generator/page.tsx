@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DecisionWheelGenerator from "../../../calculators/generators/DecisionWheelGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-decision-wheel-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/decision-wheel-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

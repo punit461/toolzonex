@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AirPurifierSizeCalculator from "../../../calculators/utilities/AirPurifierSizeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-air-purifier-size-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/air-purifier-size-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

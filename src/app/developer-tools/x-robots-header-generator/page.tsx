@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import XRobotsHeaderGenerator from "../../../calculators/developer-tools/XRobotsHeaderGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-x-robots-header-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/x-robots-header-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

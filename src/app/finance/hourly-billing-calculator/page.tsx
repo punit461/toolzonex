@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HourlyBillingCalculator from "../../../calculators/finance/HourlyBillingCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-hourly-billing-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/hourly-billing-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

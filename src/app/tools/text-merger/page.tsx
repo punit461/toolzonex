@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TextMerger from "../../../calculators/tools/TextMerger";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-text-merger";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/text-merger");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

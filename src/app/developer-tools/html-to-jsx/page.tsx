@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HtmlToJsx from "../../../calculators/developer-tools/HtmlToJsx";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-html-to-jsx";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/html-to-jsx");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

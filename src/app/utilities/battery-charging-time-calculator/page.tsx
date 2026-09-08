@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BatteryChargingTimeCalculator from "../../../calculators/utilities/BatteryChargingTimeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-battery-charging-time-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/battery-charging-time-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import InflationCalculator from "../../../calculators/finance/InflationCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-inflation-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/inflation-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

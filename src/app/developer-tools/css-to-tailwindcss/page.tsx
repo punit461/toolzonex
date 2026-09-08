@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CssToTailwindcss from "../../../calculators/developer-tools/CssToTailwindcss";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-css-to-tailwindcss";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/css-to-tailwindcss");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

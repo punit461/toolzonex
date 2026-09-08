@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import UpsRuntimeCalculator from "../../../calculators/finance/UpsRuntimeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-ups-runtime-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/ups-runtime-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

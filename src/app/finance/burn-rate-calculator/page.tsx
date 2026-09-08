@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BurnRateCalculator from "../../../calculators/finance/BurnRateCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-burn-rate-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/burn-rate-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

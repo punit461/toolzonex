@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LoremIpsumGenerator from "../../../calculators/generators/LoremIpsumGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-lorem-ipsum-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/lorem-ipsum-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

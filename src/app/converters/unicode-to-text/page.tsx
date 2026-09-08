@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import UnicodeToText from "../../../calculators/converters/UnicodeToText";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-unicode-to-text";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/unicode-to-text");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

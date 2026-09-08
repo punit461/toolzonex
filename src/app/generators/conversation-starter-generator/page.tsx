@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ConversationStarterGenerator from "../../../calculators/generators/ConversationStarterGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-conversation-starter-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/conversation-starter-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

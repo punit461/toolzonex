@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfEmbeddedImageExporter from "../../../calculators/pdf/PdfEmbeddedImageExporter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-embedded-image-exporter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-embedded-image-exporter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

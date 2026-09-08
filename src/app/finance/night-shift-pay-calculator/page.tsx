@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import NightShiftPayCalculator from "../../../calculators/finance/NightShiftPayCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-night-shift-pay-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/night-shift-pay-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

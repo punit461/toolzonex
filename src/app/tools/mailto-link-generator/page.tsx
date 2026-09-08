@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MailtoLinkGenerator from "../../../calculators/tools/MailtoLinkGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-mailto-link-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/mailto-link-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

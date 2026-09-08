@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DuplicateContactFinder from "../../../calculators/text-tools/DuplicateContactFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-duplicate-contact-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/duplicate-contact-finder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

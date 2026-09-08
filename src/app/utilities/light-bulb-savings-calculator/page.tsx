@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import LightBulbSavingsCalculator from "../../../calculators/utilities/LightBulbSavingsCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-light-bulb-savings-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/light-bulb-savings-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

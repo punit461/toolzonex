@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RegexTester from "../../../calculators/developer-tools/RegexTester";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-regex-tester";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/regex-tester");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

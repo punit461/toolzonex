@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JsonSchemaToOpenApi from "../../../calculators/developer-tools/JsonSchemaToOpenApi";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-json-schema-to-openapi-schema";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/json-schema-to-openapi-schema");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

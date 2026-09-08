@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ExcuseGenerator from "../../../calculators/generators/ExcuseGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-excuse-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/excuse-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

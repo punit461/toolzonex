@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfAttachmentExtractor from "../../../calculators/pdf/PdfAttachmentExtractor";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-attachment-extractor";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-attachment-extractor");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

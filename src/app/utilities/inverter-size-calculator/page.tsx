@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import InverterSizeCalculator from "../../../calculators/utilities/InverterSizeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-inverter-size-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/inverter-size-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

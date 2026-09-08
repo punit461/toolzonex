@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import JournalReflectionTemplate from "../../../calculators/generators/JournalReflectionTemplate";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-journal-reflection-template";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/journal-reflection-template");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

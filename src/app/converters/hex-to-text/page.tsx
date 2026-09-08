@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HexToText from "../../../calculators/converters/HexToText";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-hex-to-text";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/hex-to-text");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

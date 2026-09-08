@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import FovCalculator from "../../../calculators/utilities/FovCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-fov-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/fov-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

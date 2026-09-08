@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DeckMaterialCalculator from "../../../calculators/utilities/DeckMaterialCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-deck-material-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/deck-material-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

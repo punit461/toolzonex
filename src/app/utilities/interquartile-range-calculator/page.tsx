@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import InterquartileRangeCalculator from "../../../calculators/utilities/InterquartileRangeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-interquartile-range-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/interquartile-range-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

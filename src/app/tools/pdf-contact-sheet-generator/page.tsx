@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfContactSheetGenerator from "../../../calculators/pdf/PdfContactSheetGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-contact-sheet-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-contact-sheet-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

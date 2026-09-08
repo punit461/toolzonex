@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import SwimmingPaceCalculator from "../../../calculators/health/SwimmingPaceCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-swimming-pace-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/health/swimming-pace-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

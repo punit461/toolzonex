@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import MealPlannerGenerator from "../../../calculators/generators/MealPlannerGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-meal-planner-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/meal-planner-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

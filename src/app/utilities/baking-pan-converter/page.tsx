@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BakingPanConverter from "../../../calculators/utilities/BakingPanConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-baking-pan-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/baking-pan-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

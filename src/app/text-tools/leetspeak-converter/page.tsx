@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LeetspeakConverter from "../../../calculators/text-tools/LeetspeakConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-leetspeak-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/leetspeak-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

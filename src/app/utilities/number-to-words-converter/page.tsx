@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import NumberToWordsConverter from "../../../calculators/utilities/NumberToWordsConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-number-to-words-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/number-to-words-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

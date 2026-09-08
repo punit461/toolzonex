@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RegexReplaceTester from "../../../calculators/developer-tools/RegexReplaceTester";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-regex-replace-tester";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/regex-replace-tester");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

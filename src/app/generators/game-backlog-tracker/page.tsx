@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import GameBacklogTracker from "../../../calculators/generators/GameBacklogTracker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-game-backlog-tracker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/game-backlog-tracker");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

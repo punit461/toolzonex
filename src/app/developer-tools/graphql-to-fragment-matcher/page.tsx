@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GraphqlToFragmentMatcher from "../../../calculators/developer-tools/GraphqlToFragmentMatcher";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-graphql-to-fragment-matcher";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/graphql-to-fragment-matcher");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

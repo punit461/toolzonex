@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RandomHobbyGenerator from "../../../calculators/generators/RandomHobbyGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-random-hobby-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/random-hobby-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

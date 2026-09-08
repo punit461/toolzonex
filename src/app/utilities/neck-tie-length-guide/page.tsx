@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import NeckTieLengthGuide from "../../../calculators/utilities/NeckTieLengthGuide";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-neck-tie-length-guide";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/neck-tie-length-guide");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CeilingPaintCalculator from "../../../calculators/utilities/CeilingPaintCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-ceiling-paint-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/ceiling-paint-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import UnicodeBlockViewer from "../../../calculators/converters/UnicodeBlockViewer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-unicode-block-viewer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/unicode-block-viewer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SteelWeightCalculator from "../../../calculators/finance/SteelWeightCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-steel-weight-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/steel-weight-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import OcrPdf from "../../../calculators/pdf/OcrPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-ocr-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/ocr-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

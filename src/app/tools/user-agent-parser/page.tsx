@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import UserAgentParser from "../../../calculators/tools/UserAgentParser";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-user-agent-parser";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/user-agent-parser");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

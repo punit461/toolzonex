@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import LongestWordFinder from "../../../calculators/text-tools/LongestWordFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-longest-word-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/longest-word-finder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ShuffleText from "../../../calculators/text-tools/ShuffleText";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-shuffle-text";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/shuffle-text");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

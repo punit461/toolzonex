@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SplitBillCalculator from "../../../calculators/finance/SplitBillCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-split-bill-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/split-bill-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

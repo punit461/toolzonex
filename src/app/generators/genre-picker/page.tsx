@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import GenrePicker from "../../../calculators/generators/GenrePicker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-genre-picker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/genre-picker");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

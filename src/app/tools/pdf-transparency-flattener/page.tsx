@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfTransparencyFlattener from "../../../calculators/pdf/PdfTransparencyFlattener";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-transparency-flattener";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-transparency-flattener");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

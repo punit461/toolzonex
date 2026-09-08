@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import CourierChargeCalculator from "../../../calculators/utilities/CourierChargeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-courier-charge-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/courier-charge-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

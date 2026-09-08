@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WavelengthCalculator from "../../../calculators/utilities/WavelengthCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-wavelength-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/wavelength-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PastaPortionCalculator from "../../../calculators/utilities/PastaPortionCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-pasta-portion-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/pasta-portion-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

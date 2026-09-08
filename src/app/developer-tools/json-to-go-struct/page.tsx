@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JsonToGoStruct from "../../../calculators/developer-tools/JsonToGoStruct";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-json-to-go-struct";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/json-to-go-struct");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

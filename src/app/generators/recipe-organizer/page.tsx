@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RecipeOrganizer from "../../../calculators/generators/RecipeOrganizer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-recipe-organizer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/recipe-organizer");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DiceRoller from "../../../calculators/generators/DiceRoller";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-dice-roller";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/dice-roller");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

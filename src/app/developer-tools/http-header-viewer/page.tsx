@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import HttpHeaderViewer from "../../../calculators/developer-tools/HttpHeaderViewer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-http-header-viewer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/http-header-viewer");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import TextColumnizer from "../../../calculators/text-tools/TextColumnizer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-text-columnizer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/text-columnizer");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

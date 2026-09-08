@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Code128BarcodeGenerator from "../../../calculators/developer-tools/Code128BarcodeGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-code128-barcode-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/code128-barcode-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

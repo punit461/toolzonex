@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import TextToListFormatter from "../../../calculators/text-tools/TextToListFormatter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-text-to-list-formatter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/text-to-list-formatter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

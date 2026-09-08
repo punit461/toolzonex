@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RemoveSpecialCharacters from "../../../calculators/text-tools/RemoveSpecialCharacters";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-remove-special-characters";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/remove-special-characters");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

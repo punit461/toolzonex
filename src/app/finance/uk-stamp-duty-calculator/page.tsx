@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import UKStampDutyCalculator from "../../../calculators/finance/UKStampDutyCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-uk-stamp-duty-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/uk-stamp-duty-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

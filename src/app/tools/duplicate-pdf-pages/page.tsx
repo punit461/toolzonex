@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DuplicatePdfPages from "../../../calculators/pdf/DuplicatePdfPages";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-duplicate-pdf-pages";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/duplicate-pdf-pages");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

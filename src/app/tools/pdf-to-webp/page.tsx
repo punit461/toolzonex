@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PdfToWebp from "../../../calculators/pdf/PdfToWebp";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-to-webp";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/pdf-to-webp");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

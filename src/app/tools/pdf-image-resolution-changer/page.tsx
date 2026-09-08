@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PdfImageResolutionChanger from "../../../calculators/pdf/PdfImageResolutionChanger";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-image-resolution-changer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/pdf-image-resolution-changer");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

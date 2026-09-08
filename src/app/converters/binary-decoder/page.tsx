@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BinaryDecoder from "../../../calculators/converters/BinaryDecoder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-binary-decoder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/binary-decoder");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

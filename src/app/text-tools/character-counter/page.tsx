@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CharacterCounter from "../../../calculators/text-tools/CharacterCounter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-character-counter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/character-counter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

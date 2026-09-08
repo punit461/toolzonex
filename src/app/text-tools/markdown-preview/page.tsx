@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MarkdownPreview from "../../../calculators/text-tools/MarkdownPreview";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-markdown-preview";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/markdown-preview");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

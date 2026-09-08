@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WordWrapTool from "../../../calculators/text-tools/WordWrapTool";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-word-wrap-tool";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/word-wrap-tool");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

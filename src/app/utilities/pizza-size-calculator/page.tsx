@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PizzaSizeCalculator from "../../../calculators/utilities/PizzaSizeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-pizza-size-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/pizza-size-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

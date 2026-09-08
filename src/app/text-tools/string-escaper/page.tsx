@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import StringEscaper from "../../../calculators/text-tools/StringEscaper";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-string-escaper";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/string-escaper");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

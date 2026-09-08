@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CalendarGenerator from "../../../calculators/generators/CalendarGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-calendar-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/calendar-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

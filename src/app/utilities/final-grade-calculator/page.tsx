@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FinalGradeCalculator from "../../../calculators/utilities/FinalGradeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-final-grade-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/final-grade-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

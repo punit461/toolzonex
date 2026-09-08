@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PressureConverter from "../../../calculators/converters/PressureConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-pressure-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/pressure-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

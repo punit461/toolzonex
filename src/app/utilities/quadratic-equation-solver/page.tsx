@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import QuadraticEquationSolver from "../../../calculators/utilities/QuadraticEquationSolver";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-quadratic-equation-solver";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/quadratic-equation-solver");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

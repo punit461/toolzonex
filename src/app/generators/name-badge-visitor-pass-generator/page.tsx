@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import NameBadgeVisitorPassGenerator from "../../../calculators/generators/NameBadgeVisitorPassGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-name-badge-visitor-pass-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/name-badge-visitor-pass-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

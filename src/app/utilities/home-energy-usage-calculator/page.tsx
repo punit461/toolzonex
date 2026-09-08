@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import HomeEnergyUsageCalculator from "../../../calculators/utilities/HomeEnergyUsageCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-home-energy-usage-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/home-energy-usage-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

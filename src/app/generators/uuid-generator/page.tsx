@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import UUIDGenerator from "../../../calculators/generators/UUIDGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-uuid-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/uuid-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

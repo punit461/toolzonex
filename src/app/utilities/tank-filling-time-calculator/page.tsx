@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TankFillingTimeCalculator from "../../../calculators/utilities/TankFillingTimeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-tank-filling-time-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/tank-filling-time-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

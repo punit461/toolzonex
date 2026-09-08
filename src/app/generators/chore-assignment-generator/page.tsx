@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ChoreAssignmentGenerator from "../../../calculators/generators/ChoreAssignmentGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-chore-assignment-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/chore-assignment-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

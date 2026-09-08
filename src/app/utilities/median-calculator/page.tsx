@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MedianCalculator from "../../../calculators/utilities/MedianCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-median-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/median-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

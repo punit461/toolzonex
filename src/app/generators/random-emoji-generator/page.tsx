@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RandomEmojiGenerator from "../../../calculators/generators/RandomEmojiGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-random-emoji-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/random-emoji-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

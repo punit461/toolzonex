@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RemovePunctuation from "../../../calculators/text-tools/RemovePunctuation";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-remove-punctuation";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/remove-punctuation");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

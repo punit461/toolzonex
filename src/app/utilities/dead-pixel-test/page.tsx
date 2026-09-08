@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DeadPixelTest from "../../../calculators/screens/DeadPixelTest";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-dead-pixel-test";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/dead-pixel-test");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DuplicatesRemover from "../../../calculators/text-tools/DuplicatesRemover";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-duplicates-remover";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/duplicates-remover");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

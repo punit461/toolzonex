@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfToPdfaConverter from "../../../calculators/pdf/PdfToPdfaConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-to-pdfa-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-to-pdfa-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

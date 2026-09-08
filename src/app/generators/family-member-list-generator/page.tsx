@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import FamilyMemberListGenerator from "../../../calculators/generators/FamilyMemberListGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-family-member-list-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/family-member-list-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

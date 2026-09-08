@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FontLibrary from "../../../calculators/tools/FontLibrary";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-font-library";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/font-library");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

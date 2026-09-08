@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ConvertPdfToLegal from "../../../calculators/pdf/ConvertPdfToLegal";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-convert-pdf-to-legal";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/convert-pdf-to-legal");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

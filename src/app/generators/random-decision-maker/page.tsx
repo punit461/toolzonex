@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RandomDecisionMaker from "../../../calculators/generators/RandomDecisionMaker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-random-decision-maker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/random-decision-maker");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

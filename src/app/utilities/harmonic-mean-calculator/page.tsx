@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HarmonicMeanCalculator from "../../../calculators/utilities/HarmonicMeanCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-harmonic-mean-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/harmonic-mean-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

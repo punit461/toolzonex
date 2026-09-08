@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PdfThumbnailSheet from "../../../calculators/pdf/PdfThumbnailSheet";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-thumbnail-sheet";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/pdf-thumbnail-sheet");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

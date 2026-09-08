@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RandomHashGenerator from "../../../calculators/generators/RandomHashGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-random-hash-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/random-hash-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

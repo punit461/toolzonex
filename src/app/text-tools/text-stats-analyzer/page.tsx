@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TextStatsAnalyzer from "../../../calculators/text-tools/TextStatsAnalyzer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-text-stats-analyzer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/text-stats-analyzer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

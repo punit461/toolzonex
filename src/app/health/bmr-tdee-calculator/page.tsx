@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BMRTDEECalculator from "../../../calculators/health/BMRTDEECalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-bmr-tdee-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/bmr-tdee-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

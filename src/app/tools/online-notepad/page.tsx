@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import OnlineNotepad from "../../../calculators/tools/OnlineNotepad";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-online-notepad";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/online-notepad");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

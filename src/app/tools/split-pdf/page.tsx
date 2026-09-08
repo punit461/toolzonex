@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SplitPdf from "../../../calculators/pdf/SplitPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-split-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/split-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

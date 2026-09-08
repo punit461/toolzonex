@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfFontExtractor from "../../../calculators/pdf/PdfFontExtractor";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-font-extractor";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-font-extractor");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import HealthyWeightRangeCalculator from "../../../calculators/health/HealthyWeightRangeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-healthy-weight-range-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/health/healthy-weight-range-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

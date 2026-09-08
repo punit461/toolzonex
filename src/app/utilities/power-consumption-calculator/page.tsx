@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PowerConsumptionCalculator from "../../../calculators/utilities/PowerConsumptionCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-power-consumption-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/power-consumption-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

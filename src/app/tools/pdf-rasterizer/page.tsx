@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PdfRasterizer from "../../../calculators/pdf/PdfRasterizer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-rasterizer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/pdf-rasterizer");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

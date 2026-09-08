@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AlphabetLearningTool from "../../../calculators/utilities/AlphabetLearningTool";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-alphabet-learning-tool";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/alphabet-learning-tool");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

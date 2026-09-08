@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CssClipPathGenerator from "../../../calculators/developer-tools/CssClipPathGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-css-clip-path-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/css-clip-path-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

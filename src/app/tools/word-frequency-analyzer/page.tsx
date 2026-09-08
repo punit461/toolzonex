@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WordFrequencyAnalyzer from "../../../calculators/tools/WordFrequencyAnalyzer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-word-frequency-analyzer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/word-frequency-analyzer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

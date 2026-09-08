@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import LineBreakInserter from "../../../calculators/text-tools/LineBreakInserter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-line-break-inserter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/line-break-inserter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

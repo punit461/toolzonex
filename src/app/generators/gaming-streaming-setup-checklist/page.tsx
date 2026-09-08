@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import GamingStreamingSetupChecklist from "../../../calculators/generators/GamingStreamingSetupChecklist";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-gaming-streaming-setup-checklist";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/gaming-streaming-setup-checklist");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

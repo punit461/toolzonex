@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JsonToReactPropTypes from "../../../calculators/developer-tools/JsonToReactPropTypes";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-json-to-react-proptypes";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/json-to-react-proptypes");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

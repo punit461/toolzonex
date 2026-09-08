@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import HouseholdTaskListGenerator from "../../../calculators/generators/HouseholdTaskListGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-household-task-list-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/household-task-list-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

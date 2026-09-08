@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import HttpStatusCodeLookup from "../../../calculators/developer-tools/HttpStatusCodeLookup";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-http-status-code-lookup";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/http-status-code-lookup");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

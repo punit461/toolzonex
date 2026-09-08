@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BodyFrameSizeCalculator from "../../../calculators/health/BodyFrameSizeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-body-frame-size-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/body-frame-size-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

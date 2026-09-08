@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfMetadataRemover from "../../../calculators/pdf/PdfMetadataRemover";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-metadata-remover";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-metadata-remover");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

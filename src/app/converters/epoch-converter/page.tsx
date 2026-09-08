@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import EpochConverter from "../../../calculators/converters/EpochConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-epoch-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/epoch-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

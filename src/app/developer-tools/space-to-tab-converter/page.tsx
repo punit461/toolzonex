@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import SpaceToTabConverter from "../../../calculators/developer-tools/SpaceToTabConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-space-to-tab-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/space-to-tab-converter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import StandardDeviationCalculator from "../../../calculators/utilities/StandardDeviationCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-standard-deviation-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/standard-deviation-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

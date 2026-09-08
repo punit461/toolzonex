@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SpeedConverter from "../../../calculators/utilities/SpeedConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-speed-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/speed-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

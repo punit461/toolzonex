@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TomlToYaml from "../../../calculators/developer-tools/TomlToYaml";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-toml-to-yaml";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/toml-to-yaml");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

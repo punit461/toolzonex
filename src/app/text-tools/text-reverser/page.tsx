@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TextReverser from "../../../calculators/text-tools/TextReverser";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-text-reverser";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/text-reverser");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

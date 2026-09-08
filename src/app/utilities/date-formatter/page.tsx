@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DateFormatter from "../../../calculators/utilities/DateFormatter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-date-formatter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/date-formatter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

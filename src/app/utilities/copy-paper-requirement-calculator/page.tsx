@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CopyPaperRequirementCalculator from "../../../calculators/utilities/CopyPaperRequirementCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-copy-paper-requirement-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/copy-paper-requirement-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

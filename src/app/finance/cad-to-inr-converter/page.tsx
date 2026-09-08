@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CadToInrConverter from "../../../calculators/finance/CadToInrConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-cad-to-inr-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/cad-to-inr-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RotatePdf from "../../../calculators/pdf/RotatePdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-rotate-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/rotate-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

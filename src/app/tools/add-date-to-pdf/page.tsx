@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AddDateToPdf from "../../../calculators/pdf/AddDateToPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-add-date-to-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/add-date-to-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

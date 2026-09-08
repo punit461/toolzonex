@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfInkSaver from "../../../calculators/pdf/PdfInkSaver";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-ink-saver";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-ink-saver");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

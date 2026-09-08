@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ContrastColorFinder from "../../../calculators/developer-tools/ContrastColorFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-contrast-color-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/contrast-color-finder");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

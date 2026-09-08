@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ClassroomCapacityCalculator from "../../../calculators/utilities/ClassroomCapacityCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-classroom-capacity-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/classroom-capacity-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

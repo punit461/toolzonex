@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DeletePdfPages from "../../../calculators/pdf/DeletePdfPages";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-delete-pdf-pages";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/delete-pdf-pages");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfImageQualityOptimizer from "../../../calculators/pdf/PdfImageQualityOptimizer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-image-quality-optimizer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-image-quality-optimizer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

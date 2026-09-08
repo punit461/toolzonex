@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DaysBetweenDatesCalculator from "../../../calculators/finance/DaysBetweenDatesCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-days-between-dates";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/days-between-dates");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

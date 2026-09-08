@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DecorativeDividerGenerator from "../../../calculators/generators/DecorativeDividerGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-decorative-divider-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/decorative-divider-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

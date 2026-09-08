@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import CpuBottleneckCalculator from "../../../calculators/utilities/CpuBottleneckCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-cpu-bottleneck-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/cpu-bottleneck-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

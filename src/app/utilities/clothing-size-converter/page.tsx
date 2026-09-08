@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ClothingSizeConverter from "../../../calculators/utilities/ClothingSizeConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-clothing-size-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/clothing-size-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

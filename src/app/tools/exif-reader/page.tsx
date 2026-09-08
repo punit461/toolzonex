@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ExifReader from "../../../calculators/tools/ExifReader";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-exif-reader";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/exif-reader");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

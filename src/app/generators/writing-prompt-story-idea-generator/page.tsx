@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import WritingPromptStoryIdeaGenerator from "../../../calculators/generators/WritingPromptStoryIdeaGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-writing-prompt-story-idea-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/writing-prompt-story-idea-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

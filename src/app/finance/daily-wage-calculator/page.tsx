@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DailyWageCalculator from "../../../calculators/finance/DailyWageCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-daily-wage-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/daily-wage-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

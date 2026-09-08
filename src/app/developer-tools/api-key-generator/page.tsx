@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ApiKeyGenerator from "../../../calculators/developer-tools/ApiKeyGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-api-key-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/api-key-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

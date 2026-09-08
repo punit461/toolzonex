@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import EventNameGenerator from "../../../calculators/generators/EventNameGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-event-name-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/event-name-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

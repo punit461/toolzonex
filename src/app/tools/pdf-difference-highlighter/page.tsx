@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfDifferenceHighlighter from "../../../calculators/pdf/PdfDifferenceHighlighter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-difference-highlighter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-difference-highlighter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

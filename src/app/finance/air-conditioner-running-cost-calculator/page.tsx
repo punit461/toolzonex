@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AirConditionerRunningCostCalculator from "../../../calculators/finance/AirConditionerRunningCostCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-air-conditioner-running-cost-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/air-conditioner-running-cost-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

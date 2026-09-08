@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GraphqlToSchemaAst from "../../../calculators/developer-tools/GraphqlToSchemaAst";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-graphql-to-schema-ast";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/graphql-to-schema-ast");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

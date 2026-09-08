@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CoffeeRatioCalculator from "../../../calculators/utilities/CoffeeRatioCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-coffee-ratio-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/coffee-ratio-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ConfidenceIntervalCalculator from "../../../calculators/utilities/ConfidenceIntervalCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-confidence-interval-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/confidence-interval-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

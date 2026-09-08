@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SoundDelayCalculator from "../../../calculators/utilities/SoundDelayCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-sound-delay-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/sound-delay-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

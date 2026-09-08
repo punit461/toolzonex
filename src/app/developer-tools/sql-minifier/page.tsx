@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SqlMinifier from "../../../calculators/developer-tools/SqlMinifier";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-sql-minifier";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/sql-minifier");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

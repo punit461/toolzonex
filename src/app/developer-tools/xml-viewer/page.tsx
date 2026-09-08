@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import XmlViewer from "../../../calculators/developer-tools/XmlViewer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-xml-viewer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/xml-viewer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

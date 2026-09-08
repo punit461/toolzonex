@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import OfficeSupplyChecklist from "../../../calculators/generators/OfficeSupplyChecklist";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-office-supply-checklist";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/office-supply-checklist");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

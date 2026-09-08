@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import LuckyColorFinder from "../../../calculators/utilities/LuckyColorFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-lucky-color-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/lucky-color-finder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

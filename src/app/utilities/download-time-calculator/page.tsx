@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DownloadTimeCalculator from "../../../calculators/utilities/DownloadTimeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-download-time-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/download-time-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

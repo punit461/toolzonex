@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import OneRepMaxCalculator from "../../../calculators/health/OneRepMaxCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-one-rep-max-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/one-rep-max-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

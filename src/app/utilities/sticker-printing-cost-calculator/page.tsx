@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import StickerPrintingCostCalculator from "../../../calculators/utilities/StickerPrintingCostCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-sticker-printing-cost-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/sticker-printing-cost-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

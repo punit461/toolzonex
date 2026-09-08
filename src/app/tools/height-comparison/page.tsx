@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HeightComparison from "../../../calculators/heightcompare/HeightComparison";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-height-comparison";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/height-comparison");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

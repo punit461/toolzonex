@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GcdCalculator from "../../../calculators/utilities/GcdCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-gcd-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/gcd-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

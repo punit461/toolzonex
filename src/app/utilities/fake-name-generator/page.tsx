@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FakeNameGenerator from "../../../calculators/utilities/FakeNameGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-fake-name-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/fake-name-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

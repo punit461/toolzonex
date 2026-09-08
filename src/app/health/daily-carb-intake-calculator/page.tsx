@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DailyCarbIntakeCalculator from "../../../calculators/health/DailyCarbIntakeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-daily-carb-intake-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/health/daily-carb-intake-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

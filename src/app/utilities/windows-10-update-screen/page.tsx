@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Windows10UpdateScreen } from "../../../calculators/screens/windowsScreens";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-windows-10-update-screen";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/windows-10-update-screen");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

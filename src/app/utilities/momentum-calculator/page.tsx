@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import MomentumCalculator from "../../../calculators/utilities/MomentumCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-momentum-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/momentum-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

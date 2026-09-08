@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import InventoryDaysCalculator from "../../../calculators/finance/InventoryDaysCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-inventory-days-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/inventory-days-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

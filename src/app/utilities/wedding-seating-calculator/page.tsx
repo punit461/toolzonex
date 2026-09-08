@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WeddingSeatingCalculator from "../../../calculators/utilities/WeddingSeatingCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-wedding-seating-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/wedding-seating-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

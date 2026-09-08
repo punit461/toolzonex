@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import EMICalculator from "../../../calculators/finance/EMICalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-emi-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/emi-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

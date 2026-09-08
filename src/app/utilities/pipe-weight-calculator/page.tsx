@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PipeWeightCalculator from "../../../calculators/utilities/PipeWeightCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-pipe-weight-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/pipe-weight-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

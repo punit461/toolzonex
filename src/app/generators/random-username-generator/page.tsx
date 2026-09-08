@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RandomUsernameGenerator from "../../../calculators/generators/RandomUsernameGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-random-username-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/random-username-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

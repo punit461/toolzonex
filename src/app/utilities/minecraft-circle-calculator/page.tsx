@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MinecraftCircleCalculator from "../../../calculators/utilities/MinecraftCircleCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-minecraft-circle-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/minecraft-circle-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

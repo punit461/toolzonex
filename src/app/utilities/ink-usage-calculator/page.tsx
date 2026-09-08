@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import InkUsageCalculator from "../../../calculators/utilities/InkUsageCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-ink-usage-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/ink-usage-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

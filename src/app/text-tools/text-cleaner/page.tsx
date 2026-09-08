@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import TextCleaner from "../../../calculators/text-tools/TextCleaner";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-text-cleaner";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/text-cleaner");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

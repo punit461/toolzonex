@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MatrixCalculator from "../../../calculators/finance/MatrixCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-matrix-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/matrix-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RemovePdfBorder from "../../../calculators/pdf/RemovePdfBorder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-remove-pdf-border";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/remove-pdf-border");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

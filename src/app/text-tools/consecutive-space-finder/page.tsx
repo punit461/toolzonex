@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ConsecutiveSpaceFinder from "../../../calculators/text-tools/ConsecutiveSpaceFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-consecutive-space-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/consecutive-space-finder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

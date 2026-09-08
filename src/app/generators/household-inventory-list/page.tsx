@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import HouseholdInventoryList from "../../../calculators/generators/HouseholdInventoryList";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-household-inventory-list";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/household-inventory-list");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import XmlPrettyPrinter from "../../../calculators/developer-tools/XmlPrettyPrinter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-xml-pretty-print";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/xml-pretty-print");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

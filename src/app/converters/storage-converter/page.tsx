@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import StorageConverter from "../../../calculators/converters/StorageConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-storage-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/converters/storage-converter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

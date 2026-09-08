@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ShortestWordFinder from "../../../calculators/text-tools/ShortestWordFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-shortest-word-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/shortest-word-finder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

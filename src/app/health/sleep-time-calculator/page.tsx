@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SleepTimeCalculator from "../../../calculators/health/SleepTimeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-sleep-time-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/sleep-time-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

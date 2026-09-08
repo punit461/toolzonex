@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ExtractEmailAddresses from "../../../calculators/text-tools/ExtractEmailAddresses";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-extract-email-addresses";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/extract-email-addresses");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

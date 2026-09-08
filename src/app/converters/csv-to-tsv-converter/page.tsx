@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import CsvToTsvConverter from "../../../calculators/converters/CsvToTsvConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-csv-to-tsv-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/converters/csv-to-tsv-converter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
