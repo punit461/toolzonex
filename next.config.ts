@@ -5,13 +5,22 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // Site has grown to 800+ static pages sharing one large toolRegistry
-  // module; the default worker parallelism during page-data collection
-  // was duplicating enough of that module across workers to OOM CI
-  // runners. Capping workers trades some build time for a bounded
-  // memory footprint.
+  // Site has grown to 1700+ static pages sharing one large toolRegistry
+  // module (~1350 pages import it directly). Two knobs matter here and
+  // pull in opposite directions, so both are set explicitly:
+  //  - cpus caps how many worker PROCESSES run the build. Too many and
+  //    each spawns its own copy of the compiled app (which bakes in
+  //    toolRegistry), duplicating memory across workers.
+  //  - staticGenerationMaxConcurrency caps how many pages each worker
+  //    renders IN PARALLEL. With only 2 workers splitting ~1700+ pages,
+  //    each worker sequentially renders ~800+ pages over the build; the
+  //    default of 8 concurrent in-flight renders per worker was letting
+  //    that per-page render state pile up faster than GC could reclaim
+  //    it, which is what was pushing CI past the 8GB heap ceiling.
+  // Both trade build time for a bounded memory footprint.
   experimental: {
     cpus: 2,
+    staticGenerationMaxConcurrency: 2,
   },
   eslint: {
     // Pre-existing repo state had no ESLint config at all, so `next build`
