@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import OccasionMessageGenerator from "../../../calculators/generators/OccasionMessageGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-occasion-message-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/occasion-message-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

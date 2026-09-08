@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LineNumbering from "../../../calculators/text-tools/LineNumbering";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-line-numbering";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/line-numbering");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

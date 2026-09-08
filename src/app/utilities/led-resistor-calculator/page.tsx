@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LedResistorCalculator from "../../../calculators/utilities/LedResistorCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-led-resistor-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/led-resistor-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

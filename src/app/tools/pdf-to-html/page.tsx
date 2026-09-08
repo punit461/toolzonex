@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfToHtml from "../../../calculators/pdf/PdfToHtml";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-to-html";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-to-html");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

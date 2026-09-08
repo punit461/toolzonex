@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import KeepOnlyNumbers from "../../../calculators/text-tools/KeepOnlyNumbers";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-keep-only-numbers";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/keep-only-numbers");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import FileNameGenerator from "../../../calculators/generators/FileNameGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-file-name-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/file-name-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

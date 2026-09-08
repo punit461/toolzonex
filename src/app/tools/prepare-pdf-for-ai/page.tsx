@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PreparePdfForAi from "../../../calculators/pdf/PreparePdfForAi";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-prepare-pdf-for-ai";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/prepare-pdf-for-ai");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

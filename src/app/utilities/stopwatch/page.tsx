@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Stopwatch from "../../../calculators/utilities/Stopwatch";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-stopwatch";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/stopwatch");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DutyRosterShiftScheduleGenerator from "../../../calculators/generators/DutyRosterShiftScheduleGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-duty-roster-shift-schedule-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/duty-roster-shift-schedule-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

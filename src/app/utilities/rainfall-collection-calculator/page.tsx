@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RainfallCollectionCalculator from "../../../calculators/utilities/RainfallCollectionCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-rainfall-collection-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/rainfall-collection-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

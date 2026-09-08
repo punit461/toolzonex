@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfBookmarkViewer from "../../../calculators/pdf/PdfBookmarkViewer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-bookmark-viewer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-bookmark-viewer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

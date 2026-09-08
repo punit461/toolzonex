@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FuseSizeCalculator from "../../../calculators/utilities/FuseSizeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-fuse-size-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/fuse-size-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

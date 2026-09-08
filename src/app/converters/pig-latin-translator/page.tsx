@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PigLatinTranslator from "../../../calculators/converters/PigLatinTranslator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-pig-latin-translator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/converters/pig-latin-translator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

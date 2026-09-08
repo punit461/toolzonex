@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CoinFlip from "../../../calculators/generators/CoinFlip";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-coin-flip";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/coin-flip");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import AlphabetIndexGenerator from "../../../calculators/text-tools/AlphabetIndexGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-alphabet-index-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/alphabet-index-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

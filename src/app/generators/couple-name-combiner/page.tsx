@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CoupleNameCombiner from "../../../calculators/generators/CoupleNameCombiner";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-couple-name-combiner";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/couple-name-combiner");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LoanTermCalculator from "../../../calculators/finance/LoanTermCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-loan-term-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/loan-term-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

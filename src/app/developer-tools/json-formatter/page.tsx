@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JsonFormatter from "../../../calculators/developer-tools/JsonFormatter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-json-formatter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/json-formatter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

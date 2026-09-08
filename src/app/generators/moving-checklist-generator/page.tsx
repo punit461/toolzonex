@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import MovingChecklistGenerator from "../../../calculators/generators/MovingChecklistGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-moving-checklist-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/moving-checklist-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

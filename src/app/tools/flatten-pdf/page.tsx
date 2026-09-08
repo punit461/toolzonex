@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FlattenPdf from "../../../calculators/pdf/FlattenPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-flatten-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/flatten-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

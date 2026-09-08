@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import NextSolarEclipseCountdown from "../../../calculators/utilities/NextSolarEclipseCountdown";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-solar-eclipse-countdown";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/solar-eclipse-countdown");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

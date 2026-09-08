@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import SentenceSplitter from "../../../calculators/text-tools/SentenceSplitter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-sentence-splitter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/sentence-splitter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

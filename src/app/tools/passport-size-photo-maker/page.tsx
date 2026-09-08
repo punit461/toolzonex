@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PassportSizePhotoMaker from "../../../calculators/pdf/PassportSizePhotoMaker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-passport-size-photo-maker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/passport-size-photo-maker");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

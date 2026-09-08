@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import InvisibleTextGenerator from "../../../calculators/utilities/InvisibleTextGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-invisible-text-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/invisible-text-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

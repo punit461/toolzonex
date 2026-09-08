@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SSYCalculator from "../../../calculators/finance/SSYCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-ssy-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/ssy-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

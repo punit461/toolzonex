@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import MirrorPdfPages from "../../../calculators/pdf/MirrorPdfPages";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-mirror-pdf-pages";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/mirror-pdf-pages");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

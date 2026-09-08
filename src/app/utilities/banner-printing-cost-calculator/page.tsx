@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BannerPrintingCostCalculator from "../../../calculators/utilities/BannerPrintingCostCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-banner-printing-cost-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/banner-printing-cost-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

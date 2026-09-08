@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DvdScreensaver from "../../../calculators/screens/DvdScreensaver";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-dvd-screensaver";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/dvd-screensaver");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

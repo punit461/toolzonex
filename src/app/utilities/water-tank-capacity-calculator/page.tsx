@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import WaterTankCapacityCalculator from "../../../calculators/utilities/WaterTankCapacityCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-water-tank-capacity-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/water-tank-capacity-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

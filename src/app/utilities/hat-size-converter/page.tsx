@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import HatSizeConverter from "../../../calculators/utilities/HatSizeConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-hat-size-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/hat-size-converter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

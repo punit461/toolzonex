@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MicrowavePowerCalculator from "../../../calculators/utilities/MicrowavePowerCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-microwave-power-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/microwave-power-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

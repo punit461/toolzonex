@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SlugGenerator from "../../../calculators/developer-tools/SlugGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-slug-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/slug-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

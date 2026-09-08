@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MemoryCardCapacityCalculator from "../../../calculators/utilities/MemoryCardCapacityCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-memory-card-capacity-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/memory-card-capacity-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

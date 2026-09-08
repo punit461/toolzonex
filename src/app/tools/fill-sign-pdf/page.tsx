@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import FillSignPdf from "../../../calculators/pdf/FillSignPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-fill-sign-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/fill-sign-pdf");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

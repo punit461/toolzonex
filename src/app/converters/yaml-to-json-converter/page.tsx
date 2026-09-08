@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import YamlToJsonConverter from "../../../calculators/converters/YamlToJsonConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-yaml-to-json-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/yaml-to-json-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

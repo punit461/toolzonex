@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import MovieWatchlistGenerator from "../../../calculators/generators/MovieWatchlistGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-movie-watchlist-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/movie-watchlist-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

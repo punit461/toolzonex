@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PasswordGenerator from "../../../calculators/generators/PasswordGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-password-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/password-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

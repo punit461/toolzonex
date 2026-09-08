@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FutureValueCalculator from "../../../calculators/finance/FutureValueCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-future-value-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/future-value-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

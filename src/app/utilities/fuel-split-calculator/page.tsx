@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FuelSplitCalculator from "../../../calculators/utilities/FuelSplitCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-fuel-split-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/fuel-split-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

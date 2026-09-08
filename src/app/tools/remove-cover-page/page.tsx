@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RemoveCoverPage from "../../../calculators/pdf/RemoveCoverPage";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-remove-cover-page";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/remove-cover-page");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import BuiltUpAreaCalculator from "../../../calculators/utilities/BuiltUpAreaCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-built-up-area-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/built-up-area-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

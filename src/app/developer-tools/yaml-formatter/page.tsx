@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import YamlFormatter from "../../../calculators/developer-tools/YamlFormatter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-yaml-formatter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/yaml-formatter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

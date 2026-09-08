@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RemovePdfBookmarks from "../../../calculators/pdf/RemovePdfBookmarks";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-remove-pdf-bookmarks";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/remove-pdf-bookmarks");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

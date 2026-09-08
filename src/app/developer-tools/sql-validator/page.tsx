@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SqlValidator from "../../../calculators/developer-tools/SqlValidator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-sql-validator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/sql-validator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

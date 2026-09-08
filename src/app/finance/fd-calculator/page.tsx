@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FDCalculator from "../../../calculators/finance/FDCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-fd-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/fd-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

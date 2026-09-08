@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CostOfLivingCalculator from "../../../calculators/finance/CostOfLivingCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-cost-of-living-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/cost-of-living-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

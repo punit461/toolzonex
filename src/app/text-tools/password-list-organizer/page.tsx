@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PasswordListOrganizer from "../../../calculators/text-tools/PasswordListOrganizer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-password-list-organizer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/password-list-organizer");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

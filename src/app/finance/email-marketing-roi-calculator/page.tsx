@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import EmailMarketingRoiCalculator from "../../../calculators/finance/EmailMarketingRoiCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-email-marketing-roi-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/email-marketing-roi-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import CreateBlankPdf from "../../../calculators/pdf/CreateBlankPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-create-blank-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/create-blank-pdf");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

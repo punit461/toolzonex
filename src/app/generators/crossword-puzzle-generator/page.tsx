@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CrosswordPuzzleGenerator from "../../../calculators/generators/CrosswordPuzzleGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-crossword-puzzle-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/crossword-puzzle-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

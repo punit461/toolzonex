@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ShiftHoursCalculator from "../../../calculators/utilities/ShiftHoursCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-shift-hours-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/shift-hours-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

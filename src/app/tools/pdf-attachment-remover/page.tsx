@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfAttachmentRemover from "../../../calculators/pdf/PdfAttachmentRemover";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-attachment-remover";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-attachment-remover");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

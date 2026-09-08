@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ParagraphIndentOutdentTool from "../../../calculators/text-tools/ParagraphIndentOutdentTool";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-paragraph-indent-outdent-tool";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/paragraph-indent-outdent-tool");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

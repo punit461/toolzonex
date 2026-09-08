@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import NicknameShortener from "../../../calculators/generators/NicknameShortener";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-nickname-shortener";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/nickname-shortener");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

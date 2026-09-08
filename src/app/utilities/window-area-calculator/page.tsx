@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WindowAreaCalculator from "../../../calculators/utilities/WindowAreaCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-window-area-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/window-area-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

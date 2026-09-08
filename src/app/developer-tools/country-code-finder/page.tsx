@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CountryCodeFinder from "../../../calculators/developer-tools/CountryCodeFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-country-code-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/country-code-finder");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

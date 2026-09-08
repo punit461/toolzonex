@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RgbToHexConverter from "../../../calculators/converters/RgbToHexConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-rgb-to-hex";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/rgb-to-hex");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

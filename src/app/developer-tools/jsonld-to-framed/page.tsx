@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JsonLdToFramed from "../../../calculators/developer-tools/JsonLdToFramed";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-jsonld-to-framed";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/jsonld-to-framed");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

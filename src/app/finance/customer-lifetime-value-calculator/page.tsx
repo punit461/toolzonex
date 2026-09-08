@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CustomerLifetimeValueCalculator from "../../../calculators/finance/CustomerLifetimeValueCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-customer-lifetime-value-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/customer-lifetime-value-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

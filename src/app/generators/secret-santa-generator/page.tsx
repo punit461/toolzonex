@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SecretSantaGenerator from "../../../calculators/generators/SecretSantaGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-secret-santa-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/secret-santa-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

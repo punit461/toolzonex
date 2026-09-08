@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PowerballNumberGenerator from "../../../calculators/generators/PowerballNumberGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-powerball-number-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/powerball-number-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

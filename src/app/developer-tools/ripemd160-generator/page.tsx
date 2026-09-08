@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Ripemd160Generator from "../../../calculators/developer-tools/Ripemd160Generator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-ripemd160-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/ripemd160-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

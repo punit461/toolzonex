@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TextSizeCalculator from "../../../calculators/tools/TextSizeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-text-size-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/text-size-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

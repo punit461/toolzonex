@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RentVsBuyCalculator from "../../../calculators/finance/RentVsBuyCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-rent-vs-buy-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/rent-vs-buy-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

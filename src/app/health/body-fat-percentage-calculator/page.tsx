@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BodyFatPercentageCalculator from "../../../calculators/health/BodyFatPercentageCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-body-fat-percentage-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/body-fat-percentage-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

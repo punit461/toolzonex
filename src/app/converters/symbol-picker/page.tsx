@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SymbolPicker from "../../../calculators/converters/SymbolPicker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-symbol-picker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/symbol-picker");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

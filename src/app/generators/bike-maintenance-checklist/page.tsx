@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import BikeMaintenanceChecklist from "../../../calculators/generators/BikeMaintenanceChecklist";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-bike-maintenance-checklist";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/bike-maintenance-checklist");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

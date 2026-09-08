@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GraphqlToJava from "../../../calculators/developer-tools/GraphqlToJava";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-graphql-to-java";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/graphql-to-java");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CostPerWearCalculator from "../../../calculators/utilities/CostPerWearCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-cost-per-wear-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/cost-per-wear-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

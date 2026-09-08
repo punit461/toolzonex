@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import MedicationReminderList from "../../../calculators/generators/MedicationReminderList";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-medication-reminder-list";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/medication-reminder-list");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

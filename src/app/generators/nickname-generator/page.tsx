@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import NicknameGenerator from "../../../calculators/generators/NicknameGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-nickname-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/nickname-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

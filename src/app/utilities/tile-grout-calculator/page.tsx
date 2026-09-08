@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import TileGroutCalculator from "../../../calculators/utilities/TileGroutCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-tile-grout-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/tile-grout-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

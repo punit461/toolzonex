@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RiskRewardCalculator from "../../../calculators/finance/RiskRewardCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-risk-reward-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/risk-reward-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

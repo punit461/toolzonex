@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import LeanBodyMassCalculator from "../../../calculators/health/LeanBodyMassCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-lean-body-mass-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/health/lean-body-mass-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

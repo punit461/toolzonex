@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FileCompressionRatioCalculator from "../../../calculators/utilities/FileCompressionRatioCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-file-compression-ratio-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/file-compression-ratio-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

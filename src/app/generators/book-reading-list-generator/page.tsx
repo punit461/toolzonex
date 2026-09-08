@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import BookReadingListGenerator from "../../../calculators/generators/BookReadingListGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-book-reading-list-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/book-reading-list-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LinearRegressionCalculator from "../../../calculators/utilities/LinearRegressionCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-linear-regression-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/linear-regression-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

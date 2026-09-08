@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BondPriceCalculator from "../../../calculators/finance/BondPriceCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-bond-price-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/bond-price-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

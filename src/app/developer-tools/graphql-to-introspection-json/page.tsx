@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GraphqlToIntrospectionJson from "../../../calculators/developer-tools/GraphqlToIntrospectionJson";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-graphql-to-introspection-json";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/graphql-to-introspection-json");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

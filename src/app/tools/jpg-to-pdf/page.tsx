@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JpgToPdf from "../../../calculators/pdf/JpgToPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-jpg-to-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/jpg-to-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

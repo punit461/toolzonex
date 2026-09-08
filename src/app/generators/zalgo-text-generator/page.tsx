@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ZalgoTextGenerator from "../../../calculators/generators/ZalgoTextGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-zalgo-text-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/zalgo-text-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

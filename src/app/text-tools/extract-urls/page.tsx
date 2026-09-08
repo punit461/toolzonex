@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ExtractUrls from "../../../calculators/text-tools/ExtractUrls";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-extract-urls";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/extract-urls");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

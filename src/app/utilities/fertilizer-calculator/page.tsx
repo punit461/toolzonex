@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FertilizerCalculator from "../../../calculators/utilities/FertilizerCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-fertilizer-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/fertilizer-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

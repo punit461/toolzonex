@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ContestNameGenerator from "../../../calculators/generators/ContestNameGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-contest-name-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/contest-name-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

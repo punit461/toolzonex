@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SortingAlgorithmVisualizer from "../../../calculators/utilities/SortingAlgorithmVisualizer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-algorithm-visualizer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/algorithm-visualizer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

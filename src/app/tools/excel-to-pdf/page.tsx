@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ExcelToPdf from "../../../calculators/pdf/ExcelToPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-excel-to-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/excel-to-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

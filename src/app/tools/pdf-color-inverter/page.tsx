@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfColorInverter from "../../../calculators/pdf/PdfColorInverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-color-inverter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-color-inverter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

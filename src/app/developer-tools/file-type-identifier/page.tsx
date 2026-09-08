@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import FileTypeIdentifier from "../../../calculators/developer-tools/FileTypeIdentifier";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-file-type-identifier";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/file-type-identifier");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

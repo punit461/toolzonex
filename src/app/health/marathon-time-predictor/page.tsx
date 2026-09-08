@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MarathonTimePredictor from "../../../calculators/health/MarathonTimePredictor";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-marathon-time-predictor";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/marathon-time-predictor");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

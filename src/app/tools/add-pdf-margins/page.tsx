@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AddPdfMargins from "../../../calculators/pdf/AddPdfMargins";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-add-pdf-margins";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/add-pdf-margins");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

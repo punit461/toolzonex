@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfBlackAndWhiteConverter from "../../../calculators/pdf/PdfBlackAndWhiteConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-black-and-white-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-black-and-white-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

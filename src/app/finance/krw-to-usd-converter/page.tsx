@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import KrwToUsdConverter from "../../../calculators/finance/KrwToUsdConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-krw-to-usd-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/krw-to-usd-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

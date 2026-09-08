@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import TextDivider from "../../../calculators/text-tools/TextDivider";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-text-divider";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/text-divider");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

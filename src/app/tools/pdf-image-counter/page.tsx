@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfImageCounter from "../../../calculators/pdf/PdfImageCounter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-image-counter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-image-counter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

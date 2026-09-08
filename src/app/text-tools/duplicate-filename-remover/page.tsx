@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DuplicateFilenameRemover from "../../../calculators/text-tools/DuplicateFilenameRemover";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-duplicate-filename-remover";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/duplicate-filename-remover");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

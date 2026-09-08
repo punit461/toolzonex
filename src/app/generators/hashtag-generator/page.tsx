@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HashtagGenerator from "../../../calculators/generators/HashtagGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-hashtag-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/hashtag-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

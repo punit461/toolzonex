@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AcronymGenerator from "../../../calculators/generators/AcronymGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-acronym-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/acronym-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ImageColorPicker from "../../../calculators/tools/ImageColorPicker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-image-color-picker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/image-color-picker");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

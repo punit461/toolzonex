@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import OrganizePdf from "../../../calculators/pdf/OrganizePdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-organize-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/organize-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

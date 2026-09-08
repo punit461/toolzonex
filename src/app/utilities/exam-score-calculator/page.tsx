@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ExamScoreCalculator from "../../../calculators/utilities/ExamScoreCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-exam-score-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/exam-score-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

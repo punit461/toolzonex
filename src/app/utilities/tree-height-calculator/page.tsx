@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TreeHeightCalculator from "../../../calculators/utilities/TreeHeightCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-tree-height-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/tree-height-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

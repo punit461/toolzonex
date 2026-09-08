@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import OperatingCashFlowCalculator from "../../../calculators/finance/OperatingCashFlowCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-operating-cash-flow-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/operating-cash-flow-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

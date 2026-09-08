@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CPCCalculator from "../../../calculators/finance/CPCCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-cpc-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/cpc-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

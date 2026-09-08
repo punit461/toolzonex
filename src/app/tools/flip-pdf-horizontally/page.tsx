@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FlipPdfHorizontally from "../../../calculators/pdf/FlipPdfHorizontally";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-flip-pdf-horizontally";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/flip-pdf-horizontally");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

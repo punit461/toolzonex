@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CssColorNameFinder from "../../../calculators/converters/CssColorNameFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-css-color-name-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/css-color-name-finder");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

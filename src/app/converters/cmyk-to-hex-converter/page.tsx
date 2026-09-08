@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import CmykToHexConverter from "../../../calculators/converters/CmykToHexConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-cmyk-to-hex-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/converters/cmyk-to-hex-converter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

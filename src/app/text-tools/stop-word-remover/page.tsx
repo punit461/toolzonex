@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import StopWordRemover from "../../../calculators/text-tools/StopWordRemover";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-stop-word-remover";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/stop-word-remover");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

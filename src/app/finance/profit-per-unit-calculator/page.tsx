@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ProfitPerUnitCalculator from "../../../calculators/finance/ProfitPerUnitCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-profit-per-unit-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/profit-per-unit-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

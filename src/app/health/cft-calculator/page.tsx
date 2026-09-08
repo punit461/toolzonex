@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CFTCalculator from "../../../calculators/health/CFTCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-cft-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/cft-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

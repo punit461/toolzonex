@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WhatsAppLinkGenerator from "../../../calculators/tools/WhatsAppLinkGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-whatsapp-link-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/whatsapp-link-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

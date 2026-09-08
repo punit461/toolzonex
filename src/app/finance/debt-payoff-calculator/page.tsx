@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DebtPayoffCalculator from "../../../calculators/finance/DebtPayoffCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-debt-payoff-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/finance/debt-payoff-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

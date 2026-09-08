@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ChineseZodiacFinder from "../../../calculators/utilities/ChineseZodiacFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-chinese-zodiac-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/chinese-zodiac-finder");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

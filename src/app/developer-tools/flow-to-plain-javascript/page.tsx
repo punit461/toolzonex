@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FlowToPlainJavaScript from "../../../calculators/developer-tools/FlowToPlainJavaScript";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-flow-to-plain-javascript";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/flow-to-plain-javascript");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

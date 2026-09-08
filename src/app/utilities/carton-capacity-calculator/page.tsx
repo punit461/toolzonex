@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CartonCapacityCalculator from "../../../calculators/utilities/CartonCapacityCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-carton-capacity-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/carton-capacity-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

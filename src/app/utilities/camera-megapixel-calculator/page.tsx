@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CameraMegapixelCalculator from "../../../calculators/utilities/CameraMegapixelCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-camera-megapixel-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/camera-megapixel-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

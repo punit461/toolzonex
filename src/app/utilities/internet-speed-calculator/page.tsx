@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import InternetSpeedCalculator from "../../../calculators/utilities/InternetSpeedCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-internet-speed-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/internet-speed-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

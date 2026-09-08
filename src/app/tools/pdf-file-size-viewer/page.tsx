@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfFileSizeViewer from "../../../calculators/pdf/PdfFileSizeViewer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-file-size-viewer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-file-size-viewer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

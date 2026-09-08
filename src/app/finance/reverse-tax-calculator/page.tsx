@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ReverseTaxCalculator from "../../../calculators/finance/ReverseTaxCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-reverse-tax-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/reverse-tax-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

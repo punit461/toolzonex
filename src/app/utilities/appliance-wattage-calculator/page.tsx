@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ApplianceWattageCalculator from "../../../calculators/utilities/ApplianceWattageCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-appliance-wattage-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/appliance-wattage-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

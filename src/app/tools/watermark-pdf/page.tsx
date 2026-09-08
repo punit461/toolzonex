@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WatermarkPdf from "../../../calculators/pdf/WatermarkPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-watermark-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/watermark-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

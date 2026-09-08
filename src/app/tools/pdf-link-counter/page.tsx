@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfLinkCounter from "../../../calculators/pdf/PdfLinkCounter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-link-counter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-link-counter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

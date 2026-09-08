@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ShoeSizeConverter from "../../../calculators/health/ShoeSizeConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-shoe-size-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/shoe-size-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

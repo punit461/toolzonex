@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ChildHeightPredictorCalculator from "../../../calculators/health/ChildHeightPredictorCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-child-height-predictor";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/child-height-predictor");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

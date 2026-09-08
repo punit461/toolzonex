@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import KeywordDensityAnalyzer from "../../../calculators/text-tools/KeywordDensityAnalyzer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-keyword-density-analyzer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/keyword-density-analyzer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import HslToRgbConverter from "../../../calculators/converters/HslToRgbConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-hsl-to-rgb-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/converters/hsl-to-rgb-converter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

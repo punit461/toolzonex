@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PipeFlowCalculator from "../../../calculators/utilities/PipeFlowCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-pipe-flow-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/pipe-flow-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

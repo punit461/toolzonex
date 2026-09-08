@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CircleOfConfusionCalculator from "../../../calculators/utilities/CircleOfConfusionCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-circle-of-confusion-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/circle-of-confusion-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

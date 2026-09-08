@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HtmlToMarkdown from "../../../calculators/utilities/HtmlToMarkdown";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-html-to-markdown";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/html-to-markdown");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

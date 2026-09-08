@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import UsdToAudConverter from "../../../calculators/finance/UsdToAudConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-usd-to-aud-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/usd-to-aud-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

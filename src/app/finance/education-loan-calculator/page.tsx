@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import EducationLoanCalculator from "../../../calculators/finance/EducationLoanCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-education-loan-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/education-loan-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

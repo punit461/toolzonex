@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfGrayscaleConverter from "../../../calculators/pdf/PdfGrayscaleConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-grayscale-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-grayscale-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

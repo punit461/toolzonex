@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HumanToCatAgeCalculator from "../../../calculators/utilities/HumanToCatAgeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-human-to-cat-age-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/human-to-cat-age-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

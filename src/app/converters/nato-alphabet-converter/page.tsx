@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import NatoAlphabetConverter from "../../../calculators/converters/NatoAlphabetConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-nato-alphabet-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/converters/nato-alphabet-converter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

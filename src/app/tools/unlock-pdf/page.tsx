@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import UnlockPdf from "../../../calculators/pdf/UnlockPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-unlock-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/unlock-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

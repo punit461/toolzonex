@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import CatBreedFinder from "../../../calculators/utilities/CatBreedFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-cat-breed-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/cat-breed-finder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

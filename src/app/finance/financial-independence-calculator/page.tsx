@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FinancialIndependenceCalculator from "../../../calculators/finance/FinancialIndependenceCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-financial-independence-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/financial-independence-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

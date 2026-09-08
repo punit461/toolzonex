@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JavaScriptToTypeScript from "../../../calculators/developer-tools/JavaScriptToTypeScript";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-javascript-to-typescript";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/javascript-to-typescript");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

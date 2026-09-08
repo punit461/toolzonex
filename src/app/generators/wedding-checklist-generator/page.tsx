@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import WeddingChecklistGenerator from "../../../calculators/generators/WeddingChecklistGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-wedding-checklist-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/wedding-checklist-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

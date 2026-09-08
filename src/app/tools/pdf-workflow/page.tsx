@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfWorkflow from "../../../calculators/pdf/PdfWorkflow";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-workflow";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-workflow");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

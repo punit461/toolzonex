@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import SqlKeywordsLowercase from "../../../calculators/developer-tools/SqlKeywordsLowercase";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-sql-keywords-lowercase";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/sql-keywords-lowercase");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

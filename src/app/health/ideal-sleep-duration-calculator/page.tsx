@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import IdealSleepDurationCalculator from "../../../calculators/health/IdealSleepDurationCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-ideal-sleep-duration-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/health/ideal-sleep-duration-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

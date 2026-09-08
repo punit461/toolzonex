@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ModeCalculator from "../../../calculators/utilities/ModeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-mode-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/mode-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RatioSimplifier from "../../../calculators/utilities/RatioSimplifier";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-ratio-simplifier";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/ratio-simplifier");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

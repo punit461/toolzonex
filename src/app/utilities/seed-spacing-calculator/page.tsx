@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import SeedSpacingCalculator from "../../../calculators/utilities/SeedSpacingCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-seed-spacing-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/seed-spacing-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

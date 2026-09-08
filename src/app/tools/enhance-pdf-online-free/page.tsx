@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import EnhancePdfOnline from "../../../calculators/pdf/EnhancePdfOnline";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-enhance-pdf-online-free";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/enhance-pdf-online-free");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

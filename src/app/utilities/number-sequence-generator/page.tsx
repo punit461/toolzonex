@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import NumberSequenceGenerator from "../../../calculators/utilities/NumberSequenceGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-number-sequence-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/number-sequence-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

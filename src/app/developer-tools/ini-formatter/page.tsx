@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import IniFormatter from "../../../calculators/developer-tools/IniFormatter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-ini-formatter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/ini-formatter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ImageConverter from "../../../calculators/tools/ImageConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-image-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/image-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

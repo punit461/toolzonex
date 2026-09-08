@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RemoveHeaderFooter from "../../../calculators/pdf/RemoveHeaderFooter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-remove-header-footer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/remove-header-footer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

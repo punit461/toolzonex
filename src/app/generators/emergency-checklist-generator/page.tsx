@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import EmergencyChecklistGenerator from "../../../calculators/generators/EmergencyChecklistGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-emergency-checklist-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/emergency-checklist-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

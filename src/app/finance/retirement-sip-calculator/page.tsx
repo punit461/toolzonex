@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RetirementSIPCalculator from "../../../calculators/finance/RetirementSIPCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-retirement-sip-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/retirement-sip-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

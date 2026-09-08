@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LLMCostCalculator from "../../../calculators/ai/LLMCostCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/ai-llm-cost-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/ai/llm-cost-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

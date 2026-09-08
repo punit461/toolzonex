@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AreaConverter from "../../../calculators/converters/AreaConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-area-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/area-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TruthOrDareGenerator from "../../../calculators/generators/TruthOrDareGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-truth-or-dare-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/truth-or-dare-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

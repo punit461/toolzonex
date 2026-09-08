@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import StudyExamChecklistGenerator from "../../../calculators/generators/StudyExamChecklistGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-study-exam-checklist-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/study-exam-checklist-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

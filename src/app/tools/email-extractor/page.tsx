@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import EmailExtractor from "../../../calculators/tools/EmailExtractor";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-email-extractor";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/email-extractor");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

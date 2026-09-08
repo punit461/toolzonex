@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PrimeFactorizationCalculator from "../../../calculators/utilities/PrimeFactorizationCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-prime-factorization-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/prime-factorization-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

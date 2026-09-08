@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JsonToCsvConverter from "../../../calculators/converters/JsonToCsvConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-json-to-csv";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/json-to-csv");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

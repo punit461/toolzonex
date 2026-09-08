@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JsonToIoTs from "../../../calculators/developer-tools/JsonToIoTs";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-json-to-io-ts";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/json-to-io-ts");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

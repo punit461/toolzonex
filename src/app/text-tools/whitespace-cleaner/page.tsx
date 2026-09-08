@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WhitespaceCleaner from "../../../calculators/text-tools/WhitespaceCleaner";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-whitespace-cleaner";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/whitespace-cleaner");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

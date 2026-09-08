@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JsonToBigQuerySchema from "../../../calculators/developer-tools/JsonToBigQuerySchema";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-json-to-bigquery-schema";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/json-to-bigquery-schema");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

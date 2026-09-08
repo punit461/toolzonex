@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LeapYearChecker from "../../../calculators/developer-tools/LeapYearChecker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-leap-year-checker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/leap-year-checker");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

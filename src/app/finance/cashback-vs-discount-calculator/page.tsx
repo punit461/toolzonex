@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CashbackVsDiscountCalculator from "../../../calculators/finance/CashbackVsDiscountCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-cashback-vs-discount-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/cashback-vs-discount-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

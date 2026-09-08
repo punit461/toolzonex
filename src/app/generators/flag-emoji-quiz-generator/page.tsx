@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import FlagEmojiQuizGenerator from "../../../calculators/generators/FlagEmojiQuizGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-flag-emoji-quiz-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/flag-emoji-quiz-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

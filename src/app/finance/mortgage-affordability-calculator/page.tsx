@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MortgageAffordabilityCalculator from "../../../calculators/finance/MortgageAffordabilityCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-mortgage-affordability-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/mortgage-affordability-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

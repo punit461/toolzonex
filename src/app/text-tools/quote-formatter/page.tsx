@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import QuoteFormatter from "../../../calculators/text-tools/QuoteFormatter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-quote-formatter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/quote-formatter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

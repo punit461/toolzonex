@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JsonToRustSerde from "../../../calculators/developer-tools/JsonToRustSerde";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-json-to-rust-serde";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/json-to-rust-serde");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

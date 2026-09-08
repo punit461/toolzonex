@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CeilingFanSizeCalculator from "../../../calculators/utilities/CeilingFanSizeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-ceiling-fan-size-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/ceiling-fan-size-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

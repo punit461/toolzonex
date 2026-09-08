@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FlooringCalculator from "../../../calculators/utilities/FlooringCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-flooring-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/flooring-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ReversePdfPages from "../../../calculators/pdf/ReversePdfPages";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-reverse-pdf-pages";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/reverse-pdf-pages");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

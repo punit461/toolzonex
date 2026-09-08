@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import NumerologyCalculator from "../../../calculators/generators/NumerologyCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-numerology-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/numerology-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

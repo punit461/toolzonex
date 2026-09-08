@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import StepToDistanceCalculator from "../../../calculators/utilities/StepToDistanceCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-step-to-distance-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/step-to-distance-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

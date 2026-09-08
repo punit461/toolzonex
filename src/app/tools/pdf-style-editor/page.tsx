@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfStyleEditor from "../../../calculators/pdf/PdfStyleEditor";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-style-editor";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-style-editor");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

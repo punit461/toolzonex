@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import EmojiCategoryBrowser from "../../../calculators/converters/EmojiCategoryBrowser";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-emoji-category-browser";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/emoji-category-browser");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GbpToInrConverter from "../../../calculators/finance/GbpToInrConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-gbp-to-inr-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/gbp-to-inr-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

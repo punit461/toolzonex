@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HashRateCalculator from "../../../calculators/finance/HashRateCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-hash-rate-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/hash-rate-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import NicknameCombiner from "../../../calculators/generators/NicknameCombiner";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-nickname-combiner";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/nickname-combiner");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

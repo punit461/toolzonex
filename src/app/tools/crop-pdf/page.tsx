@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import CropPdf from "../../../calculators/pdf/CropPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-crop-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/crop-pdf");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

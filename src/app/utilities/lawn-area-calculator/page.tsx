@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LawnAreaCalculator from "../../../calculators/utilities/LawnAreaCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-lawn-area-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/lawn-area-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

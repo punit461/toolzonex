@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ProbabilityCalculator from "../../../calculators/utilities/ProbabilityCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-probability-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/probability-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

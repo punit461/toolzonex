@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TextRepeater from "../../../calculators/text-tools/TextRepeater";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-text-repeater";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/text-repeater");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

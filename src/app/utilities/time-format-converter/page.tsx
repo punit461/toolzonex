@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import TimeFormatConverter from "../../../calculators/utilities/TimeFormatConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-time-format-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/time-format-converter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

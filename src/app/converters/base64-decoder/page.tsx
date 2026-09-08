@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Base64Decoder from "../../../calculators/converters/Base64Decoder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-base64-decoder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/base64-decoder");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

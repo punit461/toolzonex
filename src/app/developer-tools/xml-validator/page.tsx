@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import XmlValidator from "../../../calculators/developer-tools/XmlValidator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-xml-validator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/xml-validator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

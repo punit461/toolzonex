@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CryptoProfitCalculator from "../../../calculators/finance/CryptoProfitCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-crypto-profit-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/crypto-profit-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

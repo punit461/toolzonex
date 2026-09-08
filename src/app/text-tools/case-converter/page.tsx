@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CaseConverter from "../../../calculators/text-tools/CaseConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-case-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/case-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

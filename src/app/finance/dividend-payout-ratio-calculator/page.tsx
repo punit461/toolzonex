@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DividendPayoutRatioCalculator from "../../../calculators/finance/DividendPayoutRatioCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-dividend-payout-ratio-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/dividend-payout-ratio-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

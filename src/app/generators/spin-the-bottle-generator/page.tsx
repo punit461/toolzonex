@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SpinTheBottleGenerator from "../../../calculators/generators/SpinTheBottleGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-spin-the-bottle-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/spin-the-bottle-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

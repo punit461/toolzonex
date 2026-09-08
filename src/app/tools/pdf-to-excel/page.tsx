@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PdfToExcel from "../../../calculators/pdf/PdfToExcel";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-to-excel";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/pdf-to-excel");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

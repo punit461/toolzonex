@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import FindAndReplaceText from "../../../calculators/text-tools/FindAndReplaceText";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-find-and-replace-text";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/find-and-replace-text");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

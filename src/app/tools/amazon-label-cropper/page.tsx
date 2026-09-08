@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AmazonLabelCropper from "../../../calculators/pdf/AmazonLabelCropper";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-amazon-label-cropper";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/amazon-label-cropper");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

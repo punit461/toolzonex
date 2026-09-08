@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import UnicodeCharacterFinder from "../../../calculators/converters/UnicodeCharacterFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-unicode-character-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/converters/unicode-character-finder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

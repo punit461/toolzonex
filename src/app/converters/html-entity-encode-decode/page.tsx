@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HtmlEntityEncoder from "../../../calculators/converters/HtmlEntityEncoder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-html-entity-encode-decode";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/html-entity-encode-decode");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

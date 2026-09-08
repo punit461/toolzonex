@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DailyFiberCalculator from "../../../calculators/health/DailyFiberCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-daily-fiber-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/daily-fiber-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PromptBuilder from "../../../calculators/generators/PromptBuilder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-prompt-builder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/prompt-builder");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

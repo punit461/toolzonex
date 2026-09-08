@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ImageToBase64Converter from "../../../calculators/converters/ImageToBase64Converter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-image-to-base64";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/image-to-base64");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

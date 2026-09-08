@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import EarningsPerShareCalculator from "../../../calculators/finance/EarningsPerShareCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-earnings-per-share-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/finance/earnings-per-share-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TomlToJson from "../../../calculators/developer-tools/TomlToJson";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-toml-to-json";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/toml-to-json");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import VocabularyListGenerator from "../../../calculators/generators/VocabularyListGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-vocabulary-list-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/vocabulary-list-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

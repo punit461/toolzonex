@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PercentErrorCalculator from "../../../calculators/utilities/PercentErrorCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-percent-error-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/percent-error-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AccountsPayableDaysCalculator from "../../../calculators/finance/AccountsPayableDaysCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-accounts-payable-days-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/accounts-payable-days-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

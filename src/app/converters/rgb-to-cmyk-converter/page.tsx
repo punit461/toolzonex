@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RgbToCmykConverter from "../../../calculators/converters/RgbToCmykConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-rgb-to-cmyk-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/rgb-to-cmyk-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

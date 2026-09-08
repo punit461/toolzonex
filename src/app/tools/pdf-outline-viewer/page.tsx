@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfOutlineViewer from "../../../calculators/pdf/PdfOutlineViewer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-outline-viewer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-outline-viewer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

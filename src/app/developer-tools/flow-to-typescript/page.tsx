@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FlowToTypeScript from "../../../calculators/developer-tools/FlowToTypeScript";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-flow-to-typescript";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/flow-to-typescript");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

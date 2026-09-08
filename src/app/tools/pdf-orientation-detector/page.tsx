@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfOrientationDetector from "../../../calculators/pdf/PdfOrientationDetector";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-orientation-detector";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-orientation-detector");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

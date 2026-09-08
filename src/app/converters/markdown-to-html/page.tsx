@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MarkdownToHtmlConverter from "../../../calculators/converters/MarkdownToHtmlConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-markdown-to-html";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/markdown-to-html");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

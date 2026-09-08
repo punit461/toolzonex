@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ChmodGenerator from "../../../calculators/developer-tools/ChmodGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-chmod-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/chmod-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

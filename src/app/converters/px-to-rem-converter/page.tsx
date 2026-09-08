@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PxToRemConverter from "../../../calculators/converters/PxToRemConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-px-to-rem-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/px-to-rem-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

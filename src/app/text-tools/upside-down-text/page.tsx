@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import UpsideDownText from "../../../calculators/text-tools/UpsideDownText";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-upside-down-text";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/upside-down-text");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

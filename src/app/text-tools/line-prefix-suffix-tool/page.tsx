@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LinePrefixSuffix from "../../../calculators/text-tools/LinePrefixSuffixTool";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-line-prefix-suffix-tool";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/line-prefix-suffix-tool");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

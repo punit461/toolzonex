@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RegexEscapeTool from "../../../calculators/developer-tools/RegexEscapeTool";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-regex-escape-tool";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/regex-escape-tool");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

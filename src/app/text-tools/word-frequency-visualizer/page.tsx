@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import WordFrequencyVisualizer from "../../../calculators/text-tools/WordFrequencyVisualizer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-word-frequency-visualizer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/word-frequency-visualizer");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

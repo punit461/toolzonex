@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import MeetingNotesTemplateGenerator from "../../../calculators/generators/MeetingNotesTemplateGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-meeting-notes-template-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/meeting-notes-template-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

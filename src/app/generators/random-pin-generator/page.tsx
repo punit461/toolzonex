@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RandomPinGenerator from "../../../calculators/generators/RandomPinGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-random-pin-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/random-pin-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DiagonalTextGenerator from "../../../calculators/generators/DiagonalTextGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-diagonal-text-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/diagonal-text-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

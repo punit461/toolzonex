@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import EBITDACalculator from "../../../calculators/finance/EBITDACalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-ebitda-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/ebitda-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

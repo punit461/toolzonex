@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ScreenViewingDistanceCalculator from "../../../calculators/utilities/ScreenViewingDistanceCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-screen-viewing-distance-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/screen-viewing-distance-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

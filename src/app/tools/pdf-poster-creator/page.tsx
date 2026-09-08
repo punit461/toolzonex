@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfPosterCreator from "../../../calculators/pdf/PdfPosterCreator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-poster-creator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-poster-creator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

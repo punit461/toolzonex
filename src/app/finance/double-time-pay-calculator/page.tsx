@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DoubleTimePayCalculator from "../../../calculators/finance/DoubleTimePayCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-double-time-pay-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/double-time-pay-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

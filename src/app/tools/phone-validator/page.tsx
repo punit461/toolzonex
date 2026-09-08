@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PhoneValidator from "../../../calculators/tools/PhoneValidator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-phone-validator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/phone-validator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

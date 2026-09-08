@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DrinkQuantityCalculator from "../../../calculators/utilities/DrinkQuantityCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-drink-quantity-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/drink-quantity-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

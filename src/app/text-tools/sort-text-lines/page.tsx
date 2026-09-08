@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import SortTextLines from "../../../calculators/text-tools/SortTextLines";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-sort-text-lines";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/sort-text-lines");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import AnagramChecker from "../../../calculators/text-tools/AnagramChecker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-anagram-checker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/anagram-checker");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

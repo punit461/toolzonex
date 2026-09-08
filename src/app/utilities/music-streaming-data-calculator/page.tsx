@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MusicStreamingDataCalculator from "../../../calculators/utilities/MusicStreamingDataCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-music-streaming-data-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/music-streaming-data-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

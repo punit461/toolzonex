@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GoldRateCalculator from "../../../calculators/finance/GoldRateCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-gold-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/gold-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import YesOrNoGenerator from "../../../calculators/generators/YesOrNoGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-yes-or-no-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/yes-or-no-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

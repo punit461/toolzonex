@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GradientLibrary from "../../../calculators/developer-tools/GradientLibrary";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-gradient-library";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/gradient-library");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

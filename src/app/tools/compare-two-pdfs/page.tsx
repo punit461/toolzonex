@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CompareTwoPdfs from "../../../calculators/pdf/CompareTwoPdfs";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-compare-two-pdfs";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/compare-two-pdfs");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

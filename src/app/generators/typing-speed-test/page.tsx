@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TypingSpeedTest from "../../../calculators/generators/TypingSpeedTest";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-typing-speed-test";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/typing-speed-test");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

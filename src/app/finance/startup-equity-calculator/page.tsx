@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import StartupEquityCalculator from "../../../calculators/finance/StartupEquityCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-startup-equity-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/startup-equity-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

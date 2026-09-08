@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import LicensePlateGenerator from "../../../calculators/generators/LicensePlateGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-license-plate-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/license-plate-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

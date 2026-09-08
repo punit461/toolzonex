@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfMergeSelectedPages from "../../../calculators/pdf/PdfMergeSelectedPages";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-merge-selected-pages";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-merge-selected-pages");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

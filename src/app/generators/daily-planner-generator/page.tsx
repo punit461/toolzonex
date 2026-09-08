@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DailyPlannerGenerator from "../../../calculators/generators/DailyPlannerGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-daily-planner-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/daily-planner-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

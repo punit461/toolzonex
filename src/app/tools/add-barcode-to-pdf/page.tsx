@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AddBarcodeToPdf from "../../../calculators/pdf/AddBarcodeToPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-add-barcode-to-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/add-barcode-to-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

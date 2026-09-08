@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import NameInitialsGenerator from "../../../calculators/generators/NameInitialsGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-name-initials-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/name-initials-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

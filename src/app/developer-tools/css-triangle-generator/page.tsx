@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CssTriangleGenerator from "../../../calculators/developer-tools/CssTriangleGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-css-triangle-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/css-triangle-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PangramChecker from "../../../calculators/text-tools/PangramChecker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-pangram-checker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/pangram-checker");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

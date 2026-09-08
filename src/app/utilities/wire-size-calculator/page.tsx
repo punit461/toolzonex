@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WireSizeCalculator from "../../../calculators/utilities/WireSizeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-wire-size-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/wire-size-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

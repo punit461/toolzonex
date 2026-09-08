@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RemoveHyperlinks from "../../../calculators/pdf/RemoveHyperlinks";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-remove-hyperlinks";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/remove-hyperlinks");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

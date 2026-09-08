@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import AcBtuCalculator from "../../../calculators/utilities/AcBtuCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-ac-btu-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/ac-btu-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

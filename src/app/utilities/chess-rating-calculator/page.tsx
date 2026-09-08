@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ChessRatingCalculator from "../../../calculators/utilities/ChessRatingCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-chess-rating-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/chess-rating-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

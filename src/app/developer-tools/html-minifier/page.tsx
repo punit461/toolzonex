@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HtmlMinifier from "../../../calculators/developer-tools/HtmlMinifier";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-html-minifier";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/html-minifier");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

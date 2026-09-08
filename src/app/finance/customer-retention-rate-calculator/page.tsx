@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CustomerRetentionRateCalculator from "../../../calculators/finance/CustomerRetentionRateCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-customer-retention-rate-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/customer-retention-rate-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import VisitorLogBook from "../../../calculators/generators/VisitorLogBook";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-visitor-log-book";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/visitor-log-book");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

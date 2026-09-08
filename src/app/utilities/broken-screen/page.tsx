@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BrokenScreen from "../../../calculators/screens/BrokenScreen";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-broken-screen";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/broken-screen");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

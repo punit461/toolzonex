@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PetNameGenerator from "../../../calculators/generators/PetNameGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-pet-name-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/pet-name-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ComputerElectricityCostCalculator from "../../../calculators/utilities/ComputerElectricityCostCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-computer-electricity-cost-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/computer-electricity-cost-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

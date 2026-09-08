@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RandomColorPaletteGenerator from "../../../calculators/generators/RandomColorPaletteGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-random-color-palette-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/random-color-palette-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

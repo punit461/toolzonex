@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FrequencyCalculator from "../../../calculators/utilities/FrequencyCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-frequency-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/frequency-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

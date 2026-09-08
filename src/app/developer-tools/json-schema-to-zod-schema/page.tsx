@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JsonSchemaToZodSchema from "../../../calculators/developer-tools/JsonSchemaToZodSchema";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-json-schema-to-zod-schema";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/json-schema-to-zod-schema");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

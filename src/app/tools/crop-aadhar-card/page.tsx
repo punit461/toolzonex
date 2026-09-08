@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CropAadharCard from "../../../calculators/pdf/CropAadharCard";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-crop-aadhar-card";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/crop-aadhar-card");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

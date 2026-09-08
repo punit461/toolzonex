@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import BannerSizeCalculator from "../../../calculators/utilities/BannerSizeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-banner-size-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/banner-size-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

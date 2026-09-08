@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import UrlEncoder from "../../../calculators/developer-tools/UrlEncoder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-url-encoder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/url-encoder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

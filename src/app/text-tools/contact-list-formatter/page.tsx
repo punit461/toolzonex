@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ContactListFormatter from "../../../calculators/text-tools/ContactListFormatter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-contact-list-formatter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/contact-list-formatter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

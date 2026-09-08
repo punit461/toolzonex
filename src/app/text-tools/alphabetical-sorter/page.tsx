@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import AlphabeticalSorter from "../../../calculators/text-tools/AlphabeticalSorter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-alphabetical-sorter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/alphabetical-sorter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

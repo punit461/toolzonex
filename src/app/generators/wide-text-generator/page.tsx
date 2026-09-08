@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WideTextGenerator from "../../../calculators/generators/WideTextGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-wide-text-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/wide-text-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

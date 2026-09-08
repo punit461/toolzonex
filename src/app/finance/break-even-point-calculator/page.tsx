@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BreakEvenPointCalculator from "../../../calculators/finance/BreakEvenPointCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-break-even-point-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/break-even-point-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

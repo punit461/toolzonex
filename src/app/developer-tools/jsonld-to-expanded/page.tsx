@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JsonLdToExpanded from "../../../calculators/developer-tools/JsonLdToExpanded";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-jsonld-to-expanded";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/jsonld-to-expanded");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

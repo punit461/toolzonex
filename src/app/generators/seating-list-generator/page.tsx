@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import SeatingListGenerator from "../../../calculators/generators/SeatingListGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-seating-list-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/seating-list-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ZScoreCalculator from "../../../calculators/utilities/ZScoreCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-z-score-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/z-score-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DogAgeCalculator from "../../../calculators/utilities/DogAgeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-dog-age-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/dog-age-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

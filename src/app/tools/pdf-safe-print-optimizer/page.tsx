@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PdfSafePrintOptimizer from "../../../calculators/pdf/PdfSafePrintOptimizer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-pdf-safe-print-optimizer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/pdf-safe-print-optimizer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

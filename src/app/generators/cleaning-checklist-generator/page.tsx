@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import CleaningChecklistGenerator from "../../../calculators/generators/CleaningChecklistGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-cleaning-checklist-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/cleaning-checklist-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

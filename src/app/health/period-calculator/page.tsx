@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PeriodCalculator from "../../../calculators/health/PeriodCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-period-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/period-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

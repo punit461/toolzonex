@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PalletLoadCalculator from "../../../calculators/utilities/PalletLoadCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-pallet-load-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/pallet-load-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

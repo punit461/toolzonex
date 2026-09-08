@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import BatteryBackupCalculator from "../../../calculators/utilities/BatteryBackupCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-battery-backup-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/battery-backup-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RomanNumeralGenerator from "../../../calculators/utilities/RomanNumeralGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-roman-numeral-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/roman-numeral-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

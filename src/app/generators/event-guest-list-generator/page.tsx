@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import EventGuestListGenerator from "../../../calculators/generators/EventGuestListGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-event-guest-list-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/event-guest-list-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

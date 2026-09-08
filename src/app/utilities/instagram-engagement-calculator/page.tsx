@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import InstagramEngagementCalculator from "../../../calculators/utilities/InstagramEngagementCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-instagram-engagement-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/instagram-engagement-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

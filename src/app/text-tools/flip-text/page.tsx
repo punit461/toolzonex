@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FlipText from "../../../calculators/text-tools/FlipText";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-flip-text";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/flip-text");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

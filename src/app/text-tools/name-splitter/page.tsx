@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import NameSplitter from "../../../calculators/text-tools/NameSplitter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-name-splitter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/name-splitter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LedWattageCalculator from "../../../calculators/utilities/LedWattageCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-led-wattage-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/led-wattage-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

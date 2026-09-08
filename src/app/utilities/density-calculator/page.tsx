@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DensityCalculator from "../../../calculators/utilities/DensityCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-density-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/density-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ParagraphCounter from "../../../calculators/text-tools/ParagraphCounter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-paragraph-counter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/paragraph-counter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

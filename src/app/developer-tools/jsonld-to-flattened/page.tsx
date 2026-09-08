@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import JsonLdToFlattened from "../../../calculators/developer-tools/JsonLdToFlattened";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-jsonld-to-flattened";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/jsonld-to-flattened");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

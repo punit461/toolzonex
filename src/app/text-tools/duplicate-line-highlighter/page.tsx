@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DuplicateLineHighlighter from "../../../calculators/text-tools/DuplicateLineHighlighter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-duplicate-line-highlighter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/text-tools/duplicate-line-highlighter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

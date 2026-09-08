@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import AsphaltCalculator from "../../../calculators/utilities/AsphaltCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-asphalt-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/asphalt-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import MonogramGenerator from "../../../calculators/generators/MonogramGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-monogram-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/monogram-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

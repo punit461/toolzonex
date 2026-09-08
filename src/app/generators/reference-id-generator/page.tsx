@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ReferenceIdGenerator from "../../../calculators/generators/ReferenceIdGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-reference-id-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/reference-id-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

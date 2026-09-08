@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TextSplitter from "../../../calculators/text-tools/TextSplitter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-text-splitter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/text-splitter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

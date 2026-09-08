@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ProtectPdf from "../../../calculators/pdf/ProtectPdf";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-protect-pdf";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/protect-pdf");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

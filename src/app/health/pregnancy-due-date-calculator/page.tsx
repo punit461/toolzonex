@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PregnancyDueDateCalculator from "../../../calculators/health/PregnancyDueDateCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-pregnancy-due-date-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/health/pregnancy-due-date-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

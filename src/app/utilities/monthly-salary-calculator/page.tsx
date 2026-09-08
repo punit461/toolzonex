@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import MonthlySalaryCalculator from "../../../calculators/utilities/MonthlySalaryCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-monthly-salary-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/monthly-salary-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

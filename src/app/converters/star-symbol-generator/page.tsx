@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import StarSymbolGenerator from "../../../calculators/converters/StarSymbolGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-star-symbol-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/converters/star-symbol-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

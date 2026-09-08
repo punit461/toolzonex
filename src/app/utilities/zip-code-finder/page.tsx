@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ZipCodeFinder from "../../../calculators/utilities/ZipCodeFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-zip-code-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/zip-code-finder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

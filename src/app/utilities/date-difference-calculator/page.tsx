@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DateDifferenceCalculator from "../../../calculators/utilities/DateDifferenceCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-date-difference-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/date-difference-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

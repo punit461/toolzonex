@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import WishListGenerator from "../../../calculators/generators/WishListGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-wish-list-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/wish-list-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

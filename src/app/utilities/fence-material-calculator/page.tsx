@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FenceMaterialCalculator from "../../../calculators/utilities/FenceMaterialCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-fence-material-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/fence-material-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

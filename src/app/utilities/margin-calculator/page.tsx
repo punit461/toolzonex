@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MarginCalculator from "../../../calculators/utilities/MarginCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-margin-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/margin-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SudokuGenerator from "../../../calculators/generators/SudokuGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-sudoku-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/sudoku-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

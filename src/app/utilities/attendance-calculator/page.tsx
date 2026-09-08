@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AttendanceCalculator from "../../../calculators/utilities/AttendanceCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-attendance-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/attendance-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

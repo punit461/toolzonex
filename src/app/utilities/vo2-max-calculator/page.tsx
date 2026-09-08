@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Vo2MaxCalculator from "../../../calculators/utilities/Vo2MaxCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-vo2-max-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/vo2-max-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

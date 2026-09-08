@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RecurringDepositCalculator from "../../../calculators/finance/RecurringDepositCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-recurring-deposit-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/recurring-deposit-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

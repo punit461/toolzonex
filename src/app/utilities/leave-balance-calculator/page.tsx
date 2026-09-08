@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LeaveBalanceCalculator from "../../../calculators/utilities/LeaveBalanceCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-leave-balance-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/leave-balance-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

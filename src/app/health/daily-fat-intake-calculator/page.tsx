@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import DailyFatIntakeCalculator from "../../../calculators/health/DailyFatIntakeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/health-daily-fat-intake-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/health/daily-fat-intake-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

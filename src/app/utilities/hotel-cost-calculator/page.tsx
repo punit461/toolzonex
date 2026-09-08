@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import HotelCostCalculator from "../../../calculators/utilities/HotelCostCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-hotel-cost-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/hotel-cost-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

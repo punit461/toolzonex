@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import TimeConverter from "../../../calculators/converters/TimeConverter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-time-converter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/time-converter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

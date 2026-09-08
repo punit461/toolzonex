@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MultiplicationTableGenerator from "../../../calculators/generators/MultiplicationTableGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-multiplication-table-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/multiplication-table-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

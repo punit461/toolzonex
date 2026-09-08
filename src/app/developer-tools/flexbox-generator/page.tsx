@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import FlexboxGenerator from "../../../calculators/developer-tools/FlexboxGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-flexbox-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/flexbox-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

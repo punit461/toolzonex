@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CsvViewer from "../../../calculators/utilities/CsvViewer";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-csv-viewer";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/csv-viewer");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

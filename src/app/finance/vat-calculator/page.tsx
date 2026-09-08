@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import VATCalculator from "../../../calculators/finance/VATCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-vat-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/vat-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

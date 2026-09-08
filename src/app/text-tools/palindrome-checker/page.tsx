@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PalindromeChecker from "../../../calculators/text-tools/PalindromeChecker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/text-tools-palindrome-checker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/text-tools/palindrome-checker");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

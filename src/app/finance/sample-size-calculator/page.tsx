@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SampleSizeCalculator from "../../../calculators/finance/SampleSizeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-sample-size-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/sample-size-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

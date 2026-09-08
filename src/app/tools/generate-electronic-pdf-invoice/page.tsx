@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GeneratePdfInvoice from "../../../calculators/pdf/GeneratePdfInvoice";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-generate-electronic-pdf-invoice";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/generate-electronic-pdf-invoice");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LibraryShelfSpaceCalculator from "../../../calculators/utilities/LibraryShelfSpaceCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-library-shelf-space-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/library-shelf-space-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

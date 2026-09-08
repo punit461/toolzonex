@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ConvertPdfToLetter from "../../../calculators/pdf/ConvertPdfToLetter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-convert-pdf-to-letter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/convert-pdf-to-letter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

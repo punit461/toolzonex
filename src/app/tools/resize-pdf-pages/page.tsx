@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ResizePdfPages from "../../../calculators/pdf/ResizePdfPages";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-resize-pdf-pages";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/tools/resize-pdf-pages");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

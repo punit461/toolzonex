@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CurrencySymbolFinder from "../../../calculators/converters/CurrencySymbolFinder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-currency-symbol-finder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/currency-symbol-finder");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

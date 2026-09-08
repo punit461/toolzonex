@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DoorAreaCalculator from "../../../calculators/utilities/DoorAreaCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-door-area-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/door-area-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

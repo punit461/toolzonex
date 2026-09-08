@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LaptopBatteryLifeCalculator from "../../../calculators/utilities/LaptopBatteryLifeCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-laptop-battery-life-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/laptop-battery-life-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

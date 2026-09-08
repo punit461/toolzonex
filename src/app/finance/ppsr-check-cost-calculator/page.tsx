@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PpsrCheckCostCalculator from "../../../calculators/finance/PpsrCheckCostCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-ppsr-check-cost-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/ppsr-check-cost-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

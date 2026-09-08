@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GuidGenerator from "../../../calculators/generators/GuidGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-guid-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/guid-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CAGRCalculator from "../../../calculators/finance/CAGRCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-cagr-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/cagr-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

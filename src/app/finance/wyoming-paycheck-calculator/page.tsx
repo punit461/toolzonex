@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../../../calculators/paycheck/PaycheckCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-wyoming-paycheck-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/wyoming-paycheck-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

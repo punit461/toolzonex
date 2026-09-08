@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import AppointmentReservationListGenerator from "../../../calculators/generators/AppointmentReservationListGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-appointment-reservation-list-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/appointment-reservation-list-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

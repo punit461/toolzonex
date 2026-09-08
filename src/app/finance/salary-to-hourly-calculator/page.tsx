@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SalaryToHourlyCalculator from "../../../calculators/finance/SalaryToHourlyCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-salary-to-hourly-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/salary-to-hourly-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

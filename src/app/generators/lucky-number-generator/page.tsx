@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import LuckyNumberGenerator from "../../../calculators/generators/LuckyNumberGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-lucky-number-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/lucky-number-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import DpiCalculator from "../../../calculators/utilities/DpiCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-dpi-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/dpi-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import RenewalExpiryTracker from "../../../calculators/generators/RenewalExpiryTracker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-renewal-expiry-tracker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/renewal-expiry-tracker");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

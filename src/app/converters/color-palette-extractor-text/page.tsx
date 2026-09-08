@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ColorPaletteExtractorText from "../../../calculators/converters/ColorPaletteExtractorText";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-color-palette-extractor-text";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/converters/color-palette-extractor-text");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

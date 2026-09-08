@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import UuidValidator from "../../../calculators/developer-tools/UuidValidator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-uuid-validator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/uuid-validator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

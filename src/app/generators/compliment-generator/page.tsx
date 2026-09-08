@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ComplimentGenerator from "../../../calculators/generators/ComplimentGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-compliment-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/compliment-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

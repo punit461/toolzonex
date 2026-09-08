@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MeeshoLabelCropper from "../../../calculators/pdf/MeeshoLabelCropper";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-meesho-label-cropper";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/meesho-label-cropper");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

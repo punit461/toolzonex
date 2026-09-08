@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import HolidayListGenerator from "../../../calculators/utilities/HolidayListGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-holiday-list-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/holiday-list-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

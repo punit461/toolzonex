@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import NanoIdGenerator from "../../../calculators/generators/NanoIdGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-nano-id-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/nano-id-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

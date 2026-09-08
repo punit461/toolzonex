@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import TicketStubGenerator from "../../../calculators/generators/TicketStubGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-ticket-stub-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/ticket-stub-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

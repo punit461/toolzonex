@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import MulchCalculator from "../../../calculators/utilities/MulchCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-mulch-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/mulch-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

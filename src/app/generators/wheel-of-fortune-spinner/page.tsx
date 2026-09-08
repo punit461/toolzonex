@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import WheelOfFortuneSpinner from "../../../calculators/generators/WheelOfFortuneSpinner";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-wheel-of-fortune-spinner";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/wheel-of-fortune-spinner");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

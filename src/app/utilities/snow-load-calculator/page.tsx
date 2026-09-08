@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SnowLoadCalculator from "../../../calculators/utilities/SnowLoadCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-snow-load-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/snow-load-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

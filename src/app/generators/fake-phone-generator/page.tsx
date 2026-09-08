@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import FakePhoneGenerator from "../../../calculators/generators/FakePhoneGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-fake-phone-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/fake-phone-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

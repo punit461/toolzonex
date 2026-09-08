@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import SecretCodeEncoderDecoder from "../../../calculators/converters/SecretCodeEncoderDecoder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/converters-secret-code-encoder-decoder";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/converters/secret-code-encoder-decoder");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

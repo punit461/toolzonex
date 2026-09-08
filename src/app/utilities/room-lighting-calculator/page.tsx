@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import RoomLightingCalculator from "../../../calculators/utilities/RoomLightingCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-room-lighting-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/room-lighting-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

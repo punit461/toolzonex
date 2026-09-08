@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import PPFCalculator from "../../../calculators/finance/PPFCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/finance-ppf-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/finance/ppf-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

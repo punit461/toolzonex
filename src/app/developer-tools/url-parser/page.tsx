@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import UrlParser from "../../../calculators/developer-tools/UrlParser";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-url-parser";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/url-parser");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

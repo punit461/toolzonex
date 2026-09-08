@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import QrCodeGenerator from "../../../calculators/qr/QrCodeGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-qr-code-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/qr-code-generator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

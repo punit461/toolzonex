@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GraphqlToTypeScriptMongodb from "../../../calculators/developer-tools/GraphqlToTypeScriptMongodb";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-graphql-to-typescript-mongodb";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/graphql-to-typescript-mongodb");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

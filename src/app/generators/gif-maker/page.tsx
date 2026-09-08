@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GifMaker from "../../../calculators/generators/GifMaker";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-gif-maker";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/generators/gif-maker");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

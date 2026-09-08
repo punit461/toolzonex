@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import CableLengthCalculator from "../../../calculators/utilities/CableLengthCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-cable-length-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/cable-length-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

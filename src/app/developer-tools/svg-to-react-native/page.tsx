@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SvgToReactNative from "../../../calculators/developer-tools/SvgToReactNative";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-svg-to-react-native";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/svg-to-react-native");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

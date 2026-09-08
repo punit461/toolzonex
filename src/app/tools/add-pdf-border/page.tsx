@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import AddPdfBorder from "../../../calculators/pdf/AddPdfBorder";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-add-pdf-border";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/add-pdf-border");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

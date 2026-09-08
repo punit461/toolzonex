@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import TomlFormatter from "../../../calculators/developer-tools/TomlFormatter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-toml-formatter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/developer-tools/toml-formatter");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import GamingSensitivityCalculator from "../../../calculators/utilities/GamingSensitivityCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-gaming-sensitivity-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/gaming-sensitivity-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

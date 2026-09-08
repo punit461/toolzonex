@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import PackingListGenerator from "../../../calculators/generators/PackingListGenerator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/generators-packing-list-generator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/generators/packing-list-generator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

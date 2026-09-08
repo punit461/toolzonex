@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import SqlFormatter from "../../../calculators/developer-tools/SqlFormatter";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/developer-tools-sql-formatter";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/developer-tools/sql-formatter");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

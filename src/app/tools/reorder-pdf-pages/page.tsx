@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import ReorderPdfPages from "../../../calculators/pdf/ReorderPdfPages";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/tools-reorder-pdf-pages";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/tools/reorder-pdf-pages");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

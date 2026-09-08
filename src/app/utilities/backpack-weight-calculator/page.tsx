@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import BackpackWeightCalculator from "../../../calculators/utilities/BackpackWeightCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-backpack-weight-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/backpack-weight-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 

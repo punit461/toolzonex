@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import HorsepowerCalculator from "../../../calculators/utilities/HorsepowerCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-horsepower-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
-const tool = getTool("/utilities/horsepower-calculator");
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {

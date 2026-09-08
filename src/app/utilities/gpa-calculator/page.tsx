@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import GpaCalculator from "../../../calculators/utilities/GpaCalculator";
-import { getTool } from "../../../data/toolRegistry";
+import tool from "../../../data/tools/utilities-gpa-calculator";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
-
-const tool = getTool("/utilities/gpa-calculator");
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
