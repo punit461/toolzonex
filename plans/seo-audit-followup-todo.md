@@ -15,14 +15,16 @@ This is the big one — it unblocks the security-headers fix and is the only rem
 - [ ] **Before enforcing the CSP**: `public/_headers` ships a `Content-Security-Policy-Report-Only` header on purpose. Once live on Cloudflare Pages, load the homepage, a calculator page, and a page with ads active, check the browser DevTools Console for CSP violation warnings. Only once that's clean, rename `Content-Security-Policy-Report-Only` → `Content-Security-Policy` in `public/_headers` to actually enforce it.
 - [ ] Decommission the GitHub Pages deployment once Cloudflare Pages is confirmed working (check `CNAME` file / repo Pages settings)
 
-## 2. Verify the tool-registry refactor with a real build
+## 2. Tool-registry bundle-size fix — attempted, reverted, still needed
 
-I refactored `CalculatorShell` + all 1,356 tool `page.tsx` files so each tool page's client bundle only ships its own data instead of all 1,358 tools' data (was the likely cause of the ~24.5s homepage/cold-load time). This was verified with `tsc --noEmit` (clean) and the existing test suite (124/124 pass), but **not with an actual `next build`**, since that's what caused the prior CI OOM incident on this exact registry.
+The homepage/tool-page cold-load slowness (~24.5s) is very likely caused by `CalculatorShell` (client, used on every one of ~1,358 tool pages) transitively importing the full tool registry, category list, and guide data just to look up its own single entry — meaning every tool page's client bundle ships all 1,358 tools' data and icons.
 
-- [ ] Run `npm run build` once, ideally in CI or a machine with headroom, and confirm it completes without OOM
-- [ ] Check the build output's per-route bundle size report (Next prints a size table) — tool page bundles should now be dramatically smaller than before this refactor
-- [ ] Spot-check a few live tool pages after deploy (breadcrumbs, related tools, FAQ schema, the "read the guide" card) to confirm nothing regressed — these all moved from client-side lookup to server-resolved props, so worth an eyeball pass
-- [ ] If it builds clean and pages look right, no further action — if something's off, the change is isolated to `src/components/CalculatorShell.tsx`, `src/utils/resolveShellProps.tsx`, `src/types/shellProps.ts`, and the 1,356 `page.tsx` files (see `scripts/codemod-shell-props.py` for how they were generated)
+I attempted a fix (`CalculatorShell` reads pre-resolved data from React Context instead, resolved server-side per page) and rolled it out across all 1,356 tool `page.tsx` files. It passed `tsc --noEmit` and the full test suite locally, but **CI's `npm run build` OOM'd** (heap exhausted during the webpack "Creating an optimized production build" phase, ~300s in) — likely because the refactor moved the heavy registry import from being reached through one shared client-side chunk (1,287 calculator components → 1 `CalculatorShell.tsx`) to being freshly re-imported at 1,356 separate server-side page entry points, which webpack/Next's static-export compiler may not dedupe as well as the client chunk graph did.
+
+**I reverted this refactor** (`CalculatorShell.tsx` and all 1,356 `page.tsx` files back to their pre-refactor state, the 3 new helper files removed) rather than risk a second unverified CI run — see the revert commit for exact scope. The underlying bundle-size problem is still real and still worth fixing, but needs a different approach and a way to verify against a real build before merging, not just `tsc`. Ideas for next time:
+- [ ] Split `toolRegistry.tsx` by top-level category (utilities/finance/health/etc.) instead of one flat 1,358-tool file, so each category's server-side entry points only pull in their own slice — smaller blast radius than the full Context-based refactor
+- [ ] Or: prototype the Context-based approach on a small subset (e.g. just `/finance/*`, ~250 tools) first, run a real `next build` on that subset in a branch, and confirm memory/behavior before rolling out to all 1,358
+- [ ] Whatever approach is tried, get a real `npm run build` (in CI, or locally with enough memory) as part of verifying it — `tsc --noEmit` alone was not sufficient to catch this
 
 ## 3. Smaller content/linking items not yet done
 
