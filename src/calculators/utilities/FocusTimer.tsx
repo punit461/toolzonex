@@ -112,7 +112,7 @@ const FocusTimerContent = () => {
       >
         
         <Typography 
-          variant="h1" 
+          variant="h1" component="div" 
           sx={{ 
             fontWeight: 800, 
             fontFamily: 'monospace',

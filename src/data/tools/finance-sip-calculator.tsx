@@ -19,7 +19,7 @@ const tool: ToolRegistryEntry = {
     schemaDescription: "Calculate expected returns on mutual fund SIP investments.",
     applicationCategory: "FinanceApplication",
     currency: "INR",
-    faqs: undefined,
+    faqs: [{ question: "Is the return rate guaranteed?", answer: "No — mutual fund SIP returns are market-linked and not guaranteed. The 10-12% figures used here are illustrative long-term averages for equity funds, not a promised return." }],
     extraSchemaFields: undefined,
     isHub: false,
 };

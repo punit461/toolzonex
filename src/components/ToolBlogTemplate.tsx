@@ -89,7 +89,7 @@ const ToolBlogTemplate = ({ blog }: Props) => {
         {blog.faq.map((item, i) => (
           <Accordion key={i} variant="outlined" sx={{ '&:before': { display: 'none' } }}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography fontWeight={600}>{item.q}</Typography>
+              <Typography component="h3" fontWeight={600}>{item.q}</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body2" color="text.secondary">{item.a}</Typography>

@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import UploadTimeCalculator from "../../../calculators/utilities/UploadTimeCalculator";
 import tool from "../../../data/tools/utilities-upload-time-calculator";
+import { getShellProps } from "../../../utils/resolveShellProps";
+import { ShellPropsProvider } from "../../../components/CalculatorShell";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
+  const shellProps = getShellProps(tool);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
-      <UploadTimeCalculator />
+      <ShellPropsProvider value={shellProps}>
+        <UploadTimeCalculator />
+      </ShellPropsProvider>
     </>
   );
 }

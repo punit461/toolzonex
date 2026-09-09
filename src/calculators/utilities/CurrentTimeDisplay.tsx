@@ -80,7 +80,7 @@ const CurrentTimeDisplayContent = () => {
       >
         <Typography variant="h5" sx={{ opacity: 0.9, mb: 1 }}>Your Local Time</Typography>
         <Typography 
-          variant="h1" 
+          variant="h1" component="div" 
           sx={{ 
             fontWeight: 800, 
             fontFamily: 'monospace',

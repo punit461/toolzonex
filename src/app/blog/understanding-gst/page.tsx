@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import GstImpact from "../../../components/pages/blogs/GstImpact";
-import Breadcrumbs from "../../../components/Breadcrumbs";
+import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -31,13 +31,15 @@ const gstSchema = {
   "headline": "Understanding GST in India - Complete Guide to GST Slabs & Impact",
   "description": "A simple guide to GST slabs, calculations, and its impact on consumers.",
   "url": `${SITE_URL}/blog/understanding-gst`,
-  "datePublished": "2025-02-05",
-  "dateModified": "2025-02-05",
-  "author": { "@type": "Organization", "name": "ToolZoneX" },
+  "image": [`${SITE_URL}/og-image.jpg`],
+  "datePublished": "2026-03-01",
+  "dateModified": "2026-03-01",
+  "author": AUTHOR_PERSON_SCHEMA,
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+    "sameAs": ORGANIZATION_SAME_AS
   }
 };
 
@@ -48,7 +50,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(gstSchema) }}
       />
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "Understanding GST in India" }]} />
       <GstImpact />
     </>
   );

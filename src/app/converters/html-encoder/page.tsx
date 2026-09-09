@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import HtmlEncoder from "../../../calculators/converters/HtmlEncoder";
 import tool from "../../../data/tools/converters-html-encoder";
+import { getShellProps } from "../../../utils/resolveShellProps";
+import { ShellPropsProvider } from "../../../components/CalculatorShell";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
+  const shellProps = getShellProps(tool);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
-      <HtmlEncoder />
+      <ShellPropsProvider value={shellProps}>
+        <HtmlEncoder />
+      </ShellPropsProvider>
     </>
   );
 }

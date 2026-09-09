@@ -1,7 +1,53 @@
 import fs from 'fs';
 import path from 'path';
+import { execFileSync } from 'child_process';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+
+// Verification files (Google/Bing/Yandex/Pinterest site-ownership proofs) live at the
+// domain root as static HTML but are not real content pages — they must never be
+// submitted in the sitemap as indexable URLs.
+const VERIFICATION_FILE_PATTERN = /^(google[a-f0-9]+|bingsiteauth|yandex_[a-f0-9]+|pinterest-[a-f0-9]+)$/i;
+
+const gitDateCache = new Map();
+
+/** Real last-commit date (author date, ISO 8601) for a source file, via git history —
+ *  used instead of the build output's mtime, which is identical for every page in a
+ *  given build run and carries no real content-freshness signal. */
+function getGitDate(sourceRelPath) {
+  if (gitDateCache.has(sourceRelPath)) return gitDateCache.get(sourceRelPath);
+  let result = null;
+  try {
+    const out = execFileSync('git', ['log', '-1', '--format=%aI', '--', sourceRelPath], {
+      cwd: process.cwd(),
+      encoding: 'utf8',
+    }).trim();
+    if (out) result = out;
+  } catch {
+    // git unavailable or file untracked — caller falls back to output mtime
+  }
+  gitDateCache.set(sourceRelPath, result);
+  return result;
+}
+
+/** Best-effort mapping from a route back to the source file whose last real commit
+ *  date should represent that page's lastmod. Falls back to null (caller uses the
+ *  build output's mtime) when no confident mapping exists. */
+function getSourceFileForRoute(route) {
+  if (route === '/') return 'src/app/page.tsx';
+  if (route.startsWith('/blog/tools/')) {
+    // Dynamic route backed by shared data files — use whichever was touched more
+    // recently, since individual guide entries aren't separate source files.
+    const handwritten = getGitDate('src/data/tool-blogs.handwritten.ts');
+    const generated = getGitDate('src/data/tool-blogs.generated.ts');
+    if (handwritten && generated) return handwritten > generated ? 'src/data/tool-blogs.handwritten.ts' : 'src/data/tool-blogs.generated.ts';
+    return handwritten ? 'src/data/tool-blogs.handwritten.ts' : 'src/data/tool-blogs.generated.ts';
+  }
+  if (route.startsWith('/calculators/')) return 'src/app/calculators/[slug]/page.tsx';
+  const candidate = `src/app${route}/page.tsx`;
+  if (fs.existsSync(path.join(process.cwd(), candidate))) return candidate;
+  return null;
+}
 
 function getPriority(route) {
   if (route === '/') return '1.0';
@@ -18,7 +64,12 @@ function getChangeFreq(route) {
   return 'weekly';
 }
 
-function getLastMod(filePath) {
+function getLastMod(route, filePath) {
+  const sourceFile = getSourceFileForRoute(route);
+  if (sourceFile) {
+    const gitDate = getGitDate(sourceFile);
+    if (gitDate) return gitDate;
+  }
   try {
     const stat = fs.statSync(filePath);
     return stat.mtime.toISOString();
@@ -46,12 +97,17 @@ async function generateSitemap() {
       if (stat.isDirectory()) {
         crawlDir(fullPath, `${basePath}/${file}`);
       } else if (file.endsWith('.html') && file !== '404.html') {
+        const basename = file.replace('.html', '');
+        if (basePath === '' && VERIFICATION_FILE_PATTERN.test(basename)) {
+          continue;
+        }
+
         const html = fs.readFileSync(fullPath, 'utf8');
         if (/<meta[^>]+name="robots"[^>]+content="[^"]*noindex/i.test(html)) {
           continue;
         }
 
-        let route = `${basePath}/${file.replace('.html', '')}`;
+        let route = `${basePath}/${basename}`;
         if (route.endsWith('/index')) {
           route = route.replace('/index', '');
         }
@@ -76,7 +132,7 @@ ${uniqueUrls
   .map(({ route, filePath }) => {
     return `  <url>
     <loc>${SITE_URL}${route}</loc>
-    <lastmod>${getLastMod(filePath)}</lastmod>
+    <lastmod>${getLastMod(route, filePath)}</lastmod>
     <changefreq>${getChangeFreq(route)}</changefreq>
     <priority>${getPriority(route)}</priority>
   </url>`;

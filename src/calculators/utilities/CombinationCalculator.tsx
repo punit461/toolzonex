@@ -157,7 +157,7 @@ const CombinationCalculator = () => {
             <Typography variant="h6" color="text.secondary" gutterBottom>
               Result ({mode === 'combination' ? 'nCr' : 'nPr'})
             </Typography>
-            <Typography variant="h1" sx={{ fontWeight: 900, fontSize: '4rem', color: 'primary.main', my: 2 }}>
+            <Typography variant="h1" component="div" sx={{ fontWeight: 900, fontSize: '4rem', color: 'primary.main', my: 2 }}>
               {Number.isNaN(result) ? '—' : result.toLocaleString()}
             </Typography>
             <Box sx={{ bgcolor: 'background.paper', px: 3, py: 1, borderRadius: 2, border: '1px solid #E5E5E5' }}>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Section80CGuide from "../../../components/pages/blogs/Section80CGuide";
-import Breadcrumbs from "../../../components/Breadcrumbs";
+import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -31,13 +31,15 @@ const section80CSchema = {
   "headline": "Section 80C Investment Guide - Best Tax Saving Options",
   "description": "Best investment options to save tax under Section 80C.",
   "url": `${SITE_URL}/blog/section-80c-investment-guide`,
-  "datePublished": "2025-01-18",
-  "dateModified": "2025-01-18",
-  "author": { "@type": "Organization", "name": "ToolZoneX" },
+  "image": [`${SITE_URL}/og-image.jpg`],
+  "datePublished": "2026-04-01",
+  "dateModified": "2026-04-01",
+  "author": AUTHOR_PERSON_SCHEMA,
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+    "sameAs": ORGANIZATION_SAME_AS
   }
 };
 
@@ -48,7 +50,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(section80CSchema) }}
       />
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "Section 80C Investment Guide" }]} />
       <Section80CGuide />
     </>
   );

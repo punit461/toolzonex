@@ -18,6 +18,11 @@ const relatedTools: RelatedTool[] = [
   },
 ];
 
+const relatedArticles = [
+  { slug: "complete-guide-to-ppf", title: "The Complete Guide to PPF: Interest Rate, Rules, and Benefits (2026)", description: "Current PPF rate, EEE tax status, and how it compares to ELSS/NSC/FD." },
+  { slug: "sukanya-samriddhi-yojana-benefits", title: "Securing Your Daughter's Future with Sukanya Samriddhi Yojana (SSY)", description: "Another EEE, government-backed 80C instrument." },
+];
+
 const Section80CGuide = () => (
   <BlogShell
     title="Section 80C: ₹1.5 Lakh Deduction — Complete Investment Guide"
@@ -25,6 +30,7 @@ const Section80CGuide = () => (
     url="/blog/section-80c-investment-guide"
     date="April 2026"
     relatedTools={relatedTools}
+      relatedArticles={relatedArticles}
     slug="section-80c-investment-guide"
     category="finance"
   >

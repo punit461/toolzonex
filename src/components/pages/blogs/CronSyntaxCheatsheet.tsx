@@ -13,6 +13,12 @@ const relatedTools: RelatedTool[] = [
   },
 ];
 
+const relatedArticles = [
+  { slug: "jwt-explained", title: "JWT Explained: What's Actually Inside a JSON Web Token", description: "How JWTs actually work under the hood." },
+  { slug: "cloud-gpu-pricing-guide", title: "Cloud GPU Pricing Explained: Community Cloud vs. Hyperscalers", description: "Why the same GPU can cost 3.5x more depending on where you rent it." },
+  { slug: "llm-api-pricing-guide", title: "How Much Do LLM API Calls Actually Cost? A Practical Guide", description: "Input vs. output token pricing, explained." },
+];
+
 const CronSyntaxCheatsheet = () => {
   return (
     <BlogShell
@@ -21,6 +27,7 @@ const CronSyntaxCheatsheet = () => {
       url="/blog/cron-syntax-cheatsheet"
       date="August 2026"
       relatedTools={relatedTools}
+      relatedArticles={relatedArticles}
       slug="cron-syntax-cheatsheet"
       category="tools"
     >

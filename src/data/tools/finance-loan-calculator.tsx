@@ -19,7 +19,7 @@ const tool: ToolRegistryEntry = {
     schemaDescription: "Calculate your monthly EMI, total interest, and total payment amount for personal loans and mortgages.",
     applicationCategory: "FinanceApplication",
     currency: "INR",
-    faqs: undefined,
+    faqs: [{ question: "Does prepaying a loan reduce my EMI or tenure?", answer: "Depends on your lender's policy — some reduce the tenure while keeping EMI the same, others reduce the EMI while keeping tenure the same. Either way, prepayment reduces total interest paid." }],
     extraSchemaFields: undefined,
     isHub: false,
 };

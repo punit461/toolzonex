@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import ElectricityBillCalculator from "../../../calculators/utilities/ElectricityBillCalculator";
 import tool from "../../../data/tools/utilities-electricity-bill-calculator";
+import { getShellProps } from "../../../utils/resolveShellProps";
+import { ShellPropsProvider } from "../../../components/CalculatorShell";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
+  const shellProps = getShellProps(tool);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
-      <ElectricityBillCalculator />
+      <ShellPropsProvider value={shellProps}>
+        <ElectricityBillCalculator />
+      </ShellPropsProvider>
     </>
   );
 }

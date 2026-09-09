@@ -19,7 +19,7 @@ const tool: ToolRegistryEntry = {
     schemaDescription: "Project your 401(k) balance at retirement, including employer match and IRS contribution limits.",
     applicationCategory: "FinanceApplication",
     currency: "USD",
-    faqs: undefined,
+    faqs: [{ question: "What return rate should I assume?", answer: "A diversified stock/bond portfolio has historically averaged roughly 6-8% annually over long horizons before inflation, though any single year can vary widely and past performance doesn't guarantee future results. This calculator does not adjust for inflation — treat the result as a nominal (not real/inflation-adjusted) future value." }, { question: "Am I leaving money on the table?", answer: "If your contribution percentage is below your employer's match cap, you're giving up free money. Most financial advisors recommend contributing at least enough to capture the full employer match before directing savings elsewhere." }],
     extraSchemaFields: undefined,
     isHub: false,
 };

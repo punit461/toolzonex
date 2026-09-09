@@ -19,7 +19,7 @@ const tool: ToolRegistryEntry = {
     schemaDescription: "Calculate Stamp Duty Land Tax for England & Northern Ireland, including first-time buyer relief and the additional-property surcharge.",
     applicationCategory: "FinanceApplication",
     currency: "USD",
-    faqs: undefined,
+    faqs: [{ question: "What happens if a first-time buyer's property is over £500,000?", answer: "First-time buyer relief is lost entirely — not just above the £500,000 slice. The full purchase price is then taxed at the standard home-mover rates instead." }, { question: "Does the additional-property surcharge apply if I'm selling my only home at the same time?", answer: "No — the 5% surcharge applies when you'll own more than one property after completion. If you sell your previous main residence within 36 months of buying the new one, you can usually reclaim the surcharge from HMRC." }, { question: "Does this cover Scotland or Wales?", answer: "No — Scotland uses Land and Buildings Transaction Tax (LBTT) and Wales uses Land Transaction Tax (LTT), both with different bands and rates than SDLT. This calculator covers England and Northern Ireland only." }],
     extraSchemaFields: undefined,
     isHub: false,
 };

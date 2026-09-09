@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import CartonCapacityCalculator from "../../../calculators/utilities/CartonCapacityCalculator";
 import tool from "../../../data/tools/utilities-carton-capacity-calculator";
+import { getShellProps } from "../../../utils/resolveShellProps";
+import { ShellPropsProvider } from "../../../components/CalculatorShell";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
+  const shellProps = getShellProps(tool);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
-      <CartonCapacityCalculator />
+      <ShellPropsProvider value={shellProps}>
+        <CartonCapacityCalculator />
+      </ShellPropsProvider>
     </>
   );
 }

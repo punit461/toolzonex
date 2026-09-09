@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
 import DecisionListGenerator from "../../../calculators/generators/DecisionListGenerator";
 import tool from "../../../data/tools/generators-decision-list-generator";
+import { getShellProps } from "../../../utils/resolveShellProps";
+import { ShellPropsProvider } from "../../../components/CalculatorShell";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
+  const shellProps = getShellProps(tool);
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }} />
-      <DecisionListGenerator />
+      <ShellPropsProvider value={shellProps}>
+        <DecisionListGenerator />
+      </ShellPropsProvider>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Rebate87A from "../../../components/pages/blogs/Rebate87A";
-import Breadcrumbs from "../../../components/Breadcrumbs";
+import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -31,13 +31,15 @@ const section87ASchema = {
   "headline": "Section 87A Rebate Guide - How to Pay Zero Income Tax",
   "description": "How to claim zero tax using Section 87A rebate.",
   "url": `${SITE_URL}/blog/section-87a-rebate-guide`,
-  "datePublished": "2025-01-22",
-  "dateModified": "2025-01-22",
-  "author": { "@type": "Organization", "name": "ToolZoneX" },
+  "image": [`${SITE_URL}/og-image.jpg`],
+  "datePublished": "2026-04-01",
+  "dateModified": "2026-04-01",
+  "author": AUTHOR_PERSON_SCHEMA,
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+    "sameAs": ORGANIZATION_SAME_AS
   }
 };
 
@@ -48,7 +50,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(section87ASchema) }}
       />
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "Section 87A Rebate Guide" }]} />
       <Rebate87A />
     </>
   );

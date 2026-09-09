@@ -262,7 +262,7 @@ const BMRTDEECalculator = () => {
             </Typography>
 
             <Typography variant="h6" color="text.secondary" gutterBottom>TDEE (With Activity)</Typography>
-            <Typography variant="h1" sx={{ fontWeight: 900, fontSize: '3.5rem', color: 'primary.main', my: 1 }}>
+            <Typography variant="h1" component="div" sx={{ fontWeight: 900, fontSize: '3.5rem', color: 'primary.main', my: 1 }}>
               {tdee.toLocaleString('en-IN')}
             </Typography>
             <Typography variant="h6" color="text.secondary" sx={{ mb: 4 }}>

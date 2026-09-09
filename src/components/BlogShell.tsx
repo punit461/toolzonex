@@ -4,10 +4,17 @@ import { Box, Container, Typography, Breadcrumbs, Link, Paper, Grid, Button } fr
 import RouterLink from 'next/link';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import RelatedArticles from './RelatedArticles';
+import { AUTHOR_NAME } from '../data/author';
 
 export interface RelatedTool {
   label: string;
   path: string;
+  description: string;
+}
+
+export interface RelatedArticle {
+  slug: string;
+  title: string;
   description: string;
 }
 
@@ -19,13 +26,14 @@ interface BlogShellProps {
   author?: string;
   children: React.ReactNode;
   relatedTools?: RelatedTool[];
+  relatedArticles?: RelatedArticle[];
   slug?: string;
   category?: string;
 }
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
-const BlogShell = ({ title, description, url, date, author = "ToolZoneX Team", children, relatedTools, slug, category }: BlogShellProps) => {
+const BlogShell = ({ title, description, url, date, author = AUTHOR_NAME, children, relatedTools, relatedArticles, slug, category }: BlogShellProps) => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -84,6 +92,56 @@ const BlogShell = ({ title, description, url, date, author = "ToolZoneX Team", c
       }}>
         {children}
       </Box>
+
+      {relatedArticles && relatedArticles.length > 0 && (
+        <Box sx={{ mt: 8, pt: 4, borderTop: '2px solid', borderTopColor: 'divider' }}>
+          <Typography variant="h2" sx={{ mb: 3, fontWeight: 700 }}>
+            Related Reading
+          </Typography>
+          <Grid container spacing={2}>
+            {relatedArticles.map((article) => (
+              <Grid item xs={12} sm={6} key={article.slug}>
+                <Paper
+                  sx={{
+                    p: 3,
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    bgcolor: 'background.default',
+                    border: '1px solid',
+                    borderColor: 'divider',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      borderColor: 'primary.main',
+                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+                      transform: 'translateY(-2px)'
+                    }
+                  }}
+                >
+                  <Box>
+                    <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
+                      {article.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {article.description}
+                    </Typography>
+                  </Box>
+                  <Button
+                    component={RouterLink}
+                    href={`/blog/${article.slug}`}
+                    variant="text"
+                    endIcon={<ArrowForwardIcon />}
+                    sx={{ mt: 2, alignSelf: 'flex-start', color: 'primary.main' }}
+                  >
+                    Read Article
+                  </Button>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      )}
 
       {relatedTools && relatedTools.length > 0 && (
         <Box sx={{ mt: 8, pt: 4, borderTop: '2px solid', borderTopColor: 'divider' }}>

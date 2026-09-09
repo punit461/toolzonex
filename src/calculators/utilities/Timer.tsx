@@ -117,7 +117,7 @@ const TimerContent = () => {
         />
         
         <Typography 
-          variant="h1" 
+          variant="h1" component="div" 
           sx={{ 
             fontWeight: 700, 
             fontFamily: 'monospace',

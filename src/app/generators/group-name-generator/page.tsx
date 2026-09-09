@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
 import GroupNameGenerator from "../../../calculators/generators/GroupNameGenerator";
 import tool from "../../../data/tools/generators-group-name-generator";
+import { getShellProps } from "../../../utils/resolveShellProps";
+import { ShellPropsProvider } from "../../../components/CalculatorShell";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
+  const shellProps = getShellProps(tool);
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }} />
-      <GroupNameGenerator />
+      <ShellPropsProvider value={shellProps}>
+        <GroupNameGenerator />
+      </ShellPropsProvider>
     </>
   );
 }

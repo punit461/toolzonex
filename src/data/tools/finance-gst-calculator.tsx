@@ -19,7 +19,7 @@ const tool: ToolRegistryEntry = {
     schemaDescription: "Add or remove GST from any amount.",
     applicationCategory: "FinanceApplication",
     currency: "INR",
-    faqs: undefined,
+    faqs: [{ question: "What's the difference between CGST, SGST, and IGST?", answer: "For sales within a state, GST splits equally into CGST (central) and SGST (state). For inter-state sales, IGST applies instead, going to the central government and then apportioned to the destination state." }],
     extraSchemaFields: undefined,
     isHub: false,
 };

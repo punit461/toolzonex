@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import JwtExplained from "../../../components/pages/blogs/JwtExplained";
-import Breadcrumbs from "../../../components/Breadcrumbs";
+import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -31,13 +31,15 @@ const articleSchema = {
   "headline": "JWT Explained: What's Actually Inside a JSON Web Token",
   "description": "A JWT looks like random noise, but it's just base64url — no secret key needed to read it. Learn the header/payload/signature structure and the exp-check mistake that trips up implementations.",
   "url": `${SITE_URL}/blog/jwt-explained`,
+  "image": [`${SITE_URL}/og-image.jpg`],
   "datePublished": "2026-08-22",
   "dateModified": "2026-08-22",
-  "author": { "@type": "Organization", "name": "ToolZoneX" },
+  "author": AUTHOR_PERSON_SCHEMA,
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+    "sameAs": ORGANIZATION_SAME_AS
   }
 };
 
@@ -48,7 +50,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "JWT Explained" }]} />
       <JwtExplained />
     </>
   );
