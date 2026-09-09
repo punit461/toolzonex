@@ -1,24 +1,21 @@
 'use client';
 
 import { Box, Typography, Divider, Card, CardActionArea, CardContent } from '@mui/material';
-import React, { createContext, useContext } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import ArticleIcon from '@mui/icons-material/Article';
 import Breadcrumbs from './Breadcrumbs';
-import type { ShellProps } from '../types/shellProps';
+import { categories } from '../data/toolCategories';
+import { getTool } from '../data/toolRegistry';
+import { getToolBlogByRoute } from '../data/tool-blogs';
 
 interface CalculatorShellProps {
-  /**
-   * @deprecated no longer used — CalculatorShell now reads its data from
-   * ShellPropsContext (see ShellPropsProvider below), resolved server-side
-   * per page via src/utils/resolveShellProps.tsx. Kept only so the ~1,300
-   * existing `<CalculatorShell url="..." content={...}>` call sites across
-   * every calculator component don't need to change.
-   */
-  url?: string;
+  url: string;
   children: React.ReactNode;
   content: React.ReactNode;
 }
+
+const RELATED_COUNT = 6;
 
 const CATEGORY_DASHBOARD_ROUTES: Record<string, string> = {
   Finance: '/finance',
@@ -33,25 +30,33 @@ const CATEGORY_DASHBOARD_ROUTES: Record<string, string> = {
 };
 
 /**
- * Carries one tool's already-resolved shell data (its registry entry, related
- * tools, and paired guide) from a Server Component page.tsx down to the
- * client-side CalculatorShell, without CalculatorShell itself importing the
- * full tool registry / category list / tool-blogs data (which would pull all
- * ~1,358 tools' data and icons into every single tool page's client bundle).
+ * Picks a deterministic window of "next N" tools after the current one in
+ * its category (wrapping around), rather than always the same first N --
+ * this spreads internal links across every tool in the category instead of
+ * funneling them all to a fixed handful. Deterministic (no randomness) so
+ * it can't cause a hydration mismatch on this client component.
  */
-export const ShellPropsContext = createContext<ShellProps | null>(null);
+function getRelatedTools(category: string, currentUrl: string) {
+  const cat = categories.find((c) => c.label === category);
+  if (!cat || cat.tools.length <= 1) return [];
 
-export function ShellPropsProvider({ value, children }: { value: ShellProps; children: React.ReactNode }) {
-  return <ShellPropsContext.Provider value={value}>{children}</ShellPropsContext.Provider>;
+  const currentIndex = cat.tools.findIndex((t) => t.path === currentUrl);
+  const startIndex = currentIndex === -1 ? 0 : currentIndex + 1;
+  const count = Math.min(RELATED_COUNT, cat.tools.length - 1);
+
+  const related = [];
+  for (let i = 0; i < count; i++) {
+    const tool = cat.tools[(startIndex + i) % cat.tools.length];
+    if (tool.path !== currentUrl) related.push(tool);
+  }
+  return related;
 }
 
-const CalculatorShell = ({ children, content }: CalculatorShellProps) => {
-  const shellProps = useContext(ShellPropsContext);
-  if (!shellProps) {
-    throw new Error('CalculatorShell must be rendered inside a ShellPropsProvider (see page.tsx).');
-  }
-  const { entry, relatedTools, blog } = shellProps;
+const CalculatorShell = ({ url, children, content }: CalculatorShellProps) => {
+  const entry = getTool(url);
   const { name: title, description, shellCategory: category, faqs } = entry;
+  const relatedTools = getRelatedTools(category, url);
+  const blog = getToolBlogByRoute(url);
 
   const faqSchema = faqs && faqs.length > 0 ? {
     '@context': 'https://schema.org',
