@@ -19,7 +19,7 @@ const tool: ToolRegistryEntry = {
     schemaDescription: "Calculate silver price with making charges and GST.",
     applicationCategory: "FinanceApplication",
     currency: "INR",
-    faqs: undefined,
+    faqs: [{ question: "Why are silver making charges often higher than gold?", answer: "Silver items often involve more intricate craftsmanship relative to their lower per-gram value, so making charges are commonly expressed as a higher percentage than for gold." }, { question: "What is a troy ounce and why does the world price use it?", answer: "A troy ounce (31.1034768 grams) is the standard unit for pricing precious metals internationally — it's what you'll see quoted on silverprice.org and most bullion dealers outside India. Select \"Troy Ounce\" as the rate unit to plug in a world spot price directly." }],
     extraSchemaFields: undefined,
     isHub: false,
 };

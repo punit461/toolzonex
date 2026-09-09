@@ -13,6 +13,11 @@ const relatedTools: RelatedTool[] = [
   },
 ];
 
+const relatedArticles = [
+  { slug: "section-87a-rebate-guide", title: "Section 87A Rebate: Pay Zero Tax up to ₹12.75 Lakh in FY 2025-26", description: "How the rebate can zero out your tax liability entirely." },
+  { slug: "old-vs-new-tax-regime", title: "Old vs. New Tax Regime: Which Should You Choose? (FY 2025-26)", description: "Full slab-rate comparison and a quick-verdict heuristic." },
+];
+
 const NewRegime2025 = () => (
   <BlogShell
     title="New Tax Regime FY 2025-26: Every Change Explained"
@@ -20,6 +25,7 @@ const NewRegime2025 = () => (
     url="/blog/new-tax-regime-fy-2025-26"
     date="April 2026"
     relatedTools={relatedTools}
+      relatedArticles={relatedArticles}
     slug="new-tax-regime-fy-2025-26"
     category="finance"
   >

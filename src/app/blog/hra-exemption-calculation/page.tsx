@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import HraExemption from "../../../components/pages/blogs/HraExemption";
-import Breadcrumbs from "../../../components/Breadcrumbs";
+import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -31,13 +31,15 @@ const hraExemptionSchema = {
   "headline": "HRA Exemption Calculation - Complete Guide to House Rent Allowance",
   "description": "Step-by-step guide to calculating House Rent Allowance exemption.",
   "url": `${SITE_URL}/blog/hra-exemption-calculation`,
-  "datePublished": "2025-01-20",
-  "dateModified": "2025-01-20",
-  "author": { "@type": "Organization", "name": "ToolZoneX" },
+  "image": [`${SITE_URL}/og-image.jpg`],
+  "datePublished": "2026-04-01",
+  "dateModified": "2026-04-01",
+  "author": AUTHOR_PERSON_SCHEMA,
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+    "sameAs": ORGANIZATION_SAME_AS
   }
 };
 
@@ -48,7 +50,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(hraExemptionSchema) }}
       />
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "HRA Exemption Calculation" }]} />
       <HraExemption />
     </>
   );

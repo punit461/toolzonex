@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import WordSplitter from "../../../calculators/text-tools/WordSplitter";
 import tool from "../../../data/tools/text-tools-word-splitter";
+import { getShellProps } from "../../../utils/resolveShellProps";
+import { ShellPropsProvider } from "../../../components/CalculatorShell";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
+  const shellProps = getShellProps(tool);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
-      <WordSplitter />
+      <ShellPropsProvider value={shellProps}>
+        <WordSplitter />
+      </ShellPropsProvider>
     </>
   );
 }

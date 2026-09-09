@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import Base64Converter from "../../../calculators/converters/Base64Converter";
 import tool from "../../../data/tools/converters-base64-encode-decode";
+import { getShellProps } from "../../../utils/resolveShellProps";
+import { ShellPropsProvider } from "../../../components/CalculatorShell";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
+  const shellProps = getShellProps(tool);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
-      <Base64Converter />
+      <ShellPropsProvider value={shellProps}>
+        <Base64Converter />
+      </ShellPropsProvider>
     </>
   );
 }

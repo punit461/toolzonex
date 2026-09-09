@@ -18,6 +18,11 @@ const relatedTools: RelatedTool[] = [
   },
 ];
 
+const relatedArticles = [
+  { slug: "power-of-compound-interest", title: "The Power of Compound Interest in Mutual Funds", description: "Why starting early matters more than the amount you invest." },
+  { slug: "50-30-20-budgeting-rule", title: "The 50/30/20 Rule: A Beginner's Guide to Budgeting", description: "A simple framework for splitting your income before you invest a rupee." },
+];
+
 const SipRetirement = () => {
   return (
     <BlogShell
@@ -26,6 +31,7 @@ const SipRetirement = () => {
       url="/blog/sip-early-retirement"
       date="April 2026"
       relatedTools={relatedTools}
+      relatedArticles={relatedArticles}
       slug="sip-early-retirement"
       category="finance"
     >
@@ -47,7 +53,7 @@ const SipRetirement = () => {
 
       <Typography variant="h3">2. Determine the SIP Amount</Typography>
       <Typography variant="body1">
-        Once you have your target corpus and a timeline (e.g., 20 years), you can calculate exactly how much you need to invest every month. You can use our <RouterLink href="/calculators/sip-calculator">SIP Calculator</RouterLink> to run the numbers. Assuming a conservative 12% annual return, a monthly SIP of ₹30,000 can grow to over ₹3 Crores in 20 years.
+        Once you have your target corpus and a timeline (e.g., 20 years), you can calculate exactly how much you need to invest every month. You can use our <RouterLink href="/finance/sip-calculator">SIP Calculator</RouterLink> to run the numbers. Assuming a conservative 12% annual return, a monthly SIP of ₹30,000 can grow to over ₹3 Crores in 20 years.
       </Typography>
 
       <Typography variant="h3">3. Step-Up Your SIPs</Typography>

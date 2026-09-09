@@ -223,7 +223,7 @@ const BabyGrowthCalculator = () => {
         <Box>
           <Paper sx={{ p: 4, bgcolor: 'action.hover', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Estimated Weight Percentile</Typography>
-            <Typography variant="h1" sx={{ fontWeight: 900, fontSize: '3.5rem', color: 'primary.main', my: 2 }}>
+            <Typography variant="h1" component="div" sx={{ fontWeight: 900, fontSize: '3.5rem', color: 'primary.main', my: 2 }}>
               {percentile ? `~${percentile}th` : '—'}
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>

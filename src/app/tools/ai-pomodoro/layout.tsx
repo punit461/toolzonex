@@ -16,6 +16,7 @@ export default function AIPomodoroLayout({ children }: { children: React.ReactNo
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
       />
+      <h1 className="sr-only">AI Pomodoro — Focus Timer with Distraction Tracking</h1>
       <PomodoroNav />
       {children}
       <ToastContainer />

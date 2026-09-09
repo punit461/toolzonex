@@ -19,7 +19,7 @@ const tool: ToolRegistryEntry = {
     schemaDescription: "Calculate your monthly EMI for home, car, or personal loans.",
     applicationCategory: "FinanceApplication",
     currency: "INR",
-    faqs: undefined,
+    faqs: [{ question: "What happens if interest rates change?", answer: "If you have a floating rate loan, your bank may either increase your EMI amount or extend your loan tenure when interest rates rise." }, { question: "Does a longer tenure always mean I pay more?", answer: "Yes — a longer tenure lowers your monthly EMI but increases the total interest paid over the life of the loan, since interest accrues for longer." }],
     extraSchemaFields: { calculateCost: { "@type": "PriceSpecification", priceCurrency: "INR" } } as Record<string, unknown>,
     isHub: false,
 };

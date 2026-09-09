@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import CompoundInterest from "../../../components/pages/blogs/CompoundInterest";
-import Breadcrumbs from "../../../components/Breadcrumbs";
+import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -31,13 +31,15 @@ const compoundInterestSchema = {
   "headline": "The Power of Compound Interest - How Compounding Creates Wealth",
   "description": "Learn how compounding works and why starting early is the key to wealth generation.",
   "url": `${SITE_URL}/blog/power-of-compound-interest`,
-  "datePublished": "2025-01-08",
-  "dateModified": "2025-01-08",
-  "author": { "@type": "Organization", "name": "ToolZoneX" },
+  "image": [`${SITE_URL}/og-image.jpg`],
+  "datePublished": "2026-05-01",
+  "dateModified": "2026-05-01",
+  "author": AUTHOR_PERSON_SCHEMA,
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+    "sameAs": ORGANIZATION_SAME_AS
   }
 };
 
@@ -48,7 +50,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(compoundInterestSchema) }}
       />
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "The Power of Compound Interest" }]} />
       <CompoundInterest />
     </>
   );

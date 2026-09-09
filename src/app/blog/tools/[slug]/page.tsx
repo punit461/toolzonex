@@ -2,8 +2,25 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ToolBlogTemplate from "../../../../components/ToolBlogTemplate";
 import { allToolBlogs, getAllToolBlogSlugs, getToolBlogBySlug } from "../../../../data/tool-blogs";
+import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
+
+const MONTHS: Record<string, string> = {
+  january: '01', february: '02', march: '03', april: '04', may: '05', june: '06',
+  july: '07', august: '08', september: '09', october: '10', november: '11', december: '12',
+};
+
+/** Parses the guide's human-authored "Month Year" date (e.g. "August 2026") into an
+ *  ISO date. Falls back to the 1st of the current month if the format is unexpected,
+ *  rather than a hardcoded constant shared by every guide regardless of its own date. */
+function toIsoDate(monthYear: string): string {
+  const [monthName, year] = monthYear.trim().split(/\s+/);
+  const month = MONTHS[monthName?.toLowerCase()];
+  if (month && year) return `${year}-${month}-01`;
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-01`;
+}
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -37,19 +54,22 @@ export default async function Page({ params }: Props) {
   const blog = getToolBlogBySlug(slug);
   if (!blog) notFound();
 
+  const isoDate = toIsoDate(blog.date);
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": blog.title,
     "description": blog.description,
     "url": `${SITE_URL}/blog/tools/${blog.slug}`,
-    "datePublished": "2026-06-01",
-    "dateModified": "2026-06-01",
-    "author": { "@type": "Organization", "name": "ToolZoneX" },
+    "image": [`${SITE_URL}/og-image.jpg`],
+    "datePublished": isoDate,
+    "dateModified": isoDate,
+    "author": AUTHOR_PERSON_SCHEMA,
     "publisher": {
       "@type": "Organization",
       "name": "ToolZoneX",
-      "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+      "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+      "sameAs": ORGANIZATION_SAME_AS
     }
   };
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import UnderstandingGratuity from "../../../components/pages/blogs/UnderstandingGratuity";
-import Breadcrumbs from "../../../components/Breadcrumbs";
+import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -31,13 +31,15 @@ const gratuitySchema = {
   "headline": "Understanding Gratuity in India - Rules, Eligibility & Tax Benefits",
   "description": "Rules, eligibility, and tax exemptions for Gratuity in India.",
   "url": `${SITE_URL}/blog/understanding-gratuity-india`,
-  "datePublished": "2025-01-30",
-  "dateModified": "2025-01-30",
-  "author": { "@type": "Organization", "name": "ToolZoneX" },
+  "image": [`${SITE_URL}/og-image.jpg`],
+  "datePublished": "2026-05-01",
+  "dateModified": "2026-05-01",
+  "author": AUTHOR_PERSON_SCHEMA,
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+    "sameAs": ORGANIZATION_SAME_AS
   }
 };
 
@@ -48,7 +50,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(gratuitySchema) }}
       />
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "Understanding Gratuity in India" }]} />
       <UnderstandingGratuity />
     </>
   );

@@ -218,7 +218,7 @@ const BacCalculator = () => {
         <Box>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Your Estimated BAC Is</Typography>
-            <Typography variant="h1" sx={{ fontWeight: 900, fontSize: '5rem', color: color || '#9CA3AF', my: 2 }}>
+            <Typography variant="h1" component="div" sx={{ fontWeight: 900, fontSize: '5rem', color: color || '#9CA3AF', my: 2 }}>
               {bac || '—'}
             </Typography>
             <Box sx={{ bgcolor: 'background.paper', px: 3, py: 1, borderRadius: 5, border: `2px solid ${color || '#E5E5E5'}` }}>

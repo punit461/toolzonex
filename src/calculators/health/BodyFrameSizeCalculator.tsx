@@ -148,7 +148,7 @@ const BodyFrameSizeCalculator = () => {
         <Box>
           <Paper sx={{ p: 4, bgcolor: 'action.hover', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Body Frame Size</Typography>
-            <Typography variant="h1" sx={{ fontWeight: 900, fontSize: '3rem', color: 'primary.main', my: 2 }}>
+            <Typography variant="h1" component="div" sx={{ fontWeight: 900, fontSize: '3rem', color: 'primary.main', my: 2 }}>
               {frame || '—'}
             </Typography>
             <Typography variant="body2" color="text.secondary">

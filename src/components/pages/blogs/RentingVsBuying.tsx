@@ -63,7 +63,7 @@ const RentingVsBuying = () => {
 
       <Typography variant="h2">Run Your Own Numbers</Typography>
       <Typography variant="body1">
-        Every city and property is different. To find out exactly which option is better for your specific situation, use our <RouterLink href="/calculators/rent-vs-buy-calculator">Rent vs Buy Calculator</RouterLink>. It factors in rent inflation, property appreciation, and home loan interest to give you a clear financial verdict.
+        Every city and property is different. To find out exactly which option is better for your specific situation, use our <RouterLink href="/finance/rent-vs-buy-calculator">Rent vs Buy Calculator</RouterLink>. It factors in rent inflation, property appreciation, and home loan interest to give you a clear financial verdict.
       </Typography>
 
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

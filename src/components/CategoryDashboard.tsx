@@ -1,9 +1,11 @@
 'use client';
 
 import { useState, type ReactNode } from 'react';
-import { Box, Typography, Card, CardContent, TextField, InputAdornment, CardActionArea } from '@mui/material';
+import { Box, Typography, Card, CardContent, TextField, InputAdornment, CardActionArea, Grid, Paper, Button } from '@mui/material';
 import RouterLink from 'next/link';
 import SearchIcon from '@mui/icons-material/Search';
+import ArticleIcon from '@mui/icons-material/Article';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { categories } from '@/data/toolCategories';
 import { toolMatchesQuery } from '@/utils/search';
 import Breadcrumbs from './Breadcrumbs';
@@ -13,13 +15,20 @@ interface DashboardSection {
   categoryLabel: string;
 }
 
+export interface FeaturedGuide {
+  slug: string;
+  title: string;
+  description: string;
+}
+
 interface CategoryDashboardProps {
   pageTitle: string;
   intro: ReactNode;
   sections: DashboardSection[];
+  featuredGuides?: FeaturedGuide[];
 }
 
-const CategoryDashboard = ({ pageTitle, intro, sections }: CategoryDashboardProps) => {
+const CategoryDashboard = ({ pageTitle, intro, sections, featuredGuides }: CategoryDashboardProps) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const resolvedSections = sections.map((section) => {
@@ -67,6 +76,53 @@ const CategoryDashboard = ({ pageTitle, intro, sections }: CategoryDashboardProp
           />
         </Box>
       </Box>
+
+      {featuredGuides && featuredGuides.length > 0 && (
+        <Box sx={{ mb: 8 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: '1.4rem', md: '1.75rem' }, mb: 3 }}>
+            Featured Guides
+          </Typography>
+          <Grid container spacing={2}>
+            {featuredGuides.map((guide) => (
+              <Grid item xs={12} sm={6} md={4} key={guide.slug}>
+                <Paper
+                  variant="outlined"
+                  sx={{
+                    p: 3,
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    transition: 'all 0.3s ease',
+                    '&:hover': { borderColor: 'primary.main', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)', transform: 'translateY(-2px)' },
+                  }}
+                >
+                  <Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
+                      <ArticleIcon color="primary" fontSize="small" />
+                    </Box>
+                    <Typography variant="h6" sx={{ fontWeight: 600, mb: 1, fontSize: '1.05rem' }}>
+                      {guide.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {guide.description}
+                    </Typography>
+                  </Box>
+                  <Button
+                    component={RouterLink}
+                    href={`/blog/${guide.slug}`}
+                    variant="text"
+                    endIcon={<ArrowForwardIcon />}
+                    sx={{ mt: 2, alignSelf: 'flex-start', color: 'primary.main' }}
+                  >
+                    Read Guide
+                  </Button>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      )}
 
       {totalMatches === 0 ? (
         <Typography variant="body1" color="text.secondary">

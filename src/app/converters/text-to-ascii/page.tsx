@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import TextToAscii from "../../../calculators/converters/TextToAscii";
 import tool from "../../../data/tools/converters-text-to-ascii";
+import { getShellProps } from "../../../utils/resolveShellProps";
+import { ShellPropsProvider } from "../../../components/CalculatorShell";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
+  const shellProps = getShellProps(tool);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
-      <TextToAscii />
+      <ShellPropsProvider value={shellProps}>
+        <TextToAscii />
+      </ShellPropsProvider>
     </>
   );
 }

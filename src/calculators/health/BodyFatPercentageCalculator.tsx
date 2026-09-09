@@ -80,7 +80,7 @@ const BodyFatPercentageContent = () => {
         {bodyFat !== null ? (
           <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'action.hover', borderRadius: 4, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Estimated Body Fat (YMCA Method)</Typography>
-            <Typography variant="h1" sx={{ fontWeight: 900, fontSize: '4rem', color: 'primary.main', my: 1 }}>{bodyFat}%</Typography>
+            <Typography variant="h1" component="div" sx={{ fontWeight: 900, fontSize: '4rem', color: 'primary.main', my: 1 }}>{bodyFat}%</Typography>
             <Typography variant="h6" sx={{ fontWeight: 700 }}>{category}</Typography>
           </Paper>
         ) : (

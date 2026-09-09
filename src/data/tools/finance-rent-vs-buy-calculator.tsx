@@ -19,7 +19,7 @@ const tool: ToolRegistryEntry = {
     schemaDescription: "Compare renting vs buying a home.",
     applicationCategory: "FinanceApplication",
     currency: "INR",
-    faqs: undefined,
+    faqs: [{ question: "Does this account for home maintenance and property tax?", answer: "The calculator focuses on the core EMI-vs-rent and equity comparison — ongoing costs like maintenance, property tax, and insurance add to the true cost of owning and aren't included by default." }],
     extraSchemaFields: undefined,
     isHub: false,
 };

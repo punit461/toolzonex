@@ -19,7 +19,7 @@ const tool: ToolRegistryEntry = {
     schemaDescription: "Compare tax liability under old and new tax regimes.",
     applicationCategory: "FinanceApplication",
     currency: "INR",
-    faqs: undefined,
+    faqs: [{ question: "Which regime should I choose?", answer: "The New Regime generally suits those with few deductions/investments, since it offers lower slab rates but no exemptions. The Old Regime can work out better if you have significant 80C, 80D, HRA, or home loan deductions — compare both here to see which is lower for your numbers." }],
     extraSchemaFields: undefined,
     isHub: false,
 };

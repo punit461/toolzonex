@@ -154,7 +154,7 @@ const BodyFatCalculatorContent = () => {
             }}
           >
             <Typography variant="h6" sx={{ opacity: 0.9 }}>Your Body Fat Percentage</Typography>
-            <Typography variant="h1" sx={{ fontWeight: 800, my: 1 }}>{bodyFat}%</Typography>
+            <Typography variant="h1" component="div" sx={{ fontWeight: 800, my: 1 }}>{bodyFat}%</Typography>
             <Typography variant="h5" sx={{ fontWeight: 'bold' }}>Category: {category}</Typography>
             
             <Box sx={{ mt: 3, p: 2, bgcolor: 'rgba(255,255,255,0.2)', borderRadius: 2 }}>

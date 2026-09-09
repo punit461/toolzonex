@@ -32,20 +32,11 @@ const nextConfig: NextConfig = {
   },
   compress: true,
   poweredByHeader: false,
-  headers: async () => [
-    {
-      source: '/:path*',
-      headers: [
-        { key: 'X-DNS-Prefetch-Control', value: 'on' },
-        { key: 'X-Content-Type-Options', value: 'nosniff' },
-        { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-        { key: 'X-XSS-Protection', value: '1; mode=block' },
-        { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-        { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
-        { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
-      ],
-    },
-  ],
+  // Next's `headers()` config has no effect under `output: "export"` — static
+  // export produces plain files with no Node server to apply it. The actual
+  // enforcement point is public/_headers (a Cloudflare Pages convention, copied
+  // verbatim into out/ at build time), which carries this same header set plus
+  // a CSP. Keep the two in sync if either changes.
 };
 
 export default nextConfig;

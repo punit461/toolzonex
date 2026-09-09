@@ -13,6 +13,11 @@ const relatedTools: RelatedTool[] = [
   },
 ];
 
+const relatedArticles = [
+  { slug: "section-80c-investment-guide", title: "Section 80C: ₹1.5 Lakh Deduction — Complete Investment Guide", description: "Every qualifying 80C investment, compared." },
+  { slug: "old-vs-new-tax-regime", title: "Old vs. New Tax Regime: Which Should You Choose? (FY 2025-26)", description: "Full slab-rate comparison and a quick-verdict heuristic." },
+];
+
 const HraExemption = () => (
   <BlogShell
     title="HRA Exemption: How to Calculate and Maximise It"
@@ -20,6 +25,7 @@ const HraExemption = () => (
     url="/blog/hra-exemption-calculation"
     date="April 2026"
     relatedTools={relatedTools}
+      relatedArticles={relatedArticles}
     slug="hra-exemption-calculation"
     category="finance"
   >

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import RentingVsBuying from "../../../components/pages/blogs/RentingVsBuying";
-import Breadcrumbs from "../../../components/Breadcrumbs";
+import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -31,13 +31,15 @@ const rentingVsBuyingSchema = {
   "headline": "Renting vs Buying a Home - Financial Analysis for Property Decisions",
   "description": "Financial analysis to help you decide between renting and buying real estate.",
   "url": `${SITE_URL}/blog/renting-vs-buying-home`,
-  "datePublished": "2025-01-12",
-  "dateModified": "2025-01-12",
-  "author": { "@type": "Organization", "name": "ToolZoneX" },
+  "image": [`${SITE_URL}/og-image.jpg`],
+  "datePublished": "2026-05-01",
+  "dateModified": "2026-05-01",
+  "author": AUTHOR_PERSON_SCHEMA,
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+    "sameAs": ORGANIZATION_SAME_AS
   }
 };
 
@@ -48,7 +50,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(rentingVsBuyingSchema) }}
       />
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "Renting vs Buying a Home" }]} />
       <RentingVsBuying />
     </>
   );

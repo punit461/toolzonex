@@ -13,6 +13,11 @@ const relatedTools: RelatedTool[] = [
   },
 ];
 
+const relatedArticles = [
+  { slug: "section-80c-investment-guide", title: "Section 80C: ₹1.5 Lakh Deduction — Complete Investment Guide", description: "Every qualifying 80C investment, compared." },
+  { slug: "complete-guide-to-ppf", title: "The Complete Guide to PPF: Interest Rate, Rules, and Benefits (2026)", description: "Current PPF rate, EEE tax status, and how it compares to ELSS/NSC/FD." },
+];
+
 const SsyBenefits = () => {
   return (
     <BlogShell
@@ -21,6 +26,7 @@ const SsyBenefits = () => {
       url="/blog/sukanya-samriddhi-yojana-benefits"
       date="May 2026"
       relatedTools={relatedTools}
+      relatedArticles={relatedArticles}
       slug="sukanya-samriddhi-yojana-benefits"
       category="finance"
     >
@@ -55,7 +61,7 @@ const SsyBenefits = () => {
         If you invest ₹1,00,000 every year for 15 years, your total investment is ₹15,00,000. By the time the account matures in 21 years, the corpus will grow to nearly ₹46 Lakhs! 
       </Typography>
       <Typography variant="body1">
-        You can plug your own numbers into our <RouterLink href="/calculators/ssy-calculator">SSY Calculator</RouterLink> to see exactly how much you can save based on your budget.
+        You can plug your own numbers into our <RouterLink href="/finance/ssy-calculator">SSY Calculator</RouterLink> to see exactly how much you can save based on your budget.
       </Typography>
 
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>

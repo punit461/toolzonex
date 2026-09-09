@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import HorseFeedCalculator from "../../../calculators/utilities/HorseFeedCalculator";
 import tool from "../../../data/tools/utilities-horse-feed-calculator";
+import { getShellProps } from "../../../utils/resolveShellProps";
+import { ShellPropsProvider } from "../../../components/CalculatorShell";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
+  const shellProps = getShellProps(tool);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
-      <HorseFeedCalculator />
+      <ShellPropsProvider value={shellProps}>
+        <HorseFeedCalculator />
+      </ShellPropsProvider>
     </>
   );
 }

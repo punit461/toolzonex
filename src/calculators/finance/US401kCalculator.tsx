@@ -1,7 +1,8 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { Box, TextField, Typography, InputAdornment, Slider } from '@mui/material';
+import { Box, TextField, Typography, InputAdornment, Slider, Link } from '@mui/material';
+import RouterLink from 'next/link';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer } from 'recharts';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
@@ -223,7 +224,7 @@ const US401kCalculator = () => {
           </Box>
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">
               Projected Balance at Age {retirementAge}
@@ -271,6 +272,14 @@ const US401kCalculator = () => {
                 </AreaChart>
               </ResponsiveContainer>
             </Box>
+
+            <Typography variant="body2" sx={{ mt: 3 }}>
+              Want to save more? Try the{' '}
+              <Link component={RouterLink} href="/finance/ira-roth-calculator">
+                IRA &amp; Roth IRA Calculator
+              </Link>
+              .
+            </Typography>
           </Box>
         </Box>
       </Box>

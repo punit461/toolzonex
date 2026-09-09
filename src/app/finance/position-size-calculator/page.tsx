@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import PositionSizeCalculator from "../../../calculators/finance/PositionSizeCalculator";
 import tool from "../../../data/tools/finance-position-size-calculator";
+import { getShellProps } from "../../../utils/resolveShellProps";
+import { ShellPropsProvider } from "../../../components/CalculatorShell";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
+  const shellProps = getShellProps(tool);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
-      <PositionSizeCalculator />
+      <ShellPropsProvider value={shellProps}>
+        <PositionSizeCalculator />
+      </ShellPropsProvider>
     </>
   );
 }

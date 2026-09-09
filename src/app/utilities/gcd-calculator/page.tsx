@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import GcdCalculator from "../../../calculators/utilities/GcdCalculator";
 import tool from "../../../data/tools/utilities-gcd-calculator";
+import { getShellProps } from "../../../utils/resolveShellProps";
+import { ShellPropsProvider } from "../../../components/CalculatorShell";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
+  const shellProps = getShellProps(tool);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
-      <GcdCalculator />
+      <ShellPropsProvider value={shellProps}>
+        <GcdCalculator />
+      </ShellPropsProvider>
     </>
   );
 }

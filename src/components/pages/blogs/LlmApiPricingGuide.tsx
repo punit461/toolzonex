@@ -18,6 +18,12 @@ const relatedTools: RelatedTool[] = [
   },
 ];
 
+const relatedArticles = [
+  { slug: "cloud-gpu-pricing-guide", title: "Cloud GPU Pricing Explained: Community Cloud vs. Hyperscalers", description: "Why the same GPU can cost 3.5x more depending on where you rent it." },
+  { slug: "jwt-explained", title: "JWT Explained: What's Actually Inside a JSON Web Token", description: "How JWTs actually work under the hood." },
+  { slug: "cron-syntax-cheatsheet", title: "Cron Syntax Cheatsheet: How to Read Any Crontab Schedule", description: "The five fields, decoded." },
+];
+
 const LlmApiPricingGuide = () => {
   return (
     <BlogShell
@@ -26,6 +32,7 @@ const LlmApiPricingGuide = () => {
       url="/blog/llm-api-pricing-guide"
       date="August 2026"
       relatedTools={relatedTools}
+      relatedArticles={relatedArticles}
       slug="llm-api-pricing-guide"
       category="tools"
     >

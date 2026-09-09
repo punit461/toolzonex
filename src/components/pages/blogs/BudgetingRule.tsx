@@ -22,6 +22,11 @@ const relatedTools: RelatedTool[] = [
   },
 ];
 
+const relatedArticles = [
+  { slug: "power-of-compound-interest", title: "The Power of Compound Interest in Mutual Funds", description: "Why starting early matters more than the amount you invest." },
+  { slug: "sip-early-retirement", title: "How to Plan Your Early Retirement Using SIPs", description: "Using systematic investing to retire earlier." },
+];
+
 const BudgetingRule = () => {
   return (
     <BlogShell
@@ -30,6 +35,7 @@ const BudgetingRule = () => {
       url="/blog/50-30-20-budgeting-rule"
       date="March 2026"
       relatedTools={relatedTools}
+      relatedArticles={relatedArticles}
       slug="50-30-20-budgeting-rule"
       category="finance"
     >

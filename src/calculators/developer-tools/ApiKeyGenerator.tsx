@@ -88,6 +88,10 @@ const ApiKeyGenerator = () => {
         </Button>
       </Stack>
 
+      <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 2 }}>
+        Keys are generated in your browser and never sent to our servers.
+      </Typography>
+
       {keys.length > 0 && (
         <Paper variant="outlined" sx={{ p: 3 }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>

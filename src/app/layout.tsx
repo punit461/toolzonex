@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Box, Container } from "@mui/material";
+import { ORGANIZATION_SAME_AS } from "@/data/author";
 
 const inter = localFont({
   src: '../assets/fonts/Inter-Regular.woff2',
@@ -115,7 +116,8 @@ const websiteSchema = {
     "logo": {
       "@type": "ImageObject",
       "url": `${SITE_URL}/logo.png`
-    }
+    },
+    "sameAs": ORGANIZATION_SAME_AS
   }
 };
 

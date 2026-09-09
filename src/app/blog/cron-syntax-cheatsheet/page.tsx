@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import CronSyntaxCheatsheet from "../../../components/pages/blogs/CronSyntaxCheatsheet";
-import Breadcrumbs from "../../../components/Breadcrumbs";
+import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -31,13 +31,15 @@ const articleSchema = {
   "headline": "Cron Syntax Cheatsheet: How to Read Any Crontab Schedule",
   "description": "Five fields, one order, and a handful of special characters — a complete reference for reading and writing cron expressions, including the day-of-month/day-of-week gotcha.",
   "url": `${SITE_URL}/blog/cron-syntax-cheatsheet`,
+  "image": [`${SITE_URL}/og-image.jpg`],
   "datePublished": "2026-08-22",
   "dateModified": "2026-08-22",
-  "author": { "@type": "Organization", "name": "ToolZoneX" },
+  "author": AUTHOR_PERSON_SCHEMA,
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+    "sameAs": ORGANIZATION_SAME_AS
   }
 };
 
@@ -48,7 +50,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "Cron Syntax Cheatsheet" }]} />
       <CronSyntaxCheatsheet />
     </>
   );

@@ -128,7 +128,7 @@ const TargetHeartRateCalculator = () => {
         <Box>
           <Paper sx={{ p: 4, bgcolor: 'action.hover', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Target Heart Rate Zone</Typography>
-            <Typography variant="h1" sx={{ fontWeight: 900, fontSize: '3rem', color: 'primary.main', my: 2, textAlign: 'center' }}>
+            <Typography variant="h1" component="div" sx={{ fontWeight: 900, fontSize: '3rem', color: 'primary.main', my: 2, textAlign: 'center' }}>
               {lowTarget && highTarget ? `${lowTarget}–${highTarget}` : '—'}
             </Typography>
             <Typography variant="h6" color="text.secondary" sx={{ mb: 3 }}>bpm</Typography>

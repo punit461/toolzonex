@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import CloudGpuPricingGuide from "../../../components/pages/blogs/CloudGpuPricingGuide";
-import Breadcrumbs from "../../../components/Breadcrumbs";
+import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -31,13 +31,15 @@ const articleSchema = {
   "headline": "Cloud GPU Pricing Explained: Community Cloud vs. Hyperscalers",
   "description": "The same GPU can cost 3x more depending on where you rent it. Learn why cloud GPU pricing varies so much and how to think about the tradeoff.",
   "url": `${SITE_URL}/blog/cloud-gpu-pricing-guide`,
+  "image": [`${SITE_URL}/og-image.jpg`],
   "datePublished": "2026-08-22",
   "dateModified": "2026-08-22",
-  "author": { "@type": "Organization", "name": "ToolZoneX" },
+  "author": AUTHOR_PERSON_SCHEMA,
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+    "sameAs": ORGANIZATION_SAME_AS
   }
 };
 
@@ -48,7 +50,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "Cloud GPU Pricing Guide" }]} />
       <CloudGpuPricingGuide />
     </>
   );

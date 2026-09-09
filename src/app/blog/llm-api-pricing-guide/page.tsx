@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import LlmApiPricingGuide from "../../../components/pages/blogs/LlmApiPricingGuide";
-import Breadcrumbs from "../../../components/Breadcrumbs";
+import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -31,13 +31,15 @@ const articleSchema = {
   "headline": "How Much Do LLM API Calls Actually Cost? A Practical Guide",
   "description": "LLM pricing splits input and output tokens, and the two rarely cost the same. Learn how the major providers charge and how to estimate your bill.",
   "url": `${SITE_URL}/blog/llm-api-pricing-guide`,
+  "image": [`${SITE_URL}/og-image.jpg`],
   "datePublished": "2026-08-22",
   "dateModified": "2026-08-22",
-  "author": { "@type": "Organization", "name": "ToolZoneX" },
+  "author": AUTHOR_PERSON_SCHEMA,
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+    "sameAs": ORGANIZATION_SAME_AS
   }
 };
 
@@ -48,7 +50,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "LLM API Pricing Guide" }]} />
       <LlmApiPricingGuide />
     </>
   );

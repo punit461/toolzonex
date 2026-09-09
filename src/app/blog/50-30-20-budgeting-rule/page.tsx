@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import BudgetingRule from "../../../components/pages/blogs/BudgetingRule";
-import Breadcrumbs from "../../../components/Breadcrumbs";
+import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -31,13 +31,15 @@ const budgetingRuleSchema = {
   "headline": "The 50/30/20 Budgeting Rule - Complete Guide for Financial Success",
   "description": "Learn how to manage your money effectively using the 50/30/20 budgeting rule.",
   "url": `${SITE_URL}/blog/50-30-20-budgeting-rule`,
-  "datePublished": "2025-01-15",
-  "dateModified": "2025-01-15",
-  "author": { "@type": "Organization", "name": "ToolZoneX" },
+  "image": [`${SITE_URL}/og-image.jpg`],
+  "datePublished": "2026-03-01",
+  "dateModified": "2026-03-01",
+  "author": AUTHOR_PERSON_SCHEMA,
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+    "sameAs": ORGANIZATION_SAME_AS
   }
 };
 
@@ -48,7 +50,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(budgetingRuleSchema) }}
       />
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "The 50/30/20 Budgeting Rule Explained" }]} />
       <BudgetingRule />
     </>
   );

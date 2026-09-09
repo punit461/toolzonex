@@ -107,7 +107,7 @@ const ZodiacCalculator = () => {
         <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', bgcolor: 'action.hover' }}>
           {sign ? (
             <>
-              <Typography variant="h1" sx={{ fontSize: '3rem', mb: 1 }}>{sign.symbol}</Typography>
+              <Typography variant="h1" component="div" sx={{ fontSize: '3rem', mb: 1 }}>{sign.symbol}</Typography>
               <Typography variant="h4" fontWeight={800} color="primary.main">{sign.name}</Typography>
               <Typography variant="body2" color="text.secondary" mt={1}>{sign.range}</Typography>
             </>

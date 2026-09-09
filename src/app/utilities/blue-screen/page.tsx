@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import { BlueScreen } from "../../../calculators/screens/colorScreens";
 import tool from "../../../data/tools/utilities-blue-screen";
+import { getShellProps } from "../../../utils/resolveShellProps";
+import { ShellPropsProvider } from "../../../components/CalculatorShell";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
+  const shellProps = getShellProps(tool);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
-      <BlueScreen />
+      <ShellPropsProvider value={shellProps}>
+        <BlueScreen />
+      </ShellPropsProvider>
     </>
   );
 }

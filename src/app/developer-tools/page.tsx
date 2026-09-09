@@ -1,5 +1,12 @@
 import type { Metadata } from 'next';
-import CategoryDashboard from '@/components/CategoryDashboard';
+import CategoryDashboard, { FeaturedGuide } from '@/components/CategoryDashboard';
+
+const developerGuides: FeaturedGuide[] = [
+  { slug: 'jwt-explained', title: "JWT Explained: What's Actually Inside a JSON Web Token", description: 'How JWTs actually work under the hood.' },
+  { slug: 'cron-syntax-cheatsheet', title: 'Cron Syntax Cheatsheet: How to Read Any Crontab Schedule', description: 'The five fields, decoded.' },
+  { slug: 'cloud-gpu-pricing-guide', title: 'Cloud GPU Pricing Explained: Community Cloud vs. Hyperscalers', description: 'Why the same GPU can cost 3.5x more depending on where you rent it.' },
+  { slug: 'llm-api-pricing-guide', title: 'How Much Do LLM API Calls Actually Cost? A Practical Guide', description: 'Input vs. output token pricing, explained.' },
+];
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -25,6 +32,7 @@ export default function Page() {
       pageTitle="Developer Tools"
       intro="Utilities for everyday development work: hashing, encoding, color codes, regex testing, validators, generators, and more -- all free and processed entirely in your browser."
       sections={[{ label: 'Developer Tools', categoryLabel: 'Developer Tools' }]}
+      featuredGuides={developerGuides}
     />
   );
 }

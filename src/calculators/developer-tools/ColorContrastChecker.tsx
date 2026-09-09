@@ -144,7 +144,7 @@ const ColorContrastChecker = () => {
             <Typography variant="h6" color="text.secondary" gutterBottom>
               Contrast Ratio
             </Typography>
-            <Typography variant="h1" sx={{ fontWeight: 900, fontSize: '4rem', color: 'primary.main', my: 2 }}>
+            <Typography variant="h1" component="div" sx={{ fontWeight: 900, fontSize: '4rem', color: 'primary.main', my: 2 }}>
               {ratio.toFixed(2)}
             </Typography>
             <Typography variant="body1" color="text.secondary" gutterBottom>

@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import ImageColorPicker from "../../../calculators/tools/ImageColorPicker";
 import tool from "../../../data/tools/tools-image-color-picker";
+import { getShellProps } from "../../../utils/resolveShellProps";
+import { ShellPropsProvider } from "../../../components/CalculatorShell";
 import { buildToolMetadata, buildToolSchema } from "../../../utils/toolSeo";
 
 export const metadata: Metadata = buildToolMetadata(tool);
 
 export default function Page() {
+  const shellProps = getShellProps(tool);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildToolSchema(tool)) }}
       />
-      <ImageColorPicker />
+      <ShellPropsProvider value={shellProps}>
+        <ImageColorPicker />
+      </ShellPropsProvider>
     </>
   );
 }

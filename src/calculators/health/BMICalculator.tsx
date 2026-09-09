@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Box, TextField, Typography, ToggleButtonGroup, ToggleButton, InputAdornment } from '@mui/material';
+import { Box, TextField, Typography, ToggleButtonGroup, ToggleButton, InputAdornment, Link } from '@mui/material';
+import RouterLink from 'next/link';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
@@ -229,7 +230,7 @@ const BMICalculator = () => {
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Your BMI Is</Typography>
             
-            <Typography variant="h1" sx={{ fontWeight: 900, fontSize: '5rem', color: color || '#9CA3AF', my: 2 }}>
+            <Typography variant="h1" component="div" sx={{ fontWeight: 900, fontSize: '5rem', color: color || '#9CA3AF', my: 2 }}>
               {bmi || '—'}
             </Typography>
 
@@ -238,6 +239,19 @@ const BMICalculator = () => {
                 {category || 'Enter details'}
               </Typography>
             </Box>
+
+            {category === 'Underweight' && (
+              <Typography variant="body2" sx={{ mt: 3, textAlign: 'center' }}>
+                Looking to gain weight healthily? Try the{' '}
+                <Link component={RouterLink} href="/health/calorie-calculator">Calorie Calculator</Link> to plan a calorie surplus.
+              </Typography>
+            )}
+            {(category === 'Overweight' || category === 'Obese') && (
+              <Typography variant="body2" sx={{ mt: 3, textAlign: 'center' }}>
+                Want a weight-management plan? Try the{' '}
+                <Link component={RouterLink} href="/health/tdee-calculator">TDEE Calculator</Link> to find your daily calorie target.
+              </Typography>
+            )}
           </Box>
         </Box>
       </Box>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import NewRegime2025 from "../../../components/pages/blogs/NewRegime2025";
-import Breadcrumbs from "../../../components/Breadcrumbs";
+import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -31,13 +31,15 @@ const newTaxRegimeSchema = {
   "headline": "New Tax Regime FY 2025-26 - Latest Changes and Tax Slabs",
   "description": "Latest changes and slabs in the new tax regime for FY 2025-26.",
   "url": `${SITE_URL}/blog/new-tax-regime-fy-2025-26`,
-  "datePublished": "2025-02-01",
-  "dateModified": "2025-02-01",
-  "author": { "@type": "Organization", "name": "ToolZoneX" },
+  "image": [`${SITE_URL}/og-image.jpg`],
+  "datePublished": "2026-04-01",
+  "dateModified": "2026-04-01",
+  "author": AUTHOR_PERSON_SCHEMA,
   "publisher": {
     "@type": "Organization",
     "name": "ToolZoneX",
-    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+    "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+    "sameAs": ORGANIZATION_SAME_AS
   }
 };
 
@@ -48,7 +50,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(newTaxRegimeSchema) }}
       />
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: "New Tax Regime FY 2025-26" }]} />
       <NewRegime2025 />
     </>
   );

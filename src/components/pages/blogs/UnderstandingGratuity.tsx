@@ -54,7 +54,7 @@ const UnderstandingGratuity = () => {
 
       <Typography variant="h2">Check Your Eligibility and Payout</Typography>
       <Typography variant="body1">
-        Instead of doing the math manually, you can use our <RouterLink href="/calculators/gratuity-calculator">Online Gratuity Calculator</RouterLink>. Just enter your basic salary, DA, and years of service, and it will instantly show your estimated payout and whether it crosses the tax-free limit.
+        Instead of doing the math manually, you can use our <RouterLink href="/finance/gratuity-calculator">Online Gratuity Calculator</RouterLink>. Just enter your basic salary, DA, and years of service, and it will instantly show your estimated payout and whether it crosses the tax-free limit.
       </Typography>
 
       <Box sx={{ mt: 4 }}><AdSenseUnit /></Box>
