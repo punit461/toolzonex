@@ -145,7 +145,7 @@ const InternetSpeedCalculator = () => {
           )}
         </Box>
 
-        <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           {mode === 'time' ? (
             <>
               <Typography variant="body2" color="text.secondary">Estimated Time</Typography>

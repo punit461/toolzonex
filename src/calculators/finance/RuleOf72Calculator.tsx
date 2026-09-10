@@ -90,7 +90,7 @@ const RuleOf72Calculator = () => {
           </Paper>
         </Paper>
 
-        <Paper variant="outlined" sx={{ p: 3 }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 3 }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Years → Required Rate</Typography>
           <TextField
             label="Target Years to Double"

@@ -136,7 +136,7 @@ const WallAreaCalculator = () => {
           <Button startIcon={<AddIcon />} onClick={addOpening} sx={{ mt: 2 }}>Add Opening</Button>
         </Box>
 
-        <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', height: 'fit-content' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center', height: 'fit-content' }}>
           <Typography variant="body2" color="text.secondary">Net Wall Area</Typography>
           <Typography variant="h3" color="primary" fontWeight={800}>{netArea.toFixed(1)} sq ft</Typography>
           <Box sx={{ mt: 3, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>

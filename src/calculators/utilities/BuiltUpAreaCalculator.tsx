@@ -99,7 +99,7 @@ const BuiltUpAreaCalculator = () => {
           </Box>
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           {result ? (
             <Paper variant="outlined" sx={{ p: 3 }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2, pb: 2, borderBottom: '1px solid', borderColor: 'divider' }}>

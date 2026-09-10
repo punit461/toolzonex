@@ -85,7 +85,7 @@ const CostPerWearCalculator = () => {
           <TextField label="Estimated Future Uses (optional)" type="number" fullWidth value={futureUses} onChange={(e) => setFutureUses(e.target.value)} onFocus={(e) => e.target.select()} />
         </Stack>
 
-        <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Cost Per Wear (so far)</Typography>
           <Typography variant="h3" color="primary" fontWeight={800}>
             {valid && costPerWearSoFar !== null ? `$${costPerWearSoFar.toFixed(2)}` : '—'}

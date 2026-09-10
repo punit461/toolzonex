@@ -62,7 +62,7 @@ const GraphqlToComponentsContent = () => {
         {error && <Alert severity="error">{error}</Alert>}
       </Box>
 
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="subtitle1" fontWeight="600">React Component Scaffold</Typography>
           <Button startIcon={<ContentCopyIcon />} onClick={copyToClipboard} disabled={!output} size="small">Copy</Button>

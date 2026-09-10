@@ -116,7 +116,7 @@ const InsulationCalculator = () => {
           />
         </Box>
 
-        <Paper variant="outlined" sx={{ p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 2 }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 2 }}>
           <Box textAlign="center">
             <Typography variant="body2" color="text.secondary">Area to Insulate</Typography>
             <Typography variant="h5" fontWeight={700}>{area.toLocaleString(undefined, { maximumFractionDigits: 1 })} sq ft</Typography>

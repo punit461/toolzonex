@@ -106,7 +106,7 @@ const PipeFlowCalculator = () => {
           <Typography variant="caption" color="text.secondary">Cross-sectional area: {valid ? areaLabel : '—'}</Typography>
         </Stack>
 
-        <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Flow Rate</Typography>
           <Typography variant="h4" color="primary" fontWeight={800}>
             {valid ? (unitSystem === 'us' ? `${gpm.toFixed(2)} GPM` : `${lpm.toFixed(2)} L/min`) : '—'}

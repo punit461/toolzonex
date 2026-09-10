@@ -78,7 +78,7 @@ const RiceCookingCalculator = () => {
           <TextField label="Dry Rice (cups)" type="number" value={cups} onChange={(e) => setCups(e.target.value)} onFocus={(e) => e.target.select()} fullWidth />
         </Stack>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Result</Typography>
           <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
             <Typography variant="body2">Water Needed</Typography>

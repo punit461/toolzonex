@@ -94,7 +94,7 @@ const PaycheckCalculatorContent = ({ stateSlug }: Props) => {
         </Typography>
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center' }}>
           <Typography variant="h6" color="text.secondary">Take-Home Pay ({FREQUENCY_LABELS[frequency]})</Typography>
           <Typography variant="h3" sx={{ fontWeight: 700, mb: 1, color: 'primary.main' }}>

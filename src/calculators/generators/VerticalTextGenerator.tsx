@@ -82,7 +82,7 @@ const VerticalTextGeneratorContent = () => {
       </Box>
 
       {/* Output Panel */}
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Paper variant="outlined" sx={{ p: 0, overflow: 'hidden', height: '100%', minHeight: 300, display: 'flex', flexDirection: 'column' }}>
           <Box sx={{ p: 2, bgcolor: 'primary.main', color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <Typography variant="h6">Vertical Result</Typography>

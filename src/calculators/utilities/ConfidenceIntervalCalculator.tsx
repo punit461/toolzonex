@@ -96,7 +96,7 @@ const ConfidenceIntervalCalculator = () => {
           </FormControl>
         </Stack>
 
-        <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">{confidence}% Confidence Interval</Typography>
           <Typography variant="h4" color="primary" fontWeight={800}>
             {valid ? `[${lower.toFixed(3)}, ${upper.toFixed(3)}]` : '—'}

@@ -87,7 +87,7 @@ const PxToRemContent = () => {
 
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight="600" mb={1}>Quick Reference Table (Base: {baseSize}px)</Typography>
         <Paper sx={{ border: '1px solid', borderColor: 'divider', overflow: 'hidden' }}>
           <Box sx={{ display: 'flex', bgcolor: 'primary.main', color: 'white', fontWeight: 'bold' }}>

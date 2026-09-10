@@ -76,7 +76,7 @@ const NetWorthCalculator = () => {
             <TextField label="Other Assets" type="number" value={otherAssets} onChange={(e) => setOtherAssets(e.target.value)} slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }} fullWidth />
           </Box>
         </Box>
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="h6" fontWeight={600} mb={2}>Liabilities</Typography>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
             <TextField label="Mortgage" type="number" value={mortgage} onChange={(e) => setMortgage(e.target.value)} slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }} fullWidth />

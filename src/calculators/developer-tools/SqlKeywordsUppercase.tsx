@@ -58,7 +58,7 @@ const SqlKeywordsUppercaseContent = () => {
         <Button variant="outlined" onClick={() => setInput(SAMPLE)}>Load Sample</Button>
       </Box>
 
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="subtitle1" fontWeight="600">Output (Keywords Uppercased)</Typography>
           <Button startIcon={<ContentCopyIcon />} onClick={copy} disabled={!output} size="small">Copy</Button>

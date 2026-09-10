@@ -86,7 +86,7 @@ const SecureTokenGeneratorContent = () => {
         </Button>
       </Stack>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight={600} mb={1}>Generated Token</Typography>
         <Paper variant="outlined" sx={{ p: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 1 }}>
           <Typography variant="body1" sx={{ fontFamily: 'monospace', wordBreak: 'break-all' }}>{token}</Typography>

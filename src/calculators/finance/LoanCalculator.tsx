@@ -88,7 +88,7 @@ const LoanCalculatorContent = () => {
       </Box>
 
       {/* Output Panel */}
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Paper variant="outlined" sx={{ p: 4, height: '100%', bgcolor: 'primary.main', color: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderRadius: 4 }}>
           
           <Box sx={{ textAlign: 'center', mb: 4 }}>

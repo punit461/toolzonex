@@ -116,7 +116,7 @@ const BeamLoadCalculator = () => {
             <TextField label="Moment of Inertia, I (cm⁴, optional)" type="number" fullWidth value={inertia} onChange={(e) => setInertia(e.target.value)} onFocus={(e) => e.target.select()} />
           </Stack>
 
-          <Stack spacing={2}>
+          <Stack spacing={2} sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
             <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
               <Typography variant="body2" color="text.secondary">Maximum Bending Moment</Typography>
               <Typography variant="h3" color="primary" fontWeight={800}>

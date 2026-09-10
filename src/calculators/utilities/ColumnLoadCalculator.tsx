@@ -133,7 +133,7 @@ const ColumnLoadCalculator = () => {
           )}
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Tributary Area</Typography>
             <Typography fontWeight={600}>{tributaryArea.toLocaleString('en-US')} sq ft</Typography>

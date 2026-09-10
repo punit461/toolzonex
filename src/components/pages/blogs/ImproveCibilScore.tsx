@@ -1,6 +1,7 @@
 'use client';
 
 import { Typography , Box} from '@mui/material';
+import RouterLink from 'next/link';
 import BlogShell, { RelatedTool } from '../../BlogShell';
 import AdSenseUnit from '../../AdSenseUnit';
 
@@ -9,6 +10,11 @@ const relatedTools: RelatedTool[] = [
     label: 'EMI Calculator',
     path: '/finance/emi-calculator',
     description: 'Plan your EMI payments to never miss a due date and improve your CIBIL score.'
+  },
+  {
+    label: 'Credit Score Estimator',
+    path: '/finance/credit-score-estimator',
+    description: 'Get an educational estimate of your credit score range before you check your official CIBIL report.'
   },
 ];
 
@@ -41,7 +47,9 @@ const ImproveCibilScore = () => {
 
       <Typography variant="h3">2. Keep Credit Utilization Below 30%</Typography>
       <Typography variant="body1">
-        If you have a credit card limit of ₹1,00,000, try not to spend more than ₹30,000 in a single billing cycle. High credit utilization makes you look credit-hungry to lenders. If you frequently exceed this, request your bank to increase your credit limit.
+        If you have a credit card limit of ₹1,00,000, try not to spend more than ₹30,000 in a single billing cycle. High credit utilization makes you look credit-hungry to lenders. If you frequently exceed this, request your bank to increase your credit limit. Use the{' '}
+        <RouterLink href="/finance/credit-utilization-calculator">Credit Utilization Calculator</RouterLink>
+        {' '}to check your exact percentage across all your cards at once.
       </Typography>
 
       <Typography variant="h3">3. Maintain a Healthy Credit Mix</Typography>

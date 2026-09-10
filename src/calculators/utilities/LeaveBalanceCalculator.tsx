@@ -108,7 +108,7 @@ const LeaveBalanceCalculator = () => {
             <TextField label="Leave Days Used So Far" type="number" fullWidth value={used} onChange={(e) => setUsed(e.target.value)} onFocus={(e) => e.target.select()} />
           </Stack>
 
-          <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
+          <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
             <Typography variant="body2" color="text.secondary">Remaining Leave Balance</Typography>
             <Typography variant="h3" color="primary" fontWeight={800}>
               {valid ? `${remaining.toFixed(2)} days` : '—'}

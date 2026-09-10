@@ -12,7 +12,7 @@ const tool: ToolRegistryEntry = {
     icon: <ChangeHistoryIcon fontSize="large" color="primary"/>,
     seoTitle: "Wheel of Fortune Spinner - Random Decision Maker Online",
     seoDescription: "Create a custom spinning wheel to randomly pick names, prizes, or make decisions. Free online random wheel spinner.",
-    keywords: ["wheel of fortune", "spinning wheel generator", "random decision maker", "picker wheel", "random name picker", "wheel of fortune wheel generator", "wheel of fortune picker", "spin the wheel generator", "random wheel picker", "custom spinning wheel maker"],
+    keywords: ["wheel of fortune", "wheel of fortune online spinner", "spinning wheel generator", "random decision maker", "picker wheel", "random name picker", "wheel of fortune wheel generator", "wheel of fortune picker", "spin the wheel generator", "random wheel picker", "custom spinning wheel maker"],
     ogTitle: "Wheel of Fortune Spinner - Random Decision Maker Online | ToolZoneX",
     ogDescription: "Create a custom spinning wheel to randomly pick names, prizes, or make decisions.",
     schemaName: "Wheel of Fortune Spinner",

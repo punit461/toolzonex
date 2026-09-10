@@ -148,7 +148,7 @@ const MacroCalculatorContent = () => {
         </Box>
       </Box>
 
-      <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2 }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, bgcolor: 'action.hover', borderRadius: 2 }}>
         <Typography variant="h6" color="text.secondary" gutterBottom>Daily Target</Typography>
         <Typography variant="h3" sx={{ fontWeight: 900, color: 'primary.main', mb: 3 }}>
           {calories.toLocaleString('en-IN')} <Typography component="span" variant="body1" color="text.secondary">kcal/day</Typography>

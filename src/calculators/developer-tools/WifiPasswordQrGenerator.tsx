@@ -87,7 +87,7 @@ const WifiPasswordQrGeneratorContent = () => {
         </Typography>
       </Box>
 
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center' }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center' }}>
         <Paper sx={{ p: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2, border: '1px solid', borderColor: 'divider' }}>
           <Typography variant="subtitle2" color="text.secondary">Live Preview</Typography>
           <Box

@@ -128,7 +128,7 @@ const CorrelationCoefficientCalculator = () => {
           <Button startIcon={<AddIcon />} onClick={addPoint} sx={{ mt: 2 }}>Add Point</Button>
         </Box>
 
-        <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', height: 'fit-content' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center', height: 'fit-content' }}>
           <Typography variant="body2" color="text.secondary">Correlation Coefficient (r)</Typography>
           <Typography variant="h3" color="primary" fontWeight={800}>{r !== null ? r.toFixed(4) : '—'}</Typography>
         </Paper>

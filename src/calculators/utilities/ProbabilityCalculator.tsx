@@ -105,7 +105,7 @@ const ProbabilityCalculator = () => {
           )}
         </Box>
 
-        <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'action.hover', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <Paper sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center', bgcolor: 'action.hover', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           {mode === 'single' ? (
             singleResult !== null ? (
               <>

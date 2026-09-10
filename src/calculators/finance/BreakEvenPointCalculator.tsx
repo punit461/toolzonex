@@ -112,7 +112,7 @@ const BreakEvenPointCalculator = () => {
           />
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           {valid ? (
             <>
               <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>

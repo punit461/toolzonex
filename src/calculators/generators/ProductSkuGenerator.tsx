@@ -124,7 +124,7 @@ const ProductSkuGeneratorContent = () => {
         </TextField>
       </Stack>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight={600} mb={2}>
           Generated SKU
         </Typography>

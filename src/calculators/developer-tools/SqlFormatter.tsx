@@ -81,7 +81,7 @@ const SqlFormatterContent = () => {
           />
         </Box>
 
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 1 }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <Typography variant="subtitle2" fontWeight="bold">Formatted SQL</Typography>
             <Button 

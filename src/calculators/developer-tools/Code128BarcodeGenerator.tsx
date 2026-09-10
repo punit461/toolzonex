@@ -58,7 +58,7 @@ const Code128BarcodeGeneratorContent = () => {
         />
       </Box>
 
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center' }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center' }}>
         <Paper sx={{ p: 3, bgcolor: 'white', width: '100%', display: 'flex', justifyContent: 'center', minHeight: 160, alignItems: 'center', overflow: 'auto' }}>
           <canvas ref={canvasRef} />
         </Paper>

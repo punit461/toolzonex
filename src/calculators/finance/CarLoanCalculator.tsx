@@ -104,7 +104,7 @@ const CarLoanCalculator = () => {
           <TextField label="Annual Interest Rate" type="number" value={rate} onChange={(e) => setRate(e.target.value)} fullWidth slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }} />
         </Stack>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           {result ? (
             <Stack spacing={2}>
               <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>

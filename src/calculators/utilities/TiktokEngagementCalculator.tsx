@@ -67,7 +67,7 @@ const TiktokEngagementCalculator = () => {
           <TextField label="Shares" type="number" value={shares} onChange={(e) => setShares(e.target.value)} fullWidth />
           <TextField label="Views" type="number" value={views} onChange={(e) => setViews(e.target.value)} fullWidth />
         </Stack>
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Result</Typography>
           <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
             <Typography variant="body2">Engagement Rate (view-based)</Typography>

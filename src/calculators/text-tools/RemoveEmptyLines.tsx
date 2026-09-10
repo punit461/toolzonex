@@ -37,7 +37,7 @@ const RemoveEmptyLinesContent = () => {
         />
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
           <Typography variant="subtitle1" fontWeight="600">
             Result{text ? ` (removed ${removedCount} blank line${removedCount === 1 ? '' : 's'})` : ''}:

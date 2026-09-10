@@ -72,7 +72,7 @@ const OvulationCalculatorContent = () => {
         </Box>
       </Box>
 
-      <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2 }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, bgcolor: 'action.hover', borderRadius: 2 }}>
         <ResultRow label="Estimated ovulation date" value={formatDate(ovulationDate)} />
         <ResultRow
           label="Fertile window"

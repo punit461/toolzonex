@@ -145,7 +145,7 @@ const CompostCalculator = () => {
           </Box>
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
             <Typography variant="body2">Total Volume</Typography>
             <Typography variant="h3" fontWeight="bold">{result.totalVolume.toFixed(1)} cu ft</Typography>

@@ -98,7 +98,7 @@ const UsedCarCostCalculator = () => {
           <TextField label="Expected Ownership Period" type="number" value={years} onChange={(e) => setYears(e.target.value)} fullWidth slotProps={{ input: { endAdornment: <InputAdornment position="end">years</InputAdornment> } }} />
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Results</Typography>
           <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
             <Typography variant="body2">Total Cost of Ownership</Typography>

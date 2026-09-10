@@ -132,7 +132,7 @@ const ClothingSizeConverterContent = () => {
         )}
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight="600" mb={2}>Converted Sizes</Typography>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
           {(Object.keys(SYSTEM_LABELS) as System[]).map((key) => (

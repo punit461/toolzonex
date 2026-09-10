@@ -102,7 +102,7 @@ const SpeakingTimeCalculator = () => {
           <TextField label="Speaking Pace (words per minute)" type="number" fullWidth value={wpm} onChange={(e) => setWpm(e.target.value)} onFocus={(e) => e.target.select()} helperText="Typical conversational pace is 130-150 wpm" />
         </Box>
 
-        <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           {result?.type === 'time' && (
             <>
               <Typography variant="body2" color="text.secondary">Estimated Speaking Time</Typography>

@@ -76,7 +76,7 @@ const CssAnimationGeneratorContent = () => {
         </FormControl>
       </Box>
 
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Paper variant="outlined" sx={{ p: 4, display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 140, bgcolor: 'action.hover', overflow: 'hidden' }}>
           <style>{`@keyframes ${safeName}-preview { ${KEYFRAMES[preset]} }`}</style>
           <Box

@@ -130,7 +130,7 @@ const CaloriesBurnedWalkingCalculator = () => {
           </FormControl>
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper sx={{ p: 4, bgcolor: 'action.hover', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Calories Burned</Typography>
             <Typography variant="h1" component="div" sx={{ fontWeight: 900, fontSize: '4.5rem', color: 'primary.main', my: 2 }}>

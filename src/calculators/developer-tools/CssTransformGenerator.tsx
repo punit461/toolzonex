@@ -67,7 +67,7 @@ const CssTransformGeneratorContent = () => {
         </Grid>
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Paper variant="outlined" sx={{ p: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 260, mb: 2, overflow: 'hidden' }}>
           <Box
             sx={{

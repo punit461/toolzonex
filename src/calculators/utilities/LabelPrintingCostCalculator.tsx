@@ -77,7 +77,7 @@ const LabelPrintingCostCalculator = () => {
           <TextField label="Total Labels Needed" type="number" value={totalLabelsNeeded} onChange={(e) => setTotalLabelsNeeded(e.target.value)} fullWidth />
         </Stack>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Result</Typography>
           <Stack spacing={2}>
             <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>

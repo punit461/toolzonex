@@ -47,7 +47,7 @@ const RandomDecisionMakerContent = () => {
         </Button>
       </Box>
 
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Paper
           sx={{
             p: 4, textAlign: 'center', bgcolor: decision ? 'primary.main' : 'action.hover',

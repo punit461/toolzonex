@@ -36,7 +36,7 @@ const LuckyColorFinderContent = () => {
         {LUCKY_COLORS.map((s, idx) => <MenuItem key={s.sign} value={idx}>{s.sign}</MenuItem>)}
       </TextField>
 
-      <Paper sx={{ p: 3, textAlign: 'center', color: 'white', bgcolor: info.hex }}>
+      <Paper sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 3, textAlign: 'center', color: 'white', bgcolor: info.hex }}>
         <Typography variant="body2">Lucky Color for {info.sign}</Typography>
         <Typography variant="h4" fontWeight="bold">{info.color}</Typography>
       </Paper>

@@ -105,7 +105,7 @@ const AgeDifferenceFinder = () => {
           />
         </Box>
 
-        <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, bgcolor: 'action.hover', borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           {result ? (
             result.sameDate ? (
               <Typography variant="h6" textAlign="center">Both dates are the same — no age difference.</Typography>

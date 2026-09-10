@@ -109,7 +109,26 @@ const Home = () => {
             </Card>
           ))}
         </Box>
-      ) : (
+      ) : null}
+
+      {query === '' && (
+        <Box sx={{ maxWidth: 720, mx: 'auto', mt: 8, mb: 4, textAlign: 'center' }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: '1.4rem', md: '1.75rem' }, mb: 2 }}>
+            Why ToolZoneX?
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            ToolZoneX brings together {tiles.reduce((sum, t) => sum + t.toolCount, 0)}+ calculators, converters, and
+            generators across finance, health, and everyday utilities — built for India, from EMI and tax calculators
+            using current FY slabs to BMI and health tools with Indian-specific guidelines. Every tool runs entirely
+            in your browser: no sign-up, no data leaving your device, no installs. Alongside the calculators, our{' '}
+            <RouterLink href="/blog" style={{ color: 'inherit', fontWeight: 600 }}>blog</RouterLink> covers personal
+            finance topics in depth — PPF rates, old vs. new tax regime, SIP planning — so you can understand the
+            numbers a calculator gives you, not just get them.
+          </Typography>
+        </Box>
+      )}
+
+      {query !== '' && (
         filteredCategories.map((cat) => (
           <Box key={cat.label} sx={{ mb: 8 }}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 3 }}>

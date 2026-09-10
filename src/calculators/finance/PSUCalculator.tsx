@@ -78,7 +78,7 @@ const PSUCalculator = () => {
           <TextField label="HRA Rate" type="number" value={hraRate} onChange={(e) => setHraRate(e.target.value)} fullWidth InputProps={{ endAdornment: <InputAdornment position="end">%</InputAdornment> }} />
           <TextField label="Other Allowances" type="number" value={allowances} onChange={(e) => setAllowances(e.target.value)} fullWidth InputProps={{ startAdornment: <InputAdornment position="start">₹</InputAdornment> }} />
         </Box>
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight="600" mb={2}>Result</Typography>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white', mb: 2 }}>
             <Typography variant="h6">Gross Pay</Typography>

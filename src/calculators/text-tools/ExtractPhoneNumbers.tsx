@@ -68,7 +68,7 @@ const ExtractPhoneNumbersContent = () => {
         </Button>
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Paper variant="outlined" sx={{ p: 3, minHeight: 240 }}>
           {numbers.length > 0 ? (
             <Stack spacing={1.5}>

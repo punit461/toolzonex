@@ -109,7 +109,7 @@ const ProfitPerUnitCalculator = () => {
           />
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
             <Typography variant="body2">Total Profit</Typography>
             <Typography variant="h3" fontWeight="bold">{money(totalProfit)}</Typography>

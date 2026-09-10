@@ -69,7 +69,7 @@ const WordFrequencyAnalyzerContent = () => {
       </Box>
 
       {/* Output Panel */}
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         {frequencies.length > 0 ? (
           <Paper variant="outlined" sx={{ overflow: 'hidden' }}>
             <Box sx={{ p: 2, bgcolor: 'primary.main', color: 'white' }}>

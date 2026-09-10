@@ -120,7 +120,7 @@ const CouponSavingsContent = () => {
           <Typography variant="body2">Final Price</Typography>
           <Typography variant="h4" fontWeight="bold">{money(finalPrice)}</Typography>
         </Paper>
-        <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Paper sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography>Total Savings</Typography>
           <Typography fontWeight={600}>{money(totalSaved)} ({percentSaved.toFixed(1)}%)</Typography>
         </Paper>

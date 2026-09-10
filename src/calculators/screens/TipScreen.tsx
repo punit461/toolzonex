@@ -10,6 +10,7 @@ import { useFullscreen } from './useFullscreen';
 const formatUSD = (value: number) => `$${value.toFixed(2)}`;
 
 const TipScreenContent = () => {
+  const [heading, setHeading] = useState<string>('Add a Tip');
   const [subtotal, setSubtotal] = useState<number>(10);
   const [percentages, setPercentages] = useState<number[]>([15, 20, 25]);
   const { targetRef, isFullscreen, toggle } = useFullscreen<HTMLDivElement>();
@@ -37,6 +38,16 @@ const TipScreenContent = () => {
 
       <Box sx={{ mb: 4, p: 3, border: '1px solid', borderColor: 'divider', borderRadius: 2 }}>
         <Typography variant="h6" sx={{ mb: 2 }}>Customize Tip Screen</Typography>
+        <Box sx={{ mb: 3 }}>
+          <Typography gutterBottom>Screen Heading</Typography>
+          <TextField
+            fullWidth
+            value={heading}
+            onFocus={(e) => e.target.select()}
+            onChange={(e) => setHeading(e.target.value)}
+            placeholder="Add a Tip"
+          />
+        </Box>
         <Box sx={{ mb: 3 }}>
           <Typography gutterBottom>Subtotal Amount</Typography>
           <TextField
@@ -76,7 +87,7 @@ const TipScreenContent = () => {
           }),
         }}
       >
-        <Typography variant="h4" sx={{ mb: 3, fontWeight: 700 }}>Add a Tip</Typography>
+        <Typography variant="h4" sx={{ mb: 3, fontWeight: 700 }}>{heading || 'Add a Tip'}</Typography>
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: `repeat(${percentages.length}, 1fr)` }, gap: 2, maxWidth: 700, mx: 'auto', width: '100%' }}>
           {percentages.map((pct, i) => (
             <Button
@@ -105,7 +116,9 @@ const TipScreen = () => {
       <Typography variant="body1">
         A Tip Screen is a fullscreen, point-of-sale style tipping display. Set your bill subtotal and the tip
         percentages you want to offer, then go fullscreen and hand the device to your customer — they&apos;ll see
-        the exact dollar amount for each tip percentage side by side, so they can pick one at a glance.
+        the exact dollar amount for each tip percentage side by side, so they can pick one at a glance. It also
+        works as a joke tip screen — change the heading to whatever favor you want &quot;tipped&quot; for (holding
+        a door, walking the dog, one more episode) and show it to a friend or coworker for a laugh.
       </Typography>
 
       <Typography variant="h2">How to use it</Typography>
@@ -137,6 +150,7 @@ const TipScreen = () => {
         <ul>
           <li><strong>Can I change the tip percentages?</strong> Yes, edit any of the three percentage fields before going fullscreen.</li>
           <li><strong>Does this process payments?</strong> No — it&apos;s a display only, showing tip amounts for reference; it doesn&apos;t charge cards or record transactions.</li>
+          <li><strong>Can I use this for a joke tip screen?</strong> Yes — change the &quot;Screen Heading&quot; field to whatever you want (a chore, a favor, an inside joke), set the subtotal and percentages, then go fullscreen and show it to whoever you&apos;re &quot;charging.&quot;</li>
         </ul>
       </Box>
     </>

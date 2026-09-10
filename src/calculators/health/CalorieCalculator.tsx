@@ -89,7 +89,7 @@ const CalorieCalculatorContent = () => {
       </Box>
 
       {/* Output Panel */}
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         {calories ? (
           <Paper variant="outlined" sx={{ overflow: 'hidden' }}>
             <Box sx={{ p: 3, bgcolor: 'primary.main', color: 'white', textAlign: 'center' }}>

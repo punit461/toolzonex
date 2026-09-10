@@ -91,7 +91,7 @@ const ModeCalculator = () => {
           />
         </Box>
 
-        <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, bgcolor: 'action.hover', borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           {count > 0 ? (
             isUniform ? (
               <Typography variant="h6" color="text.secondary" textAlign="center">No mode — every value appears equally often</Typography>

@@ -84,7 +84,7 @@ const PermutationCalculator = () => {
           <TextField label="r (items chosen)" type="number" fullWidth value={r} onChange={(e) => setR(e.target.value)} onFocus={(e) => e.target.select()} />
         </Box>
 
-        <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'action.hover', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <Paper sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center', bgcolor: 'action.hover', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           {result ? (
             'error' in result ? (
               <Typography variant="body1" color="error">{result.error}</Typography>

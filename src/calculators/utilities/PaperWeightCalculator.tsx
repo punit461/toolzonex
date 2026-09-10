@@ -125,7 +125,7 @@ const PaperWeightCalculator = () => {
           <TextField label="Number of Sheets" type="number" fullWidth value={sheets} onChange={(e) => setSheets(e.target.value)} onFocus={(e) => e.target.select()} />
         </Box>
 
-        <Paper variant="outlined" sx={{ p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 2 }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 2 }}>
           <Box textAlign="center">
             <Typography variant="body2" color="text.secondary">Weight per Sheet</Typography>
             <Typography variant="h6" fontWeight={700}>{perSheetGrams.toLocaleString(undefined, { maximumFractionDigits: 3 })} g</Typography>

@@ -5,22 +5,20 @@ import {
   AppBar, Toolbar, Box, Button, IconButton, Drawer,
   List, ListItemButton, ListItemText, Divider, useScrollTrigger,
   Slide, Paper, Popper, Grow, ClickAwayListener, MenuList, MenuItem,
-  Typography, Collapse, Autocomplete, TextField, InputAdornment
+  Typography, Collapse
 } from '@mui/material';
 import RouterLink from 'next/link';
-import { useRouter } from 'next/navigation';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import HomeIcon from '@mui/icons-material/Home';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import SearchIcon from '@mui/icons-material/Search';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import { useColorMode } from './ColorModeProvider';
 import { categories as toolCategories } from '@/data/toolCategories';
-import { toolMatchesQuery } from '@/utils/search';
+import CommandPalette from './CommandPalette';
 
 interface HideOnScrollProps { children: React.ReactElement }
 const HideOnScroll = ({ children }: HideOnScrollProps) => {
@@ -274,12 +272,7 @@ const MobileAccordion = ({ category, onClose }: MobileAccordionProps) => {
 // ── Main Header ────────────────────────────────────────────────────
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const router = useRouter();
   const { mode, toggleColorMode } = useColorMode();
-
-  const allTools = navCategories.flatMap(cat => 
-    cat.tools.map(tool => ({ ...tool, category: cat.label }))
-  );
 
   return (
     <HideOnScroll>
@@ -342,66 +335,9 @@ const Header = () => {
 
           <Box sx={{ flexGrow: 1 }} />
 
-          {/* Search Bar */}
-          <Box sx={{ display: { xs: 'none', md: 'block' }, ml: 2, width: 240 }}>
-            <Autocomplete
-              freeSolo
-              options={allTools}
-              groupBy={(option) => option.category}
-              getOptionLabel={(option) => typeof option === 'string' ? option : option.label}
-              filterOptions={(options, state) =>
-                options.filter((option) => toolMatchesQuery(`${option.label} ${option.description}`, state.inputValue))
-              }
-              onChange={(event, newValue) => {
-                if (typeof newValue === 'object' && newValue !== null) {
-                  router.push(newValue.path);
-                }
-              }}
-              slotProps={{
-                popper: { placement: 'bottom-end' },
-                paper: {
-                  sx: {
-                    width: 340,
-                    maxWidth: '90vw',
-                    mt: 1,
-                    borderRadius: 2,
-                  },
-                },
-                listbox: {
-                  sx: {
-                    maxHeight: 420,
-                    '& .MuiAutocomplete-option': { whiteSpace: 'normal' },
-                  },
-                },
-              }}
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  placeholder="Search tools..."
-                  size="small"
-                  InputProps={{
-                    ...params.InputProps,
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <SearchIcon fontSize="small" sx={{ color: 'text.secondary', opacity: 0.7 }} />
-                      </InputAdornment>
-                    ),
-                    sx: {
-                      borderRadius: 10,
-                      bgcolor: 'action.hover',
-                      border: '1px solid',
-                      borderColor: 'divider',
-                      '& fieldset': { border: 'none' },
-                      '&:hover': { borderColor: 'primary.main', bgcolor: 'action.selected' },
-                      '&.Mui-focused': { borderColor: 'primary.main', bgcolor: 'background.paper', boxShadow: '0 0 0 3px rgba(59,130,246,0.1)' },
-                      fontSize: '0.85rem',
-                      height: 36,
-                      transition: 'all 0.2s ease',
-                    }
-                  }}
-                />
-              )}
-            />
+          {/* Search — sitewide Cmd/Ctrl+K palette, visible at every breakpoint */}
+          <Box sx={{ ml: { xs: 0, sm: 2 } }}>
+            <CommandPalette />
           </Box>
 
           {/* Dark mode toggle — desktop */}
@@ -424,7 +360,7 @@ const Header = () => {
           </IconButton>
 
           {/* Mobile hamburger */}
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1, justifyContent: 'flex-end' }}>
+          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton onClick={toggleColorMode} color="inherit" aria-label="Toggle dark mode" sx={{ mr: 0.5 }}>
               {mode === 'dark' ? <LightModeOutlinedIcon /> : <DarkModeOutlinedIcon />}
             </IconButton>

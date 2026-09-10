@@ -29,7 +29,7 @@ const MonogramGeneratorContent = () => {
         <TextField label="Last Name" value={last} onChange={(e) => setLast(e.target.value)} fullWidth />
       </Box>
 
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
         <Paper variant="outlined" sx={{ p: 5, width: '100%', textAlign: 'center' }}>
           <Typography variant="subtitle2" color="text.secondary" gutterBottom>
             Traditional Monogram (First–Last–Middle)

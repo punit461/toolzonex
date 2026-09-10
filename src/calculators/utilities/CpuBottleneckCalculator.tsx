@@ -125,7 +125,7 @@ const CpuBottleneckCalculator = () => {
           </FormControl>
         </Stack>
 
-        <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Bottleneck Risk</Typography>
           <Typography variant="h3" fontWeight={800} color={riskColor === 'error' ? 'error.main' : riskColor === 'warning' ? 'warning.main' : 'success.main'}>
             {risk}

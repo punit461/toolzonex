@@ -152,7 +152,7 @@ const GSTCalculator = () => {
           </Box>
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Calculation Details</Typography>
             

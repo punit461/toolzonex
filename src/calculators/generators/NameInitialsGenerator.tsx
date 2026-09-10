@@ -40,7 +40,7 @@ const NameInitialsGeneratorContent = () => {
         />
       </Box>
 
-      <Stack spacing={3} alignItems="center">
+      <Stack spacing={3} alignItems="center" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Avatar sx={{ width: 96, height: 96, bgcolor: bgColor, fontSize: '2rem', fontWeight: 700 }}>
           {avatarInitials || '?'}
         </Avatar>
