@@ -107,7 +107,7 @@ const VarianceCalculator = () => {
           />
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2 }}>
             <Box sx={{ textAlign: 'center', mb: 3 }}>
               <Typography variant="h6" color="text.secondary" gutterBottom>Mean</Typography>

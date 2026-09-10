@@ -12,7 +12,7 @@ const tool: ToolRegistryEntry = {
     icon: <ArticleIcon fontSize="large" color="primary"/>,
     seoTitle: "Lorem Ipsum Generator - Dummy Text Placeholder Online",
     seoDescription: "Generate standard dummy text for UI testing, mockups, and wireframes. Free online Lorem Ipsum placeholder text generator.",
-    keywords: ["lorem ipsum", "dummy text generator", "placeholder text", "generate lorem ipsum", "mockup text"],
+    keywords: ["lorem ipsum", "lorem ipsum generator", "dummy text generator", "placeholder text", "generate lorem ipsum", "mockup text"],
     ogTitle: "Lorem Ipsum Generator - Dummy Text Placeholder Online | ToolZoneX",
     ogDescription: "Generate standard dummy text for UI testing, mockups, and wireframes. Free online Lorem Ipsum placeholder text generator.",
     schemaName: "Lorem Ipsum Generator",

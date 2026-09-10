@@ -106,7 +106,7 @@ const CyclingPowerCalculator = () => {
           <TextField label="Headwind (optional)" type="number" fullWidth value={headwind} onChange={(e) => setHeadwind(e.target.value)} onFocus={(e) => e.target.select()} slotProps={{ input: { endAdornment: <InputAdornment position="end">km/h</InputAdornment> } }} helperText="Use a negative number for a tailwind." />
         </Stack>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', mb: 2 }}>
             <Typography variant="body2" color="text.secondary">Estimated Power Required</Typography>
             <Typography variant="h3" color="primary" fontWeight={800}>

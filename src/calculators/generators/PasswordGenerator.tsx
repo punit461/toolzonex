@@ -87,7 +87,7 @@ const PasswordGeneratorContent = () => {
         </Button>
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight="600" mb={1}>Generated Password:</Typography>
         <Paper sx={{ p: 3, display: 'flex', alignItems: 'center', justifyContent: 'space-between', bgcolor: 'background.default', border: '1px solid', borderColor: 'divider' }}>
           <Typography variant="h5" sx={{ wordBreak: 'break-all', fontFamily: 'monospace', fontWeight: '500' }}>

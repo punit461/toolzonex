@@ -165,7 +165,7 @@ const ChildHeightPredictorCalculator = () => {
           </Box>
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper sx={{ p: 4, bgcolor: 'action.hover', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Predicted Adult Height</Typography>
             <Typography variant="h1" component="div" sx={{ fontWeight: 900, fontSize: '3.5rem', color: 'primary.main', my: 2 }}>

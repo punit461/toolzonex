@@ -12,7 +12,7 @@ const tool: ToolRegistryEntry = {
     icon: <SortIcon fontSize="large" color="primary"/>,
     seoTitle: "Alphabetical Sorter - Sort a List A-Z or Z-A Online",
     seoDescription: "Sort a list of items alphabetically (A-Z or Z-A), one item per line or comma-separated, with case-sensitive or case-insensitive sorting.",
-    keywords: ["alphabetical sorter", "sort list alphabetically online", "sort text a-z", "alphabetize list"],
+    keywords: ["alphabetical sorter", "sort list alphabetically online", "sort text a-z", "alphabetize list", "alphabetical order sorter", "alphabetical order generator"],
     ogTitle: "Alphabetical Sorter - Sort a List A-Z or Z-A Online | ToolZoneX",
     ogDescription: "Sort a list of items alphabetically, one item per line or comma-separated.",
     schemaName: "Alphabetical Sorter",

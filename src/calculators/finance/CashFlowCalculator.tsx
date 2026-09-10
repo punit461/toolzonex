@@ -161,7 +161,7 @@ const CashFlowCalculator = () => {
           <RowList title="Cash Outflows" rows={outflows} onAdd={addOutflow} onRemove={removeOutflow} onUpdate={updateOutflow} />
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: netCashFlow >= 0 ? 'primary.main' : 'error.main', color: 'white' }}>
             <Typography variant="body2">Net Cash Flow</Typography>
             <Typography variant="h3" fontWeight="bold">{fmt(netCashFlow)}</Typography>

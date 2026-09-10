@@ -109,7 +109,7 @@ const CeilingFanSizeCalculator = () => {
           <TextField label="Room Width (ft)" type="number" fullWidth value={width} onChange={(e) => setWidth(e.target.value)} onFocus={(e) => e.target.select()} />
         </Stack>
 
-        <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Room Area</Typography>
           <Typography variant="h5" fontWeight={700}>{valid ? `${area.toFixed(0)} sq ft` : '—'}</Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>Recommended Blade Span</Typography>

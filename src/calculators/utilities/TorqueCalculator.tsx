@@ -120,7 +120,7 @@ const TorqueCalculator = () => {
           </Box>
         </Box>
 
-        <Paper sx={{ p: 3, bgcolor: 'action.hover', display: 'flex', flexDirection: 'column', gap: 2, justifyContent: 'center' }}>
+        <Paper sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 3, bgcolor: 'action.hover', display: 'flex', flexDirection: 'column', gap: 2, justifyContent: 'center' }}>
           {result ? (
             <>
               <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>

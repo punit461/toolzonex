@@ -119,7 +119,7 @@ const SleepTimeCalculatorContent = () => {
       </Paper>
 
       {/* If I go to sleep at... */}
-      <Paper variant="outlined" sx={{ p: 4, display: 'flex', flexDirection: 'column', gap: 3, bgcolor: '#f0fdf4' }}>
+      <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, display: 'flex', flexDirection: 'column', gap: 3, bgcolor: '#f0fdf4' }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <BedtimeIcon color="primary" />
           <Typography variant="h6" fontWeight="bold">I am going to sleep at...</Typography>

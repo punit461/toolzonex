@@ -67,7 +67,7 @@ const CssFilterGeneratorContent = () => {
         <Button variant="outlined" onClick={reset}>Reset</Button>
       </Box>
 
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Paper variant="outlined" sx={{ p: 2, display: 'flex', justifyContent: 'center', bgcolor: 'action.hover' }}>
           <Box component="img" src={SAMPLE_IMAGE} alt="Sample preview" sx={{ maxWidth: '100%', borderRadius: 1, filter: filterCss }} />
         </Paper>

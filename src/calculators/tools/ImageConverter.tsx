@@ -113,7 +113,7 @@ const ImageConverterContent = () => {
         )}
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <FormControl fullWidth sx={{ mb: 2 }}>
           <InputLabel>Output Format</InputLabel>
           <Select

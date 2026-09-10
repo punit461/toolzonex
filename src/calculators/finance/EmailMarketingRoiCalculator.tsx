@@ -68,7 +68,7 @@ const EmailMarketingRoiCalculatorContent = () => {
         />
       </Box>
 
-      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', alignItems: 'center' }}>
         <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'action.hover', width: '100%' }}>
           {result ? (
             <>

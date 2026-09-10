@@ -80,7 +80,7 @@ const FilePermissionViewerContent = () => {
         )}
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         {result ? (
           <>
             <Paper variant="outlined" sx={{ p: 2, mb: 2 }}>

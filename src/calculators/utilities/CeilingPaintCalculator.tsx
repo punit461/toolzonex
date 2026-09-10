@@ -104,7 +104,7 @@ const CeilingPaintCalculator = () => {
           />
         </Box>
 
-        <Paper variant="outlined" sx={{ p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 2 }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 2 }}>
           <Box textAlign="center">
             <Typography variant="body2" color="text.secondary">Ceiling Area</Typography>
             <Typography variant="h5" fontWeight={700}>{ceilingArea.toLocaleString(undefined, { maximumFractionDigits: 2 })} sq ft</Typography>

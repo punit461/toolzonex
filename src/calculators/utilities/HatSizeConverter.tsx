@@ -102,7 +102,7 @@ const HatSizeConverter = () => {
           </ToggleButtonGroup>
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           {result ? (
             <Grid container spacing={2}>
               <Grid item xs={6}>

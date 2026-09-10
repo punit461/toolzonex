@@ -96,7 +96,7 @@ const PaverCalculator = () => {
           <TextField label="Waste Allowance (%)" type="number" fullWidth value={wastePct} onChange={(e) => setWastePct(e.target.value)} onFocus={(e) => e.target.select()} />
         </Stack>
 
-        <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Pavers Needed (with waste)</Typography>
           <Typography variant="h3" color="primary" fontWeight={800}>
             {valid ? paversNeeded.toLocaleString() : '—'}

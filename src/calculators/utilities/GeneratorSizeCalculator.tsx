@@ -95,7 +95,7 @@ const GeneratorSizeCalculatorContent = () => {
         />
       </Box>
 
-      <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', height: 'fit-content' }}>
+      <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center', height: 'fit-content' }}>
         <Typography variant="body2" color="text.secondary">Recommended Generator Size</Typography>
         <Typography variant="h3" color="primary" fontWeight={800}>{Math.round(result.recommendedSize).toLocaleString('en-US')} W</Typography>
         <Typography variant="caption" color="text.secondary" display="block" sx={{ mt: 1 }}>

@@ -236,7 +236,7 @@ const MortgageAffordabilityCalculator = () => {
           </Box>
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
             <Typography variant="body2">Max Affordable Home Price</Typography>
             <Typography variant="h3" fontWeight="bold">{fmt(result.maxHomePrice)}</Typography>

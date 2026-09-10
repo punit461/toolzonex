@@ -110,7 +110,7 @@ const SplitBillCalculatorContent = () => {
               slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
           </Box>
-          <Box>
+          <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
             <Typography variant="subtitle1" fontWeight={600} mb={2}>Results</Typography>
             <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
               <Typography variant="body2">Each Person Pays</Typography>

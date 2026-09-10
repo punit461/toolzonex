@@ -102,7 +102,7 @@ const BusinessDaysCalculator = () => {
             <TextField label="End Date" type="date" value={end} onChange={(e) => setEnd(e.target.value)} fullWidth InputLabelProps={{ shrink: true }} />
           )}
         </Box>
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight="600" mb={2}>Result</Typography>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
             <Typography variant="h6">{mode === 'days-to-date' ? 'End Date' : 'Business Days'}</Typography>

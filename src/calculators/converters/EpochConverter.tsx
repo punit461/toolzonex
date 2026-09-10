@@ -100,7 +100,7 @@ const EpochConverterContent = () => {
           </Paper>
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="h6" sx={{ mb: 2, fontWeight: 700 }}>Date → Timestamp</Typography>
           <TextField
             fullWidth

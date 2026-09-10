@@ -124,7 +124,7 @@ const PeriodCalculatorContent = () => {
         </Box>
       </Box>
 
-      <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2 }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, bgcolor: 'action.hover', borderRadius: 2 }}>
         <ResultRow label="Next period expected" value={formatDate(nextPeriod)} />
         <ResultRow label="Days until next period" value={lastPeriod && daysUntil !== null ? `${daysUntil} days` : '—'} />
         <ResultRow label="Current cycle day" value={lastPeriod && dayInCycle ? `Day ${dayInCycle}` : '—'} />

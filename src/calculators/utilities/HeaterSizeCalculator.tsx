@@ -121,7 +121,7 @@ const HeaterSizeCalculator = () => {
           </FormControl>
         </Stack>
 
-        <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Recommended Capacity</Typography>
           <Typography variant="h3" color="primary" fontWeight={800}>
             {valid ? `${Math.round(totalBtu).toLocaleString()} BTU` : '—'}

@@ -87,7 +87,7 @@ const AppleTouchIconGeneratorContent = () => {
         )}
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         {iconUrl ? (
           <>
             <Paper sx={{ p: 2, mb: 2, textAlign: 'center' }}>

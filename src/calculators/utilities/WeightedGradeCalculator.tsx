@@ -124,7 +124,7 @@ const WeightedGradeCalculator = () => {
           <Button startIcon={<AddIcon />} onClick={addCategory} sx={{ mt: 2 }}>Add Category</Button>
         </Box>
 
-        <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', height: 'fit-content' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center', height: 'fit-content' }}>
           <Typography variant="body2" color="text.secondary">Overall Grade</Typography>
           <Typography variant="h3" color="primary" fontWeight={800}>{overallGrade.toFixed(2)}%</Typography>
           <Typography variant="caption" color="text.secondary">Total weight entered: {totalWeight}%</Typography>

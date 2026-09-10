@@ -59,7 +59,7 @@ const FileNameCleanerContent = () => {
         </Stack>
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight={600} mb={2}>Cleaned File Name(s)</Typography>
         {cleaned.length === 0 ? (
           <Paper variant="outlined" sx={{ p: 3, textAlign: 'center', color: 'text.secondary' }}>

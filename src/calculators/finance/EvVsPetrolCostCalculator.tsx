@@ -126,7 +126,7 @@ const EvVsPetrolCostCalculator = () => {
           </Box>
         </Paper>
 
-        <Paper variant="outlined" sx={{ p: 3 }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 3 }}>
           <Typography variant="h6" fontWeight={700} gutterBottom>Petrol Vehicle</Typography>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
             <ToggleButtonGroup value={petrolUnit} exclusive onChange={(_, v) => v && setPetrolUnit(v)} size="small" fullWidth>

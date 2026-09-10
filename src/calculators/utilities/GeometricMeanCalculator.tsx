@@ -98,7 +98,7 @@ const GeometricMeanCalculator = () => {
           />
         </Box>
 
-        <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, bgcolor: 'action.hover', borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           {error ? (
             <Typography variant="body1" color="error" textAlign="center">{error}</Typography>
           ) : geoMean !== null ? (

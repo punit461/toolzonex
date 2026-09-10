@@ -198,7 +198,7 @@ const PFTCalculator = () => {
         </Box>
 
         {/* Results */}
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2 }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Overall Grade</Typography>
             <Typography variant="h2" sx={{ fontWeight: 900, color: overallColor, mb: 3 }}>

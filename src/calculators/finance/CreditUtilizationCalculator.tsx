@@ -142,7 +142,7 @@ const CreditUtilizationCalculator = () => {
           </Button>
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
             <Typography variant="body2">Overall Credit Utilization</Typography>
             <Typography variant="h3" fontWeight="bold">{utilization.toFixed(1)}%</Typography>

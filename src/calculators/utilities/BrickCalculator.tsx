@@ -78,7 +78,7 @@ const BrickCalculatorContent = () => {
         </Paper>
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Paper
           sx={{
             p: 4,

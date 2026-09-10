@@ -26,20 +26,18 @@ I attempted a fix (`CalculatorShell` reads pre-resolved data from React Context 
 - [ ] Or: prototype the Context-based approach on a small subset (e.g. just `/finance/*`, ~250 tools) first, run a real `next build` on that subset in a branch, and confirm memory/behavior before rolling out to all 1,358
 - [ ] Whatever approach is tried, get a real `npm run build` (in CI, or locally with enough memory) as part of verifying it — `tsc --noEmit` alone was not sufficient to catch this
 
-## 3. Smaller content/linking items not yet done
+## 3. Smaller content/linking items
 
-From the original cluster/content-architecture audit findings — lower priority, safe to batch whenever convenient:
-
-- [ ] `/blog/improve-cibil-score` has zero contextual tool link (only reachable via the generic footer) — add a link to the nearest credit-related tool (e.g. a loan-eligibility calculator, if one exists)
-- [ ] Mobile layout fix (`order: -1` to show results above inputs) was only applied to the 401(k) calculator as a proof of concept. If it reads well, consider rolling it out to other calculators with the same input-then-result layout pattern
-- [ ] Homepage body copy is still minimal (~69 words) — consider adding a short "why ToolZoneX" paragraph (100-150 words) for on-page relevance, per the content audit
-- [ ] `scripts/gen-tool-page.mjs` (the one-off new-tool-page generator) is stale — it still emits the old direct-schema template, not the current `buildToolMetadata`/`buildToolSchema` + `ShellPropsProvider` pattern. Update it before using it to scaffold the next new tool, or it'll generate a page that needs manual fixing afterward
+- [x] `/blog/improve-cibil-score` — added an in-body link to the Credit Utilization Calculator (right where the article discusses the 30% rule) and added the Credit Score Estimator to Related Tools
+- [x] Mobile layout fix (`order: -1` to show results above inputs) rolled out from the 401(k) pilot to **702 more calculators** sharing the same two-column input/result grid pattern (verified via a structural scan, not blind regex — 52 files with a different/ambiguous layout were deliberately skipped rather than force-fixed; spot-checked one skip and confirmed it was correctly excluded, a side-by-side comparison layout with no input/result distinction). `tsc --noEmit` clean and full test suite passes across all 702 changed files
+- [x] Homepage body copy — added a "Why ToolZoneX" paragraph (tool count, India-specific framing, blog cross-link) shown in the default browsing state
+- [x] `scripts/gen-tool-page.mjs` rewritten to match the current `buildToolMetadata`/`buildToolSchema` + registry pattern — now scaffolds the `src/data/tools/<slug>.tsx` entry, appends it to `toolRegistry.tsx`'s import list and array, and generates a correct thin `page.tsx`. Tested against a throwaway tool end-to-end and confirmed a clean 2-line diff to the registry before reverting the test
 
 ## 4. Follow-up audits worth running later
 
 - [ ] `/seo images` — a dedicated image-SEO pass wasn't part of the original full audit; worth running once, especially since the Images category score (48/100) in the audit report was a rough estimate, not a real pass
-- [ ] Configure a `GOOGLE_API_KEY` (see `/Users/punit/.config/claude-seo/google-api.json`) so future `/seo audit` runs get real CrUX/PageSpeed/GSC field data instead of the lab-only estimates this one had to fall back on
-- [ ] `/seo drift baseline` — capture a baseline now that this round of fixes is in, so the next audit can diff against it and catch regressions automatically
+- [ ] Configure a `GOOGLE_API_KEY` (see `/Users/punit/.config/claude-seo/google-api.json`) so future `/seo audit` runs get real CrUX/PageSpeed/GSC field data instead of the lab-only estimates this one had to fall back on — needs your API credentials, not something I can set up
+- [x] `/seo drift baseline` — captured 2026-09-10 against the live pre-this-session state
 
 ## 5. Longer-horizon content strategy (Phase 3, not urgent)
 

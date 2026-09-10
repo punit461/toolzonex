@@ -103,7 +103,7 @@ const WindLoadCalculator = () => {
               <ToggleButton value="ms">m/s</ToggleButton>
             </ToggleButtonGroup>
           </Box>
-          <Box sx={{ display: 'flex', gap: 1 }}>
+          <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', gap: 1 }}>
             <TextField label="Surface Area" type="number" fullWidth value={area} onChange={(e) => setArea(e.target.value)} onFocus={(e) => e.target.select()} />
             <ToggleButtonGroup value={areaUnit} exclusive onChange={(_, v) => v && setAreaUnit(v)} size="small">
               <ToggleButton value="ft2">ft²</ToggleButton>

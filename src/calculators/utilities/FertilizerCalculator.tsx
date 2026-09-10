@@ -58,7 +58,7 @@ const FertilizerCalculatorContent = () => {
           />
         </Box>
 
-        <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, display: 'flex', flexDirection: 'column', gap: 2, justifyContent: 'center' }}>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, bgcolor: 'action.hover', borderRadius: 2, display: 'flex', flexDirection: 'column', gap: 2, justifyContent: 'center' }}>
           {result ? (
             <>
               <Paper sx={{ p: 2, textAlign: 'center' }}>

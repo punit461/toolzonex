@@ -95,7 +95,7 @@ const CurlCommandGeneratorContent = () => {
         )}
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle2" color="text.secondary" sx={{ mb: 1 }}>Generated curl Command</Typography>
         <Paper variant="outlined" sx={{ p: 2, position: 'relative', bgcolor: 'grey.900', color: '#10b981', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
           {command}

@@ -94,7 +94,7 @@ const WaterIntakeCalculatorContent = () => {
         </Box>
       </Box>
 
-      <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, bgcolor: 'action.hover', borderRadius: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <Typography variant="h6" color="text.secondary" gutterBottom align="center">Recommended Daily Water Intake</Typography>
         <Typography variant="h2" sx={{ fontWeight: 900, color: 'primary.main', textAlign: 'center', mb: 3 }}>
           {liters.toFixed(1)}L

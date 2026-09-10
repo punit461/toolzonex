@@ -106,7 +106,7 @@ const FlooringCalculator = () => {
           <TextField label="Waste Allowance (%)" type="number" fullWidth value={wastePct} onChange={(e) => setWastePct(e.target.value)} onFocus={(e) => e.target.select()} />
         </Box>
 
-        <Paper variant="outlined" sx={{ p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 2 }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 2 }}>
           <Box textAlign="center">
             <Typography variant="body2" color="text.secondary">Room Area</Typography>
             <Typography variant="h6" fontWeight={700}>{roomArea.toLocaleString(undefined, { maximumFractionDigits: 2 })} {areaUnit}</Typography>

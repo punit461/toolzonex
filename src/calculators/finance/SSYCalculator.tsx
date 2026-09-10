@@ -167,7 +167,7 @@ const SSYCalculator = () => {
           </Box>
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Maturity Value (Year {maturityYear})</Typography>
             <Typography variant="caption" color="text.secondary">Your daughter will be <strong>{girlAgeAtMaturity} years old</strong> at maturity</Typography>

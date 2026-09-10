@@ -100,7 +100,7 @@ const ChmodGeneratorContent = () => {
         />
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Paper variant="outlined" sx={{ p: 2, mb: 2 }}>
           <Typography variant="subtitle2" color="text.secondary">Numeric</Typography>
           <Typography variant="h4" fontWeight={700} fontFamily="monospace">{numeric}</Typography>

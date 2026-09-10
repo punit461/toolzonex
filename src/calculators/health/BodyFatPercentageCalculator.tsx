@@ -76,7 +76,7 @@ const BodyFatPercentageContent = () => {
         />
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         {bodyFat !== null ? (
           <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'action.hover', borderRadius: 4, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Estimated Body Fat (YMCA Method)</Typography>

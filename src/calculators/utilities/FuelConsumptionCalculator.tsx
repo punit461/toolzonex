@@ -117,7 +117,7 @@ const FuelConsumptionCalculator = () => {
           </Box>
         </Box>
 
-        <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, alignContent: 'center' }}>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, alignContent: 'center' }}>
           {result ? (
             <>
               <Paper sx={{ p: 2, textAlign: 'center' }}>

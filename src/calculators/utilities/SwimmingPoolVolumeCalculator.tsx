@@ -148,7 +148,7 @@ const SwimmingPoolVolumeCalculator = () => {
           )}
         </Box>
 
-        <Paper variant="outlined" sx={{ p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 2, textAlign: 'center' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 2, textAlign: 'center' }}>
           <Box>
             <Typography variant="body2" color="text.secondary">Volume</Typography>
             <Typography variant="h6" fontWeight={700}>

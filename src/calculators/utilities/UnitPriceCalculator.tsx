@@ -110,7 +110,7 @@ const UnitPriceCalculator = () => {
           )}
         </Paper>
 
-        <Paper variant="outlined" sx={{ p: 3, borderColor: result?.cheaper === 'B' ? 'success.main' : undefined, borderWidth: result?.cheaper === 'B' ? 2 : 1 }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 3, borderColor: result?.cheaper === 'B' ? 'success.main' : undefined, borderWidth: result?.cheaper === 'B' ? 2 : 1 }}>
           <Typography variant="subtitle1" fontWeight={700} mb={2}>Product B</Typography>
           <TextField label="Price ($)" type="number" fullWidth value={priceB} onChange={(e) => setPriceB(e.target.value)} onFocus={(e) => e.target.select()} sx={{ mb: 2 }} />
           <TextField label={`Quantity (${unitLabel})`} type="number" fullWidth value={qtyB} onChange={(e) => setQtyB(e.target.value)} onFocus={(e) => e.target.select()} sx={{ mb: 2 }} />

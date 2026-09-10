@@ -77,7 +77,7 @@ const RgbToHexContent = () => {
       </Box>
 
       {/* Output Panel */}
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box>
           <Typography variant="subtitle1" fontWeight="600" mb={1}>Generated HEX Code:</Typography>
           <Box sx={{ display: 'flex', gap: 2 }}>

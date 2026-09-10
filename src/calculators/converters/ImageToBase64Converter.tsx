@@ -84,7 +84,7 @@ const ImageToBase64ConverterContent = () => {
       </Box>
 
       {/* Output Panel */}
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2 }}>
         
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="subtitle2" fontWeight="bold">Base64 Output</Typography>

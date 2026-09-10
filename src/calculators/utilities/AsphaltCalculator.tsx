@@ -82,7 +82,7 @@ const AsphaltCalculator = () => {
           <TextField label="Asphalt Density (lb/ft³)" type="number" fullWidth value={density} onChange={(e) => setDensity(e.target.value)} onFocus={(e) => e.target.select()} helperText="Default 145 lb/ft³ — adjust to match your mix" />
         </Stack>
 
-        <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Asphalt Needed</Typography>
           <Typography variant="h3" color="primary" fontWeight={800}>
             {valid ? `${tons.toFixed(2)} tons` : '—'}

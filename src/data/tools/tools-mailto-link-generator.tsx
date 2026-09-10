@@ -12,7 +12,7 @@ const tool: ToolRegistryEntry = {
     icon: <AttachEmailIcon fontSize="large" color="primary"/>,
     seoTitle: "Mailto Link Generator - Create Email Links",
     seoDescription: "Generate mailto links with pre-filled subject, body, CC, and BCC fields. Free online mailto link generator tool.",
-    keywords: ["mailto link generator", "create email links", "mailto links", "email links", "pre-filled emails", "email template generator", "mailto generator", "email link creator", "email mailto generator", "mailto link creator", "mail to generator", "mail to link creator", "gmail link generator", "create a mailto link", "html mailto link generator"],
+    keywords: ["mailto link generator", "create email links", "mailto links", "email links", "pre-filled emails", "email template generator", "mailto generator", "email link creator", "email mailto generator", "mailto link creator", "mail to generator", "mail to link creator", "gmail link generator", "create a mailto link", "html mailto link generator", "email link generator"],
     ogTitle: "Mailto Link Generator - Create Email Links | ToolZoneX",
     ogDescription: "Generate mailto links with pre-filled subject, body, CC, and BCC fields. Free online mailto link generator tool.",
     schemaName: "Mailto Link Generator",

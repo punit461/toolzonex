@@ -12,7 +12,7 @@ const tool: ToolRegistryEntry = {
     icon: <PaidIcon fontSize="large" color="primary"/>,
     seoTitle: "Dividend Yield Calculator - Free Stock Dividend Yield",
     seoDescription: "Free dividend yield calculator. Enter annual dividend per share and current share price to calculate dividend yield percentage.",
-    keywords: ["dividend yield calculator", "dividend yield formula", "stock dividend calculator", "dividend per share calculator", "annual dividend yield"],
+    keywords: ["dividend yield calculator", "dividend yield formula", "stock dividend calculator", "dividend per share calculator", "annual dividend yield", "dividend percentage calculator", "div yield calculator", "portfolio dividend yield calculator"],
     ogTitle: "Dividend Yield Calculator - Free Stock Dividend Yield | ToolZoneX",
     ogDescription: "Calculate a stock's dividend yield from dividend per share and share price.",
     schemaName: "Dividend Yield Calculator",

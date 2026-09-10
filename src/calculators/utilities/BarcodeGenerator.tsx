@@ -121,7 +121,7 @@ const BarcodeGeneratorContent = () => {
       </Box>
 
       {/* Preview Panel */}
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, alignItems: 'center' }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 3, alignItems: 'center' }}>
         
         <Paper 
           sx={{ 

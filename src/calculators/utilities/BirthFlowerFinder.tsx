@@ -44,7 +44,7 @@ const BirthFlowerFinderContent = () => {
         ))}
       </TextField>
 
-      <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'white' }}>
+      <Paper sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 3, bgcolor: 'primary.main', color: 'white' }}>
         <Typography variant="body2">Birth Flower{info.flowers.length > 1 ? 's' : ''} for {info.month}</Typography>
         <Typography variant="h4" fontWeight="bold" sx={{ mb: 1 }}>{info.flowers.join(' & ')}</Typography>
         <Typography variant="body2">{info.meaning}</Typography>

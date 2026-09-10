@@ -65,7 +65,7 @@ const WeddingSeatingCalculator = () => {
           <TextField label="Total Guest Count" type="number" value={guests} onChange={(e) => setGuests(e.target.value)} onFocus={(e) => e.target.select()} fullWidth />
         </Box>
 
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Tables Needed</Typography>
           {results.map((r) => (
             <Paper key={r.seats} sx={{ p: 2, mb: 1, display: 'flex', justifyContent: 'space-between' }}>

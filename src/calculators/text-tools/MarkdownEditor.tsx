@@ -112,7 +112,7 @@ const MarkdownEditorContent = () => {
         />
       </Box>
 
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 1 }}>
         <Typography variant="subtitle1" fontWeight="600">Preview</Typography>
         <Paper variant="outlined" sx={{ p: 2, minHeight: 498, overflow: 'auto', '& h1': { fontSize: '1.8rem', mt: 1 }, '& h2': { fontSize: '1.4rem', mt: 1.5 }, '& h3': { fontSize: '1.15rem', mt: 1 }, '& pre': { bgcolor: 'grey.100', p: 1.5, borderRadius: 1, overflow: 'auto' }, '& code': { bgcolor: 'grey.100', px: 0.5, borderRadius: 0.5 }, '& pre code': { bgcolor: 'transparent', px: 0 }, '& blockquote': { borderLeft: '3px solid', borderColor: 'primary.main', pl: 2, color: 'text.secondary', my: 1 }, '& a': { color: 'primary.main' }, '& hr': { border: 'none', borderTop: '1px solid', borderColor: 'divider', my: 2 }, '& ul': { pl: 3 }, '& p': { my: 0.5 } }}>
           <div dangerouslySetInnerHTML={{ __html: html }} />

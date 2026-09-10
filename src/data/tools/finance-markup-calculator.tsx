@@ -12,7 +12,7 @@ const tool: ToolRegistryEntry = {
     icon: <RequestQuoteIcon fontSize="large" color="primary"/>,
     seoTitle: "Markup Calculator - Selling Price From Cost & Markup %",
     seoDescription: "Free markup calculator. Enter cost price and desired markup percentage to get selling price, profit, and the equivalent profit margin.",
-    keywords: ["markup calculator", "markup percentage calculator", "cost to selling price calculator", "markup vs margin calculator", "pricing markup calculator"],
+    keywords: ["markup calculator", "markup percentage calculator", "cost to selling price calculator", "markup vs margin calculator", "pricing markup calculator", "markup price", "mark up cost", "mark up price"],
     ogTitle: "Markup Calculator - Selling Price & Profit | ToolZoneX",
     ogDescription: "Calculate selling price and profit from cost price and markup percentage.",
     schemaName: "Markup Calculator",

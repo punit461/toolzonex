@@ -73,7 +73,7 @@ const FaviconHtmlGeneratorContent = () => {
         </Grid>
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Stack direction="row" justifyContent="space-between" alignItems="center" mb={1}>
           <Typography variant="subtitle1" fontWeight={600}>HTML to Paste in &lt;head&gt;</Typography>
           <IconButton size="small" onClick={copyHtml} aria-label="Copy HTML">

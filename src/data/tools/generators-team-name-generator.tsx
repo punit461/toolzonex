@@ -12,7 +12,7 @@ const tool: ToolRegistryEntry = {
     icon: <GroupsIcon fontSize="large" color="primary"/>,
     seoTitle: "Team Name Generator - Sports, Gaming & Funny",
     seoDescription: "Generate random team names by theme — Sports, Gaming, Corporate, or Funny. Free online tool, five suggestions per click.",
-    keywords: ["team name generator", "random team name generator", "sports team name generator", "funny team name generator"],
+    keywords: ["team name generator", "random team name generator", "sports team name generator", "funny team name generator", "cool team name generator", "gaming team name generator"],
     ogTitle: "Team Name Generator - Sports, Gaming & Funny | ToolZoneX",
     ogDescription: "Generate random team names by theme — Sports, Gaming, Corporate, or Funny.",
     schemaName: "Team Name Generator",

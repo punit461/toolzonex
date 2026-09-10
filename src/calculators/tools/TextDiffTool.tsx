@@ -131,7 +131,7 @@ const TextDiffToolContent = () => {
             minRows={10}
           />
         </Box>
-        <Box>
+        <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight="bold" mb={1}>Modified Text</Typography>
           <LineNumberedTextarea
             value={modifiedText}

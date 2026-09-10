@@ -81,7 +81,7 @@ const RebarCalculator = () => {
           <TextField label="Rebar Spacing, On-Center (inches)" type="number" fullWidth value={spacing} onChange={(e) => setSpacing(e.target.value)} onFocus={(e) => e.target.select()} />
         </Stack>
 
-        <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
+        <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Total Rebar Pieces</Typography>
           <Typography variant="h3" color="primary" fontWeight={800}>{valid ? totalBars : '—'}</Typography>
           <Box sx={{ mt: 3, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>

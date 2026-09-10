@@ -46,7 +46,7 @@ const WaterFlowRateCalculatorContent = () => {
         />
       </Box>
 
-      <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
+      <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
         <Typography variant="body2" color="text.secondary">Flow Rate</Typography>
         <Typography variant="h4" color="primary" fontWeight={800}>{result.gpm.toFixed(2)} GPM</Typography>
         <Typography variant="body2" sx={{ mt: 2 }}>{result.lpm.toFixed(2)} L/min</Typography>

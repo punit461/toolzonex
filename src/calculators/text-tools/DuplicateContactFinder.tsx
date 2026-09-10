@@ -96,7 +96,7 @@ const DuplicateContactFinderContent = () => {
         />
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight={600} mb={1}>
           {duplicates.length > 0 ? `${duplicates.length} Possible Duplicate Group${duplicates.length === 1 ? '' : 's'}` : 'Results'}
         </Typography>

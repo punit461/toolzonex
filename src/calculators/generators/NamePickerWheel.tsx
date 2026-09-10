@@ -84,7 +84,7 @@ const NamePickerWheelContent = () => {
         </Typography>
       </Box>
 
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3 }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3 }}>
         <Box sx={{ position: 'relative', width: 240, height: 240 }}>
           <Box sx={{
             position: 'absolute', top: -14, left: '50%', transform: 'translateX(-50%)', zIndex: 10,

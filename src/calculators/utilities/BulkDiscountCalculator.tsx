@@ -101,7 +101,7 @@ const BulkDiscountContent = () => {
           <Typography variant="body2">Total Price</Typography>
           <Typography variant="h4" fontWeight="bold">{money(totalPrice)}</Typography>
         </Paper>
-        <Stack spacing={1}>
+        <Stack spacing={1} sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Applied Discount</Typography>
             <Typography fontWeight={600}>{appliedTier ? `${discountPct}%` : 'None'}</Typography>

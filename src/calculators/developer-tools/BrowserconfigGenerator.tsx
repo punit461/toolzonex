@@ -47,7 +47,7 @@ const BrowserconfigGeneratorContent = () => {
         <TextField label="Tile Background Color" type="color" value={tileColor} onChange={(e) => setTileColor(e.target.value)} sx={{ width: { xs: '100%', sm: '50%' } }} />
       </Box>
 
-      <Box>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
           <Typography variant="subtitle1" fontWeight="600">browserconfig.xml:</Typography>
           <Button size="small" startIcon={<ContentCopyIcon />} onClick={copyResult}>

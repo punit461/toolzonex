@@ -84,7 +84,7 @@ const CssTriangleGeneratorContent = () => {
         </Box>
       </Box>
 
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+      <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Live Preview</Typography>
         <Paper variant="outlined" sx={{ p: 3, minHeight: 220, display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'grey.50' }}>
           <Box sx={triangleStyle(direction, size, color)} />
