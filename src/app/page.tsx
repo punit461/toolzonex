@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Box, Typography, Card, CardContent, TextField, InputAdornment, Chip, CardActionArea } from '@mui/material';
+import { Box, Typography, Card, CardContent, TextField, InputAdornment, CardActionArea } from '@mui/material';
 import RouterLink from 'next/link';
 import SearchIcon from '@mui/icons-material/Search';
 import { categories } from '@/data/toolCategories';
@@ -26,7 +26,25 @@ const DASHBOARD_TILES: DashboardTile[] = [
   { label: 'AI', path: '/ai', sourceCategoryLabels: ['AI'] },
 ];
 
+/**
+ * The handful of tools that actually carry search demand, per Search Console.
+ * These are the reason most people arrive, so they get one click from the top
+ * of the page rather than being buried in a category.
+ */
+const TOP_INTENTS: { label: string; path: string }[] = [
+  { label: 'EMI', path: '/finance/emi-calculator' },
+  { label: 'Income Tax', path: '/finance/income-tax-calculator' },
+  { label: 'BMI', path: '/health/bmi-calculator' },
+  { label: 'Age', path: '/utilities/age-calculator' },
+  { label: 'Percentage', path: '/utilities/percentage-calculator' },
+  { label: 'SIP', path: '/finance/sip-calculator' },
+  { label: 'GST', path: '/finance/gst-calculator' },
+];
+
 const PREVIEW_ICON_COUNT = 4;
+
+/** Categories at or above this size get the fuller tile treatment. */
+const MAJOR_CATEGORY_THRESHOLD = 150;
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -45,113 +63,169 @@ const Home = () => {
     const previewIcons = sourceCats
       .flatMap((cat) => cat.tools.map((tool) => tool.icon))
       .slice(0, PREVIEW_ICON_COUNT);
-    const color = sourceCats[0]?.color ?? '#000000';
-    return { ...tile, toolCount, previewIcons, color };
-  }).filter((tile) => tile.toolCount > 0);
+    return { ...tile, toolCount, previewIcons };
+  })
+    .filter((tile) => tile.toolCount > 0)
+    .sort((a, b) => b.toolCount - a.toolCount);
+
+  const totalTools = tiles.reduce((sum, t) => sum + t.toolCount, 0);
 
   return (
     <>
-      {/* Hero */}
-      <Box sx={{ textAlign: 'center', py: { xs: 4, md: 6 }, mb: 4 }}>
-        <Typography variant="h1" gutterBottom sx={{ fontWeight: 900, fontSize: { xs: '2rem', md: '3rem' } }}>
-          Smart Tools for Every Decision
+      <Box sx={{ py: { xs: 5, md: 8 }, maxWidth: 760 }}>
+        <Typography
+          variant="h1"
+          sx={{ fontSize: 'clamp(2.25rem, 5vw, 3.25rem)', lineHeight: 1.08, mb: 2.5 }}
+        >
+          Get the number, then get on with your day.
         </Typography>
-        <Typography variant="h6" color="text.secondary" sx={{ maxWidth: '580px', mx: 'auto', fontWeight: 400, mb: 4 }}>
-          Finance, health, utilities, and online tools — built for India, designed to be fast.
+        <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.125rem', mb: 4, maxWidth: '58ch' }}>
+          {totalTools.toLocaleString('en-IN')} free calculators and converters for finance, health, and everyday
+          questions. Nothing to install, no sign-up, and your numbers never leave the browser.
         </Typography>
 
-        <Box sx={{ maxWidth: 600, mx: 'auto' }}>
-          <TextField
-            fullWidth
-            placeholder="Search for a tool..."
-            variant="outlined"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            InputProps={{
+        <TextField
+          fullWidth
+          placeholder="Search for a tool..."
+          variant="outlined"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          slotProps={{
+            input: {
               startAdornment: (
                 <InputAdornment position="start">
-                  <SearchIcon color="primary" />
+                  <SearchIcon sx={{ color: 'text.secondary' }} />
                 </InputAdornment>
               ),
-            }}
-          />
-        </Box>
+              sx: { fontSize: '1.0625rem', py: 0.5 },
+            },
+          }}
+          sx={{ maxWidth: 560 }}
+        />
+
+        {query === '' && (
+          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 2.5, alignItems: 'center' }}>
+            <Typography variant="body2" color="text.secondary" sx={{ mr: 0.5 }}>
+              Most used:
+            </Typography>
+            {TOP_INTENTS.map((intent) => (
+              <Box
+                key={intent.path}
+                component={RouterLink}
+                href={intent.path}
+                sx={{
+                  px: 1.5,
+                  py: 0.5,
+                  borderRadius: 2,
+                  border: '1px solid',
+                  borderColor: 'divider',
+                  fontSize: '0.875rem',
+                  fontWeight: 500,
+                  color: 'text.primary',
+                  textDecoration: 'none',
+                  transition: 'border-color 0.15s, color 0.15s',
+                  '&:hover': { borderColor: 'primary.main', color: 'primary.main' },
+                }}
+              >
+                {intent.label}
+              </Box>
+            ))}
+          </Box>
+        )}
       </Box>
 
-      {query === '' ? (
-        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' }, gap: 3, mb: 8 }}>
-          {tiles.map((tile) => (
-            <Card
-              key={tile.path}
-              sx={{
-                height: '100%',
-                transition: 'transform 0.2s, box-shadow 0.2s',
-                '&:hover': { transform: 'translateY(-4px)', boxShadow: 6 },
-              }}
-            >
-              <CardActionArea component={RouterLink} href={tile.path} sx={{ height: '100%', p: 1 }}>
-                <CardContent>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
-                    <Typography variant="h5" component="div" sx={{ fontWeight: 700, fontSize: '1.15rem' }}>
-                      {tile.label}
-                    </Typography>
-                    <Chip label={`${tile.toolCount} tools`} size="small" sx={{ bgcolor: tile.color, color: '#fff', fontWeight: 700 }} />
-                  </Box>
-                  <Box sx={{ display: 'flex', gap: 1.5 }}>
-                    {tile.previewIcons.map((icon, idx) => (
-                      <Box key={idx} sx={{ '& svg': { fontSize: '1.4rem' }, color: 'text.secondary' }}>
-                        {icon}
+      {query === '' && (
+        <Box sx={{ mb: 8 }}>
+          <Typography variant="h2" sx={{ mb: 3 }}>
+            Browse by category
+          </Typography>
+
+          <Box
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' },
+              gap: 2,
+            }}
+          >
+            {tiles.map((tile) => {
+              const isMajor = tile.toolCount >= MAJOR_CATEGORY_THRESHOLD;
+              return (
+                <Card
+                  key={tile.path}
+                  variant="outlined"
+                  sx={{
+                    transition: 'border-color 0.15s',
+                    '&:hover': { borderColor: 'primary.main' },
+                  }}
+                >
+                  <CardActionArea component={RouterLink} href={tile.path} sx={{ height: '100%' }}>
+                    <CardContent sx={{ p: isMajor ? 3 : 2.25 }}>
+                      <Box sx={{ display: 'flex', alignItems: 'baseline', gap: 1, mb: isMajor ? 1.5 : 0.5 }}>
+                        <Typography
+                          component="span"
+                          sx={{ fontWeight: 600, fontSize: isMajor ? '1.25rem' : '1rem', letterSpacing: '-0.01em' }}
+                        >
+                          {tile.label}
+                        </Typography>
+                        <Typography component="span" variant="body2" color="text.secondary">
+                          {tile.toolCount}
+                        </Typography>
                       </Box>
-                    ))}
-                  </Box>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          ))}
+                      {isMajor && (
+                        <Box sx={{ display: 'flex', gap: 1.5, '& svg': { fontSize: '1.35rem' }, color: 'text.secondary' }}>
+                          {tile.previewIcons.map((icon, idx) => (
+                            <Box key={idx} sx={{ display: 'flex' }}>{icon}</Box>
+                          ))}
+                        </Box>
+                      )}
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              );
+            })}
+          </Box>
         </Box>
-      ) : null}
+      )}
 
       {query === '' && (
-        <Box sx={{ maxWidth: 720, mx: 'auto', mt: 8, mb: 4, textAlign: 'center' }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: '1.4rem', md: '1.75rem' }, mb: 2 }}>
-            Why ToolZoneX?
+        <Box sx={{ maxWidth: 680, mb: 6 }}>
+          <Typography variant="h2" sx={{ mb: 2 }}>
+            Why ToolZoneX
           </Typography>
           <Typography variant="body1" color="text.secondary">
-            ToolZoneX brings together {tiles.reduce((sum, t) => sum + t.toolCount, 0)}+ calculators, converters, and
-            generators across finance, health, and everyday utilities — built for India, from EMI and tax calculators
-            using current FY slabs to BMI and health tools with Indian-specific guidelines. Every tool runs entirely
-            in your browser: no sign-up, no data leaving your device, no installs. Alongside the calculators, our{' '}
-            <RouterLink href="/blog" style={{ color: 'inherit', fontWeight: 600 }}>blog</RouterLink> covers personal
-            finance topics in depth — PPF rates, old vs. new tax regime, SIP planning — so you can understand the
-            numbers a calculator gives you, not just get them.
+            Every tool here runs entirely in your browser — enter your salary, your loan amount, or your medical
+            numbers and none of it is uploaded anywhere. The finance tools are built for Indian rules specifically:
+            current FY tax slabs, PPF and SSY limits, GST rates, and HRA exemption maths, rather than a US calculator
+            with the currency symbol swapped. And when a number needs explaining, the{' '}
+            <Box component={RouterLink} href="/blog" sx={{ color: 'primary.main', fontWeight: 500 }}>
+              guides
+            </Box>{' '}
+            cover the rules behind it.
           </Typography>
         </Box>
       )}
 
       {query !== '' && (
         filteredCategories.map((cat) => (
-          <Box key={cat.label} sx={{ mb: 8 }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 3 }}>
-              <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: '1.4rem', md: '1.75rem' } }}>
-                {cat.label}
+          <Box key={cat.label} sx={{ mb: 6 }}>
+            <Box sx={{ display: 'flex', alignItems: 'baseline', gap: 1.5, mb: 2 }}>
+              <Typography variant="h2">{cat.label}</Typography>
+              <Typography variant="body2" color="text.secondary">
+                {cat.tools.length}
               </Typography>
-              <Chip label={`${cat.tools.length} tools`} size="small" sx={{ bgcolor: cat.color, color: '#fff', fontWeight: 700 }} />
             </Box>
 
-            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' }, gap: 3 }}>
+            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' }, gap: 2 }}>
               {cat.tools.map((tool) => (
                 <Card
                   key={tool.path}
-                  sx={{
-                    height: '100%',
-                    transition: 'transform 0.2s, box-shadow 0.2s',
-                    '&:hover': { transform: 'translateY(-4px)', boxShadow: 6 },
-                  }}
+                  variant="outlined"
+                  sx={{ transition: 'border-color 0.15s', '&:hover': { borderColor: 'primary.main' } }}
                 >
-                  <CardActionArea component={RouterLink} href={tool.path} sx={{ height: '100%', p: 1 }}>
+                  <CardActionArea component={RouterLink} href={tool.path} sx={{ height: '100%' }}>
                     <CardContent>
-                      <Box sx={{ mb: 1.5 }}>{tool.icon}</Box>
-                      <Typography variant="h5" component="div" sx={{ fontWeight: 700, mb: 0.5, fontSize: '1.05rem' }}>
+                      <Box sx={{ mb: 1, color: 'text.secondary', '& svg': { fontSize: '1.5rem' } }}>{tool.icon}</Box>
+                      <Typography sx={{ fontWeight: 600, mb: 0.5, fontSize: '1rem' }}>
                         {tool.title}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">

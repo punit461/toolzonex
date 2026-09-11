@@ -1,5 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import localFont from "next/font/local";
+// Self-hosted variable font: ships every weight from one file, with no
+// build-time or runtime call to Google's CDN (the static export can't rely on
+// either). Replaces a next/font/local setup whose four "weight" files were
+// byte-identical copies of Regular, so all bold text fell back to a system face.
+import "@fontsource-variable/geist";
 import "./globals.css";
 import ThemeRegistry from "@/components/ThemeRegistry";
 import Header from "@/components/Header";
@@ -7,12 +11,6 @@ import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Box, Container } from "@mui/material";
 import { ORGANIZATION_SAME_AS } from "@/data/author";
-
-const inter = localFont({
-  src: '../assets/fonts/Inter-Regular.woff2',
-  display: 'swap',
-  variable: '--font-inter',
-});
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -170,7 +168,7 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className={inter.className}>
+      <body>
         {gaMeasurementId && <GoogleAnalytics measurementId={gaMeasurementId} />}
         <ThemeRegistry>
           <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
