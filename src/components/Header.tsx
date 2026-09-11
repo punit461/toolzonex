@@ -5,7 +5,7 @@ import {
   AppBar, Toolbar, Box, Button, IconButton, Drawer,
   List, ListItemButton, ListItemText, Divider, useScrollTrigger,
   Slide, Paper, Popper, Grow, ClickAwayListener, MenuList, MenuItem,
-  Typography, Collapse
+  Collapse
 } from '@mui/material';
 import RouterLink from 'next/link';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -18,6 +18,7 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import { useColorMode } from './ColorModeProvider';
 import { categories as toolCategories } from '@/data/toolCategories';
+import { featuredToolsByGroup, type FeaturedTool } from '@/data/featuredTools';
 import CommandPalette from './CommandPalette';
 
 interface HideOnScrollProps { children: React.ReactElement }
@@ -32,9 +33,15 @@ const HideOnScroll = ({ children }: HideOnScrollProps) => {
 // list — the two had already drifted twice (AI Pomodoro and Image
 // Resizer were both missing from this nav after being added to the
 // homepage). Deriving means that can't happen again.
-interface NavTool { label: string; path: string; description: string }
 interface DashboardLink { label: string; path: string }
-interface NavCategory { label: string; tools: NavTool[]; dashboardLinks: DashboardLink[] }
+interface NavCategory {
+  label: string;
+  /** Curated shortlist, not the full inventory -- see featuredTools.ts. */
+  tools: FeaturedTool[];
+  /** Real inventory size, shown on the "view all" link. */
+  totalTools: number;
+  dashboardLinks: DashboardLink[];
+}
 
 const NAV_GROUPS: { label: string; sourceCategories: string[] }[] = [
   { label: 'AI Tools', sourceCategories: ['AI'] },
@@ -78,15 +85,27 @@ const DASHBOARD_LABELS: Record<string, string> = {
   '/ai': 'AI',
 };
 
+/**
+ * Each menu shows a curated shortlist (src/data/featuredTools.ts) plus a
+ * "view all" link into the category hub, which carries the full inventory.
+ *
+ * It used to flat-map every tool in the group instead: 336 links in the Math
+ * & Utilities menu, laid out in 240px columns, produced a panel ~5,760px wide
+ * that ran clean off a 1440px screen. It also meant ~1,350 identical nav
+ * links on every page, which thins internal link equity and buries the hubs.
+ */
 const navCategories: NavCategory[] = NAV_GROUPS.map((group) => {
   const dashboardPaths = Array.from(
     new Set(group.sourceCategories.map((cat) => CATEGORY_DASHBOARD_ROUTES[cat]).filter(Boolean))
   );
+  const totalTools = toolCategories
+    .filter((cat) => group.sourceCategories.includes(cat.label))
+    .reduce((sum, cat) => sum + cat.tools.length, 0);
+
   return {
     label: group.label,
-    tools: toolCategories
-      .filter((cat) => group.sourceCategories.includes(cat.label))
-      .flatMap((cat) => cat.tools.map((tool) => ({ label: tool.title, path: tool.path, description: tool.description }))),
+    tools: featuredToolsByGroup[group.label] ?? [],
+    totalTools,
     dashboardLinks: dashboardPaths.map((path) => ({ label: DASHBOARD_LABELS[path], path })),
   };
 });
@@ -109,13 +128,6 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
   const handleMenuMouseEnter = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
   };
-
-  const maxPerCol = 14;
-  const cols = Math.ceil(category.tools.length / maxPerCol);
-  
-  const columns = Array.from({ length: cols }, (_, i) => 
-    category.tools.slice(i * maxPerCol, (i + 1) * maxPerCol)
-  );
 
   return (
     <Box onMouseLeave={handleClose}>
@@ -151,46 +163,39 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
         {({ TransitionProps }) => (
           <Grow {...TransitionProps} style={{ transformOrigin: 'top left' }}>
             <Paper
-              elevation={12}
+              elevation={2}
               onMouseEnter={handleMenuMouseEnter}
               onMouseLeave={handleClose}
               sx={{
                 mt: 1,
                 borderRadius: 3,
                 overflow: 'hidden',
-                minWidth: cols * 240,
-                border: '1px solid',
-                borderColor: 'divider',
-                backdropFilter: 'blur(20px)',
+                width: category.tools.length > 6 ? 560 : 300,
+                maxWidth: 'calc(100vw - 32px)',
               }}
             >
               <ClickAwayListener onClickAway={() => setOpen(false)}>
                 <Box>
-                  <Box sx={{ px: 2, py: 1, bgcolor: 'action.hover', borderBottom: '1px solid', borderColor: 'divider' }}>
-                    <Typography variant="caption" sx={{ fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'text.secondary' }}>
-                      {category.label}
-                    </Typography>
-                  </Box>
-                  <Box sx={{ display: 'flex' }}>
-                    {columns.map((col, idx) => (
-                      <React.Fragment key={idx}>
-                        {idx > 0 && <Divider orientation="vertical" flexItem />}
-                        <MenuList sx={{ py: 0.5, flex: 1 }}>
-                          {col.map((tool) => (
-                            <MenuItem
-                              key={tool.path}
-                              component={RouterLink}
-                              href={tool.path}
-                              onClick={() => setOpen(false)}
-                              sx={{ fontSize: '0.875rem', py: 0.75, borderRadius: 1, mx: 0.5 }}
-                            >
-                              {tool.label}
-                            </MenuItem>
-                          ))}
-                        </MenuList>
-                      </React.Fragment>
+                  <MenuList
+                    sx={{
+                      py: 1,
+                      display: 'grid',
+                      gridTemplateColumns: category.tools.length > 6 ? '1fr 1fr' : '1fr',
+                      columnGap: 0.5,
+                    }}
+                  >
+                    {category.tools.map((tool) => (
+                      <MenuItem
+                        key={tool.path}
+                        component={RouterLink}
+                        href={tool.path}
+                        onClick={() => setOpen(false)}
+                        sx={{ fontSize: '0.875rem', py: 0.75, borderRadius: 1.5, mx: 1 }}
+                      >
+                        {tool.label}
+                      </MenuItem>
                     ))}
-                  </Box>
+                  </MenuList>
                   {category.dashboardLinks.length > 0 && (
                     <MenuList sx={{ py: 0.5, borderTop: '1px solid', borderColor: 'divider' }}>
                       {category.dashboardLinks.map((link) => (
@@ -199,9 +204,9 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
                           component={RouterLink}
                           href={link.path}
                           onClick={() => setOpen(false)}
-                          sx={{ fontSize: '0.8rem', py: 0.75, borderRadius: 1, mx: 0.5, fontWeight: 700, color: 'primary.main' }}
+                          sx={{ fontSize: '0.8125rem', py: 0.75, borderRadius: 1.5, mx: 1, fontWeight: 600, color: 'primary.main' }}
                         >
-                          View all {link.label} tools
+                          All {link.label} tools
                           <ArrowForwardIcon sx={{ fontSize: '0.9rem', ml: 0.75 }} />
                         </MenuItem>
                       ))}
@@ -257,8 +262,8 @@ const MobileAccordion = ({ category, onClose }: MobileAccordionProps) => {
               sx={{ pl: 4, py: 0.6, borderTop: '1px solid', borderColor: 'divider' }}
             >
               <ListItemText
-                primary={`View all ${link.label} tools →`}
-                slotProps={{ primary: { sx: { fontSize: '0.85rem', fontWeight: 700, color: 'primary.main' } } }}
+                primary={`All ${link.label} tools`}
+                slotProps={{ primary: { sx: { fontSize: '0.85rem', fontWeight: 600, color: 'primary.main' } } }}
               />
             </ListItemButton>
           ))}
