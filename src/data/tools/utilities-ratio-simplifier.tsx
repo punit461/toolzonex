@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the site's general Ratio Calculator?", answer: "The general Ratio Calculator handles exactly two numbers and also offers a \"Scale to Total\" mode for splitting a total by a ratio. This tool is a focused simplifier that accepts any number of terms — add as many rows as your ratio needs — for when you specifically want to simplify a multi-term ratio." }, { question: "Can I simplify a ratio with decimal numbers?", answer: "This tool rounds each term to the nearest whole number before finding the GCD, since GCD is a whole-number concept. For a ratio made of decimals, multiply every term by 10, 100, etc. first to make them whole numbers, then simplify." }, { question: "What does it mean if one of my terms is zero?", answer: "A zero term stays zero after simplifying — dividing zero by any GCD is still zero — as long as at least one other term is non-zero so a valid GCD can be found." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

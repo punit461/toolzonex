@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can this fix any corrupted PDF?", answer: "No. It recovers files with minor structural issues that a lenient parser can still make sense of. If the core structure is too badly damaged, the parser itself will fail and the tool will tell you it couldn't recover the file." }, { question: "Will this fix visual corruption, like garbled text or missing images?", answer: "No — this tool repairs the PDF's underlying object structure, not rendering issues caused by missing fonts or damaged image streams inside an otherwise valid file." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

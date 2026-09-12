@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Sentence Counter?", answer: "The Sentence Counter only reports how many sentences, words, and characters are in your text — it doesn't show you the individual sentences themselves. This Sentence Splitter's entire purpose is the opposite: producing the actual list of extracted sentences, one per line, ready to copy or review." }, { question: "Does it handle abbreviations like \"Dr.\" or \"e.g.\" correctly?", answer: "Not perfectly — this tool uses a simple punctuation rule without any special handling for abbreviations, so a period inside an abbreviation may cause an early split. This keeps the logic fast and predictable for typical writing without heavy abbreviation use." }, { question: "Can I copy just one sentence instead of all of them?", answer: "The Copy All button copies every extracted sentence at once, one per line; to copy just one, simply select and copy that sentence's text directly from the list." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

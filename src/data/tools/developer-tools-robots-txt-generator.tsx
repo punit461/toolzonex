@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Where do I put the robots.txt file?", answer: "Upload it to the root directory of your website (e.g., https://example.com/robots.txt)." }, { question: "Does a robots.txt block all crawlers?", answer: "No — it is a voluntary standard. Legitimate search engine bots respect it, but malicious bots may ignore it." }, { question: "What is Crawl-delay?", answer: "It tells compliant crawlers how many seconds to wait between requests to your site, helping reduce server load." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

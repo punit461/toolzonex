@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Habit Tracker Generator?", answer: "The Habit Tracker Generator is a daily yes/no checkbox GRID for tracking habit consistency across many days — it doesn't use numeric targets at all. This Goal Tracker Generator tracks cumulative numeric PROGRESS toward a quantifiable target over time, like saving a specific dollar amount or reading a specific number of books — a fundamentally different tracking model." }, { question: "Does my progress get saved?", answer: "No — this tool uses client-side state only, with no persistence. Your goals and progress reset when you reload the page, so it's best used for a quick snapshot rather than long-term tracking." }, { question: "Can a goal go over 100%?", answer: "The progress bar itself caps visually at 100%, but the percentage-complete text will show the true value if your current progress exceeds your target." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

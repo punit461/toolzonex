@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Do I need to change any settings to use these?", answer: "No — this tool only generates name ideas. To actually rename your network, log into your router's admin settings (usually through a browser at its local IP address) and update the SSID field there." }, { question: "Will changing my WiFi name disconnect my devices?", answer: "Yes, typically — devices connected to the old network name will need to reconnect to the new name and re-enter the password once you save the change on your router." }, { question: "How many names does this generator draw from?", answer: "Over 60 hand-picked options, with 3 shown at random on each click." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

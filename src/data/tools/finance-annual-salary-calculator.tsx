@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why are there 26 biweekly periods but only 12 monthly ones?", answer: "Biweekly pay happens every two weeks, and a year has 52 weeks, so that's 26 pay periods — not the same as 24 (twice a month). Semi-monthly pay, which is exactly twice a month, would use 24 periods instead; biweekly and semi-monthly are easy to confuse but aren't identical." }, { question: "Does this account for unpaid time off or overtime?", answer: "No — this is a straight-line projection assuming the entered pay period repeats consistently all year with no unpaid leave and no overtime premium. Actual annual earnings may be lower or higher depending on time off taken and any overtime worked." }, { question: "How is this different from an hourly-to-salary conversion?", answer: "This tool accepts any starting pay period — hourly, weekly, biweekly, or monthly — and converts it to an annual figure, making it useful when comparing offers that aren't all quoted hourly." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

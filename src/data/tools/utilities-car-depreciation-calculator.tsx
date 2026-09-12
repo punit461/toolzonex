@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the average depreciation rate for a car?", answer: "Most cars lose about 15–20% of their value per year, with the steepest drop in the first year. Luxury and high-mileage vehicles may depreciate faster." }, { question: "Does mileage affect depreciation?", answer: "Yes — higher mileage accelerates depreciation. A car driven 20,000 miles per year will lose value faster than one driven 10,000 miles." }, { question: "Can a car appreciate in value?", answer: "Most cars depreciate, but certain classic, limited-edition, or rare models can appreciate over time. Supply chain disruptions can also temporarily boost used car values." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the site's Concrete Calculator?", answer: "The Concrete Calculator and Concrete Slab Calculator are for poured or mixed concrete — they calculate wet concrete volume and cement bags for slabs, footings, and columns. This tool is specifically for concrete block (cinder block) construction, where you're counting individual masonry units and mortar for a block wall, not pouring a volume of concrete." }, { question: "What's a standard concrete block size?", answer: "The most common standard block is nominally 16\" long × 8\" high × 8\" deep, though the actual block is slightly smaller (about 15⅝\" × 7⅝\") to allow for a 3/8\" mortar joint on each side, which is why this calculator adds the joint back in when sizing the effective coverage area." }, { question: "How much waste should I allow for?", answer: "A 5-10% allowance is typical to cover cut blocks at corners and openings, plus breakage during handling. Complex layouts with lots of openings or corners may need a higher allowance." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

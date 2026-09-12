@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Random Emoji Generator?", answer: "The Random Emoji Generator produces random emoji unrelated to any text you provide. This tool instead transforms EXISTING text by replacing recognized words with a matching emoji — it never picks anything at random." }, { question: "How is this different from the Emoji Counter?", answer: "The Emoji Counter analyzes emoji that are ALREADY present in text you paste in and counts them. This tool does the opposite — it adds new emoji into your text by replacing matching words, rather than counting anything that's already there." }, { question: "What happens to words not in the dictionary?", answer: "They're left exactly as typed — only whole words that exactly match one of the tool's built-in ~50 recognized words are ever replaced." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

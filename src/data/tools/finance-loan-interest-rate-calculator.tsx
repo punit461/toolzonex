@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How does it find the rate?", answer: "It uses the EMI formula — EMI = P × r × (1+r)ⁿ / ((1+r)ⁿ − 1) — and searches for the monthly rate r that makes the formula match your EMI, then multiplies by 12 for an approximate annual rate." }, { question: "Is the annual rate exact?", answer: "It is an effective equivalent rate — monthly compounding × 12. Lenders may quote slightly different figures depending on reducing-balance vs. flat-rate methods and processing fees." }, { question: "Which loan is this for?", answer: "Any reducing-balance, equated-monthly-instalment loan — personal, car, home, or education loans. Enter the EMI you actually pay to reveal the effective rate." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

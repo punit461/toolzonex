@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Which characters get removed?", answer: "The characters that are invalid or problematic on common operating systems: < > : \" / \\ | ? *. These are stripped out entirely rather than replaced, since there's no universally safe substitute for most of them." }, { question: "Does this rename the actual file?", answer: "No — this tool only generates a cleaned version of the text you provide; you still need to rename the actual file yourself using the cleaned name it outputs." }, { question: "What happens to the file extension?", answer: "The extension is treated as part of the name and cleaned the same way as the rest — if you use the lowercase toggle, the extension is lowercased too, which is usually desirable for consistency." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do used cars typically have higher maintenance costs?", answer: "Older vehicles are more likely to need wear-item replacements (brakes, tires, belts, batteries) and unexpected repairs, and they usually aren't covered by a full manufacturer warranty anymore, so it's realistic to budget noticeably more for maintenance than you would for a new car." }, { question: "Does this include depreciation?", answer: "No — this calculator treats the purchase price as a fixed cost and doesn't estimate resale value at the end of ownership. If you plan to sell the car afterward, subtract your expected resale value from the total cost of ownership to get a more complete picture." }, { question: "How can I use this to compare against a different vehicle?", answer: "Run the calculator once per vehicle with each car's own purchase price and estimated annual costs, then compare the total cost of ownership or cost-per-year figures side by side — the cheaper purchase price doesn't always win once running costs are included." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

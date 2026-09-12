@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Black & White Converter?", answer: "Grayscale keeps a full range of gray shades based on each pixel's brightness. The Black & White Converter instead reduces every pixel to pure black or pure white using a threshold." }, { question: "Will my text still be selectable afterward?", answer: "No — converting to grayscale requires redrawing each page as an image, so text and vector content become part of a flattened, non-selectable image." }, { question: "Is my file uploaded anywhere?", answer: "No — conversion happens entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

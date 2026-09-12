@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between PPI and DPI?", answer: "PPI (pixels per inch) describes a digital display's pixel density, while DPI (dots per inch) traditionally describes a printer's or scanner's output resolution in physical ink dots — the terms are often used interchangeably in casual conversation, but PPI is the technically correct term for screens." }, { question: "What PPI counts as sharp or \"retina\"?", answer: "It depends heavily on viewing distance: phones held close to the face typically need 300+ PPI to look sharp, while monitors and TVs viewed from farther away can look just as crisp at 90-110 PPI. There's no single universal threshold — it's a function of both PPI and how far away you view the screen." }, { question: "Can I enter the diagonal size in centimeters instead?", answer: "Convert centimeters to inches first (divide by 2.54) before entering the diagonal size, since PPI is inherently a per-inch measurement and the formula expects the diagonal size in inches." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

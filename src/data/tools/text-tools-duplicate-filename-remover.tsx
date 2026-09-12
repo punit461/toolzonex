@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Duplicate File Name Checker?", answer: "The Duplicate File Name Checker only identifies and flags which filenames are duplicated, without changing anything. This tool actually resolves the duplicates by renaming each repeated occurrence with a numbered suffix, giving you a ready-to-use, all-unique list." }, { question: "Does it rename the first occurrence of a repeated name?", answer: "No — the first occurrence always keeps its original name; only the second, third, and later occurrences get a numbered suffix appended." }, { question: "What happens with a file that has no extension, like a folder name?", answer: "The numbered suffix is simply appended to the end of the name — since there's no extension to preserve, nothing special happens with the dot placement." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

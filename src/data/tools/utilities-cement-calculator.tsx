@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the 1.54 dry volume factor?", answer: "Wet concrete occupies less volume than the dry ingredients that make it — mixing, water absorption, and voids reduce the volume. Multiply the wet volume by about 1.54 to get the dry volume of cement, sand, and aggregate to order." }, { question: "What does the 1:2:4 mix ratio mean?", answer: "It is the cement : sand : aggregate ratio by volume — 1 part cement to 2 parts sand to 4 parts coarse aggregate. 1:2:4 is a common general-purpose mix (roughly M15 grade) used for slabs, beams, and columns." }, { question: "How many bags of cement does one cubic meter of concrete need?", answer: "For a 1:2:4 mix, one cubic meter of finished concrete takes roughly 8 × 50 kg bags of cement. The calculator works this out from your mix ratio and target volume." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

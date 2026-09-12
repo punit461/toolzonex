@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this actually affect the computer?", answer: "No — it's just a fullscreen webpage that looks like a Windows update screen. Closing the tab or pressing Esc returns everything to normal instantly." }, { question: "Will this trigger a real restart or update?", answer: "No, nothing on the device is touched." }, { question: "How do I set up this windows 11 update screen prank on a coworker's PC?", answer: "Open this page on their screen while they're away, click \"Click to Fullscreen\" (or press F), and leave it running — the spinning \"Working on updates\" percentage looks convincing at a glance. Press Esc together to reveal the prank when they get back." }, { question: "Does the update percentage actually progress?", answer: "Yes — for visual realism, the percentage counter animates up and loops, just like a real Windows update screen, even though nothing is actually being installed." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

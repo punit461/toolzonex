@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What DPI is best for my use case?", answer: "72 DPI is fine for screen thumbnails, 144 DPI for standard printing, and 216 DPI for high-quality archival or large-format prints." }, { question: "Is there a page limit?", answer: "No — all pages are processed regardless of the PDF length." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

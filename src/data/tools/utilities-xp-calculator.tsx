@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Which mode should I use for my game?", answer: "Start with Simple Linear mode — it fits many games where each level requires the same fixed XP amount. Switch to Exponential mode only if your specific game (many RPGs and MMOs) is known to require noticeably more XP at higher levels." }, { question: "How do I find the right base and exponent for exponential mode?", answer: "These values are game-specific and usually come from community-documented formulas, datamined game files, or your own game's design spec — there's no universal base/exponent that fits every game, so you'll need the specific values for the title (or design) you're calculating for." }, { question: "Why does total XP in exponential mode sum every level instead of just using the target level's formula?", answer: "Because the formula gives the XP needed to go from one specific level to the next, not the cumulative total — reaching level 10 means first passing through levels 1 through 9, so the calculator adds up the XP cost of every level along the way." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

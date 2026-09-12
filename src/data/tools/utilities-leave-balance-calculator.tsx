@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between the two modes?", answer: "The fixed allotment mode assumes your full annual leave is available from day one, which fits policies that grant all leave upfront each year. The accrual mode instead builds up leave gradually based on a per-month rate, which fits policies where you earn leave as you work rather than receiving it all at once." }, { question: "Can my remaining balance be negative?", answer: "Yes, if you've used more leave than you've accrued or been allotted so far — this typically happens under accrual policies if leave is taken in advance of it being earned, which some employers allow and others don't." }, { question: "Does this account for carryover from a previous year?", answer: "No — enter your allotment (or accrual total) as the full amount available for the period you're tracking, including any carried-over days, and this calculator will simply subtract what you've used from that total." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

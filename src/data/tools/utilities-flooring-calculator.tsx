@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Where do I find the coverage per box?", answer: "It's printed directly on the flooring box (often listed in sq ft or m²), or available on the product page from the retailer or manufacturer. Coverage varies by plank size and packaging, so always check the specific product you're buying." }, { question: "Why is 10% waste the default?", answer: "10% is a common baseline for straightforward rectangular rooms. Rooms with lots of corners, closets, or diagonal installation patterns typically need 15% or more to account for extra cuts and offcuts that can't be reused." }, { question: "How is this different from a tile calculator?", answer: "Tile calculators typically work per individual tile using its exact length and width. This calculator instead works per box, since flooring like laminate and vinyl plank is purchased and priced by box-coverage area rather than by counting individual planks." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the File Name Cleaner?", answer: "File Name Cleaner sanitizes invalid characters and normalizes casing — a concern about which CHARACTERS are valid. This File Name Shortener addresses a completely different concern: file name LENGTH, truncating names that are simply too long regardless of whether their characters are valid." }, { question: "Is the file extension ever cut off?", answer: "No — the extension is always preserved in full; only the base name (everything before the last dot) is shortened to make room within the max length." }, { question: "What happens if the extension itself is longer than the max length?", answer: "In that rare edge case, there isn't enough room to keep the extension intact and add an ellipsis meaningfully, so the tool falls back to a simple hard truncation of the whole name to the max length." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

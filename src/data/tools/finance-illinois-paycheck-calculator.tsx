@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How much is Illinois state tax on a paycheck?", answer: "Illinois charges a flat 4.95% state income tax after the personal exemption. This Illinois paycheck calculator applies that rate together with federal tax, Social Security, and Medicare to estimate your take-home pay." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does 12:00 AM and 12:00 PM mean in 24-hour time?", answer: "12:00 AM (midnight) is 00:00 in 24-hour format, and 12:00 PM (noon) is 12:00 — a common point of confusion this converter handles automatically." }, { question: "Does this handle seconds?", answer: "No — this converter works with hours and minutes only, which covers the vast majority of everyday time conversion needs." }, { question: "Why is 24-hour format also called \"military time\"?", answer: "It's the standard time format used by militaries and many countries worldwide specifically because it removes any AM/PM ambiguity — each hour of the day has one unique number from 00 to 23." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

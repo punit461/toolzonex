@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why isn't there a direct hex-to-CMYK formula?", answer: "Hex codes are just a compact way of writing RGB values in hexadecimal — they don't carry any separate CMYK information. Converting to CMYK always goes through RGB first, using the RGB-to-CMYK formula shown above." }, { question: "Will the printed color exactly match what I see on screen?", answer: "Not necessarily — RGB (screen, additive light) and CMYK (print, subtractive ink) are different color models covering different color ranges (gamuts), so the conversion is an approximation. Actual printed results also vary by printer, paper, and ink profile, so proofing a physical sample is recommended for color-critical print work." }, { question: "Does this tool support 3-character shorthand hex codes?", answer: "Yes — shorthand hex codes like #03F are automatically expanded to their full 6-character form (like #0033FF) before converting, so both formats work." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "What resolution is the snapshot?", answer: "Pages are rendered at 3x scale (approximately 216 DPI) for crisp output." }, { question: "Does this work with scanned PDFs?", answer: "Yes, any PDF page can be captured regardless of its content type." }, { question: "Is my file uploaded anywhere?", answer: "No — rendering and capture happen entirely in your browser." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

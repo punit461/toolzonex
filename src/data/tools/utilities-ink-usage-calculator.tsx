@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is 5% coverage used as the baseline?", answer: "Nearly all printer manufacturers rate cartridge page yields under the ISO/IEC standard test, which uses a mixed document with about 5% average ink coverage per page — that's why 5% is the default here and the reference point the formula scales from." }, { question: "What if my documents are mostly plain text with wide margins?", answer: "Lower your coverage percentage below 5% — light text-only pages can use less ink than the standard test page, which would make your effective yield higher than the rated yield." }, { question: "Does this account for color versus black ink separately?", answer: "No — this calculator treats a single cartridge and coverage figure at a time. For a printer with separate color and black cartridges, run the calculator once per cartridge type using each one's own rated yield and cost." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What happens if I leave the date or time blank?", answer: "Entries with a missing date or time are sorted to the end of the list, so incomplete entries don't accidentally appear as the earliest item." }, { question: "Can I use this for both appointments and reservations?", answer: "Yes — the fields (name, date, time, service/purpose, notes) work equally well for a service appointment or a table/venue reservation; just use the service/purpose field for whichever label fits your use case." }, { question: "Is my appointment list saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the list before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

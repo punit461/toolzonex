@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are the nicknames randomly generated?", answer: "No — every option comes from a fixed, rule-based blending strategy (like swapping name halves or alternating letters), so the same two names always produce the same set of results." }, { question: "Does the order I enter the names matter?", answer: "Yes, slightly — since several blends combine the beginning of one name with the ending of the other, swapping the input order changes which specific combinations appear, though the overall style of results stays similar." }, { question: "Why do some blending strategies not appear in the results?", answer: "Duplicate or identical-to-the-original results are automatically filtered out, so very short names may produce fewer than six unique combinations." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

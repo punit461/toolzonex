@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why might the RGB result look slightly different on screen than the printed CMYK color?", answer: "CMYK printing depends on ink, paper, and printer calibration, none of which this formula accounts for — it gives a mathematically consistent approximation, not a color-managed print preview." }, { question: "What is the formula for CMYK to RGB conversion?", answer: "R = 255 × (1 − C) × (1 − K), G = 255 × (1 − M) × (1 − K), and B = 255 × (1 − Y) × (1 − K), where C, M, Y, and K are each expressed as a fraction between 0 and 1 (i.e. the percentage divided by 100)." }, { question: "Does this tool also convert RGB back to CMYK?", answer: "This page converts CMYK to RGB only. Use our separate RGB to CMYK converter if you need to go the opposite direction." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

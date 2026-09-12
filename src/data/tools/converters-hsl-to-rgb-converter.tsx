@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why convert from HSL to RGB instead of just using HSL directly?", answer: "Most image formats, canvas APIs, and many older tools store and expect colors as RGB channels rather than HSL, so once you've dialed in a color's hue, saturation, and lightness, you often need the equivalent RGB values to plug into that system." }, { question: "Is the conversion exact, or does it round?", answer: "RGB channels are whole numbers from 0-255, while HSL is continuous, so converting HSL to RGB (and back) can introduce very small rounding differences. For typical design work these differences are imperceptible." }, { question: "Can I get the hex code too?", answer: "Yes — the resulting RGB values are also shown as a hex color code alongside a live preview swatch, so you can copy whichever format you need." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

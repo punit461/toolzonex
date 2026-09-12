@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How accurate is this estimate?", answer: "This is a simplified DIY approximation, not a precision spec sheet figure. Actual grout consumption varies by product density (sanded vs. unsanded, epoxy vs. cementitious), how tightly the grout is packed into the joints, and application technique, so treat the result as a helpful estimate rather than an exact requirement." }, { question: "Should I round up when buying grout?", answer: "Yes — always round up to the next full bag or box size. This calculator already adds a 10% buffer on top of the raw calculated weight, but running short mid-job is far more disruptive than having a small amount left over." }, { question: "Does grout joint depth really matter that much?", answer: "Yes — grout volume scales directly with joint depth, which typically equals your tile's thickness. A thicker tile with a deeper joint uses noticeably more grout than a thin tile with a shallow joint, even at the same joint width and floor area." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

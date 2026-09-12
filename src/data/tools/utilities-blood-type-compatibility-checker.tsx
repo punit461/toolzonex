@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this a substitute for real medical blood typing?", answer: "No — this tool is for general education only. Any real blood transfusion requires laboratory blood typing and cross-matching performed by qualified medical professionals before it can be considered safe; never use this tool as a substitute for that process." }, { question: "Why is O- called the \"universal donor\"?", answer: "O- red blood cells carry neither A nor B antigens nor the Rh factor, so they're far less likely to trigger an immune reaction in a recipient of any other blood type, making O- compatible with all eight types as a donor." }, { question: "Why is AB+ called the \"universal recipient\"?", answer: "AB+ red blood cells already carry A, B, and Rh antigens, so an AB+ recipient's immune system doesn't react against any of those antigens arriving from a donor, allowing AB+ patients to receive blood from all eight types." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

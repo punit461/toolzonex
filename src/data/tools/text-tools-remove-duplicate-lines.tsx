@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Which occurrence of a duplicate is kept?", answer: "The first occurrence of each unique line is kept; every later repeat of that exact line is removed." }, { question: "Is matching case-sensitive?", answer: "By default, yes — \"Apple\" and \"apple\" are treated as different lines. Untick the case-sensitive option to treat them as duplicates of each other." }, { question: "Does it trim whitespace before comparing lines?", answer: "No — lines are compared exactly as typed, so a line with trailing spaces is treated as different from the same line without them. Run the Text Cleaner tool first if you need to normalize whitespace before deduplicating." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

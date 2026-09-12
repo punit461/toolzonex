@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does it compare full paths or just file names?", answer: "It compares whatever text you paste on each line exactly — if you paste full paths, it compares full paths; if you paste just file names, it compares just the names." }, { question: "What counts as one \"duplicate group\"?", answer: "Every unique name that appears two or more times counts as one group, regardless of how many times it repeats — so a name appearing 5 times is still just 1 duplicate group, shown with a count of 5." }, { question: "Are blank lines counted?", answer: "No — empty or whitespace-only lines are ignored and never counted as duplicates of each other." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

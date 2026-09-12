@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from a wire gauge calculator?", answer: "This tool estimates how much total cable length to buy for a run. It doesn't determine what thickness (gauge) of wire you need for safety and voltage drop — for that, use our Wire Size Calculator, which sizes AWG gauge based on current and voltage drop over a given run length." }, { question: "How much slack allowance should I use?", answer: "10-15% covers most straightforward runs with a few corners. Runs with many bends, obstacles, or where you need extra service loop at equipment racks may warrant 20% or more." }, { question: "Should I round up the final number?", answer: "Yes — cable is typically sold in fixed roll or spool lengths, so round the calculated total up to the next available length rather than trying to buy an exact fractional amount." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

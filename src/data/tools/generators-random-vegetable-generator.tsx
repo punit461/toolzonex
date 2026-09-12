@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can the same vegetable show up twice in one set?", answer: "No — each set of 4 vegetables is chosen without repeats, so every result in a single generation is different." }, { question: "Are the facts scientifically verified?", answer: "They're short, generally accurate cooking or trivia tips meant to be fun and useful rather than a botanical reference." }, { question: "Does the list include fruits that are technically vegetables in cooking, like tomatoes?", answer: "Yes — a few entries like tomato and corn are botanically fruits or grains but are included because they're universally treated as vegetables in the kitchen." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

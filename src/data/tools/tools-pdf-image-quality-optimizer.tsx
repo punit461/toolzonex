@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What quality percentage should I pick?", answer: "40-60% is a good starting point for most documents. Text and vector elements are completely unaffected by this change." }, { question: "Does this affect text sharpness?", answer: "No — only raster images embedded in the PDF are re-encoded. Text and vector paths remain untouched." }, { question: "Is my file uploaded anywhere?", answer: "No — optimization runs entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

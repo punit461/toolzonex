@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why doesn't a preset line up with my label?", answer: "Amazon's label layout varies between FBA, Easy Ship, and self-ship order types. Use the live preview and switch to Custom to enter the exact box in inches." }, { question: "Does this work for multi-order bulk label PDFs?", answer: "Yes — the same crop region is applied to every page, so a bulk PDF with many orders is cropped in one pass." }, { question: "Is my file uploaded anywhere?", answer: "No — cropping happens entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

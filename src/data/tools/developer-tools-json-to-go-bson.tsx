@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why include both json and bson tags?", answer: "In practice, most Go services that talk to MongoDB also expose or consume JSON over HTTP using the same struct. Adding both tags up front means you don't have to double back and add the missing one later." }, { question: "Does this work with the official MongoDB Go driver?", answer: "Yes — the bson:\"...\" tag format matches what go.mongodb.org/mongo-driver expects for marshaling and unmarshaling BSON documents." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and struct generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I use this to print real, resellable event tickets?", answer: "This tool is meant for personal, informal, or decorative tickets — for an official event requiring secure or scannable tickets, use a dedicated ticketing platform that provides fraud protection and unique verification." }, { question: "Is the seat/section field required?", answer: "No — it's optional and simply won't appear on the ticket preview if left blank, which works well for general-admission events." }, { question: "Is my ticket information saved anywhere?", answer: "No — everything is generated live in your browser and isn't stored, so make sure to print or screenshot your ticket before leaving the page." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

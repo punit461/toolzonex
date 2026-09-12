@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this calculate paving or concrete cost?", answer: "No — this tool calculates area only, in both square feet and square yards. Square yardage is commonly used when requesting quotes for paving, concrete, or asphalt materials, so having both figures on hand makes it easier to get an accurate cost estimate from a contractor." }, { question: "What if my driveway has more than two sections?", answer: "Calculate any additional rectangular sections separately (length × width) and add their area to the total shown here manually." }, { question: "How do I handle a curved or irregular edge?", answer: "Approximate the curved area as a rectangle using its average width, or break it into smaller rectangular sections and add them together — for most driveway estimates, a reasonable rectangular approximation is accurate enough." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why doesn't this account for the time value of money?", answer: "The simple payback period intentionally ignores discounting for ease of use. For a discounted view that accounts for the time value of money, use a discounted payback period or the Present Value Calculator alongside this tool." }, { question: "What is a good payback period?", answer: "It depends on the industry and risk tolerance — many businesses target 2-4 years for equipment or smaller projects, while larger infrastructure investments may accept much longer payback windows." }, { question: "What if cash inflows never recover the investment?", answer: "In variable mode, if cumulative cash flow never turns positive within the years you've entered, the calculator shows that the investment isn't recovered within that timeframe — add more years of inflows to see when (or if) it would be." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

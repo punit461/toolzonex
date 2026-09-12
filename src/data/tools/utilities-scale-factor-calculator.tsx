@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does a scale factor like 1:48 mean?", answer: "It means every 1 unit of measurement on the scaled object corresponds to 48 of the same unit in real life — so a 1:48 scale model is 1/48th the size of the real object in every dimension." }, { question: "Do I need to use the same units for both dimensions?", answer: "Yes — enter both the original and scaled dimension in the same unit (both in inches, or both in centimeters, for example) so the resulting scale factor is a pure, unitless ratio." }, { question: "Can I use this for maps as well as physical models?", answer: "Yes — a map's scale (like 1:100,000) works exactly the same way: the scale factor relates a distance measured on the map to the corresponding real-world distance, so you can solve for either one given the other and the scale factor." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

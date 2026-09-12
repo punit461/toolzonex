@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is .isRequired decided?", answer: "A field gets .isRequired whenever it was present in every sample object you pasted. If you paste an array of objects and a property is missing from at least one of them, it's left without .isRequired instead." }, { question: "Do I need to rename MyComponent in the output?", answer: "Yes — the generated code uses MyComponent as a placeholder. Replace it with the actual name of the component you're adding prop types to before pasting it into your project." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and PropTypes generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

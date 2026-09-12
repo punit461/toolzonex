@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if part of my lawn is an odd shape that isn't listed?", answer: "Approximate it with the closest simple shape available, or split it into two or three sections that together resemble the actual area — for most residential yards, a combination of rectangles, circles, and triangles gets you close enough for seed, fertilizer, or mulch estimates." }, { question: "Should I subtract driveways, patios, or garden beds?", answer: "Yes — this calculator adds up only the sections you enter, so simply don't include paved or planted areas as lawn sections, or add them as a separate negative check against your total property size." }, { question: "How do I convert the result to acres?", answer: "Divide the total square footage by 43,560 (the number of square feet in an acre). The result box below shows this conversion automatically alongside the square footage total." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

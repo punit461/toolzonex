@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "How accurate is the split?", answer: "The tool estimates based on average page size; actual file sizes may vary slightly." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens in your browser." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

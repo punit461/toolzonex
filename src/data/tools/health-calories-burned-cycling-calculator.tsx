@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How accurate is this calorie estimate?", answer: "This MET-based method gives a solid estimate for flat-terrain cycling at a steady speed, but actual burn depends on wind resistance, hills, bike weight, and rider efficiency. A power-meter-based estimate would be more precise, but this calculator offers a reliable general figure." }, { question: "Does cycling uphill change the calorie burn?", answer: "Yes — climbing significantly increases energy cost compared to flat riding at the same speed. This calculator assumes flat terrain at the selected speed/intensity band." }, { question: "Is this a substitute for medical or professional coaching advice?", answer: "No — this is a general fitness estimate, not a clinical or medical measurement. Consult a doctor or coach for guidance tailored to your specific training or health goals." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will this show every font in the PDF?", answer: "It shows fonts declared in page resource dictionaries and form field appearances. Some PDFs embed fonts in non-standard ways that may not be detected." }, { question: "What is the difference between TrueType and Type1 fonts?", answer: "TrueType was developed by Apple and Microsoft, Type1 by Adobe. Both are outline font formats that render text clearly at any size — they are just different encoding standards." }, { question: "Is my file uploaded anywhere?", answer: "No — font extraction runs entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

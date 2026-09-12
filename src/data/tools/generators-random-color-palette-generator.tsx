@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the site's other Color Palette Generator?", answer: "This tool builds each palette from hue-rotation math around a single random base color, so the 5 colors are always visually related (analogous and complementary hues). Our other Color Palette Generator produces fully independent random hex colors and includes additional browsing/library features — use this one when you specifically want a quick, coherent, ready-to-use palette with one click." }, { question: "Can I lock a color and regenerate the rest?", answer: "This tool generates a fresh 5-color palette each time as a simple, single-click tool — use the copy button to save any colors you like before generating a new set." }, { question: "What is a complementary color?", answer: "Complementary colors sit opposite each other on the color wheel (180° apart), and pairing them typically creates strong visual contrast — which is why this generator includes a complementary pair alongside colors closer to the base hue for balance." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

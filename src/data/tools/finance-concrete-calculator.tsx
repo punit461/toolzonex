@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How many cement bags per cubic meter?", answer: "This tool uses a rule-of-thumb of about 7 bags of 50 kg cement per cubic meter of concrete (a typical M20 mix). Actual usage varies with the mix design." }, { question: "Should I add extra for waste?", answer: "Yes — add roughly 5–10% to the calculated volume to cover spillage, uneven subgrade, and formwork variations." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

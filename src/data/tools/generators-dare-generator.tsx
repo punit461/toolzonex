@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Truth or Dare Generator?", answer: "The Truth or Dare Generator splits its content between truth questions and dare challenges. This tool is dare-only, with a larger, more varied set of dares organized into Mild, Adventurous, and Silly categories instead — use this one when you specifically want dares without any truth questions mixed in." }, { question: "Is the content appropriate for all ages?", answer: "Yes — every dare across all three categories is written to be family-friendly and suitable for a general audience. \"Adventurous\" simply means bolder and more active, not inappropriate." }, { question: "Can players skip a dare they do not like?", answer: "Yes — this is just a prompt generator. It is entirely up to your group's own house rules whether skipping is allowed, and what happens if someone does." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is 4% the default withdrawal rate?", answer: "The 4% rule comes from historical research (the Trinity study) suggesting a diversified portfolio could sustain a 4% inflation-adjusted annual withdrawal over a 30-year retirement with a low risk of running out of money. It's a widely used starting point, not a guarantee." }, { question: "Should I use a lower withdrawal rate for a longer retirement?", answer: "Many people planning an early retirement of 40+ years use a more conservative rate, like 3-3.5%, which raises the FI number but reduces the risk of depleting savings over a longer time horizon." }, { question: "Does this account for inflation?", answer: "The expected return you enter should ideally be a real (inflation-adjusted) return if you want the years-to-FI estimate to reflect purchasing power accurately. Using a nominal return without adjusting for inflation will understate how long it actually takes in real terms." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

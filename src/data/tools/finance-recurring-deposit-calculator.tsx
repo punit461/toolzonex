@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this interest compounded quarterly like real banks?", answer: "This calculator uses monthly compounding. Actual bank RD products may compound quarterly." }, { question: "Are taxes deducted?", answer: "The calculator shows pre-tax amounts. Banks may deduct TDS on interest above the annual exemption limit." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

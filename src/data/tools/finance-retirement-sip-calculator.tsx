@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What return rate should I assume?", answer: "This depends on your investment mix. Diversified equity portfolios have historically returned around 8-12% annually over long periods, though returns vary year to year and future results aren't guaranteed. Conservative investors may prefer a lower assumed rate." }, { question: "Does this account for inflation?", answer: "No — this shows the nominal future value of your investments. To estimate purchasing power in today's terms, use the Inflation Calculator to adjust the projected corpus for expected inflation over the same period." }, { question: "What if I want to increase my SIP amount every year?", answer: "This calculator assumes a fixed monthly SIP amount throughout the period. A \"step-up SIP\" that increases contributions annually will generally produce a larger corpus than shown here." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

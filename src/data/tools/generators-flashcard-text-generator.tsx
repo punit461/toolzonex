@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Do both the term and definition need to be filled in?", answer: "Yes — a card only appears in the generated text once both its term and definition fields have content, so incomplete entries are simply skipped." }, { question: "Can I paste the output into a word processor to print physical cards?", answer: "Yes — copy the generated text into a document, then use your word processor's print or page-break settings to space out and cut each card." }, { question: "Is my flashcard set saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the text before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

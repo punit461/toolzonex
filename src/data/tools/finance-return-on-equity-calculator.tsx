@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How does ROE relate to Return on Assets (ROA)?", answer: "ROE measures return specifically on shareholders' equity — the portion of financing owners actually contributed. ROA measures return on ALL assets a company controls, regardless of financing source. Because debt-financed assets still generate income but aren't counted in the equity base, a leveraged company (one financed heavily with debt) typically shows a higher ROE than ROA — leverage amplifies ROE without necessarily improving underlying asset efficiency." }, { question: "Can a high ROE be a warning sign?", answer: "Yes — an unusually high ROE can sometimes result from heavy debt financing (leverage) rather than genuinely strong operations, or from a company with very little equity due to buybacks or accumulated losses. Compare ROE alongside ROA and debt levels to get the full picture." }, { question: "What's a typical \"good\" ROE?", answer: "It varies by industry, but ROE in the 15-20% range is often considered strong for many sectors. Compare a company's ROE against close industry peers rather than a single universal benchmark, since capital intensity differs widely across industries." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

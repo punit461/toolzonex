@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How do I calculate mpg manually?", answer: "Fill the tank, reset the trip odometer, drive normally, then fill up again and note the gallons needed to refill and the miles driven since the reset. Divide miles by gallons — that's your real-world mpg for that tank." }, { question: "How does this work for electric vehicles?", answer: "Select \"kWh (electric)\" as the fuel unit and enter the kWh of battery used for the trip — the calculator then reports miles (or km) per kWh, the EV equivalent of mpg, along with kWh used per 100 miles/km if you want to compare against a vehicle's rated efficiency." }, { question: "Why does my mpg vary between tanks?", answer: "Driving style, terrain, traffic, temperature, tire pressure, and how much city vs. highway driving you did all affect real-world fuel efficiency — it's normal to see it fluctuate somewhat from the manufacturer's rated average." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

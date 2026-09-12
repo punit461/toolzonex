@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How do I split on a blank line?", answer: "Choose \"Custom Delimiter\" and enter \\n\\n as the delimiter — this splits the text wherever two consecutive line breaks occur, effectively dividing it by paragraph." }, { question: "Do the fixed character/word sections split mid-word or mid-sentence?", answer: "Fixed word count sections always end on a whole word. Fixed character count sections cut at an exact character position, which may land in the middle of a word — use word count mode if you need clean word boundaries." }, { question: "Can I copy just one section instead of everything?", answer: "Yes — every section has its own \"Copy\" button, so you can copy individual sections without selecting text manually." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

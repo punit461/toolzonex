@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a good ROAS?", answer: "A commonly cited baseline is 4:1 (400%), meaning $4 in revenue per $1 spent, but the right target depends on your profit margins. Low-margin businesses need a higher ROAS to be profitable than high-margin ones." }, { question: "Is ROAS the same as ROI?", answer: "No. ROAS compares revenue to ad spend only, while ROI (return on investment) typically factors in all costs, including product cost and overhead, to measure actual profit relative to total investment." }, { question: "Can ROAS be misleading?", answer: "Yes — a high ROAS doesn't guarantee profitability if your product margins are thin or if it ignores other costs like fulfillment and returns. Always check ROAS alongside your actual profit margins." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the JSON to TypeScript tool?", answer: "The JSON to TypeScript tool reads a plain JSON data sample and infers types from the actual values it finds. This tool instead reads a real JSON Schema document and uses its explicit type/required declarations — no data sample needed, since the schema already states the types directly." }, { question: "Which JSON Schema keywords are supported?", answer: "The converter reads type (as a string or as an array like [\"string\", \"null\"] for nullable fields), properties, required, and items. Other validation keywords like pattern or minimum don't have a TypeScript equivalent and are ignored." }, { question: "Is my schema uploaded anywhere?", answer: "No — parsing and type generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What DSCR do lenders typically require?", answer: "Many commercial and DSCR-loan lenders look for a minimum around 1.25x, though requirements range from roughly 1.0x to 1.5x or higher depending on the lender, property type, loan program, and perceived risk of the deal." }, { question: "What does a DSCR below 1.0 mean?", answer: "A DSCR below 1.0 means net operating income isn't sufficient to cover the debt payments on its own, which would require drawing on cash reserves or other income sources to stay current — a red flag for most lenders." }, { question: "How do I calculate net operating income?", answer: "NOI is typically total revenue minus operating expenses, excluding debt payments, income taxes, depreciation, and capital expenditures. For a rental property, that's rental income minus expenses like maintenance, insurance, property management, and property taxes." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

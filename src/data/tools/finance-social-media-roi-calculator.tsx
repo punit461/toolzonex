@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How do I attribute revenue to social media specifically?", answer: "Common methods include unique discount codes, UTM-tagged links, platform-reported conversion tracking (e.g. Meta or TikTok pixel data), or a dedicated landing page used only for that campaign. Mixing in revenue that would have happened anyway will overstate ROI." }, { question: "What's a good cost per engagement or follower?", answer: "This varies enormously by platform, industry, and audience size — there's no universal benchmark. These figures are most useful for comparing your own campaigns against each other over time, or against your own historical averages." }, { question: "Should organic (unpaid) social media efforts be included?", answer: "This calculator is built around a spend figure, so it's best suited to paid campaigns. For organic efforts, you could still estimate ROI by entering the value of staff/creator time as your \"spend\" figure." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

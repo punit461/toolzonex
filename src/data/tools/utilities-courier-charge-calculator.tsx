@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does the fuel surcharge do?", answer: "Carriers pass on fuel price changes as a percentage added to the base shipping cost. Enter your carrier's current surcharge rate to see its effect." }, { question: "Why does long-distance shipping get cheaper per km?", answer: "Fixed costs like pickup and handling are covered by the base and weight charges, so the per-km marginal cost falls over longer hauls." }, { question: "Is this an official pricing quote?", answer: "No — it's an estimate based on illustrative rates. Confirm with your carrier for an exact quote." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

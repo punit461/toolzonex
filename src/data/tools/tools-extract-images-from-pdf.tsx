@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why are some images not found?", answer: "Images rendered as part of the page drawing stream (not stored as separate XObject image resources) cannot be individually extracted." }, { question: "What format are the extracted images?", answer: "All images are exported as PNG files to preserve quality." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

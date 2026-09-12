@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the site's Time Duration Calculator?", answer: "The Time Duration Calculator finds the raw elapsed time between two clock times with no other adjustments. This tool is purpose-built for payroll: it also subtracts an unpaid break from the raw shift length to give the actual paid hours worked, which is the number that belongs on a timesheet." }, { question: "Should I subtract paid breaks too?", answer: "No — only unpaid breaks (like an unpaid lunch) should be subtracted here. Paid rest breaks are typically still counted as worked time under most employers' policies, so leave those out of the break field." }, { question: "Why does decimal hours matter for payroll?", answer: "Most payroll and timekeeping software calculates wages using decimal hours (like 7.67) rather than hours and minutes (7 hours 40 minutes), since decimal hours multiply directly by an hourly rate. This calculator shows both formats so you can use whichever your system expects." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

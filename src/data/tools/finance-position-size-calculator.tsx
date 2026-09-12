@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if the result is 0 shares?", answer: "Your stop loss is too wide for the account size and risk percentage. Reduce the stop loss distance or increase your risk tolerance." }, { question: "Can I use this for options or forex?", answer: "Yes — the formula applies to any trade with a defined entry and stop loss." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

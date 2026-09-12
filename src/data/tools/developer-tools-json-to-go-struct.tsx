@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why are some fields pointer types?", answer: "Go's zero values (like 0 or \"\") are indistinguishable from a field that was never sent. For any property that's missing from at least one sample object or was ever null, the generator uses a pointer (*string, *int, etc.) so nil unambiguously means \"not present.\"" }, { question: "Does it use the standard library's encoding/json?", answer: "The generated json:\"...\" tags work with Go's standard encoding/json package directly — no extra dependency required." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and struct generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

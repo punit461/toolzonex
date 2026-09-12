@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Email Extractor under Tools?", answer: "This page lives under Text Tools and uses a simpler, always-live layout with no extract button — the list appears as soon as you paste — focused specifically on pulling emails out of text or document content you're working with." }, { question: "Does it validate that the emails are real?", answer: "No — it extracts anything matching a valid email address pattern from the text; it doesn't check whether the address actually exists or can receive mail." }, { question: "Does it remove duplicate email addresses?", answer: "Yes — only unique addresses are listed, even if the same email appears multiple times in the pasted text." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

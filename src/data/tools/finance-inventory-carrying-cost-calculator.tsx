@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from inventory turnover?", answer: "Inventory turnover measures how many times inventory is sold and replaced in a period (COGS ÷ average inventory) — it's a speed metric. Carrying cost instead puts an actual dollar figure on what it costs to hold that inventory each year, regardless of how fast it turns over." }, { question: "What counts as the \"opportunity cost\" component?", answer: "It's the return that capital tied up in inventory could have earned elsewhere — paying down debt, investing in growth, or simply earning interest — instead of sitting on a warehouse shelf. Many businesses estimate this using their cost of capital or a target investment return rate." }, { question: "What's a typical total carrying cost rate?", answer: "20-30% of inventory value per year is a widely used industry rule of thumb, though it varies by industry — perishable or fast-obsolescing goods (like electronics or fashion) often carry higher rates, while stable, non-perishable goods may carry lower rates." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

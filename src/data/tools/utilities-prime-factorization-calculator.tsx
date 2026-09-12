@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is prime factorization unique?", answer: "Yes — the Fundamental Theorem of Arithmetic guarantees that every integer greater than 1 has exactly one prime factorization (up to the order of the factors)." }, { question: "How do I factor very large numbers?", answer: "For very large numbers (hundreds of digits), prime factorization becomes computationally expensive. This calculator handles numbers that fit within standard integer ranges. For extremely large numbers, specialized algorithms like the General Number Field Sieve are used." }, { question: "What is the prime factorization of a prime number?", answer: "A prime number's only prime factor is itself. For example, 17 = 17¹ — it cannot be broken down further." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

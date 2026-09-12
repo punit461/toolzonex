@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does more frequent compounding really help?", answer: "At the same nominal rate, more frequent compounding yields a slightly higher future value, though the difference shrinks as frequency increases." }, { question: "Is this the same as a SIP calculator?", answer: "No — this models a single lump sum. For recurring monthly contributions, use a SIP calculator." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

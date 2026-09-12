@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I add supplies specific to my job?", answer: "Yes — use the \"Add Custom Item\" field to add anything, and it will appear in the Other section of your final checklist." }, { question: "Is my checklist saved for next time?", answer: "No — the list resets when you reload the page, since it's generated fresh in your browser each visit rather than stored anywhere." }, { question: "Can I use this for a shared office space rather than a home office?", answer: "Yes — the categories cover general workspace setup and apply equally well to a home office, a shared office desk, or a new hire's workstation." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is speed in Mbps, not MB/s?", answer: "Internet plans are sold in megabits per second (Mbps). Since 1 byte = 8 bits, divide your Mbps by 8 to get megabytes per second actually transferred." }, { question: "Why is my real download slower?", answer: "Actual speeds vary with network congestion, server limits, Wi-Fi overhead, and overhead protocols — this is a best-case estimate at the stated speed." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

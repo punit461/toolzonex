@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do multiples vary so much by industry?", answer: "Multiples reflect growth potential, profit margins, risk, and how easily a business can scale. High-growth software companies often command higher revenue multiples than low-margin, capital-intensive businesses like retail or manufacturing, which are typically valued closer to their earnings." }, { question: "Should I use revenue or earnings for my valuation?", answer: "Use earnings multiples for profitable, stable businesses where net income is a meaningful number. Use revenue multiples for early-stage or high-growth businesses that may not yet be profitable but have strong top-line growth investors are willing to pay for." }, { question: "Is this a substitute for a professional valuation?", answer: "No — this multiple-based method gives a quick estimate for planning purposes. A formal business valuation typically also considers assets, liabilities, discounted cash flows, comparable transactions, and other factors a simple multiple doesn't capture." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this appropriate for a general or family audience?", answer: "Yes — every question across all four categories is written to be tasteful and family-friendly, safe to use in a classroom, workplace, or mixed group setting." }, { question: "What's the difference between the categories?", answer: "Silly leans into pure lighthearted fun, Deep asks more thoughtful or reflective questions, Food focuses on eating and cooking dilemmas, and Travel centers on places, trips, and ways of exploring the world." }, { question: "Can I get the same question twice in a row?", answer: "Yes — each click randomly selects from that category's list independently, so repeats are possible." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

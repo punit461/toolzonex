@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What counts as a \"good\" P/E ratio?", answer: "There's no single universal answer — reasonable P/E ranges vary a lot by industry and sector, and a ratio that looks high in one industry might be perfectly normal in a faster-growing one. Always compare against similar companies rather than a fixed number." }, { question: "What does a negative P/E ratio mean?", answer: "A negative P/E happens when a company has negative earnings (a net loss), which makes the ratio less meaningful as a valuation tool for that period — investors often look at other metrics for unprofitable companies." }, { question: "Is this financial advice?", answer: "No — this tool is for general education only. It doesn't account for growth expectations, debt, industry context, or any other factors that go into a real investment decision, and shouldn't be used as the sole basis for buying or selling a stock." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

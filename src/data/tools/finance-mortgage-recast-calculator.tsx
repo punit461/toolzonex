@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is recasting different from refinancing?", answer: "Refinancing replaces your loan with a brand-new one, which can change your rate and term and typically requires a credit check, appraisal, and full closing costs. Recasting keeps your original loan, rate, and term — it simply recalculates your payment based on a lower balance after a lump-sum payment, usually for a modest flat fee." }, { question: "Does recasting shorten my loan term?", answer: "No — recasting keeps the same remaining term but lowers the monthly payment. If you want to pay off the loan faster while keeping the same payment, making extra principal payments without recasting (or refinancing to a shorter term) accomplishes that instead." }, { question: "Is every mortgage eligible for recasting?", answer: "Not always — recasting availability and rules (minimum lump-sum amount, fees, eligible loan types) vary by lender and loan type. Government-backed loans like FHA or VA loans often don't allow recasting. Check with your loan servicer to confirm eligibility." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

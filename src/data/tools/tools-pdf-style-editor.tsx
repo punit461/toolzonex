@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will the color cover the text?", answer: "The rectangle is drawn behind existing content, so all text and images remain visible on top of the new background." }, { question: "Can I set different colors for different pages?", answer: "Not yet — the same color and opacity is applied to all pages in the current version." }, { question: "Is my file uploaded anywhere?", answer: "No — styling happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why would anyone take a loan with a balloon payment?", answer: "Balloon loans often have lower monthly payments than a fully amortizing loan of the same shorter term, since payments are calculated as if spread over a much longer period. Borrowers who expect to sell, refinance, or come into a lump sum of cash before the balloon date sometimes use this structure to reduce payments in the meantime." }, { question: "What happens if I can't pay the balloon payment?", answer: "You'd typically need to refinance the remaining balance into a new loan, sell the underlying asset, or pay it off from savings. Failing to do any of these by the due date can put you in default, so it's important to plan for the balloon payment well in advance." }, { question: "Why is the balloon payment so much higher than the loan amount decreased?", answer: "Amortizing loans pay mostly interest in the early years and increasingly more principal later on, so a loan calculated over a long term (like 30 years) still has most of its original balance remaining after just a few years of payments — which is exactly what makes the balloon payment so large." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

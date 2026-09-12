@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "Will the content stretch or get cut off?", answer: "The page canvas is resized to A4 dimensions. Content is not reflowed, so some elements may shift if the original size was significantly different." }, { question: "What if my PDF is already A4?", answer: "The tool will still run, but the file will be essentially unchanged — it simply ensures all pages are exactly A4." }, { question: "Is my file uploaded anywhere?", answer: "No — conversion happens entirely in your browser." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

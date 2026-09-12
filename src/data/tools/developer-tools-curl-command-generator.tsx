@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why are values wrapped in single quotes?", answer: "Single quotes prevent the shell from interpreting special characters like $, backticks, or spaces inside a header value or JSON body. Any single quote inside the value itself is escaped using the '\\'' pattern so the generated command still runs correctly." }, { question: "Why doesn't the body field show up for GET requests?", answer: "GET and DELETE requests conventionally don't carry a request body, so the body field is hidden for methods that don't typically use one and shown only for POST, PUT, and PATCH." }, { question: "Does this send the request anywhere?", answer: "No — this only builds the command text. Nothing is sent over the network; you run the generated command yourself in a terminal when you're ready." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

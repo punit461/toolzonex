@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What number words does it accept?", answer: "English cardinal words — one to nine hundred ninety-nine, plus thousand, million, and billion scales, with optional 'and' and hyphens (e.g. 'twenty-one')." }, { question: "Can it handle decimals?", answer: "Yes — simple decimals like 'three point five' convert to 3.5. The parser treats 'point' followed by digits as the fractional part." }, { question: "How does the parser work?", answer: "It tokenizes and processes groups: a number under 1000 is accumulated, then multiplied by the following scale word (thousand, million, billion) and added to the total — the standard Western grouping system." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

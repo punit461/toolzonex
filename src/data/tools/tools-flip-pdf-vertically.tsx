@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this flip every page?", answer: "Yes — the vertical flip is applied uniformly to all pages." }, { question: "How is this different from rotating 180 degrees?", answer: "A 180-degree rotation flips both axes. A vertical flip only mirrors top-to-bottom, which produces a different result for asymmetric content." }, { question: "Is my file uploaded anywhere?", answer: "No — flipping happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

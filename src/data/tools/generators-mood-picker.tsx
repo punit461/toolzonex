@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this a substitute for professional mental health support?", answer: "No — this tool offers simple, general suggestions for everyday moods, not clinical advice. If you're dealing with persistent or serious distress, please reach out to a qualified mental health professional." }, { question: "Does the tool track my mood over time?", answer: "No — the Mood Picker doesn't save or track anything; it's a simple in-the-moment tool with no persistence between visits." }, { question: "What if my mood doesn't fit any of the eight options?", answer: "Pick whichever option feels closest — most moods share some overlap with these eight categories, and the suggestions are broad enough to be useful even for a related feeling." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Party Budget Calculator?", answer: "The Party Budget Calculator splits one overall budget into rough percentages across a handful of broad categories — a quick, casual approach for birthdays or family celebrations. This calculator instead builds a total from the ground up, adding specific, itemized line items with real quantities and unit costs, which suits larger or more formal events where you already have (or need) detailed vendor-level numbers." }, { question: "How should I handle a per-head cost like catering?", answer: "Set the quantity to your expected headcount and the unit cost to the per-person price, so the line total automatically scales if your headcount changes — no need to recalculate the catering total by hand." }, { question: "Should I include a contingency line?", answer: "Yes — it's common practice to add a contingency or miscellaneous line worth around 5-10% of the expected total to absorb last-minute additions, price changes, or unexpected vendor fees." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

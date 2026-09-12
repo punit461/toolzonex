@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How random is the generated portion?", answer: "It uses the Web Crypto API's crypto.getRandomValues(), giving cryptographically strong randomness rather than a predictable pseudo-random sequence." }, { question: "Could two generated IDs ever collide?", answer: "It's possible but extremely unlikely with a reasonably long random portion (8+ characters) — for guaranteed uniqueness in a production system, still check new IDs against your existing records." }, { question: "What's the difference between this and a UUID generator?", answer: "A UUID follows a strict, universally standardized 36-character format. This tool instead lets you fully customize the prefix, length, character set, and date component to match your own business ID conventions." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

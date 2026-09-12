@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What units does this calculator use?", answer: "Standard SI units: mass in kilograms (kg), acceleration in meters per second squared (m/s²), and force in newtons (N), where 1 newton is the force needed to accelerate 1 kg at 1 m/s²." }, { question: "Does this account for gravity or friction?", answer: "No — this calculates the net force from Newton's second law directly. To find weight (the force of gravity on an object), use mass × 9.8 m/s² as the acceleration. Friction or other opposing forces would need to be added or subtracted separately." }, { question: "Can mass or acceleration be zero?", answer: "Mass being zero would make force zero regardless of acceleration, and solving for mass or acceleration requires dividing by the other value, so that value can't be zero in those cases." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

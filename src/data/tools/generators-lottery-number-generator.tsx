@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these real winning numbers?", answer: "No — these are randomly generated for entertainment and planning purposes only. Check your lottery operator's official website for verified drawing results." }, { question: "Which format should I pick?", answer: "Pick whichever format matches the specific game you're playing — check your lottery ticket or official rules for the exact number ranges and count it uses." }, { question: "Does picking my own numbers improve my odds?", answer: "No — every number and every combination in an official drawing has exactly the same probability of being drawn, whether picked by you or generated randomly." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

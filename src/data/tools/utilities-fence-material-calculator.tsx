@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How many bags of concrete does a fence post really need?", answer: "It depends on post size and hole depth, but 2 bags of ready-mix concrete per post is a commonly used rule of thumb for typical residential fence posts. Larger posts, deeper frost-line holes, or gate posts carrying extra weight often need more — adjust the field to match your post size and local frost depth requirements." }, { question: "What's the difference between this and the simpler Fence Calculator?", answer: "The Fence Calculator gives you just panel and post counts. This calculator adds the rest of a real shopping list on top of that — concrete for setting posts, rails if you're not using pre-made panels, and a rough fastener count — so you can order everything in one pass." }, { question: "Should I round the fastener and rail estimates up?", answer: "Yes — these are rough estimates based on your per-panel inputs. Buy a small surplus of rails and fasteners, since running short mid-installation usually costs more in a second trip than a modest overage would have." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this support more than one interface at a time?", answer: "The tool converts the first top-level interface or type in your input as the root schema. If that root type references other top-level interfaces from the same file by name (like address: Address), those are resolved and inlined as nested schemas automatically — but interfaces that aren't referenced from the root are ignored." }, { question: "Does the generated code include a Zod import?", answer: "No — only the schema declarations are generated. Add import { z } from \"zod\"; at the top of the file where you paste the output." }, { question: "Is my TypeScript uploaded anywhere?", answer: "No — parsing and schema generation happen entirely client-side in your browser, using the TypeScript compiler loaded on demand. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

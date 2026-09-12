@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's a typical shift differential percentage?", answer: "Common ranges are around 5-10% for evening shifts and 10-20% for night, weekend, or holiday shifts, though this varies widely by employer, industry, and union agreements. Check your employer's specific policy." }, { question: "Should I use a percentage or a flat dollar differential?", answer: "Either is valid — percentage differentials scale automatically with base pay raises, while flat dollar differentials stay fixed regardless of base rate. Use whichever structure matches your employer's actual pay policy." }, { question: "Does this account for overtime rules on top of the differential?", answer: "No — this calculates straight differential pay for the hours entered only. If differential hours also qualify as overtime, calculate the overtime premium separately using the Overtime Pay Calculator." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

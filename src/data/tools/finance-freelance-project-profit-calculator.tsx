@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Freelancer Hourly Rate Calculator?", answer: "The Freelancer Hourly Rate Calculator works backward from a desired annual income to figure out a TARGET rate you should charge going forward. This tool works forward from an ALREADY-QUOTED fixed-fee project to evaluate whether it's actually profitable given your time estimate and expenses — it's a reality check on a specific offer, not a rate-setting tool." }, { question: "What should count as a project expense?", answer: "Include any direct cost tied specifically to completing this project — software or tool subscriptions bought for it, subcontractor or freelancer payments, materials, or specialized services. General overhead like your regular office rent usually isn't included here." }, { question: "What if my effective hourly rate comes out lower than expected?", answer: "That's exactly the value of this check — a fixed fee that seemed attractive can turn into a low effective rate once expenses and a realistic time estimate are factored in, which is useful information before accepting or renegotiating the project." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

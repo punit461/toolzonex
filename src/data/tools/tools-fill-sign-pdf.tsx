@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this legally binding?", answer: "Electronic signatures have legal standing in most jurisdictions, but specific requirements vary. Consult legal advice for critical documents." }, { question: "Can I resize the signature?", answer: "The signature is embedded at a fixed width of 150 points in the bottom-right area of the page. For precise placement, use a dedicated PDF editor." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

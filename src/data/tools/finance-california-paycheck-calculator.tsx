@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How much California state tax comes out of my paycheck?", answer: "California uses a progressive state income tax with marginal rates from 1% to 12.3% (plus an extra 1% Mental Health Services Tax on taxable income above $1,000,000). This California payroll calculator applies your bracket based on income and filing status, along with federal tax, Social Security, and Medicare." }, { question: "Is this the same as a California payroll calculator?", answer: "Yes — \"paycheck calculator\" and \"payroll calculator\" are used interchangeably here. This tool estimates net pay in California by combining federal tax, Social Security, Medicare, and California state income tax." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

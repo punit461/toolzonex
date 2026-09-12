@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will increasing DPI add new detail?", answer: "No — upscaling re-renders the page at a higher pixel density but cannot recover detail that wasn't in the original." }, { question: "Does this preserve text quality?", answer: "Text is re-rasterized as part of the page image, so it may appear slightly different. For text-only PDFs, consider tools that modify resolution without rasterizing." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I add tasks that aren't in the pre-set lists?", answer: "Yes — use the \"Add Custom Task\" field to add anything, and it will appear in the Other section of your final checklist." }, { question: "Is my checklist saved for next time?", answer: "No — it resets when you reload the page, since it's generated fresh in your browser each visit rather than stored anywhere." }, { question: "Why are tasks split by Daily, Weekly, and Monthly instead of by room?", answer: "Organizing by frequency makes it easier to build a realistic cleaning rhythm — you can see at a glance what needs attention today versus what only needs doing once a month." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

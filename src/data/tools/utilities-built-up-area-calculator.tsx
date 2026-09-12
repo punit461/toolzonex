@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this the same \"carpet area\" as the Carpet Area Calculator on this site?", answer: "No — that's a naming coincidence. Our Carpet Area Calculator is about buying physical carpet flooring material for a room in a US context (length × width of floor to carpet). This Built-up Area Calculator uses \"carpet area\" in the Indian real estate sense — the usable floor space inside a unit's walls, unrelated to buying carpet material." }, { question: "What's a typical loading factor?", answer: "Most Indian apartments use a loading factor between 10% and 20%, depending on wall thickness, common balconies, and building design. Always check your specific builder's stated loading factor rather than assuming a default." }, { question: "Is built-up area the figure used to price apartments?", answer: "Not usually — most listings price per square foot of super built-up area, which goes one step further than built-up area by also including a share of shared spaces like lobbies and stairwells. Use our Super Built-up Area Calculator for that figure." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

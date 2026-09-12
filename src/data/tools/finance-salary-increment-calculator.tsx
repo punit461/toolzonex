@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How do I calculate my CTC increment?", answer: "Enter your current CTC and the increment percentage offered — this CTC increment calculator multiplies your current CTC by the increment percentage to get the increment amount, then adds it back to give your new CTC and its monthly equivalent." }, { question: "How is increment percentage on CTC calculated?", answer: "Increment percentage = (New CTC − Current CTC) ÷ Current CTC × 100. If you know both your old and new CTC and want to find the percentage rather than the new amount, subtract the two, divide by the old CTC, and multiply by 100." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

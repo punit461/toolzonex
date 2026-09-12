@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "Why are the images larger than the screen display?", answer: "Pages are rendered at 2× resolution to produce sharp images. The actual pixel dimensions will be roughly double the on-screen points." }, { question: "Can I control the output resolution?", answer: "This version uses a fixed 2× scale. For most uses this provides a good balance between quality and file size." }, { question: "Is my file uploaded anywhere?", answer: "No — rasterization happens entirely in your browser." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

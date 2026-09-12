@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is charging a phone really this cheap?", answer: "Yes — because phone batteries hold a tiny amount of energy compared to almost any other household device, the annual cost to charge one is typically well under $1-2 a year at average electricity rates, even with daily charging. It's one of the smallest line items in a home electricity bill by far." }, { question: "Why include charger efficiency at all if the cost is so small?", answer: "It's included for accuracy — no charger is 100% efficient, and some energy is always lost as heat during AC-to-DC conversion. Even though the dollar impact is negligible for a phone, the same charging-efficiency concept matters more for larger devices like laptops or EVs." }, { question: "Where do I find my phone's exact battery capacity and voltage?", answer: "Check your phone manufacturer's official spec sheet, which typically lists battery capacity in mAh and sometimes voltage; if voltage isn't listed, 3.85V is a safe typical assumption for most modern smartphones." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

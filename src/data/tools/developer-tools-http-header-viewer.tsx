@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why doesn't this tool fetch headers directly from a URL?", answer: "Browsers block cross-origin JavaScript from reading most response headers of arbitrary third-party sites due to CORS restrictions — a live-fetch version would fail for the vast majority of real websites and would be misleading. Instead, this tool works with headers you've already captured from DevTools, curl, or another tool that isn't subject to those browser restrictions." }, { question: "How does the parser split each header line?", answer: "Each line is split on its first colon only — everything before the first colon becomes the header name, and everything after (trimmed) becomes the value. This correctly handles values that themselves contain colons, like Content-Type: text/html; charset=utf-8 or time-formatted values." }, { question: "Which headers get a plain-English explanation?", answer: "A set of about a dozen commonly seen headers — including Content-Type, Cache-Control, Set-Cookie, Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, Access-Control-Allow-Origin, ETag, Content-Encoding, Vary, Location, and Server — show a short note beneath the header name when they appear in your pasted input." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

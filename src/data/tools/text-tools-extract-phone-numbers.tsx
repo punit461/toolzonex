@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What number formats does it find?", answer: "Common US and international formats: +1 555 123 4567, (555) 123-4567, 555-123-4567, and 555.123.4567. Formats with country codes and extensions are supported." }, { question: "Does it remove duplicates?", answer: "Yes — identical numbers are collapsed to one entry, and the count reflects the unique numbers found. Toggle off dedupe if you want every occurrence." }, { question: "What can I use it for?", answer: "Cleaning CRM imports, auditing marketing lists, checking a document for contact details, and validating that numbers in data are extractable before migration." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

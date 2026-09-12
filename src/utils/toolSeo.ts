@@ -10,6 +10,10 @@ export function buildToolMetadata(tool: ToolRegistryEntry): Metadata {
     description: tool.seoDescription,
     keywords: tool.keywords,
     alternates: { canonical: tool.route },
+    // Pages flagged `noindex` stay live and usable; they're just withheld from
+    // Google. `follow: true` keeps internal link equity flowing through them.
+    // Omitted entirely when not flagged, so the layout's site-wide default applies.
+    ...(tool.noindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: tool.ogTitle,
       description: tool.ogDescription,

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Appliance Wattage Calculator?", answer: "The Appliance Wattage Calculator solves Ohm's Law (P = V × I) for whichever one of watts, volts, or amps you don't know — it doesn't compute a dollar cost. This calculator takes a known wattage and turns it into an estimated running cost in dollars." }, { question: "How is this different from the AC Running Cost or Computer Electricity Cost calculators?", answer: "Those are device-specific tools with built-in assumptions — for example, the computer calculator splits power draw into separate idle and load states. This is the generic, single-wattage version that works for any appliance: space heaters, hair dryers, dehumidifiers, and anything else with a fixed running wattage." }, { question: "Where do I find my electricity rate?", answer: "Check a recent electricity bill — it's usually listed as a per-kWh rate, sometimes broken into tiers. Use your average or marginal rate for the most realistic estimate." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

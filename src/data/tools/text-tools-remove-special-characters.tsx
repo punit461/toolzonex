@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this remove accented letters like é or ñ?", answer: "Yes — only plain ASCII letters (a-z, A-Z) and digits (0-9) are kept by default, so accented and non-Latin characters are treated as special characters and removed." }, { question: "Can I keep punctuation like periods and commas?", answer: "Yes — tick \"Keep basic punctuation\" to preserve periods, commas, exclamation marks, question marks, colons, semicolons, quotes, parentheses, and hyphens while still removing other symbols." }, { question: "Does it update as I type?", answer: "Yes — there's no button to click. The cleaned result recalculates instantly whenever you edit the text or toggle one of the \"keep\" options." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

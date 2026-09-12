@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do web developers use HEX instead of RGB?", answer: "HEX codes are more compact and are the standard format for colors in HTML and CSS stylesheets, though both represent the same color values." }, { question: "How do I convert RGB to a HEX color code?", answer: "Move the R, G, and B sliders (or type exact 0-255 values) above and the equivalent HEX code is generated instantly, with a one-click copy button — no manual conversion rgb hex math required." }, { question: "I searched for a color code to RGB value — is this the right tool?", answer: "If you already have RGB numbers and want the HEX code, yes — this rgb to hex converter does exactly that. If you have a hex code and want the RGB value instead, use our HEX to RGB converter, which converts in the opposite direction." }, { question: "Does this tool convert RGBA (with transparency) to HEX?", answer: "Yes — adjust the alpha (opacity) slider along with R, G, and B, and the tool appends the alpha channel as an extra two hex digits, producing an 8-character HEX8 code." }, { question: "What's the formula behind an RGB to HEX conversion?", answer: "Each of the R, G, and B values (0-255) is converted individually to a 2-digit base-16 (hexadecimal) number, then the three pairs are joined with a # in front. For example, RGB(255, 87, 51) becomes #FF5733." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

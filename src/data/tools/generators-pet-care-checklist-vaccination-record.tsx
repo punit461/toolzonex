@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I track vaccination records for more than one pet?", answer: "This tool tracks one record at a time — for multiple pets, copy and save each pet's record separately before starting a new one." }, { question: "Can I add care tasks that aren't in the pre-set categories?", answer: "Yes — use the \"Add Custom Care Item\" field to add anything, and it will appear in the Other section of your summary." }, { question: "Is my pet care and vaccination data saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the record before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

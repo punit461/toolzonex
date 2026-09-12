@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Refrigerator Size Calculator?", answer: "The Refrigerator Size Calculator recommends a capacity in cubic feet based on your household size — it's about how big a fridge you need. This tool instead estimates the ongoing electricity cost of running a refrigerator you already have (or are considering), based on its wattage and duty cycle." }, { question: "Why isn't the refrigerator running at full wattage all the time?", answer: "The rated wattage on a refrigerator's label reflects peak draw when the compressor is actively running, not a continuous draw. Once the interior reaches its target temperature, the compressor shuts off until temperature rises again, so actual average power use is much lower than the rated wattage over a full day." }, { question: "Where can I find my refrigerator's actual duty cycle?", answer: "It's rarely listed directly — the default of 30-40% used here is a reasonable estimate for a typical household refrigerator. For a more precise figure, a plug-in electricity usage monitor over a few days will give you your specific unit's real-world average." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

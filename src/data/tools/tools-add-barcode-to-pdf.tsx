@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Which barcode format should I use?", answer: "CODE128 works for general alphanumeric text, UPC/EAN are standard for retail products, and CODE39 is common in logistics and inventory systems." }, { question: "Can I add a barcode to more than one page?", answer: "This tool adds one barcode to one chosen page per run — repeat the process (uploading the result again) to stamp additional pages." }, { question: "Is my file uploaded anywhere?", answer: "No — barcode generation and embedding both happen entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

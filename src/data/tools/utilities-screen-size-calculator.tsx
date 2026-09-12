@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is screen size measured diagonally?", answer: "Diagonal measurement is an industry standard that allows a single number to represent screen size regardless of aspect ratio." }, { question: "Does bezel size affect the calculation?", answer: "No — this calculator uses the viewable display area only. The bezel adds to the overall physical dimensions but is not part of the diagonal measurement." }, { question: "What is the most common aspect ratio?", answer: "16:9 is the most common for modern monitors and TVs. 16:10 is popular for productivity monitors, and 21:9 for ultrawide displays." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

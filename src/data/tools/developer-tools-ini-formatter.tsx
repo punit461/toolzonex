@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What happens if my INI file has a syntax error?", answer: "The formatter flags any line that isn't a valid comment, blank line, section header, or key=value pair with a warning message that includes the line number, rather than crashing or silently dropping content — the rest of the valid file is still formatted normally." }, { question: "Does this tool preserve comments and blank lines?", answer: "Yes — comments (starting with ; or #) and blank lines are kept in their original position in the output, they're just not reformatted since they aren't key=value pairs or sections." }, { question: "Does it support both semicolon and hash comment styles?", answer: "Yes — both ; and # are recognized as comment markers, since different INI-parsing tools and languages use different conventions." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

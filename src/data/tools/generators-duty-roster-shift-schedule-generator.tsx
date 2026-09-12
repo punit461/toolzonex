@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I assign more than one person to a shift?", answer: "Yes — the shift assignment dropdown allows multiple selections, so you can assign as many people as needed to cover a single shift." }, { question: "What does Round-Robin Auto-Fill actually do?", answer: "It cycles through your list of people in order and assigns one person to each shift, wrapping back to the start of the list once it runs out of people — it's meant as a fast starting point you can then adjust manually." }, { question: "Does removing a person also remove them from shifts?", answer: "Yes — removing someone from the People list automatically removes them from any shifts they were assigned to, so the roster never references someone who's no longer in the list." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

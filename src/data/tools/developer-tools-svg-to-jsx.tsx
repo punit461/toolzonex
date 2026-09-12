@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Which attributes get renamed?", answer: "Common SVG presentation attributes (fill-rule, clip-rule, stroke-width, stroke-linecap, font-family, xlink:href, and more) are mapped to their exact React/JSX camelCase equivalents. Any other kebab-case attribute without a known mapping is still camelCased automatically rather than dropped, and class always becomes className." }, { question: "Does it handle nested groups and gradients?", answer: "Yes — the converter walks the entire element tree recursively, so nested <g>, <defs>, <linearGradient>, and other child elements are all converted and indented to match their depth in the original markup." }, { question: "Is my SVG uploaded anywhere?", answer: "No — parsing and conversion happen entirely client-side in your browser using the native DOM parser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

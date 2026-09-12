@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this gross pay or take-home pay?", answer: "This is gross pay — before taxes, insurance, retirement contributions, and other deductions. Actual take-home pay will be lower after those withholdings." }, { question: "Is overtime always 1.5x?", answer: "In the US, federal law (FLSA) generally requires at least 1.5 times the regular rate for hours worked beyond 40 in a week for non-exempt employees. Some states, employers, or countries may use different rules or higher multipliers (like double-time), so check your local regulations." }, { question: "How do I calculate pay from an annual salary instead?", answer: "Use the Salary to Hourly Calculator to convert an annual salary into an equivalent hourly rate first, then use that rate here if you need to add overtime." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

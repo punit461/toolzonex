@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why combine subject tracking and general prep in one tool?", answer: "Exam readiness has two sides — knowing the material and being logistically prepared — so this tool covers both a Study Checklist and an Exam Revision Checklist in a single page rather than two near-identical ones." }, { question: "Can I track as many subjects as I need?", answer: "Yes — click Add Subject / Topic as many times as you like; there's no fixed limit on how many rows you can add." }, { question: "Is my progress saved between visits?", answer: "No — it resets on reload since everything is generated fresh in your browser, so copy your summary if you want to track progress across study sessions." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

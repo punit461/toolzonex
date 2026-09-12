@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this delete or rotate pages too?", answer: "No — this tool only changes page order. For deleting, rotating, or combining pages, use the Delete PDF Pages, Rotate PDF, or PDF Editor tools." }, { question: "Is there a page limit?", answer: "No hard limit, but very large PDFs take longer to render thumbnails for since everything runs in your browser." }, { question: "Is my file uploaded anywhere?", answer: "No — reordering happens entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

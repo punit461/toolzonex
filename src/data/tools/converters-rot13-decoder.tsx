@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is there only one mode instead of separate Encode and Decode buttons?", answer: "Because ROT13 is a self-inverse (or \"involutive\") cipher — shifting a letter 13 places forward is exactly the same operation as shifting it 13 places back, since the alphabet has 26 letters and 13 is exactly half of that. Applying ROT13 twice to the same text always returns the original text, so encoding and decoding are literally the same transform. That's exactly what makes ROT13 a quick, reversible obfuscation trick rather than real encryption — anyone who knows it's ROT13 can reverse it instantly with no key required." }, { question: "Is ROT13 secure?", answer: "No — ROT13 provides no real security. It's meant only to casually hide text (like a spoiler or puzzle answer) from a quick glance, not to protect sensitive information from anyone who actually wants to read it." }, { question: "Does ROT13 affect numbers or punctuation?", answer: "No — only the 26 letters of the English alphabet (A-Z, a-z) are shifted. Numbers, spaces, and punctuation marks pass through completely unchanged." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

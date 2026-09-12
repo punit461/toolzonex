@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this exact for my specific pet and food?", answer: "No — this is a general reference based on typical calorie density, but exact needs vary by food brand, since different foods pack different amounts of calories per cup or per gram. Always treat your specific food packaging's feeding guide, or your veterinarian's recommendation, as the final word for your pet." }, { question: "Why does activity level change the amount so much?", answer: "More active pets burn more calories and need more food to maintain a healthy weight, while sedentary pets need less to avoid excess weight gain. This calculator adjusts the baseline reference amount up to 20% higher for high activity and about 15% lower for low activity." }, { question: "Should I feed this amount all at once?", answer: "Most vets recommend splitting the daily total into two or more meals rather than one large feeding, which can help with digestion and prevent overeating at a single sitting." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the 28/36 rule?", answer: "It's a widely used lending guideline: housing costs shouldn't exceed 28% of gross monthly income, and total debt payments (housing plus other debts like car loans and credit cards) shouldn't exceed 36%. Some lenders allow higher ratios depending on credit and loan type." }, { question: "Why did adjusting my other debts change the result?", answer: "The back-end ratio limit accounts for all monthly debt obligations, not just housing. Higher existing debts (car payments, student loans, credit cards) reduce how much room is left for a mortgage payment under the 36% ceiling." }, { question: "Does this include property taxes and insurance?", answer: "This estimate focuses on principal and interest capacity based on the debt-to-income ratios. Actual affordability should also factor in property taxes, homeowners insurance, and HOA fees, which lenders typically fold into the front-end ratio calculation." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

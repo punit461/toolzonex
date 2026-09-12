@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does this need separate Encode and Decode modes, unlike ROT13?", answer: "ROT13 is self-inverse — applying it twice returns the original text, so one box can handle both directions. This number cipher isn't self-inverse: turning \"HI\" into \"8 9\" and then treating \"8 9\" as more letters to encode would produce nonsense, so an explicit mode toggle is required to pick the correct direction." }, { question: "What happens to spaces and punctuation?", answer: "A space in your original text becomes a forward slash (\"/\") in the encoded output so word boundaries aren't lost, and any other character (punctuation, digits) passes through unchanged as its own token in the sequence." }, { question: "Is this cipher secure?", answer: "No — like ROT13, this is a simple, well-known substitution meant for casual fun and puzzles, not real security. Anyone familiar with the A=1, B=2 convention can decode it instantly." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

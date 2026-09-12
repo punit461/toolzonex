@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Age Calculator?", answer: "The Age Calculator computes one person's current age by comparing their birthdate to today. This Age Difference Finder instead computes the gap between two people's birthdates directly — useful for relationship age-gap checks or sibling spacing, regardless of what today's date is." }, { question: "Does the order I enter the two dates matter?", answer: "No — the tool always calculates the absolute difference and tells you which date is older, so entering the dates in either order gives the same result." }, { question: "Does it account for leap years?", answer: "Yes — the calculation correctly handles leap years and varying month lengths, the same way a standard age calculator does." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

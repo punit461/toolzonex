@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What percentage of calories should come from carbs?", answer: "Standard dietary guidelines recommend 45-65% of total calories from carbohydrates for most healthy adults. Athletes with high training volume often sit at the higher end, while people following lower-carb or ketogenic approaches intentionally go well below this range." }, { question: "How is this different from the Macro Calculator?", answer: "The Macro Calculator estimates your full daily calorie target from your stats and activity level, then splits it into protein, carbs, and fat all at once. This calculator is a focused, single-purpose tool for when you already know your calorie target (or want to enter one directly) and just want the carb number." }, { question: "Should I consult a professional before changing my carb intake significantly?", answer: "Yes — this tool is for general planning only. If you have diabetes, a metabolic condition, or are making a major dietary change, talk to a doctor or registered dietitian first." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

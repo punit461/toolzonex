@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Robots.txt Generator?", answer: "Robots.txt is a text file that controls CRAWLING at the site or path level, and it can only stop a crawler from fetching a URL — it can't deindex a URL search engines already know about. X-Robots-Tag is an HTTP response HEADER applied per-resource that gives page-level INDEXING control, and it's the only option for non-HTML files like PDFs or images, which can't carry a meta robots tag at all." }, { question: "What does the \"none\" directive do?", answer: "It's shorthand equivalent to combining noindex and nofollow in a single directive." }, { question: "When should I target a specific user-agent?", answer: "Use it when you want different crawlers to receive different instructions for the same resource — for example, allowing a general search engine to index a page while blocking a specific bot by name." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the CHMOD Generator?", answer: "Our CHMOD Generator converts between numeric, symbolic, and checkbox representations for SETTING permissions you want to apply to a file. This File Permission Viewer does the reverse — it PARSES AND EXPLAINS a permission string you already encountered (for example, copied from real ls -l output), including the leading file-type character, which the CHMOD Generator doesn't cover at all." }, { question: "What does the leading character before the permissions mean?", answer: "It identifies the file type: a dash for a regular file, d for a directory, l for a symbolic link, and less common types like c (character device), b (block device), p (named pipe), and s (socket)." }, { question: "What do lowercase or uppercase s and t in the execute position mean?", answer: "Those represent special permission bits layered on top of execute: a lowercase s or t means the special bit (setuid, setgid, or sticky) is set AND the execute bit is also set, while an uppercase S or T means the special bit is set but execute is NOT set for that category." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

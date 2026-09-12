@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Should I add extra boards for waste and cuts?", answer: "Yes — this calculator gives the baseline number of boards to fully cover the deck's width. Most builders add 10-15% extra to account for cutting waste, mistakes, and staggered end joints, especially if boards don't come in exactly your deck's length." }, { question: "Why leave a gap between boards at all?", answer: "Gaps allow water to drain through the deck surface instead of pooling, and give the boards room to expand and contract with temperature and humidity changes without buckling or splitting." }, { question: "What if my boards don't span the full deck length in one piece?", answer: "If your deck is longer than the boards you're using, you'll need to join boards end-to-end over a joist, which uses more total linear footage than this calculator's simple length × board-count figure. Account for extra material and staggered seams in that case." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

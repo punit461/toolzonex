@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What image formats are supported?", answer: "JPG, PNG, and WEBP. All are converted to PNG internally before embedding." }, { question: "Does it fit images to A4?", answer: "Yes — each image is scaled proportionally to fill an A4 page with a small margin." }, { question: "Is my file uploaded anywhere?", answer: "No — conversion happens entirely in your browser using pdf-lib." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

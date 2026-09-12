@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this handle nested mappings and lists correctly?", answer: "Yes — standard YAML mappings, nested mappings, and lists (including lists of mappings, which become TOML arrays of tables) convert reliably for typical configuration files. Very unusual YAML features like anchors, aliases, or multi-document streams are uncommon in practice, but it's worth a quick visual check of the output for anything highly nonstandard." }, { question: "What happens to YAML null values?", answer: "TOML has no native null type, so keys with a null value in the YAML source cannot be represented as-is — review the output for any such keys and decide how you want them handled in the TOML version." }, { question: "Is my YAML uploaded anywhere?", answer: "No — parsing and conversion happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

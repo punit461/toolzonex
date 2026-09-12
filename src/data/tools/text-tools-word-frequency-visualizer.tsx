@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this case-sensitive?", answer: "No — all words are lowercased before counting, so \"The\" and \"the\" are combined into one bar." }, { question: "How many words does it show?", answer: "The top 15 most frequent words are shown as bars. For a full table of every distinct word and its count, use the Word Frequency Counter tool instead." }, { question: "Does it exclude common words like \"the\" or \"and\"?", answer: "No — this tool visualizes raw frequency for every word as typed. If you want frequent words with common stopwords filtered out, use the Keyword Extractor tool instead." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

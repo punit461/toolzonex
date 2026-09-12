@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will this make my PDF text selectable?", answer: "No — this tool re-renders pages as images embedded in a new PDF. The original text layer is not preserved." }, { question: "Why is the enhanced file larger?", answer: "Higher resolution means more pixel data per page. Ultra (4×) can produce files 8–16× larger than the original." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

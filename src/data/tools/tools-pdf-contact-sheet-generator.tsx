@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "Can I download the contact sheet?", answer: "Yes, use the Download button to save the contact sheet as a PNG image." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens in your browser." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

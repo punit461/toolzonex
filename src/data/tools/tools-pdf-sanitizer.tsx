@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does this remove?", answer: "Embedded file attachments, document-level JavaScript, AcroForm definitions, and additional action dictionaries that trigger on open or click." }, { question: "Will this break my PDF?", answer: "In rare cases, if the PDF relies on JavaScript for basic rendering, the sanitized version may display differently. Text and images are always preserved." }, { question: "Is my file uploaded anywhere?", answer: "No — sanitization runs entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

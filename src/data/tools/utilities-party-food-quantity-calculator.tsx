@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do appetizers use a piece count instead of weight?", answer: "Appetizers like finger foods, canapés, and hors d'oeuvres are naturally portioned as individual pieces, so counting pieces per person is a more practical planning unit than weight for that context." }, { question: "What's the difference between a light meal and a full meal?", answer: "A light meal assumes lighter fare like salads, sliders, or a buffet with smaller portions, while a full meal assumes a complete sit-down-style plate with a main dish, sides, and larger portions — roughly double the food weight per person." }, { question: "Should I add extra for guests with big appetites or dietary variety?", answer: "Yes — these are general planning averages. Many event planners add a 10-15% buffer on top of the calculated total to account for larger appetites, seconds, and variety across dishes." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

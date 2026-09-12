@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is the maturity date estimated?", answer: "The calculator adds the tenure — in whole years and remaining months — to today's date. Your actual bank-issued maturity date will be based on the exact date you open the deposit, not today, so treat this as an approximate planning reference." }, { question: "Why does maturity value grow faster over longer tenures?", answer: "Compound interest earns returns on previously accumulated interest, not just the original principal. The longer the money stays deposited, the more compounding cycles occur, so the growth accelerates rather than staying linear." }, { question: "Are the maturity figures shown before or after tax?", answer: "These are pre-tax figures. Banks may deduct tax at source on interest earned above an exemption threshold, and interest income is generally taxable per your applicable tax bracket." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

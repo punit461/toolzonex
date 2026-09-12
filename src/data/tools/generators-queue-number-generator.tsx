@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I skip the prefix entirely?", answer: "Yes — leave the prefix field blank and the tool generates plain zero-padded numbers without any letter or dash prefix." }, { question: "How is the zero-padding width decided?", answer: "The tool pads every number to match the digit length of the highest number in your range (with a minimum of two digits), so all tickets in a batch line up visually." }, { question: "Can I start from a number other than 1?", answer: "Yes — set any starting number you like, which is useful for continuing a queue from a previous batch of tickets." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

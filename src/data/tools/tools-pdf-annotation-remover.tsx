@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this remove form fields?", answer: "No — only annotations (comments, highlights, stamps) are removed. Use the Flatten PDF tool for form fields." }, { question: "What types of annotations are removed?", answer: "All annotation types including text notes, highlights, underlines, stamps, freehand drawings, and more." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens locally in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

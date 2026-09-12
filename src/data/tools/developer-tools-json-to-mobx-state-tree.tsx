@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between types.maybe and types.maybeNull in the output?", answer: "types.maybe(T) is used when a property was missing from at least one sample object (it allows undefined), while types.maybeNull(T) is used when a property was ever observed as null. A field that's both optional and nullable gets wrapped in both." }, { question: "Are nested objects extracted into separate models?", answer: "Yes — every nested object becomes its own const XModel = types.model(\"X\", {...}) declaration, named after the property path, and is referenced by name from its parent model." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and model generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

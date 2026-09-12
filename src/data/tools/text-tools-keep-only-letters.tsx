@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this remove numbers too?", answer: "Yes — only alphabetic letters are kept; every digit, symbol, and punctuation mark is stripped out along with everything else that isn't a letter." }, { question: "Why keep the spaces toggle on by default?", answer: "Stripping spaces along with everything else usually isn't what people want, since it jams every word together into one unreadable block — keeping spaces preserved by default keeps the result usable out of the box." }, { question: "Are accented letters like é or ñ kept?", answer: "No — only the standard A-Z / a-z letters are treated as letters; accented and non-Latin characters are removed along with numbers and symbols." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

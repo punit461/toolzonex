@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is the '1 dog year = 7 human years' formula wrong?", answer: "Dogs mature much faster than humans in their first two years. A 1-year-old dog is roughly sexually mature (like a 15-year-old human), so the logarithmic formula better captures this non-linear aging." }, { question: "How does size affect dog aging?", answer: "Research shows smaller breeds tend to live longer than large breeds. A 10-year-old Chihuahua is biologically younger than a 10-year-old Great Dane." }, { question: "At what age is a dog considered senior?", answer: "Generally, dogs are considered senior around 7 years for medium/large breeds and 10+ years for small breeds. Giant breeds may be senior as early as 5–6 years." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

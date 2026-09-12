@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can the same profession appear twice in one set?", answer: "No — each generated set of 5 professions is drawn without repeats from the full list, so every profession shown in a single click is unique." }, { question: "How many professions are in the list?", answer: "Around 75, spread across Medical, Tech, Creative, Trades, Education, Business, Science, and a general Other category." }, { question: "Is there a way to generate just one profession?", answer: "The tool always shows 5 at a time to give you options to choose from, but you can simply focus on the first result if you only need one." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do APS-C cameras have a \"crop factor\"?", answer: "A smaller sensor captures a narrower slice of the same lens's image circle, producing a narrower field of view than a full-frame sensor at the same focal length — this narrowing is commonly expressed as a crop factor multiplier, typically around 1.5x to 1.6x for APS-C sensors." }, { question: "Which FOV value matters most — horizontal, vertical, or diagonal?", answer: "Horizontal FOV is the most commonly cited figure for landscape-orientation shooting, vertical FOV matters more for portrait orientation, and diagonal FOV represents the sensor's true corner-to-corner angle of view, which is what lens focal length ratings are technically based on." }, { question: "Does lens distortion affect the actual field of view?", answer: "This formula assumes an ideal rectilinear lens. Real lenses — especially wide-angle and fisheye designs — introduce some distortion, which can make the practically perceived field of view differ slightly from this idealized trigonometric calculation." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

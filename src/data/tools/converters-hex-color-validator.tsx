@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What hex digit counts are considered valid?", answer: "3 digits (shorthand RGB), 4 digits (shorthand RGB with alpha), 6 digits (full RGB), or 8 digits (full RGB with alpha) — any other count is flagged as invalid." }, { question: "Is the leading \"#\" required?", answer: "No — the tool accepts hex values both with and without a leading \"#\" symbol, since both forms are commonly used depending on context." }, { question: "What characters are valid in a hex color?", answer: "Only the digits 0-9 and the letters A-F (case-insensitive) — any other character, including spaces or symbols, makes the value invalid." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

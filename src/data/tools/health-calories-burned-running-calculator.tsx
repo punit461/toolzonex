@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How accurate is this calorie estimate?", answer: "MET-based estimates are a widely used approximation and work well for the average runner on flat ground, but actual burn varies with body composition, running efficiency, and terrain. Treat the result as a reliable estimate rather than an exact measurement." }, { question: "Does running uphill burn more calories?", answer: "Yes — this calculator assumes flat terrain at a steady pace. Hills, trail running, and wind resistance all increase the energy cost above what the flat-ground MET value predicts." }, { question: "Is this a substitute for a fitness tracker or medical advice?", answer: "No — this is a general fitness estimate, not a clinical measurement. If you're training for a specific health or medical goal, consult a doctor or certified coach." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

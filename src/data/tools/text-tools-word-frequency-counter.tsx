@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Word Frequency Visualizer?", answer: "This tool shows a complete, sortable table of every distinct word and its exact count. The Word Frequency Visualizer instead shows only the top 15 words as a bar chart for a quicker visual overview — use whichever format suits your needs." }, { question: "Is counting case-sensitive by default?", answer: "No — case-insensitive counting is on by default, so \"The\", \"THE\", and \"the\" are combined into a single row. Untick the option to count them separately." }, { question: "Does it exclude common stopwords?", answer: "No — every word is counted, including common words like \"the\" and \"and\". If you want frequent words with stopwords filtered out, use the Keyword Extractor tool instead." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

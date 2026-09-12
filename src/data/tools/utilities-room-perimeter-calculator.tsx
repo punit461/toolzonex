@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Should I subtract doorways and openings from the perimeter?", answer: "For baseboard or trim, yes — subtract the width of any doorways or open archways, since trim isn't installed across an opening. This tool gives the full wall perimeter; deduct openings separately for an exact material order." }, { question: "How do I measure an irregular room?", answer: "Walk the room's perimeter and measure each straight wall segment one at a time, in order, then enter each length as its own row in Irregular Room mode. The tool sums every segment into a total perimeter." }, { question: "Does this calculate floor area too?", answer: "In Rectangle mode, yes — the area (length × width) is shown alongside the perimeter. Irregular mode only totals the perimeter, since area for a non-rectangular shape needs more than just the outer wall lengths." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

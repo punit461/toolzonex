@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this change my page size?", answer: "No — output pages are the same size as the input. Only the content is scaled down and centered within that same page size." }, { question: "Is my text still selectable afterward?", answer: "Yes — this tool keeps your original page content as vector/text data; it's simply scaled and repositioned, not converted to an image." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

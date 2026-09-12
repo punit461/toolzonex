@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between percent error and percent difference?", answer: "Percent error compares a measured value against a known, accepted, or theoretical value — treating one value as the \"truth.\" Percent difference instead compares two measured values of equal standing, with neither treated as more correct than the other." }, { question: "Can percent error be negative?", answer: "The standard definition uses an absolute value, so percent error itself is always zero or positive. This calculator also shows the signed version so you can see whether your measured value overestimated or underestimated the accepted value." }, { question: "What counts as a \"good\" percent error?", answer: "It depends entirely on the context — a percent error under 5% is often considered good in many school science experiments, but precision manufacturing or analytical chemistry may require far smaller errors, sometimes well under 1%." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

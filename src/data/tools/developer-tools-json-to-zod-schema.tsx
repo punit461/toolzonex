@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why are nested schemas defined before the root schema?", answer: "JavaScript evaluates const declarations top to bottom, and the root schema references its nested schemas by name — so those need to be defined earlier in the file, or you'd get a \"used before it was defined\" error at runtime." }, { question: "Does the generated code include a Zod import?", answer: "No — only the schema declarations are generated. Add import { z } from \"zod\"; at the top of the file where you paste the output." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and schema generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

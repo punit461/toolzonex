@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the generic EMI Calculator?", answer: "The EMI Calculator only takes a principal, rate, and tenure. This Car Loan Calculator is auto-specific — it also accounts for down payment, trade-in value, and sales tax, all of which change the actual amount you finance versus the vehicle's sticker price." }, { question: "Does trade-in value always reduce sales tax?", answer: "In most US states, yes — sales tax is charged on the price minus the trade-in value. A few states tax the full purchase price regardless of trade-in, so check your local rules for an exact figure." }, { question: "Why is my loan amount higher than the price minus down payment?", answer: "Because sales tax is added into the amount financed unless you pay it separately in cash. If you plan to pay tax and fees out of pocket, set the down payment high enough to cover them." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

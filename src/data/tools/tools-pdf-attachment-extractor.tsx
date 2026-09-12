@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if no attachments are found?", answer: "Not all PDFs contain attachments. Only files that were explicitly embedded by the PDF creator will appear here." }, { question: "What file types can be extracted?", answer: "Any file type that was embedded in the PDF — there is no restriction on format or extension." }, { question: "Is my file uploaded anywhere?", answer: "No — extraction happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does New Hampshire tax my paycheck?", answer: "No. New Hampshire (NH) does not tax wage income, so this New Hampshire payroll calculator only deducts federal income tax, Social Security, and Medicare — no state withholding applies to your salary." }, { question: "Is this the same as a New Hampshire payroll calculator?", answer: "Yes — this tool works as both a New Hampshire paycheck calculator and payroll calculator. Since NH doesn’t tax wages, your take-home pay only reflects federal tax, Social Security, and Medicare." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

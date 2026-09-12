@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can this tool crack or remove PDF passwords?", answer: "No — it only detects whether a PDF is encrypted. It cannot bypass or remove password protection." }, { question: "Is my file uploaded anywhere?", answer: "No — detection happens entirely in your browser; the PDF never leaves your device." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

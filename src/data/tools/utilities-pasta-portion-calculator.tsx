@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does the portion size vary so much between contexts?", answer: "An appetizer portion is meant to be a small taste alongside other courses, while a main course portion needs to be filling on its own — and a \"hearty eater\" portion accounts for guests who typically eat more than average, such as at a casual gathering." }, { question: "Is the cups conversion exact?", answer: "No — the ounces-to-cups conversion for dry pasta varies by shape (long noodles like spaghetti measure differently than short shapes like penne or rotini), so the cups figure here is a rough approximation. Weighing dry pasta on a kitchen scale is more accurate than measuring by cup." }, { question: "Should I account for sauce-heavy vs. pasta-heavy dishes?", answer: "These are general guidelines assuming a typical sauce-to-pasta ratio. For dishes with very generous sauce, mix-ins, or protein, you might comfortably use a slightly smaller pasta portion per person." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

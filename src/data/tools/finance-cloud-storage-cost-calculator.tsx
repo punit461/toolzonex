@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these provider rates exact?", answer: "No — they're rounded, illustrative examples of common standard-tier pricing at the time of writing. Cloud storage pricing is tiered, region-specific, and changes over time, so always check the current pricing page for an exact number, or use the custom rate option with your actual quoted price." }, { question: "Does this include data transfer or API request costs?", answer: "No — this estimates storage cost only. Most cloud providers bill data egress (downloading data out) and API requests separately from storage, and those can add meaningfully to a real bill depending on usage patterns." }, { question: "Why do rates differ so much between storage classes?", answer: "Providers price storage classes based on access frequency and retrieval speed — \"archive\" or \"cold\" tiers cost far less per GB than standard storage but charge more (and take longer) to retrieve data, while frequently accessed data belongs in standard-tier storage despite the higher per-GB rate." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

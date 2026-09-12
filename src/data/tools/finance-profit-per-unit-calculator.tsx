@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from a gross profit calculator?", answer: "A gross profit calculator typically works at the whole-business level — total revenue minus total cost of goods sold. This tool works at the individual product level, showing profit for one unit and one product line, which is more useful when comparing multiple products against each other." }, { question: "What should I include in cost per unit?", answer: "Include everything directly tied to producing or acquiring that one unit — materials, manufacturing or wholesale cost, and per-unit packaging or shipping. Shared overhead like rent or salaries is usually better handled separately at the business level rather than allocated per unit." }, { question: "Can profit per unit be negative?", answer: "Yes — if your cost per unit exceeds your selling price, you're losing money on every sale of that product, which is an important signal to raise prices, cut costs, or discontinue the product line." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a mill rate?", answer: "A mill rate is the amount of tax payable per $1,000 of assessed property value. A mill rate of 15 means you pay $15 per $1,000, or 1.5%." }, { question: "Why does property tax vary so much by location?", answer: "Property tax rates are set by local governments based on their budget needs and the total assessed value of properties in the area." }, { question: "Can I appeal my property tax assessment?", answer: "Yes — most jurisdictions allow you to appeal if you believe your property has been assessed above its market value." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

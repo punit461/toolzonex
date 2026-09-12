@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this FIFO, LIFO, or another costing method?", answer: "No — this is a simple total-value calculation (current quantity × current unit cost, summed across items). FIFO and LIFO are costing-layer methods that require the full history of purchase transactions at different cost points over time, not just a current quantity and cost snapshot, so they aren't something this simple tool can replicate." }, { question: "What unit cost should I use?", answer: "Use whatever cost basis matches your purpose — the most recent purchase price for a rough current-value estimate, or your average cost per unit if you track that. For formal accounting purposes, follow your business's chosen inventory costing method." }, { question: "Can I use this for a large number of items?", answer: "Yes — add as many rows as you need. For very large inventories, a spreadsheet or inventory management system may be more practical, but this works well for a quick check on a smaller list." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

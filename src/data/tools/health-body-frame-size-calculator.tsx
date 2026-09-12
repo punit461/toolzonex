@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How do I measure my wrist circumference?", answer: "Wrap a soft measuring tape around your wrist just below the wrist bone (where a watch would sit) and note the circumference in centimeters or inches, keeping the tape snug but not tight." }, { question: "Is there a wrist-only method that doesn't need height?", answer: "Yes — some charts classify frame size from wrist circumference alone using fixed height-based ranges (for example, for women over 5'5\", under 6 inches is small, 6-6.25 inches is medium, and over 6.25 inches is large). This calculator uses the more precise height-to-wrist ratio method instead, which adjusts continuously for your exact height rather than a fixed height bracket." }, { question: "Is this a medical measurement?", answer: "No — body frame size is a general fitness reference, not a diagnostic or medical measurement. It's best used as one input alongside other health metrics, not as a standalone health assessment." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

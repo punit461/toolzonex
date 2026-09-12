@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is CADR, exactly?", answer: "CADR (Clean Air Delivery Rate) is an independently tested rating showing how much filtered air (in cubic feet per minute) a purifier delivers for smoke, dust, and pollen specifically. It's printed on most reputable air purifiers and is the standard way to compare cleaning power across models." }, { question: "Why does ceiling height matter if it's not in the main formula?", answer: "This calculator's area-based estimate assumes a standard ceiling height (around 8 ft). Room volume is shown separately for reference — for unusually tall or vaulted ceilings, you may want to increase the recommended CADR factor since there's more total air volume to clean." }, { question: "Should allergy sufferers use a higher CADR target?", answer: "Yes — people with allergies, asthma, or pet sensitivities often benefit from a higher air-changes-per-hour target (5 or more), which means increasing the factor input above the default 1.5 to get a higher recommended CADR." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

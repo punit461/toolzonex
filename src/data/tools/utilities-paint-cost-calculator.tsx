@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do I need more paint than the wall area?", answer: "Most walls need two coats for even coverage, and you lose some paint to waste and touch ups. Always round the gallon count up, since paint is sold in whole cans." }, { question: "Does color affect coverage?", answer: "Yes — dark or bold colors often need extra coats, and a primer may be required for dramatic color changes, which adds cost." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

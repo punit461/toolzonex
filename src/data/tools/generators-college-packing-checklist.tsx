@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Packing List Generator?", answer: "The Packing List Generator covers short trips like Beach, Business, Camping, and Winter travel. This tool is specifically for a college dorm move-in — a semester-long living-setup context with dorm-specific categories like bedding and under-bed storage, genuinely different from packing for a short trip." }, { question: "Can I add items specific to my dorm's rules?", answer: "Yes — use the \"Add Custom Item\" field to add anything, and it will appear in the Other section of your final checklist." }, { question: "Is my checklist saved for next time?", answer: "No — the list resets when you reload the page, since it's generated fresh in your browser each visit rather than stored anywhere." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

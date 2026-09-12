@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this an exact substitute for the cord's rated ampacity?", answer: "No — this is a general voltage-drop estimate using standard published resistance values per gauge. Always check the actual ampacity rating printed on your specific extension cord and follow your local electrical code; a cord's real-world rated capacity depends on its insulation, construction, and intended use (indoor vs. outdoor), not just voltage drop math." }, { question: "Why does cord length matter so much for voltage drop?", answer: "Voltage drop scales directly with the round-trip length of wire the current has to travel through — doubling the cord length roughly doubles the resistance the current encounters, which doubles the voltage drop for the same current and gauge." }, { question: "What happens if the voltage drop is too high?", answer: "Motors and heating elements can run hotter, less efficiently, or fail to start correctly, and the cord itself can heat up more than expected. Switching to a thicker gauge (a lower AWG number) or using a shorter cord reduces resistance and brings the voltage drop back down." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

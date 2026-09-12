@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are the numbers on each card unique?", answer: "Yes — within each column, all five numbers are unique, matching the standard rule that no number repeats within a single bingo card." }, { question: "Why is the center square marked \"FREE\"?", answer: "The center space of a standard 5×5 bingo card is traditionally a free space that counts as automatically marked for every player." }, { question: "Can I generate multiple different cards?", answer: "Yes — click \"Regenerate Card\" as many times as you like; each click produces a brand-new, independently randomized card." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

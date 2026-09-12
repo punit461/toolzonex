@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this actually crop the content?", answer: "It removes the crop, trim, bleed, and art boxes so the viewer uses the full media box. Content inside the media box is preserved." }, { question: "What if the PDF has no extra margins?", answer: "The tool still runs safely — if no trim or bleed boxes exist, the output is effectively unchanged." }, { question: "Is my file uploaded anywhere?", answer: "No — processing happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

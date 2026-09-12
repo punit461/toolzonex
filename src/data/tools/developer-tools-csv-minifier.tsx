@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the CSV Formatter?", answer: "The CSV Formatter does the opposite job — it ALIGNS CSV into readable, padded columns for easier reading by a human. This CSV Minifier strips all non-essential whitespace instead, aiming for the smallest possible file size rather than readability." }, { question: "Will this change what my CSV actually contains?", answer: "No — the output parses to exactly the same rows and values as the input. Only insignificant whitespace (padding around delimiters and outside quoted fields) and unnecessary quote marks are removed; any whitespace that was genuinely inside a quoted field is preserved exactly." }, { question: "Does it handle fields containing commas or quotes correctly?", answer: "Yes — fields that contain a comma, a quote character, or a newline are automatically kept quoted (with embedded quotes doubled per the CSV standard) so the minified output still parses correctly." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

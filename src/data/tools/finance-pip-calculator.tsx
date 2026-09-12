@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a pip?", answer: "A pip stands for \"percentage in point\" and is the standard unit of price change in forex. For most pairs it is the fourth decimal place (0.0001), but for JPY pairs it is the second decimal place (0.01)." }, { question: "Does the pip value change?", answer: "Yes — the pip value in your account currency depends on the current exchange rate. As the rate moves, the pip value fluctuates slightly. This calculator uses a fixed rate you provide." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

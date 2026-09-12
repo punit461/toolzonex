@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this tool for generating or storing passwords?", answer: "No — this tool is meant purely for securely and unambiguously communicating an existing password over voice or phone. It doesn't generate new passwords or store anything you type; use a dedicated password generator and manager for those purposes." }, { question: "Why use the NATO phonetic alphabet for letters?", answer: "The NATO phonetic alphabet was specifically designed to avoid confusion between similar-sounding letters (like B and D, or M and N) over noisy audio channels, making it the clearest standard way to spell something out loud." }, { question: "Why is 9 spelled \"Niner\"?", answer: "This is the same radio convention used in aviation — \"Niner\" is used instead of \"Nine\" because \"Nine\" can sound too close to \"Five\" over the phone or radio." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

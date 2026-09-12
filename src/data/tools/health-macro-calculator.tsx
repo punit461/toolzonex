@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What are macros?", answer: "\"Macros\" is short for macronutrients — protein, carbohydrates, and fat, the three nutrient groups that provide calories. Tracking macros (not just total calories) helps with goals like preserving muscle during weight loss or supporting muscle gain during a bulk." }, { question: "Which diet style should I choose?", answer: "There's no single best split — a balanced 40/30/30 works well for general health, higher protein supports muscle retention during a cut, and low-carb or keto styles suit people who respond well to reduced carbohydrate intake. This tool is for general planning only; consult a doctor or dietitian for medical nutrition advice." }, { question: "Why does fat use 9 kcal/gram instead of 4?", answer: "Fat is more energy-dense than protein or carbohydrates — it provides about 9 kilocalories per gram, compared to 4 kilocalories per gram for protein and carbs, which is why the same calorie amount converts to fewer grams of fat than of protein or carbs." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

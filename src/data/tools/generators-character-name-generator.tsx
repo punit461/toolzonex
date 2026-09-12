@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does the last name change based on the gender toggle?", answer: "No — the gender toggle only affects which first-name list is used; last names are drawn from one shared surname list for each style, regardless of gender." }, { question: "Can I mix styles, like a fantasy first name with a modern last name?", answer: "Not directly — each generation uses one selected style for both the first and last name, keeping the combination thematically consistent. You can generate a few names in different styles and manually combine parts if you want a mixed result." }, { question: "Can I get the same name twice?", answer: "Yes — each click is an independent random pick from the lists, so repeats are possible, especially with a lot of clicking." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

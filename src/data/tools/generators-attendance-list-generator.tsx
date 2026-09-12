@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Attendance Calculator?", answer: "The Attendance Calculator does percentage math — figuring out how many classes you can miss and still hit a required attendance percentage. This Attendance List Generator does something entirely different: it generates a blank, printable roster or sign-in sheet template for physically taking attendance at an event or class, with no percentage calculations involved." }, { question: "Can I mix pre-filled names with extra blank rows?", answer: "Not directly in one sheet, but you can generate a Known Names sheet and add a few blank lines at the end of your names list to leave room for walk-ins." }, { question: "Does the Print button format the sheet nicely on paper?", answer: "Yes — it uses your browser's print function on the table layout, which is designed to print cleanly on standard paper sizes." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

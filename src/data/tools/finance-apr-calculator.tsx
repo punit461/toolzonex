@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between APR and interest rate?", answer: "The interest rate covers only the cost of borrowing principal. APR includes the interest rate plus fees and other loan costs." }, { question: "Is a lower APR always better?", answer: "Generally yes, but also consider the loan term and total cost. A lower APR with a much longer term could cost more overall." }, { question: "What is the difference between APR and Effective Annual Rate (EAR)?", answer: "APR is the nominal annual rate before accounting for compounding within the year. Effective Annual Rate (EAR) adjusts for how often interest compounds (monthly, daily, etc.), so EAR is always equal to or higher than APR when compounding happens more than once a year. Lenders are required to advertise APR, but EAR is the more accurate figure for comparing the true cost of two loans that compound at different frequencies." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

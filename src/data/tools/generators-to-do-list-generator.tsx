@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this list save if I close the page?", answer: "No — this is a quick scratch-pad list only. It lives in your browser tab for the current session and is not saved, synced, or backed up anywhere, so it will be gone if you refresh or close the page. For a saved or synced to-do app, use dedicated task management software instead." }, { question: "Is there a limit to how many items I can add?", answer: "No practical limit — add as many items as you need for your current session." }, { question: "Can I reorder items?", answer: "Not currently — items appear in the order you add them. Remove and re-add an item if you want to move it, or simply keep adding new items as priorities shift." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

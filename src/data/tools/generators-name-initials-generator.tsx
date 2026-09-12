@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What happens with a single-word name?", answer: "If only one word is entered, both the full initials and the avatar initials show just that word's first letter." }, { question: "How are middle names handled in the avatar version?", answer: "The 2-letter avatar version only ever uses the first and last words in the name, ignoring any middle names — matching how most apps generate avatar initials." }, { question: "Does the avatar color mean anything?", answer: "The background color is generated deterministically from the name itself, so the same name always produces the same color, similar to how many apps assign consistent avatar colors per user." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

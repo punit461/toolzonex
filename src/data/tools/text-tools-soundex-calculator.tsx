@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is Soundex?", answer: "Soundex is a phonetic algorithm that converts a word — typically a name — into a 4-character code (one letter plus three digits) representing how it sounds, so that similar-sounding words share the same code regardless of small spelling differences." }, { question: "Why do two different spellings get the same code?", answer: "Soundex groups consonants that sound alike (like B, F, P, V) into the same digit and ignores vowels entirely, since vowels vary the most between alternate spellings of the same name. Two names that sound similar, such as \"Smith\" and \"Smyth\" or \"Robert\" and \"Rupert\", follow the same consonant pattern and so end up with the same code even though they're spelled differently." }, { question: "Is Soundex case-sensitive?", answer: "No. Soundex first converts the input to uppercase, so \"robert\", \"Robert\", and \"ROBERT\" all produce the identical code, R163." }, { question: "Does Soundex work for non-English names?", answer: "Soundex was designed around English-language pronunciation and spelling patterns, so it works best on names common in English-speaking records. It can still be applied to non-English names since it only looks at Latin letters, but the codes it produces may not reflect how those names actually sound in their original language." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

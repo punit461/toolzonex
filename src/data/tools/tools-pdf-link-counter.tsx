@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this check if the links are working?", answer: "No — this tool only lists the URIs found in the PDF. It does not verify whether the URLs are live or broken." }, { question: "What about links to other pages within the same PDF?", answer: "Internal page destination links are counted but shown as 'Page reference (local)' since they do not have a web URI." }, { question: "Is my file uploaded anywhere?", answer: "No — all analysis runs in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

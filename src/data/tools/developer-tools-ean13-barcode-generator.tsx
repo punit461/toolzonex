@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is the EAN-13 check digit calculated?", answer: "Each of the first 12 digits is multiplied by 1 or 3 alternately (odd positions ×1, even positions ×3, counting from the left starting at position 1), the results are summed, and the check digit is whatever number brings that sum up to the next multiple of 10." }, { question: "Can I use any 12 digits?", answer: "Technically yes for generating a valid barcode, but real-world EAN-13 codes are issued by GS1 and include a registered manufacturer prefix — use a real assigned code for actual retail products." }, { question: "Is my data uploaded anywhere?", answer: "No — the barcode is generated entirely client-side in your browser using the jsbarcode library." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

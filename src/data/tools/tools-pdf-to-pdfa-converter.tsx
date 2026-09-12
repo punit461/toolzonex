@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will this pass a PDF/A validator like veraPDF?", answer: "Not guaranteed. This tool doesn't verify or fix font embedding, color profile conformance, or transparency usage — all of which a strict validator checks. Treat the output as PDF/A-style, not certified PDF/A." }, { question: "What does it actually change?", answer: "It confirms the file isn't encrypted, sets title/author/producer/creator metadata and creation/modification dates, sets a document language if missing, and re-saves the file with a clean structure." }, { question: "My PDF has non-embedded fonts — does this embed them?", answer: "No. Font embedding depends on the original PDF's construction and isn't something this tool inspects or modifies." }, { question: "Is my file uploaded anywhere?", answer: "No — conversion happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

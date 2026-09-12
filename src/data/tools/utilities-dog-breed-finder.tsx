@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these facts guaranteed for every individual dog?", answer: "No — these are general, typical figures for each breed. Individual dogs can vary in size, temperament, and health regardless of breed, and mixed-breed dogs may not follow these ranges at all." }, { question: "Does this include every recognized dog breed?", answer: "No — this tool covers over 60 of the most common and widely recognized breeds rather than every breed registered by kennel clubs worldwide." }, { question: "What does \"energy level\" mean here?", answer: "It's a general indicator of how much daily exercise and mental stimulation the breed typically needs — High-energy breeds usually need substantial daily activity, while Low-energy breeds are typically content with shorter walks and more downtime." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

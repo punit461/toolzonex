@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is Exposure Value (EV)?", answer: "EV is a number that combines aperture and shutter speed into a single value representing the total amount of light reaching the sensor at ISO 100. The same EV can be achieved with many different aperture/shutter combinations — a stop faster shutter with a stop wider aperture gives the same EV (this is called an \"equivalent exposure\")." }, { question: "Do I need to know the exact EV for my scene?", answer: "Not exactly — most cameras display an exposure meter reading (often relative to 0, meaning \"correctly exposed\" for the camera's current settings) which you can use as a starting point, or use common EV reference guides for lighting conditions (e.g. EV 15 for bright sun, EV 5 for typical indoor lighting)." }, { question: "Why does my shutter speed input need a slash, like 1/125?", answer: "Shutter speeds are usually written as a fraction of a second. You can enter it as a fraction (like 1/125) or as a decimal number of seconds (like 2 for a 2-second exposure) — both formats work." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

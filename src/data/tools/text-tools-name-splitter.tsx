@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this a definitive or perfectly accurate way to split names?", answer: "No — name parsing is inherently ambiguous. Many names and naming conventions around the world don't follow a simple \"first, middle, last\" pattern (for example, some cultures place the family name first, use multiple surnames, or have no middle name concept at all). This tool uses straightforward space-based heuristics rather than being a definitive solution, so always double-check the results for names that don't fit a typical Western first/middle/last structure." }, { question: "How are single-word names handled?", answer: "A single-word entry (like a mononym) is placed entirely in the first name field, with the middle and last name fields left blank." }, { question: "Can I process many names at once?", answer: "Yes — paste as many names as you like, one per line, and every line is split independently and shown as its own row in the results table." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's considered good revenue growth?", answer: "It varies enormously by company stage and industry — early-stage startups often target 10-20% month-over-month growth, while mature public companies may see healthy growth in the single digits annually. Compare against your own historical trend and industry peers rather than a universal benchmark." }, { question: "Should I compare the same period year-over-year instead of sequentially?", answer: "For businesses with seasonal revenue, comparing the same period a year apart (e.g., this Q4 versus last Q4) often gives a clearer growth signal than comparing sequential quarters, which can be skewed by seasonal swings. Enter matching periods from each year as your rows if that fits your business better." }, { question: "What if a period has zero or negative revenue?", answer: "Growth percentage is undefined when the previous period's revenue is zero, since you can't divide by zero — that row will show no growth figure. Negative revenue isn't typical for a revenue line but the formula still works directionally if entered." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Garden Bed Calculator or Seed Spacing Calculator?", answer: "Those tools handle physical layout and spacing math — how many beds fit in your plot, or how far apart to space seeds. This Garden Planner is a planting-and-harvest timing schedule across the growing season, not a physical layout tool." }, { question: "Does the schedule reorder automatically as I change planting months?", answer: "Yes — the list re-sorts by planting month instantly whenever you add, edit, or remove a plant." }, { question: "Is my garden plan saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the schedule before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

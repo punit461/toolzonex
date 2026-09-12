@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How accurate is Riegel's formula?", answer: "It's a well-regarded estimate, especially when the reference distance is close to a marathon (like a half marathon), but it's still just a prediction. Actual performance depends on training specific to marathon distance, pacing discipline, nutrition, and race-day conditions." }, { question: "Which reference race gives the best prediction?", answer: "A half marathon result is generally the most reliable predictor of marathon performance, since the distance and effort profile are closer to a marathon than a 5K or 10K." }, { question: "Should I train differently for a marathon than for shorter races?", answer: "Yes — this calculator predicts a time based on your current fitness, but a marathon requires distance-specific endurance training (like long runs) that a 5K or 10K training plan may not include. Following a marathon-specific training plan will typically produce a better result than this prediction alone." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

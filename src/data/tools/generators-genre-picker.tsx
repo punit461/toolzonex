@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this tool recommend specific movies, songs, or books?", answer: "No — it only picks a genre (like \"Horror\" or \"Jazz\"), not a specific title. You can then use that genre to search your favorite streaming service, library, or bookstore for something to enjoy." }, { question: "Can I get the same genre twice in a row?", answer: "Yes — each pick is fully independent and random, so repeats are possible, just like rolling a die can land on the same number twice." }, { question: "Are the genre lists the same for all three media types?", answer: "No — each media type (Movie, Music, Book) has its own genuinely distinct list of 10 genres tailored to that medium, rather than one shared generic list." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a PDF point?", answer: "One PDF point equals 1/72 of an inch (approximately 0.353 mm). All standard page sizes in the PDF specification are defined in points." }, { question: "Is my file uploaded anywhere?", answer: "No — all processing happens entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

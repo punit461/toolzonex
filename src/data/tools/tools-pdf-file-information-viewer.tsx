@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if I can't enter the password?", answer: "You'll still see the file size, PDF version, and encryption status — page count and document properties require the password since those are stored inside the encrypted content." }, { question: "Does this modify my PDF?", answer: "No — this is a read-only viewer. Your original file stays exactly as it is." }, { question: "Is my file uploaded anywhere?", answer: "No — everything is read entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

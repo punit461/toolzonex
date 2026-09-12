@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is quarterly compounding the default?", answer: "Most Indian banks compound fixed deposit interest quarterly, so it's used as the default — switch to monthly, half-yearly, or annual if your bank's scheme differs." }, { question: "Are taxes deducted from the maturity amount?", answer: "This calculator shows pre-tax figures. Banks may deduct TDS on interest earned above the annual exemption threshold." }, { question: "Does the rate stay fixed for the whole tenure?", answer: "The calculator assumes a fixed rate throughout, which matches how bank FDs normally work." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

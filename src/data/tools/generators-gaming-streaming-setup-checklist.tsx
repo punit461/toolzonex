@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Do Gaming Setup and Streaming Setup share checked items?", answer: "No — each category keeps its own checked state, so switching between them doesn't affect your progress on the other." }, { question: "Do I need a capture card for every streaming setup?", answer: "No — a capture card is only needed if you're streaming footage from a console or a second PC; streaming directly from the same PC you're recording with doesn't require one." }, { question: "Is my checklist saved anywhere?", answer: "No — the checklist resets when you reload the page, since it's generated fresh in your browser each visit rather than stored anywhere." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this safe for production code?", answer: "For complex production codebases, a full AST-based minifier like Terser or esbuild is safer and more thorough — this tool is best for quick, simple minification needs." }, { question: "Can I minify js online without installing anything?", answer: "Yes — paste your JavaScript into the input box and click Minify JS. Everything runs in your browser, so there's nothing to install and no build tooling required." }, { question: "What does this JavaScript minify / compress js tool actually remove?", answer: "It strips comments (both // and /* */ styles), collapses extra whitespace and line breaks, and removes unnecessary spaces around operators and punctuation — reducing file size without changing behavior for typical scripts." }, { question: "Does minimizing JS change how my code runs?", answer: "It shouldn't — minifying only removes comments and formatting whitespace, not logic. However, this is a basic regex-based minifier, not a full parser, so always test minified output before deploying it, especially for complex code." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

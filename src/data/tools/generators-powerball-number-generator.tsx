@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these real Powerball winning numbers?", answer: "No. These are randomly generated for entertainment and planning purposes only. Official Powerball winning numbers are drawn live by the Multi-State Lottery Association." }, { question: "How does the Powerball number range work?", answer: "White balls are chosen from 1 to 69 (5 unique numbers), and the red Powerball is chosen separately from 1 to 26." }, { question: "Does picking my own numbers improve my odds?", answer: "No — every number and every combination in an official drawing has exactly the same probability, whether you pick numbers yourself or use a Quick Pick." }, { question: "Can I generate multiple tickets at once?", answer: "Yes — choose 1, 5, or 10 tickets, or generate again for up to 20, to quickly build numbers for a group play or pool." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

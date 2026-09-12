@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a dielectric constant (relative permittivity)?", answer: "It's the ratio of a material's permittivity to that of a vacuum, describing how much better that material is at storing electric field energy compared to empty space. A higher dielectric constant means more capacitance for the same plate area and spacing." }, { question: "Does this account for real-world fringing effects?", answer: "No — this uses the idealized formula that assumes a uniform electric field between infinite parallel plates. Real capacitors have fringing fields at the plate edges, which make measured capacitance somewhat higher than this calculation, especially when the plate separation isn't small compared to the plate size." }, { question: "How does the distance between plates affect capacitance?", answer: "Capacitance is inversely proportional to plate separation, so halving the gap between the plates doubles the capacitance, while doubling the gap halves it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

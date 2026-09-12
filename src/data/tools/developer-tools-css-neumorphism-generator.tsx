@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do both shadows need to match the background color?", answer: "Neumorphism works by shading the same base color lighter and darker rather than using a contrasting shadow color, which is what makes the element look like it's carved from the same material as its background instead of floating above it." }, { question: "Why does my neumorphic element look flat or low-contrast?", answer: "Neumorphism relies on subtle brightness differences, so it can naturally read as low-contrast — this is by design, but it means text and icons inside a neumorphic element need extra care to stay accessible and legible." }, { question: "Can I make an element look pressed in instead of raised?", answer: "Yes — swap the technique to use inset shadows (placing the dark shadow on the same side as the light one is flipped) to create a pressed-in, concave look instead of a raised, convex one." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

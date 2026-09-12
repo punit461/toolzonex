@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will images from the PDF be included?", answer: "No — only the text layer is converted. Images embedded in the PDF are not extracted." }, { question: "Does the HTML preserve exact layout?", answer: "The tool approximates the document structure using font sizes for heading levels, but pixel-perfect layout is not guaranteed." }, { question: "Is my file uploaded anywhere?", answer: "No — conversion runs entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this validate my XML?", answer: "Not strictly — it uses a lightweight, regex-based re-indenter, so it focuses on formatting rather than full schema validation." }, { question: "What happens to very long lines or deeply nested elements?", answer: "Long lines are wrapped to fit the page width, and the PDF automatically adds new pages as content runs long." }, { question: "Is my XML uploaded anywhere?", answer: "No — formatting and PDF generation both happen entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

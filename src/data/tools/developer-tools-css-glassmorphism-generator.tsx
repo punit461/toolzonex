@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does the CSS include both backdrop-filter and -webkit-backdrop-filter?", answer: "The -webkit- prefixed version is required for Safari to apply the blur effect, so including both ensures the glass effect renders consistently across Chrome, Firefox, and Safari." }, { question: "Why isn't the blur showing on my element?", answer: "backdrop-filter only blurs whatever is visually behind the element, so it needs a background (an image, gradient, or other content) positioned underneath it — over a plain solid-color background, the effect can look identical to a simple semi-transparent box." }, { question: "Does glassmorphism work well for text-heavy content?", answer: "Use it sparingly for text-heavy areas — the translucent background can reduce contrast, so it's best paired with a subtle background and dark or light text chosen to keep good readability." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

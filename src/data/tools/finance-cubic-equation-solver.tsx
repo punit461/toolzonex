@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do I sometimes get complex roots?", answer: "A cubic always has three roots (counting multiplicity). When the discriminant is positive, only one is real and the other two are complex conjugates — the tool shows all of them." }, { question: "What if a = 0?", answer: "The equation is no longer cubic. The solver degrades gracefully to a quadratic/linear solve so you still get the available real roots." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

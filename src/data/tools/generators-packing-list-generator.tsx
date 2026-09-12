@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does the list update automatically when I change trip length?", answer: "Yes — quantity-based items like underwear and socks recalculate instantly whenever you change the number of days, using days + 1 as the quantity." }, { question: "Can I check off items as I pack?", answer: "Yes — click any item to mark it packed; checked items appear crossed out." }, { question: "Can I save my progress?", answer: "Checked items are only kept for your current browser session and reset on reload, so copy or print your list if you need a lasting copy." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

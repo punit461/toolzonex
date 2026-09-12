@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why doesn't a preset line up with my label?", answer: "Flipkart's label layout can vary by shipment type and courier partner. Use the live preview and switch to Custom to enter the exact box in inches." }, { question: "Does this work for multi-shipment bulk label PDFs?", answer: "Yes — the same crop region is applied to every page, so a bulk manifest with many shipments is cropped in one pass." }, { question: "Is my file uploaded anywhere?", answer: "No — cropping happens entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

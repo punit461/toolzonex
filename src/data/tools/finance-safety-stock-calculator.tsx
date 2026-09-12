@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is safety stock different from the Economic Order Quantity (EOQ)?", answer: "EOQ answers \"how much should I order each time?\" to minimize total ordering and holding costs. Safety stock answers a different question — \"how much extra buffer should I hold?\" to protect against demand spikes and lead-time delays. Use our separate EOQ calculator to size your regular order quantity, and this tool to size your buffer on top of it." }, { question: "What if my safety stock comes out negative?", answer: "A negative result means your maximum daily usage and lead time aren't much higher than your averages, implying little variability to buffer against. In practice, most businesses still hold at least a small buffer, so treat a negative or near-zero result as a signal that minimal safety stock is needed, rather than literally holding negative inventory." }, { question: "Where do I get my \"maximum\" usage and lead time figures?", answer: "Look back at your historical sales and supplier delivery data over a recent period (such as the last 6-12 months) and use the highest daily usage and longest lead time observed, alongside the averages over that same period, for a realistic buffer calculation." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

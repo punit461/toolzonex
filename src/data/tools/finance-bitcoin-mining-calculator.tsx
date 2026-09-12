@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do I have to enter the BTC price and difficulty myself?", answer: "Both values change continuously — difficulty adjusts roughly every two weeks and price moves by the minute. Rather than showing a stale or misleading number, this calculator lets you plug in current figures from any live tracker or exchange so the estimate reflects today's conditions." }, { question: "How accurate is this estimate?", answer: "It's a simplified statistical average, not a guarantee. Actual mining income varies with luck (block finding is probabilistic), pool payout method, network hash rate growth, and BTC price volatility — treat the result as a rough planning figure, not a precise forecast." }, { question: "Does this account for hardware cost or depreciation?", answer: "No — it only estimates ongoing operating profit from electricity and pool fees. The upfront cost of mining hardware, cooling, and its depreciation over time are not included and should be factored in separately when judging overall return on investment." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

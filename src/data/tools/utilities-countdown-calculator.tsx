@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does the countdown keep updating automatically?", answer: "Yes — once you set a target date and time, the display refreshes every second on its own, with no need to click a button or reload the page." }, { question: "What happens if I pick a date in the past?", answer: "The calculator switches to showing elapsed time — how long ago that date and time occurred — instead of a countdown." }, { question: "Does this account for my local time zone?", answer: "Yes — the target date and time you enter, and the current time used for the countdown, are both based on your device's local time zone." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this the same as a KY paycheck calculator?", answer: "Yes — \"KY\" is the postal abbreviation for Kentucky. This Kentucky (KY) paycheck calculator applies Kentucky's flat 4% state income tax along with federal tax, Social Security, and Medicare to estimate take-home pay." }, { question: "What is Kentucky's state income tax rate?", answer: "Kentucky charges a flat 4% state income tax on wages after the state standard deduction, regardless of income level or filing status." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

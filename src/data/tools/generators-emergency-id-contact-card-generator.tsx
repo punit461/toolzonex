@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is my personal and medical information saved anywhere?", answer: "No — everything you type stays in your browser only for the current session and is never saved to a server or database. It resets when you reload the page, so copy or print your card before closing the tab." }, { question: "Can I add more than one emergency contact?", answer: "Yes — use the \"Add Contact\" button to add as many emergency contacts as you need, each with their own name, relationship, and phone number." }, { question: "Should I carry a physical copy of this card?", answer: "Yes, that's the intended use — copy the text or print the card and keep it somewhere accessible, like a wallet or phone case, so first responders or others can find it quickly in an emergency." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

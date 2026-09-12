@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this cover every country?", answer: "It covers roughly 195 widely-recognized countries — all UN member states plus a few commonly searched additional entries — rather than every dependent territory in the world." }, { question: "What about countries with more than one capital?", answer: "A few countries (like South Africa or Bolivia) have multiple official capitals for different branches of government. This tool lists the single most commonly cited capital for simplicity." }, { question: "Can I search using a partial name?", answer: "Yes — the search matches any part of the country or capital name, so typing just a few letters is often enough to find what you're looking for." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

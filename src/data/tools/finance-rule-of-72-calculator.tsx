@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How accurate is the Rule of 72?", answer: "It's a close approximation for annual rates roughly between 6% and 10%, with the exact doubling time given by ln(2) / ln(1 + r). Outside that range, the estimate drifts slightly, but it's accurate enough for quick mental math in almost all practical cases." }, { question: "Does the Rule of 72 assume compounding?", answer: "Yes — it assumes the return compounds annually. It does not apply cleanly to simple (non-compounding) interest, where growth is linear rather than exponential." }, { question: "Can I use it for inflation too?", answer: "Yes — the same shortcut estimates how long it takes prices to double at a given inflation rate. For example, at 3% annual inflation, prices roughly double every 24 years." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

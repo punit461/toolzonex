@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from rental yield?", answer: "A basic rental yield calculation often only looks at gross rent against price. This calculator deliberately subtracts operating expenses first, producing net operating income and a net ROI that better reflects actual profitability — useful once you know your real running costs." }, { question: "What counts as an annual expense here?", answer: "Include maintenance and repairs, property tax, insurance, property management fees, and any other recurring holding costs. Leave out the mortgage payment itself if you want to see the property's unlevered return before financing costs." }, { question: "What's considered a good ROI for a rental property?", answer: "Many investors target a net ROI (or cap rate) of 6-10%, though acceptable ranges vary widely by market, property type, and how much appreciation potential is factored in separately." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

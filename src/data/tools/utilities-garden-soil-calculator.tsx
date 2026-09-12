@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Should I buy bagged soil or bulk soil?", answer: "For small volumes (typically under 1-2 cubic yards), bagged soil is usually more convenient. For larger beds or multiple beds, bulk soil delivered by the cubic yard is often significantly cheaper per cubic foot." }, { question: "How deep should garden soil be for vegetables?", answer: "Most vegetables do well with 8-12 inches of quality soil, though root vegetables like carrots benefit from deeper, looser soil, while shallow-rooted crops like lettuce can work with less." }, { question: "Does this account for soil settling over time?", answer: "No — this calculates the volume needed to fill the bed at your chosen depth right now. Soil naturally settles and compacts over the following weeks, so many gardeners add 10-15% extra or plan to top off the bed later." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

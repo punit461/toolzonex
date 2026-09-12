@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I paste HTML directly?", answer: "Yes — select the HTML format option and paste your email HTML. Basic inline and embedded CSS is supported." }, { question: "Is my content uploaded anywhere?", answer: "No — conversion happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

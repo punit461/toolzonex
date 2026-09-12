@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this create a watermark?", answer: "Yes — this tool draws semi-transparent text on top of every page, which functions as a visual overlay or watermark." }, { question: "Can I use different text on different pages?", answer: "Not yet — the same text, color, and position is applied to all pages." }, { question: "Is my file uploaded anywhere?", answer: "No — the overlay is applied entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

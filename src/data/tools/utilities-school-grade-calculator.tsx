@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does every school use this exact scale?", answer: "No — this reflects a commonly used standard US grading scale, but individual schools, districts, universities, and countries often use their own variations (some don't use +/- grades at all, some shift the cutoffs by a few points). Always check your specific school or instructor's syllabus for the scale that actually applies to you." }, { question: "How is this different from the Final Grade Calculator?", answer: "This tool is a straightforward lookup — you already have a percentage and just want the matching letter grade. The Final Grade Calculator works backward, solving algebraically for the score you'd need on a remaining assignment or exam to hit a target overall grade." }, { question: "Do other countries use letter grades the same way?", answer: "No — many countries use entirely different scales, such as numeric grades out of 10 or 20, GPA-only systems, or pass/fail marks. This tool follows the common US-style A-F letter grade convention." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

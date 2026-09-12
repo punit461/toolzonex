@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does io-ts need t.intersection for optional fields?", answer: "Unlike Zod's per-field .optional(), io-ts models optionality at the object level: t.type declares required properties and t.partial declares optional ones. To combine both in a single object, io-ts's documented pattern is to intersect the two codecs." }, { question: "Does the generated code include an io-ts import?", answer: "No — only the codec declarations are generated. Add import * as t from \"io-ts\"; at the top of the file where you paste the output." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and codec generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

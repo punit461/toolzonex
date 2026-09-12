@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can this tool translate Pig Latin back to English?", answer: "No — this tool is one-directional (English to Pig Latin) by design. Reversing Pig Latin back to standard English is fundamentally ambiguous: many different English words can produce very similar or identical Pig Latin forms, so there's no reliable general rule for automatically undoing the transformation." }, { question: "What happens to punctuation and capitalization?", answer: "Punctuation stays exactly where it was relative to each word, and capitalization is preserved — if a word started with a capital letter, the translated version starts with a capital letter too." }, { question: "What happens with a word that has no vowels, like \"my\" or \"gym\"?", answer: "If no vowel is found in the word at all, the entire word is treated as the leading consonant cluster and moved to the front with \"ay\" appended — for example, \"my\" becomes \"myay\"." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this tool actually delete anything on my devices?", answer: "No — this is a checklist to guide your own cleanup; it doesn't connect to your email, apps, or files. You check off tasks here as a reminder while you do the actual cleanup yourself." }, { question: "Can I add cleanup tasks specific to my own devices or accounts?", answer: "Yes — use the \"Add Custom Task\" field to add anything, and it will appear in the Other section of your final checklist." }, { question: "Is my checklist saved for next time?", answer: "No — the list resets when you reload the page, since it's generated fresh in your browser each visit rather than stored anywhere." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

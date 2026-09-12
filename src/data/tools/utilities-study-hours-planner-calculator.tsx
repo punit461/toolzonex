@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Should I really split time evenly across all subjects?", answer: "An even split is a reasonable starting point, but it's worth adjusting based on which subjects are harder for you, carry more weight in your final grade, or need more practice — treat the even split as a baseline plan to fine-tune, not a strict rule." }, { question: "What if I don't know exactly how many days remain?", answer: "Just count the days between today and your exam or deadline, excluding or including the exam day itself as you prefer, then enter that as your days remaining." }, { question: "How many study hours per day is realistic?", answer: "This varies a lot by person, but sustained focused studying for more than 4-6 hours a day becomes hard for most people without diminishing returns. Build in breaks, and be honest about how much focused time you can actually manage." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does it handle abbreviations correctly?", answer: "Not perfectly — this is a known limitation of splitting on punctuation. Abbreviations like \"Dr.\", \"e.g.\", or \"U.S.\" contain a period but aren't sentence endings, so text with many abbreviations may show a slightly higher sentence count than a human reader would count. For most everyday writing without heavy abbreviation use, the count is accurate." }, { question: "Does it count as I type?", answer: "Yes — sentence, word, and character counts all update live as you type or paste text." }, { question: "What counts as a sentence-ending punctuation mark?", answer: "Periods, exclamation marks, and question marks are treated as sentence endings. Ellipses (\"...\") and repeated punctuation (\"?!\") are treated as a single ending, not multiple sentences." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

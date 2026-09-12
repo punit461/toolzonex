@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the ROT13 Encoder/Decoder?", answer: "ROT13 is specifically the fixed 13-shift case of the Caesar cipher, which happens to be self-inverse — applying it twice returns the original text, so one box handles both directions. This tool allows any shift from 1 to 25, and since an arbitrary shift generally isn't self-inverse, it requires an explicit Encode/Decode mode toggle to pick the correct direction." }, { question: "What happens if I set the shift to exactly 13?", answer: "At a shift of 13, this tool behaves exactly like ROT13 — encoding and decoding become the same operation, since shifting forward 13 and shifting back 13 (26-13=13) are identical." }, { question: "Is the Caesar cipher secure?", answer: "No — with only 25 possible shifts, a Caesar cipher can be broken almost instantly by trying every shift value or using letter-frequency analysis. It's useful for learning and casual puzzles, not for protecting sensitive information." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

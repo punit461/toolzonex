@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between the PDF and the CDF?", answer: "The probability density function (PDF) describes the relative likelihood of the distribution at an exact point, while the cumulative distribution function (CDF) gives the total probability of landing at or below that point — the CDF is generally more useful for real-world questions like percentiles." }, { question: "What does a z-score of 0 mean?", answer: "A z-score of 0 means the x-value equals the mean exactly, putting it right at the center of the distribution with a cumulative probability of 50%." }, { question: "Is the CDF calculation exact?", answer: "This uses a well-known numerical approximation (accurate to about 7 decimal places) for the standard normal CDF, since no exact closed-form expression exists using elementary functions. That level of precision is more than sufficient for virtually all practical and academic uses." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

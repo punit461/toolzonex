@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this tool also clean up messy phone numbers, or just format them?", answer: "Both — it strips all non-digit characters (spaces, dots, dashes, parentheses, letters) down to the raw digits first as a cleaning step, then applies your chosen formatting style, so there's no need for a separate cleaning tool." }, { question: "What happens with an 11-digit number?", answer: "If the number is 11 digits and starts with a leading 1 (the US/Canada country code), that leading 1 is automatically dropped before formatting the remaining 10 digits, and re-added for the International style." }, { question: "What if my number doesn't have exactly 10 or 11 digits?", answer: "The tool shows a warning telling you how many digits it found, since a number with the wrong digit count can't be reliably split into area code, prefix, and line number." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

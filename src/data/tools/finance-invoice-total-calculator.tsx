@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the site's PDF invoice generator?", answer: "The PDF invoice generator tool produces an actual downloadable, formatted PDF document you can send to a client. This calculator is just the underlying math — subtotal, discount, tax, and total — with no document or PDF output, useful for a quick check without generating a full invoice file." }, { question: "Is the discount applied before or after tax?", answer: "Before — this calculator applies the discount to the subtotal first, then calculates tax on the discounted amount, which matches how most invoices and point-of-sale systems apply discounts and tax." }, { question: "Can I use a fixed dollar discount larger than the subtotal?", answer: "The discount is capped at the subtotal amount, so the discounted total never goes below $0 before tax is applied." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

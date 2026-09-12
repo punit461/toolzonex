@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are numeric values converted to plain numbers?", answer: "No — all values are kept as strings (e.g. '16px'), including pixel values. React accepts string values for every style property, and guessing which unitless properties can take a bare number risks generating incorrect styles, so this tool always plays it safe." }, { question: "How are selector names turned into JS variable names?", answer: "Leading . or # characters are stripped, non-alphanumeric characters are removed, and hyphen-or-space-separated words are joined in camelCase — so .btn-primary becomes btnPrimary." }, { question: "Is my CSS uploaded anywhere?", answer: "No — parsing and conversion happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

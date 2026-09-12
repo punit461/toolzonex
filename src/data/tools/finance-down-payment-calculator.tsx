@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is 20% often mentioned for down payments?", answer: "On conventional US mortgages, putting down at least 20% typically avoids private mortgage insurance (PMI), an added monthly cost lenders charge to protect themselves on smaller down payments." }, { question: "Can I buy a home with less than 20% down?", answer: "Yes — many loan programs allow 3-10% down, and some government-backed loans (FHA, VA, USDA) allow even less. You'll usually pay mortgage insurance until you build enough equity." }, { question: "Does a bigger down payment always make sense?", answer: "Not always. A larger down payment reduces your loan and interest costs, but tying up more cash upfront means less liquidity for emergencies or other investments — weigh both sides before deciding." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What assumptions does the EOQ formula make?", answer: "Classic EOQ assumes constant, known demand, a fixed ordering cost per order, a fixed holding cost per unit, no quantity discounts, and instantaneous replenishment (no lead-time stockouts). Real-world inventory often violates one or more of these, so treat EOQ as a starting point rather than an exact answer." }, { question: "What happens if I order more or less than the EOQ?", answer: "Ordering more than the EOQ increases holding costs faster than it reduces ordering costs (and vice versa for ordering less) — the EOQ is specifically the quantity where those two costs are balanced and their sum is at its minimum." }, { question: "How do I estimate my holding cost per unit?", answer: "A common approach is to take a percentage (often 15-30%) of the unit's purchase cost to account for storage space, insurance, spoilage/obsolescence risk, and the opportunity cost of capital tied up in inventory rather than invested elsewhere." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

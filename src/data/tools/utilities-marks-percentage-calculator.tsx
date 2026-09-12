@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this the same as averaging each subject's percentage?", answer: "Only if every subject has the same maximum marks. When subjects have different maximum marks (e.g. one out of 100 and another out of 50), this calculator correctly weights by total marks rather than simply averaging each subject's individual percentage, which would distort the result." }, { question: "What grading scale does the grade band use?", answer: "The grade band shown (A+ down to F) uses a common general-purpose scale: 90%+ is A+, 80-89% is A, 70-79% is B+, 60-69% is B, 50-59% is C, 40-49% is D, and below 40% is F. Your school or exam board may use a different scale, so treat this as a general reference rather than an official grade." }, { question: "Can I use this for a single subject only?", answer: "Yes — remove the extra rows so only one remains, enter the marks obtained and maximum marks for that one subject, and the calculator will show that subject's individual percentage." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

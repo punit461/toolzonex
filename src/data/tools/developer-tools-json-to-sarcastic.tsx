@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What API convention does the generated output follow?", answer: "The output follows Sarcastic's documented shape/arrayOf/optional/maybe API convention, with bare string, number, and boolean validators for primitives (rather than function calls). If your installed version of Sarcastic differs slightly, adjust the generated names to match." }, { question: "How are optional and nullable fields combined?", answer: "A field that was ever null is wrapped in maybe(T), and a field that was missing from at least one sample is wrapped in optional(T). A field that's both gets wrapped in optional(maybe(T))." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and schema generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

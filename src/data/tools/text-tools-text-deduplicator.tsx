@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Remove Duplicate Lines tool?", answer: "Remove Duplicate Lines operates on whole LINES of text — it removes an entire line if it exactly repeats an earlier line. This Text Deduplicator instead operates on individual WORDS within running sentences and paragraphs, which is a completely different level of granularity." }, { question: "Is word matching case-sensitive?", answer: "No — matching is case-insensitive, so \"The\" and \"the\" are treated as the same word for deduplication purposes, though the first occurrence's original casing is preserved in the output." }, { question: "Does punctuation attached to a word affect matching in All Duplicates mode?", answer: "Punctuation is ignored when comparing words, so \"dog\" and \"dog,\" are treated as the same word, but the original punctuation is kept on whichever occurrence is retained." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

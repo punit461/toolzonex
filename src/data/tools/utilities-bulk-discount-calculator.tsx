@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Discount Calculator?", answer: "The Discount Calculator applies one flat percentage off a single item's price. This tool is built for quantity-based wholesale pricing, where the discount rate itself changes depending on how many units you buy — you set up multiple tiers, and the calculator automatically applies whichever one your quantity qualifies for." }, { question: "What happens if my quantity doesn't meet any tier's threshold?", answer: "No discount is applied, and you pay the full unit price times quantity — the same as the lowest, no-discount starting point before any tier threshold is reached." }, { question: "Can tiers overlap or apply cumulatively?", answer: "No — this calculator applies only the single best-matching tier (the highest threshold your quantity meets or exceeds), not a stack of every tier you've passed. This matches how most real-world bulk/wholesale pricing schedules work." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does a negative NPV mean?", answer: "A negative NPV means the investment is expected to return less than your discount rate — in other words, the future cash flows aren't worth more than what you put in, once discounted back to today." }, { question: "Why might IRR not be calculable?", answer: "If the cash flow series never actually flips from a net negative present value to a net positive one anywhere in the −99% to 1,000% search range, there is no rate in that range where NPV crosses zero, so IRR can't be determined." }, { question: "Should I use NPV or IRR to decide between two projects?", answer: "NPV is generally considered the more reliable metric for ranking projects since it reflects total dollar value created, while IRR can sometimes be misleading when comparing projects of very different sizes or cash flow timing." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

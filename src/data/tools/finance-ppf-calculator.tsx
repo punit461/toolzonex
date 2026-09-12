@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is PPF interest taxable?", answer: "No — PPF falls under the EEE (Exempt-Exempt-Exempt) category: contributions, interest earned, and the maturity amount are all tax-free." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

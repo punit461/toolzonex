@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the payoff formula?", answer: "For a reducing-balance loan the number of months is n = −ln(1 − Pr/P) / ln(1 + r), where P is the principal, r the monthly rate, and M the monthly payment." }, { question: "Why does it warn 'payment won't cover interest'?", answer: "If your monthly payment is less than or equal to the interest accruing each month (M ≤ P × r), the balance never shrinks — you would pay forever. Increase the payment until the warning clears." }, { question: "How can I shorten my term?", answer: "Increase your monthly payment. Even a small extra amount cuts years off a long loan because it attacks the principal directly, reducing the interest that compounds each month." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

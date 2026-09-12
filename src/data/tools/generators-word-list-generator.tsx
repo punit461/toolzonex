@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can the same word appear twice in one list?", answer: "Words are shuffled and picked without repeats whenever possible. If you request more words than exist in a category, some repeats become unavoidable." }, { question: "Can I generate more than one list?", answer: "Yes — click \"Generate Word List\" again for a new, independently shuffled set of words." }, { question: "How many words are in each category?", answer: "Each category includes about two dozen curated words, chosen to be varied and useful for games rather than an exhaustive dictionary list." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

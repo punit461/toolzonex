@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is a PPSR check free?", answer: "No — the official self-service search costs $2 per item through ppsr.gov.au. Some car history websites advertise a 'free' check but typically bundle it with a separate paid report." }, { question: "What do I need to run a PPSR search?", answer: "For a vehicle, you need the Vehicle Identification Number (VIN) or chassis number, which is the most reliable identifier." }, { question: "What does a PPSR search actually show?", answer: "It shows whether the item has a registered security interest (money owing to a finance company), and for vehicles, whether it's recorded as stolen or written off." }, { question: "Does this tool run the actual PPSR search?", answer: "No — it only estimates the total fee based on how many searches you plan to run. Run the real search at the official government site, ppsr.gov.au." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

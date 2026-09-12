@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "Why does the Base64 string look longer than the file?", answer: "Base64 encoding expands data by roughly 33% — three binary bytes become four printable characters, so the output is always about a third larger than the original." }, { question: "Is my file uploaded anywhere?", answer: "No — encoding happens entirely in your browser." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does a lower wattage need MORE time, not less?", answer: "Wattage measures how much energy the microwave delivers per second. A lower-wattage microwave delivers energy more slowly, so it takes longer to deliver the same total amount of energy needed to heat the food through — hence more time, not less." }, { question: "Where do I find my microwave's actual wattage?", answer: "Check the inside of the door, the back panel, or the manufacturer's manual — it's usually listed in watts (e.g. \"700W\" or \"1100W\"). This is different from the wattage a recipe assumes, which is why conversion matters." }, { question: "Is this conversion exact for all foods?", answer: "It's a solid mathematical starting point, but actual results can vary slightly by food density, moisture content, and container material. Check food periodically near the end of the adjusted time rather than relying on it as an exact cutoff." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Cashback Calculator?", answer: "The Cashback Calculator only calculates the cashback earned on a purchase and the resulting effective cost, in isolation. This tool specifically compares a cashback offer AGAINST an alternative discount offer side by side, to help you decide which one actually saves more money on the same purchase." }, { question: "Why might cashback be worth less in practice than this calculator suggests?", answer: "Real-world cashback often comes with delays (paid out weeks or months later, unlike an instant discount), spending caps on bonus categories, minimum redemption thresholds, or exclusions — an instant discount has none of these restrictions. This calculator gives a simplified, ideal-case comparison; weigh these real-world factors before deciding." }, { question: "Which option is generally safer if the percentages are close?", answer: "An instant discount is generally the safer choice when the two effective costs are close, since it reduces your cost immediately and with certainty, while cashback depends on you actually receiving and being able to use the rebate later." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

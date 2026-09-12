@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "Can I add page numbers as a footer?", answer: "Yes, just type a page number or use the dedicated Page Number tool for automatic numbering." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens in your browser." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

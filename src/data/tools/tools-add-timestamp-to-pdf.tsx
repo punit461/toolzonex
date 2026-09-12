@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "What timestamp format is used?", answer: "The format includes both date and time in your browser's local format." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens in your browser." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

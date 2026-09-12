@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How are JSON Schema types mapped to Protobuf types?", answer: "string maps to Protobuf's string, integer maps to int64, number maps to double, and boolean maps to bool. Fields with an unrecognized type fall back to string." }, { question: "Are field numbers stable if I reorder my schema's properties?", answer: "No — field numbers are assigned sequentially in the order properties appear in your schema. If you reorder properties after generating a message once already in production use, you'll break wire compatibility, so treat the generated numbers as a starting point to lock in, not something to regenerate on every schema change." }, { question: "Is my schema uploaded anywhere?", answer: "No — parsing and message generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

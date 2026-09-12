@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will it keep the minus sign in a negative number?", answer: "Yes, if \"Preserve decimal points and minus signs\" is checked — every hyphen/minus character in the text is kept, though note that in text with multiple dashes (like a formatted phone number), all of those dashes are preserved too, not just ones meant as a negative sign." }, { question: "Does it keep commas used as thousands separators?", answer: "No — commas are always removed; only digits (and optionally the decimal point and minus sign) are preserved." }, { question: "Can I use this to clean up a pasted phone number?", answer: "Yes — untick the decimal/minus option to strip parentheses, spaces, and dashes down to plain digits, giving you a clean number ready to dial or store." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this tool inspect an actual file?", answer: "No — this is purely a name-based reference lookup against a curated list of extensions. If you want to identify a file by its actual byte content (which works even with the wrong or missing extension), use our File Type Identifier tool instead." }, { question: "What if my extension isn't listed?", answer: "The list covers around 80 of the most common file extensions. Very obscure or proprietary formats may not be included — a friendly \"not found\" message appears in that case." }, { question: "Can one extension have more than one possible file type?", answer: "In the real world, yes, occasionally — but this tool shows the single most common interpretation of each extension for simplicity." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

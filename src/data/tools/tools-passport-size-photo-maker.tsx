@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does it keep my exact photo?", answer: "The tool center-crops to the target aspect ratio, so the edges of your image may be trimmed to fit the standard. Use a well-framed headshot." }, { question: "How many photos fit on a sheet?", answer: "It depends on the standard, but a 4 × 6 inch sheet typically holds 6–8 photos, which the tool arranges automatically." }, { question: "Is my photo uploaded anywhere?", answer: "No — cropping and PDF creation happen entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

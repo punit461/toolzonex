@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from Text to Unicode / Unicode to Text?", answer: "Those tools convert whole strings of text between plain text and Unicode escape notation, one character after another. This tool is a detailed single-character inspector — enter one character or code point and see everything about it (decimal, hex, UTF-8 bytes, HTML entity, and name) at once." }, { question: "What if the character's name shows \"Unknown character name\"?", answer: "The name table covers Basic Latin, common punctuation and symbols, and roughly 100+ popular emoji, but isn't exhaustive. Every other field — decimal, hex, UTF-8 bytes, and HTML entity — is computed directly and always works regardless of whether the name is known." }, { question: "Can I enter more than one character?", answer: "Only the first character (or code point) you enter is inspected — this keeps the tool focused as a single-character detail view rather than a bulk converter." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

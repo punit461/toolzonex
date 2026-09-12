@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "When should I use geometric mean instead of arithmetic mean?", answer: "Geometric mean is the right choice when averaging values that are multiplied together over time or combined multiplicatively, such as annual growth rates, investment returns, or ratios. Arithmetic mean works best for values that are simply added together, like test scores or measurements from repeated trials." }, { question: "Why does the calculator require all positive numbers?", answer: "The geometric mean involves taking a root of the product of the values. If any value is zero, the entire product becomes zero. If any value is negative, the result can become undefined or complex for certain combinations, so this calculator requires strictly positive inputs." }, { question: "Is geometric mean always smaller than arithmetic mean?", answer: "Yes, for any set of positive numbers that aren't all exactly equal, the geometric mean is always less than or equal to the arithmetic mean — this is a well-known mathematical inequality. They are equal only when every number in the set is identical." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

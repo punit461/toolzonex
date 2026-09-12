@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this truly random?", answer: "Yes — the tool uses the Web Crypto API (crypto.getRandomValues) which provides cryptographically secure random numbers." }, { question: "What's the maximum I can generate?", answer: "You can generate up to 1,000 characters at once." }, { question: "Can I generate random letters and numbers?", answer: "Yes — check the \"Include Numbers\" option to add digits 0-9 to the character pool." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are GraphQL non-null and list rules reflected in the Java output?", answer: "List types become List<T> regardless of nullability, since Java has no built-in non-null type annotation without an extra dependency — the tool keeps the generated classes simple and lets you add validation or @NonNull annotations yourself where needed." }, { question: "How are custom scalars handled?", answer: "Any scalar beyond the five built-ins (String, Int, Float, Boolean, ID) maps to Java's Object as a safe fallback — replace it with your actual scalar's Java representation by hand." }, { question: "Is my schema uploaded anywhere?", answer: "No — parsing and code generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

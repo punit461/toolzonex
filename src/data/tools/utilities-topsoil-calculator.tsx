@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does topsoil density really vary that much?", answer: "Yes — dry, loose topsoil sits toward the lower end of the range while damp, compacted, or clay-heavy topsoil can weigh noticeably more. Adjust the density field above if your supplier gives you a specific figure for the soil blend you're buying." }, { question: "How is this different from the Mulch or Gravel Calculator?", answer: "The same length × width × depth formula applies to any bulk landscaping material, but topsoil, mulch, and gravel each have very different densities, so this tool uses topsoil-specific defaults rather than the mulch or gravel figures used in those calculators." }, { question: "Should I compact the soil after spreading it?", answer: "Lightly settling topsoil (with water or a light tamp) is common after spreading, which can reduce its volume by 10-20%. If you're filling to a precise finished depth, consider ordering slightly extra to account for settling." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

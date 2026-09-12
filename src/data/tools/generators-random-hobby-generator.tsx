@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I get the same hobby twice in one click?", answer: "No — each click of \"Generate Hobbies\" picks 3 distinct hobbies without repeats, biased to spread across different categories where possible." }, { question: "How many categories are covered?", answer: "Six: Creative, Physical, Outdoor, Indoor, Social, and Learning, spanning a wide range of interests from painting to chess to hiking." }, { question: "Can I generate more than 3 at a time?", answer: "Each click shows 3 hobbies, but you can click \"Regenerate\" as many times as you like to see more suggestions." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

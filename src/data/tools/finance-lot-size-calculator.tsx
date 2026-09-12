@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a pip?", answer: "A pip (percentage in point) is the smallest standard price move in forex. For most pairs it is 0.0001." }, { question: "Does this work for crypto CFDs?", answer: "Yes — substitute the tick size and per-tick value for the specific crypto instrument." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

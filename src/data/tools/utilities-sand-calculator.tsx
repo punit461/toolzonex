@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does sand density vary?", answer: "Yes — sand density varies with moisture content, grain size, and compaction. Dry, loose sand is close to 100 lb/ft³ (1,600 kg/m³), but wet or compacted sand can weigh 10-20% more. Treat the weight estimate here as a planning guide rather than an exact figure." }, { question: "Should I buy extra sand?", answer: "It's common practice to add 5-10% extra to account for compaction, uneven ground, and spillage during handling, especially for larger projects." }, { question: "How do I convert cubic feet to bags of sand?", answer: "Bag sizes vary by brand, but a common 50 lb bag covers roughly 0.5 cubic feet. Divide your total cubic feet by the coverage per bag listed on your chosen product to estimate how many bags to buy." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

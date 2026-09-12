@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is the result truly random?", answer: "Yes — each result uses the browser's random number generator with an equal 50/50 chance of YES or NO, plus a small chance of MAYBE for fun. There is no pattern or bias." }, { question: "Can I use it for important decisions?", answer: "It is meant for low-stakes dilemmas and fun — which movie to watch, what to eat, or settling a coin flip. Treat it as a tie-breaker, not financial or medical advice." }, { question: "What is the MAYBE result?", answer: "About 5% of the time the generator returns MAYBE, inspired by classic magic-8-ball style answers. Re-roll for a definite yes or no if you prefer." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

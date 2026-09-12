@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does HSTS actually protect against?", answer: "It stops browsers from ever making a plain HTTP request to your domain once the header has been seen, closing the window an attacker could otherwise use to intercept an initial unencrypted request and redirect or downgrade it." }, { question: "Is submitting to the preload list reversible?", answer: "Not easily — the list ships baked into browser binaries, so removing a domain can take months to reach users, and it should only be done once your entire site (including every subdomain, if includeSubDomains is set) is fully and permanently HTTPS-ready." }, { question: "What max-age should I start with?", answer: "Many sites start with a shorter value (like a few minutes or hours) to confirm HTTPS is working correctly everywhere, then increase it to a long duration such as one or two years once confident." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

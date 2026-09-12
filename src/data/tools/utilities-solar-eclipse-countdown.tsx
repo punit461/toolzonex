@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "When is the next solar eclipse?", answer: "The next total solar eclipse is on August 2, 2027. An earlier annular solar eclipse occurs on February 6, 2027, though it's visible from a much smaller, more remote area." }, { question: "Why is the August 2027 eclipse called the 'eclipse of the century'?", answer: "At up to 6 minutes 23 seconds, it's the longest total solar eclipse over land anywhere in the 21st century — a duration not matched again until 2114." }, { question: "Will I be able to see it from where I live?", answer: "Only locations within the path of totality (southern Spain through the Middle East) will see a total eclipse; much of Europe, Africa, and Asia will see a partial eclipse instead." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

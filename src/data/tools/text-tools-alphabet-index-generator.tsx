@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What happens to entries that don't start with a letter?", answer: "Entries starting with a number or symbol are grouped together under a single \"#\" section placed at the end of the index." }, { question: "Is the grouping case-sensitive?", answer: "No — grouping and sorting both ignore case, so \"apple\" and \"Apple\" are grouped and sorted together as if identically cased." }, { question: "Are duplicate entries removed?", answer: "No — every line you enter appears in the index exactly once per occurrence; run a duplicate-removal tool first if you want only unique entries." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

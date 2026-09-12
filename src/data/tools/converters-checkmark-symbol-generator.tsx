@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Symbol Picker?", answer: "The Symbol Picker's categories cover Legal, Math, Punctuation, Arrows, Greek letters, and Fractions — none of which include checkmark or cross symbols. This tool fills that specific gap with a dedicated collection of check, X, and checkbox symbols." }, { question: "Why do some symbols look like emoji and others don't?", answer: "Symbols like ✓ and ✗ are plain typographic characters that render in a single color matching your text, while ones like ✅ and ❌ are emoji-style characters that most platforms render in full color." }, { question: "Does clicking a symbol copy it automatically?", answer: "Yes — clicking any symbol copies it directly to your clipboard and shows a brief confirmation message." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

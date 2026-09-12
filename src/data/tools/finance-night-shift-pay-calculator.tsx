@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Shift Differential Pay Calculator?", answer: "The Shift Differential Pay Calculator applies one flat differential to ALL hours in a shift you've already labeled as a \"differential shift\" — it doesn't look at actual clock times. This tool instead calculates the ACTUAL time overlap between a specific shift's start/end time and a defined night-hours window, so a shift that only partially overlaps night hours gets premium pay for just the overlapping portion, not the entire shift." }, { question: "What if my shift and the night window are exactly the same hours?", answer: "Then the entire shift falls within the night window, and every hour earns the night differential — the calculator correctly detects full overlap in this case." }, { question: "Can the night window itself cross midnight?", answer: "Yes — enter a start time later than the end time (like 22:00 to 06:00) and the calculator correctly treats it as spanning past midnight, the same way it handles a shift that crosses midnight." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

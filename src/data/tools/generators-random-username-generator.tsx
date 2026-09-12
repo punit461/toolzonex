@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Username Generator?", answer: "The Username Generator builds variations around a keyword you type in. This Random Username Generator needs no input at all — just click and get a fully random adjective-noun combination." }, { question: "Are these usernames guaranteed to be available?", answer: "No — this tool only generates a random combination of words and numbers; it doesn't check availability on any specific platform." }, { question: "Can I generate more than one at a time?", answer: "Yes — set the \"How many\" field to any number up to 20 to get a batch of options in one click." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

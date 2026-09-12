@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does 65th percentile mean?", answer: "A 65th-percentile score is higher than approximately 65% of the values in the dataset." }, { question: "What formula is used?", answer: "This calculator uses the standard formula: (below + 0.5 × equal) / total × 100." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

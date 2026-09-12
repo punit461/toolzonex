@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "What happens if the margins are too large?", answer: "If the crop area would be zero or negative on any dimension, that page is left unchanged to avoid creating an invalid PDF." }, { question: "Does this delete the content outside the margins?", answer: "It sets the crop and media boxes so the trimmed area is no longer visible or printed. The original content may still exist in the file but won't be displayed." }, { question: "Is my file uploaded anywhere?", answer: "No — cropping happens entirely in your browser." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

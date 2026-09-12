@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Sticker Printing Cost Calculator?", answer: "The Sticker Printing Cost Calculator is for individual custom die-cut stickers, priced per unit with quantity-based discount tiers — a typical small-batch custom order model. This tool instead models bulk roll-based product or shipping labels, priced per roll rather than per individual sticker, which is how labels are typically purchased for higher-volume operational use like shipping or product packaging." }, { question: "Why round rolls up instead of buying a partial roll?", answer: "Rolls are sold as a fixed physical unit — you can't buy a fraction of a roll — so rounding up to the next whole roll ensures you have enough labels, with the small leftover surplus available for your next batch." }, { question: "Does a larger roll size always lower cost per label?", answer: "Not necessarily by itself — it depends on the price of that larger roll. Compare the total cost and resulting cost-per-label across different roll sizes and their respective prices to find the most economical option for your volume." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

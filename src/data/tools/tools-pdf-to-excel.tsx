@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why are some columns missing or merged?", answer: "PDF tables without clear cell boundaries or with merged cells are hard to detect automatically. The tool uses text-position heuristics, so heavily formatted or multi-line cells may not split perfectly." }, { question: "Does this work with scanned PDFs?", answer: "No — scanned PDFs contain images, not a text layer. You need OCR software first to make the text selectable." }, { question: "Is my file uploaded anywhere?", answer: "No — extraction runs entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this the same as the Compression Ratio Calculator already on this site?", answer: "No — that calculator computes an engine's compression ratio from cylinder bore, stroke, and combustion chamber volume, an entirely different automotive/mechanical concept that just happens to share a similar name. This calculator is about data and file compression — zip archives, images, video, and similar." }, { question: "What's a good compression ratio?", answer: "It depends heavily on the file type and format — text and uncompressed formats often compress 3:1 to 10:1 or more, while already-compressed formats like JPEG images or MP4 videos typically see much smaller further gains since most of the redundancy is already removed." }, { question: "Does a higher compression ratio always mean better compression?", answer: "Not necessarily on its own — very high ratios on lossy formats (like images or video) can come at the cost of visible quality loss, so it's worth weighing compression ratio against acceptable quality for your use case." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

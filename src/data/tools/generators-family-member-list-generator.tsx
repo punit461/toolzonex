@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Do I need to fill in a birthdate or contact info for everyone?", answer: "No — both fields are optional. Only the name is required for a family member to appear in the directory; birthdate and contact info simply won't show if left blank." }, { question: "Can I organize a full extended family tree with this?", answer: "This tool builds a flat directory list rather than a visual tree diagram — it's best for listing relationships in text form (e.g. \"Aunt\", \"Second Cousin\") rather than showing generational branching visually." }, { question: "Is my family information saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets when you reload, so copy your list before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

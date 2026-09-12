@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between a calorie and a Calorie?", answer: "A lowercase \"calorie\" (small calorie) is the energy needed to raise 1 gram of water by 1°C. The \"Calorie\" used on nutrition labels is actually a kilocalorie — 1,000 small calories — which is why this converter lists Kilocalories/Food Calories (kcal) as the nutrition-label unit." }, { question: "Why is a BTU not a round number of joules?", answer: "The BTU (British Thermal Unit) was originally defined as the energy to raise 1 pound of water by 1°F — an imperial-unit definition that doesn't translate to a clean round number in the metric, joule-based system, hence the 1,055.06 conversion factor." }, { question: "How accurate are these conversion factors?", answer: "The factors used (for example, 1 kWh = 3,600,000 J exactly, and 1 cal = 4.184 J) are standard, internationally recognized values, so results are accurate to the number of decimal places shown." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

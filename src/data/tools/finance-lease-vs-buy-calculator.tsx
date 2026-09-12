@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this account for mileage limits or lease-end fees?", answer: "No — this calculator focuses on the core payment comparison. Leases often include mileage limits, wear-and-tear charges, and disposition fees at the end of the term, which can add real cost beyond the monthly payment and should be factored in separately." }, { question: "Why does buying show a cost even after subtracting resale value?", answer: "Buying still involves paying interest on the loan and the asset's natural depreciation — the resale value simply recovers part of what you paid, it doesn't erase financing costs or depreciation entirely." }, { question: "Is leasing or buying always better?", answer: "Neither is universally better — leasing typically offers lower monthly payments and the option to upgrade more often, while buying builds ownership and equity over time and has no mileage or usage restrictions. The right choice depends on your budget, how long you plan to keep the vehicle or equipment, and how much you use it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why can a date in December show a week number from \"next year\"?", answer: "Because ISO week 1 is defined as the week containing the year's first Thursday, a Monday, Tuesday, or Wednesday in very late December can belong to the week that contains the following year's first Thursday — making it \"week 1\" of that next ISO year rather than a week of the current one." }, { question: "Why do weeks start on Monday instead of Sunday?", answer: "ISO 8601 specifically defines Monday as the first day of the week, unlike the Sunday-first convention used in some calendars and countries — this tool follows the ISO standard exactly." }, { question: "Can a year have 53 weeks?", answer: "Yes — most years have 52 ISO weeks, but years where the extra day(s) push the first Thursday's week to align differently (and leap years in particular) can have 53 ISO weeks instead." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

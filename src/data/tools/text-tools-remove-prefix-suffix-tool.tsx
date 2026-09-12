@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Line Prefix & Suffix Tool?", answer: "The Line Prefix & Suffix Tool ADDS text to the beginning and/or end of every line. This tool does the reverse — it REMOVES a specified prefix and/or suffix, but only from the lines that actually have it, leaving every other line untouched." }, { question: "What happens if a line doesn't start with the prefix I entered?", answer: "That line is left completely unchanged — the removal only applies to lines that actually match, so you never risk accidentally cutting text off lines that don't have the prefix or suffix." }, { question: "Is the match case-sensitive?", answer: "Yes — the prefix and suffix must match the line's text exactly, including capitalization, for the removal to apply." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

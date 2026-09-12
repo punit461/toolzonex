@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this one TIFF file per PDF, or one per page?", answer: "One multi-page TIFF file containing every page of the PDF, in order." }, { question: "Is the TIFF compressed?", answer: "No — this produces a baseline, uncompressed RGB TIFF, which keeps every pixel lossless at the cost of a larger file size than a compressed TIFF or PDF." }, { question: "Will my text stay selectable?", answer: "No — like any raster image format, TIFF has no text layer. Each page becomes a flat image." }, { question: "Is my file uploaded anywhere?", answer: "No — conversion and encoding both happen entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

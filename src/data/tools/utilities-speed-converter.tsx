@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a knot, exactly?", answer: "A knot is one nautical mile per hour. A nautical mile (1,852 meters) is based on one minute of latitude along a great circle of the Earth, which is why it doesn't divide evenly into miles or kilometers like other speed units do." }, { question: "Why do aviation and marine speeds use knots instead of mph?", answer: "Knots are tied directly to nautical miles, which correspond to minutes of latitude on navigational charts, making distance and speed calculations for navigation more straightforward than converting through miles or kilometers." }, { question: "How accurate are these conversion factors?", answer: "The factors used (for example, 1 mph = 0.44704 m/s exactly, and 1 knot = 0.5144444 m/s) are the internationally defined standard values, so results are accurate to the number of decimal places shown." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

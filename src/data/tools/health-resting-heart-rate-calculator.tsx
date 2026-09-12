@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Heart Rate Calculator?", answer: "The Heart Rate Calculator estimates your maximum heart rate and training zones from a formula based only on your age (220 − age, or the Tanaka formula) — it doesn't use a measured pulse at all. This Resting Heart Rate Calculator does the opposite: it takes a pulse number you actually measured at rest and classifies it into a fitness category. It calculates no maximum or target values." }, { question: "How is this different from the Target Heart Rate Calculator?", answer: "The Target Heart Rate Calculator uses the Karvonen formula to compute a target training zone (a range of bpm to aim for during exercise) from your age, resting heart rate, and desired intensity. This tool doesn't calculate any target or training zone — it only classifies your already-measured resting pulse into a fitness category like Excellent, Good, or Average." }, { question: "How do I measure my resting heart rate accurately?", answer: "Take your pulse for a full 60 seconds right after waking up, while still lying down, before coffee, exercise, or checking your phone. Measuring on a few different mornings and averaging the results gives a more reliable number than a single reading, since resting heart rate can fluctuate day to day with sleep, stress, and hydration." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

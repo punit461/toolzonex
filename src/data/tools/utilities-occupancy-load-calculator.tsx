@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this the official, legally binding occupancy load for my building?", answer: "No. These are general reference factors intended for estimation only. Actual code-compliant occupancy load must be confirmed with your local building and fire code officials, who apply the specific code edition, exits, and use-case rules that govern your building." }, { question: "Why do occupancy factors vary so much between space types?", answer: "The factors reflect how densely people typically occupy a space for that use — a standing crowd at a concert packs in much more tightly than desks and chairs in an office, so codes assign a much smaller area-per-person figure to concentrated assembly use." }, { question: "Does this account for exits and egress requirements?", answer: "No — this only estimates occupant load from floor area and use type. Actual code compliance also requires enough exit doors, exit width, and egress path capacity to safely evacuate that many occupants, which is a separate calculation done by a code official or engineer." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

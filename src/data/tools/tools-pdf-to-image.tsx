@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What resolution should I pick?", answer: "Use 1x for web thumbnails, 2x for standard prints, and 3x for high-DPI displays or large prints." }, { question: "Does this work with encrypted PDFs?", answer: "Yes — you will be prompted to enter the password before conversion begins." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

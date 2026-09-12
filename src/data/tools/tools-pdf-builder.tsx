@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this support images or formatting?", answer: "No — this tool creates text-only PDFs. For rich formatting, use a word processor and export as PDF." }, { question: "How are page breaks handled?", answer: "Text wraps automatically. When a page fills up, a new page is created with the same margins and formatting." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between a tax rate and a resort/service fee?", answer: "Tax is a percentage set by local government and applied to the room subtotal, while a resort or service fee is a flat charge set by the hotel itself, often per room per night, covering amenities like pools, gyms, or Wi-Fi regardless of whether you use them." }, { question: "Why do some hotels not charge a resort fee at all?", answer: "Resort fees are more common at hotels with extensive amenities (resorts, larger city hotels) and less common at budget or extended-stay properties. Set the fee field to 0 if your hotel doesn't charge one." }, { question: "Does this include one-time fees like parking or a deposit?", answer: "No — this calculator covers recurring per-night charges (rate, tax, and a per-night fee) multiplied across your stay and room count. Add any one-time charges, like a security deposit or a single parking fee, to the total separately." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Unicode Character Lookup?", answer: "Unicode Character Lookup is for looking up details about ONE specific character or code point you already have. This Unicode Block Viewer instead shows entire code point RANGES/BLOCKS of the Unicode standard — for structural reference and browsing an entire script or category at once, not a single character." }, { question: "Are all characters in large blocks shown?", answer: "No — for very large blocks like CJK Unified Ideographs, only the first 100 characters in the range are sampled, since displaying tens of thousands of characters at once wouldn't be practical." }, { question: "Where do the sample characters come from?", answer: "They're generated programmatically from each block's numeric code point range using JavaScript's String.fromCodePoint, not a hand-typed list — so the sample accurately reflects the real Unicode range." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

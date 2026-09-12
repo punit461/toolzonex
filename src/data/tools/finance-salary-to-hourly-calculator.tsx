@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this account for unpaid overtime salaried employees often work?", answer: "No — this calculation assumes you only work the hours entered. If a salaried role regularly requires more hours than stated, the effective hourly wage is actually lower than shown here." }, { question: "Should freelancers use this to set their rates?", answer: "It's a reasonable starting point, but freelancers typically need to charge more per hour than an equivalent salaried wage to cover self-employment taxes, benefits, non-billable hours, and business expenses that an employer would otherwise cover." }, { question: "How do I go the other direction — hourly to salary?", answer: "Use the Hourly to Salary Calculator to convert an hourly wage into an equivalent annual, monthly, or weekly salary." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

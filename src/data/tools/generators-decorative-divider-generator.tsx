@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does the repeat count control?", answer: "It sets how many times the chosen style's unit is repeated, which determines the overall length of the divider — a higher count produces a longer line." }, { question: "What happens if I add a center ornament?", answer: "The ornament character is inserted at the midpoint of the repeated divider, giving the line a focal point without changing its overall style." }, { question: "Can I use more than one character as the ornament?", answer: "Yes, up to 5 characters, though a single symbol like ✦ or ❖ usually looks cleanest centered in a divider." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

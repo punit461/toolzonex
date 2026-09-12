@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this validate my XML?", answer: "Not strictly — this tool uses a lightweight, regex-based processor rather than a full XML parser, so it focuses on reformatting or compacting tag structure rather than validating schema correctness or catching every possible malformed-XML edge case." }, { question: "What does minify mode actually remove?", answer: "Minify mode strips whitespace (spaces, tabs, and line breaks) sitting between tags, collapsing the document onto a single line. It doesn't alter attribute values or text content inside elements." }, { question: "Is my XML data uploaded anywhere?", answer: "No — formatting and minifying happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How does DPO relate to DSO?", answer: "DPO measures how long you take to pay suppliers, while Days Sales Outstanding (DSO) measures how long it takes you to collect from customers — see the Accounts Receivable Days Calculator for that side. A business collecting faster than it pays (low DSO, high DPO) has favorable cash-flow timing, since it holds cash from sales longer than it needs to before its own bills come due." }, { question: "Is a higher DPO always better?", answer: "Not necessarily — while a higher DPO can improve short-term cash flow, stretching payments too far can damage supplier relationships, risk late fees, or signal financial distress. Balance DPO against maintaining healthy supplier terms." }, { question: "Why use COGS instead of total purchases?", answer: "COGS is commonly used as a proxy for the value of goods and services a business owes suppliers for, since detailed purchase data isn't always available externally. If you have precise total credit purchases figures, you can substitute that for a more exact DPO." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

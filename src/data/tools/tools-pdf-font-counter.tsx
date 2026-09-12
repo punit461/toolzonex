@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does it say no fonts were detected?", answer: "Scanned or photographed PDFs are just images of text with no underlying text layer, so there are no fonts to detect." }, { question: "Are the font names always the original font family name?", answer: "Usually, but some PDFs use subsetted or renamed fonts, which can show an internal identifier rather than the exact original font name." }, { question: "Is my file uploaded anywhere?", answer: "No — analysis happens entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

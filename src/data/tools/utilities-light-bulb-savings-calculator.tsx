@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the LED Wattage Calculator?", answer: "The LED Wattage Calculator sums total power draw across many LEDs or an entire LED strip, useful for power supply sizing. This tool instead compares the cost savings from switching a single bulb from incandescent to its LED equivalent, including an optional payback-period estimate." }, { question: "Are LED bulbs really that much more efficient?", answer: "Yes — LEDs typically use roughly 75-85% less energy than incandescent bulbs to produce the same amount of light, which is why even a small per-bulb wattage difference adds up to meaningful savings over months and years of use." }, { question: "Does this account for LED bulb lifespan?", answer: "No — this only calculates energy cost savings. LED bulbs also typically last many times longer than incandescent bulbs, which means additional savings from not having to buy and replace incandescent bulbs as often, on top of the energy savings shown here." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

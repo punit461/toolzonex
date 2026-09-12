@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between APY and APR?", answer: "APY includes compounding; APR does not. For the same nominal rate, a product that compounds daily will have a higher APY." }, { question: "Is APY the same as effective annual rate (EAR)?", answer: "Yes — APY and EAR are effectively the same metric." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

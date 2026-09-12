@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if my fill rate slows down as the tank fills?", answer: "This calculator assumes a constant fill rate, which is accurate for most pumps and hoses at typical pressures. If your real flow rate drops noticeably as backpressure builds (common with some gravity-fed systems), treat the result as an estimate on the faster side." }, { question: "Can I use this for draining a tank instead of filling it?", answer: "The math is the same in reverse — enter the volume that needs to drain as your \"volume\" and your drain rate as the \"fill rate\" to get the time to empty." }, { question: "Does the unit (gallons vs liters) matter for the calculation?", answer: "No — as long as your volume and fill rate use the same unit, the calculated time in minutes is correct regardless of which unit you pick. The toggle is just there to label your inputs clearly." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

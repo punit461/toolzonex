@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does Ohm's law state?", answer: "Ohm's law states that the current through a conductor is directly proportional to the voltage and inversely proportional to the resistance: V = I × R." }, { question: "How do I read a resistor color code?", answer: "Each color represents a digit (0-9), with the first two bands spelling the significant digits, the third being the multiplier, and the fourth the tolerance." }, { question: "Why does power matter when choosing a resistor?", answer: "A resistor converts electrical energy to heat. If the power (P = V × I) exceeds the resistor's rating, it will overheat and can burn out." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

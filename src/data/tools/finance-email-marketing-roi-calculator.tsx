@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What counts as \"revenue generated\" from a campaign?", answer: "Ideally, revenue directly attributable to that specific campaign — for example, sales tracked through a unique discount code, UTM-tagged link, or attribution window tied to clicks from that email. Mixing in revenue that would have happened anyway will overstate ROI." }, { question: "Is email marketing ROI usually this high?", answer: "Email marketing is often cited as one of the highest-ROI marketing channels because sending costs are low relative to potential revenue, especially for an engaged existing list — but actual results vary widely by industry, list quality, and offer." }, { question: "Should I include staff time as a cost?", answer: "This calculator only accounts for direct monetary costs (platform fees and ad spend). If you want a fully loaded ROI figure, you can add an estimated dollar value for the time spent creating and managing the campaign into the platform/tool cost field." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

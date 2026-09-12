@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is Georgia's paycheck tax rate?", answer: "Georgia moved to a flat state income tax rate of 5.39% in 2024. This paycheck calculator for Georgia applies that flat rate along with federal tax, Social Security, and Medicare to estimate your take-home pay." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

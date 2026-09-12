@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this actually reduce a printer's ink consumption?", answer: "Yes, in the way this tool controls it: lighter and grayscale-only pixels require less ink or toner to reproduce than dark, colorful ones. Exact savings depend on your printer." }, { question: "Will very light settings make my document hard to read?", answer: "A high lighten percentage can wash out fine details or thin text. Start around 20-30% and check a test page." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

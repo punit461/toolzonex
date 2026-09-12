@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Where is the CFT score chart / table?", answer: "The Standard Benchmarks section on this page is a full CFT score chart, listing the Outstanding, Good, and Average bands for the tactical march, ammo can lifts, 300m shuttle run, and casualty drag." }, { question: "How is the CFT different from the PFT?", answer: "The PFT measures general fitness (running, push-ups, sit-ups), while the CFT tests combat-specific tasks under load — tactical marching, lifting, sprinting, and casualty drags — closer to real operational demands." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

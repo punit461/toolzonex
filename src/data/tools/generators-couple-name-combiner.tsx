@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are the combined names random?", answer: "No — the combinations are generated using fixed, deterministic rules (like splitting each name in half and swapping the halves), so the same two names always produce the same set of suggestions." }, { question: "Does the order I enter the names matter?", answer: "Yes, slightly — since some combinations use the first name's beginning with the second name's ending (and vice versa), swapping the input order changes which specific blend appears first, though the overall set of suggestions stays similar." }, { question: "Can I use this for names other than couples?", answer: "Yes — it works for combining any two names, whether that's a couple, a pair of friends, two pets, or two brands you want to mash together for fun." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

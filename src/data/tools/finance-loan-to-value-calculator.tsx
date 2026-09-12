@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is 80% LTV such a common benchmark?", answer: "On conventional mortgages, 80% LTV (a 20% down payment) is the standard threshold below which lenders typically don't require private mortgage insurance, since the borrower's equity cushion is considered large enough to protect the lender if the loan defaults." }, { question: "Does a lower LTV always mean better loan terms?", answer: "Generally yes — lower LTV means less risk for the lender, which often translates into a lower interest rate, easier approval, and no mortgage insurance requirement. However, exact thresholds and pricing vary by lender, loan type, and loan program." }, { question: "What value should I use for the property?", answer: "Lenders typically use the lower of the appraised value or the purchase price when calculating LTV for a home purchase, and the appraised value alone for a refinance. Use whichever figure your lender has specified." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

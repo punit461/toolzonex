@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I use only some of the cleanup options?", answer: "Yes — every checkbox is independent. Untick anything you don't want applied and only the checked options run when you click \"Clean Text\"." }, { question: "What counts as a \"special character\"?", answer: "With that option enabled, anything that isn't a letter, number, space, or basic punctuation (period, comma, exclamation mark, question mark, quotes, parentheses, hyphen) is removed." }, { question: "Why would I normalize smart quotes?", answer: "Word processors and phone keyboards often auto-replace straight quotes with curly \"smart\" quotes, which can break code syntax, CSV files, or systems that expect plain ASCII quotation marks." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

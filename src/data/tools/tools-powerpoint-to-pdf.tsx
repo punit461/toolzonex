@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will typed text and shapes appear in the PDF?", answer: "No — only embedded raster images (PNG/JPEG) are extracted. Text boxes, shapes, charts, and vector graphics drawn directly in PowerPoint are not rendered." }, { question: "What if a slide has multiple images?", answer: "Each embedded image becomes its own PDF page — if a slide contains a background photo plus a separate logo image, that becomes two pages rather than one combined slide." }, { question: "Does this work with .ppt (the older format)?", answer: "No — only the modern .pptx (Open XML) format is supported, since it's a ZIP archive this tool can unpack. The legacy binary .ppt format isn't supported." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

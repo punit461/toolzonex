@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Do the three categories share the same list?", answer: "No — Luggage Inventory, Hiking Gear, and Photography Gear each keep their own separate items and checked state, so switching categories doesn't affect the others." }, { question: "Can I have multiple bags in the Luggage Inventory?", answer: "Yes — just type a different bag name on each item, and the list on the right automatically groups items under their bag name." }, { question: "Is my list saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the list before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

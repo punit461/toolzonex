@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "What units are used?", answer: "Enter crop values in millimeters. They are converted to PDF points internally." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens in your browser." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

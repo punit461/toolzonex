@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is the bill calculated?", answer: "Units consumed = current reading − previous reading. The energy charge is units × per-unit rate, and a fixed monthly charge is added on top. Some utilities also add a fuel adjustment or power factor surcharge." }, { question: "Do slabs change the rate?", answer: "Many states use increasing slab rates — the first few hundred units cost less per unit than higher slabs. If your utility uses slabs, enter your slab rate or use an average per-unit rate from a recent bill." }, { question: "Which reading should I use?", answer: "Use the meter reading taken on the same day of month. The previous reading is the one from your last bill; the current reading is what the meter shows today." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

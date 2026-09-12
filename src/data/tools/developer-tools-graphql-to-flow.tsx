@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why are the generated object types \"exact\" ({| |})?", answer: "Exact object types ({| ... |}) reject extra properties that aren't declared, which matches how a GraphQL response is shaped — it only ever contains the fields your query selected, so an exact type is the more accurate default." }, { question: "How are custom scalars handled?", answer: "Any scalar beyond the five built-ins (String, Int, Float, Boolean, ID) maps to Flow's any, with a comment listing every custom scalar encountered so you can refine it by hand." }, { question: "Is my schema uploaded anywhere?", answer: "No — parsing and type generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

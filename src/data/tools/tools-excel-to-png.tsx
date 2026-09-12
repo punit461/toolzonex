@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why choose PNG over JPG?", answer: "PNG is lossless, so text and gridlines in a table stay perfectly sharp with no compression artifacts — better than JPG for tables with fine text, at the cost of a somewhat larger file." }, { question: "Which sheet gets converted?", answer: "The first sheet in the workbook that contains data. Other sheets are ignored — split them into separate files first if you need images of each." }, { question: "Is my file uploaded anywhere?", answer: "No — reading and rendering both happen entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

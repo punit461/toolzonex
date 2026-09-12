@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this work with multi-page PDFs?", answer: "Yes — each page becomes its own double-width spread with a mirrored right side." }, { question: "Will the page size change?", answer: "The output pages are double the original width to accommodate both the original and mirrored copy side by side." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

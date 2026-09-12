@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this support more than one interface at a time?", answer: "The tool converts the first top-level interface or type in your input as the root type. If that root type references other top-level interfaces from the same file by name (like address: Address), those are resolved and inlined as nested Flow types automatically — but interfaces that aren't referenced from the root are ignored." }, { question: "What happens to unsupported TypeScript features?", answer: "Generics, mapped types, conditional types, and other advanced TypeScript features fall back to Flow's mixed type rather than an incorrect guess — you can refine those fields by hand afterward." }, { question: "Is my TypeScript uploaded anywhere?", answer: "No — parsing and type generation happen entirely client-side in your browser, using the TypeScript compiler loaded on demand. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

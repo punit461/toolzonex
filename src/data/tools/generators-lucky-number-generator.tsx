@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What happens if I ask for more unique numbers than fit in my range?", answer: "The tool shows an error asking you to either allow duplicates or widen your range, since it's not possible to generate that many unique numbers from a smaller pool." }, { question: "Can duplicate numbers appear?", answer: "Only if you turn on \"Allow duplicates.\" With it off, every generated number in a batch is unique." }, { question: "Is this connected to any real lottery?", answer: "No — this is an independent random number tool for personal use, games, or fun. For official lottery formats, see this site's dedicated Lottery Number Generator and Powerball Number Generator tools." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

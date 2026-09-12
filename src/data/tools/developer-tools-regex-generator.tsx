@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What regex flavor does this generate?", answer: "JavaScript (ECMAScript) regex syntax, which is compatible with most modern languages and tools including browsers, Node.js, Python, and many text editors." }, { question: "How do I copy the regex?", answer: "Click the copy icon next to the generated regex string. It copies the full pattern including the delimiters and flags (e.g. /pattern/g)." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

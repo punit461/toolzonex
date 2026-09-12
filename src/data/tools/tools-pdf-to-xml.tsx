@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this preserve images or formatting?", answer: "No — only the text layer is extracted. Images, tables, and visual styling are not included in the XML output." }, { question: "Will the XML be valid?", answer: "Yes — the output follows a well-formed XML structure with a proper declaration, root document element, and one page element per PDF page." }, { question: "Is my file uploaded anywhere?", answer: "No — conversion happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

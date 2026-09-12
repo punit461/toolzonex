@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the most common PDF version?", answer: "PDF 1.7 is the most widely used version today, as it is the basis for ISO 32000-1 and is supported by nearly all modern software." }, { question: "Is PDF 2.0 widely supported?", answer: "PDF 2.0 was standardized in 2017, but full reader support is still rolling out. Most readers handle it gracefully but may fall back to 1.7 features." }, { question: "Is my file uploaded anywhere?", answer: "No — the check happens entirely in your browser; the PDF never leaves your device." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

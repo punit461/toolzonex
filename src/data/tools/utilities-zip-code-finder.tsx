@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this cover every US city and ZIP code?", answer: "No — this is a curated reference of roughly 200 of the largest US cities, not the full national ZIP code database, which contains tens of thousands of codes. For an exhaustive, authoritative lookup by exact address, use usps.com." }, { question: "Why does a city only show one ZIP code when it actually has many?", answer: "Large cities are typically split across dozens of ZIP codes by neighborhood. This tool lists one representative ZIP per city to keep the reference list compact and manageable rather than attempting to enumerate every ZIP a city contains." }, { question: "Can I search by partial ZIP code?", answer: "Yes — typing the first few digits of a ZIP code returns every listed city whose ZIP starts with those digits." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

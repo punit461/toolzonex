@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How do optional properties look in the output?", answer: "Following standard JSDoc convention, an optional property's name is wrapped in brackets, like @property {string} [zip], rather than using a separate optional-type marker." }, { question: "Can I use these typedefs with @ts-check?", answer: "Yes — paste the generated @typedef blocks above a function and reference the type name in a @param {Root} or @returns {Root} tag; VS Code and other TypeScript-powered editors will pick it up automatically." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and typedef generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

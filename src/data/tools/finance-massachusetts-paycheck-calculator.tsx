@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this the same as a \"Mass\" paycheck calculator?", answer: "\"Mass\" is a common short form for Massachusetts. This calculator applies Massachusetts’ flat 5% state income tax — plus the additional 4% \"Millionaires Tax\" surtax on taxable income above $1,000,000 — along with federal tax, Social Security, and Medicare." }, { question: "What is the Massachusetts state income tax rate?", answer: "Massachusetts charges a flat 5% state income tax on most income, with an additional 4% surtax (9% total) applied only to taxable income above $1,000,000." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What riser height is considered comfortable or code-compliant?", answer: "Most residential building codes call for a riser height between roughly 7 and 7.75 inches, with treads around 10-11 inches deep. This tool flags whether your calculated actual riser height falls in that typical comfort range — always confirm exact limits against your local building code before building." }, { question: "Why is the number of treads one less than the number of risers?", answer: "The top riser brings you up to the level of the upper floor itself, which already acts as the final \"tread,\" so a staircase with a given number of risers only needs one fewer physical tread board." }, { question: "Does the stringer length include extra length for the horizontal foot?", answer: "No — this calculates the theoretical diagonal length from the Pythagorean theorem using total rise and total run. In practice, always add extra length when cutting a real stringer board to account for the horizontal seat cut at the bottom and the thickness of the framing lumber it lands on." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

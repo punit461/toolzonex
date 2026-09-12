@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do men's and women's sizes use different charts?", answer: "Men's and women's clothing is cut to different body proportions and follows separate, largely unrelated numbering conventions in most sizing systems — a \"size 8\" in women's clothing has no direct relationship to any men's size, which is why this tool keeps the two charts completely separate." }, { question: "Why does the same size vary between brands?", answer: "Clothing sizing isn't tightly regulated, and brands frequently use their own fit models and measurements — a phenomenon often called \"vanity sizing.\" This converter uses widely referenced standard charts as a reliable starting point, but always check a specific brand's own size chart when possible for the most accurate fit." }, { question: "Is International sizing the same everywhere?", answer: "Roughly, but not exactly — International S/M/L/XL labels are a simplified, widely used convention rather than a single global legal standard, so exact measurements behind each letter size can still vary somewhat by brand and country." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

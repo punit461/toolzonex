@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I copy and paste the vertical text anywhere?", answer: "Yes — click \"Copy\" on the result panel and it's ready for vertical text copy and paste into Instagram bios, TikTok captions, Discord, or any text field that accepts plain text." }, { question: "Will this work on any platform?", answer: "Yes — the output is plain text with line breaks, so it works anywhere text can be pasted, including social media bios and chat apps." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

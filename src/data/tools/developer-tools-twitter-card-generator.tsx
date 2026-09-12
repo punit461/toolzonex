@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between \"summary\" and \"summary_large_image\"?", answer: "\"summary\" shows a small square thumbnail next to the title and description, while \"summary_large_image\" shows a full-width banner image above the text — better suited to photos, graphics, or featured images you want front and center." }, { question: "Do I still need Open Graph tags if I add Twitter Card tags?", answer: "Yes — X will fall back to Open Graph (og:title, og:description, og:image) tags if Twitter-specific ones are missing, but most other platforms (Facebook, LinkedIn, Slack) only read Open Graph tags, so it's best to include both." }, { question: "Is my data uploaded anywhere?", answer: "No — everything is generated entirely client-side in your browser. Nothing you type is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

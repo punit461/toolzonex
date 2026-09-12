@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Which formula should I trust?", answer: "The three formulas agree closely for lower rep counts (1–5). They diverge as reps rise, so the average shown here gives a balanced estimate — treat it as approximate." }, { question: "Are these estimates accurate?", answer: "They're good ballpark figures but not a substitute for a tested max. Always use conservative loads when training near your estimated 1RM." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

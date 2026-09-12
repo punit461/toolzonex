@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does it mean if the required score is over 100%?", answer: "It means your desired overall grade isn't achievable with a normal final exam score — you'd need extra credit, or you should adjust your target to something realistically reachable." }, { question: "What if the required score is negative?", answer: "A negative required score means you've already secured your target grade even with a zero on the remaining work — your current grade alone is high enough given the final's weight." }, { question: "How do I find the weight of my final exam?", answer: "Check your course syllabus — instructors typically state each component's weight (like \"Final Exam: 30% of grade\") up front. If several items remain, add up their combined weight and treat that as one combined \"remaining work\" percentage." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

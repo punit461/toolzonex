@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is considered a good current ratio?", answer: "A ratio between 1.5 and 3.0 is generally considered healthy for most businesses. Below 1.0 can signal liquidity risk, while a very high ratio may indicate the business isn't deploying its assets efficiently." }, { question: "How is the current ratio different from working capital?", answer: "Working capital is the dollar difference between current assets and current liabilities, while the current ratio expresses the same relationship as a proportion. Use the Working Capital Calculator to see the dollar figure alongside this ratio." }, { question: "Does the current ratio account for how liquid assets actually are?", answer: "Not precisely — it treats inventory the same as cash, even though inventory can take longer to convert to cash. The quick ratio (which excludes inventory) offers a stricter, more conservative view of short-term liquidity." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

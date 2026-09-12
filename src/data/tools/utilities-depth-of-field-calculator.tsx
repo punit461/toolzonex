@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does sensor size affect depth of field?", answer: "Smaller sensors require a shorter focal length to achieve the same field of view as a larger sensor, and shorter focal lengths naturally produce more depth of field at a given aperture — which is why phone cameras (very small sensors) struggle to produce shallow-depth-of-field background blur compared to full-frame cameras." }, { question: "What is the circle of confusion?", answer: "The circle of confusion is the largest blur spot the human eye still perceives as a sharp point at normal viewing distances. It's a standardized value that scales with sensor size — this calculator uses 0.03mm for full-frame and scales it down proportionally for smaller sensors via their crop factor." }, { question: "What happens if my subject distance is beyond the hyperfocal distance?", answer: "Once your subject distance meets or exceeds the hyperfocal distance, everything from roughly half that distance out to infinity is in acceptable focus — the calculator shows the far limit as infinite (∞) in that case." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What happens if there are more chores than people?", answer: "The extra chores are distributed round-robin, so some members simply end up with two or more chores that week instead of one." }, { question: "What if there are more people than chores?", answer: "Some members will be assigned no chores that week — the tool shows this clearly rather than forcing an assignment where none is needed." }, { question: "Can I get a new rotation without retyping my lists?", answer: "Yes — click Regenerate to reshuffle the same members and chores into a new random assignment, ready for the next rotation." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

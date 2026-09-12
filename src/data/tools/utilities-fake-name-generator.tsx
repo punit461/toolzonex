@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these real people?", answer: "No — every identity is randomly generated from lists of common names and locations. None of the generated information corresponds to a real individual." }, { question: "Can I generate multiple identities at once?", answer: "Click the Generate button repeatedly to create as many identities as you need. Each click produces a fresh, independent result." }, { question: "Is the data statistically realistic?", answer: "The names are drawn from the most common American names, cities and states are real US locations, and zip codes are random 5-digit numbers." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

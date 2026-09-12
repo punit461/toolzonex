@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does the threshold control?", answer: "It's the brightness cutoff (0-255) that decides whether a pixel becomes white or black. A higher threshold makes more pixels turn black; a lower threshold makes more turn white." }, { question: "How is this different from Grayscale?", answer: "Grayscale keeps smooth shades of gray. This tool uses a hard threshold so every pixel becomes either pure black or pure white, like a fax or photocopy." }, { question: "Is my file uploaded anywhere?", answer: "No — conversion happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

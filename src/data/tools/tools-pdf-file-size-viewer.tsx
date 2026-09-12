@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is the metadata empty?", answer: "Not all PDFs include title, author, or other metadata fields — the tool only displays metadata that was embedded in the file by its creator." }, { question: "Is my file uploaded anywhere?", answer: "No — all analysis happens entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

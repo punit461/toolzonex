@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between ISO2 and ISO3 codes?", answer: "Both are standardized country codes from ISO 3166-1, just at different lengths — ISO2 (2 letters, like \"IN\") is common in web locales and domain suffixes, while ISO3 (3 letters, like \"IND\") is often used in international databases, sports federations, and some APIs that prefer a less ambiguous code." }, { question: "Why do some countries share a dial code?", answer: "Countries in the North American Numbering Plan (including the US and Canada) all share the +1 dial code and are distinguished by their area codes instead, rather than each having a unique country dial code." }, { question: "Does this include every country in the world?", answer: "This tool draws from a curated list of widely searched countries rather than the complete list of every country and territory. If a country you need isn't listed, check an official ISO 3166 reference for the complete list." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

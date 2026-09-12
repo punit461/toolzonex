@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What types of annotations are extracted?", answer: "All types that have content, an author, or a popup — highlights, text notes, stamps, free-text annotations, and more." }, { question: "Will it find empty sticky notes?", answer: "Only annotations with visible content, an author, or a popup are listed. Completely empty annotations with no metadata are skipped." }, { question: "Is my file uploaded anywhere?", answer: "No — extraction runs entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

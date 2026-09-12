@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does a ceiling usually need a flat or matte finish?", answer: "Flat and matte finishes scatter light rather than reflecting it, which hides small imperfections, uneven texture, and roller marks that a glossier finish would highlight under direct or angled light." }, { question: "Do I need to subtract light fixtures or vents?", answer: "This calculator doesn't subtract fixture area, since it's usually small relative to the whole ceiling and most painters round up anyway. For a ceiling with unusually large skylights or built-in features, you can reduce the entered length or width slightly to compensate." }, { question: "How is this different from the Paint Calculator?", answer: "The Paint Calculator is built for walls, letting you add multiple wall rows with their own length and height. A ceiling is just one flat area, so this calculator simplifies that down to a single length × width input while keeping the ceiling-specific finish and primer notes front and center." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

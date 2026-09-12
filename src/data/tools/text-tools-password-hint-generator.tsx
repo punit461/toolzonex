@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is my password saved or sent anywhere?", answer: "No — this tool runs entirely in your browser using client-side JavaScript. Your password is never transmitted to any server, stored in a database, or logged anywhere. It exists only in your browser's memory for as long as the page is open, purely as an in-the-moment memory aid." }, { question: "Does the hint reveal my actual password?", answer: "No — it deliberately shows only partial information (first/last character, length, and structure) rather than the password itself, so someone seeing the hint alone couldn't reconstruct your full password." }, { question: "Should I store this hint somewhere permanent?", answer: "Treat it the same way you would any password-related note — keep it somewhere private, and consider using a proper password manager instead for long-term, secure password storage." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

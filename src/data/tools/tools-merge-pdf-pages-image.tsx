@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How wide is the output image?", answer: "Pages are rendered at 800 pixels wide with the original aspect ratio preserved." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

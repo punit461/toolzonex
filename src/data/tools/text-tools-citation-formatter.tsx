@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these citations guaranteed to be perfectly correct?", answer: "They follow standard formatting conventions for the common cases of books, websites, and journal articles, but full citation style rules have many real-world edge cases — such as multiple authors, missing dates, or edited volumes. Always verify against an official style guide (APA, MLA, or Chicago manual) for unusual sources." }, { question: "Why do I only see URL and access date fields for websites?", answer: "Books and journal articles are traditionally cited without a URL or access date in these three styles, since they're treated as stable, permanently published sources rather than pages that can change or disappear." }, { question: "How should I format multiple authors?", answer: "Type them into the Author Name(s) field the way your chosen style requires (for example, \"Doe, J., & Smith, A.\") — the tool inserts your text as-is rather than reformatting author name order or punctuation." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

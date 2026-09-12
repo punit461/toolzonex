@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between a Name Badge and a Visitor Pass here?", answer: "A Name Badge is meant for someone who belongs to an organization (name, title, company), while a Visitor Pass is meant for an outside guest and includes who they're visiting, the date, and the purpose of their visit — different fields suited to each use case." }, { question: "Can I print multiple badges at once?", answer: "This tool generates one badge or pass preview at a time — for bulk printing, fill in and print each one individually, or use your browser's print function on each generated preview." }, { question: "Is the information I enter saved anywhere?", answer: "No — everything is generated live in your browser only and isn't stored, so print or screenshot the badge before navigating away." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

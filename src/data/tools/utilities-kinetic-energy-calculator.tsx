@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What units does this calculator use?", answer: "Standard SI units: mass in kilograms (kg), velocity in meters per second (m/s), and kinetic energy in joules (J), where 1 joule is the energy of a 1 kg object moving in a way that satisfies the formula above." }, { question: "Does the direction of velocity matter?", answer: "No — kinetic energy depends on velocity squared, so only the object's speed (the magnitude of its velocity) matters, not its direction. A negative velocity value produces the same kinetic energy as the equivalent positive value." }, { question: "Why does speed matter more than mass for kinetic energy?", answer: "Because kinetic energy scales with the square of velocity but only linearly with mass, doubling an object's speed quadruples its kinetic energy, while doubling its mass only doubles it — which is why speed has such an outsized effect on impact energy." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

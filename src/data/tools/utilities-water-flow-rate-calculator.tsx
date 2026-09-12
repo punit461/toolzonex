@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why measure flow rate this way instead of from pipe diameter?", answer: "Calculating flow from pipe diameter and velocity requires knowing the fluid's velocity, which most people can't easily measure at home. Timing how long it takes to fill a known-volume container is a simple, practical measurement anyone can do with just a bucket and a stopwatch, and it captures the real-world effects of pressure and restrictions that a theoretical pipe calculation might miss." }, { question: "Does the container size matter for accuracy?", answer: "A larger container measured over a longer time generally gives a more accurate average flow rate, since it smooths out small timing errors. A 1-gallon container timed over just a couple of seconds is more sensitive to stopwatch reaction time than a 5-gallon bucket timed over 20+ seconds." }, { question: "Will the flow rate stay constant over time?", answer: "Not necessarily — water pressure can fluctuate with other fixtures being used simultaneously, well pump cycling, or municipal supply changes. Take a few measurements at different times for a more reliable picture of typical flow rate." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

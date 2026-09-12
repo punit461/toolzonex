@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "Can the blank pages have lines or a grid?", answer: "No — this tool creates truly blank pages with no content. Use a PDF editor to add lines or grids." }, { question: "What is the maximum page count?", answer: "There is no hard limit, but creating hundreds of pages may slow down your browser briefly while the file is being assembled." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

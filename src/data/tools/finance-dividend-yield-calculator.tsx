@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does dividend yield change without the dividend changing?", answer: "Yield is calculated against the current share price, so it moves inversely with price even if the dividend payment itself stays flat. A falling stock price pushes the yield up, and a rising price pushes it down." }, { question: "Is a higher dividend yield always better?", answer: "Not necessarily. An unusually high yield can signal that the market expects the dividend to be cut, or that the share price has dropped sharply due to underlying business problems. Check the company's payout ratio and financial health before assuming a high yield is a bargain." }, { question: "Does dividend yield include stock buybacks?", answer: "No — dividend yield only reflects cash dividends paid per share. Buybacks return value to shareholders differently and aren't part of this calculation." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

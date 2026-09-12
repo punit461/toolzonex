@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What coordinate system is used for positioning?", answer: "PDF points start at (0, 0) from the bottom-left corner of the page. A standard A4 page is roughly 595 × 842 points." }, { question: "Can I add multiple annotations?", answer: "Currently one annotation per operation. Repeat the process to add more notes at different positions." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

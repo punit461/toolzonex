@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does a new lawn need so much more seed than overseeding?", answer: "A new lawn starts from bare soil, so every seed needs to establish and fill in the space on its own. Overseeding fills gaps in an already-established lawn, so a lighter rate is enough to thicken the turf without wasting seed or causing overcrowding." }, { question: "Should I use the exact rate this tool defaults to?", answer: "Treat the defaults as a reasonable general starting point — always check the seed bag's label for the specific grass species and blend you're using, since recommended rates vary by grass type, and adjust the rate field to match." }, { question: "Does this account for seed waste or uneven coverage?", answer: "No — it calculates the straightforward amount based on area and rate. Many gardeners buy a small extra margin (5-10%) to account for uneven spreading, wind, or birds eating exposed seed." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

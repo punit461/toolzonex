@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "How many pages can it handle?", answer: "The tool renders every page, so very large PDFs (hundreds of pages) may take a while. For documents over ~100 pages the sheet will still be generated but may be slow." }, { question: "What resolution are the thumbnails?", answer: "Each thumbnail is rendered at 180 px wide with the aspect ratio preserved, scaled proportionally from the original page dimensions." }, { question: "Is my file uploaded anywhere?", answer: "No — rendering happens entirely in your browser." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What image formats does it support?", answer: "Any image embedded in the PDF — JPEG, PNG, or other formats — is detected and saved as a PNG file." }, { question: "Does it catch background images?", answer: "Yes — any image XObject on a page, whether foreground or background, will be detected and extracted." }, { question: "Is my file uploaded anywhere?", answer: "No — extraction runs entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

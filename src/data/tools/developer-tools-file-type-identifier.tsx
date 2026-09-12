@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the File Extension Finder?", answer: "The File Extension Finder is a static name-to-type lookup table — you type an extension like \".docx\" and get its description. This File Type Identifier actually inspects the real bytes of an uploaded file, so it works correctly even when the extension is wrong, missing, or was deliberately changed." }, { question: "Is my file uploaded anywhere?", answer: "No — the file is read entirely client-side in your browser using the FileReader API. Nothing is sent to a server at any point." }, { question: "Why did my file show \"no known signature matched\"?", answer: "Some file types (like plain text, CSV, or certain proprietary formats) don't start with a distinctive byte pattern, or use a signature not included in this tool's reference table." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

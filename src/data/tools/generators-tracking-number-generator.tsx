@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these real, trackable tracking numbers?", answer: "No — every number is randomly generated and fictional, purely for mockup, testing, or design purposes. They have no connection to any actual shipment or carrier system and will not work if entered on a real carrier's tracking page." }, { question: "Do these pass a carrier's official validation check?", answer: "No — this tool only matches the typical length and character pattern (letters vs. digits) of each carrier's format. It does not implement any real carrier's internal checksum or validation algorithm." }, { question: "Which format should I pick for generic testing?", answer: "Use Generic if you just need a realistic-looking alphanumeric string without matching any specific real-world carrier's exact format." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

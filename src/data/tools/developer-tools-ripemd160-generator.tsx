@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why isn't RIPEMD-160 available through the browser's built-in crypto?", answer: "The Web Crypto API's crypto.subtle.digest only supports the SHA family (SHA-1, SHA-256, SHA-384, SHA-512) — RIPEMD-160 was never included in the standard. This tool implements the algorithm directly in JavaScript, verified against the official published test vectors, to fill that gap." }, { question: "Where is RIPEMD-160 still used today?", answer: "It's most notably used inside Bitcoin and several other cryptocurrencies as part of generating shorter public-key hashes (typically as RIPEMD-160 applied to a SHA-256 digest), and it remains supported in various cryptographic libraries for legacy compatibility." }, { question: "Is my text uploaded anywhere?", answer: "No — hashing happens entirely client-side in your browser using the JavaScript implementation on this page. Nothing you type is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

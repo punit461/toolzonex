@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does a page show as \"Custom\"?", answer: "If the dimensions don't match any built-in standard (A4, A3, A5, Letter, Legal, Tabloid) within a few points, the page is labelled \"Custom\"." }, { question: "Is my file uploaded anywhere?", answer: "No — all analysis happens entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

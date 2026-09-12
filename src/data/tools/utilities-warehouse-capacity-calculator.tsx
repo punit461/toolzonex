@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Warehouse Space Calculator?", answer: "The Warehouse Space Calculator answers \"how much space do I need to store X pallets\" — you give it a pallet count and it tells you the floor space required. This tool answers the reverse question — \"how many pallets can fit in a warehouse of Y square feet\" — you give it a floor area and it tells you the pallet capacity." }, { question: "What overhead percentage should I use?", answer: "30-40% is a common starting range for standard pallet racking with forklift aisles, similar to the Warehouse Space Calculator's guidance. Narrow-aisle or high-density storage can reduce this, while operations needing wide turning radii or large staging areas may need more." }, { question: "Does this account for vertical stacking or multi-level racking?", answer: "No — this calculates floor-level pallet capacity (footprint) only. If you stack pallets or use multi-level racking, the same floor footprint can hold significantly more total inventory than the pallet count shown here." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if my revenue exceeds my expenses?", answer: "Then your net burn is zero or negative, meaning you're cash-flow positive and don't have a runway problem — the calculator will not show a runway figure in that case since you're not burning cash." }, { question: "Should I use gross burn or net burn?", answer: "Net burn (expenses minus revenue) gives a more realistic picture of how fast your cash balance is actually shrinking. Gross burn (expenses alone) is useful too, but leaving revenue out of the field will effectively calculate gross-burn runway instead." }, { question: "Is the \"runway ends\" date exact?", answer: "It's an estimate based on your current burn rate staying constant. Real burn rates fluctuate month to month with hiring, one-time expenses, and revenue changes, so treat the date as a planning guide rather than a guarantee." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

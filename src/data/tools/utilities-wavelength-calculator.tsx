@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does sound speed matter for the calculation?", answer: "Sound travels at a speed that depends on the medium (air, water, or solids) and temperature, unlike light in a vacuum, which is a universal constant. This calculator uses 343 m/s, the commonly cited speed of sound in dry air at about 20°C — actual results will vary somewhat with temperature and altitude." }, { question: "Does the speed of light change in different materials?", answer: "Yes — light travels slightly slower through materials like glass or water than through a vacuum. This calculator uses the vacuum speed of light, which is the standard reference value for most electromagnetic wavelength calculations, including radio and Wi-Fi frequencies traveling through air." }, { question: "Can I convert wavelength back to frequency?", answer: "Yes — switch the direction toggle to \"Wavelength to Frequency\" and enter a wavelength in meters to get the corresponding frequency in Hz, using the same Speed ÷ Wavelength relationship." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

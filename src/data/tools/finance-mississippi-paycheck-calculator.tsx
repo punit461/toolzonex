@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the Mississippi state tax rate on a paycheck?", answer: "Mississippi doesn't tax the first $10,000 of taxable income, then applies a flat 4.7% rate above that. This Mississippi payroll calculator factors in that bracket along with federal tax, Social Security, and Medicare." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

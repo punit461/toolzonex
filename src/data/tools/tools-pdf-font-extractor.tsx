@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I download the actual font file?", answer: "No — the public browser APIs available don't expose a reliable way to pull a clean, standalone font file out of a PDF, so this tool reports font information (name, type, embedded or not) instead." }, { question: "What does \"not embedded\" mean?", answer: "The PDF references a font by name without including its outline data, so the viewer substitutes a locally installed font, which can look different across devices." }, { question: "Is my file uploaded anywhere?", answer: "No — everything runs entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

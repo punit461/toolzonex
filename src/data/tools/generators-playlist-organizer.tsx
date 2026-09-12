@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this connect to Spotify or Apple Music?", answer: "No — this tool only helps you plan and organize a playlist as text. You'll need to manually add the songs to your streaming service of choice afterward." }, { question: "Can I reorder songs after adding them?", answer: "Yes — use the up and down arrow buttons next to each song to move it earlier or later in the list." }, { question: "Is my playlist saved between visits?", answer: "No — it resets on reload since it's generated fresh in your browser each time, so copy the export text if you want to keep a lasting copy." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

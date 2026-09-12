@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I choose a custom colour?", answer: "The tool offers black, gray, blue, and red. For other colours, use the PDF Editor tool after adding the border." }, { question: "Is my file uploaded anywhere?", answer: "No — all processing happens entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

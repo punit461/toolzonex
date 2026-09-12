@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How accurate are the preset wattage figures?", answer: "They're illustrative typical ranges for common screen sizes and panel types, not a specific model's exact rating. For the most accurate result, check your TV's rated power consumption on its label, spec sheet, or an Energy Guide sticker and enter that as a custom wattage." }, { question: "Why does OLED sometimes use more power than LED at a similar size?", answer: "OLED pixels emit their own light individually, and power draw scales with how bright and colorful the content is — bright scenes can draw noticeably more power than dark ones, whereas LED-backlit LCD TVs draw more consistently regardless of content brightness." }, { question: "Does standby power matter?", answer: "Modern TVs typically draw only a small amount of standby power when off, which adds a modest amount to an annual total if left plugged in constantly — this calculator focuses on active viewing time, which is normally the larger share of total cost." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

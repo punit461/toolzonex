@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the YAML Formatter?", answer: "The YAML Formatter focuses on re-indenting messy YAML text back into consistent, readable YAML. This viewer parses the YAML and renders it as an interactive, collapsible tree instead — the same exploration-focused interaction as our JSON Tree Viewer — so you can expand only the parts you need rather than reading reformatted text top to bottom." }, { question: "Does it work with large YAML documents?", answer: "Yes — everything runs in your browser, and collapsing large branches you don't need makes it easy to navigate even sizeable documents without the page becoming sluggish." }, { question: "Is my YAML data uploaded anywhere?", answer: "No — parsing and rendering happen entirely client-side in your browser. Your data is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

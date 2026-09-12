@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I chain more than two steps?", answer: "Not in this tool — it's intentionally limited to a two-step chain. For longer chains, download the Step 1+2 result and run it through this tool (or another PDF tool) again." }, { question: "Does this support password-protected PDFs?", answer: "No — to keep the chained workflow simple, this tool expects unencrypted PDFs. Unlock a password-protected file with the Unlock PDF tool first." }, { question: "Is my file uploaded anywhere?", answer: "No — both steps run entirely in your browser; files are never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

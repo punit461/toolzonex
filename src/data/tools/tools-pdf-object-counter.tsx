@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why might the image or font count seem low?", answer: "Counts are based on unique resources referenced in page resource dictionaries; reused images or fonts across pages are counted once, and non-standard embeddings may not be detected." }, { question: "What does \"total indirect PDF objects\" mean?", answer: "Every object in a PDF referenced by number — pages, fonts, images, annotations, and internal dictionaries and streams — counts as one indirect object, so it's typically much larger than any individual count above." }, { question: "Is my file uploaded anywhere?", answer: "No — everything runs entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

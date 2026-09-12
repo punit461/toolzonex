@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What units does the result come out in?", answer: "If force is in newtons (N) and distance is in meters (m), the result is in joules (J) — the standard SI unit of work and energy. Keep your input units consistent for the result to make physical sense." }, { question: "Why does a 90° angle give zero work?", answer: "At 90°, the force is applied entirely perpendicular to the direction of motion, so cos(90°) = 0 — none of the force contributes to moving the object along its path, so no work is done in the physics sense, even if the object is moving." }, { question: "Can work be negative?", answer: "Yes — when the angle is greater than 90°, cosine becomes negative, meaning the force opposes the direction of motion (like friction slowing something down). Negative work represents energy being removed rather than added." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

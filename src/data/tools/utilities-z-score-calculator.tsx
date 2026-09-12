@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does a z-score of 0 mean?", answer: "A z-score of 0 means the value is exactly equal to the mean — it sits right in the center of the distribution, at the 50th percentile." }, { question: "Can z-scores be negative?", answer: "Yes — a negative z-score simply means the value is below the mean. A z-score of −2 means the value is two standard deviations below the mean." }, { question: "Is the percentile exact?", answer: "The percentile shown is an approximation based on the standard normal distribution (using the error function). For very large or very small z-scores, the result approaches 0% or 100% but never exactly reaches them." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

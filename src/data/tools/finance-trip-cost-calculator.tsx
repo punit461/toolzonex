@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this account for round trips?", answer: "Enter the total distance you'll actually drive — if it's a round trip, double your one-way distance before entering it, or enter the full round-trip mileage directly." }, { question: "What if my vehicle's fuel efficiency varies by driving conditions?", answer: "Use a conservative (lower) mpg figure for highway-and-city mixed driving, or your vehicle's combined EPA rating, to avoid underestimating fuel cost. Aggressive driving, cargo weight, and terrain can all reduce real-world efficiency below the rated figure." }, { question: "Can I use this for an electric vehicle?", answer: "Not directly — this calculator is built around gallons and fuel price. For an EV, use a dedicated EV charging cost calculator that works in kWh and electricity price instead." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

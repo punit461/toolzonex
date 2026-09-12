@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if my PDF already has an even page count?", answer: "No blank pages are added — the file is downloaded as-is since it is already duplex-ready." }, { question: "Does this rearrange pages?", answer: "No — page order is preserved. The tool only appends a blank page when needed to make the total count even." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this work with Emotion's styled too?", answer: "Yes — the generated syntax (styled.div`...`) is identical between styled-components and Emotion's @emotion/styled package, so the output works with either without changes." }, { question: "Why use div as the base element?", answer: "div is a safe, generic default. Swap styled.div for whatever element the original selector actually targeted (styled.button, styled.a, and so on) once you paste the output into your project." }, { question: "Is my CSS uploaded anywhere?", answer: "No — parsing and conversion happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

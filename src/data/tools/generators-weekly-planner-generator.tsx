@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is my weekly plan saved?", answer: "No — it only lives in your browser's memory for the current visit and resets on reload, so copy or print it out if you want to keep a copy." }, { question: "Why does the grid always start on Monday?", answer: "This follows the common weekly-planner convention of a Monday-to-Sunday week. If you prefer a Sunday start, just treat the Sunday column as your first day when filling it in." }, { question: "Can I add more than one task per day?", answer: "Yes — each day's box is a free-form text area, so add as many tasks as you like, one per line, and they'll all appear as separate bullet points in the printable preview." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

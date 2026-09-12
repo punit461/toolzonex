@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this tool save my water intake history?", answer: "No — this is a static, client-side-only tool with no backend or account system, so today's count is stored only in your browser's memory and resets whenever you reload or close the page." }, { question: "How much is one \"glass\"?", answer: "Each glass is counted as a standard 250 ml (about 8.5 fl oz) serving, which is used to convert your tally into liters or milliliters for the goal comparison." }, { question: "Can I set a goal in liters instead of glasses?", answer: "Yes — use the unit toggle to switch the goal field between glasses, liters, and milliliters; your glass count is automatically converted to match whichever unit you choose." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will I see the same 10 ideas every time?", answer: "No — each click of Generate or Regenerate randomly selects 10 ideas from the full pool of around 50, so results vary each time." }, { question: "Are the checked ideas saved anywhere?", answer: "No — kept ideas are only tracked while you have the page open and reset if you reload, so copy down any ideas you want to keep permanently." }, { question: "Can I get more than 10 ideas at once?", answer: "Not in a single batch, but you can keep clicking Regenerate to see different random selections until you've seen everything in the pool." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

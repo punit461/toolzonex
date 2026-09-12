@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the plain JSON Viewer?", answer: "The JSON Viewer is a general-purpose collapsible tree explorer. This tool adds a search box on top of that same tree so you can filter for a specific key or value by typing — matching branches auto-expand and matches are highlighted, which the plain viewer doesn't do." }, { question: "Is the search case-sensitive?", answer: "No — the search matches keys and values as a case-insensitive substring, so searching \"email\" also finds \"Email\" or \"EMAIL\"." }, { question: "Is my JSON data uploaded anywhere?", answer: "No — parsing, searching, and rendering all happen entirely client-side in your browser. Your data is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What coverage rate should I use?", answer: "Check the paint can label — most interior paints cover roughly 350-400 sq ft per gallon (about 8-10 m² per liter) for a single coat, though rougher or more porous surfaces reduce coverage. Adjust the coverage field to match your specific paint." }, { question: "Should I round up the final amount?", answer: "Yes — paint is sold in fixed can sizes, so round the result up to the nearest can size (e.g., a gallon or a liter) and consider a small buffer for touch-ups or an uneven surface." }, { question: "Do ceilings count as walls here?", answer: "You can add a ceiling as an extra row using its length and width as the two dimensions — the calculator just multiplies the two numbers you enter, so it works for any flat surface." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

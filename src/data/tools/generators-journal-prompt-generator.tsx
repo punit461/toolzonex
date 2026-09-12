@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Journal/Daily Reflection Template?", answer: "The Journal/Daily Reflection Template is a structured, multi-field form with fixed sections — gratitude, a highlight, a lesson learned, and tomorrow's focus — that you fill in every time. This Journal Prompt Generator is simpler: it generates a single random reflective question for inspiration, with no structured template or multiple fields to complete." }, { question: "Can I get the same prompt twice?", answer: "Yes — each click is an independent random pick from the full list, so repeats are possible, especially over many clicks." }, { question: "Does the tool save my journal entries?", answer: "No — this tool only generates the prompt itself; it doesn't include a writing area or save anything, so write your response in your own notebook, notes app, or document." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

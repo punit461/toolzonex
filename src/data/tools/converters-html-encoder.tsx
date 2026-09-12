@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this enough to prevent XSS attacks on its own?", answer: "Encoding output is one important layer of defense, but a complete security approach also includes proper input validation and context-aware escaping throughout your application." }, { question: "Which characters get encoded?", answer: "Angle brackets, ampersands, and non-ASCII characters are converted into their numeric HTML entity equivalents (e.g. &#60;), leaving standard ASCII letters, numbers, and punctuation untouched." }, { question: "Does this tool also decode HTML entities?", answer: "This page is encode-only, for a simpler, focused experience. Use our HTML Entity Encode/Decode tool if you need to convert entities back into plain HTML." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

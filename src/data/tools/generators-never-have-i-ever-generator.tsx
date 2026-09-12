@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this related to the Truth or Dare Generator?", answer: "Yes — it's part of the same family of party-game generators on this site, alongside Truth or Dare and Would You Rather, and follows the same simple one-prompt-at-a-time format." }, { question: "Is the content appropriate for all ages?", answer: "Yes — every prompt is written to be family-friendly and mild, consistent with the site's other party-game generators. There's no explicit or adult content." }, { question: "Can the same prompt come up twice in a row?", answer: "No — the generator always avoids repeating the immediately previous prompt, though the same prompt can reappear later in a longer session." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between Dash and Markdown Bullet?", answer: "Both use the same \"- \" marker, but they're offered as separate style options since \"dash list\" and \"markdown bullet list\" are two common ways people search for the same result." }, { question: "What happens after \"z\" in Lettered style?", answer: "The sequence continues with double letters — aa, ab, ac, and so on — the same way spreadsheet columns continue past Z, so lists longer than 26 items still get a unique marker." }, { question: "Are blank lines included in the output?", answer: "No — empty lines in your input are skipped, so the numbering or lettering stays continuous across only the actual list items." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

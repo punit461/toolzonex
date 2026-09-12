@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does a negative EVA mean?", answer: "A negative EVA means the business isn't generating enough operating profit to cover the cost of the capital invested in it — it can be accounting-profitable while still destroying economic value for shareholders." }, { question: "How is NOPAT different from net income?", answer: "NOPAT is operating profit after tax but before financing costs like interest, so it reflects the profitability of core operations independent of how the company is financed — net income includes interest expense and other non-operating items." }, { question: "Where does the WACC figure come from?", answer: "WACC blends the cost of a company's debt and equity, weighted by how much of each is used to fund the business. It's typically calculated separately (or sourced from financial data providers) and entered here as an input." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between variance and standard deviation?", answer: "Variance is the average of squared deviations from the mean, while standard deviation is the square root of variance. Standard deviation is in the same units as the original data, making it more intuitive to interpret. Both measure spread, but standard deviation is more commonly reported." }, { question: "Why are there two formulas for variance?", answer: "Population variance divides by n, suitable when you have data for every member of the group. Sample variance divides by n−1 (Bessel's correction) to produce an unbiased estimate when working with a subset of the population." }, { question: "Can variance be negative?", answer: "No — variance is always zero or positive, since it is based on squared differences. A variance of zero means all values are identical." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

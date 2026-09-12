@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these patterns guaranteed to cover every edge case?", answer: "No — patterns like the email and URL examples cover the vast majority of real-world cases but aren't exhaustive against every technically valid edge case in their respective specifications. For strict validation (like real email deliverability), pair regex checks with an actual verification step." }, { question: "Does this tool support every regex flavor?", answer: "The reference and tester use JavaScript's regex engine (ECMAScript syntax). Most patterns here also work in PCRE-based languages like Python or PHP, but some advanced features may differ slightly." }, { question: "Is my test data uploaded anywhere?", answer: "No — the quick tester runs entirely client-side in your browser. Nothing you type is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

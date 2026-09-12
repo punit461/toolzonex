@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is the original text really removed?", answer: "This tool paints an opaque black rectangle on top of the content. The text is not deleted from the file, so treat the redaction as visual cover." }, { question: "Where is the origin (0,0)?", answer: "Coordinates are measured from the bottom-left corner of the page, which matches how PDF pages are laid out." }, { question: "Is my file uploaded anywhere?", answer: "No — redaction happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

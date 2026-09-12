@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How accurate are the preset data rates?", answer: "They're reasonable ballpark averages — actual usage varies by streaming quality settings, video resolution, codec, and platform. For a more precise estimate, check your streaming service or video call app's own data usage settings and enter a custom rate." }, { question: "Does this account for multiple devices or people?", answer: "Add a separate activity row per person or device (or combine hours) to build up a full household estimate — the calculator just sums whatever rows you add, so it scales to as many activities and users as you need." }, { question: "Why does 4K streaming use so much more data than HD?", answer: "4K video has roughly 4x the pixel count of HD, and while compression reduces the gap somewhat, 4K streams still typically use more than twice the data per hour of standard HD streams." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

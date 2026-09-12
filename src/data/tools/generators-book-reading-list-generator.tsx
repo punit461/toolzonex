@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Reading Progress Calculator?", answer: "The Reading Progress Calculator tracks page-by-page progress within one current book you're reading, projecting a finish date. This Book Reading List Generator instead manages a whole list of multiple books — a to-be-read and reading tracker — rather than tracking progress inside any single book." }, { question: "Why does the rating field only appear for Finished books?", answer: "Ratings only make sense once you've actually finished a book, so the field is hidden for books still marked To Read or Reading." }, { question: "Can I have more than one book marked as Reading?", answer: "Yes — there's no restriction, so you can track multiple books in progress at once if you read more than one at a time." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

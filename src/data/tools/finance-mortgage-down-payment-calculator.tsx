@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does 20% down avoid PMI?", answer: "On conventional US mortgages, lenders generally require private mortgage insurance when the down payment is below 20%, since a smaller down payment means more risk of loss if the borrower defaults. Once you reach 20% equity, PMI is typically not required (or can later be removed)." }, { question: "Can I still get a mortgage with less than 20% down?", answer: "Yes — many conventional loans allow down payments as low as 3-5%, and government-backed programs like FHA, VA, and USDA loans can require even less. You'll typically pay mortgage insurance until you build enough equity or refinance." }, { question: "Does a bigger down payment always make financial sense?", answer: "Not necessarily. A larger down payment lowers your loan balance, monthly payment, and avoids PMI, but it also ties up more cash that could otherwise be used for emergencies, renovations, or other investments — weigh liquidity needs alongside the PMI savings." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

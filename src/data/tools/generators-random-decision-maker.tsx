@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is the decision truly random?", answer: "Yes — every option in your list has an equal chance of being picked, using your browser's random number generator to make the selection." }, { question: "Does it remember my past decisions after I close the page?", answer: "No — the recent decisions list is kept only for your current session in the browser tab. Refreshing or closing the page clears it; nothing is saved or sent to a server." }, { question: "What happens if I don't enter any options?", answer: "The tool automatically falls back to a simple Yes/No decision mode, so you can use it as a quick coin flip alternative without typing anything first." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this an exact, byte-for-byte conversion?", answer: "No — this is a best-effort structural conversion. It handles the most common Flow constructs well (object types, optional and nullable fields, unions, arrays, tuples, interfaces, and function signatures), but it's a hand-built mapping rather than an official, fully-specified Flow-to-TypeScript compiler. Less common constructs — object spreads inside a type, exact/inexact object semantics, bounded or defaulted generics, and Flow utility types like $Diff or $Shape — are simplified, approximated, or left as any rather than causing the tool to fail. Review the output before relying on it for anything nontrivial." }, { question: "Why does it only convert some declarations and skip others?", answer: "Only top-level type aliases, interface declarations, and function declarations are converted — runtime-only code like variable assignments or class implementations is intentionally skipped, since a declaration file describes shapes, not runtime behavior." }, { question: "Is my code uploaded anywhere?", answer: "No — parsing and conversion happen entirely client-side in your browser, using Flow's parser loaded on demand. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

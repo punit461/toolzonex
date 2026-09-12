@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do some fields use boxed types like Integer instead of int?", answer: "Java's primitive types can't represent null. Any field that's missing from at least one sample or was ever null is generated with its boxed equivalent (Integer, Double, Boolean) so the class can actually represent the absence of a value." }, { question: "Does this work with Jackson or Gson out of the box?", answer: "The generated classes follow standard JavaBean conventions (private fields with public getters and setters), which both Jackson and Gson can bind to by default without extra annotations, as long as field names match your JSON keys." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and class generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this account for water heater efficiency losses?", answer: "No — this calculates the theoretical energy needed to raise the water temperature. Real water heaters have some standby and conversion losses (heat lost through the tank, pilot lights, etc.), so actual costs are typically somewhat higher than this baseline figure." }, { question: "How do I find my incoming cold water temperature?", answer: "It varies by location and season — groundwater temperature commonly ranges from around 40°F in colder climates and winter months to 70°F or more in warmer regions and summer. Check with your local utility or use a thermometer on your cold tap for an accurate reading." }, { question: "Would lowering my water heater's temperature save money?", answer: "Yes — reducing the target temperature lowers the temperature rise needed, which directly reduces energy use. Many water heaters are set higher than necessary; many manufacturers suggest 120°F is sufficient for most households while also reducing scald risk." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

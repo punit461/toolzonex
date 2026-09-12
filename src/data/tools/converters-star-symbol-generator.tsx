@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Symbol Picker?", answer: "The Symbol Picker's categories cover Legal, Math, Punctuation, Arrows, Greek letters, and Fractions — none of which include star symbols. This tool fills that gap with a dedicated star collection, plus a practical rating builder the Symbol Picker doesn't offer." }, { question: "Does the half-star character display the same everywhere?", answer: "Not always — the half-star glyph's exact appearance depends on the font and platform rendering it, though most modern systems display it as a clearly partial star." }, { question: "What happens if I enter a rating that isn't a multiple of 0.5?", answer: "The rating is rounded to the nearest half-star before building the string, since the output can only represent full and half stars." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

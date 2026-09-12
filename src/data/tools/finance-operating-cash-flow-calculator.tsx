@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What sign should I use for the working capital change?", answer: "Enter a positive number if working capital increased during the period (which reduces cash flow), and a negative number if it decreased (which increases cash flow). The field label reminds you of this convention — it's the most common source of error in this calculation." }, { question: "Why isn't operating cash flow the same as net income?", answer: "Net income includes non-cash items like depreciation and is affected by accrual accounting timing (recording revenue or expenses before cash actually changes hands). OCF strips those effects out to show real cash movement from day-to-day operations." }, { question: "Does OCF include capital expenditures or financing activities?", answer: "No — operating cash flow covers only core business operations. Capital expenditures fall under investing activities, and things like debt repayment or dividends fall under financing activities, both reported separately on a full cash flow statement." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

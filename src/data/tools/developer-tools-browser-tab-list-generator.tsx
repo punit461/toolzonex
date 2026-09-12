@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What happens if a line isn't a valid URL?", answer: "It's shown labeled \"invalid URL\" instead of a domain, so you can spot and fix malformed entries in your pasted list." }, { question: "Do I need to include \"https://\" for every URL?", answer: "No — if a line is missing a protocol, the tool assumes \"https://\" automatically before extracting the domain, so plain addresses like \"example.com/page\" still work." }, { question: "Does this tool actually open or close browser tabs?", answer: "No — it only reformats a pasted list of URLs into an organized text list; it has no access to your actual browser tabs." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

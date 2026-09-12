@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why subtract preferred dividends?", answer: "Preferred shareholders have a priority claim on dividends before common shareholders. EPS specifically measures earnings attributable to common stock, so preferred dividends are removed from net income first." }, { question: "What is \"weighted average shares outstanding\"?", answer: "It's the average number of shares outstanding over the reporting period, weighted by how long each share count was in effect — this accounts for shares issued or repurchased partway through the period rather than just using the ending share count." }, { question: "What is the difference between basic and diluted EPS?", answer: "Basic EPS uses actual shares outstanding, as calculated here. Diluted EPS also factors in potential shares from options, warrants, and convertible securities, which typically makes diluted EPS slightly lower than basic EPS." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

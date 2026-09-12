@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does the rating field only appear for Completed games?", answer: "A meaningful rating usually requires having finished (or at least substantially played) a game, so the field only shows once a game's status is set to Completed." }, { question: "Do I have to enter exact hours played?", answer: "No — the hours field accepts any estimate, so a rough guess is fine if you don't track exact playtime elsewhere." }, { question: "Can I track the same game on two different platforms separately?", answer: "Yes — just add it twice with a different platform noted in each entry, since each row is tracked independently." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

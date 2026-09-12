@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Name Badge/Visitor Pass Generator?", answer: "The Name Badge/Visitor Pass Generator creates a printable pass for a single visitor at check-in. This tool maintains a running log of multiple visitor entries over time, sorted chronologically — a record of everyone who's visited, not a one-time printable pass." }, { question: "Does the log re-sort automatically as I add entries?", answer: "Yes — the chronological log updates instantly whenever you add, edit, or remove a visitor entry." }, { question: "Is my visitor log saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the log before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

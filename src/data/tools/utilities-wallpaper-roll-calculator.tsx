@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the main Wallpaper Calculator?", answer: "This tool only calculates the usable coverage of a single roll, as a quick reference. Our separate Wallpaper Calculator handles the full room job — wall perimeter, area, door/window cutouts, and total rolls needed — using a roll coverage figure like the one this tool produces." }, { question: "What waste allowance should I use?", answer: "Plain wallpaper with no pattern can use a low allowance (5-10%), while wallpaper with a large pattern repeat that needs careful matching between strips often needs 15-25% or more. Check the manufacturer's specific pattern repeat guidance when available." }, { question: "Why do roll dimensions vary between products?", answer: "Wallpaper isn't manufactured to one universal size — European rolls, American rolls, and specialty/designer wallpaper all commonly ship in different widths and lengths. Always check the specific product's label rather than assuming a standard size." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

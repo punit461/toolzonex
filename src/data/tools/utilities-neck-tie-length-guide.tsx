@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does tie length also depend on knot style?", answer: "Yes, to a smaller degree — bulkier knots like the Windsor use more fabric than a simple four-in-hand, which can make a tie sit slightly shorter than expected. This guide gives a solid starting point, but trying a specific tie with your preferred knot is the most reliable check." }, { question: "Where should a properly tied tie end?", answer: "The classic guideline is that the tip of the tie should just reach your belt buckle or the top of your waistband — noticeably shorter or longer than that usually looks off." }, { question: "Are there tie lengths made specifically for shorter people?", answer: "Yes — many brands offer shorter cuts specifically to avoid excess length, which this guide reflects for those under about 5'5\"." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

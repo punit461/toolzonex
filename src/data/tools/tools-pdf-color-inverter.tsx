@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will my text still be selectable afterward?", answer: "No. Inverting colors requires redrawing each page as an image, so all text and vector content becomes part of a flattened, non-selectable image." }, { question: "Does this just invert colors, or change brightness/contrast too?", answer: "Only colors are inverted (each RGB channel is flipped). Brightness and contrast are not otherwise adjusted." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens locally in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

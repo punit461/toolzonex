@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these real companies?", answer: "No — every name is a random combination of generic prefix and suffix words chosen purely for how plausible they sound. Any resemblance to a real, existing company is coincidental, and names should not be used to imply an endorsement or affiliation with any real business." }, { question: "Can I use a generated name for my actual business?", answer: "You're free to use one as inspiration, but always check trademark databases and domain availability before adopting any name for a real company — this tool doesn't check for existing businesses with the same or similar name." }, { question: "How many unique combinations are possible?", answer: "With roughly 30 prefixes and 14 suffixes, there are several hundred possible combinations, so repeated clicks will occasionally repeat a name, especially after generating many batches." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

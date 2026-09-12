@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does it always skip small words like \"and\" and \"the\"?", answer: "Yes, common stop words (and, or, of, the, a, an, in, on, at, for, to, with) are excluded by default so the acronym reads more naturally." }, { question: "How do I create an abbreviation from a phrase?", answer: "Type or paste the full phrase or title into the input box and click \"Generate Acronym\" — the tool takes the first letter of each significant word (skipping stop words) and joins them into an uppercase abbreviation." }, { question: "Can this tool expand an acronym back into the full words it stands for?", answer: "Yes, in the \"Acronym → Words\" mode. For well-known acronyms (like NASA, ASAP, or WHO) it returns the real, recognized meaning from a curated list. For anything it doesn't recognize, it generates a backronym instead — a plausible-sounding sentence built one word per letter, clearly labeled as generated rather than an official meaning." }, { question: "Is this the same as an abbreviation maker?", answer: "Yes — \"acronym generator,\" \"abbreviation maker,\" and \"word abbreviation generator\" all describe the same phrase-to-acronym conversion this tool performs." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

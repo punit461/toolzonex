@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What happens if I leave the role or shift field blank?", answer: "When grouping by that field, volunteers with a blank value are grouped together under an \"Unassigned\" heading, so nobody gets silently dropped from the list." }, { question: "Can I group by both role and shift at the same time?", answer: "No — you can group by one field at a time (role or shift, or no grouping at all), which keeps the output simple and easy to scan." }, { question: "Is my volunteer list saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the list before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

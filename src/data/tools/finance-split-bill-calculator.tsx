@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does the itemized mode split the tip proportionally instead of evenly?", answer: "Splitting the tip proportionally to what each person ordered is generally considered fairer than an equal split — someone who ordered a $40 steak benefits more from the service than someone who ordered a $8 side salad, so their tip contribution scales accordingly." }, { question: "Can multiple items be assigned to the same person?", answer: "Yes — add as many item rows as needed and assign the same person's name to each item they ordered. The calculator sums every item assigned to that name into their subtotal automatically." }, { question: "How do I split a shared item, like an appetizer everyone eats?", answer: "Add it as its own row and assign it to one placeholder name (like \"Shared\"), or divide its price evenly and add a fractional line item for each person who shared it, so it's reflected in each person's subtotal." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

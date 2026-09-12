@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Weekly Planner Generator?", answer: "The Weekly Planner Generator is a general-purpose grid for free-form daily tasks, one open text box per day. This Meal Planner Generator is structured specifically around Breakfast, Lunch, and Dinner slots for each day, making it purpose-built for meal planning rather than general to-dos." }, { question: "Do I have to fill in every meal for every day?", answer: "No — leave any cell blank and it simply shows as a dash in the printable preview, so partial weeks work fine too." }, { question: "Is my meal plan saved between visits?", answer: "No — it resets on reload since it's generated fresh in your browser each time, so copy or print it if you want to keep a lasting copy for the week." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

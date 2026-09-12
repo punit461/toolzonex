@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this count background images?", answer: "It counts every XObject resource of subtype Image that each page references — this includes backgrounds, inline images, and embedded photographs." }, { question: "Why might the same image appear on multiple pages?", answer: "PDFs can reuse the same image resource across pages for efficiency. This tool shows unique resources and which pages reference them." }, { question: "Is my file uploaded anywhere?", answer: "No — all analysis runs in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

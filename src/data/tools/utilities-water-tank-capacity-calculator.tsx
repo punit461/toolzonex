@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How much water does a person use per day?", answer: "Across drinking, cooking, bathing, and flushing, the average is roughly 100–200 liters per person per day. This calculator defaults to 150 L but lets you adjust it to match your household." }, { question: "How heavy is a full water tank?", answer: "Since 1 liter of water weighs about 1 kg, a 1,000-liter tank holds roughly 1,000 kg (about 2,205 lb) of water. Remember to account for the tank's own weight and check your roof or stand's load capacity." }, { question: "Does shape affect capacity?", answer: "Capacity depends on volume, not shape — a cylindrical and rectangular tank with the same volume hold the same amount of water. Shape mainly affects footprint, surface area, and structural design." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does a 0° rotation mean?", answer: "The page is displayed upright, in its original orientation as defined in the PDF." }, { question: "What is the difference between 90° and 270°?", answer: "90° means the page was rotated one quarter-turn clockwise; 270° is equivalent to a 90° counter-clockwise rotation." }, { question: "Is my file uploaded anywhere?", answer: "No — rotation detection happens entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

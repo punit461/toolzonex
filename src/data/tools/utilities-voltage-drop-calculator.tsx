@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the recommended maximum voltage drop?", answer: "The NEC recommends no more than 3% voltage drop from the panel to the furthest outlet on a branch circuit, and no more than 5% total." }, { question: "Why does wire length matter?", answer: "Longer wire has more resistance, which causes a greater voltage drop. Doubling the wire length doubles the voltage drop." }, { question: "What wire resistance values are used?", answer: "The calculator uses NEC Chapter 9 Table 8 values for uncoated copper conductors at 75°C: 14 AWG = 2.525, 12 AWG = 1.588, 10 AWG = 0.999, 8 AWG = 0.628, and 6 AWG = 0.395 ohms per 1,000 feet." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

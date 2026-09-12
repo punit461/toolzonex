@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the WCAG contrast ratio formula?", answer: "WCAG defines contrast ratio as (L1 + 0.05) / (L2 + 0.05), where L1 is the relative luminance of the lighter color and L2 is the relative luminance of the darker color. Relative luminance is calculated from the linearized (gamma-corrected) sRGB red, green, and blue channels, weighted 0.2126, 0.7152, and 0.0722 respectively, reflecting how the human eye perceives each color's brightness." }, { question: "What's the difference between AA and AAA?", answer: "WCAG AA is the standard accessibility bar and requires a contrast ratio of at least 4.5:1 for normal body text. WCAG AAA is the stricter, enhanced level and requires at least 7:1. Large text (roughly 18pt or 14pt bold and above) has lower thresholds under both levels." }, { question: "Is my color data uploaded anywhere?", answer: "No — every calculation happens entirely client-side in your browser. Nothing you enter is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

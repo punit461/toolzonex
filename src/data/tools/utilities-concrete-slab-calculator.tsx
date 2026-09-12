@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How much does an 80 lb bag of concrete cover?", answer: "A standard 80 lb bag yields about 0.6 cubic feet of concrete. At 4 inches thick, one bag covers roughly 1.8 square feet, so a 10 ft × 8 ft slab needs around 49 bags." }, { question: "How much wastage should I add?", answer: "A 5–10% allowance is typical for small slabs. Add more for uneven ground, multiple pours, or complex shapes where seaming and spillage increase losses." }, { question: "What is a standard slab thickness?", answer: "Interior floors and small pads are often 4 inches thick, while driveways and heavier loads usually call for 5–6 inches. Always confirm against your local building code." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

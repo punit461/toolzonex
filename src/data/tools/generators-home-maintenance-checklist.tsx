@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Cleaning Checklist Generator?", answer: "The Cleaning Checklist Generator covers routine cleaning and tidying tasks organized by Daily, Weekly, and Monthly frequency. This tool covers seasonal structural and mechanical upkeep — gutters, HVAC, weatherproofing, and safety checks — a different category of home care." }, { question: "Can I add maintenance tasks specific to my home?", answer: "Yes — use the \"Add Custom Task\" field to add anything, and it will appear in the Other section of your final checklist." }, { question: "Is my checklist saved for next time?", answer: "No — the list resets when you reload the page, since it's generated fresh in your browser each visit rather than stored anywhere." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

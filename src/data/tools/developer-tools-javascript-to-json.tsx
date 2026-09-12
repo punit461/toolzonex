@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What exactly counts as valid input?", answer: "Anything valid under the JSON5 specification — unquoted or single-quoted keys, single-quoted strings, trailing commas in objects and arrays, single-line and block comments, and a few extra numeric literals like leading + and hexadecimal numbers." }, { question: "What happens with functions or undefined values?", answer: "JSON5 (and JSON itself) doesn't support function values, undefined, or other non-serializable JavaScript values — if your input contains any of these, parsing will fail with an error rather than silently dropping them." }, { question: "Is my data uploaded anywhere?", answer: "No — parsing and conversion happen entirely client-side in your browser using the JSON5 library. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

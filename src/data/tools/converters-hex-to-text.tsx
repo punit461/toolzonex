@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does the hex string need spaces between bytes?", answer: "No — you can paste hex with spaces, commas, or 0x prefixes between byte pairs, or one continuous string with no separators at all. All of these formats decode correctly." }, { question: "What if my hex string has an odd number of digits?", answer: "Hex bytes are always represented by two digits, so a string with an odd digit count is invalid and the tool shows an error instead of guessing at a partial byte." }, { question: "Does this tool also encode text to hex?", answer: "This page is decode-only, for a simpler, focused experience. Use our separate Text to Hex tool if you need to convert plain text into a hex string instead." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

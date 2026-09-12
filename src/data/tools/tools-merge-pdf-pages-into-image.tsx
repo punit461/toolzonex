@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How large is the output image?", answer: "Pages are rendered at 800 pixels along the fixed dimension (width for vertical stacking, height for horizontal). Documents with many pages will produce a very large image in the other dimension." }, { question: "Does it preserve colors and images?", answer: "Yes — each page is rendered at full fidelity and combined without additional compression artifacts." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

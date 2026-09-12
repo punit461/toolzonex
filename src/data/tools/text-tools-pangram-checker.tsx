@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does capitalization matter?", answer: "No — the check is entirely case-insensitive, so uppercase and lowercase versions of a letter both count as that letter being present." }, { question: "Do numbers and punctuation affect the result?", answer: "No — only the 26 letters A through Z are checked; digits, spaces, and punctuation marks are ignored completely." }, { question: "What is a pangram used for?", answer: "Pangrams are commonly used to preview fonts (since every letterform appears at least once), in typing practice, and as a classic word-puzzle challenge to write the shortest possible sentence containing every letter." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

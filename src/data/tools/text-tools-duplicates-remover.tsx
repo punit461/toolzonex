@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How do I remove duplicates from a list online?", answer: "Paste your list into the input box (one item per line) and click \"Remove Duplicate Lines\". This tool works entirely in your browser, so there's nothing to install and nothing is uploaded — it's a fast way to remove duplicates from a list online for free." }, { question: "How do I delete duplicates online for free?", answer: "This page is free to use with no sign-up: paste your text, click the button, and copy the cleaned result. It works for any plain-text list — names, emails, keywords, or codes." }, { question: "Can I remove duplicate numbers with this tool?", answer: "Yes — put one number per line and the tool removes duplicate numbers the same way it removes duplicate words or lines, keeping only the first occurrence of each." }, { question: "Is this case-sensitive?", answer: "By default duplicates are matched exactly as typed — \"Apple\" and \"apple\" are treated as different lines unless case-insensitive matching is selected." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

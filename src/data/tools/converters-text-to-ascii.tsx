@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this support special characters and emoji?", answer: "Yes — characters beyond the standard ASCII range are converted using their full Unicode code point, so accented letters, symbols, and emoji all produce a valid numeric code." }, { question: "What's the difference between ASCII and Unicode code points?", answer: "ASCII covers only the first 128 code points (0-127), while Unicode extends far beyond that to cover virtually every character and symbol. This tool outputs the underlying code point for each character, which matches ASCII for standard English text." }, { question: "Does this tool also decode ASCII codes back to text?", answer: "This page is encode-only, for a simpler, focused experience. Use our separate ASCII to Text tool if you need to convert ASCII code values back into plain text." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

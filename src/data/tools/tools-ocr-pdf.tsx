@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How accurate is the OCR?", answer: "It depends heavily on scan quality — clear, non-skewed, high-contrast scans of printed text give the best results. Blurry, rotated, low-resolution, or handwritten pages will produce more errors." }, { question: "Does this support languages other than English?", answer: "Not in this version — recognition currently runs in English only. The underlying OCR engine supports other language packs, but they aren't wired up here yet to keep the tool simple and fast to load." }, { question: "Why is this slower than PDF to Text?", answer: "Regular text extraction reads an existing text layer instantly. OCR visually analyzes every page as an image and recognizes each character, which takes real computation — several seconds per page is normal." }, { question: "Is my file uploaded anywhere?", answer: "No — rendering and OCR both run entirely in your browser. The OCR engine and language data download once from a public CDN on first use, but your PDF is never sent anywhere." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

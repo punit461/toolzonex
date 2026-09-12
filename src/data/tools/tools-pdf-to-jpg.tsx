@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What quality level should I use?", answer: "80–90% works well for most purposes. Use 100% for archival quality or 50–60% when file size is the priority." }, { question: "Does this support color and grayscale PDFs?", answer: "Yes — both color and grayscale pages are exported faithfully as JPG images." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

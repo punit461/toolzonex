@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I generate more than one name?", answer: "Yes — click \"Generate Clan Name\" as many times as you like to see different prefix/suffix combinations for your chosen theme." }, { question: "Will the same combination repeat?", answer: "Yes — each generation randomly picks a prefix and suffix independently, so the same combination can come up more than once, especially with fewer clicks." }, { question: "Are these names trademark-free to use?", answer: "These are generic word combinations, but it's always a good idea to double-check that your chosen name isn't already in use by another clan, guild, or trademarked brand before adopting it, especially for competitive or public communities." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

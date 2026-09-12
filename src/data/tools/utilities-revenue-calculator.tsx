@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between gross and net revenue?", answer: "Gross revenue is total sales before any deductions. Net revenue subtracts discounts and returns (and here adds other income) to reflect what you realistically collect." }, { question: "How is profit margin calculated?", answer: "Profit margin is profit divided by net revenue, multiplied by 100. It shows what percentage of each revenue dollar is retained after covering the cost of goods sold." }, { question: "Should I use monthly or yearly figures?", answer: "Use whichever matches your planning horizon. The numbers scale identically given the same units, price, and cost — the toggle simply labels the results. Choose monthly for short-term budgeting and yearly for annual forecasts." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

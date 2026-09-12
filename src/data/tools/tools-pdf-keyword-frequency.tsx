@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is the search case-insensitive?", answer: "Yes — 'Revenue', 'revenue', and 'REVENUE' are all counted together." }, { question: "Does it match partial words?", answer: "No — keyword matching is by whole word. Searching for 'profit' will not match 'profitable'." }, { question: "Is my file uploaded anywhere?", answer: "No — all analysis happens entirely in your browser; the PDF never leaves your device." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

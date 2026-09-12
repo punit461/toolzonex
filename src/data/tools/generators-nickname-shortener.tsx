@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Nickname Combiner?", answer: "The Nickname Combiner takes TWO different names and blends them together into a new portmanteau \"ship name.\" This Nickname Shortener instead looks up the common short form of a SINGLE name — it doesn't combine or blend anything, it just returns known nicknames for the one name you searched." }, { question: "What if my name isn't in the list?", answer: "The lookup table covers roughly 100 of the most common English first names, so less common or non-English names may not have an entry — in that case, the tool will let you know no match was found." }, { question: "Are these the only nicknames a name can have?", answer: "No — these are simply the most widely recognized common variants. Many names have regional, family-specific, or invented nicknames beyond what any fixed list can cover." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

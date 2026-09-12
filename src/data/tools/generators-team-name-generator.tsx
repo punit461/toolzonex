@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I generate more names in the same theme?", answer: "Yes — click \"Generate Team Names\" again for a new batch of five random suggestions in the same theme." }, { question: "Are the names checked for trademarks?", answer: "No — these are randomly generated suggestions for inspiration. Always check that a name isn't already trademarked or in use before committing to it." }, { question: "Can I mix and match parts of different suggestions?", answer: "Absolutely — feel free to combine the adjective from one suggestion with the noun from another." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does simplified form mean?", answer: "The fraction is reduced so that the numerator and denominator share no common factor other than 1." }, { question: "Can I enter negative fractions?", answer: "Yes — enter a negative sign in the numerator field." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

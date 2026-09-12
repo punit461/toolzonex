@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does decoding fail with an error?", answer: "Base64 strings use a strict character set and are usually padded with = to a multiple of 4 characters. If the pasted text contains line breaks, extra whitespace, or isn't valid Base64 at all, decoding will fail — double-check you copied the full string." }, { question: "Is this the same as decryption?", answer: "No — Base64 is an encoding, not encryption. Anyone can decode it; it provides no security or confidentiality, it's simply a way to represent binary data as plain text." }, { question: "Does this tool also encode text to Base64?", answer: "This page is decode-only, for a simpler, focused experience. Use our separate Base64 Encoder tool if you need to convert plain text into Base64." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

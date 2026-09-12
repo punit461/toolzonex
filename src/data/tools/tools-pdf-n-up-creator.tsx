@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does N-up mean?", answer: "N-up means printing N pages on a single sheet of paper. For example, 4-up places four original pages in a 2x2 grid on one sheet." }, { question: "Can I choose the page order?", answer: "Pages are placed left-to-right, top-to-bottom in reading order. This tool does not currently offer custom ordering." }, { question: "Is my file uploaded anywhere?", answer: "No — all processing happens locally in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;
