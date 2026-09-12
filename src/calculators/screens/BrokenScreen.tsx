@@ -35,8 +35,8 @@ const BrokenScreenContent = () => {
   };
 
   const imageSrc =
-    style === 'lcd1' ? '/broken1.jpg' :
-    style === 'lcd2' ? '/broken2.jpg' :
+    style === 'lcd1' ? '/broken1.webp' :
+    style === 'lcd2' ? '/broken2.webp' :
     style === 'crack' ? '/cracked_glass.jpg' :
     customSrc;
 

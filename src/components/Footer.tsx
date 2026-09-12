@@ -13,7 +13,9 @@ const FOOT_BG = '#0D121C';
 const FOOT_TEXT = '#98A3B8';
 const FOOT_HEADING = '#EEF1F7';
 const FOOT_RULE = '#273044';
-const FOOT_MUTED = '#6B7688';
+// 5.1:1 against FOOT_BG. The previous #6B7688 measured 4.08:1, which Lighthouse
+// flagged as failing WCAG AA (4.5:1) for the tagline and copyright line.
+const FOOT_MUTED = '#7C8699';
 
 const linkSx = {
   display: 'block',
@@ -96,7 +98,7 @@ const Footer = () => {
     <Box component="footer" sx={{ bgcolor: FOOT_BG, color: FOOT_TEXT, py: 7, mt: 'auto' }}>
       <Container maxWidth="lg">
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 5 }}>
-          <Box component="img" src="/logo-dark.png" alt="ToolZoneX" sx={{ height: 48, mb: 1.5 }} />
+          <Box component="img" src="/logo-dark.webp" alt="ToolZoneX" width={316} height={48} sx={{ height: 48, width: 'auto', mb: 1.5 }} />
           <Typography variant="body2" sx={{ color: FOOT_MUTED }}>
             Smart tools, better decisions.
           </Typography>

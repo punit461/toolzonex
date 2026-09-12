@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { Dialog, Box, Autocomplete, TextField, InputAdornment } from '@mui/material';
+import { Dialog, Box, Autocomplete, TextField, InputAdornment, Popper, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import { useRouter } from 'next/navigation';
 import SearchIcon from '@mui/icons-material/Search';
 import { categories } from '@/data/toolCategories';
@@ -18,6 +19,27 @@ const allTools: SearchOption[] = categories.flatMap((cat) =>
   cat.tools.map((tool) => ({ label: tool.title, path: tool.path, description: tool.description, category: cat.label }))
 );
 
+/**
+ * The options list normally renders in a floating, absolutely-positioned
+ * Popper. Inside the Dialog's Paper that meant an element escaping its parent
+ * box, so the Paper grew a scrollbar on *both* axes and clipped the results.
+ * Pinning the Popper to static flow lets the dialog size to its own content.
+ * The !important beats popper.js, which sets position/transform inline.
+ */
+const InlinePopper = styled(Popper)`
+  position: static !important;
+  transform: none !important;
+  width: 100% !important;
+`;
+
+/**
+ * Matching every tool is fine for a 30-item page filter, but this palette
+ * searches all ~1,350 of them: an empty query matched everything and rendered
+ * the entire catalogue into the DOM, and a single letter still matches
+ * hundreds. Cap what actually gets mounted.
+ */
+const MAX_RESULTS = 50;
+
 const isApplePlatform = typeof navigator !== 'undefined' && /Mac|iPhone|iPad|iPod/.test(navigator.platform);
 
 /**
@@ -29,6 +51,7 @@ const CommandPalette = () => {
   const [open, setOpen] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const router = useRouter();
+  const hasQuery = inputValue.trim().length > 0;
 
   const handleClose = useCallback(() => {
     setOpen(false);
@@ -106,20 +129,30 @@ const CommandPalette = () => {
         onClose={handleClose}
         fullWidth
         maxWidth="sm"
-        slotProps={{ paper: { sx: { position: 'fixed', top: { xs: 16, sm: 80 }, m: { xs: 2, sm: 0 }, borderRadius: 3 } } }}
+        slotProps={{ paper: { sx: { position: 'fixed', top: { xs: 16, sm: 80 }, m: { xs: 2, sm: 0 }, borderRadius: 3, overflow: 'hidden' } } }}
       >
         <Box onKeyDown={(e) => { if (e.key === 'Escape') { e.stopPropagation(); handleClose(); } }}>
           <Autocomplete
-            open
+            open={hasQuery}
             disablePortal
+            PopperComponent={InlinePopper}
             options={allTools}
             groupBy={(option) => option.category}
             inputValue={inputValue}
             onInputChange={(_event, value) => setInputValue(value)}
             getOptionLabel={(option) => option.label}
-            filterOptions={(options, state) =>
-              options.filter((option) => toolMatchesQuery(`${option.label} ${option.description}`, state.inputValue))
-            }
+            filterOptions={(options, state) => {
+              const query = state.inputValue.trim();
+              if (!query) return [];
+              const matches: SearchOption[] = [];
+              for (const option of options) {
+                if (toolMatchesQuery(`${option.label} ${option.description}`, query)) {
+                  matches.push(option);
+                  if (matches.length === MAX_RESULTS) break;
+                }
+              }
+              return matches;
+            }}
             onChange={(_event, newValue) => {
               if (newValue) handleSelect(newValue.path);
             }}
@@ -143,9 +176,26 @@ const CommandPalette = () => {
               />
             )}
             slotProps={{
-              listbox: { sx: { maxHeight: { xs: '60vh', sm: 420 } } },
+              paper: { sx: { boxShadow: 'none', borderRadius: 0, borderTop: '1px solid', borderColor: 'divider', m: 0 } },
+              listbox: {
+                sx: {
+                  maxHeight: { xs: '60vh', sm: 420 },
+                  overflowX: 'hidden',
+                  '& .MuiAutocomplete-option': { display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' },
+                },
+              },
             }}
           />
+
+          {!hasQuery && (
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ px: 3, pb: 2.5, pt: 0.5 }}
+            >
+              Start typing to search {allTools.length.toLocaleString('en-IN')} tools.
+            </Typography>
+          )}
         </Box>
       </Dialog>
     </>

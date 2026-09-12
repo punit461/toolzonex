@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import Script from 'next/script';
 import {
   Box, Typography, Container, Paper, TextField, Button,
   Alert, CircularProgress, Divider, Link,
@@ -15,6 +16,35 @@ import EmailIcon from '@mui/icons-material/Email';
 const SHEET_URL = process.env.NEXT_PUBLIC_CONTACT_SHEET_URL as string | undefined;
 const CONTACT_EMAIL = 'punit461bharadwaj@gmail.com';
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Turnstile widget. Set NEXT_PUBLIC_TURNSTILE_SITE_KEY to enable; blank skips
+// rendering it entirely (form works exactly as before).
+//
+// This site is a static export with no server, so the widget here can only
+// gate the submit button client-side — it cannot itself stop a bot that skips
+// the page and POSTs straight to the Apps Script URL. The token is only real
+// protection once SHEET_URL's Apps Script calls Cloudflare's siteverify API
+// with the secret key and rejects the write on failure. That check has to be
+// added in the Apps Script project itself (outside this repo); this file just
+// forwards the token as `turnstileToken` in the payload for it to read.
+// ─────────────────────────────────────────────────────────────────────────────
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY as string | undefined;
+
+type TurnstileWidgetId = string;
+type TurnstileApi = {
+  render: (
+    container: HTMLElement,
+    options: { sitekey: string; action: string; callback: (token: string) => void }
+  ) => TurnstileWidgetId;
+  reset: (widgetId: TurnstileWidgetId) => void;
+};
+
+declare global {
+  interface Window {
+    turnstile?: TurnstileApi;
+  }
+}
+
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
 const Contact = () => {
@@ -24,8 +54,21 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState('');
 
-  const isValid = name.trim() && email.trim() && message.trim();
+  const turnstileContainer = useRef<HTMLDivElement>(null);
+  const turnstileWidgetId = useRef<TurnstileWidgetId | null>(null);
+
+  const renderTurnstile = () => {
+    if (!turnstileContainer.current || turnstileWidgetId.current !== null || !TURNSTILE_SITE_KEY) return;
+    turnstileWidgetId.current = window.turnstile!.render(turnstileContainer.current, {
+      sitekey: TURNSTILE_SITE_KEY,
+      action: 'contact',
+      callback: setTurnstileToken,
+    });
+  };
+
+  const isValid = name.trim() && email.trim() && message.trim() && (!TURNSTILE_SITE_KEY || turnstileToken);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,6 +83,7 @@ const Contact = () => {
       email: email.trim(),
       subject: subject.trim() || '(no subject)',
       message: message.trim(),
+      ...(TURNSTILE_SITE_KEY ? { turnstileToken } : {}),
     };
 
     if (SHEET_URL) {
@@ -58,6 +102,11 @@ const Contact = () => {
       } catch {
         setStatus('error');
         setErrorMsg('Network error. Please try again or email us directly.');
+      } finally {
+        if (turnstileWidgetId.current !== null) {
+          window.turnstile!.reset(turnstileWidgetId.current);
+          setTurnstileToken('');
+        }
       }
     } else {
       // ── Fallback: open mailto ───────────────────────────────────
@@ -167,6 +216,8 @@ const Contact = () => {
                   placeholder="Tell us what's on your mind…"
                 />
 
+                {TURNSTILE_SITE_KEY && <Box ref={turnstileContainer} />}
+
                 <Button
                   type="submit"
                   variant="contained"
@@ -188,6 +239,14 @@ const Contact = () => {
           </Paper>
         </Box>
       </Box>
+
+      {TURNSTILE_SITE_KEY && (
+        <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+          strategy="afterInteractive"
+          onReady={renderTurnstile}
+        />
+      )}
     </Container>
   );
 };
