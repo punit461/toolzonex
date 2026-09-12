@@ -1,9 +1,16 @@
 name: Deploy to GitHub Pages
 
+# Manual-only since 2026-09-12. Cloudflare Pages is the live host and builds
+# from this same branch, so an automatic run here published a second, fully
+# indexable copy of the whole site at punit461.github.io/toolzonex/ on every
+# push -- and Google was picking that copy as canonical over toolzonex.com
+# (confirmed via URL Inspection on /health/bmi-calculator).
+#
+# Kept as a one-click fallback if Cloudflare ever fails: run it from the
+# Actions tab, then re-enable Pages in repo Settings. Do NOT restore the push
+# trigger without first unpublishing or noindexing the Pages site, or the
+# duplicate comes straight back.
 on:
-  push:
-    branches:
-      - deploy
   workflow_dispatch:
 
 permissions:
