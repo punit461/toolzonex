@@ -98,7 +98,10 @@ const Footer = () => {
     <Box component="footer" sx={{ bgcolor: FOOT_BG, color: FOOT_TEXT, py: 7, mt: 'auto' }}>
       <Container maxWidth="lg">
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 5 }}>
-          <Box component="img" src="/logo-dark.webp" alt="ToolZoneX" width={316} height={48} sx={{ height: 48, width: 'auto', mb: 1.5 }} />
+          {/* Plain <img> so width/height land as real DOM attributes -- MUI's
+              Box would swallow them as style props, leaving the image unsized
+              and shifting layout as it loads. */}
+          <img src="/logo-dark.webp" alt="ToolZoneX" width={316} height={48} style={{ height: 48, width: 'auto', display: 'block', marginBottom: 12 }} />
           <Typography variant="body2" sx={{ color: FOOT_MUTED }}>
             Smart tools, better decisions.
           </Typography>
