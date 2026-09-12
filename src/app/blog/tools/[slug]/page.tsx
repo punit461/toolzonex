@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ToolBlogTemplate from "../../../../components/ToolBlogTemplate";
-import { allToolBlogs, getAllToolBlogSlugs, getToolBlogBySlug } from "../../../../data/tool-blogs";
+import { allToolBlogs, getAllToolBlogSlugs, getToolBlogBySlug, isToolBlogIndexable } from "../../../../data/tool-blogs";
 import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../../data/author";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
@@ -39,6 +39,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: blog.description,
     keywords: blog.keywords,
     alternates: { canonical: `/blog/tools/${blog.slug}` },
+    // Guides without proven search demand stay live and linked, but are withheld
+    // from the index. `follow` keeps link equity flowing to the tool they describe.
+    // Omitted for keepers so the layout's site-wide `index, follow` default applies.
+    ...(isToolBlogIndexable(blog.slug) ? {} : { robots: { index: false, follow: true } }),
     openGraph: {
       title: `${blog.title} | ToolZoneX`,
       description: blog.description,
