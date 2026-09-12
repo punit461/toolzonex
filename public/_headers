@@ -15,6 +15,12 @@
 # from Content-Security-Policy-Report-Only to Content-Security-Policy to enforce
 # it. Do not flip it to enforcing without that check — a wrong CSP silently
 # breaks ads/analytics rather than erroring loudly.
+#
+# static.cloudflareinsights.com / cloudflareinsights.com: Cloudflare Web
+# Analytics beacon (auto-injected at the edge since this zone is proxied, or
+# added manually — either way it needs these two hosts allowed).
+# challenges.cloudflare.com: Turnstile widget on the contact form (script +
+# the iframe it renders the challenge in).
 
 /*
   X-DNS-Prefetch-Control: on
@@ -24,4 +30,4 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://static.cloudflareinsights.com https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://cloudflareinsights.com https://script.google.com https://script.googleusercontent.com; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'
