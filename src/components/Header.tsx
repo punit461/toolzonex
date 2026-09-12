@@ -310,7 +310,11 @@ const Header = () => {
               '&:hover': { opacity: 0.8 },
             }}
           >
-            <Box component="img" src={mode === 'dark' ? '/logo-tzx-dark.webp' : '/logo-tzx.webp'} alt="ToolZoneX" width={103} height={38} sx={{ height: 38, width: 'auto' }} />
+            {/* Plain <img>, not Box component="img": Box treats width/height as
+                style props, so they never reach the DOM as attributes and the
+                browser can't reserve space before the file loads (a CLS culprit
+                Lighthouse flags). */}
+            <img src={mode === 'dark' ? '/logo-tzx-dark.webp' : '/logo-tzx.webp'} alt="ToolZoneX" width={103} height={38} style={{ height: 38, width: 'auto', display: 'block' }} />
           </Box>
 
           {/* Desktop dropdown nav */}
@@ -379,7 +383,7 @@ const Header = () => {
         <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
           <Box sx={{ width: 280, pt: 2, height: '100%', overflowY: 'auto' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 2, mb: 1 }}>
-              <Box component="img" src={mode === 'dark' ? '/logo-tzx-dark.webp' : '/logo-tzx.webp'} alt="ToolZoneX" width={98} height={36} sx={{ height: 36, width: 'auto' }} />
+              <img src={mode === 'dark' ? '/logo-tzx-dark.webp' : '/logo-tzx.webp'} alt="ToolZoneX" width={98} height={36} style={{ height: 36, width: 'auto', display: 'block' }} />
               <IconButton onClick={() => setDrawerOpen(false)}><CloseIcon /></IconButton>
             </Box>
             <Divider sx={{ mb: 1 }} />
