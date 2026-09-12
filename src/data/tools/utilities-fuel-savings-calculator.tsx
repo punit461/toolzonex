@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does a lower L/100km number mean better efficiency?", answer: "L/100km measures how much fuel is used to travel a fixed distance, so using less fuel for the same distance is better — the opposite of mpg, where a higher number (more miles per gallon) is better." }, { question: "Does this account for differences in fuel type?", answer: "No — enter the fuel price each vehicle actually uses (regular, premium, or diesel) separately if they differ, since this calculator assumes a single fuel price applies to both vehicles' cost comparison." }, { question: "Should I use my real-world mileage or the manufacturer's rating?", answer: "Real-world fuel economy is often somewhat lower than official manufacturer ratings, especially in city driving or cold weather. Using your own tracked average, if available, gives a more accurate savings estimate than the sticker rating alone." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

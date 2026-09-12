@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How many pages does the tool analyze?", answer: "It samples up to 5 pages to give you a representative color palette without being too slow for large documents." }, { question: "Does this detect text color?", answer: "Yes — all visible pixels including text, backgrounds, images, and graphics are sampled to give you the overall dominant colors." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

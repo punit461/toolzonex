@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How much wastage should I add?", answer: "A 10% allowance is typical. Rooms with many alcoves, angles, or patterned carpet that must be matched may need 15% or more." }, { question: "How do I convert square feet to square yards?", answer: "Divide the square footage by 9. Carpet is commonly sold by the square yard in the US." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Where is the PFT score sheet?", answer: "The Standard Benchmarks table on this page is the PFT score sheet — it lists the Outstanding, Good, and Average cutoffs for the 1.6km run, 2.4km run, push-ups, and sit-ups. Enter your own times and reps in the calculator above to see which band you land in." }, { question: "How does PFT scoring work?", answer: "Each event — run time, push-up count, sit-up count — is scored independently against fixed thresholds (Outstanding, Good, Average, Below Standard). Your overall PFT grade is set by your weakest event, so a strong run time won't offset a Below Standard push-up count." }, { question: "Do all services use the same PFT standards?", answer: "No — exact distances, time limits, and rep counts vary slightly between the Army, Navy, Air Force, NDA, CDS, and state police recruitment boards. Always check the specific notification for your exam." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

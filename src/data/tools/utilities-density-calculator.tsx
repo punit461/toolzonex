@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How do I convert kg/m³ to g/cm³?", answer: "Divide by 1000. Since 1 kg = 1000 g and 1 m³ = 1,000,000 cm³, a density of 1000 kg/m³ equals 1 g/cm³. The calculator shows both." }, { question: "Does temperature affect density?", answer: "Yes — most materials expand when heated, lowering density. Water is a notable exception between 0°C and 4°C. Values here are typical room-temperature densities." }, { question: "How can I tell what material something is?", answer: "Measure mass and volume, compute density, then compare to the reference table — the calculator flags the closest common material." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

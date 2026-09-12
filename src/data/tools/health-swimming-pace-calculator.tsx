@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why pace per 100m instead of per km, like running?", answer: "Swimming is almost always measured and compared in 100m/100yd splits since pools are built in fixed lengths (25m, 50m, 25yd) — it's the standard unit competitive and fitness swimmers use, not distance per hour." }, { question: "Does it matter if my pool is short-course (25m) or long-course (50m)?", answer: "Yes for the per-length figure — a 50m pool length pace covers twice the distance of a 25m length, so make sure the pool length you select matches where you swam." }, { question: "How is this different from the site's Pace Calculator?", answer: "That tool is built around running/walking distance in kilometers or miles. This one is scoped specifically to swimming's pool-length-based training conventions." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

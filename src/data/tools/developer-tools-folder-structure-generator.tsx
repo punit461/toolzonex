@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How does the tool know if a line is a folder or a file?", answer: "Any line ending in a forward slash (\"/\") is treated as a folder; every other line is treated as a file. Nesting depth is determined by how many leading spaces or tabs a line has compared to the line above it." }, { question: "Will the generated shell script actually work?", answer: "Yes — it uses mkdir -p for every folder (which also creates any missing parent folders) and touch for every file, so pasting it into a terminal in your target directory recreates the exact structure." }, { question: "Can I customize a preset after selecting it?", answer: "Not directly in preset mode — switch to \"Describe Structure\" and paste in a preset's layout as a starting point, then edit the text freely from there." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

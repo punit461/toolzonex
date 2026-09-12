@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does the meta keywords tag still matter for SEO?", answer: "Major search engines like Google no longer use the keywords meta tag for ranking, but some smaller search tools and internal site search systems still read it, so it's harmless to include." }, { question: "What does the robots meta tag control?", answer: "It tells search engine crawlers whether to index the page and whether to follow its links — noindex keeps a page out of search results, and nofollow tells crawlers not to pass ranking credit through its links." }, { question: "Is my data uploaded anywhere?", answer: "No — the tags are generated entirely client-side in your browser. Nothing you type is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

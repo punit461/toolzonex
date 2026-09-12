@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is gravity adjustable?", answer: "Earth's standard gravity (9.8 m/s², sometimes rounded to 9.81) is the default, but gravitational acceleration differs elsewhere — about 1.62 m/s² on the Moon and 3.71 m/s² on Mars — so making it adjustable lets you calculate potential energy anywhere." }, { question: "What reference point does height use?", answer: "Height is measured relative to whatever reference point you choose, such as the ground or a table surface — potential energy is always relative, so what matters is the height difference between the object's position and that reference point." }, { question: "How is this related to kinetic energy?", answer: "As an object falls, its potential energy converts into kinetic energy. Ignoring air resistance, the potential energy lost equals the kinetic energy gained, which is the basis of the conservation of mechanical energy in physics." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

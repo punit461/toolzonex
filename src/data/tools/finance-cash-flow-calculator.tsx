@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is net cash flow the same as profit?", answer: "Not exactly. Profit is based on accounting revenue and expenses, which can include non-cash items like depreciation, while cash flow only tracks actual money moving in and out. A business can be profitable on paper but still have poor cash flow, and vice versa." }, { question: "What should I do if my cash flow is negative?", answer: "Review the outflow list for expenses that can be reduced or delayed, and check whether any inflows are one-time versus recurring. Persistent negative cash flow means you're drawing down savings or debt to cover the shortfall." }, { question: "Should I include one-time items?", answer: "You can, but it's often more useful to calculate recurring cash flow separately from one-time inflows or outflows (like a bonus or a large purchase) so you can see your ongoing, sustainable cash position clearly." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

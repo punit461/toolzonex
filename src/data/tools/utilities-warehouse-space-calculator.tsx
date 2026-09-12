@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What overhead percentage should I use?", answer: "30-40% is a common starting range for standard pallet racking with forklift aisles. Narrow-aisle or high-density storage (like drive-in racking) can push overhead lower, while operations needing wide forklift turning radii, staging areas, or heavy foot traffic often need more than 40%." }, { question: "What's a standard pallet footprint?", answer: "The most common U.S. pallet size is 40\" × 48\", which works out to about 13.3 sq ft. Euro pallets (1200mm × 800mm) are smaller, at roughly 10.3 sq ft. Adjust the footprint field to match the pallet size you actually use." }, { question: "Does this account for vertical stacking or racking height?", answer: "No — this calculates floor space (footprint) only. If you stack pallets or use multi-level racking, the same floor footprint can hold significantly more inventory, but the floor space required to support that footprint doesn't change." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

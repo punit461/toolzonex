@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a good performance rating?", answer: "It depends on your level — a performance notably above your current rating is a strong result. FIDE categories reach 2500+ for grandmasters, while club players typically sit in the 1200–2000 range." }, { question: "How is the rating change calculated?", answer: "Typically K × (actual score − expected score), where a win counts as 1, a draw as 0.5, and a loss as 0. Higher-rated players use a smaller K. This tool shows an estimate using K = 16." }, { question: "Is the performance rating formula exact?", answer: "Official performance ratings use a more rigorous method; this is a widely used, simple approximation ideal for quick self-assessment." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

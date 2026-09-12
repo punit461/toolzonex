@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if my expenses exceed my income?", answer: "The remaining amount will show as negative, meaning you're spending more than you earn. Review the percentage breakdown to identify which categories to trim first." }, { question: "Should I include savings as an expense category?", answer: "Yes — many budgeting methods (like \"pay yourself first\") treat savings and investments as a fixed line item, not just whatever is left over. Add a \"Savings\" row with your target amount." }, { question: "How many expense categories should I track?", answer: "There's no fixed number — start broad (housing, food, transport, utilities, discretionary) and split categories further only if you need more visibility into where money is going." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

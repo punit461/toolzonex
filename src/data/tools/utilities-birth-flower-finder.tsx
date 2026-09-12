@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do some months have two birth flowers?", answer: "Birth flower lists were compiled from different floral traditions over time, and for several months two flowers became commonly associated with that month rather than just one — both are considered traditionally valid." }, { question: "Is there one single official birth flower list?", answer: "Not exactly — different regions and eras have published slightly varying lists. This tool uses the most widely recognized standard list found in modern references." }, { question: "Is this related to my zodiac sign?", answer: "No — birth flowers are tied purely to birth month, while zodiac signs follow their own date ranges that don't align cleanly with calendar months." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

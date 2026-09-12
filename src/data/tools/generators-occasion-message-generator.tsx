@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this replace five separate message generators?", answer: "Yes — this single tool covers Holiday/Festival greetings, thank-you messages, congratulations messages, and invitation messages, plus birthday and get-well messages, all in one place with an occasion selector." }, { question: "Can I edit the generated message afterward?", answer: "Yes — copy it with the copy icon and edit the text freely before sending. These messages are meant as a strong starting point, not a final, uneditable script." }, { question: "What happens if I leave the name field blank?", answer: "The message automatically adjusts its wording to read naturally without a specific name, rather than leaving an awkward gap or placeholder text." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

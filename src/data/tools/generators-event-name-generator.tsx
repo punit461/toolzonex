@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I mix words from two different event types?", answer: "Not automatically — each name is built from that category's own adjective and noun lists to keep the tone consistent, but you're free to mix and match words from different generated names by hand." }, { question: "How many names can I generate at once?", answer: "Each click produces 5 unique suggestions for the selected event type. Click \"Regenerate\" as many times as you like for more options." }, { question: "Should I check the name isn't already used elsewhere?", answer: "Yes — a quick web search for your favorite suggestion is a good idea before printing invitations, banners, or marketing materials." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

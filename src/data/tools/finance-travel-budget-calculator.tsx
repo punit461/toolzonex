@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Should I include flights in this budget?", answer: "This calculator focuses on per-day, on-the-ground costs. Flights, visas, and travel insurance are typically one-time costs that don't scale with trip length, so add them separately to the total this calculator gives you." }, { question: "How do I budget for a trip with very different costs by city?", answer: "Run the calculator once per city or leg of the trip using that city's per-day estimates and number of days there, then add the totals together for the full itinerary." }, { question: "What if my per-day spending isn't consistent every day?", answer: "Use an average per-day figure across the whole trip — a splurge day and a cheap day should roughly balance out. For very uneven trips (like a few nights in an expensive city followed by many budget days elsewhere), it's more accurate to calculate each portion separately." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

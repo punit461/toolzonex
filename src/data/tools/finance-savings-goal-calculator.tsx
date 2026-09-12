@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if I set the expected return to 0%?", answer: "With 0% return, the calculator simply divides the remaining gap to your goal evenly across the months remaining — appropriate for cash savings goals where you don't expect meaningful investment growth over the timeframe." }, { question: "Should I use a conservative or optimistic return rate?", answer: "For shorter-term goals (under 3-5 years), a conservative rate — or 0% — is safer, since market volatility could leave you short if you assume high growth. For longer-term goals, a moderate long-term average return may be reasonable." }, { question: "What if the required monthly contribution is negative or zero?", answer: "That means your current savings, projected forward with the expected return, are already enough to reach the goal without any further contributions — the calculator shows $0 as the required monthly amount in that case." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

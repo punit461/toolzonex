@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why are century years treated differently?", answer: "The extra \"divisible by 100, except by 400\" rule corrects a small drift in the basic every-4-years rule so the calendar stays aligned with Earth's actual orbit over long periods — this is the Gregorian calendar's leap year rule." }, { question: "Does this work for years before 1582?", answer: "The calculation applies the modern Gregorian rule to any year you enter, including negative or ancient years, though the Gregorian calendar wasn't actually in use before 1582." }, { question: "What years are the next few leap years after 2024?", answer: "2028, 2032, 2036, 2040, and 2044 are all leap years — enter any starting year above to see its own next five." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

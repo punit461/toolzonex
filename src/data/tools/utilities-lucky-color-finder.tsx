@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this based on science?", answer: "No — this tool is for entertainment and fun purposes only. There is no scientific basis connecting zodiac signs to colors or luck of any kind; treat the result as a lighthearted novelty, not a factual claim." }, { question: "Is there one official lucky color per sign?", answer: "No — different astrology sources list slightly different colors for the same sign. This tool uses one commonly cited color per sign from popular astrology writing." }, { question: "Can I find my zodiac sign here from my birth date?", answer: "This tool expects you to already know your sign and select it directly; use a dedicated zodiac sign finder tool first if you need to determine your sign from a birth date." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

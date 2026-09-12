@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does the angle of the applied force matter?", answer: "Yes — this calculator assumes the force is applied perpendicular (at 90°) to the lever arm, which produces the maximum possible torque for a given force and distance. If the force is applied at an angle, the effective torque is reduced by a factor of sin(angle)." }, { question: "What is the difference between lb-ft and lb-in?", answer: "Both measure torque in the imperial system, but lb-ft uses a one-foot lever arm as the reference while lb-in uses a one-inch lever arm. Since a foot is 12 inches, 1 lb-ft equals exactly 12 lb-in." }, { question: "Why is force sometimes given in kilogram-force?", answer: "Kilogram-force is a non-SI unit still used informally in some regions and specifications, representing the force exerted by one kilogram of mass under standard gravity (9.80665 m/s²). This calculator converts it to newtons automatically for the torque calculation." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

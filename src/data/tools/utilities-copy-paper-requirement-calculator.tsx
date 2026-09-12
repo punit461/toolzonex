@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this account for printer jams or wasted sheets?", answer: "No — this calculates the theoretical minimum sheets needed based on page count alone. In practice, ordering a small buffer above the calculated amount is a good idea to cover misprints, jams, and test pages." }, { question: "Why round reams and cases up instead of down?", answer: "Paper is normally only sold in whole reams and whole cases, so rounding up (using the ceiling of the division) ensures you order enough to cover your actual printing needs rather than falling slightly short." }, { question: "Does double-sided printing always exactly halve sheet count?", answer: "For an even number of pages, yes — two pages print on one sheet. For an odd number of pages, the final sheet only has one side printed, but the difference is negligible at any meaningful print volume." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

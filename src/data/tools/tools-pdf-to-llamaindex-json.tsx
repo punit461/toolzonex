@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does one document's text come out empty?", answer: "Scanned or photographed pages have no underlying text layer, so there is nothing to extract from that page — the JSON entry is still created, just with empty text." }, { question: "Does this exactly match LlamaIndex's internal Document class?", answer: "It matches the common simple JSON shape (text + metadata) used when loading documents manually — you can load this JSON and construct Document objects from it in your own ingestion code." }, { question: "Is my file uploaded anywhere?", answer: "No — extraction happens entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why isn't charging 100% efficient?", answer: "Some energy is always lost as heat during charging, in the charger's power conversion circuitry and the battery's internal chemistry. A default of 85% efficiency is a reasonable general estimate for many consumer lithium-ion devices, though actual efficiency varies by charger and battery quality." }, { question: "How do I convert mAh to Wh?", answer: "Watt-hours equal milliamp-hours divided by 1,000, multiplied by the battery's nominal voltage (Wh = mAh ÷ 1000 × V). This calculator does that conversion automatically when you select mAh as your capacity unit and provide the battery's voltage." }, { question: "Why does real-world charging often take longer than this estimate?", answer: "Many devices use a tapering charge curve that slows down significantly above about 80-90% to protect battery health, so the last portion of a charge often takes proportionally longer than this calculator's constant-power estimate suggests." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

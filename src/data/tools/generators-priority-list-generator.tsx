@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I change a task's priority after adding it?", answer: "Yes — just change the dropdown next to any task at any time, and the sorted list on the right updates instantly." }, { question: "What happens to a task with no description?", answer: "Blank task rows are ignored in the sorted output on the right, so you can leave placeholder rows without cluttering your final list." }, { question: "Is there a limit to how many tasks I can add?", answer: "No — click Add Task as many times as you need; there's no fixed limit on the number of rows." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

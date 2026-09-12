@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What units does this calculator support?", answer: "You can toggle between m/s and km/h for velocity inputs. Distance is shown in meters and acceleration in m/s²." }, { question: "Can I calculate distance from just velocity and time?", answer: "Yes — switch to Distance mode and enter the initial velocity, acceleration, and time. The tool uses s = ut + 0.5at²." }, { question: "What if acceleration is negative?", answer: "A negative acceleration means deceleration. Enter a negative value as needed and the formula handles the sign automatically." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

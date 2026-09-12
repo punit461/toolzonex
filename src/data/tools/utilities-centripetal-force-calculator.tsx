@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Force Calculator?", answer: "The Force Calculator uses Newton's second law (F = ma) for straight-line, linear force. This calculator is specifically for objects moving in a circular path, where the force depends on mass, velocity, and the radius of the circle rather than linear acceleration." }, { question: "What units does this use?", answer: "Standard SI units: mass in kilograms, velocity in meters per second, radius in meters, and force in newtons." }, { question: "Why does force increase so much with speed?", answer: "Velocity is squared in the formula, so doubling the speed while keeping mass and radius the same quadruples the required centripetal force — this is why tight, high-speed turns require dramatically more force than slower ones." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

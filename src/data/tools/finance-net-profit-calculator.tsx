@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between net profit and gross profit?", answer: "Gross profit only subtracts the cost of goods sold (COGS) from revenue, ignoring operating expenses, interest, and taxes. Net profit subtracts all expenses, giving the true bottom-line result of the business." }, { question: "What counts as a total expense here?", answer: "Include everything that reduces your bottom line: cost of goods sold, rent, salaries, marketing, interest on debt, and taxes. Leaving out any major cost category will overstate your real net profit and margin." }, { question: "What is a good net profit margin?", answer: "It varies significantly by industry — software and services businesses often see margins above 15-20%, while retail and grocery businesses commonly operate on margins of just 2-5%. Compare your margin against similar businesses in your industry rather than a single universal target." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

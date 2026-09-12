@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the GCD of 1 and any number?", answer: "The GCD of 1 and any positive integer is always 1, because 1 is the only positive divisor of 1. This means the two numbers are \"coprime\" or \"relatively prime.\"" }, { question: "Can the GCD be larger than the smallest number?", answer: "No — the GCD of a set of numbers can never be larger than the smallest number in the set, since a divisor cannot be greater than the number it divides." }, { question: "What happens if I enter 0?", answer: "Zero is excluded from the calculation. If all entries are zero, the result will be 0. For any positive number n, GCD(n, 0) = n." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

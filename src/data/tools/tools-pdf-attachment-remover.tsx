@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will this affect the page content?", answer: "No — only embedded file attachments are removed. All text, images, and formatting on each page remain unchanged." }, { question: "Can I save the attachments first?", answer: "Yes — use the PDF Attachment Extractor tool to download the embedded files before removing them here." }, { question: "Is my file uploaded anywhere?", answer: "No — the entire process runs in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

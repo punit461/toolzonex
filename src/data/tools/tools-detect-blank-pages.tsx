@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How does it define \"blank\"?", answer: "A page is blank if it has no text content and the rendered image is more than 98% white pixels. Pages with images but no text are reported as not blank." }, { question: "Does this modify my PDF?", answer: "No — this is a read-only analysis tool. No changes are made to the file." }, { question: "Is my file uploaded anywhere?", answer: "No — analysis runs entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I stack multiple text shadows?", answer: "Yes — text-shadow accepts a comma-separated list of shadow definitions, which is how effects like a solid outline or neon glow are typically built. This generator produces one shadow layer at a time, which you can duplicate and combine manually." }, { question: "How do I make a glow effect instead of a drop shadow?", answer: "Set offset-x and offset-y both to 0 and increase the blur radius with a bright or saturated color — this spreads the shadow evenly around the text instead of offsetting it." }, { question: "Is my data uploaded anywhere?", answer: "No — the CSS is generated and previewed entirely client-side in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

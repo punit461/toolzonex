@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Which cities are included?", answer: "The generator draws from a curated list of well-known major cities spanning every populated continent, rather than every city in the world." }, { question: "Can the same city appear twice in a row?", answer: "Yes — each click is an independent random pick, so the same city can come up more than once." }, { question: "Does it show which country the city is in?", answer: "Yes — every result shows both the city name and its country underneath." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

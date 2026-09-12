@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I customize the layout?", answer: "The invoice uses a standard professional format. For full customization, generate the invoice and edit it in a PDF editor." }, { question: "Is my data uploaded anywhere?", answer: "No — the invoice is generated entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

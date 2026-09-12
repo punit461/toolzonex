@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does my progress get saved?", answer: "No — this tool uses client-side state only, with no persistence. Checked cells reset the moment you reload the page, so it's best used for printing a blank grid or building a quick reference rather than long-term tracking." }, { question: "How many habits or days can I add?", answer: "You can add as many habit rows as you like, and the day count accepts anywhere from 1 to 366 days, though very large grids may require scrolling to view comfortably." }, { question: "Can I print the grid itself instead of the text version?", answer: "The plain-text preview is designed for copying into a document to print, since it keeps the exact grid alignment in a simple format any text editor or printer can handle." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

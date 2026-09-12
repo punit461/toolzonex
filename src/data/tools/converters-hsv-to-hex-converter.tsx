@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is HSV different from HSL?", answer: "Both use a hue angle plus two other components, but HSV's components are Saturation and Value (brightness relative to the brightest channel), while HSL uses Saturation and Lightness (where 50% lightness is the purest color and 100% is pure white). HSV maps more directly onto the color pickers found in many graphics editors." }, { question: "Why might the hex output not exactly match a color I saw elsewhere?", answer: "RGB channels are whole numbers from 0-255, while HSV values are continuous, so converting HSV to RGB (and then to hex) can introduce very small rounding differences — usually invisible to the eye but occasionally off by a shade of 1 in a channel." }, { question: "What happens at 0% Saturation or 0% Value?", answer: "At 0% Saturation, the Hue has no effect and the result is always a shade of gray (from black at 0% Value to white at 100% Value). At 0% Value, the result is always pure black regardless of Hue or Saturation." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

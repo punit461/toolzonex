@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this count text in images or scanned pages?", answer: "No — only the selectable text layer is extracted. Scanned PDFs without an OCR text layer will show zero words." }, { question: "Are headers and footers included?", answer: "Yes — every piece of selectable text on every page is counted." }, { question: "Is my file uploaded anywhere?", answer: "No — all analysis happens entirely in your browser; the PDF never leaves your device." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

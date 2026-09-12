@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How accurate is this estimate?", answer: "This is a rough, whole-home ballpark based on typical average kWh-per-square-foot figures — it is not an audit of your actual electricity bill. Real usage depends heavily on climate, insulation, appliance efficiency, occupancy patterns, and local utility rate structures (including tiered pricing), so treat the result as a planning estimate rather than a precise prediction." }, { question: "How is this different from the Appliance Running Cost Calculator?", answer: "The Appliance Running Cost Calculator estimates the cost of a single device from its wattage and daily hours of use — it's precise for one appliance but doesn't tell you anything about your whole home. This Home Energy Usage Calculator instead works at the whole-house level, estimating total electricity usage from square footage and a general usage-intensity level, without needing to know any individual appliance's wattage." }, { question: "How do I know if my home is Low, Medium, or High intensity?", answer: "Consider your climate and habits: homes with minimal air conditioning or heating, efficient appliances, and low occupancy tend toward Low; a typical family home with normal AC/heating use fits Medium; homes with electric heating, heavy AC use in a hot climate, a pool pump, or many electronics running constantly tend toward High." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

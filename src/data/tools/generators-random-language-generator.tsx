@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How many languages can this generate?", answer: "The tool draws from a curated list of around 50 widely spoken world languages, spanning every inhabited continent." }, { question: "Are the speaker counts exact?", answer: "No — speaker counts for world languages vary between sources and are constantly shifting, so the figures shown are rounded approximations meant as a fun fact rather than a precise, up-to-the-minute statistic." }, { question: "Can I get the same language twice in a row?", answer: "Yes — each click picks independently from the full list, so repeats are possible." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

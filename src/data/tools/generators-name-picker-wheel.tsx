@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Wheel Spinner?", answer: "The Wheel Spinner treats every entry equally. This Name Picker Wheel adds support for weighted entries via the \"×N\" suffix, so you can give specific names a larger slice and a higher chance of winning." }, { question: "What happens if I don't add a weight?", answer: "Any name without a \"×N\" suffix is treated as a normal, single entry (weight of 1), exactly like a standard random name picker." }, { question: "Is the spin genuinely random?", answer: "Yes — the wheel lands on a random angle each spin, and each name's chance of winning is proportional to its slice size (which reflects its weight)." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

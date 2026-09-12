@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does word order matter?", answer: "No — this method compares the sets of words used, not their order or the sentences they form. Two texts with the same words in a different order would score 100% similar." }, { question: "Does this detect plagiarism?", answer: "No — this is a simple word-overlap similarity measure, not a plagiarism detector. A high score means the two texts share a lot of vocabulary, not that one copies the other's exact phrasing or structure." }, { question: "Why is the score lower than I expected for two similar paragraphs?", answer: "Jaccard similarity divides shared words by all distinct words combined, so even paraphrased text with the same meaning but different vocabulary choices can score lower than you might intuitively expect." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

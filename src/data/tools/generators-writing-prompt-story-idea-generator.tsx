@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between a \"writing prompt\" and a \"story idea\" here?", answer: "This tool intentionally combines both into one list — some entries are open-ended scenarios meant to spark any kind of writing, while others are more fleshed-out story premises with a clear setup. Either way, they're meant as a starting point you can take in your own direction." }, { question: "Can I get the same prompt twice?", answer: "Yes — each click is an independent random pick, so repeats are possible, especially with frequent clicking." }, { question: "Is there a \"save\" feature for prompts I like?", answer: "No — the tool only displays the current prompt; copy or write down any prompt you want to keep before generating another one." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

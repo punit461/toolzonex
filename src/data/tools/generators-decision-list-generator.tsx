@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How should I choose a weight for each reason?", answer: "Use 5 for reasons that would almost single-handedly decide the outcome, and 1 for minor factors that barely tip the scale — the exact numbers matter less than being consistent between your pros and cons." }, { question: "What happens with a Tie?", answer: "A tie means your weighted pros and cons are exactly balanced, which usually signals that the decision comes down to a factor you haven't weighted yet, or that either choice is reasonably fine." }, { question: "Can I add more than two pros or cons?", answer: "Yes — use the Add Pro or Add Con button as many times as you need; there's no limit on how many weighted reasons you can list on either side." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "When should I use \"Dr.\" versus \"Prof.\"?", answer: "Use \"Dr.\" for anyone holding a doctoral degree or a practicing physician; use \"Prof.\" specifically for a university professor in an academic context, even if they also hold a doctorate — many professors are addressed as either, but \"Prof.\" is more precise in a teaching setting." }, { question: "What's the difference between \"Jr.\" and \"II\"?", answer: "\"Jr.\" specifically means a son who shares his father's exact full name, while \"II\" simply means the second person in a family line to carry that name, which doesn't have to be a direct father-son relationship." }, { question: "Can a name have both a prefix and a suffix?", answer: "Yes — for example, \"Dr. Jane Smith, PhD\" combines a professional prefix with an academic suffix, though repeating both a title and its corresponding degree suffix (like \"Dr.\" and \"MD\" together) is sometimes considered redundant in strict style guides." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

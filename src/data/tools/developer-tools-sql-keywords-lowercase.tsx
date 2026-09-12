@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the SQL Formatter or SQL Beautifier?", answer: "Our SQL Formatter and SQL Beautifier reformat whitespace and indentation, restructuring the query onto multiple lines. This tool ONLY changes keyword casing — every other character, including line breaks and spacing, is left exactly as you typed it." }, { question: "Will this change text inside string literals?", answer: "No — content inside single-quoted strings is detected and skipped, so a value like 'SELECT ALL ROWS' stays exactly as written even though it contains words that would otherwise be recognized as keywords." }, { question: "Does it recognize every SQL keyword from every database dialect?", answer: "It covers roughly 70 of the most common standard SQL keywords used across MySQL, PostgreSQL, SQLite, and SQL Server. Highly dialect-specific keywords not on that list are left in their original case." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What contingency percentage should I use?", answer: "It varies by project type and risk level — well-defined projects with few unknowns often use 5-10%, while projects with significant uncertainty (new construction, unfamiliar scope) commonly use 15-25% or more. Check industry norms for your specific type of project." }, { question: "Should contingency be spent unless something goes wrong?", answer: "Generally no — contingency is meant as a reserve for unforeseen costs, not a budget to spend by default. Many project managers track contingency separately and only draw from it when an actual overrun or change occurs." }, { question: "Can I use this for any type of project?", answer: "Yes — the line items are fully editable, so you can label and total costs for construction, software, events, marketing campaigns, or any other project with a mix of cost categories." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

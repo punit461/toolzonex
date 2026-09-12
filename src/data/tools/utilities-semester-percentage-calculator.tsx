@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from a single-subject percentage calculator?", answer: "This tool is built specifically around aggregating multiple subjects for a full semester: it tracks a name and marks for each subject, shows a per-subject percentage breakdown table alongside the combined result, and correctly weights subjects with different maximum marks rather than just averaging a single test's score." }, { question: "Does this average each subject's percentage together?", answer: "No — it sums total marks obtained and total maximum marks across all subjects first, then divides. This weights subjects by their maximum marks rather than treating every subject's percentage equally, which is the standard way semester percentages are calculated on report cards." }, { question: "Can I remove a subject I added by mistake?", answer: "Yes — click the delete icon next to any subject row to remove it from the calculation. The overall percentage and breakdown table update immediately to reflect the remaining subjects." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

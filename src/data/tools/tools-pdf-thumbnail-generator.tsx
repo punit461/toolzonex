@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What resolution are the thumbnails?", answer: "Each thumbnail is rendered at 260 pixels wide with the page aspect ratio preserved." }, { question: "Is my file uploaded anywhere?", answer: "No — all rendering happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

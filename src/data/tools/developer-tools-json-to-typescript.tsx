@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How are optional and nullable fields detected?", answer: "If you paste an array of objects, the tool merges the shape of every element — a property that's missing from at least one object becomes optional (?:), and a property that's ever null gets a | null union added to its type." }, { question: "What happens if a field's type is inconsistent across samples?", answer: "When the same property holds genuinely conflicting types across an array of samples (say, a string in one object and a boolean in another), the field falls back to unknown rather than guessing an inaccurate union — you can then refine it by hand." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and type generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

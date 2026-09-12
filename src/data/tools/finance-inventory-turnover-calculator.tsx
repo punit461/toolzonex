@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does a low turnover ratio mean?", answer: "A low ratio can indicate overstocking, weak sales, or obsolete inventory tying up cash that could be used elsewhere. However, some industries (like capital equipment) normally run low ratios, so context matters." }, { question: "What does a very high turnover ratio mean?", answer: "A very high ratio can mean strong sales and efficient inventory management, but an unusually high ratio can also signal insufficient stock levels, leading to missed sales from stockouts." }, { question: "Should I use annual or a different period for COGS?", answer: "You can use any period (monthly, quarterly, or annual) as long as the COGS figure and the average inventory figure cover the same timeframe — mixing periods will distort the ratio." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

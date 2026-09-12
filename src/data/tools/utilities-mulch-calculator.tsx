@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How deep should I apply mulch?", answer: "A depth of 2-4 inches is typical for most garden beds — enough to suppress weeds and retain soil moisture without smothering plant roots. Avoid piling mulch directly against tree trunks or plant stems." }, { question: "Is it cheaper to buy mulch in bulk or in bags?", answer: "Bulk mulch (sold by the cubic yard) is almost always cheaper per unit volume than bagged mulch once you need more than a couple of cubic yards, though bagged mulch is more convenient for small areas or if you don't have a way to haul loose material." }, { question: "Does mulch need to be replaced every year?", answer: "Organic mulch breaks down over time and typically needs topping up annually or every couple of years, depending on the material — wood chips and bark last longer than finer mulches like shredded leaves or straw." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

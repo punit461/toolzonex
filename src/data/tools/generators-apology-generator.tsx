@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Should I send the generated text exactly as-is?", answer: "It's best used as a starting draft — edit the text directly in the box to add your own voice and specific details before sending, since a truly sincere apology usually benefits from personal touches." }, { question: "Is this a joke or sarcastic apology generator?", answer: "No — this tool is intentionally designed to produce respectful, sincere-toned messages for genuine apologies, not humor or sarcasm." }, { question: "What if my situation doesn't fit neatly into one category?", answer: "Pick whichever context feels closest, then use the optional details field and direct editing to adjust the tone and specifics until it matches your actual situation." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Do I need to fill in every field?", answer: "No — blank fields like the quote or summary are simply omitted from the generated output, so you can use as much or as little of the template as you like." }, { question: "Can I add more than a couple of key takeaways?", answer: "Yes — click \"Add Takeaway\" as many times as you need; there's no fixed limit on how many bullet points appear in your summary." }, { question: "Is my book summary saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the summary before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

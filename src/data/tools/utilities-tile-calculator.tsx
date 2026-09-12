@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why add a waste percentage?", answer: "Tiles get cut to fit room edges, corners, and around fixtures, and some break during installation. A 10% waste allowance is a common default for straightforward layouts — diagonal patterns, intricate layouts, or rooms with many cuts may need 15% or more." }, { question: "Should I round the result up?", answer: "Yes — always round up to the next whole tile (and often to the next full box, since tiles are typically sold by the box), since you can't buy a fraction of a tile." }, { question: "Does this account for grout lines?", answer: "No — grout line width is small enough relative to typical tile sizes that it's usually absorbed into the waste percentage rather than calculated separately." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

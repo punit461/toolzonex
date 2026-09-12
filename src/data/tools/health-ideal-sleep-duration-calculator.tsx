@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Sleep Time Calculator?", answer: "The Sleep Time Calculator works out a specific bedtime or wake-up time based on 90-minute sleep cycles. This tool answers a completely different question — how many total hours of sleep you should be getting per night based on your age — without reference to any particular clock time." }, { question: "Why do sleep needs decrease with age?", answer: "Sleep needs are highest during infancy and childhood when the body and brain are developing rapidly, and gradually decrease through adolescence into adulthood, where needs stabilize before dipping slightly in older age." }, { question: "What if I regularly sleep less than the recommended range?", answer: "Occasional short sleep is normal, but consistently sleeping below the recommended range for your age group is linked to a range of health effects over time. If you struggle to get enough sleep regularly, it's worth discussing with a healthcare provider." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Word Frequency Counter?", answer: "The Word Frequency Counter shows a full table of every distinct word sorted by how often it occurs, including words that repeat many times. This Unique Words Finder has a narrower purpose — it surfaces only the words that occur exactly once, which the frequency table doesn't call out on its own." }, { question: "Is word matching case-sensitive?", answer: "No — matching is case-insensitive, so \"The\" and \"the\" are treated as the same word when counting occurrences." }, { question: "Does punctuation affect the word count?", answer: "Words are matched using letters, numbers, and apostrophes, so surrounding punctuation like periods and commas doesn't affect matching, though it does mean a word directly followed by punctuation with no space is still correctly separated." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

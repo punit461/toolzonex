@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is the shuffle actually randomized?", answer: "The tool uses the Fisher-Yates shuffle algorithm, a well-known unbiased method that gives every possible ordering of the names an equal chance, rather than a naive sort-by-random-number approach that can skew results." }, { question: "What happens if the names don't divide evenly?", answer: "Extra students are distributed one at a time across the groups, so group sizes never differ by more than one student." }, { question: "Can I get a different split without changing my name list?", answer: "Yes — click Regenerate to reshuffle the same list of names into a brand new random grouping." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

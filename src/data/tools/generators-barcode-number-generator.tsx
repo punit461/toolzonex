@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this generate a scannable barcode image?", answer: "No — this tool only calculates and displays the numeric code with a correct check digit. If you need an actual scannable barcode image to download, use a dedicated barcode image generator instead." }, { question: "Can I use any random digits for a real product?", answer: "Technically the check digit will always be mathematically valid, but real-world UPC and EAN codes are issued by GS1 with a registered manufacturer prefix — use an officially assigned code for actual retail products." }, { question: "What's the actual difference between the UPC-A and EAN-13 formulas?", answer: "Both sum weighted digits and derive the check digit the same way, but the weight pattern is reversed between them: UPC-A applies the ×3 weight to odd positions, while EAN-13 applies it to even positions, which is a direct consequence of EAN-13 having one extra leading digit compared to UPC-A." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

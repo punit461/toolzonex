@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why might my actual power meter reading differ from this estimate?", answer: "Real-world power depends heavily on things this simplified model doesn't measure directly — your riding position, bike and wheel aerodynamics, tire pressure and road surface, drivetrain condition, and variable wind. This calculator uses reasonable average defaults, so treat the result as a solid ballpark rather than an exact figure." }, { question: "Why does aerodynamic drag matter so much at higher speeds?", answer: "Aerodynamic drag power scales with the cube of your speed (roughly), so doubling your speed on flat ground can increase the drag component by roughly eightfold — which is why drag dominates the power requirement at typical road cycling speeds above about 25-30 km/h." }, { question: "Can this handle a downhill (negative) gradient?", answer: "Yes — enter a negative number for the gradient. On a steep enough descent, the gravity term can turn negative and offset rolling resistance and drag entirely, which is why coasting downhill often requires no pedaling power at all." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

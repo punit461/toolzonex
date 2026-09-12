@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is operating margin different from gross margin?", answer: "Gross margin only accounts for COGS — the direct cost of producing what's sold. Operating margin also subtracts operating expenses like salaries, rent, marketing, and admin costs, giving a fuller picture of how much of each revenue dollar survives after running the actual business, not just making the product." }, { question: "How is operating margin different from net margin?", answer: "Operating margin stops before interest and taxes. Net margin goes further still, subtracting interest expense and taxes to arrive at the final bottom-line profit margin." }, { question: "What's considered a good operating margin?", answer: "It varies by industry — software and services businesses often post operating margins of 20% or higher, while capital-intensive industries like retail or manufacturing frequently run margins in the single-digit to low-teens range. Compare against similar businesses in your industry." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if width equals height?", answer: "A perfectly square page (e.g. 500 x 500 pt) is classified as Portrait since it is not wider than it is tall." }, { question: "Does this account for rotation?", answer: "This tool checks the page's intrinsic dimensions, not any rotation metadata. If you need to check applied rotations, use the Rotation Detector instead." }, { question: "Is my file uploaded anywhere?", answer: "No — detection happens entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

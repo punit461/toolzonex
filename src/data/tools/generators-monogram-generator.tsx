@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Name Initials Generator?", answer: "The Name Initials Generator produces a simple 2-letter avatar-style preview (first and last initial only, same size, in reading order) commonly used for profile pictures. This Monogram Generator instead follows the specific traditional 3-letter monogram convention — First, Last, Middle order with the last-name initial enlarged and centered — a distinct formatting style used for engravings and stationery, not avatars." }, { question: "Why is the last-name initial in the middle and larger?", answer: "That's the traditional convention for personal monograms — the surname initial is treated as the most prominent element and placed in the center at a larger size, flanked by the first and middle initials." }, { question: "What if I don't have a middle name?", answer: "Leave the middle name field blank — the monogram will show a placeholder dash in that position, or you can substitute a middle initial you use informally." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

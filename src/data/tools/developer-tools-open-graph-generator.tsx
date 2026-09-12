@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What image size works best for og:image?", answer: "A 1200×630px image is the widely recommended size — it displays well as a large preview across Facebook, LinkedIn, and X/Twitter without being cropped awkwardly." }, { question: "Why doesn't my updated preview show on Facebook/X right away?", answer: "Social platforms cache preview data per URL. After changing your tags, use that platform's own debugger/sharing tool (like Facebook's Sharing Debugger) to force it to re-scrape the page." }, { question: "Is my data uploaded anywhere?", answer: "No — everything is generated entirely client-side in your browser. Nothing you type is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

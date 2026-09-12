@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are generated GUIDs truly unique?", answer: "UUID v4 uses 122 random bits, making collisions statistically impossible for any practical number of generated values." }, { question: "What's the difference between GUID and UUID?", answer: "They are the same thing. GUID is Microsoft's term; UUID is the general standard (RFC 4122)." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

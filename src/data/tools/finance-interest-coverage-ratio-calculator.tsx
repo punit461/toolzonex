@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's a healthy interest coverage ratio?", answer: "A ratio of 2x to 3x or higher is commonly cited as healthy, though acceptable levels vary by industry and how cyclical or stable a company's earnings are. Capital-intensive industries with steady cash flows can sometimes operate safely at lower ratios than volatile-earnings businesses." }, { question: "How is this different from the Debt Service Coverage Ratio (DSCR)?", answer: "This ratio divides EBIT by interest expense only. DSCR divides net operating income by total annual debt service, which includes both principal and interest. Because DSCR's denominator is larger, it typically produces a lower, more conservative ratio than interest coverage for the same business." }, { question: "What does a ratio below 1.0x mean?", answer: "It means operating earnings aren't even sufficient to cover interest payments, which is a serious red flag that typically requires drawing on cash reserves, additional financing, or asset sales to stay current on debt." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

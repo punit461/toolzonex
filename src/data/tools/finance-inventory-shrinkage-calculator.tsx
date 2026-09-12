@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Inventory Turnover Calculator?", answer: "Inventory turnover measures how quickly inventory sells — it's about sales velocity, calculated from cost of goods sold and average inventory value. Shrinkage measures inventory that is simply lost — to theft, damage, or record errors — regardless of how fast the remaining stock sells. They answer completely different questions." }, { question: "How is this different from the Inventory Carrying Cost Calculator?", answer: "Carrying cost estimates what it costs to hold inventory over time — storage, insurance, obsolescence, and opportunity cost on the capital tied up. Shrinkage instead measures inventory that has physically disappeared from stock. Carrying cost is about the cost of keeping inventory; shrinkage is about inventory you no longer have at all." }, { question: "What's a typical shrinkage rate?", answer: "Retail shrinkage rates commonly cited in industry surveys often fall around 1-2% of sales, though this varies significantly by industry, store type, and loss-prevention practices. Use your own historical shrinkage rate as the most relevant benchmark for your business." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

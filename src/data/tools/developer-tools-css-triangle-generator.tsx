@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I make a triangle that isn't equilateral?", answer: "Yes — this generator uses equal border widths for a symmetric triangle, but you can manually edit the copied CSS and set different pixel values on the two transparent border sides to skew the shape." }, { question: "Does this work in all browsers?", answer: "Yes — the border-based triangle trick is supported in every modern browser and has been for a very long time, since it relies on basic CSS border rendering rather than any newer feature." }, { question: "Is my data uploaded anywhere?", answer: "No — the preview and CSS are generated entirely client-side in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

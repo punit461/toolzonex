@@ -46,4 +46,20 @@ export interface ToolRegistryEntry {
     extraSchemaFields?: Record<string, unknown>;
     /** Hub/listing pages (pdf-tools, screen-test, paycheck-calculator) that don't render their own WebApplication JSON-LD. */
     isHub: boolean;
+    /**
+     * Keeps the page fully live and working, but tells Google not to index it
+     * (`robots: noindex, follow`) and excludes it from sitemap.xml.
+     *
+     * Set on 2026-09-12 across ~1,240 tools after a site-level ranking collapse:
+     * the site went from 173 pages to 1,399 in six weeks and earned 35 clicks on
+     * 43,717 impressions (0.08% CTR) over three months, which fits Google's
+     * "scaled content abuse" profile. Only pages with proven demand (a click or
+     * >=100 impressions in Search Console), structural pages, and flagship
+     * high-volume tools stay indexed.
+     *
+     * This is a dial, not a deletion — flip a page back to indexed as soon as
+     * keyword research shows real demand for it. `follow` is kept so internal
+     * link equity still flows through these pages.
+     */
+    noindex?: boolean;
 }

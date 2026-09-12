@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "What is US Letter size?", answer: "US Letter is 8.5 × 11 inches (612 × 792 points). It is slightly wider and shorter than A4 (210 × 297 mm)." }, { question: "Will an A4 PDF look right after conversion?", answer: "A4 is 595.28 × 841.89 points, so the Letter canvas is slightly wider and shorter. Content near the top or bottom of A4 pages may shift, but nothing should be cut off at normal margins." }, { question: "Is my file uploaded anywhere?", answer: "No — conversion happens entirely in your browser." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

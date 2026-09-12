@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What joist spacing should I use?", answer: "16 inches on-center is the most common residential joist spacing, though some decking materials (especially composite boards installed at an angle) require tighter 12-inch spacing — check your decking manufacturer's span rating before finalizing spacing." }, { question: "How is this different from the simpler Deck Board Calculator?", answer: "The Deck Board Calculator gives you just the board count and linear footage. This calculator adds the rest of a real materials list on top of that — joist count based on your spacing, and a rough fastener estimate — so you can shop for framing lumber and hardware in the same pass." }, { question: "Should I add extra for waste on top of these numbers?", answer: "Yes — as with the simpler board calculator, add 10-15% extra boards for cutting waste and staggered joints, and buy a modest surplus of joists and fasteners rather than the exact calculated amount." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

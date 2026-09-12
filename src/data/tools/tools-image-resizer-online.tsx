@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does resizing reduce quality?", answer: "Scaling down is generally imperceptible. Scaling up may introduce slight softness, as the tool cannot invent detail that wasn't in the original." }, { question: "What formats are supported?", answer: "JPG, PNG, and WEBP — both as input and output." }, { question: "Is my file uploaded anywhere?", answer: "No — all resizing happens in your browser using the canvas API." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

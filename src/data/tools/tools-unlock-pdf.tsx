@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "Do I need to know the password?", answer: "Yes — you must provide the correct password. This tool does not bypass or crack encryption." }, { question: "Is my file uploaded anywhere?", answer: "No — everything runs in your browser. The file and password never leave your device." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

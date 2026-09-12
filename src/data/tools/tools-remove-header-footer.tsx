@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this delete the text, or just cover it?", answer: "White rectangles are drawn over the specified areas, visually hiding the content. The underlying text data may still exist in the PDF structure." }, { question: "What margin values should I use?", answer: "Measure or estimate the height of the header or footer area in millimeters. Common values are 10 to 20 mm for headers and 8 to 15 mm for footers." }, { question: "Is my file uploaded anywhere?", answer: "No — processing happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

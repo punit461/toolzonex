@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this change the page dimensions or just the content?", answer: "Both — the page canvas and all content are scaled together, preserving the original layout at the new size." }, { question: "What happens to text quality?", answer: "Vector text remains sharp at any scale. Raster images within the PDF may appear softer when scaled up beyond their native resolution." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

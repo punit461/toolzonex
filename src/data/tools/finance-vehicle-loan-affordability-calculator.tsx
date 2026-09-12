@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the general Loan Affordability Calculator?", answer: "The general Loan Affordability Calculator is a purpose-agnostic tool that only considers income, existing debts, and target DTI. This vehicle-specific tool additionally factors in ongoing insurance and maintenance costs before computing your max car payment — since those costs are unavoidable with vehicle ownership and directly reduce what you can actually put toward a loan payment." }, { question: "Why subtract insurance and maintenance before computing the loan amount?", answer: "A car payment is only part of the true cost of owning a vehicle. If insurance and maintenance aren't budgeted for up front, you risk approving yourself for a loan payment you can't actually sustain once those recurring costs are added in." }, { question: "What DTI ratio should I target for a car loan?", answer: "Many financial guidelines suggest keeping total debt payments (including a car loan) under 36% of gross income, though auto lenders individually may allow higher ratios. A lower target DTI leaves more room in your budget for savings and unexpected expenses." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

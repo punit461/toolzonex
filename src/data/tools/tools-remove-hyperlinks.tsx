@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will the visible text change?", answer: "No — only the hyperlink annotations are removed. The text and its formatting are preserved." }, { question: "Does this remove bookmarks or table-of-contents links?", answer: "Bookmarks (outlines) are separate from page annotations and are not affected. Only link annotations on pages are removed." }, { question: "Is my file uploaded anywhere?", answer: "No — processing happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do multiple currencies share the same symbol?", answer: "Symbols like \"$\" and \"£\" are used by many different countries' currencies historically or by convention — the 3-letter ISO code (like USD vs. AUD) is what actually distinguishes them precisely." }, { question: "How many currencies are included?", answer: "Around 75 of the world's most commonly referenced currencies, covering all major and many regional currencies." }, { question: "Can I search using a partial currency name?", answer: "Yes — typing part of a currency's name, like \"franc\" or \"dinar\", returns every currency whose name contains that text." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

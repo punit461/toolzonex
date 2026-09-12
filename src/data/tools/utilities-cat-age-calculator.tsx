@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why isn't it just \"1 cat year = 7 human years\"?", answer: "That old rule of thumb badly understates how fast cats mature early on and overstates aging later in life. A 1-year-old cat is already sexually mature and roughly equivalent to a 15-year-old human — nowhere close to 7 — which is why vets use a non-linear scale instead of a flat multiplier." }, { question: "Does breed or size affect cat aging the way it does for dogs?", answer: "Size has a much smaller effect on cat aging than it does for dogs, where large breeds age noticeably faster. Most standard cat-to-human age conversions apply the same non-linear scale regardless of breed." }, { question: "At what age is a cat considered a senior?", answer: "Cats are generally considered mature around 7-10 years and senior from about 11 years onward, which corresponds to roughly 60+ human-equivalent years on this scale." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is SHA-384 different from SHA-512?", answer: "SHA-384 uses the exact same internal algorithm as SHA-512 but starts from different initial hash values and simply truncates the final 512-bit result down to 384 bits (96 hex characters). It is not a completely separate algorithm — it's SHA-512 with a shorter, distinct output." }, { question: "Why would someone use SHA-384 instead of SHA-256 or SHA-512?", answer: "SHA-384 is commonly required by specific standards and protocols (such as certain TLS cipher suites and certificate fingerprint formats) that call for it by name, and it offers a security margin between SHA-256 and full SHA-512 with a fixed 96-character output." }, { question: "Is my text uploaded anywhere?", answer: "No — hashing happens entirely client-side using the browser's native Web Crypto API. Nothing you type is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is UK mpg higher than US mpg for the same car?", answer: "A US gallon (3.785 liters) is smaller than a UK/imperial gallon (4.546 liters). Since mpg is distance per gallon, using the larger UK gallon in the calculation produces a higher mpg number for the exact same real-world fuel economy." }, { question: "Is a higher or lower L/100km number better?", answer: "Lower is better for L/100km, since it means less fuel is used to cover the same distance. This is the opposite of mpg or km/L, where a higher number means better fuel economy." }, { question: "How accurate is my own calculated fuel economy?", answer: "Real-world figures depend on driving style, terrain, load, and how precisely you measure the fuel added at each fill-up. Averaging results over several tanks of fuel gives a more reliable figure than a single measurement." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

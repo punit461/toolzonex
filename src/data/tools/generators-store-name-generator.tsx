@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these names checked for availability?", answer: "No — this tool only generates random word combinations for inspiration. Always check domain availability and trademark registries before committing to a name." }, { question: "Can I combine words from different suggestions?", answer: "Yes — feel free to mix the first word from one suggestion with the second word from another." }, { question: "Can I generate names for a niche not listed?", answer: "Try the \"General\" niche for broadly applicable names, or use a specific niche as a starting point and adapt the result." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

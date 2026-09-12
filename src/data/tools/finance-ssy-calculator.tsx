@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the SSY scheme?", answer: "Sukanya Samriddhi Yojana (SSY) is a government-backed small savings scheme launched under the 'Beti Bachao, Beti Padhao' campaign, letting parents or guardians open a savings account for a girl child (below age 10) to build a fund for her future education and marriage expenses." }, { question: "How is SSY interest calculated?", answer: "SSY interest is calculated annually on the account's lowest balance between the 5th and last day of each month, compounded yearly, at the government-notified rate (currently 8.2% p.a.). This calculator applies that annual compounding to your yearly deposits over the 15-year deposit period and the following years until the account matures at 21 years." }, { question: "What are the benefits of an SSY account?", answer: "SSY offers a higher interest rate than most PPF and fixed deposit options, falls under the EEE (Exempt-Exempt-Exempt) tax category so deposits (up to ₹1.5L) qualify for Section 80C deduction and both interest and maturity proceeds are tax-free, and it's backed by the Government of India." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Whitespace Cleaner?", answer: "The Whitespace Cleaner is a full cleaning suite with several checkboxes — trimming each line, removing blank lines, collapsing multiple spaces, and converting tabs to spaces. This tool is deliberately minimal: it does exactly one thing, stripping only the leading and trailing whitespace from the entire input as a single block, for anyone who just wants that one specific operation without a menu of choices." }, { question: "Does this trim whitespace from every line, or just the ends?", answer: "Just the very start and very end of the whole input — not each individual line. If you need per-line trimming as well, use the Whitespace Cleaner instead." }, { question: "Does this collapse multiple spaces in the middle of my text?", answer: "No — only leading and trailing whitespace is removed. Spaces, tabs, and line breaks anywhere in the middle of your text are left exactly as you typed them." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

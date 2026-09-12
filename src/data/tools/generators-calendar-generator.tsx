@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I generate a calendar for any year?", answer: "Yes — enter any year, past or future, and the calendar grid recalculates automatically, including correctly accounting for leap years." }, { question: "Does this tool support adding events or reminders?", answer: "No — this tool focuses purely on displaying a clean, standard calendar grid for a chosen month." }, { question: "Can I print the calendar?", answer: "Yes — click \"Print\" to open your browser's print dialog, from which you can print directly or save the calendar as a PDF." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

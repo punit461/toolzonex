@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do some months have more than one associated gemstone elsewhere?", answer: "Different jewelry associations have published slightly varying birthstone lists over time. This tool uses the most widely recognized modern birthstone for each month." }, { question: "Are birthstones based on science?", answer: "No — birthstone traditions come from history and culture rather than science, tracing back centuries to various cultural and religious associations." }, { question: "Can a month have more than one traditional birthstone?", answer: "Some modern lists do assign alternate birthstones to certain months, but this tool shows the single most commonly recognized birthstone for each month." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

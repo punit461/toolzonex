@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the URL Extractor under Tools?", answer: "This page lives under Text Tools and is built around a simpler, always-live workflow with no extract button — just paste and the list appears — aimed specifically at pulling links out of text or document content you're working with, rather than a general-purpose extraction utility." }, { question: "Does it remove duplicate URLs?", answer: "Yes — only unique URLs are listed, even if the same link appears multiple times in the text." }, { question: "Does it catch links without \"http://\"?", answer: "Yes — links starting with \"www.\" are also detected. When you click one, it opens with \"https://\" added automatically." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

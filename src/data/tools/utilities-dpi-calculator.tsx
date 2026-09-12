@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between DPI and PPI?", answer: "PPI (pixels per inch) refers to a digital image's pixel density, while DPI (dots per inch) refers to the physical dots a printer produces. They are often used interchangeably for print resolution." }, { question: "What DPI should I print at?", answer: "300 DPI is the standard for high-quality photos, 150 DPI is acceptable for larger posters, and 72 DPI is fine for web-only content." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

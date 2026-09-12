@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is Total Headcount calculated?", answer: "It adds up every guest whose RSVP is Yes, plus the number of plus-ones each of those confirmed guests is bringing — guests marked No, Maybe, or Pending aren't included since they aren't confirmed attendees." }, { question: "What's the difference between Maybe and Pending?", answer: "Maybe typically means the guest responded but is unsure, while Pending means they haven't responded at all yet — both are grouped together in the summary since neither counts toward your confirmed headcount." }, { question: "Can I track plus-ones for declined or pending guests?", answer: "You can enter a number, but it won't count toward the Total Headcount unless that guest's RSVP is set to Yes, since only confirmed guests contribute to the final expected count." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between sun, moon, and rising signs?", answer: "Your sun sign is determined by the Sun's position at birth and represents your core identity. This tool calculates only your sun sign." }, { question: "Can the dates change year to year?", answer: "The exact dates can shift by a day or two due to the Gregorian calendar and leap years. The dates used here are the most widely accepted standard ranges." }, { question: "What do the elements mean?", answer: "Fire signs are passionate and energetic. Earth signs are grounded and practical. Air signs are intellectual and social. Water signs are emotional and intuitive." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

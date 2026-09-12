@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is North Carolina's state income tax rate?", answer: "North Carolina has a flat state income tax rate of 4.5% (2025) that applies to all taxable income, regardless of filing status or income level." }, { question: "Is there a bonus tax calculator for NC?", answer: "This calculator estimates regular salary withholding rather than the flat supplemental-wage method many employers use for bonuses (typically a 22% flat federal rate plus North Carolina’s 4.5% state rate). To approximate bonus withholding, add the bonus amount to your annual salary and compare the change in take-home pay shown here." }, { question: "How do I use this as a North Carolina payroll calculator?", answer: "Enter your gross annual salary and filing status — the calculator applies 2025 federal tax brackets, Social Security, Medicare, and North Carolina’s flat 4.5% state tax to estimate net pay by pay period, similar to payroll tools like PaycheckCity." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

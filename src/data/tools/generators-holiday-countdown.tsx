@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Anniversary Countdown?", answer: "The Anniversary Countdown is for a personal recurring date you enter yourself, like a wedding anniversary. This tool instead offers a dropdown of common major holidays with their dates already built in, so there's nothing to enter beyond picking one from the list." }, { question: "Why does Diwali's date change every year?", answer: "Diwali is set by the Hindu lunisolar calendar, tied to the new moon of the month of Kartik, which doesn't align to a fixed Gregorian-calendar date the way solar-calendar holidays like Christmas do. That's why this tool looks up known upcoming Diwali dates rather than calculating from a month/day formula." }, { question: "Does the countdown update automatically?", answer: "Yes — it updates every second in real time without needing to click any button or refresh the page." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

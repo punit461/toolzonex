@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I use this list for official tax deduction documentation?", answer: "This tool is meant for personal record-keeping only — consult a tax professional for the official documentation and valuation requirements needed to claim a charitable deduction." }, { question: "How is the total estimated value calculated?", answer: "It's simply the sum of the estimated value you enter for every item in your list, updated automatically as you add, edit, or remove items." }, { question: "Is my donation list saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the list before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

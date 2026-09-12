@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I change an expense's category after adding it?", answer: "Yes — use the Category dropdown on any expense card to move it to a different category at any time; subtotals update automatically." }, { question: "How is the subtotal for each category calculated?", answer: "It's the sum of the amount entered for every expense assigned to that category, and the grand total is the sum of all category subtotals." }, { question: "Is my expense list saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the summary before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

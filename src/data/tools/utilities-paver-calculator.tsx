@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How much waste allowance should I use?", answer: "For a simple rectangular area laid in a straight running-bond pattern, 5-10% is usually enough. For diagonal layouts, herringbone patterns, curved borders, or areas with lots of cuts around edges and obstacles, consider bumping it up to 15-20%." }, { question: "Should I include the gaps between pavers?", answer: "This calculator assumes pavers are laid edge-to-edge. If your design uses wide jointing sand gaps between pavers, the effective coverage per paver is slightly smaller, so you may need a few more than this estimate shows." }, { question: "Does this account for the base material needed underneath?", answer: "No — this only estimates the number of paver units for the surface area. You'll separately need to budget for a compacted gravel base, sand bedding layer, and edge restraints depending on your project." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

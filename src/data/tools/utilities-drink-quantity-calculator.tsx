@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why 1 drink per person per hour as a default?", answer: "It's a commonly used general event-planning estimate that accounts for guests who don't drink at all balancing out those who drink more, though you should adjust it up or down based on your specific crowd and event type." }, { question: "How many glasses are in a bottle of wine?", answer: "A standard 750ml bottle pours about 5 standard glasses (5 oz each), which is the figure used here to convert wine drinks into bottles needed." }, { question: "Do the drink-type percentages need to add up to 100%?", answer: "They should for the bottle/can breakdown to reflect your actual total — if they don't sum to 100%, each category is still calculated correctly as its own percentage of the total drinks, but the categories combined won't account for every drink." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

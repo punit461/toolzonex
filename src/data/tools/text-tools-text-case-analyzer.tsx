@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Case Converter?", answer: "The Case Converter CONVERTS text between case styles on request — you tell it which style to produce. This tool does the opposite: it ANALYZES and DETECTS what case style the input text is ALREADY written in, without changing anything." }, { question: "What does \"Mixed / No clear pattern\" mean?", answer: "It means the text doesn't cleanly match any of the recognized conventions — for example, a sentence with irregular capitalization or a string that combines multiple naming styles." }, { question: "Does the detector check single words too?", answer: "Yes, though single all-lowercase or all-uppercase words are reported simply as lowercase or UPPERCASE rather than camelCase or snake_case, since those conventions require multiple words to be meaningfully identified." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

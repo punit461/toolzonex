@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does it change the card itself?", answer: "No — it trims the surrounding white space to the card's dimensions. The card content stays intact." }, { question: "What if my card is rotated?", answer: "This tool assumes the card is upright. Rotate the PDF first if needed." }, { question: "Is my file uploaded anywhere?", answer: "No — cropping happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

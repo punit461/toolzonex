@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these file sizes exact for my camera?", answer: "No — actual file sizes vary by camera model, sensor resolution, compression settings, bitrate, and scene complexity. These are illustrative average figures meant to give a reasonable ballpark estimate, not an exact count." }, { question: "Why does RAW take up so much more space than JPEG?", answer: "RAW files store nearly all the sensor's unprocessed data with little to no compression, preserving maximum editing flexibility, while JPEG applies lossy compression that discards data to shrink the file significantly." }, { question: "Does higher video bitrate or frame rate change the file size?", answer: "Yes significantly — a higher bitrate or frame rate setting increases the data recorded per minute, which would raise the average file size beyond the illustrative figure used here. Check your camera's actual bitrate specs for a more precise per-minute estimate." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

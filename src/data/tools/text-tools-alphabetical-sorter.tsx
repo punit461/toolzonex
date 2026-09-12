@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I sort a comma-separated list instead of one item per line?", answer: "Yes — choose \"Comma-Separated\" from the list format dropdown, and the tool splits, sorts, and rejoins the items with commas instead of line breaks." }, { question: "Does it remove blank lines or extra spaces?", answer: "Yes — empty items are dropped, and leading/trailing spaces on each item are trimmed before sorting." }, { question: "How does case-sensitive sorting order uppercase and lowercase?", answer: "Case-sensitive sorting uses standard character codes, where all uppercase letters (A-Z) come before any lowercase letters (a-z) — so \"Zebra\" sorts before \"apple\" even though Z comes after A alphabetically in everyday terms." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

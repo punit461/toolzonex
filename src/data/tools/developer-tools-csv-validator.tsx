@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this check that my data types are correct?", answer: "No — this tool only checks structural well-formedness (consistent columns and proper quote escaping). It does not verify that a column meant to hold numbers actually contains numbers, or enforce any business rules about the data's content." }, { question: "What counts as a properly escaped quote in CSV?", answer: "Per RFC 4180, if a field's value needs to contain a double-quote character, the whole field must be wrapped in quotes and the internal quote doubled — for example, a value of Say \"Hi\" should be written as \"Say \"\"Hi\"\"\" in the CSV file." }, { question: "Is my CSV data uploaded anywhere?", answer: "No — parsing and validation happen entirely client-side in your browser. Your file is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this generate real resolver logic?", answer: "No — it generates signature stubs only. Each resolver body is left empty for you to fill in with your actual data-fetching or mutation logic; the tool's job is to make sure you don't miss a field and to show you each field's arguments and return type up front." }, { question: "What if my schema has no Mutation or Subscription type?", answer: "The tool only emits a block for root types that actually exist in your schema — if you have no Mutation or Subscription type defined, those sections are simply omitted." }, { question: "Is my schema uploaded anywhere?", answer: "No — parsing and stub generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

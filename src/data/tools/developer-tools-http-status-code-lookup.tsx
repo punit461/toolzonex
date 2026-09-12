@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What do the different number ranges mean?", answer: "1xx codes are informational, 2xx codes indicate success, 3xx codes indicate redirection, 4xx codes indicate a client error, and 5xx codes indicate a server error — the first digit always tells you the general category." }, { question: "Is 418 \"I'm a Teapot\" a real status code?", answer: "Yes — it originates from RFC 2324, an April Fools' joke RFC from 1998 about a Hyper Text Coffee Pot Control Protocol, but it has since been kept in the registry and is occasionally used intentionally by some servers and frameworks as an easter egg." }, { question: "Does this list cover every possible status code?", answer: "It covers the most commonly referenced standard codes across the full range, including some rarer and non-standard ones like 509. A small number of obscure or vendor-specific codes outside common use may not be included." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

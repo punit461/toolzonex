@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the ideal waist-to-hip ratio?", answer: "Generally, a ratio below 0.80 for women and below 0.90 for men is considered low risk. Ratios above 0.85 for women and 0.99 for men are associated with higher cardiometabolic risk." }, { question: "Is WHR better than BMI?", answer: "WHR and BMI measure different things. BMI estimates overall body fat relative to height, while WHR describes where fat is distributed. They are best used together." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

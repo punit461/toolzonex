@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do both products need the same unit of measure?", answer: "Unit price is only a fair comparison when both quantities are measured the same way — for example, both in ounces, or both in milliliters. Comparing a product priced per ounce against one priced per gram without converting first would give a misleading result." }, { question: "Does the cheapest unit price always mean the best value?", answer: "Usually, but not always — factors like product quality, whether you'll actually use the larger quantity before it expires, and storage space can matter too. Unit price is a great starting point for comparison, not the only factor in a purchase decision." }, { question: "Can I use this for non-grocery items?", answer: "Yes — unit price comparison works for anything sold by quantity, including cleaning supplies, pet food, office supplies, or items sold by count (like a pack of batteries), using the \"item\" unit option." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

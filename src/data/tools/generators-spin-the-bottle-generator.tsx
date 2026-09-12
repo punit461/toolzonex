@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Wheel Spinner?", answer: "The Wheel Spinner and Name Picker Wheel pick a winner from a typed list of named entries. This tool needs no list at all — it simulates a plain spinning bottle landing on a random angle." }, { question: "Is the spin genuinely random?", answer: "Yes — the final resting angle is chosen at random each time, giving every direction an equal chance." }, { question: "Can I spin again?", answer: "Yes — click \"Spin the Bottle\" as many times as you like for a fresh, independent random spin each time." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

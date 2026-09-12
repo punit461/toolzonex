@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does the generator use Option instead of nullable types?", answer: "Idiomatic Scala avoids null in favor of Option[T], which forces callers to explicitly handle the absent case. Any field that's missing from at least one sample or was ever null is wrapped in Option with a None default." }, { question: "Will this work directly with circe or play-json?", answer: "The generated case classes are plain Scala and are exactly the shape both libraries expect for automatic derivation — you'll still need to bring the relevant codec/format derivation into scope for your library of choice." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and code generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

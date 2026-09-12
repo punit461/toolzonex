@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this a legally-binding electronic signature?", answer: "No. It does not meet PAdES, eIDAS, or similar legal digital-signature standards, which require a certificate from a trusted authority. For contracts or anything requiring a legally recognized signature, use a dedicated e-signature service instead." }, { question: "What is the SHA-256 hash for?", answer: "It's a fingerprint of the original file's exact bytes, computed in your browser before signing. Anyone can independently hash the original file and compare it to confirm it matches — but this only proves the file's integrity, not the signer's identity or intent." }, { question: "Can this be forged?", answer: "Yes — because there's no certificate authority validating identity, anyone could type any name into the signer field. Treat this as a visible annotation and integrity marker, not proof of authenticity." }, { question: "Is my file uploaded anywhere?", answer: "No — hashing and signing both happen entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

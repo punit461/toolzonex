@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do season and episode fields only appear for some shows?", answer: "They only appear when a show's status is Watching, since tracking progress only makes sense for a show you're actively partway through." }, { question: "Can I track multiple shows as Watching at once?", answer: "Yes — there's no limit, so you can track your current progress across as many shows as you're actively watching in parallel." }, { question: "Is my tracker saved between visits?", answer: "No — everything is generated fresh in your browser and resets on reload, so note down your progress elsewhere if you need it to persist." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What are peak sun hours?", answer: "Peak sun hours represent hours per day when solar irradiance averages 1,000 W/m². This varies by location and season." }, { question: "Why is efficiency less than 100%?", answer: "Real-world losses come from inverter inefficiency, wiring, temperature effects, soiling, and shading. 80–90% is typical." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

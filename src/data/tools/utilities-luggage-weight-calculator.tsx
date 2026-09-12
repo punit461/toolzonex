@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is the weight limit always per bag, or can it be a combined total?", answer: "It depends on the airline and fare class — most economy fares enforce a strict per-bag limit (commonly 23 kg / 50 lb), while some premium fares or specific airlines allow a combined weight across multiple bags. Check your airline's specific baggage policy, since this varies significantly." }, { question: "Do carry-on bags use the same limit?", answer: "No — carry-on weight limits are usually much lower than checked bag limits and are enforced separately. Run this calculator once for your checked bags and, if needed, again with your carry-on allowance." }, { question: "What happens if a bag is over the limit?", answer: "Airlines typically charge an overweight baggage fee, which can be significant. It's usually cheaper to redistribute weight between bags (if you have room in another bag) than to pay the fee at check-in." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I add items that aren't in the pre-set categories?", answer: "Yes — use the Add Custom Item field to add anything, and it will appear in the Other section of your final list." }, { question: "Is my list saved for next time?", answer: "No — the list resets when you reload the page, since it's generated fresh in your browser each visit rather than stored anywhere." }, { question: "Can I copy the list to share with someone else?", answer: "Yes — click the Copy button to copy your full grouped list as plain text, ready to paste into a text message, note, or email." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

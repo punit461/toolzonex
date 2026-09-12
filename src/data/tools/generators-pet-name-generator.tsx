@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I get more than one name at a time?", answer: "Each click generates one name — click \"Generate Pet Name\" again as many times as you like to see more options for the same pet type and theme." }, { question: "Will the same name repeat?", answer: "Yes — each generation is an independent random pick from the list, so repeats are possible, especially with fewer clicks." }, { question: "What does the \"Other\" pet type cover?", answer: "\"Other\" is a general-purpose name list suited to small pets like rabbits, hamsters, guinea pigs, reptiles, and fish that don't fit neatly into the dog, cat, or bird categories." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

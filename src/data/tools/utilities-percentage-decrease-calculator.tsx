@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How do you calculate percentage decrease?", answer: "Subtract the new value from the original, divide by the absolute original value, and multiply by 100: ((original − new) / |original|) × 100. A sale from $100 to $75 is a 25% decrease." }, { question: "What if the new value is higher?", answer: "Then there is no decrease — the result is a percentage increase. The calculator shows a note pointing you to the increase instead of reporting a negative drop." }, { question: "What is the difference between decrease and discount?", answer: "A discount is a percentage decrease applied to a price. The percentage decrease calculator gives you the discount percentage whenever the original is the list price and the new is the sale price." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

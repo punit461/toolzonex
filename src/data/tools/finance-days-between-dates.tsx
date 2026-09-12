@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does it handle leap years?", answer: "Yes — the calculation is based on actual calendar dates, so leap years are counted correctly." }, { question: "What is the maximum date range?", answer: "There is no practical limit — any two valid calendar dates supported by the browser will work." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is considered a good risk:reward ratio?", answer: "Many traders look for at least 1:2 or 1:3, meaning the potential reward is two to three times the risk. A favorable ratio means the trade can still be profitable over time even if it wins less than half the time." }, { question: "Does a good ratio guarantee a profitable trade?", answer: "No — the ratio only measures the potential payoff structure, not the probability of the trade hitting the target versus the stop. A favorable ratio combined with a reasonable win rate is what produces long-term profitability." }, { question: "How does this work for a short trade?", answer: "The calculator uses absolute distances, so it works the same way whether the take-profit is above the entry (a long trade) or below it (a short trade) — just make sure the stop-loss and take-profit are entered on the correct sides of your entry price." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

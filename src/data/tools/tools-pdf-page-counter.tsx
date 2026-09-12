@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this work with password-protected PDFs?", answer: "Yes — if the PDF is password-protected, you will be prompted to enter the password before the page count is calculated." }, { question: "Is my file uploaded anywhere?", answer: "No — the page count is calculated entirely in your browser; the PDF never leaves your device." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

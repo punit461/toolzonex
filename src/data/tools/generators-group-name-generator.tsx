@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I use these names for an official league or company team?", answer: "Most names are generic enough to use freely, but for a formal league or company setting, double-check your organization's naming rules or trademark concerns first." }, { question: "How many names are in each context's list?", answer: "Each of the 4 contexts has 12 hand-written suggestions, and each click shows 3 of them at random." }, { question: "Can I switch contexts without losing my favorites?", answer: "Switching context clears the current suggestions, so make a note of any name you like before changing the selector." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

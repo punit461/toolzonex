@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between gross and net yield?", answer: "Gross yield is just annual rent ÷ purchase price × 100. Net yield subtracts operating expenses — maintenance, property taxes, insurance, and vacancy — so it reflects actual income." }, { question: "What is a good rental yield?", answer: "It varies by market. In India a gross yield of 3–4% is common in metros, while 5–8% is strong in tier-2/3 cities. Compare against local rates before deciding." }, { question: "Should I include property appreciation?", answer: "Rental yield measures income only. Total return adds price appreciation (and deducts buying/selling costs) — a property can have a low yield but strong long-term appreciation, and vice versa." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

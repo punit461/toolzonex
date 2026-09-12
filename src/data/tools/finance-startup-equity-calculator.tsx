@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this dollar value guaranteed?", answer: "No — this is an estimate based on the company's current valuation, which can rise, fall, or go to zero. Private company valuations are also inherently uncertain until a liquidity event like an acquisition or IPO actually occurs." }, { question: "What is a vesting cliff?", answer: "A cliff is a minimum period (commonly one year) you must stay before any of your equity vests at all. If you leave before the cliff, you typically forfeit the entire grant, even if it's been several months." }, { question: "Does dilution affect my ownership percentage over time?", answer: "Yes — when a company issues new shares (for example, in a future funding round), total shares outstanding increases, which dilutes existing shareholders' percentage ownership unless they receive additional shares to offset it. Re-run this calculator with an updated total-shares figure to see your diluted ownership after a new round." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

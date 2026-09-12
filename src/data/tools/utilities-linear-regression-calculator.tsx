@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does R² actually tell me?", answer: "R² represents the proportion of variation in y that's explained by the linear relationship with x. An R² of 0.998 means about 99.8% of the variation in y is explained by the fitted line, while values closer to 0 mean the linear model explains very little of the pattern in the data." }, { question: "How many data points do I need?", answer: "At least 2 points are needed to define a line mathematically, but 2 points will always produce a perfect R² of 1 regardless of any real relationship. Meaningful regression analysis typically needs several data points to reveal whether a genuine linear trend exists." }, { question: "What if my data isn't actually linear?", answer: "Linear regression will still produce a best-fit straight line and an R² value, but a low R² is a signal that the relationship between x and y may be curved, cyclical, or otherwise non-linear, and a different type of model might describe the data better." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

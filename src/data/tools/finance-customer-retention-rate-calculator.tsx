@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does a negative or over-100% result mean?", answer: "Both signal a data-entry issue — in a valid scenario, ending customers minus new customers should never exceed your starting customer count. Double-check that your start, end, and new customer figures are all measured over the exact same period." }, { question: "What counts as a \"good\" retention rate?", answer: "It varies heavily by industry — subscription software businesses often aim for 90%+ monthly retention, while other industries with naturally higher churn may consider 70-80% healthy. Compare against your own historical trend rather than a universal benchmark." }, { question: "How is this different from churn rate?", answer: "Churn rate and retention rate are complementary — churn rate measures the percentage of customers lost, while retention rate measures the percentage kept. Retention rate = 100% − churn rate when both are measured the same way." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

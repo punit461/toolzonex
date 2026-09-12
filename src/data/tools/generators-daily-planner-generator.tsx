@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is my planner saved anywhere?", answer: "No — everything is kept only in your browser's memory for the current visit. Copy the text version out or print it if you want to keep it, since reloading the page clears it." }, { question: "Can I change the hour range?", answer: "Yes — set any start and end hour (0-23 for start, 1-24 for end) to plan a shorter block like a workday, or a longer one covering early morning to late night." }, { question: "Can I print this directly?", answer: "Yes — use the \"Copy as Text\" button to copy the plain-text version, then paste it into a document or note app and print from there for a clean, ready-to-fill layout." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

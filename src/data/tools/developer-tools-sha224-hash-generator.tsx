@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why isn't SHA-224 built into the browser like SHA-256?", answer: "The Web Crypto API's crypto.subtle.digest only implements SHA-1, SHA-256, SHA-384, and SHA-512 natively — SHA-224 was left out of the standard. This tool works around that by implementing the SHA-224 algorithm directly in JavaScript, verified against NIST's official test vectors." }, { question: "Is SHA-224 just a shortened SHA-256?", answer: "Essentially, yes for output length — it runs the identical round function and message schedule as SHA-256, but starts from a different set of eight initial hash values and only outputs the first seven of the eight resulting 32-bit words, giving 224 bits instead of 256." }, { question: "Is my text uploaded anywhere?", answer: "No — hashing happens entirely client-side in your browser using the JavaScript implementation on this page. Nothing you type is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

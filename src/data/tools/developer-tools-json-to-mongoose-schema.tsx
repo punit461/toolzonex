@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How does the tool decide a string should be a Date?", answer: "If a string value in your sample looks like an ISO-8601 timestamp (for example 2024-01-15T10:00:00Z), the field is mapped to Mongoose's Date type instead of String. Ordinary strings always map to String." }, { question: "What type is used for fields with mixed or unknown types?", answer: "Fields whose type can't be confidently inferred fall back to mongoose.Schema.Types.Mixed, Mongoose's catch-all type for arbitrary values." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and schema generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

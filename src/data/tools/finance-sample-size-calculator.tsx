@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is p set to 0.5?", answer: "p = 0.5 maximizes p(1−p), giving the most conservative (largest) sample size — safest when you don't know the expected proportion." }, { question: "What does the finite-population correction do?", answer: "For small populations it reduces the required sample below the infinite-population estimate, since you're sampling a meaningful fraction of the whole group." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

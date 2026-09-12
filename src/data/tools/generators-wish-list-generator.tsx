@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Bucket List Generator?", answer: "The Bucket List Generator randomly generates bucket-list experience ideas for inspiration (like \"go skydiving\"). This Wish List Generator instead organizes a personal list of specific items you already want to buy, complete with price and priority tracking — it doesn't generate any ideas for you." }, { question: "Does the estimated total include items I haven't priced yet?", answer: "No — any item left with a blank price field is treated as $0 in the total, so fill in an estimate for every item you want reflected in the running total." }, { question: "Can I save my wish list for later?", answer: "Not automatically — the list resets on reload since nothing is stored on a server, so copy down your list or take a screenshot if you want to keep a lasting record." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Hashtag Generator?", answer: "The Hashtag Generator SUGGESTS brand-new hashtags for a topic you type in. This tool does the opposite — it PULLS OUT hashtags that already exist within a piece of text you paste in, without inventing anything new." }, { question: "What counts as a valid hashtag here?", answer: "A # symbol immediately followed by one or more letters, numbers, or underscores, with no space — matching how hashtags are recognized on most social platforms." }, { question: "Does it remove duplicate hashtags?", answer: "No — every occurrence is listed and counted individually, so if a hashtag appears three times in your text, it shows up three times in the results." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

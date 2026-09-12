@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a good conversion rate?", answer: "It varies enormously by industry and traffic source — e-commerce sites often see 1-4%, while a highly targeted email campaign or a strong landing page can convert well above 10%. Compare your rate against your own historical baseline more than a generic external benchmark." }, { question: "How do I increase visitors needed for a lower rate?", answer: "Use the \"Required Visitors\" mode: enter your current conversions and a lower target rate, and the calculator shows how much traffic you'd need to bring in to hit that easier rate with the same number of conversions." }, { question: "Does conversion rate account for traffic quality?", answer: "No — it's a simple ratio and doesn't distinguish between high-intent and low-intent traffic. Two campaigns with identical conversion rates can have very different revenue quality depending on the visitors they attract." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

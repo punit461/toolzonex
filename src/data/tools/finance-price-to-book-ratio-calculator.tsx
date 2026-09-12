@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does a P/B ratio below 1 mean?", answer: "It suggests the stock trades for less than the accounting value of its net assets, which some value investors see as a potential bargain — though it can also signal the market expects continued losses or asset write-downs." }, { question: "Is a high P/B ratio always bad?", answer: "Not necessarily. Companies with strong intangible assets, brand value, or high-growth prospects — like many technology or software companies — often trade at a high P/B ratio because book value doesn't capture their true earning power." }, { question: "Which industries is P/B most useful for?", answer: "It's most meaningful for asset-heavy, capital-intensive businesses such as banks, insurers, and real estate companies, where book value closely tracks tangible net worth. It's less useful for service or tech companies with few physical assets." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

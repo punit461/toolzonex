@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I track multiple locations at once?", answer: "Yes — items you add stay assigned to whichever location was selected when you added them, and the full inventory panel groups everything by location automatically." }, { question: "Does every location show an expiry date field?", answer: "No — Pantry, Refrigerator, Freezer, and Medicine Cabinet show an expiry date field since those items are most likely to expire; General Household does not." }, { question: "Is my inventory saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the list before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What foot-candle level should I use?", answer: "It depends on the room's purpose — relaxing spaces like living rooms and bedrooms typically use 10-20 foot-candles, task-heavy spaces like kitchens and bathrooms use 30-40, and focused work areas like home offices often use 50 or more. The room type presets above set a reasonable starting point, which you can always adjust." }, { question: "Should I count lumens or watts when shopping for bulbs?", answer: "Lumens measure actual brightness output, while watts measure energy consumption — modern LED bulbs produce far more lumens per watt than older incandescent bulbs. Always check the lumens figure on the packaging rather than assuming a wattage equivalent." }, { question: "Does this account for natural light or room color?", answer: "No — this gives a baseline lumen target based on room size and desired brightness alone. Rooms with significant natural daylight or light-colored walls and ceilings that reflect more light may need slightly less artificial lighting than the calculated figure suggests." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

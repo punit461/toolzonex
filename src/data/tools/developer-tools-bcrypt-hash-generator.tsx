@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why use bcrypt instead of a general-purpose hash like SHA-256?", answer: "Bcrypt is specifically designed for PASSWORD hashing — unlike general-purpose checksums like SHA-256 or CRC32, which are built to be fast, bcrypt is deliberately slow and has a built-in random salt baked into every hash. This combination makes brute-force and rainbow-table attacks far harder against bcrypt hashes than against a fast, unsalted hash." }, { question: "Why does clicking Generate produce a different hash every time, even with the same input?", answer: "This is expected bcrypt behavior, not a bug — bcrypt automatically generates a new random salt each time you hash, and that salt is embedded directly in the resulting hash string. Two different hashes of the same password can both still be correctly verified against that same password." }, { question: "Is my text sent to a server?", answer: "No — hashing happens entirely in your browser using the bcryptjs JavaScript library. Nothing you type is uploaded anywhere." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

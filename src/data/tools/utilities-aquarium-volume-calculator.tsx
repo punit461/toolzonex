@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is my calculated volume different from the tank's advertised size?", answer: "Advertised sizes (like \"20 gallon\") are usually rounded to standard industry sizes and don't account for glass thickness reducing interior dimensions, so the calculated volume from exact measurements is often a close but not identical match." }, { question: "Should I use the full volume when calculating stocking levels?", answer: "No — substrate, decorations, and equipment displace some water, so the actual water volume is typically 5-10% less than the tank's full geometric volume. Many aquarists use the full volume as a conservative estimate for filtration sizing." }, { question: "Does this work for bowfront or cylindrical tanks?", answer: "This calculator is designed for standard rectangular tanks. Curved or cylindrical tanks require different volume formulas (based on a cylinder or a more complex curved-front shape) and will show a higher volume than the simple length × width × height calculation for the same footprint." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

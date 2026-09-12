@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the Michigan payroll tax rate?", answer: "Michigan charges a flat 4.25% state income tax on wages after the personal exemption. This Michigan payroll tax calculator applies that rate along with federal tax, Social Security, and Medicare — it doesn't include local city income tax, such as Detroit's additional withholding." }, { question: "How much tax is taken out of a paycheck in Michigan?", answer: "For most Michigan employees, paycheck withholding covers federal income tax (based on IRS brackets), 6.2% Social Security, 1.45% Medicare, and Michigan's flat 4.25% state tax — together typically 20-30% of gross pay depending on income and filing status." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Do I need every icon size?", answer: "No — modern browsers only need a handful (favicon.ico plus a couple of PNG sizes) to work well everywhere, but including Apple touch and Android icons improves how your site looks when added to a phone's home screen." }, { question: "What is the theme-color meta tag for?", answer: "It tells supporting mobile browsers (mainly Android Chrome) what color to use for UI elements like the browser toolbar when a user visits your site." }, { question: "Do I still need to create the actual image files?", answer: "Yes — this tool only generates the HTML tags that reference your files; you still need to create the actual .ico and .png files at the sizes and paths referenced." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

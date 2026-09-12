@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How do I measure an oval pool?", answer: "Enter the pool's longest length and its widest width — the calculator treats these as the two axes of an ellipse and computes the area accordingly, which is the standard approximation used for oval pool volume." }, { question: "Why average the shallow and deep end depths?", answer: "For a pool with a sloped bottom, the average of the shallow and deep depths gives a close approximation of the true average depth across the entire pool, since the slope is typically close to linear between the two ends." }, { question: "How many gallons are in a cubic foot of water?", answer: "1 cubic foot of water equals approximately 7.48 gallons — that's the standard conversion factor this calculator uses to turn your pool's volume in cubic feet into US gallons." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

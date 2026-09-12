@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this my actual credit score?", answer: "No. This is an educational estimate based on the standard FICO factor weightings and simple qualitative answers. Your real score is calculated by credit bureaus from your full credit report and can differ significantly from this estimate. Always check an actual credit bureau (Equifax, Experian, TransUnion) or your bank/card issuer for your real score." }, { question: "Why does this only give a range instead of an exact number?", answer: "Real credit scoring models use precise numeric data from your credit report — exact balances, exact account ages, exact inquiry dates — that this tool doesn't have access to. Simple category answers can only support a broad estimated range, not a precise score." }, { question: "What's the single biggest factor I can control?", answer: "Payment history (~35%) and credit utilization (~30%) together make up about two-thirds of a typical FICO score — paying on time, every time, and keeping credit card balances low relative to your limits are generally the two most impactful habits." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

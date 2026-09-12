@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is pipe weight calculated?", answer: "The calculator finds the cross-sectional area of the pipe wall (outer circle minus hollow inner circle), multiplies by the length, then by the material density. Weight = π × (OD² − ID²) / 4 × length × density." }, { question: "What densities does it use?", answer: "Typical values: mild/carbon steel 7850 kg/m³, stainless steel 8000 kg/m³, aluminum 2700 kg/m³, copper 8940 kg/m³, and PVC 1400 kg/m³." }, { question: "Does the weight include internal liquid?", answer: "No — it reports the empty pipe weight, plus a separate figure for the weight of water the pipe can hold if filled, so you can compare both." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

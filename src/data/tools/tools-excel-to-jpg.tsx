@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Which sheet gets converted?", answer: "The first sheet in the workbook that contains data. Other sheets are ignored — split them into separate files first if you need images of each." }, { question: "Are charts, colors, or cell formatting preserved?", answer: "No — cell values are rendered into a plain bordered table; Excel-specific formatting, charts, and conditional formatting are not carried over." }, { question: "Is my file uploaded anywhere?", answer: "No — reading and rendering both happen entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

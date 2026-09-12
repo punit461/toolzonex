@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this a legally binding digital signature?", answer: "No — this tool visually places a signature image onto the PDF page, similar to signing a printed page and scanning it back in. It does not create a cryptographic digital signature, certificate-based signature, or any tamper-evident seal recognized by e-signature compliance standards (like eIDAS or ESIGN). For legally binding signatures, use a dedicated e-signature service." }, { question: "Can I sign more than one page?", answer: "This tool places one signature on one chosen page per run. To sign additional pages, download the result and run it through the tool again on a different page." }, { question: "Is my file uploaded anywhere?", answer: "No — drawing, positioning, and embedding the signature all happen entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

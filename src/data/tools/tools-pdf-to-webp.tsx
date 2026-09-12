@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is WebP supported everywhere?", answer: "All modern browsers (Chrome, Firefox, Edge, Safari 14+) support WebP. Older browsers may fall back to displaying the original." }, { question: "How does WebP compare to PNG?", answer: "WebP typically produces smaller files than PNG with comparable visual quality, especially for photographs and complex graphics." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

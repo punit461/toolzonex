@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a roofing \"square\"?", answer: "A roofing square is a standard industry unit equal to 100 square feet of roof surface area. Contractors and material suppliers use squares (not square feet) when quoting and pricing roofing jobs." }, { question: "How much waste allowance should I use?", answer: "10% is a common default for a straightforward roof. Roofs with many hips, valleys, dormers, or a complex shape often need 15-20% to account for extra cuts and offcuts." }, { question: "Is this a substitute for a professional roofing estimate?", answer: "No. This calculator gives a reasonable material estimate for planning purposes, but actual roofing jobs should be measured and quoted by a licensed roofing contractor, who can account for the roof's exact shape, underlayment, flashing, and local building code requirements." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

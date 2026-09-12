@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does numerical sorting matter if I could just sort alphabetically?", answer: "Plain text (lexicographic) sorting compares numbers character by character, so \"10\" is treated as coming before \"2\" because the character 1 is less than 2. Numerical mode instead parses each line into an actual number first, giving the mathematically correct order." }, { question: "What happens to lines that aren't valid numbers in Numerical mode?", answer: "Lines that can't be parsed as a number are pushed to the end of the ascending order (or the start in descending order), so your numeric lines still sort correctly among themselves." }, { question: "Does Remove Duplicates consider case?", answer: "Duplicate removal is exact-match — Apple and apple are treated as different lines unless they match exactly, so combine it with lowercase text beforehand if you need case-insensitive de-duplication." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

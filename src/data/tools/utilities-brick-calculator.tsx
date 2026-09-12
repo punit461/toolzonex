@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What size brick does the calculator assume?", answer: "It uses the standard Indian brick of approximately 190 × 90 × 90 mm (often called a 9-inch brick). You can also enter a custom brick size to match your local bricks." }, { question: "How much wastage should I plan for?", answer: "Around 5% is typical to cover broken bricks, cutting, and transport damage. The calculator includes a default 5% and lets you adjust it." }, { question: "Does brick thickness affect the count?", answer: "Yes — a 4.5-inch (half-brick) wall needs roughly half the bricks of a 9-inch (full-brick) wall. Enter the actual wall thickness to get an accurate count." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

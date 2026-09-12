@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Zodiac Calculator and Zodiac Sign Finder?", answer: "Those tools determine your WESTERN zodiac sign (like Gemini or Leo) from your birth date's month and day — 12 signs tied to the time of year you were born. The Chinese zodiac is a completely different, unrelated system: a 12-year cycle of animal signs based purely on your birth YEAR, with no connection to month or day at all." }, { question: "Why does the tool mention January and February specifically?", answer: "The Chinese New Year doesn't fall on a fixed calendar date — it shifts each year, typically landing between late January and mid-February based on the lunar calendar. Someone born in that window before the actual Chinese New Year date technically belongs to the previous year's animal sign. This tool uses a simple calendar-year approximation, so results near that boundary may be off by one sign — a fully precise version would need the exact lunar new year date for each specific year." }, { question: "Is the 12-year cycle always in the same order?", answer: "Yes — the cycle always follows the same fixed sequence (Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, Pig) and simply repeats every 12 years indefinitely in both directions." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

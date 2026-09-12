@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are the two converters (number-to-name and name-to-number) linked?", answer: "No — they work as two independent converters side by side, so you can look up a number-to-name conversion and a name-to-number conversion at the same time without one affecting the other." }, { question: "What if I enter a number outside 1-12?", answer: "The number-to-name side shows a prompt to enter a valid number, since only 1 through 12 correspond to actual months." }, { question: "Are the abbreviations always exactly 3 letters?", answer: "Yes — this tool uses the standard, widely recognized 3-letter month abbreviations (Jan, Feb, Mar, and so on) used in most date formats and calendars." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

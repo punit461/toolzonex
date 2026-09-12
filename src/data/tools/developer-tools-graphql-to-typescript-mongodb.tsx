@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this an exact match for the real graphql-codegen-typescript-mongodb plugin?", answer: "No — this is explicitly a best-effort approximation. The real plugin only adds an _id field to types you've explicitly mapped to a MongoDB collection (typically typed as ObjectID rather than string), and supports additional configuration this tool doesn't attempt to replicate. This tool adds _id?: string; to every generated interface as a rough, best-effort stand-in — treat it as a starting point, not a drop-in replacement for running the real codegen plugin." }, { question: "How are custom scalars and nullability handled?", answer: "The same as the plain GraphQL to TypeScript converter — custom scalars map to any with a comment, and nullable fields become field?: T | null." }, { question: "Is my schema uploaded anywhere?", answer: "No — parsing and type generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

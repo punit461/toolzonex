@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does a high D/E ratio mean?", answer: "A high ratio means a company relies more heavily on debt than equity to finance its operations, which can amplify both returns and risk — heavier debt loads mean higher fixed interest obligations, regardless of how the business is performing." }, { question: "What does a D/E ratio below 1 mean?", answer: "A ratio below 1 means a company has more equity than debt financing its assets, generally considered more conservative — though very low debt can also mean a company isn't using leverage to help fund growth." }, { question: "Where do I find total liabilities and shareholder equity?", answer: "Both figures come from a company's balance sheet — total liabilities is usually the sum of current and long-term liabilities, and total shareholder equity (or stockholders' equity) is listed as its own section, typically at the bottom of the balance sheet." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

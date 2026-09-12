@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does the output use exact object types ({| ... |})?", answer: "Exact object types reject extra properties that aren't declared, which best matches what was actually observed in your sample. If you need Flow's more permissive inexact objects instead, just remove the | from each opening and closing brace after copying the output." }, { question: "How are optional and nullable fields different in Flow?", answer: "A trailing ? on the property name (e.g. zip?: string) marks a field optional — it can be entirely missing. A leading ? on the type itself (e.g. ?string) marks it nullable — the key is present but its value can be null. This tool applies each based on what it actually saw in your sample." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and type generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

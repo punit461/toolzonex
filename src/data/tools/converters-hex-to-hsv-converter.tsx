@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is HSV different from HSL?", answer: "Both describe color using a hue angle plus two other components, but HSV's second and third components are Saturation and Value (brightness relative to the brightest channel), while HSL uses Saturation and Lightness (where 50% lightness is the purest color and 100% is always white). HSV maps more directly onto how color pickers in graphics software like Photoshop typically work." }, { question: "Why does the Value stay high even for dark-looking colors?", answer: "Value in HSV only measures the brightest of the three RGB channels, not overall perceived brightness — a fully saturated dark red can still have a high Value because its red channel is high, even though the color looks dark overall due to low green and blue." }, { question: "Can I use the color picker instead of typing a hex code?", answer: "Yes — the native color picker lets you visually choose a color, and the hex input and HSV output update automatically to match your selection." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

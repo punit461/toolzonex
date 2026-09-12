@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why isn't this the full raw AST from the parser?", answer: "The raw AST that GraphQL.js produces includes a loc object with source line/column offsets on every single node, which adds a lot of noise without adding insight for most use cases. This tool strips that out and keeps only the parts you usually care about: type kind, name, and field/value structure." }, { question: "Does this validate my schema, or just parse it?", answer: "Only parsing — syntactic validity is checked, but semantic rules (like whether an interface's fields are actually implemented) are not. Use the GraphQL to Introspection JSON tool if you need a fully built and validated schema." }, { question: "Is my schema uploaded anywhere?", answer: "No — parsing happens entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this a real declaration emit, or an approximation?", answer: "It's a real emit — this tool runs an actual TypeScript compiler program against your source with declaration: true and emitDeclarationOnly: true, the same flags tsc uses to generate .d.ts files, rather than a hand-written approximation." }, { question: "Why did I get an error instead of output?", answer: "Declaration emit requires syntactically valid TypeScript. If your input has a syntax error, the tool surfaces the compiler's own diagnostic message so you can fix the specific issue." }, { question: "Is my TypeScript uploaded anywhere?", answer: "No — compilation happens entirely client-side in your browser, using the TypeScript compiler loaded on demand. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

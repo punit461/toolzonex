@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this personalized medical advice?", answer: "No — this calculator provides a general dietary guideline based on age and gender, not personalized medical advice. Individual fiber needs vary based on overall diet, digestive health, activity level, and other health conditions. Talk to a doctor or registered dietitian for guidance specific to you." }, { question: "What foods are good sources of fiber?", answer: "Whole grains, legumes (beans, lentils), fruits (especially with the skin on), vegetables, nuts, and seeds are all good sources of dietary fiber." }, { question: "Can I eat too much fiber?", answer: "Increasing fiber intake very quickly can cause bloating, gas, or digestive discomfort for some people. It's generally recommended to increase fiber gradually and drink plenty of water alongside it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

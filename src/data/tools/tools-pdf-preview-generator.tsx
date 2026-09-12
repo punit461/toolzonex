@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "Is my PDF uploaded to a server?", answer: "No, the preview is generated entirely in your browser. The file never leaves your device." }, { question: "Can I download individual pages?", answer: "Yes, right-click any thumbnail to save it as an image." }, { question: "Does it work with large PDFs?", answer: "Yes, though very large documents with hundreds of pages may take longer to render all thumbnails." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

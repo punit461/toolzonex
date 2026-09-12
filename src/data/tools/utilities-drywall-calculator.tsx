@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What waste percentage should I use?", answer: "10% is a reasonable default for a straightforward room. Rooms with lots of doors, windows, angled ceilings, or complex cuts often warrant 15-20% to avoid running short mid-job." }, { question: "Should I subtract door and window openings first?", answer: "This calculator doesn't subtract openings automatically — the waste percentage is meant to roughly absorb that. For a very precise count, you can manually reduce a wall's entered area to account for large openings and rely on a smaller waste percentage instead." }, { question: "When should I use 4×12 sheets instead of 4×8?", answer: "Longer 4×12 ft sheets cover more wall per sheet and leave fewer seams to tape and mud, which can look better on tall or long walls, but they're heavier and harder to handle alone. Standard 4×8 sheets remain the easiest to transport and hang for most residential jobs." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

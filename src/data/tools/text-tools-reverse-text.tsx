@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Text Reverser tool?", answer: "Our Text Reverser page offers four modes (full reverse, word order, per-word letters, and line order) behind a manual \"Reverse\" button. This page is a simpler, quicker alternative with just the two most common modes and a live result that updates as you type, with no button needed." }, { question: "Does reversing affect spaces and punctuation?", answer: "In \"Reverse Characters\" mode, yes — every character including spaces and punctuation is reversed along with the letters. In \"Reverse Word Order\" mode, punctuation attached to a word travels with it." }, { question: "Can I reverse just the letters within each word?", answer: "Not on this page — for reversing letters inside each word while keeping word order, or for reversing line order, use the full Text Reverser tool, which supports those additional modes." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does a lower cost per wear always mean a better purchase?", answer: "Generally, yes, from a pure value standpoint — but it's only one factor. Comfort, quality, versatility, and how much you enjoy an item also matter, and cost per wear naturally improves the longer you keep using something, so it rewards items with staying power." }, { question: "What counts as a \"wear\" for non-clothing items?", answer: "The same idea works for any item you use repeatedly, not just clothing — count each use, session, or occasion the item serves its purpose, whether that's a kitchen gadget, a tool, or a piece of sports equipment." }, { question: "Why include estimated future uses?", answer: "Cost per wear so far only reflects your usage up to today. Adding an estimate of how many more times you'll realistically use the item projects the cost per wear over its full expected lifetime, which is often a fairer picture of long-term value." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

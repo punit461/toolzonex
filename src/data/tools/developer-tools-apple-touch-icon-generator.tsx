@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is my image uploaded anywhere?", answer: "No — the crop and resize happen entirely in your browser using a canvas element; the image file never leaves your device." }, { question: "Why 180x180 specifically?", answer: "Apple's Human Interface Guidelines specify 180x180 pixels as the ideal size for the apple-touch-icon used on modern iPhones and iPads with Retina displays, though iOS will scale a correctly-named icon of this size for older devices too." }, { question: "What if my image isn't already square?", answer: "The tool automatically center-crops non-square images to a square before resizing, so the most important part of your image should ideally be centered." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

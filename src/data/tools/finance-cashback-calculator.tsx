@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is cashback the same as a discount?", answer: "Functionally similar, but cashback is usually paid back after the purchase (as a statement credit, deposit, or points balance), while a discount reduces the price at checkout. The net savings can be the same, but the timing differs." }, { question: "Is cashback taxable?", answer: "In most cases, cashback from personal credit card spending is treated as a rebate or discount rather than taxable income. Cashback earned through referral bonuses or business rewards can sometimes be treated differently — check with a tax professional for your specific situation." }, { question: "Do cashback rates ever have limits?", answer: "Yes — many cards cap bonus-category cashback (e.g., 5% up to $1,500 in spending per quarter) or apply the higher rate only to specific categories, reverting to a lower base rate on everything else. Check your card's terms for spending caps." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

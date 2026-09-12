@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why are bigha and guntha included?", answer: "These units are commonly used in Indian real estate and agricultural land transactions." }, { question: "How accurate is the conversion?", answer: "Conversion factors are standardised. Minor regional variations may exist for units like bigha." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

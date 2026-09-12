@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How accurate is Naismith's Rule?", answer: "It's a widely used estimate, not a precise prediction — actual time varies with fitness, trail conditions, weather, pack weight, and rest breaks. Treat the result as a solid planning baseline rather than an exact figure, and add extra time for breaks, photos, or difficult terrain." }, { question: "Does this account for descent?", answer: "Not separately — Naismith's Rule as implemented here only adds time for ascent, since descending is generally close to flat-ground pace on most trails. Very steep or technical descents can still take meaningfully longer than the base estimate suggests." }, { question: "What pace should I choose?", answer: "Average fits most reasonably fit hikers on a moderate trail. Choose Slow for large groups, young children, or difficult terrain, and Fast only for experienced hikers moving at a brisk, sustained pace." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these real, dialable phone numbers?", answer: "No. They are generated for testing, mock-data, and development purposes only. The US format specifically uses the \"555\" central-office code, which NANPA has permanently reserved for fictional use precisely so that numbers like these can never be assigned to a real subscriber. Other formats use similarly non-issued patterns, but should still only be used for testing, not presented as real contact information." }, { question: "Why does the US format always use 555?", answer: "The North American Numbering Plan reserves the 555 exchange (555-0100 through 555-0199 specifically, though this generator uses the wider 555-XXXX range for variety) so that film, television, and software testing can use realistic-looking phone numbers without any risk of reaching or impersonating a real person's line." }, { question: "Can I generate more than 5 numbers at once?", answer: "Click Generate again for a fresh batch of 5 — each click produces a completely new, independent set of fictional numbers in your chosen format." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

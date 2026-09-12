@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can net worth be negative?", answer: "Yes. If your debts exceed your assets, your net worth is negative. This is common early in life and can improve over time with saving and debt repayment." }, { question: "How often should I calculate my net worth?", answer: "Most advisors recommend monthly or quarterly to track progress toward financial goals." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

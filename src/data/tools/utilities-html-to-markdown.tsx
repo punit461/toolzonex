@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this handle all HTML tags?", answer: "It handles the most common structural tags (headings, bold, italic, links, images, lists, code, blockquotes). Complex or custom HTML tags are stripped to their text content." }, { question: "Will the output be perfectly formatted?", answer: "For simple to moderately complex HTML, the output is clean and usable. For highly nested or complex HTML, you may need to manually adjust the Markdown formatting." }, { question: "Does it preserve images?", answer: "Yes — img tags with src and alt attributes are converted to ![alt](src) Markdown syntax." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

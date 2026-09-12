@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What words-per-minute speeds are used?", answer: "Slow: 200 wpm, Average: 225 wpm, Fast: 250 wpm — based on typical adult reading speed research." }, { question: "Does this include images and charts?", answer: "No — only the text layer is counted. Time spent studying graphics or tables is not included." }, { question: "Is my file uploaded anywhere?", answer: "No — all calculation happens entirely in your browser; the PDF never leaves your device." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

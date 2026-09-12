@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does holding period matter so much?", answer: "Selling one day before the one-year mark can mean paying your full ordinary income rate (up to 37%) instead of the long-term rate (at most 20% federally) on the same dollar of gain — one of the largest single tax-timing decisions most investors make." }, { question: "Does this model my state's special capital gains treatment?", answer: "Most states tax capital gains as ordinary income using their regular brackets, which is what this calculator models by reusing each state's income tax rules. A few states have unique rules not modeled here — Washington, for example, levies a separate 7% excise tax only on gains above roughly $270,000, not its regular income tax (Washington has none). Verify your specific state's rules before relying on this for a real transaction." }, { question: "Is the NIIT calculation exact?", answer: "It's an approximation using your entered income + gain as a stand-in for MAGI. Real MAGI calculations can differ (certain deductions and foreign income adjustments apply) — this is a planning estimate, not a substitute for a tax professional." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

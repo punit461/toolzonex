@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between RPM and CPM?", answer: "RPM is your actual revenue per 1,000 views (after YouTube's cut). CPM is what advertisers pay per 1,000 ad impressions. RPM directly reflects what you earn." }, { question: "Why does YouTube take a 45% cut?", answer: "YouTube keeps roughly 45% of ad revenue for infrastructure and operating costs, leaving about 55% for the creator. Not every view is monetized, which is why RPM is lower than CPM." }, { question: "Is this a guaranteed amount?", answer: "No — this is an estimate. Actual earnings depend on your audience, ad fill rate, geography, video length, and niche." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

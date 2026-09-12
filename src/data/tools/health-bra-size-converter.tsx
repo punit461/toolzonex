@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are bra size conversions exact across brands?", answer: "No — bra sizing conventions vary meaningfully between manufacturers and even between styles from the same brand, since there's no single global sizing standard enforced across the industry. This converter applies widely used standard conversion rules as a reliable starting point, but the best way to confirm fit is always to try the garment on or check the specific brand's own size chart." }, { question: "Why do band sizes look so different between US and EU?", answer: "US and UK band sizes are based on an inch measurement (with an offset), while EU and International band sizes are based directly on the underbust measurement in centimeters, which is why the numbers look very different (like 34 vs. 75) even though they describe the same fit." }, { question: "Why does the cup letter change between regions for the same fit?", answer: "Different regions historically developed their own cup-lettering conventions, so the same physical cup volume can carry a different letter depending on the sizing system — EU/International sizing generally runs one cup letter higher than the equivalent US letter." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

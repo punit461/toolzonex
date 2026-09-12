@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if my engagement is shorter than 12 months?", answer: "Start from whichever timeline stage matches your remaining time — the tasks are still relevant even if you compress several stages into a shorter window." }, { question: "Can I add tasks specific to my own wedding?", answer: "Yes — use the \"Add Custom Task\" field for anything not already listed, such as booking hotel blocks for out-of-town guests." }, { question: "Is my checklist saved between visits?", answer: "No — it resets on reload, so copy your checklist to a notes app or planning document if you want a lasting reference throughout your engagement." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

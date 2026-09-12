@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why include a reorder buffer at all?", answer: "Business cards get lost, damaged in transit, misprinted, or handed out faster than expected around events and conferences — a small buffer (commonly 10-20%) avoids running out and needing a rushed, more expensive small reorder." }, { question: "How many cards should each person get?", answer: "It depends on role and how often someone networks — 250 cards is a common standard default order size that lasts many people a long time, while sales or business development roles that attend frequent events may want more." }, { question: "Should every employee order the same quantity?", answer: "Not necessarily — this calculator assumes a uniform quantity per person for a simple bulk estimate. If your team has very different card usage needs, calculate high-usage roles separately and add the totals together." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

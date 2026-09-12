@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between period and frequency?", answer: "Period is the time taken for one complete cycle, measured in seconds. Frequency is how many cycles happen per second, measured in Hertz (Hz). They are exact reciprocals: f = 1/T and T = 1/f." }, { question: "How is this different from a wavelength calculator?", answer: "A dedicated wavelength calculator usually fixes the wave speed to a known constant, like the speed of light or the speed of sound. The Wave Speed mode here is fully generic — enter any propagation speed — so it works for water waves, seismic waves, or any custom scenario, not just light or sound." }, { question: "Can frequency or period be negative or zero?", answer: "No — both must be positive numbers greater than zero, since a cycle can't take zero or negative time, and a frequency of zero would mean no oscillation at all." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What R-value should I target?", answer: "Recommended R-values vary by climate zone and the part of the home — attics in colder climates often target R-38 to R-60, while walls commonly use R-13 to R-21. Check your local building code or an energy guide for your specific climate zone and application." }, { question: "Can I mix R-values or add a second layer on top of existing insulation?", answer: "Yes — R-values add together, so laying a new batt over existing attic insulation increases the combined R-value. Calculate the additional area you're covering and the R-value of the new layer separately from what's already there." }, { question: "Why does this use square footage instead of volume or thickness?", answer: "Batt and roll insulation products are manufactured and sold at a fixed thickness for a given R-value, so the amount you need to buy is simply the area you're covering — thickness is already baked into the product you choose, not something you calculate separately." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: undefined,
     extraSchemaFields: undefined,
     isHub: true,
+    noindex: true,
 };
 
 export default tool;

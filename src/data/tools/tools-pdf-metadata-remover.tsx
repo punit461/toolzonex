@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "Does this affect the visible content of the PDF?", answer: "No — only hidden metadata properties are removed. The pages, text, and images remain unchanged." }, { question: "Can I undo this?", answer: "No — once metadata is stripped, it cannot be recovered. Keep a backup of the original if needed." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

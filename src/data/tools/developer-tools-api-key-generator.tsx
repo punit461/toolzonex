@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are generated keys truly secure?", answer: "The generator draws from the browser's cryptographically secure random source, not Math.random, so keys are suitable for development and testing. Still, prefer a server-side generator or a cloud KMS for production secrets." }, { question: "Should these keys be used in production?", answer: "They work, but production keys are better generated and stored by your cloud provider or secret manager so they are never exposed in client-side code or logs. Use this tool for prototyping, local config, and tests." }, { question: "What is the best character set?", answer: "Base64url (A–Z, a–z, 0–9, -, _) packs the most entropy per character. Hex halves are quicker to read but weaker for the same length; symbols can break URLs unless URL-encoded." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

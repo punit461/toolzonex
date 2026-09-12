@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does it say my balance will never be paid off?", answer: "This happens when your monthly payment is less than or equal to the interest charged that month — the balance never shrinks, and can even grow over time. Increase your monthly payment above the current interest charge (balance × APR ÷ 12) to make progress on the principal." }, { question: "Does this account for new purchases added to the card?", answer: "No — this assumes no new charges are added and only the starting balance is being paid down, which gives the cleanest picture of how a fixed payment plan performs. Adding new purchases each month will extend the payoff time and increase total interest beyond this estimate." }, { question: "Why is credit card APR usually so much higher than other loans?", answer: "Credit cards are unsecured debt with no collateral backing them, which makes them riskier for lenders, so issuers typically charge much higher interest rates than secured loans like mortgages or auto loans to compensate for that risk." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

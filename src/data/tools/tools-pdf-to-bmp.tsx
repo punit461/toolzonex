@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why are BMP files so much larger than JPG or PNG?", answer: "BMP here is stored uncompressed — every pixel is written directly as 24-bit color, with no compression applied. That makes it simple and lossless, but large." }, { question: "Does this support transparency?", answer: "No — pages are rendered on a white background and saved as 24-bit BMP without an alpha channel, matching how a printed page looks." }, { question: "Is my file uploaded anywhere?", answer: "No — rendering and BMP encoding both happen entirely in your browser; the PDF is never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

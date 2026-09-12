@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a normal BSA for an adult?", answer: "Most healthy adults have a BSA between roughly 1.7 and 1.9 m². Values outside this range just reflect body size." }, { question: "Why is BSA used for chemotherapy dosing?", answer: "Chemotherapy drugs have a narrow therapeutic window, and many physiological processes scale better with surface area than weight alone, so dosing per m² improves accuracy." }, { question: "Which formula should I use?", answer: "The Mosteller formula is most common today because it's simple and accurate; the Du Bois formula is the older, frequently referenced one. For most adults they agree within a few percent." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

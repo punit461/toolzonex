@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do lowercase letters and numbers look hollow even in Filled mode?", answer: "Unicode only defines \"Negative Circled\" (filled) glyphs for the 26 uppercase Latin letters A-Z. There's no equivalent filled character for lowercase letters or digits, so this tool automatically falls back to the hollow circled version for any character without a filled equivalent." }, { question: "Will bubble text work everywhere I paste it?", answer: "In most modern apps and browsers, yes — these are standard Unicode characters. Some older systems, fonts, or apps with limited Unicode/emoji support may not render every glyph correctly, so it's worth previewing on the platform you plan to use it on." }, { question: "Is this the same as the site's Fancy Text Generator?", answer: "This tool is a focused, single-purpose bubble-letter generator with both hollow and filled styles side by side. Our Fancy Text Generator offers a broader set of Unicode text styles (Bold, Italic, Script, Fraktur, Double-Struck, Small Caps, and Circled) if you want more variety in one place." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

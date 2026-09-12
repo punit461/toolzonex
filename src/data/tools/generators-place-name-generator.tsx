@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between Realistic and Fantasy mode?", answer: "Realistic mode combines real-world-sounding English place-name parts (like \"New\", \"-ville\", \"-burg\") to produce names that could plausibly be a real town. Fantasy mode combines invented, evocative syllables (like \"El-\", \"-dor\", \"-hold\") to produce names that sound like they belong in an invented fantasy world." }, { question: "Can I get the same place name twice?", answer: "Yes — each click randomly recombines the word parts, so repeats are possible, though the range of combinations is large." }, { question: "Are these real places?", answer: "No — every generated name is an invented combination of word parts and isn't checked against real-world place names, so some may coincidentally resemble a real town." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Which HTML tags are supported?", answer: "<strong>/<b>, <em>/<i>, <u>, <s>/<strike>, <a>, <img>, <blockquote>, <ul>/<li>, inline color styles, and <code> all convert to their BBCode equivalents." }, { question: "Does this handle complex or deeply nested HTML?", answer: "Simple, common markup converts reliably, but complex HTML with extensive inline styles, classes, or deep nesting may not convert perfectly — check the BBCode output before posting it." }, { question: "Does this tool also convert BBCode back to HTML?", answer: "This page converts HTML to BBCode only. Use our separate BBCode to HTML converter if you need to go the opposite direction." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

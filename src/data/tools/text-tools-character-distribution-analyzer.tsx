@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I check letter frequency online with this tool?", answer: "Yes — paste your text and every letter, digit, space, and punctuation mark is broken out in the results table with its count and percentage, so you can check letter frequency online without downloading any software." }, { question: "Is the analysis case-sensitive?", answer: "Uppercase and lowercase versions of the same letter are typically counted separately, reflecting the exact characters as typed." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

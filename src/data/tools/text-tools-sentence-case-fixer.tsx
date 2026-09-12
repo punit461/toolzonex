@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How do I do a quick caps fix on my text?", answer: "Paste the text, pick \"Sentence case\", \"lower case\", or \"UPPER CASE\" from the Case Mode dropdown, and click \"Convert Text\" — a one-click caps fix for text typed with Caps Lock stuck on or pasted from an all-caps source." }, { question: "Will this fix grammar or spelling too?", answer: "No — this tool only changes letter casing; it does not correct spelling, grammar, or punctuation." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

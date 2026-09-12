@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between watts and watt-hours?", answer: "Watts measure instantaneous power. Watt-hours measure energy consumed over time. A 100W bulb running for 3 hours uses 300 Wh." }, { question: "Can I use this for DC and AC circuits?", answer: "The basic formulas work for DC circuits and for AC circuits with a pure resistive load. For AC with reactive loads, you would need to account for power factor." }, { question: "What is resistance and why is it shown?", answer: "Resistance (ohms) is the opposition to current flow, calculated using R = V / I. It is useful for understanding the electrical characteristics of the circuit." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

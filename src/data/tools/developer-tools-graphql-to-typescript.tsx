@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How are custom scalars handled?", answer: "Any scalar beyond the five built-ins (String, Int, Float, Boolean, ID) maps to TypeScript's any, and the tool adds a comment above the generated interfaces naming every custom scalar it encountered so you can refine the type by hand." }, { question: "Why does a nullable field get both ? and | null?", answer: "GraphQL's nullable fields can be two different things: absent from the response entirely, or present with an explicit null value. TypeScript's optional marker (?) only covers the first case, so the tool adds | null as well to cover both." }, { question: "Is my schema uploaded anywhere?", answer: "No — parsing and type generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

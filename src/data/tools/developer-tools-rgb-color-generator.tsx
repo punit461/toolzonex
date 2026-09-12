@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from a general random color generator?", answer: "This tool focuses purely on the rgb() CSS function format and generates a palette of 5 colors at once, framed as a dev-tool utility for grabbing ready-to-paste values quickly." }, { question: "Why use RGB instead of hex?", answer: "RGB syntax is handy when you need to layer transparency with rgba(), or when working in contexts (like some canvas or animation code) that expect separate red, green, and blue channel values." }, { question: "Are the colors truly random?", answer: "Yes — each of the red, green, and blue channels is chosen independently and uniformly from 0 to 255." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

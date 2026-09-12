@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Hourly to Salary Calculator?", answer: "The Hourly to Salary Calculator converts a single wage into projected weekly, monthly, and annual salary figures — a totally different purpose focused on income projection, not billing. This tool tallies actual billable tasks with individually varying rates for a specific billing period." }, { question: "How is this different from the Invoice Total Calculator?", answer: "The Invoice Total Calculator handles quantity × unit price line items with tax and discount machinery for a single invoice document. This tool is specifically for freelancers or contractors tallying multiple billable TASKS by hours × rate, with no tax or discount handling — it's the underlying hours-based billing math, not full invoice formatting." }, { question: "Can different tasks use completely different rates?", answer: "Yes — every row has its own independent rate field, so you can mix a lower rate for administrative tasks with a higher rate for specialized work, or bill different clients' work at their respective rates within the same list." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

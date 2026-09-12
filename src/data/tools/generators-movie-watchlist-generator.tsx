@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does the star rating only appear for some movies?", answer: "The rating field only shows once a movie's status is set to Watched, since you can't meaningfully rate something you haven't seen yet." }, { question: "Can I move a movie from Want to Watch to Watched?", answer: "Yes — just change its status dropdown to Watched, and a rating field will appear so you can score it before it moves into the Watched section." }, { question: "Is my watchlist saved between visits?", answer: "No — the list is generated fresh in your browser each time and resets on reload, so keep a copy elsewhere if you want it to persist." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

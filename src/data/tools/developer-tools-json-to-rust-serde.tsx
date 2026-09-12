@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does the output need the serde crate?", answer: "The generated structs rely on serde::{Serialize, Deserialize} for the derive macros and, for unknown/mixed-type fields, on serde_json::Value to hold arbitrary JSON — add serde (with the derive feature) and serde_json to your Cargo.toml." }, { question: "When does a field get a #[serde(rename)] attribute?", answer: "Only when converting the original key to snake_case actually changes it — for example, a JSON key userId becomes the Rust field user_id with #[serde(rename = \"userId\")] so serialization still round-trips to the exact original key." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and struct generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

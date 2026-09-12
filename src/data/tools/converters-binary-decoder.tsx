@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does the binary need spaces between bytes?", answer: "No — this decoder automatically detects whether your input has spaces. If it doesn't, it splits the string into 8-bit groups on its own, so both formats decode correctly." }, { question: "Why does it only decode, not encode?", answer: "Keeping this page decode-only makes it faster and simpler to use for the most common task — reading binary back into text. Use our separate Binary Encoder tool to go from text to binary instead." }, { question: "What happens if my input has an invalid character?", answer: "Binary can only contain 0s and 1s. If any other character appears (aside from spaces separating bytes), the tool shows an error instead of a partial or incorrect result." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

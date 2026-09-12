@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I use a delimiter that isn't comma, pipe, or semicolon?", answer: "Yes — select Custom and type any character or short string, such as a tab or a double colon, to use as the delimiter." }, { question: "Does the Split direction handle extra spaces around items?", answer: "Yes — each resulting item is trimmed of leading and trailing whitespace, so \"red, green,blue\" splits cleanly into three items regardless of inconsistent spacing." }, { question: "What happens to empty lines or empty items?", answer: "They're automatically filtered out in both directions, so blank lines in your list and empty items from consecutive delimiters don't appear in the result." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

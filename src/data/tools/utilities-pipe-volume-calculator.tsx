@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Should I use inner or outer diameter?", answer: "Use the inner diameter — that is the dimension that actually contains the liquid. Using the outer diameter would overstate the capacity by the wall thickness." }, { question: "How is pipe volume calculated?", answer: "The pipe is treated as a cylinder: V = π × (inner radius)² × length. The calculator converts the length unit to the same system as the diameter before computing." }, { question: "Why is this useful?", answer: "Plumbers and engineers use it to size pipes, estimate water-chemical dosing, calculate flushing volume, and design heat-transfer loops." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

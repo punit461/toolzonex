@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the 4% rule?", answer: "The 4% rule suggests you can safely withdraw 4% of your portfolio annually in retirement without running out of money over 30 years. Multiply expenses by 25 to get your target." }, { question: "Is FIRE realistic for everyone?", answer: "FIRE requires a high savings rate. The higher your savings rate relative to expenses, the faster you reach independence." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

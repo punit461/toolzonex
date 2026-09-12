@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does VA capacity need a power factor to estimate watt-hours?", answer: "VA (apparent power) and watts (real power) are only equal when the power factor is 1.0, which is rare for real equipment. Most UPS units and the loads they power have a power factor around 0.6-0.9, so this calculator uses 0.8 as a reasonable estimate — check your UPS's documentation for its exact rated watts if you need a more precise figure." }, { question: "What efficiency should I use for my UPS?", answer: "Standard offline/line-interactive UPS units are commonly rated around 80-90% efficient in normal (non-battery) operation; online double-conversion units can run somewhat lower due to constant AC-DC-AC conversion. Check your unit's spec sheet, or use 80% as a conservative default." }, { question: "Is this runtime estimate exact?", answer: "No — it's a simplified estimate. Real UPS runtime also depends on battery age and health, temperature, and the specific discharge curve of the battery chemistry, all of which can shift actual runtime below a brand-new battery's rated figures." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Where does the 0.623 conversion factor come from?", answer: "One inch of rain falling on one square foot of surface equals 0.623 gallons of water — it's a standard conversion used throughout rainwater harvesting calculations based on the volume of a one-inch-deep layer of water over one square foot." }, { question: "Why isn't collection efficiency 100%?", answer: "Real systems lose some water to gutter overflow during heavy rain, evaporation, splashing, debris blockage, and first-flush diverters that intentionally discard the initial runoff carrying roof debris and contaminants. 80-90% is a commonly used realistic range." }, { question: "Does roof material affect how much I can collect?", answer: "Yes — smooth, non-porous materials like metal roofing collect more efficiently than porous materials like some shingles or wood shakes, which absorb a small amount of water before runoff begins." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

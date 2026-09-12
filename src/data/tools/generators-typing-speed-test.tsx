@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's a good typing speed?", answer: "The average typist reaches 40 WPM; professional typists often exceed 65-75 WPM." }, { question: "How do I check my WPM?", answer: "Just start typing the highlighted passage above — the 60-second timer starts on your first keystroke, and your WPM and accuracy update live as you type, so you can check your WPM without clicking anything extra." }, { question: "How can I measure my typing speed accurately?", answer: "Type naturally for the full 60 seconds rather than stopping early — WPM is measured over the whole test window using the standard 5-keystrokes-per-word convention, so a longer, uninterrupted run gives a more accurate reading than a few quick words. Run it a few times and take the average, since typing speed naturally varies test to test." }, { question: "Is there a quick WPM checker I can use right now?", answer: "Yes — this page is a free, instant WPM checker. No sign-up, no download: click into the text box and start typing to find your WPM in under a minute." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

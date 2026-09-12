@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What utilization ratio is considered good?", answer: "Keeping overall utilization below 30% is a commonly cited guideline, with under 10% generally considered excellent for credit scoring purposes. Lower utilization signals to lenders that you're not overly reliant on revolving credit." }, { question: "Does utilization matter per card or overall?", answer: "Both. Credit scoring models typically look at overall utilization across all cards as well as utilization on each individual card, so a single maxed-out card can hurt your score even if your overall ratio looks fine." }, { question: "Does paying off a balance immediately lower utilization?", answer: "Utilization is based on the balance reported to credit bureaus, usually your statement balance on the closing date — not necessarily your balance right now. Paying down a balance before the statement closes is the most reliable way to lower reported utilization." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

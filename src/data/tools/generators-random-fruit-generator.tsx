@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How many fruits can this generate?", answer: "The tool draws from a curated list of around 40 common and lesser-known fruits from around the world." }, { question: "Are the fun facts accurate?", answer: "They're based on generally accepted facts about each fruit, presented as lighthearted trivia rather than a scientific reference." }, { question: "Can I get the same fruit twice in a row?", answer: "Yes — each click picks independently from the full list, so repeats are possible." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

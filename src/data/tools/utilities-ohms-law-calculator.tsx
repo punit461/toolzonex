@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How many fields do I need to fill in?", answer: "Enter any two of the four — voltage, current, resistance, or power — and leave the unknown one blank; the calculator determines the rest." }, { question: "Does Ohm's law apply to AC circuits?", answer: "This calculator assumes DC. For AC circuits with reactive components, impedance replaces simple resistance and phase angles come into play." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

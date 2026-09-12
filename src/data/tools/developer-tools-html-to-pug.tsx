@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How are multiple classes handled?", answer: "Every class in a space-separated class attribute becomes its own chained shorthand, so class=\"card card--large\" becomes .card.card--large appended directly after the tag name." }, { question: "What happens to attributes with no value, like \"disabled\"?", answer: "This converter reads attribute values as reported by the browser's DOM parser, so boolean HTML attributes are emitted with their resolved value (e.g. disabled=\"\") inside the parentheses — you can trim the =\"\" by hand if your Pug setup prefers the bare form." }, { question: "Is my HTML uploaded anywhere?", answer: "No — parsing and conversion happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

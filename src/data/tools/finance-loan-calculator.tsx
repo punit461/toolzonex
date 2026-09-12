@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does prepaying a loan reduce my EMI or tenure?", answer: "Depends on your lender's policy — some reduce the tenure while keeping EMI the same, others reduce the EMI while keeping tenure the same. Either way, prepayment reduces total interest paid." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

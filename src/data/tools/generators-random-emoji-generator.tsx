@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I generate emoji from more than one category at once?", answer: "Yes — select \"All\" to draw randomly from every category's emoji combined." }, { question: "Can the same emoji repeat in one batch?", answer: "Yes — each position in the batch is chosen independently at random, so the same emoji can appear more than once." }, { question: "How do I copy the emoji?", answer: "Simply select the emoji text on the page and copy it like any other text, or tap and hold on mobile to bring up the copy option." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

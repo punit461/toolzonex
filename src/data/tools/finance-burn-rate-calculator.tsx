@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between gross and net burn rate?", answer: "Gross burn rate is total monthly operating expenses. Net burn rate subtracts any monthly revenue from that figure. This calculator computes gross burn from the expense figures you enter — if you want net burn, subtract your monthly revenue from each month's expenses before entering them." }, { question: "Why average several months instead of using just one?", answer: "Monthly expenses often fluctuate due to one-off costs or timing of payments. Averaging several recent months smooths out those bumps and gives a more realistic ongoing burn rate than any single month might show." }, { question: "How much runway should a startup aim to keep?", answer: "Many investors and operators suggest keeping at least 12-18 months of runway, giving enough time to hit milestones and raise a next round comfortably rather than fundraising under time pressure. Your ideal target depends on your stage, growth trajectory, and how quickly you could raise more capital." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

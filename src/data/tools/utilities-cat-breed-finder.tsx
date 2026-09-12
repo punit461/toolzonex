@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these facts guaranteed for every individual cat?", answer: "No — these are general, typical figures for each breed. Individual cats can vary in temperament, coat, and health regardless of breed, and mixed-breed cats may not follow these patterns at all." }, { question: "Does this include every recognized cat breed?", answer: "No — this tool covers over 40 of the most common and widely recognized breeds rather than every breed registered by cat fancier associations worldwide." }, { question: "Is any coat type truly hypoallergenic?", answer: "No cat breed is completely hypoallergenic — allergens come mainly from a protein in saliva and skin, not just fur — but some people find certain coat types easier to tolerate than others." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

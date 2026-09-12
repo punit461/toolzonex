@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does this tool output values instead of type declarations?", answer: "TOML is a configuration file format, not a schema/type language — there's no TOML equivalent of a TypeScript interface. Instead, this converter produces a real, valid TOML document populated with the sample values from your JSON, which you can use directly as a config file or as a template." }, { question: "How are null values handled, since TOML has no null?", answer: "TOML has no native null/nil value, so any field that was null in your JSON is emitted as an empty string with a trailing comment noting it was null in the source, so you can decide how to represent it for your use case." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and TOML generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

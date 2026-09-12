@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What discount rate should I use?", answer: "Use your required rate of return or opportunity cost of capital. A higher discount rate results in a lower present value." }, { question: "What is the relationship between PV and interest rates?", answer: "Present value is inversely related to the discount rate. As rates rise, present value of future money falls." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

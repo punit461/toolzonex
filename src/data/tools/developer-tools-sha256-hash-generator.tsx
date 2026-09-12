@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is SHA-256 secure for passwords?", answer: "SHA-256 is cryptographically strong but, like MD5 and SHA-1, is designed to be fast — which makes plain SHA-256 a poor fit for password storage. Real systems should use a slow, salted algorithm such as bcrypt or Argon2 instead." }, { question: "Is my text uploaded anywhere?", answer: "No — hashing happens entirely client-side using the browser's native Web Crypto API. Nothing you type is sent to a server." }, { question: "How is SHA-256 different from MD5?", answer: "SHA-256 produces a longer, more collision-resistant digest and has no known practical attacks, unlike MD5, which is considered cryptographically broken." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What GSM should I use for typical office paper?", answer: "Standard copy/printer paper is usually 70-90 GSM. Cardstock and cover stock run from around 150 to 300+ GSM, while lightweight paper like newsprint can be as low as 45-52 GSM." }, { question: "Why does paper size matter if GSM already measures weight?", answer: "GSM is a weight-per-area measure, not a fixed sheet weight — a larger sheet at the same GSM weighs more because it has more area. That's why this calculator needs both the GSM and the exact paper dimensions to compute the actual weight of each sheet." }, { question: "Can I use this for non-standard paper sizes?", answer: "Yes — select \"Custom\" from the size dropdown and enter your own width and height in millimeters; the same GSM formula applies to any rectangular sheet size." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

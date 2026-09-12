@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the standard riser height?", answer: "Most building codes require risers between 4 and 7.75 inches, with 7 to 7.5 inches being the most common for residential stairs." }, { question: "What is a stringer?", answer: "A stringer is the structural support member that runs along the side of the staircase, cut to hold the treads and risers." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why draft-07 instead of a newer JSON Schema version?", answer: "Draft-07 remains the most widely supported version across validators and tooling (including Ajv and many OpenAPI-adjacent tools), so it's the safest default for a generated schema meant to be broadly compatible." }, { question: "Are nested objects defined with $ref?", answer: "No — to keep the output simple and self-contained, nested objects are described inline as nested schema objects rather than extracted into $defs/definitions and referenced with $ref." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and schema generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

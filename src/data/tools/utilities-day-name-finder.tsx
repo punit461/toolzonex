@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How far back or forward can I check?", answer: "Any date supported by JavaScript's Date object works, which covers a range of roughly ±270,000 years from today — far beyond any practical need." }, { question: "Does this account for the switch from the Julian to Gregorian calendar?", answer: "No — this tool calculates purely using the modern Gregorian calendar system for every date, so very old historical dates (particularly before the Gregorian calendar's adoption in a given region) may not match the day of the week recorded in historical sources using the older Julian calendar." }, { question: "Does the result depend on my time zone?", answer: "No — the date you pick is treated as a calendar date rather than a specific moment in time, so the day-of-week result is the same regardless of which time zone you're in." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

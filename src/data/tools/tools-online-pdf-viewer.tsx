@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does viewing download the file to my device?", answer: "No — the pages are rendered in memory and displayed as images. Nothing is saved unless you choose to download." }, { question: "Can I view password-protected PDFs?", answer: "Not yet — this viewer is for unprotected documents. Use our unlock tool first if your file is password protected." }, { question: "Is my file uploaded anywhere?", answer: "No — rendering happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

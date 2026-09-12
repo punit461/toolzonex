@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this replace a dedicated baby-tracking app?", answer: "No — this is a session-only reference log kept in your browser, useful for jotting things down during the day or printing a daily summary. If you need ongoing, persistent history across days, a dedicated baby-tracking app is a better fit." }, { question: "How is sleep duration calculated for sessions that cross midnight?", answer: "If the end time is earlier than the start time, the tool assumes the session crossed midnight and adds 24 hours before calculating the duration." }, { question: "Is my baby care log saved anywhere?", answer: "No — everything resets when you reload the page, since it's kept only in your browser for the current session, so copy the summary before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

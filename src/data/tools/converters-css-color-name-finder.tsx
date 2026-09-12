@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How many named colors does this cover?", answer: "The complete standard CSS3 extended color list — roughly 140 names, from aliceblue through yellowgreen, including near-duplicates like gray/grey pairs." }, { question: "What happens if I enter a hex code with no exact named match?", answer: "The tool calculates the color distance (in RGB space) between your hex code and every named color, and returns the single closest one, clearly labeled \"closest match\" rather than an exact one." }, { question: "Can I search by hex code without the \"#\" symbol?", answer: "Yes — the tool recognizes a 6-digit hex value whether or not it starts with a \"#\"." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

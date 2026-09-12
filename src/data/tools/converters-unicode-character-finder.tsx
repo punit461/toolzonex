@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Unicode Character Lookup?", answer: "Unicode Character Lookup is for when you already have one specific character or code point in hand and want its full details. This Unicode Character Finder is the opposite direction — you only know roughly what the character should be called or represent, and the tool helps you find it by keyword search." }, { question: "Does this cover every emoji?", answer: "No — it's a curated list of roughly 130 of the most commonly searched symbols and emoji, not the full Unicode emoji set. It's designed to quickly surface popular, everyday characters rather than being an exhaustive reference." }, { question: "Can I search using a synonym instead of the exact name?", answer: "Yes — each character has several associated keywords beyond its formal name, so searching \"like\" for 👍 or \"money\" for 💰 and 💵 will still find relevant matches." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

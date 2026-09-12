@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this replace a full YAML parser?", answer: "No — this is a lightweight syntax checker that catches common mistakes. For full structural validation, use a dedicated YAML library." }, { question: "Why doesn't YAML allow tabs?", answer: "YAML uses indentation for structure and the spec requires spaces. Tabs are forbidden because they can display at different widths, leading to ambiguous parsing." }, { question: "Is my data uploaded?", answer: "No — all validation happens entirely in your browser. Nothing you paste is sent to any server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

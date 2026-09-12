@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a good keyword density?", answer: "There is no universal ideal percentage. Aim for natural, readable content that addresses the user's intent rather than hitting a specific density number." }, { question: "Does this tool count stop words?", answer: "Stop words (like \"the\", \"and\", \"is\") are excluded from the top 20 frequency list to focus on meaningful keywords." }, { question: "Is keyword density still important for SEO?", answer: "It is one signal among many. Search engines prioritize content quality, relevance, and user experience over keyword density alone." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

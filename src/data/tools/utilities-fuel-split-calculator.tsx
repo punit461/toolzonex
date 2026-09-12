@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Split Bill Calculator?", answer: "The Split Bill Calculator is built for restaurant and group bills — splitting a total evenly or by itemized purchases, with tip handling. This tool is specifically for road-trip fuel costs, splitting proportionally by the actual distance each rider traveled, which matters when people join or leave partway through a trip." }, { question: "What if everyone rode the entire trip together?", answer: "Enter the same total trip distance for every person — with equal distances, the calculator naturally splits the fuel cost evenly among everyone, the same result you'd get from an even split." }, { question: "Should distance be one-way or round-trip?", answer: "Use whichever distance each person actually rode for — if someone only rode one leg of a round trip, enter just that leg's distance for them, while someone who rode the whole round trip enters the full round-trip distance." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

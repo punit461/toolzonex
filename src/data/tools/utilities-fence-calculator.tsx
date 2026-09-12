@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does a fully enclosed layout need fewer posts per panel?", answer: "In a closed loop, every post is shared between two adjacent panels, so the number of posts equals the number of panels. In an open, straight run, the two ends aren't shared with another panel, so you need one extra post beyond the panel count." }, { question: "Does this account for gates?", answer: "No — gate openings typically use different hardware and post spacing than standard panels. Subtract the gate width from your total perimeter before entering it here, and add gate posts and the gate itself separately." }, { question: "What panel width should I use?", answer: "Most residential wood and vinyl fence panels come in standard 6 ft or 8 ft widths, though chain-link and some metal fencing use different post spacing — check your chosen fencing product's spec sheet for the exact panel or spacing width." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

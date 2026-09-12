@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between this tool and a plain \"indenter\" or \"outdenter\"?", answer: "Nothing — this single tool covers both jobs. The mode toggle switches between adding indentation (indenting) and removing it (outdenting), so there's no need for two separate tools." }, { question: "What happens if a line has less indentation than the outdent width?", answer: "Outdent removes only as much whitespace as actually exists at the start of that line — it never removes non-whitespace characters or pushes the line into negative indentation." }, { question: "Are blank lines affected?", answer: "Indent mode skips empty lines so it doesn't add trailing whitespace-only lines; Outdent mode leaves empty lines as empty since there's no leading whitespace to remove." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

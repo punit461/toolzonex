@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is there a free keyword density analyzer?", answer: "Yes — this keyword density analyzer is completely free, works on any text or webpage copy you paste in, and requires no sign-up." }, { question: "What's a good keyword density?", answer: "There is no fixed ideal percentage. Use keyword density as an editing signal, then prioritise relevance, clarity, and complete coverage of the topic over hitting a specific number." }, { question: "Do I need to pick a target keyword first?", answer: "No — unlike a single-keyword checker, this analyzer scans your whole text and surfaces every meaningful keyword's count and density automatically, so you don't need to know in advance which keyword to check." }, { question: "How do I find keyword density online?", answer: "Paste your article, blog post, or webpage copy into the box and click \"Analyze Keyword Density\" — the tool instantly lists every keyword's count and density percentage, ranked from most to least frequent." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

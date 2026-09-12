@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What appreciation rate should I use?", answer: "Historical long-term US home price appreciation has averaged roughly 3-5% annually, though this varies significantly by location, property type, and market cycle. Use local historical data or a conservative estimate if you're uncertain." }, { question: "Is appreciation guaranteed?", answer: "No — property values can also decline, especially over shorter time horizons or during market downturns. This calculator shows a projection based on a constant assumed rate, not a guaranteed outcome." }, { question: "Does this include renovations or capital improvements?", answer: "No — this projects appreciation from market forces on the property as-is. Renovations, additions, or major improvements can add value beyond what pure market appreciation would produce, and would need to be estimated separately." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

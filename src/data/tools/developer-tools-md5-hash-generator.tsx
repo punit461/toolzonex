@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is MD5 secure for passwords?", answer: "No — MD5 is cryptographically broken and far too fast to resist brute-force attacks. Never use plain MD5 to store real passwords; use a slow, salted algorithm like bcrypt or Argon2 instead." }, { question: "Is my text uploaded anywhere?", answer: "No — the hash is computed entirely client-side in your browser using a hand-implemented MD5 algorithm. Nothing you type is sent to a server." }, { question: "Why does MD5 still exist if it's broken?", answer: "It remains useful for non-security purposes like checksums, cache keys, and detecting accidental data corruption, where resistance to deliberate attacks doesn't matter." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

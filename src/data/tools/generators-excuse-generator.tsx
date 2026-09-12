@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these real excuses I should use?", answer: "No — every excuse here is intentionally over-the-top and meant purely as a joke or icebreaker, not a genuine reason to give a boss, teacher, or friend." }, { question: "Can I get the same excuse twice?", answer: "Yes — each click randomly selects from that category's list independently, so repeats are possible." }, { question: "Is this appropriate for a general audience?", answer: "Yes — every excuse is written to be lighthearted, family-friendly, and safe to share in any group setting." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

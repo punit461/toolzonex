@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this work on mobile?", answer: "Yes, tap the fullscreen button on any phone or tablet browser." }, { question: "Will the color look exactly the same on every screen?", answer: "Not necessarily — color rendering varies by display, brightness settings, and color profile." }, { question: "Is this a Blue Screen of Death (BSOD) prank simulator?", answer: "No — this page is a plain, solid blue fullscreen display, not a fake Windows error message. If you're looking for a custom blue screen of death or a fake blue screen prank with actual Windows-style error text, use our dedicated Windows Blue Screen prank tool instead, which mimics the real \"Your PC ran into a problem\" screen." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How do I get rid of spaces in my text?", answer: "Paste your text in, tick \"Remove multiple spaces between words\" and \"Trim spaces at beginning and end of lines\", then click \"Clean Whitespace\" — that's the fastest way to get rid of spaces, double spaces, and stray tabs in one pass." }, { question: "Does this remove line breaks entirely?", answer: "No — it removes extra blank lines and trailing whitespace while keeping your paragraph structure intact." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

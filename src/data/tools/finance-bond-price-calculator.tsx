@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do bond prices fall when interest rates rise?", answer: "A bond's coupon payments are fixed once issued. When market rates rise, new bonds offer higher coupons, so existing bonds with lower fixed coupons become less attractive and must trade at a lower price to offer a competitive yield." }, { question: "What does trading at a premium or discount mean?", answer: "A bond trades at a premium when its price is above face value (coupon rate higher than market rate) and at a discount when its price is below face value (coupon rate lower than market rate). At par, the coupon rate equals the market rate exactly." }, { question: "Does this assume annual coupon payments?", answer: "Yes, this calculator assumes one coupon payment per year for simplicity. Many bonds pay semi-annually, which slightly changes the exact price but follows the same discounting principle applied to each smaller, more frequent payment." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

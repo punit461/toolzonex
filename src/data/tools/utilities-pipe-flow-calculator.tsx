@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this assume the pipe is completely full?", answer: "Yes — this calculates flow for steady, incompressible flow through a pipe running completely full. Partially filled pipes (like open channels or gravity drains that aren't flowing full) need a different open-channel flow formula, since the wetted cross-sectional area is smaller than the full pipe area." }, { question: "What if I know the flow rate and need the velocity instead?", answer: "Rearrange the same formula: velocity = flow rate ÷ cross-sectional area. Calculate the pipe's area from its diameter using the formula above, then divide your known flow rate by that area." }, { question: "Why does pipe diameter matter so much to flow rate?", answer: "Cross-sectional area scales with the square of the diameter, so doubling a pipe's diameter quadruples its area — and therefore roughly quadruples the flow rate at the same fluid velocity." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

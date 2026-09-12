@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What happens if a cell already contains a comma?", answer: "The tool wraps that field in double quotes automatically, so the comma is treated as part of the value rather than a new column separator in the resulting CSV." }, { question: "Does this handle quotes inside a cell?", answer: "Yes — any double quote character inside a field is escaped by doubling it (per the CSV standard), and the field is wrapped in quotes." }, { question: "Can I paste data copied directly from a spreadsheet?", answer: "Yes — Excel and Google Sheets both copy selected cells as tab-separated values by default, so you can paste directly into the input box above without reformatting anything first." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

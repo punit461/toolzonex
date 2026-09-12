@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Emergency/ID Contact Card Generator?", answer: "The Emergency/ID Contact Card Generator builds a personal identification and emergency-contact CARD meant to carry with you (your name, medical info, and emergency contacts). This Emergency Checklist is instead a PREPAREDNESS SUPPLIES list for building an actual emergency kit at home — a completely different purpose from a personal ID card." }, { question: "Can I add items that aren't in the pre-set categories?", answer: "Yes — use the \"Add Custom Item\" field to add anything specific to your household, and it will appear in the Other section of your final checklist." }, { question: "Is my checklist saved for next time?", answer: "No — the list resets when you reload the page, since it's generated fresh in your browser each visit rather than stored anywhere. Copy your finished list before closing the tab." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

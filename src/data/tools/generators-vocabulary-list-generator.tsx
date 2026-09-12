@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is the example sentence required?", answer: "No — the example sentence field is optional; words without one still appear in the list with just their definition." }, { question: "Does the list re-sort automatically as I edit words?", answer: "Yes — the alphabetized list updates instantly whenever you add, edit, or remove a word." }, { question: "Is my vocabulary list saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the list before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

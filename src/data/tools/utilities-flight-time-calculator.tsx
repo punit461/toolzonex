@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why isn't this the same as the flight time shown when booking a ticket?", answer: "Airlines factor in actual flight plans, wind patterns (tailwinds and headwinds), air traffic routing, and airport-specific taxi times, all of which can meaningfully shift the real duration. This calculator gives a simplified straight-line estimate using average cruising speed and a fixed buffer." }, { question: "Should I use great-circle distance or driving distance?", answer: "Use great-circle (straight-line) distance between the two airports, since aircraft fly roughly along that path rather than following ground routes. Many flight-distance lookup tools report this figure directly." }, { question: "Why does the buffer matter for short flights?", answer: "For short routes, the fixed taxi, takeoff, and landing time can be a large fraction of total flight time, since the aircraft spends less time at full cruising speed. This is why very short flights often feel disproportionately long relative to the distance covered." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I frame multiple lines at once?", answer: "Yes — enter as many lines as you like; every line is padded to match the width of the longest line so the border stays perfectly aligned." }, { question: "Will the border display correctly everywhere?", answer: "It requires a monospace font that preserves spacing exactly, such as a code block, plain text editor, or terminal — rich-text editors that use a proportional font may misalign it." }, { question: "What is the difference between this and a \"text box\" generator?", answer: "They describe the same idea — this tool covers both, wrapping your text in a padded, aligned decorative border regardless of whether you call it a frame or a box." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

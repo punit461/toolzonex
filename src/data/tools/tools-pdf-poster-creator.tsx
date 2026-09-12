@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this use only the first page?", answer: "Yes — the poster is created from the first page of the uploaded PDF." }, { question: "How do I assemble the printed tiles?", answer: "Print all pages, then arrange them in grid order (top-left first) and tape or glue the edges together." }, { question: "Is my file uploaded anywhere?", answer: "No — all processing is done entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

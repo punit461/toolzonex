@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Pangram Checker?", answer: "A pangram must contain EVERY letter of the alphabet at least once. An isogram must contain NO letter more than once. These are nearly opposite concepts that are easy to confuse by name, even though both deal with letter coverage." }, { question: "Does spacing between words count against being an isogram?", answer: "No — spaces and punctuation are ignored entirely, so a multi-word phrase is checked purely on its letters, treating it the same as if the words were joined together." }, { question: "Is capitalization considered when checking for repeats?", answer: "No — the check is case-insensitive, so \"A\" and \"a\" count as the same letter and would count as a repeat if both appeared." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

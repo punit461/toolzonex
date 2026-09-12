@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if my move is happening sooner than 8 weeks out?", answer: "Start from whichever timeline stage matches how much time you have left — the tasks are still relevant even if you compress several stages into a shorter window." }, { question: "Can I add tasks specific to my own move?", answer: "Yes — use the \"Add Custom Task\" field for anything not already listed, such as cancelling a specific membership or arranging pet transport." }, { question: "Is my checklist saved between visits?", answer: "No — it resets on reload, so copy your checklist to a notes app or print it if you want a lasting reference throughout the move." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

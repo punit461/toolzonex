@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this how real systems should store passwords?", answer: "No. A plain MD5, SHA-1, or SHA-256 hash of a password is fast to compute — which means an attacker with a leaked database can try billions of guesses per second against it. Real systems must use a slow, purpose-built, salted algorithm like bcrypt, scrypt, or Argon2, which are deliberately expensive to brute-force and include a unique salt per user to defeat precomputed lookup tables. This tool exists purely to show what a raw hash looks like, for learning and testing." }, { question: "What does \"salted\" mean?", answer: "A salt is random data mixed into the password before hashing, unique per user. It ensures two users with the same password get different hashes, and defeats precomputed \"rainbow table\" attacks. This tool does not add a salt — it hashes the raw password only, for demonstration purposes." }, { question: "Is my password uploaded anywhere?", answer: "No — hashing happens entirely client-side in your browser. Nothing you type is sent to a server. Still, avoid entering a real password you actually use anywhere else." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

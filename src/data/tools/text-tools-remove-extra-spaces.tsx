@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this remove line breaks too?", answer: "No — only spaces and tabs within a line are collapsed. Line breaks are left in place so your paragraph structure stays intact." }, { question: "What does the trim option do?", answer: "With trimming enabled, any spaces at the very start or end of each line are also removed, in addition to collapsing multiple spaces within the line." }, { question: "Does it update as I type?", answer: "Yes — there's no button to click. The cleaned result recalculates instantly as you edit the text." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

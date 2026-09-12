@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Should I price based on markup or margin?", answer: "Either works, but be clear about which one you're using — many retailers think in markup (easy to calculate from cost) while financial statements and profitability benchmarks are usually expressed as margin (percentage of revenue). This calculator shows both so you can see the relationship for any given pricing decision." }, { question: "Why is margin always lower than markup for the same price?", answer: "Because margin divides profit by the larger selling price, while markup divides the same profit by the smaller cost price — dividing by a bigger number always produces a smaller percentage." }, { question: "What markup should I use?", answer: "It varies widely by industry — retail markups commonly range from 20% to 100%+ depending on the product category, competition, and what customers are willing to pay. There's no universal correct number; it should cover your costs, desired margin, and market positioning." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

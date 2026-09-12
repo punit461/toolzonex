@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this a real hash of something I typed?", answer: "No — this tool does not accept any input to hash. It generates a random-looking string for use as a test identifier or token, not a cryptographic hash of actual data." }, { question: "How random is the output?", answer: "It uses your browser's crypto.getRandomValues API, a cryptographically secure random number source, rather than the weaker Math.random()." }, { question: "Can two generated hashes be the same?", answer: "It's possible in theory, but extremely unlikely at 32 or 64 characters — the pool of possible combinations is astronomically large." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

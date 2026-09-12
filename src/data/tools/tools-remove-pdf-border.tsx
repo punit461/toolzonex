@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a \"point\"?", answer: "One PDF point equals 1/72 of an inch (≈ 0.35 mm). A 10-point border is roughly 3.5 mm thick." }, { question: "Will this cover content near the edges?", answer: "Yes — if your content extends into the border area, it will be covered. Use a smaller width value to avoid this." }, { question: "Is my file uploaded anywhere?", answer: "No — all processing happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

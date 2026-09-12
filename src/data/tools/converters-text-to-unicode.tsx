@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does the U+ prefix mean?", answer: "U+ is the standard notation for a Unicode code point, followed by its hexadecimal value — for example U+0041 is the code point for the letter \"A\"." }, { question: "Does this support emoji and characters outside the Basic Latin range?", answer: "Yes — every character, including accented letters, symbols, and emoji, is converted using its full Unicode code point, not just the standard ASCII range." }, { question: "Does this tool also decode Unicode code points back to text?", answer: "This page is encode-only, for a simpler, focused experience. Use our separate Unicode to Text tool if you need to convert Unicode code points back into plain text." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

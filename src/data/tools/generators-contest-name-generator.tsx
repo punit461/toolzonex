@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these names ready to publish as-is?", answer: "Yes, most work fine directly, but feel free to tweak them with your brand name or a specific prize to make them more personal." }, { question: "Do these names include official contest rules or legal terms?", answer: "No — this tool only generates a name. You'll still need to write your own official rules, eligibility terms, and prize details separately, and check local regulations for running contests." }, { question: "Can I regenerate if I don't like the options?", answer: "Yes — click \"Regenerate\" as many times as you like for a fresh batch of 5 names." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

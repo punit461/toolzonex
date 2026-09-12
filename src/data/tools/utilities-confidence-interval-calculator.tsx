@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why use a z-score instead of a t-score?", answer: "The z-score approximation is simpler and reasonably accurate for larger sample sizes (typically n ≥ 30). For smaller samples, a t-distribution (which has heavier tails to account for the extra uncertainty of estimating from limited data) is technically more precise — treat this z-score result as a solid approximation rather than an exact figure for small samples." }, { question: "What does \"95% confidence\" actually mean?", answer: "It means that if you repeated the same sampling process many times and built a confidence interval each time, about 95% of those intervals would contain the true population mean. It's not a 95% probability that the true mean falls within this one specific interval you calculated." }, { question: "How does sample size affect the interval?", answer: "Larger sample sizes shrink the standard error (since it's divided by the square root of n), which narrows the confidence interval and gives a more precise estimate of the population mean." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

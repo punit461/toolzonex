@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How does the counter decide where a paragraph ends?", answer: "It looks for a blank line — that is, two or more consecutive line breaks — between blocks of text. Text separated by only a single line break within a block isn't treated as a new paragraph, since that's commonly just a line wrap rather than a true paragraph break." }, { question: "Why does my paragraph count look wrong?", answer: "If your text was copied from a source that doesn't preserve blank lines between paragraphs (like some PDFs or web pages), paragraph breaks may be lost in the paste, causing everything to count as one paragraph. Try adding a blank line manually between paragraphs if this happens." }, { question: "Is my text sent anywhere?", answer: "No — all counting happens directly in your browser. Your text is never uploaded or sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

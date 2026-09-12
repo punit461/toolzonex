@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will the diagonal effect show up everywhere I paste it?", answer: "It only looks correct in places that use a monospace font and preserve leading spaces exactly, like a code block, plain text editor, or terminal. Regular chat text boxes or rich-text editors that collapse whitespace will not display it correctly." }, { question: "Why does spacing matter?", answer: "The spacing value controls how many spaces are added per step — a higher value spreads the characters further apart diagonally, creating a steeper staircase effect." }, { question: "Is there a length limit?", answer: "Input is capped at 40 characters, since very long text becomes impractical to read once spread diagonally across dozens of lines." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

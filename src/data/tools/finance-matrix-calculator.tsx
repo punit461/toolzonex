@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What happens if a matrix is not invertible?", answer: "A matrix whose determinant is zero is \"singular\" and has no inverse. This tool shows a Singular matrix message instead of a numeric result." }, { question: "Can I multiply matrices of different sizes here?", answer: "This tool keeps both matrices the same square size (2×2 or 3×3) so addition, subtraction, and multiplication are always defined." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

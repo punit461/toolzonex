@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is my upload speed slower than my download speed?", answer: "Most consumer internet plans (especially cable and DSL) are asymmetric, meaning they allocate much more bandwidth to downloads than uploads since most home usage is download-heavy. Fiber connections are more likely to offer symmetric upload and download speeds." }, { question: "Why is my actual upload slower than this estimate?", answer: "This is a best-case estimate at your stated speed. Real uploads are also affected by network congestion, the destination server's upload limits, Wi-Fi overhead, and other devices sharing your connection at the same time." }, { question: "Why is speed measured in Mbps, not MB/s?", answer: "Internet plans are advertised in megabits per second (Mbps). Since 1 byte equals 8 bits, divide your Mbps figure by 8 to estimate the actual megabytes transferred per second." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

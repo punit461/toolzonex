@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What happens to data- and aria- attributes?", answer: "They're left exactly as-is — data-* and aria-* attributes stay kebab-case in JSX per React convention, unlike other HTML attributes which are camelCased." }, { question: "Does it handle curly braces in text content?", answer: "Yes — literal { and } characters found in text nodes are escaped as {'{'} and {'}'} so the output compiles as valid JSX instead of being misread as an expression." }, { question: "Is my HTML uploaded anywhere?", answer: "No — parsing and conversion happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

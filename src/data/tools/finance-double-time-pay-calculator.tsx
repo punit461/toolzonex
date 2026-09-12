@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Overtime Pay Calculator?", answer: "The Overtime Pay Calculator applies ONE flat, user-chosen overtime multiplier uniformly to all overtime hours you enter — you decide the split and the multiplier yourself. This tool instead implements the specific TIERED daily-threshold structure (regular → 1.5× → 2×) used in double-time jurisdictions, automatically calculating each tier from the total hours worked in a single day rather than requiring you to split them manually." }, { question: "Does every state use this 8/12-hour tiered structure?", answer: "No — this structure mirrors California's daily overtime law specifically. Most other US states only require overtime after 40 hours in a week, with no separate daily double-time tier. Check your local labor law to confirm which structure applies to you." }, { question: "Does this calculator also apply weekly overtime rules?", answer: "No — this calculates tiers based only on the single day's total hours entered. Weekly overtime thresholds (like the federal 40-hour rule) would need to be checked separately across your full week." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

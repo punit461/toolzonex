@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why isn't billable hours the same as total working hours?", answer: "Most freelancers spend a meaningful chunk of their working time on tasks they can't directly bill a client for — finding new clients, sending invoices, bookkeeping, and general admin. The buffer percentage accounts for this so your billable hours still cover your full income goal." }, { question: "Does this include taxes?", answer: "No — this calculates the rate needed to hit your target take-home income after business expenses, but before personal and self-employment taxes. Freelancers typically need to set aside a portion of income separately for taxes; see our Self-Employment Tax Calculator for that estimate." }, { question: "What buffer percentage should I use?", answer: "20% is a common starting point, but it varies by how much non-billable work your business requires. Freelancers who spend a lot of time on marketing or client acquisition may want a higher buffer, while those with steady repeat clients may need less." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

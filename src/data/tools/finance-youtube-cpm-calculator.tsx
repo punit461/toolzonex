@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between CPM and RPM?", answer: "CPM is what advertisers pay per 1,000 ad impressions, before YouTube's revenue share. RPM (revenue per mille) is what a creator actually earns per 1,000 views, after YouTube's cut and accounting for videos that aren't fully monetized. If you want to estimate total earnings from views, use our separate YouTube Revenue Calculator, which is built around RPM." }, { question: "Why use impressions instead of views for CPM?", answer: "CPM is defined per ad impression, since that's what advertisers are actually billed for. A video can have more ad impressions than views if multiple ads play per view, or fewer if not every view triggers an ad — so using views as a stand-in gives only an approximate CPM." }, { question: "What is a good CPM for YouTube?", answer: "CPM varies enormously by content niche, audience country, time of year, and ad format — finance and business content, for example, typically commands a much higher CPM than gaming or entertainment content. There's no single \"good\" number; compare your own CPM over time and against similar channels in your niche instead." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

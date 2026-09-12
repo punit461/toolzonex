@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this the same as a JS formatter or prettifier?", answer: "Yes — beautify, format, and prettify all refer to the same thing: re-indenting JavaScript code for readability." }, { question: "Will beautifying change how my code runs?", answer: "No. Beautifying only adds whitespace and newlines for readability. Minifying removes comments and extra whitespace but preserves the code logic. Neither alters the actual execution behavior." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How many countries are included?", answer: "The generator draws from a curated list of well-known countries spanning all six populated continents, rather than the full list of every country and territory in the world." }, { question: "Can the same country come up twice in a row?", answer: "Yes — each generation is an independent random pick, so repeats are possible." }, { question: "Does it show the continent?", answer: "Yes — every result includes the country's flag emoji and its continent alongside the name." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

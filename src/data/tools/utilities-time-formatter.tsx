@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is an epoch timestamp?", answer: "An epoch timestamp is the number of seconds elapsed since midnight UTC on January 1, 1970 (the Unix epoch). This tool calculates the offset from midnight for the entered time, not the full date-based timestamp." }, { question: "Does this handle midnight (00:00 or 12:00 AM)?", answer: "Yes. In 24-hour format, midnight is 00:00:00. In 12-hour format, it displays as 12:00:00 AM." }, { question: "Why use words format?", answer: "The words format is useful for screen readers, voice assistants, natural-language text, and any UI where a human-friendly time display is preferred over digital notation." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

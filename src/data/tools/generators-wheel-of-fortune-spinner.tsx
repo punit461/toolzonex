@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is the spin result truly random?", answer: "Yes — the wheel lands on a random segment each spin, giving every option an equal chance proportional to its slice size." }, { question: "Is this a wheel of fortune generator or a picker wheel?", answer: "Both — you generate a custom wheel from your own list of options, and each spin acts as a random picker that selects one entry from that wheel. Use it to build a wheel for names, prizes, decisions, or anything else you need to pick at random." }, { question: "How many options can I add to the wheel?", answer: "Up to 24 items, with a minimum of 2 needed to spin. Each item becomes an equally-sized slice unless you add more or fewer entries, which resizes the slices automatically." }, { question: "Can I save or share my wheel?", answer: "The wheel is built entirely in your browser for the current session — add your list, spin as many times as you like, and remove or edit entries between spins." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

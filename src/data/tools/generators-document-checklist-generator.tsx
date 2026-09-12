@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Do Vehicle and Travel checklists share the same checked items?", answer: "No — each context keeps its own checked state and custom items, so switching between Vehicle and Travel doesn't mix up your progress on either." }, { question: "Can I add documents that aren't on the default list?", answer: "Yes — use the \"Add Custom Item\" field, and it appears as a checkbox under the current context's document list." }, { question: "Is my checklist saved anywhere?", answer: "No — the checklist resets when you reload the page, since it's generated fresh in your browser each visit rather than stored anywhere." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

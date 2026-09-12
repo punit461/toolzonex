@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this compare images or formatting?", answer: "No — the comparison is based on the text layer only. Visual differences such as fonts, images, and layout are not detected." }, { question: "How is similarity calculated?", answer: "Word-by-word matching across both files produces a percentage of matching words relative to the total word count of both documents." }, { question: "Is my file uploaded anywhere?", answer: "No — both files are processed entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

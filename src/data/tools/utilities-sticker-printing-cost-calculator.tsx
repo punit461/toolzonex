@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these real printer prices?", answer: "No — the per-unit price table and size multipliers used here are illustrative example figures for estimation purposes, not any specific printer's actual pricing. Real sticker pricing varies by printer, material, finish (glossy, matte, holographic), and shape complexity, so always check an actual quote for a precise cost." }, { question: "How is this different from the Label Printing Cost Calculator?", answer: "This tool is for individual custom die-cut stickers, priced per unit with quantity-based discount tiers — a typical model for small-batch custom stickers. The Label Printing Cost Calculator instead models bulk roll-based product or shipping labels, priced per roll rather than per individual unit — a different real-world purchasing model entirely." }, { question: "Why does a larger sticker cost more per unit?", answer: "Larger stickers use more material and vinyl per piece and often take longer to cut, which is reflected here as a size multiplier applied on top of the base quantity-tier price." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

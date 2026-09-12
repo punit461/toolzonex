@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Packaging Cost Calculator?", answer: "The Packaging Cost Calculator adds up the dollar cost of materials, labor, and shipping per unit. This tool computes physical weight only — no cost figures at all — for when you need a total weight, not a total cost." }, { question: "How does this relate to the Freight Cost Calculator?", answer: "The Freight Cost Calculator bills a shipment based on whichever is greater between its actual weight and its volumetric (dimensional) weight. This tool helps you produce that actual total weight figure — item weight plus every packaging component — which you can then plug into the Freight Cost Calculator as the actual weight input." }, { question: "Should I include the shipping label or documents in packaging weight?", answer: "For most real-world purposes their weight is negligible, but if you want a precise total, add them as an extra component row with their approximate weight." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

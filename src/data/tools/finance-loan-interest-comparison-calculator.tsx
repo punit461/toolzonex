@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does the highlighted offer have the lowest interest instead of the lowest payment?", answer: "The lowest monthly payment often comes from stretching the term out, which usually increases total interest paid. This tool highlights whichever offer costs the least in total interest over the life of the loan, since that's the truest measure of which loan is cheapest." }, { question: "Can I compare more than two offers at once?", answer: "Yes — use the \"Add Loan Offer\" button to add as many offers as you want to compare side by side in the same table." }, { question: "Does this include fees like origination charges?", answer: "No — this compares principal, rate, and term only. If a lender charges an origination fee or other upfront costs, add that to your own comparison separately, since it isn't reflected in the total interest shown here." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

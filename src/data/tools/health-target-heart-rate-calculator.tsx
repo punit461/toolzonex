@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the Karvonen formula?", answer: "The Karvonen formula calculates a target heart rate using your Heart Rate Reserve (max heart rate minus resting heart rate): Target HR = ((Max HR − Resting HR) × %Intensity) + Resting HR. It is considered more accurate than simply taking a percentage of max heart rate because it accounts for individual fitness via resting heart rate." }, { question: "How do I find my resting heart rate?", answer: "Measure your pulse for a full minute right after waking up, before getting out of bed, on a day you feel well-rested. Average it over a few mornings for a more reliable number." }, { question: "Is this a substitute for medical advice?", answer: "No — this tool gives a statistical estimate based on standard exercise-physiology formulas, not a personalized medical assessment. If you have a heart condition or are new to exercise, consult a doctor before training in these zones." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

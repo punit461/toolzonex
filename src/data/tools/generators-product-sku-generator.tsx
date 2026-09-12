@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from a random ID generator?", answer: "A random ID generator produces an opaque string with no inherent meaning. This tool instead builds a structured, human-readable code from meaningful components you define — category, attributes, and sequence — so anyone can look at the SKU and understand roughly what it represents." }, { question: "Can I add more than two attribute codes?", answer: "Yes — click \"Add Attribute\" as many times as you need for extra dimensions like material, style, or warehouse location." }, { question: "Does the tool check for duplicate SKUs?", answer: "No — it only formats the SKU string you build from your inputs. You'll still need to check new SKUs against your existing catalog to avoid collisions." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

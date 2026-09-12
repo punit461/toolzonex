@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What happens if actual hours are less than the included hours?", answer: "You still bill the full flat retainer fee — retainer arrangements typically don't refund or discount unused hours, since the fee is meant to secure ongoing availability and priority, not just pay for hours used." }, { question: "Why does the effective hourly rate matter?", answer: "It shows what you're really earning per hour once actual usage is factored in. A retainer that looks generous on paper can have a low effective rate if actual hours used are consistently much higher than the included amount without matching overage charges." }, { question: "Should overage hours be billed at a higher rate than the retainer's implied hourly rate?", answer: "Many freelancers and agencies do set overage rates higher than the retainer's baseline rate, since overage work is less predictable and harder to plan around than the committed retainer hours." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

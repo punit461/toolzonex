@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is EAR always higher than the nominal rate?", answer: "Because compounding means interest is calculated on previously earned interest as well as the principal. The more frequently that happens within a year, the more the effective rate exceeds the stated nominal rate." }, { question: "Does compounding frequency matter a lot?", answer: "The difference shrinks as compounding gets more frequent — going from monthly to daily compounding makes a much smaller difference than going from annual to monthly. Beyond daily compounding, the rate approaches (but never quite reaches) continuous compounding." }, { question: "Should I compare loans using nominal or effective rate?", answer: "Always compare effective annual rates when evaluating loans or investments with different compounding frequencies — it's the only way to see the true apples-to-apples annual cost or return." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

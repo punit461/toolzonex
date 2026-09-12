@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will \"Every N Characters\" ever break in the middle of a word?", answer: "No — it looks for the nearest word boundary at or before the character limit, so a line may end up slightly shorter than N characters rather than splitting a word." }, { question: "What happens to existing line breaks in \"Every N Characters\" or \"Every N Words\" mode?", answer: "Those two modes treat the input as one continuous stream of words, so existing line breaks are effectively removed and replaced by the new break pattern." }, { question: "Does \"Newlines to <br>\" affect blank lines?", answer: "Yes — every newline character, including ones between blank lines, is followed by a <br> tag, matching how browsers render explicit line breaks in HTML." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

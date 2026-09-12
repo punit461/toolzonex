@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "Can I undo this?", answer: "No — once bookmarks are removed, they cannot be restored. Keep a backup of the original." }, { question: "Does this affect page content?", answer: "No — only the outline/bookmark structure is removed. All pages, text, and images remain intact." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

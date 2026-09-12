@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if the new payment is higher than the old one?", answer: "If monthly savings are zero or negative, there's no break-even point to recoup closing costs from lower payments — refinancing would only make sense for other reasons, like switching from an adjustable to a fixed rate, or cashing out equity." }, { question: "Should I judge a refinance only by monthly savings?", answer: "No — also compare total interest paid over the full loan life. Extending the term can lower your monthly payment while actually increasing total interest paid, even at a lower rate, so check both figures before deciding." }, { question: "How long should I plan to stay in the loan to make refinancing worth it?", answer: "A common rule of thumb is to only refinance if you plan to keep the loan well beyond the break-even period shown here. If you might sell or pay off the loan sooner than that, the closing costs may not be fully recovered." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

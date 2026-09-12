@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is the REPEATED mode chosen?", answer: "Any field backed by a JSON array is given BigQuery's REPEATED mode, since BigQuery's field mode is mutually exclusive — a repeated field can't also be marked NULLABLE or REQUIRED. Object and scalar fields get NULLABLE if they were ever missing or null, and REQUIRED otherwise." }, { question: "How are nested objects represented?", answer: "A nested object becomes a field with \"type\": \"RECORD\" and a nested \"fields\" array describing its own properties, matching BigQuery's native representation of struct-like columns." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and schema generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Acronym Generator?", answer: "The Acronym Generator (in Phrase → Acronym mode) works in the opposite direction — you type a full phrase or title and it creates an acronym from it. This Acronym Expander goes the other way: you already have an acronym you've encountered somewhere, and it tells you what it commonly stands for." }, { question: "What if an acronym isn't in the list?", answer: "The list covers roughly 140 of the most common acronyms across everyday, tech, and business use. It's not exhaustive, so a very obscure or niche acronym may not be found." }, { question: "Why do some acronyms show more than one meaning?", answer: "Many acronyms are genuinely ambiguous — for example, \"PM\" can mean several different things depending on whether you're talking about time of day, government, or project management. This tool lists every common meaning rather than guessing which one you meant." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

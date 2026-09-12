@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is tax shown as flat 10%?", answer: "This tool applies a flat 10% to keep the estimate simple. Actual bonus taxation depends on your total income slab and applicable cess, so consult a tax professional for exact figures." }, { question: "What does the performance multiplier do?", answer: "Employers often scale a base bonus by a rating (e.g. 1.2 for \"exceeds expectations\"). A multiplier of 1.0 means the full stated bonus percentage applies." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

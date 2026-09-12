@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What order are the four values in?", answer: "CSS's border-radius shorthand always follows the order top-left, top-right, bottom-right, bottom-left — the same clockwise-from-top-left convention used by other CSS shorthand properties like margin and padding." }, { question: "Can I use percentages instead of pixels?", answer: "This generator outputs pixel values, which work well for most fixed-size UI elements. For a shape that should scale with the element (like a perfect circle or pill button regardless of size), you can manually replace the pixel value with 50% in your CSS." }, { question: "Does browser support vary for border-radius?", answer: "No — border-radius has been supported unprefixed in all modern browsers for many years, so the CSS generated here works everywhere without vendor prefixes." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

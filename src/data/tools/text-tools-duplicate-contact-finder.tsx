@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does the tool catch duplicates with different name spellings?", answer: "Yes — matching is based only on phone number and email address, not on the name, so \"Sara Lee\" and \"Sarah Lee\" sharing the same email will still be flagged as a likely duplicate." }, { question: "How are phone numbers compared?", answer: "All non-digit characters (spaces, dashes, dots, parentheses) are stripped before comparing, so \"555-123-4567\" and \"(555) 123-4567\" are correctly treated as the same number." }, { question: "Is my contact list uploaded or saved anywhere?", answer: "No — everything is processed entirely in your browser using client-side JavaScript, and nothing is sent to a server or saved beyond the current page session." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

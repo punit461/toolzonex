@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this a substitute for professional electrical code compliance?", answer: "No. This calculator gives a reasonable engineering estimate based on standard resistance and ampacity figures, but actual wire sizing must follow your local electrical code (such as the NEC), which accounts for insulation type, ambient temperature, conduit fill, and other derating factors. Always consult a licensed electrician for real installations." }, { question: "Why does wire length matter so much?", answer: "Voltage drop increases with the round-trip distance current has to travel, so doubling the length of a circuit run doubles the voltage drop for the same wire and current, often requiring a thicker gauge to compensate." }, { question: "What voltage drop percentage should I use?", answer: "3% is a commonly recommended maximum for branch circuits, and 5% for the combined feeder and branch circuit, though some equipment or codes may specify a different limit." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

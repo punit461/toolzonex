@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this fully validate SQL syntax for my database?", answer: "No — this is a basic structural sanity-checker, not a full SQL parser. It can't validate every rule of every SQL dialect (MySQL, PostgreSQL, SQL Server, etc.) — it only checks for unbalanced parentheses/quotes, the presence of a recognized statement keyword, and a few common typos. Always test real queries against your actual database." }, { question: "Why did it flag my valid query?", answer: "Some warnings are heuristic (like the trailing-comma check) and can trigger on valid, unusual syntax. Treat flagged issues as things worth double-checking, not definitive errors." }, { question: "Is my SQL uploaded anywhere?", answer: "No — checking happens entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Banner Size Calculator?", answer: "The Banner Size Calculator recommends appropriate banner dimensions based on how far away it will typically be viewed from. This tool assumes you already know the dimensions you want and calculates the printing cost for a banner of that size — the two tools are complementary steps in planning a banner." }, { question: "Does price per square foot vary by material?", answer: "Yes — vinyl, mesh, fabric, and other banner materials all have different typical price points per square foot, and finishing options (grommets, hemming, pole pockets) can add to the base cost. Use your specific print shop's quoted rate for the material and finish you want." }, { question: "Does ordering more banners lower the per-square-foot price?", answer: "Often yes in practice — many print shops offer volume discounts at higher quantities. This calculator uses a flat rate you enter, so if your printer offers a bulk discount, adjust the price per square foot to reflect that lower rate." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this delete content that was in a hidden layer?", answer: "No — nothing is deleted from the page content. Content that was hidden by default becomes visible, since there's no longer any layer configuration to hide it." }, { question: "What if my PDF has no layers?", answer: "The tool detects this and tells you there's nothing to remove — no file is altered or downloaded." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

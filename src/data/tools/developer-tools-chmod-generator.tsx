@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What do Owner, Group, and Other mean?", answer: "Every file on a Unix/Linux system has one owning user and one owning group. \"Owner\" permissions apply to that user, \"Group\" permissions apply to other members of the owning group, and \"Other\" permissions apply to everyone else on the system." }, { question: "How does each permission digit get calculated?", answer: "Read is worth 4, Write is worth 2, and Execute is worth 1. Adding up the values for the permissions you want gives the digit for that category — for example Read + Execute (4 + 1) gives 5." }, { question: "Can I type a numeric value instead of clicking checkboxes?", answer: "Yes — type any 3-digit value from 000 to 777 into the numeric field and the checkbox grid updates automatically to match it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

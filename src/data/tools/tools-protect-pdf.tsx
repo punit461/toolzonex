@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "What is the difference between user and owner passwords?", answer: "A user password is required to open the file. An owner password only restricts what viewers can do (print, copy, edit)." }, { question: "Is my file uploaded anywhere?", answer: "No — encryption happens entirely in your browser." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

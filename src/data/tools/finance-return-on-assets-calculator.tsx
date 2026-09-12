@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How does ROA relate to Return on Equity (ROE)?", answer: "ROA measures return on ALL assets a company controls, regardless of whether they were financed with debt or equity. ROE measures return specifically on shareholders' equity — the portion owners actually funded. A leveraged company (one financed heavily with debt) typically shows a higher ROE than ROA, since debt-financed assets aren't counted in the equity base but still contribute to net income." }, { question: "What counts as a good ROA?", answer: "It varies significantly by industry — asset-light businesses like software companies often post ROAs well above 15-20%, while asset-heavy industries like utilities or manufacturing often run in the low single digits. Compare ROA against companies in the same industry rather than against a universal benchmark." }, { question: "Why use total assets instead of just equity?", answer: "Total assets capture everything a company uses to generate income, including assets funded by debt. This makes ROA a useful measure of operational efficiency independent of a company's financing choices, unlike ROE which is affected by leverage." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

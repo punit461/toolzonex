@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "What metadata fields can I see?", answer: "Title, author, subject, creator, producer, keywords, creation date, and modification date." }, { question: "Does this modify my PDF?", answer: "No — this is a read-only viewer. Your original file stays exactly as it is." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

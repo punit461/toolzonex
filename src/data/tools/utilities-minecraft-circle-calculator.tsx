@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why not just use Math.round(radius x sin/cos) for each angle?", answer: "That naive approach samples the circle at fixed angle steps and rounds each point independently, which frequently produces small gaps or duplicate blocks in the outline where the rounding jumps unevenly. The midpoint algorithm instead walks pixel-by-pixel and mathematically guarantees a continuous 8-way symmetric outline with no gaps." }, { question: "Why is the diameter capped at 50 blocks?", answer: "Larger circles produce a much bigger grid to render in the browser, and in practice most in-game circular builds (towers, rings, pools) fall well within this range — for bigger builds, calculate and place several concentric rings." }, { question: "Does this work for building spheres too?", answer: "Not directly — a sphere is built from multiple circles of different radii stacked and layered vertically. You can use this calculator to generate the outline for each individual horizontal ring of a sphere at its corresponding radius." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

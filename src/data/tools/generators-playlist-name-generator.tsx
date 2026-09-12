@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I combine two moods in one playlist name?", answer: "The generator only pulls from one mood's list per click, but nothing stops you from picking your favorite word from two different generated names and combining them yourself." }, { question: "How many names are in each mood's list?", answer: "Each of the 6 moods has 12 hand-written suggestions, and each click shows 3 of them at random." }, { question: "Will I run out of new suggestions?", answer: "Each click reshuffles the full list for that mood, so you can keep regenerating to see different combinations of the 12 names." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

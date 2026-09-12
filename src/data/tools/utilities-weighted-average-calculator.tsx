@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between a weighted average and a simple average?", answer: "A simple average treats every value equally, dividing the sum of values by the count of values. A weighted average instead gives each value an explicit importance (its weight), so values with larger weights pull the result toward themselves more strongly." }, { question: "Do the weights need to add up to 100 or 1?", answer: "No — the formula divides by the total weight you enter, so it works correctly whether your weights are percentages, counts, dollar amounts, or any other consistent unit, regardless of what they sum to." }, { question: "What happens if a weight is zero?", answer: "A row with a weight of zero is effectively excluded from the result, since it contributes nothing to either the weighted sum or the total weight. Negative weights aren't meaningful for a typical weighted average and should be avoided." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will this notify me when a birthday arrives?", answer: "No — this is a static, sorted reference list, not a reminder or notification system. It has no backend and can't send alerts; you'll need to check back on the page yourself or use a calendar app for actual notifications." }, { question: "Is my list saved between visits?", answer: "No — the list only exists in your browser's memory for the current visit and is cleared on reload, so re-enter it or keep a separate copy if you'll need it again later." }, { question: "What happens on someone's actual birthday?", answer: "If today is exactly their birthday, the days-until value shows \"Today!\" instead of a day count." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

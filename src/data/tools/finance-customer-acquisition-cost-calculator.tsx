@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What counts as \"sales and marketing spend\"?", answer: "Typically this includes advertising spend, sales and marketing salaries, tools and software, and any agency or contractor fees directly tied to acquiring new customers during the period you're measuring — not general overhead unrelated to acquisition." }, { question: "What's a healthy LTV:CAC ratio?", answer: "A commonly cited guideline is that a ratio of 3:1 or better is healthy — meaning a customer is worth at least three times what it costs to acquire them. A ratio below that can signal spend is too high relative to the value customers bring, while a very high ratio can sometimes mean a company is under-investing in growth." }, { question: "Do I need to know LTV to use this calculator?", answer: "No — the LTV field is optional. Leave it blank or at zero to see just the CAC figure; entering an LTV estimate additionally shows the LTV:CAC ratio for context." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

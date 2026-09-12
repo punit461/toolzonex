@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Icebreaker Question Generator?", answer: "This Conversation Starter Generator is built for general, casual one-on-one or small social settings like dates, meetups, and family gatherings. The Icebreaker Question Generator is specifically framed for GROUP settings where people are meeting for the first time, like team meetings or classrooms." }, { question: "Can the same question appear twice in a row?", answer: "No — the generator always picks a different question than the one currently shown, so clicking Regenerate always gives you something new." }, { question: "Are these questions appropriate for any audience?", answer: "Yes — all prompts are deliberately kept light, positive, and broadly appropriate for casual social situations across ages and contexts." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

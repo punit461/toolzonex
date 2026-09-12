@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this detect and delete the page-number text itself?", answer: "No — it covers the region with an opaque white rectangle. The underlying text isn't deleted, just visually hidden underneath it." }, { question: "Will it also cover other footer content in that spot?", answer: "Yes — anything within the selected rectangle gets covered too, since the tool can't distinguish a page number from other nearby text." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

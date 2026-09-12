@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I convert leetspeak back to normal text?", answer: "Not with this tool — it's one-way, since number substitutions aren't always reversible unambiguously." }, { question: "Can I use this as a leet name generator for my username?", answer: "Yes — type your name (or any word) into the input box and convert it; the result is a ready-to-use 1337-style name or gamertag." }, { question: "Why does the same input give different output each time?", answer: "The random-case option randomizes on every conversion — turn it off for consistent, repeatable output." }, { question: "Is my text uploaded anywhere?", answer: "No — conversion happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

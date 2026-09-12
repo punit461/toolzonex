@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the LED Wattage Calculator?", answer: "The LED Wattage Calculator totals the combined power draw of many LEDs or an entire LED strip. This tool instead works with a single appliance and applies the basic Ohm's Law power formula (watts = volts × amps) to solve for whichever one of the three values you don't already know." }, { question: "How is this different from the Inverter Size Calculator?", answer: "The Inverter Size Calculator adds up the wattage of a whole list of appliances to size a backup power inverter, including a safety margin. This tool is a simple single-appliance electrical calculation — useful for finding one appliance's wattage before adding it to an inverter sizing list." }, { question: "Does this account for power factor on motor-driven appliances?", answer: "No — this uses the basic resistive-load power formula (watts = volts × amps), which is accurate for purely resistive loads like heaters and incandescent lighting. Motor-driven appliances have a power factor below 1, so their real wattage may be somewhat lower than volts × amps suggests." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

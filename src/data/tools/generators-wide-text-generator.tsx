@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will this wide text work everywhere I paste it?", answer: "In most modern apps and browsers, yes, since these are standard Unicode characters. Some older systems may not render every character correctly." }, { question: "Does this work the same as the Fancy Text Generator?", answer: "Both tools remap your text to different Unicode characters, but this one focuses specifically on the full-width forms that create a wide, spaced-out look." }, { question: "Does it convert numbers and punctuation too?", answer: "Yes — letters, numbers, and most common punctuation are all converted to their full-width Unicode equivalents." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this an approximation, or does it produce exact output?", answer: "It's exact — this tool runs the real TypeScript compiler's transpileModule function, the same type-stripping logic TypeScript itself uses, rather than a hand-written or best-effort approximation." }, { question: "Does this type-check my code first?", answer: "No — transpileModule transpiles a single file in isolation without full type-checking, so it will happily strip types from code that wouldn't actually pass tsc. If you need full type-checking, run your project through your normal TypeScript build instead." }, { question: "Is my TypeScript uploaded anywhere?", answer: "No — transpilation happens entirely client-side in your browser, using the TypeScript compiler loaded on demand. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

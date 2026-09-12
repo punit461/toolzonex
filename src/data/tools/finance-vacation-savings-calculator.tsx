@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Travel Budget Calculator?", answer: "The Travel Budget Calculator estimates what a trip will cost in total, based on trip length and per-day spending. This calculator instead takes a target cost — however you arrived at it — and works out the monthly savings plan needed to afford it by a given date. Use the Travel Budget Calculator first to estimate your target cost, then use this one to plan how to save for it." }, { question: "What if I can't save the required monthly amount?", answer: "Either push back the trip date to spread the same savings goal over more months, or reduce your target vacation cost by trimming the budget in a category like lodging or activities." }, { question: "Should I account for price increases like inflation or flight costs rising?", answer: "This calculator uses a fixed target cost, so if you expect prices to rise before your trip, it's worth padding your target cost estimate by a small buffer (5-10%) rather than using today's exact prices." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do MM/DD/YYYY and DD/MM/YYYY matter so much?", answer: "The same numeric date can mean two different days depending on the convention — 03/04/2026 is March 4th in the US format but April 3rd in the international format — which is exactly why seeing them side by side helps avoid mistakes." }, { question: "What is ISO 8601 format used for?", answer: "YYYY-MM-DD is an international standard designed to sort correctly as plain text and avoid regional ambiguity, which is why it's the standard format for databases, APIs, log files, and filenames." }, { question: "Does this account for time zones?", answer: "No — the date you pick is treated as a calendar date only, with no time-of-day or time zone component, so the formatted output is the same regardless of your location." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

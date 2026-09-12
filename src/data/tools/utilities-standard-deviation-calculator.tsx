@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "When should I use population vs. sample standard deviation?", answer: "Use population standard deviation when your data represents the entire group you care about. Use sample standard deviation when your data is a subset of a larger population — the n−1 correction (Bessel's correction) compensates for the bias inherent in estimating from a sample." }, { question: "What does a high or low standard deviation mean?", answer: "A low standard deviation means data points tend to be close to the mean (consistent). A high standard deviation means data points are spread out over a wider range (variable)." }, { question: "What units is standard deviation in?", answer: "Standard deviation is expressed in the same units as the original data. If your data is in meters, the standard deviation is also in meters." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

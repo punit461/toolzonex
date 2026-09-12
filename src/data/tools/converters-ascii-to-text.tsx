@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What format should the ASCII codes be in?", answer: "Enter decimal (base-10) numbers separated by spaces or commas, for example 72 101 108. Codes outside the standard ASCII/Unicode range will show an error." }, { question: "Does this only work with standard ASCII (0-127)?", answer: "No — it also accepts extended Unicode code points beyond 127, so codes for accented letters, symbols, and other characters decode correctly too." }, { question: "Does this tool also convert text to ASCII codes?", answer: "This page is decode-only, for a simpler, focused experience. Use our separate Text to ASCII tool if you need to convert plain text into ASCII code values instead." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

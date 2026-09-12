@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a good VO2 max score?", answer: "A 'good' VO2 max varies by age and gender. For a 30-year-old male, above 42 mL/kg/min is good and above 48 is excellent." }, { question: "Can I improve my VO2 max?", answer: "Yes — consistent aerobic training (running, cycling, swimming) at moderate to high intensity can significantly improve VO2 max. HIIT is particularly effective." }, { question: "Is the resting HR method accurate?", answer: "The resting HR method provides a reasonable estimate but is less precise than a laboratory treadmill test. It works best as a quick, non-invasive screening tool." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

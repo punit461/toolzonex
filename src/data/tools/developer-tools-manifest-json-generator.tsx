@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's the difference between name and short_name?", answer: "name is the full app name shown on install prompts and app listings, while short_name is a shorter label used where space is limited, such as under a home-screen icon." }, { question: "Which display mode should I pick?", answer: "standalone is the most common choice for app-like experiences; fullscreen hides even the status bar for immersive apps like games; minimal-ui keeps a few browser controls; browser opens like a normal browser tab." }, { question: "Do I need more icon sizes than 192x192 and 512x512?", answer: "Those two cover the vast majority of PWA install and splash-screen requirements across platforms, though some platforms may use additional sizes or maskable icon variants for finer visual control." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

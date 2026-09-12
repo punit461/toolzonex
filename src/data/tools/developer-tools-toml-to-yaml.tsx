@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this handle arrays of tables and nested tables correctly?", answer: "Yes — standard TOML constructs like arrays of tables ([[items]]), nested tables, and inline tables convert reliably for typical configuration files. Very unusual or deeply exotic TOML structures are rare in practice, but it's worth a quick visual check of the output for anything highly nonstandard." }, { question: "How are TOML dates and times represented in YAML?", answer: "TOML date and datetime values are serialized using YAML's native timestamp representation, so tools that read the resulting YAML will typically parse them back into date objects automatically." }, { question: "Is my TOML uploaded anywhere?", answer: "No — parsing and conversion happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

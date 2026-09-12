@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does gravel density vary by type?", answer: "Yes — crushed stone, pea gravel, and river rock all pack and weigh differently depending on particle size, shape, and moisture content, typically somewhere in the 95-115 lb/ft³ (1,500-1,800 kg/m³) range. Adjust the density field above if your supplier gives you a specific figure for your gravel type." }, { question: "Should I buy extra gravel?", answer: "It's common practice to add 5-10% extra to account for compaction, uneven ground, and spillage during handling, especially for larger driveway or path projects." }, { question: "How do I convert cubic feet to bags of gravel?", answer: "Bag sizes vary by brand, but a common 0.5 cubic foot bag is a widely sold size. Divide your total cubic feet by the coverage per bag listed on your chosen product to estimate how many bags to buy." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

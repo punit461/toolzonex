@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Reading Progress Calculator?", answer: "The Reading Progress Calculator projects a finish date forward from your current, already-established reading pace. This tool works the opposite direction — it starts from a deadline and works backward to tell you the pace you need to hit it." }, { question: "What if the required pace seems unrealistic?", answer: "If the pages-per-day figure is much higher than you can comfortably manage, consider whether the deadline is flexible, or plan to read in longer sessions on days when you have more free time to average out to the required pace." }, { question: "Should I count the last day as a full reading day?", answer: "That's up to you — if your deadline is the morning of a certain date, you may want to subtract a day from your remaining days to be safe, rather than assuming you get a full extra day right up to the deadline." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

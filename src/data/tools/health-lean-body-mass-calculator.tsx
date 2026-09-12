@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a healthy lean body mass?", answer: "Healthy lean mass varies by gender, age, and training; it's typically about 75–88% of body weight for men and 68–82% for women." }, { question: "Is the Boer formula accurate?", answer: "It's a widely used estimate that works well for average adults, but athletes and very muscular or obese individuals may be underrepresented. Use DEXA or calipers for high precision." }, { question: "What's the difference between lean body mass and muscle mass?", answer: "Lean body mass includes everything that isn't fat — muscle, bone, organs, and water. Muscle mass is only part of that." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

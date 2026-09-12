@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the difference between permutations and combinations?", answer: "Permutations count arrangements where order matters (ABC is different from BCA), while combinations count selections where order doesn't matter (ABC and BCA are considered the same group). Since every combination of r items can be arranged in r! different orders, nPr is always r! times larger than nCr for the same n and r." }, { question: "What does 0! (zero factorial) equal?", answer: "0! is defined as 1 by convention. This makes formulas like nPr work correctly even when r equals n (choosing and arranging every item), since (n − n)! = 0! = 1." }, { question: "What happens if r is greater than n?", answer: "It's not possible to arrange more items than exist in the set, so nPr is undefined when r > n. This calculator shows an error message in that case instead of a numeric result." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

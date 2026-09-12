@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why should I add a waste percentage?", answer: "Real-world cuts rarely use 100% of a sheet — layout constraints, damaged edges, and cutting around obstacles all create offcuts that can't be reused. A 10% allowance is a common starting point for straightforward rectangular layouts; more complex layouts with lots of cuts may need 15-20%." }, { question: "Can I use this for other sheet materials like OSB or drywall?", answer: "Yes — the calculation only depends on your sheet's length and width, so it works for any full-sheet building material sold in standard rectangular sizes, not just plywood. Just enter that material's sheet dimensions." }, { question: "Why does the result always round up to a whole sheet?", answer: "Suppliers sell plywood in whole sheets, not fractional pieces, so the calculator always rounds up (ceiling) rather than rounding to the nearest whole number — you can't buy 10.3 sheets, so it rounds to 11." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

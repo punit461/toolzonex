@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Unicode Character Finder?", answer: "Unicode Character Finder is a keyword-based search — you type a word like \"heart\" and it searches across a curated list by name. This Emoji Category Browser is organized for BROWSING instead: you pick a standard Unicode category tab and scroll through what's in it, without needing to know a search term at all." }, { question: "Does this include every emoji in each category?", answer: "No — each category shows a genuinely useful selection of 15-25 popular emoji rather than the complete Unicode emoji set, which numbers in the thousands." }, { question: "Does clicking an emoji copy it automatically?", answer: "Yes — clicking any emoji copies it directly to your clipboard and shows a brief confirmation." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

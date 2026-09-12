@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Rainfall Collection Calculator?", answer: "The Rainfall Collection Calculator estimates the total volume of water you could harvest into a rain barrel or cistern from a roof over time. This tool answers a different question — whether your gutter system's size can adequately drain your roof during a heavy rain event without overflowing." }, { question: "What rainfall intensity should I design for?", answer: "Many gutter sizing guidelines use a 1 in/hr storm as a standard reference point, but check your local climate data for a more accurate design storm intensity — areas prone to intense downpours may need to plan for a higher rate." }, { question: "Are these gutter capacity figures exact for every manufacturer?", answer: "No — these are reasonable illustrative figures consistent with commonly published K-style gutter sizing tables. Actual capacity varies by gutter profile, slope, and number/placement of downspouts, so consult your gutter manufacturer's specifications for a precise design." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

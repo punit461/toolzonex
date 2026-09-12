@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What are the common pressure units?", answer: "Pascal (Pa) is the SI unit; bar and psi are common in engineering and tire gauges; atm is standard for weather and chemistry; mmHg (torr) is used for blood pressure and vacuum." }, { question: "How do I convert bar to psi?", answer: "1 bar ≈ 14.5038 psi. A 2.5 bar tire pressure is about 36 psi. The converter handles the exact factor behind the scenes." }, { question: "What is the difference between gauge and absolute?", answer: "Absolute pressure includes atmospheric pressure on top of gauge readings. This converter converts absolute values; gauge-to-absolute conversion needs adding or subtracting ~1 atm." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

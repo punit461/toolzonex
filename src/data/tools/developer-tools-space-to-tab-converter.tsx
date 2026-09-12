@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this affect non-indentation whitespace?", answer: "No — only leading whitespace at the start of each line (indentation) is converted; spaces used elsewhere in a line, such as between words or arguments, are left untouched." }, { question: "What happens with mixed leading spaces and tabs?", answer: "The tool processes the leading whitespace left to right, converting runs of spaces to tabs (or vice versa) while preserving any existing tabs and leftover spaces that don't make a full group." }, { question: "Can I convert in both directions?", answer: "Yes — use the toggle to switch between Spaces to Tabs and Tabs to Spaces at any time using the same spaces-per-tab setting." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

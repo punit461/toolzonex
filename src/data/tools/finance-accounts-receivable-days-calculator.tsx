@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What's a good DSO?", answer: "It depends heavily on your industry and standard payment terms, but a DSO close to or below your stated payment terms (e.g., 30-45 days for net-30 or net-45 terms) is generally considered healthy. A DSO significantly higher than your terms suggests collection problems." }, { question: "Should I use total sales or only credit sales?", answer: "Use only credit sales — cash sales are collected immediately and shouldn't be included, since DSO specifically measures the collection cycle for sales made on credit." }, { question: "How does DSO relate to the Accounts Payable Days Calculator?", answer: "DSO measures how fast you collect from customers, while Days Payable Outstanding (DPO) measures how long you take to pay your own suppliers. Comparing the two together shows your overall cash conversion timing — see the Accounts Payable Days Calculator for the DPO side." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this remove vector graphics too?", answer: "No — only raster image XObjects are removed. Vector paths, lines, and text remain intact." }, { question: "Is my file uploaded anywhere?", answer: "No — all processing happens in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why might my actual cooking time be different?", answer: "Actual cooking time varies by your exact oven or appliance (ovens can run hot or cold by 25°F or more), the starting temperature of the food (refrigerated vs. room temperature), the shape and thickness of the item, whether it's stuffed, and altitude. Treat these numbers as a planning estimate, not a guarantee." }, { question: "How do I know meat and poultry are actually done?", answer: "Always use a food thermometer to confirm doneness for meat and poultry — don't rely on time alone for food safety. Common safe minimum internal temperatures are 165°F for poultry, 145°F for whole cuts of beef/pork (with a rest time), and 160°F for ground meats. Check your local food safety guidelines for the most current recommendations." }, { question: "Does this account for resting time after cooking?", answer: "No — the estimates above are active cooking time only. Many meats (especially roasts and whole poultry) benefit from resting 10-20 minutes after cooking before carving, which isn't included in these numbers." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

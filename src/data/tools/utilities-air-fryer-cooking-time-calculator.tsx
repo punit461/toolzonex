@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is the -25°F and 20% time reduction exact for every air fryer?", answer: "No — this is a commonly used starting-point guideline, not an exact science. Actual air fryer models vary significantly in wattage, basket size, and airflow design, so always check food for doneness rather than relying on the adjusted numbers alone." }, { question: "Should I preheat the air fryer?", answer: "Many air fryers benefit from a short preheat (2-5 minutes) for the most accurate results, similar to a conventional oven, though some recipes and models skip this step. Check your air fryer's manual for its specific recommendation." }, { question: "Why does the air fryer need less time at a similar temperature?", answer: "Air fryers use a small, enclosed chamber with a powerful fan that circulates hot air directly around the food, transferring heat much faster and more evenly than the larger air volume in a conventional oven." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

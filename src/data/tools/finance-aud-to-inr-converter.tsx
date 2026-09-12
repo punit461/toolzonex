@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is 1 Australian dollar in Indian rupees?", answer: "One Australian Dollar is typically worth somewhere in the range of ₹53–₹58, depending on current market conditions. Use the calculator above for today's exact live rate." }, { question: "How much is A$100 in INR?", answer: "At an example rate of ₹56 per A$1, A$100 converts to about ₹5,600. Enter 100 in the calculator above to see today's exact figure." }, { question: "How current is the AUD to INR exchange rate?", answer: "Rates are sourced from the European Central Bank's daily reference rates, typically updated once each business day. They're accurate for estimates, but banks and money-transfer services apply their own rate plus a fee." }, { question: "Can I convert INR to AUD on this page too?", answer: "Yes — tap the swap icon to flip the direction to INR to AUD." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

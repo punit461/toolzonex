@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this flip every page?", answer: "Yes — the horizontal flip is applied to all pages in the file." }, { question: "Will text become unreadable?", answer: "The text itself is mirrored, so left-to-right languages will appear backwards. Use this to correct a page that was already reversed." }, { question: "Is my file uploaded anywhere?", answer: "No — flipping happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

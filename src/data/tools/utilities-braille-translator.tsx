@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this Grade 1 or Grade 2 Braille?", answer: "This is Grade 1 (uncontracted) Braille, where each letter maps to a single Braille cell. Grade 2 Braille uses contractions and shorthand for common words, which this tool does not implement." }, { question: "Why do some characters not translate?", answer: "Only standard English letters, digits, and basic punctuation have direct Braille equivalents in this mapping. Special characters outside this set are passed through unchanged." }, { question: "Can I paste Braille text to translate back?", answer: "Yes — switch the direction toggle to 'Braille → English' and paste or type Braille Unicode characters to decode them." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this replace two separate generators?", answer: "Yes — this single tool covers both a Good Morning Message Generator and a Good Night Message Generator, switchable with one toggle." }, { question: "How many messages does each mode draw from?", answer: "Each mode — morning and night — has its own hand-written collection of 12 messages, so there is plenty of variety." }, { question: "Can I personalize the message with a name?", answer: "Not directly in this tool, but you can copy the generated message and add a name yourself before sending it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

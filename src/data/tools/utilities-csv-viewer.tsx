@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this upload my data?", answer: "No — everything is processed entirely in your browser. Your CSV data never leaves your device." }, { question: "What CSV formats are supported?", answer: "Standard comma-delimited CSV with optional quoted fields. Tab-separated and other delimiter formats may not parse correctly." }, { question: "Can I sort the data?", answer: "Yes — click any column header to sort ascending or descending. Numeric columns sort numerically." }, { question: "Is there a row limit?", answer: "The viewer handles thousands of rows, but very large files may slow down the browser. For best performance, keep files under 10,000 rows." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

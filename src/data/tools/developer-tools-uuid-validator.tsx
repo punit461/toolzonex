@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is the UUID version detected?", answer: "The version number is encoded as the first hex digit of the third group (position 15 of the string). For example, in xxxxxxxx-xxxx-4xxx-xxxx-xxxxxxxxxxxx, the leading \"4\" marks it as version 4." }, { question: "What's the difference between a UUID and a GUID?", answer: "They're effectively the same thing — GUID (Globally Unique Identifier) is Microsoft's name for the same 128-bit identifier format standardized as UUID in RFC 4122." }, { question: "Is my UUID uploaded anywhere?", answer: "No — validation happens entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

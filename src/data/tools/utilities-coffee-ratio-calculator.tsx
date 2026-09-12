@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What ratio should I start with?", answer: "1:16 is a widely used starting point for drip and pour-over coffee. Use 1:15 for a stronger cup or 1:17-1:18 for a milder one, then adjust to taste." }, { question: "Does the ratio change for espresso?", answer: "Yes — espresso uses much tighter ratios (commonly around 1:2), well outside the drip-coffee presets here. This calculator is aimed at drip, pour-over, and immersion brewing ratios." }, { question: "Is 1 gram of water really equal to 1 milliliter?", answer: "Very close — water's density is almost exactly 1g/ml at typical brewing temperatures, so using a kitchen scale in grams for both coffee and water gives you an accurate, repeatable measurement without needing a separate liquid measuring cup." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

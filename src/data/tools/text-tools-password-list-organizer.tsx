@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this tool store or save my passwords anywhere?", answer: "No — absolutely nothing is saved. It doesn't write to local storage, cookies, a database, or any server; the parsed table exists only in this browser tab's memory and vanishes the moment you refresh or close the page." }, { question: "Is this safe to use for real passwords?", answer: "This tool only reformats text that stays on your device during the current session — it never transmits data anywhere. That said, it is not a substitute for a dedicated, encrypted password manager application, which is the appropriate tool for actually storing and securing your passwords." }, { question: "What if my list uses a different format than site, username, password?", answer: "The tool always reads the first field as the site name, the second as the username, and the third as the password, based on your chosen delimiter — reorder your source list to match this structure before pasting if it differs." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

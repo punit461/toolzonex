@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these compliments appropriate to share with anyone?", answer: "Yes — every compliment is written to be warm, genuine, and appropriate for a general audience, whether you're sharing it with a friend, family member, or coworker." }, { question: "How many compliments does this generate from?", answer: "The tool draws from a curated list of over 30 compliments spread across the three categories." }, { question: "Can I get the same compliment twice in a row?", answer: "Yes — each click picks independently from the selected category's list, so repeats are possible." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

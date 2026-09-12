@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I add maintenance tasks specific to my bike model?", answer: "Yes — use the \"Add Custom Task\" field to add anything, and it will appear in the Other section of your final checklist." }, { question: "Is my checklist saved for next time?", answer: "No — the list resets when you reload the page, since it's generated fresh in your browser each visit rather than stored anywhere." }, { question: "Why are tasks split by frequency instead of by bike part?", answer: "Organizing by how often each task needs doing — before every ride, monthly, or seasonally — makes it easier to build a realistic maintenance routine you'll actually stick to." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

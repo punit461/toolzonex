@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is Code128 different from EAN-13?", answer: "EAN-13 only encodes 13 numeric digits and is used for retail products. Code128 can encode any ASCII text — letters, numbers, and punctuation — making it far more flexible for logistics and inventory use." }, { question: "Is there a length limit?", answer: "There's no hard limit, but very long text produces a wide, dense barcode that may be harder for some scanners to read reliably — shorter codes scan more consistently." }, { question: "Is my data uploaded anywhere?", answer: "No — the barcode is generated entirely client-side in your browser using the jsbarcode library." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

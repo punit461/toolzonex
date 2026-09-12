@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these water ratios and times exact for every stove or rice cooker?", answer: "They're standard published starting points for stovetop cooking. Rice cookers, altitude, pot type, and even the age of the rice can shift the ideal ratio and time slightly, so adjust based on your own results over a few batches." }, { question: "Why does rice roughly triple in volume when cooked?", answer: "Rice grains absorb water during cooking and swell significantly — white, basmati, and jasmine rice typically expand to about 3 times their dry volume, while brown rice expands somewhat less due to its intact bran layer." }, { question: "Should I rinse rice before cooking?", answer: "Rinsing removes surface starch and is commonly recommended for basmati and jasmine rice to keep grains separate and fluffy; it's optional for white and brown rice, though rinsing generally doesn't hurt." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

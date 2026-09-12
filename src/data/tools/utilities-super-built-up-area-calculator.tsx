@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Built-up Area Calculator?", answer: "The Built-up Area Calculator stops at built-up area (carpet area plus wall thickness and balconies). This Super Built-up Area Calculator goes one step further, adding a common-area factor for shared building spaces — the figure actually used to price most apartments in Indian real estate listings." }, { question: "What's a typical common-area factor?", answer: "Most developments use somewhere between 15% and 30%, depending on how much shared amenity space (lobbies, clubhouses, gyms) the building offers. Larger, amenity-heavy developments tend toward the higher end." }, { question: "Why does the usable carpet area feel so much smaller than the price I'm quoted?", answer: "Because pricing is based on super built-up area, which can be 25–50% larger than the actual usable carpet area once both the loading factor and common-area factor are applied. Always ask for the carpet area figure directly to know your true usable space." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

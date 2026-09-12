@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from an LED resistor calculator?", answer: "An LED resistor calculator sizes the current-limiting resistor needed for a single LED circuit using Ohm's Law. This tool instead totals up power consumption across many LEDs or a whole strip, which is useful for power supply sizing and estimating running costs rather than circuit design." }, { question: "Where do I find watts-per-meter for my LED strip?", answer: "It's usually printed on the strip's packaging or spec sheet — common values range from about 4.8W/m for basic strips to 14.4W/m or higher for dense, high-brightness strips. Check your specific product for an accurate figure." }, { question: "Does this account for power supply efficiency losses?", answer: "No — this calculates the LEDs' own power draw. A power supply or driver isn't 100% efficient, so actual wall-outlet power consumption will be somewhat higher than the LED wattage alone, typically by 10-20% depending on the driver." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Password Generator?", answer: "The Password Generator creates longer, mixed-character passwords that can include uppercase and lowercase letters, numbers, and symbols — built for account security. This Random PIN Generator is strictly numeric and shorter (4-12 digits), matching the format required by PIN-style use cases like device unlock codes, safe combinations, or numeric access codes, where only digits are accepted." }, { question: "Is this PIN generator secure?", answer: "Yes — it uses crypto.getRandomValues, the same cryptographically secure randomness source used by security-focused tools, rather than Math.random(), which is not suitable for anything security-related. Everything runs locally in your browser; no PIN is ever sent anywhere." }, { question: "What's the most secure PIN length?", answer: "Longer is generally more secure against guessing — a 4-digit PIN has only 10,000 possible combinations, while a 6-digit PIN has 1,000,000. Use the longest PIN length your device or system allows for better protection." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

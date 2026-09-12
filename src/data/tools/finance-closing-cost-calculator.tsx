@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How accurate is the closing cost percentage?", answer: "This is a rough estimate only — actual closing costs vary by state, lender, loan type, and even the specific title company or attorney involved. Your lender is required to provide an official Loan Estimate with itemized costs once you apply for a mortgage." }, { question: "What's typically included in closing costs?", answer: "Common items include loan origination fees, appraisal and inspection fees, title search and title insurance, recording fees, and prepaid items like property taxes and homeowners insurance held in escrow." }, { question: "Do closing costs differ for buyers and sellers?", answer: "Yes — this calculator estimates buyer-side closing costs. Sellers typically pay their own separate costs, most notably real estate agent commissions, which are not included here." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the separate BMR and TDEE calculators on this site?", answer: "Functionally, it uses the same Mifflin-St Jeor formula and the same activity multipliers as our standalone BMR Calculator and TDEE Calculator. The difference is convenience: instead of calculating your BMR on one page and then re-entering your details on a second page to get your TDEE, this combined tool shows both numbers together from a single set of inputs." }, { question: "What does TDEE stand for?", answer: "TDEE stands for Total Daily Energy Expenditure — the total number of calories your body burns in a full day, combining your resting metabolism (BMR) with all activity, exercise, and digestion." }, { question: "How is TDEE different from BMR?", answer: "BMR is calories burned at complete rest; TDEE (Total Daily Energy Expenditure) adds your activity level on top, giving a more realistic picture of your actual daily calorie burn." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

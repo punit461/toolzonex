@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this work with relative URLs?", answer: "No — the browser's URL object requires a fully-qualified URL with a protocol (like https:// or ftp://). Relative paths on their own can't be parsed this way." }, { question: "Does it decode percent-encoded characters?", answer: "Query parameter values are decoded automatically, since they're read via the URL object's searchParams API, which handles percent-decoding for you." }, { question: "Is my URL sent anywhere?", answer: "No — parsing happens entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

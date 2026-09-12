@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Do I need the owner password?", answer: "If the PDF has an owner password, you must provide it. If no owner password was set, restrictions can be removed directly." }, { question: "Is my file uploaded anywhere?", answer: "No — all processing happens in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

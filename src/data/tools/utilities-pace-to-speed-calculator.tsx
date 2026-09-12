@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is pace different from speed?", answer: "Pace expresses how long it takes to cover one unit of distance (like 8 minutes per mile), while speed expresses how much distance is covered in one unit of time (like 7.5 miles per hour). They're inversely related — a faster pace (smaller number) means a higher speed, and vice versa." }, { question: "Does it matter whether I use miles or kilometers?", answer: "The math is identical either way — only the label changes. Just make sure the pace and speed you're comparing use the same distance unit, since a mile pace and a kilometer pace aren't directly comparable without converting." }, { question: "What if my seconds value is 60 or higher?", answer: "Enter seconds between 0 and 59 and carry any extra time into the minutes field instead — for example, enter a pace of 8 minutes 75 seconds as 9 minutes 15 seconds." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

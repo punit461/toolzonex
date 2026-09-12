@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is SHA-512 different from SHA-256?", answer: "Both belong to the SHA-2 family and use a similar design, but SHA-512 operates on 64-bit words instead of 32-bit words and produces a 512-bit (128 hex character) digest instead of a 256-bit (64 hex character) one. On 64-bit hardware, SHA-512 can actually run faster than SHA-256 despite the longer output." }, { question: "Is SHA-512 secure for passwords?", answer: "No — like SHA-256, SHA-512 is designed to be fast, which makes it a poor fit for password storage on its own. Use a slow, salted algorithm such as bcrypt or Argon2 for passwords instead." }, { question: "Is my text uploaded anywhere?", answer: "No — hashing happens entirely client-side using the browser's native Web Crypto API. Nothing you type is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

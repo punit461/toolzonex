@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will my text still be selectable afterward?", answer: "No — every page is flattened into an image as part of this process, so the resulting PDF has no selectable, searchable, or copyable text." }, { question: "Will this work on colored or light-colored text?", answer: "Not well. The tool identifies \"text\" purely by brightness, so it only reliably targets dark text — light gray or colored text may be missed, or unrelated dark image content may get recolored instead." }, { question: "Can I recolor only some text, not all of it?", answer: "No — the color shift is applied uniformly to every sufficiently dark pixel on every page; there's no way to target specific words or sections." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

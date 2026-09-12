@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a 529 plan?", answer: "A 529 plan is a US tax-advantaged savings account specifically designed for education expenses. Rules, contribution limits, and state-specific tax benefits vary, so this tool doesn't provide specific tax or legal advice — consult a financial advisor for guidance tailored to your situation." }, { question: "How accurate are the college cost presets?", answer: "The in-state public and private presets are rough ballpark figures for a 4-year degree at today's prices, meant as a starting point. Actual costs vary widely by school and will likely rise with inflation by the time your child enrolls — use the custom option to enter your own more specific estimate." }, { question: "What if my child is already close to college age?", answer: "With less time to save, the required monthly contribution will be noticeably higher for the same target cost — the calculator will still compute it, but you may also want to consider adjusting your cost expectations or savings timeline." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

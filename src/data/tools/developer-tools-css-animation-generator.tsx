@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why doesn't my animation restart when I change settings?", answer: "Some browsers won't replay a CSS animation just because its properties changed if it's already running the same keyframe name — click \"Replay Animation\" to force a fresh restart in the preview." }, { question: "Can I combine multiple keyframe effects?", answer: "Yes — copy this generator's output and add more properties inside the same @keyframes percentage steps (like combining opacity and transform together)." }, { question: "Is my data uploaded anywhere?", answer: "No — the CSS is generated and previewed entirely client-side in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

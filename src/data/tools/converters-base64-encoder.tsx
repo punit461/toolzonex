@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is Base64 encoding secure?", answer: "No — Base64 is an encoding, not encryption. It's trivially reversible by anyone, so it should never be used to protect sensitive data; it's meant only for representing binary or text data safely as plain text." }, { question: "Does this support special characters and emoji?", answer: "Yes — the input is UTF-8 encoded before conversion, so accented letters, symbols, and emoji encode and decode correctly." }, { question: "Does this tool also decode Base64?", answer: "This page is encode-only, for a simpler, focused experience. Use our separate Base64 Decoder tool if you need to convert a Base64 string back into plain text." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I edit the text on each slide afterward?", answer: "No — each slide contains a single image of the original page, not editable text boxes or shapes. To get editable text, use the PDF to Text tool separately and rebuild your slide content manually." }, { question: "Is the output a real .pptx file?", answer: "Yes — it's a genuinely valid PowerPoint Open XML presentation that opens natively in PowerPoint, Google Slides, and LibreOffice Impress, not a renamed image archive." }, { question: "Will the slide look exactly like the PDF page?", answer: "Visually, yes — each page is rendered at high resolution and fit to the slide, preserving its exact appearance." }, { question: "Is my file uploaded anywhere?", answer: "No — rendering and presentation creation both happen entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

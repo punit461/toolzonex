@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is volumetric (dimensional) weight, and why does it exist?", answer: "Volumetric weight estimates how much space a shipment takes up relative to its actual weight. Carriers use it because a truck, plane, or container has limited space — a large, light box can cost the carrier more in lost capacity than a small, heavy one of the same actual weight, so billing on whichever weight is greater keeps pricing fair to the carrier." }, { question: "Why do the two common divisors (5000 and 139) differ?", answer: "They're the same underlying conversion factor expressed in different unit systems — 5000 is used with centimeters and kilograms, while 139 is the equivalent factor for inches and pounds. Some carriers and freight modes (air vs. ocean vs. road) may use other divisors, so always confirm the exact figure with your carrier." }, { question: "How is this different from a small-parcel courier calculator?", answer: "A courier or small-parcel calculator usually just multiplies actual weight and distance by a flat or tiered rate. Freight billing specifically accounts for dimensional weight because freight shipments are often bulkier relative to their weight — this calculator adds that volumetric-weight comparison, which a simple parcel calculator doesn't need." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

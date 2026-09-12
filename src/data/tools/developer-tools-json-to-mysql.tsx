@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this tool fully normalize my data?", answer: "No — proper normalization (join tables for arrays, choosing the right key types, indexes, and so on) is out of scope for an automated converter. Nested objects get their own table with a clearly commented foreign-key relationship, and arrays of primitives get a SQL comment flagging that a join table would be needed, so you can finish the design by hand." }, { question: "How are column types chosen?", answer: "Strings map to VARCHAR(255) unless they look like an ISO-8601 timestamp, in which case they map to DATETIME. Whole numbers map to BIGINT, decimals map to DOUBLE, and booleans map to BOOLEAN." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and SQL generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

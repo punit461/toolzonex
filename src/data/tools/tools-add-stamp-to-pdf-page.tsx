@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from a watermark?", answer: "A stamp is typically larger, more opaque, and placed diagonally across the page center — it is designed to be highly visible rather than subtle." }, { question: "Can I use a different stamp on different pages?", answer: "Not yet — the same stamp text is applied to every page in the current version." }, { question: "Is my file uploaded anywhere?", answer: "No — stamping happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

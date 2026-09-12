@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What counts as a \"stop word\" here?", answer: "A curated list of roughly 120 of the most common English function words — articles, pronouns, prepositions, conjunctions, and common auxiliary verbs — that carry little meaning on their own and are typically filtered out before keyword or frequency analysis." }, { question: "Is matching case-sensitive?", answer: "No — matching is case-insensitive, so \"The\", \"THE\", and \"the\" are all removed as stop words regardless of capitalization." }, { question: "Does it remove partial matches inside longer words?", answer: "No — matching is whole-word only, so a stop word like \"is\" won't be removed from inside a longer word like \"island\" or \"this\"." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

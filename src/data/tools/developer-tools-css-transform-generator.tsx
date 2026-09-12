@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What does transform-origin actually change?", answer: "It sets the fixed point that rotation and scaling pivot around — the default is the center of the element, but setting it to \"top left\" for example makes the element rotate and scale around its top-left corner instead." }, { question: "Can I combine multiple transforms at once?", answer: "Yes — this tool always outputs all six transform functions together in one declaration, so translate, rotate, scale, and skew all apply simultaneously, matching how the CSS transform property actually works." }, { question: "Will this work in all browsers?", answer: "The CSS transform property is supported in all modern browsers, though very old browsers may need vendor prefixes like -webkit-transform for full compatibility." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

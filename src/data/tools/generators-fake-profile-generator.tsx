@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this real information about a real person?", answer: "No. Every name, email, and address is randomly assembled from generic placeholder word lists purely for testing and mockup purposes. It does not describe any actual person." }, { question: "Can I use this data for anything besides testing?", answer: "This tool is built specifically for software testing, UI mockups, and design prototypes. It should not be used to impersonate anyone or misrepresent fictional data as real information." }, { question: "Will the fictional email actually receive mail?", answer: "No — the domains used (like example.test) are reserved placeholder domains set aside so they can never be registered or used for real email delivery." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

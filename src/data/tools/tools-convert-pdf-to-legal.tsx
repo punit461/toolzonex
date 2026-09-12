@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "What is US Legal size?", answer: "US Legal is 8.5 × 14 inches (612 × 1008 points). It is taller than US Letter (8.5 × 11 inches)." }, { question: "Will content be cut off?", answer: "The canvas is resized but content is not reflowed. If the original page was wider than 8.5 inches, some content may extend beyond the Legal page boundary." }, { question: "Is my file uploaded anywhere?", answer: "No — conversion happens entirely in your browser." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

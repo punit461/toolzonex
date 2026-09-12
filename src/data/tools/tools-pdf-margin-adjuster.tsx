@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from our Add Margins tool?", answer: "This adjuster exposes all four edges separately and previews the resulting page dimensions, giving you finer control over each side." }, { question: "Does the text stay in place?", answer: "Yes — the content is shifted by the left and bottom margins so its position relative to the corner is preserved, and the page expands around it." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

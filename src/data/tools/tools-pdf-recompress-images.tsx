@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will this reduce text quality?", answer: "No — only embedded raster images are re-encoded. Text and vector graphics remain crisp." }, { question: "Why is the output sometimes larger?", answer: "If the original images were already compressed aggressively, re-encoding may not shrink them further and can even produce a slightly larger file." }, { question: "Is my file uploaded anywhere?", answer: "No — recompression runs entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why do some properties get a default value of null?", answer: "Giving optional or nullable properties a = null default lets you construct instances of the data class without supplying every field, which mirrors how the property might legitimately be absent from the JSON." }, { question: "Does this work with kotlinx.serialization?", answer: "The generated data classes are plain Kotlin and map cleanly onto kotlinx.serialization or Moshi models — you may want to add @Serializable or @JsonClass annotations depending on which library you use." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and code generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

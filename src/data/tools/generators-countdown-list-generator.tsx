@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I change the milestone task labels?", answer: "Yes — every milestone has an editable text field with a generic default label like \"Final preparations\" that you can rename to anything specific to your event." }, { question: "How does the tool know which milestones are already past?", answer: "It compares each milestone's calculated date against today's date on your device, marking anything before today as Past and everything else as Upcoming." }, { question: "Does it work for dates that have already happened?", answer: "Yes — if you enter a target date in the past, the tool shows how many days ago it occurred instead of a countdown, and all milestones display as Past." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

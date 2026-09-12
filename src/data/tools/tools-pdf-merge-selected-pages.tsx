@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from Merge PDF?", answer: "The regular Merge PDF tool combines every page of every file. This tool lets you pick specific pages (or ranges) from each file before merging." }, { question: "What happens if I leave a file's page range blank?", answer: "All of that file's pages are included, same as a normal merge." }, { question: "Is my file uploaded anywhere?", answer: "No — merging happens entirely in your browser; files are never sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if I enter invalid binary digits?", answer: "Only 0s and 1s are valid in binary. If you enter other digits (like 2 or 3), they will be ignored and the result will reflect only the valid binary digits in order." }, { question: "Can I divide binary numbers?", answer: "Yes — division is supported. If the result is not a whole number, the decimal value is shown (e.g. 1010 ÷ 11 = 11.1 in binary, which is 10 ÷ 3 ≈ 3.3333 in decimal)." }, { question: "Why show the result in multiple bases?", answer: "Different bases are useful in different contexts: binary for low-level computing, hex for memory addresses and color codes, octal for Unix file permissions, and decimal for everyday use." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

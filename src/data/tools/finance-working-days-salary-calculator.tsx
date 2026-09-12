@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What counts as \"total working days\" in a month?", answer: "This is the number of scheduled working days in the month, typically excluding weekends and company holidays — commonly somewhere between 20 and 23 days depending on the month and your company's calendar." }, { question: "Should weekends be included in \"days worked\"?", answer: "No — count only the actual scheduled working days the employee was present or eligible for pay, matching the same day-counting convention used for \"total working days\" in the denominator." }, { question: "Does this calculator account for taxes or deductions?", answer: "No — this calculates gross pro-rated pay only. Taxes, benefits deductions, and other withholdings are applied separately on top of this pro-rated gross figure." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

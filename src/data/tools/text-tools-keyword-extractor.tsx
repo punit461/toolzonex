@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What stopwords are filtered out?", answer: "A built-in list of over 100 common English words — articles, pronouns, prepositions, conjunctions, and auxiliary verbs like \"the\", \"is\", \"and\", \"you\", and \"would\" — is excluded before ranking the remaining words by frequency." }, { question: "How is this different from the Keyword Density Analyzer?", answer: "The Keyword Density Analyzer reports each word's percentage share of the total text, aimed at SEO over-optimization checks. This tool focuses purely on ranking the most frequent non-stopword terms as a simple keyword list, which is more suited to tagging or quick topic identification." }, { question: "Does it understand synonyms or context?", answer: "No — this is a straightforward frequency-count approach after stopword removal. It doesn't merge synonyms, understand grammar, or weigh a word's importance by anything other than how often it appears." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is 1 pound in Indian rupees?", answer: "One British Pound is typically worth somewhere in the range of ₹105–₹112, depending on current market conditions. Use the calculator above for today's exact live rate." }, { question: "How much is £100 in INR?", answer: "At an example rate of ₹108 per £1, £100 converts to about ₹10,800. Enter 100 in the calculator above to see today's exact figure." }, { question: "How current is the GBP to INR exchange rate?", answer: "Rates are sourced from the European Central Bank's daily reference rates, typically updated once each business day. They're accurate for estimates, but banks and money-transfer services apply their own rate plus a fee." }, { question: "Can I convert INR to GBP on this page too?", answer: "Yes — tap the swap icon to flip the direction to INR to GBP." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

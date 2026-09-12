@@ -21,6 +21,7 @@ const tool: ToolRegistryEntry = {
     currency: "USD",
     faqs: [{ question: "Will this change the visible content of the PDF?", answer: "No — only the document properties (metadata) are modified. The pages, text, and images stay the same." }, { question: "Can I clear a field entirely?", answer: "Yes — just delete the text in the field and save." }],
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

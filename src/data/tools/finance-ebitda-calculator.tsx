@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why add back depreciation and amortization?", answer: "Depreciation and amortization are non-cash accounting charges that spread the cost of assets over time. Adding them back highlights the cash-generating power of operations, independent of how assets were financed or written down." }, { question: "Is EBITDA the same as cash flow?", answer: "No. EBITDA ignores working capital changes, capital expenditures, interest, and taxes — all of which affect actual cash flow. It's a profitability proxy, not a substitute for a cash flow statement." }, { question: "What is a good EBITDA margin?", answer: "It varies widely by industry. Software and services companies often see 20-40%+ margins, while capital-intensive or low-margin retail businesses may run in the single digits to low teens." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

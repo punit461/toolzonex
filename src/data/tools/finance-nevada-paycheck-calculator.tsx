@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does Nevada have state income tax?", answer: "No. Nevada (NV) is one of the states with no state income tax on wages, so this Nevada payroll tax calculator only withholds federal income tax, Social Security, and Medicare — no state tax line reduces your paycheck." }, { question: "Is this the same as a Nevada payroll tax calculator?", answer: "Yes — \"paycheck calculator\" and \"payroll tax calculator\" are used interchangeably here. Enter a Nevada salary to see federal tax, Social Security, and Medicare broken out per pay period, with no state withholding since NV doesn’t tax wage income." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

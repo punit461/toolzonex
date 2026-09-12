@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from a regular cat age calculator?", answer: "A standard cat age calculator takes your cat's actual age and converts it to a human-equivalent age. This tool runs in the opposite direction — you enter a human-equivalent age, and it tells you the cat age that corresponds to it, which is useful when you're starting from a human age rather than a cat's age." }, { question: "Why isn't the scale linear?", answer: "Cats mature very quickly in their first two years and then age more steadily afterward, so a flat multiplier would badly misrepresent early life stages. The piecewise scale used here (and by vets) better reflects how quickly a young cat matures compared to an older one." }, { question: "Can this be used for very young human ages?", answer: "Yes — for human ages up to 15, the calculator uses the first band (Human Age ÷ 15), reflecting that a cat reaches sexual maturity and roughly a 15-year-old human's life stage within its first year." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

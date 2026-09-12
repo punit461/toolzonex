@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this tool actually rename my files?", answer: "No — it only generates the list of filenames as text. Use the generated list as a reference alongside your operating system's batch rename feature or a script." }, { question: "What happens if I set the padding width too low for the last number?", answer: "Numbers that need more digits than the padding width simply print at their natural length — for example, padding width 2 with a count that reaches 100 still shows \"100\" rather than truncating it." }, { question: "Is the file extension required?", answer: "No — leave it blank to generate filenames with no extension, useful for folder names or extension-less identifiers." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

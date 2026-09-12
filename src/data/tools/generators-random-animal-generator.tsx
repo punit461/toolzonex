@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are the facts accurate?", answer: "Yes — each fact is a commonly cited, general piece of trivia about that animal, though it's worth double-checking details for anything used in formal research." }, { question: "Can the same animal appear twice in a row?", answer: "Yes — each click is an independent random pick, so repeats are possible." }, { question: "How many animals are included?", answer: "The generator draws from a curated list of two dozen well-known animals, chosen to be recognizable and fun rather than an exhaustive database of every species." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

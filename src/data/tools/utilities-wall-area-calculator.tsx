@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Should I subtract windows and doors from the total?", answer: "Yes, for the most accurate paint, wallpaper, or material estimate — you generally don't need material to cover door and window openings. If you also plan to paint the door and window frames or trim, add a smaller separate allowance for those surfaces." }, { question: "What if the net area comes out to zero?", answer: "A net area of zero means the total opening area you entered equals or exceeds the total wall area, which usually signals a data entry issue — double-check that your wall and opening dimensions are correct and in the same units." }, { question: "Can I use this for multiple rooms at once?", answer: "Yes — just add a row for every wall across every room you're covering, and a row for every door or window throughout, and the calculator totals everything together into one combined net area." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

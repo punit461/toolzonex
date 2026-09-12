@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does Markdown Blockquote work on multi-line text?", answer: "Yes — every line, including blank lines, gets its own \"> \" prefix, which is the standard way to blockquote a multi-line passage in Markdown." }, { question: "What if I leave the author name blank in Attribution Format?", answer: "The output falls back to \"Unknown\" as the attribution so the format stays consistent even without a specified author." }, { question: "Does Smart / Curly Quotes convert quotation marks inside the text too?", answer: "No — it only wraps the entire block of text in a single pair of curly quotes; any straight quotes already inside your text are left as typed." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

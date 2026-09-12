@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why use the Fisher equation instead of simple subtraction?", answer: "Simple subtraction ignores the fact that inflation also eats into the return earned on top of the original investment, not just the principal. The Fisher equation divides by (1 + inflation) to capture that compounding effect, making it more accurate — especially when nominal returns or inflation are high." }, { question: "Can the real rate of return be negative?", answer: "Yes — if inflation is higher than your nominal return, the real rate of return is negative, meaning your money is losing purchasing power even though its dollar value grew." }, { question: "What inflation rate should I use?", answer: "Use the inflation rate for the same period as your nominal return, typically measured by a consumer price index (CPI) for that year or timeframe, so the two figures line up correctly." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

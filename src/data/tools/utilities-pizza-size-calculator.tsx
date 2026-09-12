@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why is a bigger pizza almost always a better deal?", answer: "Because a circle's area scales with the square of its radius, while a pizzeria's price increase per size upgrade is usually much closer to linear — so larger pizzas typically deliver more area per dollar, even when the sticker price is higher." }, { question: "Does this account for the crust or number of slices?", answer: "No — this calculator compares raw area for the price, which is a good proxy for overall value but doesn't account for crust-to-topping ratio, slice count, or how filling the crust itself is." }, { question: "Can I compare more than two pizzas?", answer: "Yes — use the \"Add Pizza\" button to add as many sizes as you want to compare at once." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

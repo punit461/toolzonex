@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is the state rate the full tax I'll pay?", answer: "Not necessarily — many cities, counties, and special districts add local tax on top of the state rate, and some states exempt certain goods. The presets are illustrative state-level examples." }, { question: "How do I remove tax from a total?", answer: "Switch to 'Tax included' mode and enter the total; the calculator divides by (1 + rate) to find the pre-tax base and tax portion." }, { question: "Is tax charged on shipping?", answer: "This varies by state; in many states shipping is taxable when the goods are taxable. It's excluded here unless added into the amount." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Are these pan volumes exact?", answer: "No — they're commonly published approximate figures for standard pan depths. Actual volume varies slightly by manufacturer and by how full you fill the pan, so use the scaling factor as a strong starting estimate rather than an exact conversion." }, { question: "Why doesn't the tool give me an exact new bake time?", answer: "Bake time depends on batter depth, pan material, and oven behavior in ways that don't reduce to a simple formula. The safest approach is to check for doneness (a toothpick test, visual browning, or an internal temperature) starting earlier than the original recipe's time when using a pan that spreads the batter thinner." }, { question: "What if I don't see my exact pan size listed?", answer: "Pick the closest listed pan by volume as a reasonable substitute, or calculate your pan's volume directly (roughly, area of the base times depth, converted to cups) and scale from there manually." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

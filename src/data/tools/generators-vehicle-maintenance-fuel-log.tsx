@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is the price per gallon/liter calculated?", answer: "It divides the total cost you enter by the gallons or liters you enter for that fill-up, updating instantly as you type." }, { question: "Can I track more than one vehicle?", answer: "This tool tracks one log at a time — for multiple vehicles, copy and save each vehicle's log separately before starting a new one." }, { question: "Is my maintenance and fuel data saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the log before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I sort the results?", answer: "Yes — check the \"Sort Alphabetically\" option before splitting." }, { question: "What delimiter should I use?", answer: "Choose \"Custom Delimiter\" and enter any character or string (e.g., |, ;, or ::) to split on." }, { question: "Does it trim whitespace?", answer: "Yes — leading and trailing whitespace around each word is automatically removed." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

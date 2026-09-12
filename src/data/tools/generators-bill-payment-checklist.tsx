@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does the list re-sort automatically as I add or edit bills?", answer: "Yes — the sorted list on the right updates instantly by due date, soonest first, whenever you add, edit, or remove a bill." }, { question: "What happens to bills without a due date?", answer: "Bills with no due date are sorted to the end of the list, after every bill that has a due date." }, { question: "Is my bill list saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the list before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

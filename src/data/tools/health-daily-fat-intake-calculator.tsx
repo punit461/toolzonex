@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What percentage of calories should come from fat?", answer: "Standard dietary guidelines recommend 20-35% of total calories from fat for most healthy adults. Very low-fat diets can fall below this range, while higher-fat approaches like keto intentionally go well above it — both are outside the typical recommended range and warrant more individual planning." }, { question: "Is all dietary fat the same?", answer: "No — this calculator estimates total fat grams only. Nutrition guidance generally recommends prioritizing unsaturated fats (from sources like nuts, olive oil, and fish) and limiting saturated and trans fats, regardless of your total fat target." }, { question: "How is this different from the Macro Calculator?", answer: "The Macro Calculator estimates your full daily calorie target from your stats and activity level, then splits it into protein, carbs, and fat all at once. This calculator is a focused, single-purpose tool for when you already know your calorie target (or want to enter one directly) and just want the fat number." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

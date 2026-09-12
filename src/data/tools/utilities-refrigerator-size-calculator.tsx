@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this rule of thumb exact?", answer: "No — it's a general starting guideline. Households that cook a lot from scratch, buy groceries in bulk, or store a lot of leftovers may want more capacity, while households that eat out often or shop frequently in small trips may be comfortable with less." }, { question: "Does refrigerator capacity include the freezer?", answer: "Manufacturer-listed total capacity typically includes both the fresh food and freezer compartments combined, so keep that in mind when comparing this recommendation to a specific model's listed capacity." }, { question: "Should I round up or down when between sizes?", answer: "Rounding up is usually the safer choice — running out of space is a daily annoyance, while a slightly larger fridge mostly just costs a bit more to run and buy." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Which gear is the \"driving\" gear?", answer: "The driving gear is the one connected to the power source (like a motor shaft or pedal crank), and the driven gear is the one that receives motion from it. Torque and speed both scale with the ratio between them, in opposite directions." }, { question: "How does compound ratio work for multiple gear stages?", answer: "Each pair of meshing gears forms one stage. In a gear train, the driven gear of one stage is typically connected to the driving gear of the next stage, so the overall reduction is the product of every individual stage ratio, not their sum." }, { question: "Does gear ratio depend on gear diameter instead of teeth count?", answer: "Teeth count and diameter are proportional for gears of the same tooth pitch (tooth size), so using teeth counts gives the same ratio as using diameters, and is usually easier to count accurately." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

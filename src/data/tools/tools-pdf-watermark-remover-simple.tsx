@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Will this remove a watermark baked into a scanned image or page content?", answer: "No — this tool only removes annotation-based overlays (Stamp or Watermark annotations). A watermark drawn directly into the page content or burned into a scanned image can't be detected or removed by this tool." }, { question: "Why does it also list \"Stamp\" annotations, not just \"Watermark\"?", answer: "Many watermarking tools use the general-purpose Stamp annotation type rather than the newer Watermark subtype, so both are shown as candidates." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

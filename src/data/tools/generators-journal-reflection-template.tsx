@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Do I have to fill in all three gratitude items?", answer: "No — any left blank show as \"(blank)\" in the output, so feel free to fill in just one or two on days when that's all you have." }, { question: "Can I use this for both a gratitude journal and a daily reflection?", answer: "Yes — the template combines both formats in one entry, covering gratitude, a daily highlight, a lesson learned, and a forward-looking focus for tomorrow." }, { question: "Is my journal entry saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the entry before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

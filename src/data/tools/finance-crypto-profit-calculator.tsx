@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is crypto profit calculated?", answer: "Profit = (sell price − buy price) × quantity, minus any buy and sell fees you specify. The calculator also reports the profit percentage relative to your total investment." }, { question: "Should I include fees?", answer: "Yes — exchange trading fees, network (gas) fees, and withdrawal fees all reduce real profit. Small per-trade fees can erode a large fraction of gains for frequent traders." }, { question: "Does it handle shorts or leverage?", answer: "This covers simple spot trades — buy at one price, sell at another. Leveraged and short positions introduce liquidation and funding costs that a plain buy/sell model does not capture." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

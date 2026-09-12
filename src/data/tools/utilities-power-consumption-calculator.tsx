@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How do I convert watts to kWh?", answer: "Multiply watts by hours of use and divide by 1000. A 100 W bulb on for 10 hours uses 100 × 10 / 1000 = 1 kWh." }, { question: "What is a realistic tariff to use?", answer: "Household tariffs vary by country, state, and slab. The ₹6.5/kWh default is a typical Indian residential rate; adjust it to match your latest electricity bill." }, { question: "Does running watts equal rated watts?", answer: "Not always — devices with motors or compressors (fridges, ACs) cycle on and off, so actual usage is usually lower than the rated watts. The rated value gives a good upper-bound estimate." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

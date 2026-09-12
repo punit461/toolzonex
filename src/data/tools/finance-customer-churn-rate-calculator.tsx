@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Customer Retention Rate Calculator?", answer: "Churn and retention describe complementary aspects of the same customer loss — but this tool frames the calculation directly around losses (useful for churn-focused reporting), while the Retention Rate Calculator instead uses starting, ending, and new-customer counts to measure how many original customers were kept. Retention rate = 100% − churn rate when both are measured over the same period the same way." }, { question: "What's considered a \"good\" churn rate?", answer: "It varies by industry — subscription software businesses often aim for under 5-10% annual churn, while other industries with naturally higher turnover may tolerate more. Compare against your own historical trend rather than a single universal benchmark." }, { question: "Does this account for new customers gained during the period?", answer: "No — this calculator measures losses only, relative to the customers you started with. If you also want to factor in new customers acquired, use the Customer Retention Rate Calculator instead." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

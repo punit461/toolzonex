@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What happens to a comma that was inside a quoted CSV field?", answer: "It's preserved as a literal comma in the output — TSV uses tabs as the column separator, so a comma inside a field is no longer special once the field is correctly identified during CSV parsing." }, { question: "What if a field contains a tab character or a line break?", answer: "Since TSV has no standard way to escape or quote a tab or newline inside a field, any tab or line break found inside a CSV field is replaced with a single space so it doesn't get misread as a column or row break in the TSV output." }, { question: "Does this handle escaped double quotes inside a field?", answer: "Yes — a doubled double-quote (\"\") inside a quoted CSV field is correctly parsed as a single literal quote character before conversion." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

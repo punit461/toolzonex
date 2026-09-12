@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Garden Soil Calculator?", answer: "The Garden Soil Calculator computes the volume of soil needed to fill a bed that's already a known size. This tool comes earlier in the planning process — it helps you figure out how many beds actually fit in your available garden space in the first place." }, { question: "How wide should garden paths be?", answer: "Paths need to be wide enough to comfortably walk, kneel, and maneuver a wheelbarrow through — 18-24 inches is a common minimum, while 2-3 feet is more comfortable for wheelbarrow access and accessibility." }, { question: "Why not just make one giant bed instead of several smaller ones?", answer: "Narrower beds (commonly 3-4 feet wide) let you reach the center from either side without stepping on and compacting the soil, which is important for root growth and soil health — a single very wide bed makes the middle hard to reach." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

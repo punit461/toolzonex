@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I pick a specific category?", answer: "The generator currently picks randomly across all six categories rather than letting you filter by one, so each click can surface a challenge from any category." }, { question: "Does it track which challenges I've completed?", answer: "No — this tool doesn't save or track progress between visits; it's meant purely as a source of quick daily challenge ideas." }, { question: "Can the same challenge repeat right after another?", answer: "No — clicking New Challenge always shows a different challenge than the one currently displayed." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

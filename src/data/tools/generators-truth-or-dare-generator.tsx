@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is the content appropriate for all ages?", answer: "Both difficulty levels are written to be family-friendly and suitable for a general audience — Spicy is simply a bit bolder and more playful than Mild, not adult content." }, { question: "Can players skip a prompt they do not like?", answer: "Yes — this is just a prompt generator. It's up to your group's own house rules whether skipping is allowed." }, { question: "Can the same prompt come up more than once?", answer: "Yes — each click randomly selects from the list independently, so repeats are possible." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

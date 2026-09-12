@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is the Roman numeral for 2024?", answer: "2024 in Roman numerals is \"MMXXIV\". Enter any year into the field above to generate its Roman numeral equivalent the same way." }, { question: "Can I also convert Roman numerals back to numbers with this tool?", answer: "This generator is one-directional — number to Roman numeral only, for a simpler, faster experience. If you need to convert Roman numerals back into regular numbers too, use our bi-directional Roman Numeral Converter instead." }, { question: "What's the largest number I can generate a Roman numeral for?", answer: "This generator supports numbers up to 3999 (MMMCMXCIX), the practical limit of standard Roman numeral notation without adding special overline symbols for larger values." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

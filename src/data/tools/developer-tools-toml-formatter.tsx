@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the TOML to JSON or JSON to TOML converters?", answer: "Our TOML to JSON and JSON to TOML tools convert TOML TO or FROM a completely different format. This TOML Formatter stays within TOML the whole time — it just reformats your TOML input back into clean, consistent TOML output, without ever changing formats." }, { question: "Does formatting change the data or key order?", answer: "No — parsing and re-serializing preserves all keys, values, and their nesting structure exactly. Only whitespace, indentation, and table-header presentation are normalized for consistency." }, { question: "Is my TOML uploaded anywhere?", answer: "No — parsing and formatting happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

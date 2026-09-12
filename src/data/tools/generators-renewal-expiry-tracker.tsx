@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this send me an actual notification or alert when something expires?", answer: "No — this is a reference and planning list only. As a static site with no backend, it can't send real notifications. Once you see an upcoming date here, set a reminder in your phone's calendar or reminders app for the actual alert." }, { question: "What counts as \"expiring soon\"?", answer: "Any item with 30 or fewer days remaining is shown with an orange warning chip so it's easy to spot at a glance in the sorted list." }, { question: "Is my tracked list saved anywhere?", answer: "No — everything is kept only in your browser for the current session and resets on reload, so copy the list before closing the tab if you want to keep it." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

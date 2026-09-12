@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What is a typical commission split?", answer: "Commission splits vary widely by industry. In real estate, a common split is 50/50 to 70/30 favoring the agent. In SaaS sales, the split is often 50/50 or tiered based on quota attainment." }, { question: "Is commission calculated on gross or net revenue?", answer: "It depends on the agreement. Some companies calculate commission on gross revenue (before discounts/returns), while others use net revenue." }, { question: "Do commission rates change based on deal size?", answer: "Many companies use tiered commission rates where larger deals earn a higher percentage. For example, 5% on deals under $50K and 10% on deals over $200K." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How does it detect blank pages?", answer: "A page is considered blank if its text content layer has no items. Pages that contain only images but no text will not be flagged as blank." }, { question: "Can I undo this?", answer: "No — the modified file is saved as a new download. Keep the original if you may need it later." }, { question: "Is my file uploaded anywhere?", answer: "No — everything happens in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Where does the constant 5,252 come from?", answer: "It comes from converting the definition of mechanical power (torque × angular velocity) into horsepower and RPM units — specifically, 33,000 ft-lb/min per horsepower divided by 2π radians per revolution equals approximately 5,252. It's also the RPM at which the torque (in lb-ft) and horsepower numbers are always identical on a dyno graph." }, { question: "Should I use imperial or metric units?", answer: "Use imperial (pound-feet) if your torque figure comes from a US-spec source, and metric (newton-meters) if it comes from a manufacturer spec sheet using SI units — the calculator applies the matching conversion constant for whichever you select." }, { question: "Does this account for drivetrain losses?", answer: "No — this calculates horsepower directly from the torque and RPM figures you enter (typically crank/engine output). Power actually delivered to the wheels is usually 15-20% lower after accounting for drivetrain losses through the transmission and differential." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

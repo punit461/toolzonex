@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Can I still mine Ethereum with a GPU?", answer: "Not on Ethereum mainnet — mining ended with the Merge in September 2022. Some GPU miners moved to mining other proof-of-work coins instead, but Ethereum itself is validated entirely through staking now." }, { question: "How accurate is this staking reward estimate?", answer: "It's a simplified projection, not a guarantee. Actual staking APY fluctuates with total network stake and protocol parameters, ETH's price is highly volatile, and validators can face penalties (slashing) for downtime or misbehavior that reduce real returns below the estimate." }, { question: "What is the minimum to start staking?", answer: "Running your own validator requires exactly 32 ETH. Staking pools and most exchanges let you stake much smaller amounts by pooling funds with other users, usually in exchange for a service fee that reduces your net yield." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from a field-of-view calculator?", answer: "A field-of-view calculator starts from a known focal length and tells you the resulting angle of view. This calculator works the other way: you specify the field of view or framing you want, and it tells you the focal length required to achieve it." }, { question: "Why does sensor size matter?", answer: "A smaller sensor captures a narrower slice of the same lens's image circle, so it needs a shorter focal length than a full-frame sensor to achieve the same field of view — this is often described using a camera's \"crop factor.\"" }, { question: "Which mode should I use?", answer: "Use the field-of-view mode when you know how wide a scene you want to capture. Use the subject-framing mode when you know how far away your subject will be and how large you want it to appear in the frame, such as for wildlife or sports photography." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

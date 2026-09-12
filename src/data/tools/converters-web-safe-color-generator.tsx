@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is the web-safe palette still relevant today?", answer: "Not really for practical design purposes — it was created to solve a display limitation from older 256-color monitors that essentially no longer exist. Modern screens display millions of colors accurately, so this palette is now mostly a historical curiosity, though it does still show up in retro-styled design work." }, { question: "Why exactly 216 colors?", answer: "Six possible values per channel (00, 33, 66, 99, CC, FF) across three channels gives 6 × 6 × 6 = 216 combinations, which is why the web-safe palette has exactly that many colors." }, { question: "Does clicking a swatch copy the color automatically?", answer: "Yes — clicking any swatch both displays its hex code and copies it straight to your clipboard, ready to paste elsewhere." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

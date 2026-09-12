@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Where do I find cost-of-living index numbers for a city?", answer: "Several public sources publish city and metro-area cost-of-living indexes, usually benchmarked against a baseline city or national average (often set to 100). Search for a cost-of-living index by city name to find current figures, and make sure both numbers you enter come from the same source, since different sources use different baselines and methodology." }, { question: "Does this account for taxes?", answer: "No — cost-of-living indexes typically measure everyday expenses like housing, groceries, transportation, and utilities, not income tax rates. State and local taxes can differ significantly between cities and should be considered separately alongside this comparison." }, { question: "Is a single index number enough to compare cities?", answer: "It's a useful starting estimate, but a single blended index can hide big differences in specific categories — one city might have much cheaper groceries but far more expensive housing. For a bigger decision, look at the category breakdown behind the index, not just the overall number." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does clip-path affect the element's clickable area?", answer: "In most modern browsers, yes — clicks outside the visible clipped shape but inside the original box are not registered, so a clip-path shape is also generally its interactive hit area." }, { question: "Is clip-path animatable?", answer: "Yes, when both the starting and ending values use the same clip-path function (like two polygon() values with the same number of points) — browsers can smoothly transition between them." }, { question: "Is browser support good for clip-path?", answer: "Yes — clip-path with basic shapes is supported in all modern browsers, though very old browsers may need a -webkit- prefix or lack support entirely." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

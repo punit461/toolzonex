@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Which BBCode tags are supported?", answer: "[b], [i], [u], [s], [url], [img], [quote], [list] with [*] items, [color], [size], and [code] are all converted to their HTML equivalents." }, { question: "Does this handle nested tags?", answer: "Simple nesting such as bold text inside a quote generally works, but deeply nested or malformed BBCode may not convert perfectly — check the output before publishing it." }, { question: "Does this tool also convert HTML back to BBCode?", answer: "This page converts BBCode to HTML only. Use our separate HTML to BBCode converter if you need to go the opposite direction." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

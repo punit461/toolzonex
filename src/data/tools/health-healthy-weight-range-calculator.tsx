@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Ideal Weight Calculator?", answer: "The Ideal Weight Calculator uses clinical single-point formulas — Devine, Robinson, and Miller — that each output one specific number based on height and gender, originally developed for medication dosing. This Healthy Weight Range Calculator instead uses the standard BMI classification bands (18.5-24.9 = normal weight) to show a full RANGE of healthy weights for a given height, without factoring in gender at all. They're two different, independently valid methods, and it's normal for their numbers not to match exactly." }, { question: "Why is there a range instead of one target number?", answer: "Healthy body weight naturally varies by frame size, muscle mass, and build — a single number can't capture that. The BMI-based range gives a wider, more forgiving target band that reflects the reality that many different weights are considered healthy for the same height." }, { question: "Does this account for muscle mass or body composition?", answer: "No — like all BMI-based methods, this calculator only uses height, so it can't distinguish muscle from fat. A muscular, athletic person may fall above this range while still being lean and healthy, and BMI-based ranges should be treated as a general population guideline rather than a precise individual assessment." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

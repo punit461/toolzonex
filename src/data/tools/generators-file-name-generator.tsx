@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does the separator option disappear for kebab-case and snake_case?", answer: "Those two case styles always use a fixed separator by definition — hyphens for kebab-case, underscores for snake_case — so the separator toggle only applies to the plain lowercase style, where you can choose either." }, { question: "Does this rename an actual file on my computer?", answer: "No — this tool only generates a suggested file name as text for you to copy and use when saving or renaming a file yourself; it doesn't touch any files directly." }, { question: "What if I don't need a version number or extension?", answer: "Both are optional — leave them blank and the generated name will simply omit that part, combining only the title and date (if chosen)." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

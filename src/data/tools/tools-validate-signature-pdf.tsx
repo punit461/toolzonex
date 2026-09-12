@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this verify the signature is valid or trustworthy?", answer: "No. This is presence-and-metadata detection only. Verifying a cryptographic signature means checking the signed hash, validating a certificate chain up to a trusted root, and checking revocation status — none of that is possible in a static, offline browser tool. Use a full PDF reader like Adobe Acrobat for actual trust verification." }, { question: "Why does it say a signature was found but shows no signer name?", answer: "Not every signature dictionary populates the optional Name/Reason/Location fields — some signing tools only embed the cryptographic data itself, with signer identity carried entirely in the certificate rather than as plain metadata." }, { question: "Is my file uploaded anywhere?", answer: "No — everything runs entirely in your browser." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

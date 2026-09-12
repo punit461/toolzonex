@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Do these filters affect page performance?", answer: "CSS filters are GPU-accelerated in most browsers, but applying heavy blur to large images or many elements can still impact rendering performance — test on the actual target devices." }, { question: "Can I apply a filter to text or the whole page?", answer: "Yes — filter works on any element, not just images, including text, videos, and entire containers." }, { question: "Is my image uploaded anywhere?", answer: "This tool uses a built-in sample illustration for the live preview — the CSS itself is just generated client-side and nothing is uploaded to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Is this the same as a \"wordwrap\" tool?", answer: "Yes — \"wordwrap\" and \"word wrap\" both refer to automatically breaking long lines of text at a set character or column width, which is exactly what this tool does." }, { question: "Does it break words in the middle to fit the line length?", answer: "No — the tool wraps at word boundaries, so words are never split mid-word." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Internet Data Usage Calculator?", answer: "The Internet Data Usage Calculator is a generic broadband usage estimator where you add multiple activities — streaming, video calls, browsing, gaming — each with hours and a custom rate. This tool is pre-loaded specifically with video-streaming quality-tier data rates (SD, HD, 4K), making it a faster, more focused way to estimate data use from streaming video alone." }, { question: "Are these data rates exact for every streaming service?", answer: "No — they're representative illustrative figures. Actual usage varies by platform, video codec, and specific quality setting (some services let you cap quality lower to save data), so check your streaming app's own data usage settings for a more precise number." }, { question: "Why does 4K use so much more data than HD?", answer: "4K video has roughly four times the pixel count of 1080p HD. While video compression narrows the gap somewhat, 4K streams still typically require several times more data per hour than standard HD streams to preserve that extra detail." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

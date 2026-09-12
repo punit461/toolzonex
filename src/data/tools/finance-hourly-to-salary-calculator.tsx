@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this account for overtime or unpaid time off?", answer: "No — this is a straight-line projection assuming the same hours every week, all 52 weeks of the year, with no overtime premium. For overtime pay, use the Payroll Calculator. Unpaid vacation or leave will reduce actual annual earnings below this estimate." }, { question: "Why 52 weeks instead of accounting for holidays?", answer: "52 weeks is the standard baseline for converting hourly pay to an annual figure. If you take unpaid holidays or leave, your actual annual earnings will be somewhat lower than this projection." }, { question: "How do I go the other direction — salary to hourly?", answer: "Use the Salary to Hourly Calculator to convert an annual salary back into an equivalent hourly wage." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

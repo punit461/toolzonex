@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "What if my room is an unusual shape?", answer: "For irregularly shaped rooms, estimate the total floor area as closely as you can (breaking it into rectangular sections and adding them up works well), then use that total area with the sizing table." }, { question: "Does ceiling height matter for fan size?", answer: "Ceiling height affects mounting method (using a downrod for higher ceilings) more than blade span selection, but very high ceilings may need a longer downrod to bring the fan down to the ideal 7-9 feet above the floor for effective airflow." }, { question: "Can I use two fans instead of one large fan?", answer: "Yes — for large or oddly shaped rooms over roughly 400 sq ft, two appropriately sized fans often distribute airflow more evenly than a single very large fan, and can look better proportioned too." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

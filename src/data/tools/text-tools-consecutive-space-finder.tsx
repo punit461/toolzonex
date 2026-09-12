@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from the Whitespace Cleaner?", answer: "The Whitespace Cleaner REMOVES extra whitespace automatically, collapsing multiple spaces down to one. This tool only visually flags where consecutive spaces occur, leaving the text completely unchanged, so you can review it first before deciding whether to clean it." }, { question: "Does this catch tabs or line breaks too?", answer: "No — it specifically looks for runs of two or more regular space characters; tabs and line breaks are treated as separate characters and aren't flagged by this tool." }, { question: "Does a single space between words get highlighted?", answer: "No — only runs of two or more consecutive spaces are highlighted; normal single-space word spacing is left alone." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this modify my CSS values?", answer: "No — only whitespace and formatting are changed. All property values, selectors, and rules remain exactly the same." }, { question: "Does it strip comments?", answer: "Yes — CSS comments (/* ... */) are removed to produce cleaner output. Keep your original if you need the comments." }, { question: "Does it validate CSS?", answer: "This tool only formats CSS — it does not validate whether the CSS is syntactically correct." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

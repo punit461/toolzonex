@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does the tool use a Fisher-Yates shuffle instead of sorting with Math.random?", answer: "Sorting an array with a random comparator is a common shortcut, but it produces a statistically biased result where some orderings are far more likely than others. Fisher-Yates guarantees every possible ordering is equally likely, giving a genuinely fair shuffle." }, { question: "Is this random number generator secure enough for anything sensitive?", answer: "It uses JavaScript's standard Math.random(), which is fine for shuffling text, games, or raffles, but it isn't cryptographically secure — don't rely on it for anything security-sensitive like generating passwords or keys." }, { question: "What happens to spacing when shuffling words?", answer: "Words are extracted, shuffled, and rejoined with single spaces, so original multiple-space or line-break formatting between words isn't preserved in word mode — use line mode if you need to keep each line's internal formatting intact." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

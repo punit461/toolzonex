@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Which color formats does it detect?", answer: "Hex codes (3, 4, 6, or 8 digits, with the leading #), rgb() and rgba() function calls, and hsl() and hsla() function calls — the most common formats used in CSS and design documents." }, { question: "Are duplicate colors removed?", answer: "Yes — if the same exact color value appears multiple times in the pasted text, it's only listed once in the results." }, { question: "Does it detect named CSS colors like \"red\" or \"cornflowerblue\"?", answer: "No — this tool specifically looks for hex, rgb/rgba, and hsl/hsla patterns using regular expressions, not plain color name words. Use the CSS Color Name Finder tool to work with named colors." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

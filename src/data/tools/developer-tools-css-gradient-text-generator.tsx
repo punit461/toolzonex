@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does this work in all browsers?", answer: "background-clip: text is well supported in modern browsers, though it still commonly needs the -webkit- prefix (included in the generated CSS) for full compatibility, especially in Safari." }, { question: "Why is my text invisible instead of gradient-filled?", answer: "Make sure color: transparent (or the -webkit-text-fill-color: transparent equivalent) is applied alongside the background-clip properties — without it, the solid text color paints over the gradient." }, { question: "Can I use more than two colors?", answer: "Yes — this generator uses two stops for simplicity, but you can manually extend the copied linear-gradient(...) value with additional comma-separated color stops." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "How is this different from a general random color generator?", answer: "This tool is focused purely on the hex format and generates a palette of 5 colors at once, framed as a quick dev-tool utility for grabbing placeholder colors rather than a single-color randomizer." }, { question: "Are the colors truly random?", answer: "Yes — each channel is chosen uniformly at random across the full 24-bit RGB color space (0 to 16,777,215), giving every hex value an equal chance of appearing." }, { question: "Can I get the same color twice in one palette?", answer: "It's possible but extremely unlikely, since each color is picked independently from over 16 million possible values." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

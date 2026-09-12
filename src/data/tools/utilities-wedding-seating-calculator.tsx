@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does the calculator round up the table count?", answer: "You can't book a partial table — if 120 guests need 15.4 tables at some seat count, you still need a full 16th table to seat everyone, even if it isn't completely full." }, { question: "Which table size should I choose?", answer: "It depends on your venue's floor plan and desired atmosphere — smaller tables (8 seats) tend to encourage more intimate conversation, while larger tables (12 seats) fit more guests into a smaller footprint but can make cross-table conversation harder." }, { question: "Does this account for a head table or sweetheart table?", answer: "No — this calculates seating for your general guest count only. Subtract the head table, sweetheart table, or kids' table guest count from your total first if you're seating those separately." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Does it remove spaces or line breaks too?", answer: "No — only punctuation and symbol characters are removed. Spaces, line breaks, letters, and numbers are all left in place." }, { question: "Will apostrophes in contractions be removed?", answer: "Yes — apostrophes are treated as punctuation, so \"I'm\" becomes \"Im\" and \"don't\" becomes \"dont\"." }, { question: "Does this update as I type?", answer: "Yes — there's no button to click. The result recalculates instantly as you edit the input text." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;

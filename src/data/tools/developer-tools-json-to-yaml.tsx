@@ -22,6 +22,7 @@ const tool: ToolRegistryEntry = {
     faqs: [{ question: "Why does this tool output values instead of type declarations?", answer: "Like TOML, YAML is a data-serialization format rather than a type/schema language, so this converter emits a real YAML document populated with your sample's actual values rather than type names." }, { question: "When does the converter quote a string value?", answer: "A string is quoted whenever leaving it bare would change its meaning in YAML — for example if it's empty, looks like a number or boolean, has leading/trailing whitespace, or contains a YAML special character like :, #, or -. Ordinary strings are left unquoted." }, { question: "Is my JSON uploaded anywhere?", answer: "No — parsing and YAML generation happen entirely client-side in your browser. Nothing you paste is sent to a server." }],
     extraSchemaFields: undefined,
     isHub: false,
+    noindex: true,
 };
 
 export default tool;
