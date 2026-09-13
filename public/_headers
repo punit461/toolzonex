@@ -21,6 +21,20 @@
 # added manually — either way it needs these two hosts allowed).
 # challenges.cloudflare.com: Turnstile widget on the contact form (script +
 # the iframe it renders the challenge in).
+#
+# The AdSense hosts below were added 2026-09-13 after a Lighthouse run surfaced
+# the report-only violations this file was staged to collect. AdSense does not
+# stop at pagead2/doubleclick — a served ad also pulls in:
+#   ep1/ep2.adtrafficquality.google  Ad Traffic Quality (sodar2.js + an iframe
+#                                    + a /getconfig/sodar XHR)
+#   fundingchoicesmessages.google.com  Privacy & messaging / consent prompt
+#   www.google.com                   framed by the ad stack
+#   adservice.google.com, partner.googleadservices.com,
+#   www.googletagservices.com        ad serving + tag delivery
+#   csi.gstatic.com                  ad latency beacons
+# All were violation sources in that run, so leaving them out would break ads
+# the moment this is enforced -- which is precisely the failure the staging
+# comment above warns about.
 
 /*
   X-DNS-Prefetch-Control: on
@@ -30,4 +44,4 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://static.cloudflareinsights.com https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://cloudflareinsights.com https://script.google.com https://script.googleusercontent.com; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://static.cloudflareinsights.com https://challenges.cloudflare.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google https://fundingchoicesmessages.google.com https://adservice.google.com https://partner.googleadservices.com https://www.googletagservices.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://cloudflareinsights.com https://script.google.com https://script.googleusercontent.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google https://fundingchoicesmessages.google.com https://csi.gstatic.com; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://challenges.cloudflare.com https://www.google.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google https://fundingchoicesmessages.google.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'
