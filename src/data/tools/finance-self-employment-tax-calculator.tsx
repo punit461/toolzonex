@@ -10,7 +10,7 @@ const tool: ToolRegistryEntry = {
     navCategory: "Finance",
     shellCategory: "Finance",
     icon: <ReceiptIcon fontSize="large" color="primary"/>,
-    seoTitle: "Self-Employment Tax Calculator (1099) - Freelance & Contractor Tax",
+    seoTitle: "Self-Employment Tax Calculator - 1099 Freelance & Contractor",
     seoDescription: "Free self-employment tax calculator for freelancers and 1099 contractors. Estimate Social Security, Medicare, and income tax on your net profit.",
     keywords: ["self employment tax calculator", "1099 tax calculator", "freelance tax calculator", "se tax calculator", "quarterly estimated tax calculator", "independent contractor tax"],
     ogTitle: "Self-Employment Tax Calculator (1099) | ToolZoneX",

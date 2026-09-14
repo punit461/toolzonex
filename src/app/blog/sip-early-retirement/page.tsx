@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import SipRetirement from "../../../components/pages/blogs/SipRetirement";
 import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
+import { brandedTitle } from "../../../utils/toolSeo";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "How to Use SIP for Early Retirement - FIRE Guide for India",
+  title: brandedTitle("How to Use SIP for Early Retirement - FIRE Guide for India"),
   description: "Learn how to leverage Systematic Investment Plans (SIP) to achieve financial independence and retire early (FIRE).",
   keywords: ["SIP early retirement", "FIRE India", "financial independence", "retire early", "SIP returns", "mutual fund retirement", "FIRE movement"],
   alternates: { canonical: "/blog/sip-early-retirement" },

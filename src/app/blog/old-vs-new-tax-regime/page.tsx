@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import OldVsNewTax from "../../../components/pages/blogs/OldVsNewTax";
 import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
+import { brandedTitle } from "../../../utils/toolSeo";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Old vs New Tax Regime FY 2025-26: Full Slab Comparison",
+  title: brandedTitle("Old vs New Tax Regime FY 2025-26: Full Slab Comparison"),
   description: "Complete old vs new tax regime comparison for FY 2025-26 with full slab-rate tables, standard deduction figures, Section 87A rebate thresholds, and a quick-verdict heuristic.",
   keywords: ["old vs new tax regime", "tax regime comparison", "tax slabs fy 2025-26", "tax saving", "tax regime choice", "old tax regime benefits", "new tax regime vs old"],
   alternates: { canonical: "/blog/old-vs-new-tax-regime" },

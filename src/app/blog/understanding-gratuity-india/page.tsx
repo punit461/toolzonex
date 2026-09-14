@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import UnderstandingGratuity from "../../../components/pages/blogs/UnderstandingGratuity";
 import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
+import { brandedTitle } from "../../../utils/toolSeo";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Understanding Gratuity in India - Rules & Tax Benefits",
+  title: brandedTitle("Understanding Gratuity in India - Rules & Tax Benefits"),
   description: "Complete guide to gratuity in India: rules, eligibility, calculation, and tax exemptions. Understand your end-of-service gratuity benefits as an employee.",
   keywords: ["gratuity India", "gratuity rules", "gratuity eligibility", "gratuity tax exemption", "gratuity calculation", "employee benefits", "gratuity act"],
   alternates: { canonical: "/blog/understanding-gratuity-india" },

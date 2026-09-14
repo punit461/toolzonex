@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Section80CGuide from "../../../components/pages/blogs/Section80CGuide";
 import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
+import { brandedTitle } from "../../../utils/toolSeo";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Section 80C Investment Guide - Best Tax Saving Options",
+  title: brandedTitle("Section 80C Investment Guide - Best Tax Saving Options"),
   description: "Best investment options to save tax under Section 80C. Explore PPF, ELSS, NSC, life insurance, and other 80C investments for maximum tax benefit.",
   keywords: ["Section 80C", "80C investments", "tax saving", "ELSS funds", "PPF", "NSC", "tax deduction 80C", "tax saving investments"],
   alternates: { canonical: "/blog/section-80c-investment-guide" },

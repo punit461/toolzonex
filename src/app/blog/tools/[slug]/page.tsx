@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import ToolBlogTemplate from "../../../../components/ToolBlogTemplate";
 import { allToolBlogs, getAllToolBlogSlugs, getToolBlogBySlug, isToolBlogIndexable } from "../../../../data/tool-blogs";
 import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../../data/author";
+import { brandedTitle } from "../../../../utils/toolSeo";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const blog = getToolBlogBySlug(slug);
   if (!blog) return {};
   return {
-    title: blog.title,
+    title: brandedTitle(blog.title),
     description: blog.description,
     keywords: blog.keywords,
     alternates: { canonical: `/blog/tools/${blog.slug}` },
