@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import CronSyntaxCheatsheet from "../../../components/pages/blogs/CronSyntaxCheatsheet";
 import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
+import { brandedTitle } from "../../../utils/toolSeo";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Cron Syntax Cheatsheet: How to Read Any Crontab Schedule",
+  title: brandedTitle("Cron Syntax Cheatsheet: How to Read Any Crontab Schedule"),
   description: "Five fields, one order, and a handful of special characters — a complete reference for reading and writing cron expressions, including the day-of-month/day-of-week gotcha.",
   keywords: ["cron syntax", "crontab cheatsheet", "cron expression guide", "how to read cron", "cron schedule examples", "kubernetes cronjob syntax"],
   alternates: { canonical: "/blog/cron-syntax-cheatsheet" },

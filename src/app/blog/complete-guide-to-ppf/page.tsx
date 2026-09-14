@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import PpfGuide from "../../../components/pages/blogs/PpfGuide";
 import { AUTHOR_PERSON_SCHEMA, ORGANIZATION_SAME_AS } from "../../../data/author";
+import { brandedTitle } from "../../../utils/toolSeo";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Complete Guide to PPF: Interest Rate, Rules & Benefits (2026)",
+  title: brandedTitle("Complete Guide to PPF: Interest Rate, Rules & Benefits (2026)"),
   description: "Everything you need to know about the Public Provident Fund: current interest rate, EEE tax benefits, investment limits, account-opening steps, and how it compares to ELSS, NSC, and FDs.",
   keywords: ["PPF guide", "Public Provident Fund", "PPF investment", "PPF interest rate", "PPF tax benefit", "PPF account", "government savings scheme", "PPF vs ELSS", "PPF vs NSC"],
   alternates: { canonical: "/blog/complete-guide-to-ppf" },
