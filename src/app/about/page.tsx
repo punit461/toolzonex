@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import About from "../../components/pages/About";
 import Breadcrumbs from "../../components/Breadcrumbs";
+import { brandedTitle } from '@/utils/toolSeo';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "About ToolZoneX - 200+ Free Online Calculators & Tools",
+  title: brandedTitle("About ToolZoneX - 200+ Free Online Calculators & Tools"),
   description: "Learn about ToolZoneX — a free platform of 200+ calculators and utilities for finance, health, and everyday decisions, built India-first for a global audience.",
   keywords: ["about ToolZoneX", "calculator site India", "free online calculators", "our mission", "financial calculators", "health calculators"],
   alternates: { canonical: "/about" },
