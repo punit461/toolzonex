@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import CategoryDashboard, { FeaturedGuide } from '@/components/CategoryDashboard';
+import { brandedTitle } from '@/utils/toolSeo';
 
 const financeGuides: FeaturedGuide[] = [
   { slug: 'complete-guide-to-ppf', title: 'The Complete Guide to PPF: Interest Rate, Rules, and Benefits (2026)', description: 'Current PPF rate, EEE tax status, and how it compares to ELSS/NSC/FD.' },
@@ -21,7 +22,7 @@ const financeGuides: FeaturedGuide[] = [
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: 'Finance Tools - Loan, Investment & Tax Calculators Free',
+  title: brandedTitle('Finance Tools - Loan, Investment & Tax Calculators Free'),
   description:
     'Free finance calculators for loans, investments, taxes, retirement, and budgeting, plus paycheck calculators for every US state -- all free, no signup.',
   keywords: ['finance calculators', 'loan calculator', 'investment calculator', 'paycheck calculator by state', 'tax calculator'],

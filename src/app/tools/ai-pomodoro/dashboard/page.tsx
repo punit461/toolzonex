@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 import DashboardClient from './DashboardClient'
+import { brandedTitle } from '@/utils/toolSeo';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com'
 
 export const metadata: Metadata = {
-  title: 'AI Pomodoro Dashboard - Focus & Productivity Analytics',
+  title: brandedTitle('AI Pomodoro Dashboard - Focus & Productivity Analytics'),
   description: 'Daily and weekly focus score trends, distraction counts, and productivity breakdowns for your Pomodoro sessions.',
   keywords: ['pomodoro dashboard', 'focus score', 'productivity analytics'],
   alternates: { canonical: '/tools/ai-pomodoro/dashboard' },

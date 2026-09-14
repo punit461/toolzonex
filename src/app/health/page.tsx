@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import CategoryDashboard from '@/components/CategoryDashboard';
+import { brandedTitle } from '@/utils/toolSeo';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: 'Health & Fitness Calculators - BMI, Calories & More Free',
+  title: brandedTitle('Health & Fitness Calculators - BMI, Calories & More Free'),
   description:
     'Free health and fitness calculators covering BMI, calories, body fat, macros, pregnancy, and more -- all processed in your browser, no signup.',
   keywords: ['health calculators', 'bmi calculator', 'calorie calculator', 'body fat calculator', 'fitness calculator'],

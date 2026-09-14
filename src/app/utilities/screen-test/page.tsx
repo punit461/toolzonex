@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import ScreensHub from "../../../calculators/screens/ScreensHub";
+import { brandedTitle } from '@/utils/toolSeo';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Fullscreen Test Screens - Color Screens, Pixel Test & Pranks",
+  title: brandedTitle("Fullscreen Test Screens - Color Screens, Pixel Test & Pranks"),
   description: "Solid color screens, monitor test tools, and fun fullscreen pranks. Black, red, blue, green screens, dead pixel test, DVD screensaver, and more.",
   keywords: ["fullscreen screens", "color screen test", "screen test tools", "dead pixel test", "screen pranks"],
   alternates: { canonical: "/utilities/screen-test" },
