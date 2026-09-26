@@ -162,6 +162,8 @@ const CommandPalette = () => {
                 {...params}
                 autoFocus
                 placeholder="Search tools..."
+                // The placeholder vanishes as soon as you type; this keeps a name.
+                inputProps={{ ...params.inputProps, 'aria-label': 'Search tools' }}
                 variant="standard"
                 InputProps={{
                   ...params.InputProps,

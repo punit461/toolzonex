@@ -60,3 +60,26 @@ body {
     overflow: visible !important;
   }
 }
+
+/*
+ * "Skip to main content" (WCAG 2.4.1): the first thing a keyboard user tabs
+ * to, hidden until focused so it doesn't affect the visual design.
+ */
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -48px;
+  z-index: 2000;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #101728;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 8px;
+  outline: 2px solid #8b7dff;
+  outline-offset: 2px;
+}
