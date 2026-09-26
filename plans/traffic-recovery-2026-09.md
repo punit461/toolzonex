@@ -60,3 +60,45 @@ Pages: tip-screen 9.3, broken-screen 24 (13% CTR), windows-11-blue-screen 33, wi
 - **~Oct 10** (after the spam update finishes): GSC Performance for the screen pages. Pages report: "Excluded by noindex" should be climbing toward ~1,500, and indexed pages should settle near ~170.
 - **~Oct 24:** if the Pages report shows the cleanup processed, remove `sitemap-cleanup.xml`.
 - **The next core update** is the realistic point for a site-level reassessment. Recoveries from this kind of demotion are usually measured in months, not days.
+
+## Update 2026-09-26 (later): Bing and Cloudflare data, second batch
+
+### What the data says
+
+- **Real visitors: about 5–15 a day, none from Google.** From Cloudflare Web Analytics, which only has data since the Sep 12 move and samples roughly 1 in 10 beacons. Of the 1–4K HTML hits a day in zone analytics, about 98% are bots and vulnerability scanners. Real people mostly land on niche PDF tools (ink saver, black-and-white converter, color inverter, add border) and the screen pranks.
+- **Bing keyword report:** 94 impressions and 7 clicks in total. Tip screen is the strongest query here too (five variants around position 8). Five of the seven clicks were **branded** ("toolzonex pdf split", "toolzonex password generator", "toolzonex gratuity calculator"), meaning returning users searching for a specific tool. There is also a long tail at positions 3–7: salary increment with arrears and multi-year hike questions, extract PDF comments, and PDF font viewer.
+- **Most of those pages were noindexed on Sep 12.** Bing obeys `noindex` too, which fits Bing dropping to zero after the cleanup.
+
+### Changes
+
+1. **Google-only noindex for 15 pages** (registry flag `bingIndexable`): the robots meta says `index` and the googlebot meta says `noindex`. Google's view doesn't change, so this doesn't break the no-churn rule. Bing, DuckDuckGo, Yahoo and ChatGPT search get the pages back. The pages are the ones with Bing demand or real-user evidence: salary-increment and gratuity calculators; add-pdf-border, pdf-comment-extractor, pdf-font-viewer, pdf-ink-saver, pdf-black-and-white-converter, pdf-color-inverter, remove-header-footer; multiplication-table and random-number generators; text-case-mixer, leetspeak-converter, unicode-to-text, base64-to-image. They are listed in `sitemap-bing.xml`, which is deliberately left out of robots.txt.
+2. **IndexNow:** key file `public/b5b3116b5469ea3e0b2e1699186d5f41.txt` plus `npm run indexnow`. After a deploy, it submits sitemap.xml and sitemap-bing.xml, or just the paths you pass it.
+3. **Tip screen upgrade:**
+   - Presets: Restaurant, Coffee Shop, Joke.
+   - Currency selector.
+   - The buttons now work: a tap shows the total and a thank-you screen, which then resets.
+   - Custom Tip entry.
+   - Joke mode, where "No Tip" guilt-trips the tapper, and the No Tip button can be hidden.
+   - A tip-etiquette section.
+   - The title, URL and H1 are unchanged.
+4. **Salary increment calculator:**
+   - An arrears calculation and a year-by-year projection with a running total, answering the Bing queries.
+   - The title no longer promises take-home salary, which the tool never calculated.
+5. **Privacy claims fixed ahead of any launch:**
+   - Add QR to PDF now generates the QR code locally with qr-code-styling, instead of calling api.qrserver.com.
+   - Translate PDF's upload box now says the extracted text goes to the translation service.
+
+### Checklist
+
+- [ ] After deploy: `npm run indexnow`.
+- [ ] Bing Webmaster → Sitemaps: submit `https://toolzonex.com/sitemap-bing.xml`.
+- [ ] Bing Webmaster → Search Performance: in 1–2 weeks, check impressions for the 15 pages.
+- [ ] One genuine launch, pitched on something specific rather than the whole catalog:
+  - Show HN or r/InternetIsBeautiful for "PDF tools that run in your browser"
+  - an AlternativeTo listing next to iLovePDF and Smallpdf
+  - a short clip of the tip-screen joke mode or the fake-update prank
+
+### Late-October index review (after the 4-week wait)
+
+- Consider opening the niche PDF tools and the salary calculator to Google as well, if Bing shows them earning clicks.
+- Reconsider the head-term PDF pages that are indexed now (compress, merge, split, pdf-to-word). A new domain has no realistic path to page 1 against iLovePDF, Smallpdf and Adobe, while the niche tools have little competition and real users.
