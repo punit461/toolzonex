@@ -41,17 +41,17 @@ export function getAllToolBlogSlugs(): string[] {
  * rationale).
  *
  * Same dial: add a slug here the moment it shows real demand.
+ *
+ * 2026-09-26: emptied. The 8 guides kept on 2026-09-12 earned their
+ * impressions at positions 65-94 and one click between them, while splitting
+ * the same queries with the tool page they describe (bmr, gold, retirement and
+ * uk-stamp-duty had both indexed) or standing in for a tool page that had been
+ * noindexed (what-is-my-ip, hex-to-rgb, image-color-picker and
+ * capital-gains-tax-calculator — those four tools are indexed again instead).
+ * Someone searching "hex to rgb" wants the converter, not an article about it,
+ * so every query now consolidates on the tool page.
  */
-const INDEXABLE_BLOG_SLUGS = new Set([
-  'what-is-my-ip',              // 1342 impressions, 1 click
-  'hex-to-rgb',                 //  823 impressions
-  'image-color-picker',         //  269 impressions
-  'uk-stamp-duty-calculator',   //  251 impressions
-  'bmr-calculator',             //  178 impressions
-  'retirement-calculator',      //  145 impressions
-  'gold-calculator',            //  138 impressions
-  'capital-gains-tax-calculator', // 131 impressions
-]);
+const INDEXABLE_BLOG_SLUGS = new Set<string>([]);
 
 /** Whether a tool guide should be indexed by search engines. */
 export function isToolBlogIndexable(slug: string): boolean {

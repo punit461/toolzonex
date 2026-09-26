@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: 'Daily and weekly focus score trends, distraction counts, and productivity breakdowns for your Pomodoro sessions.',
   keywords: ['pomodoro dashboard', 'focus score', 'productivity analytics'],
   alternates: { canonical: '/tools/ai-pomodoro/dashboard' },
+  // Charts of the visitor's own locally stored sessions -- empty for Googlebot.
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'AI Pomodoro Dashboard - Focus & Productivity Analytics | ToolZoneX',
     description: 'Daily and weekly focus score trends and productivity breakdowns.',
