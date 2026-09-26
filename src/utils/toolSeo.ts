@@ -41,7 +41,15 @@ export function buildToolMetadata(tool: ToolRegistryEntry): Metadata {
     // Pages flagged `noindex` stay live and usable; they're just withheld from
     // Google. `follow: true` keeps internal link equity flowing through them.
     // Omitted entirely when not flagged, so the layout's site-wide default applies.
-    ...(tool.noindex ? { robots: { index: false, follow: true } } : {}),
+    // `bingIndexable` moves the noindex into the googlebot meta, which Google
+    // obeys (the stricter rule wins) and Bing ignores.
+    ...(tool.noindex
+      ? {
+          robots: tool.bingIndexable
+            ? { index: true, follow: true, googleBot: { index: false, follow: true } }
+            : { index: false, follow: true },
+        }
+      : {}),
     openGraph: {
       title: tool.ogTitle,
       description: tool.ogDescription,

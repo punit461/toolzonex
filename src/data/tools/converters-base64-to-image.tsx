@@ -23,6 +23,7 @@ const tool: ToolRegistryEntry = {
     extraSchemaFields: undefined,
     isHub: false,
     noindex: true,
+    bingIndexable: true,
 };
 
 export default tool;

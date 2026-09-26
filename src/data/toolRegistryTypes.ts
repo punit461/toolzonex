@@ -62,4 +62,17 @@ export interface ToolRegistryEntry {
      * link equity still flows through these pages.
      */
     noindex?: boolean;
+    /**
+     * Narrows `noindex` to Google only. Googlebot still gets `noindex, follow`
+     * (through the googlebot meta), while Bing, and the engines built on its
+     * index (DuckDuckGo, Yahoo, ChatGPT search), may index the page. The page
+     * leaves sitemap.xml either way and is listed in sitemap-bing.xml instead.
+     * Has no effect without `noindex`.
+     *
+     * Set on 2026-09-26 for the noindexed tools that the Bing Webmaster keyword
+     * report or Cloudflare Web Analytics showed real people searching for or
+     * using. The Sep 12 cleanup's `noindex` also removed them from Bing, which
+     * went to zero clicks with it. Google's view of the site doesn't change.
+     */
+    bingIndexable?: boolean;
 }
