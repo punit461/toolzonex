@@ -11,9 +11,11 @@ interface Props {
   accept?: string;
   label?: string;
   selectedNames?: string[];
+  /** Overrides the privacy caption for tools that send something off-device (Translate PDF sends the extracted text). */
+  privacyNote?: string;
 }
 
-const PdfFileDropzone = ({ onFilesSelected, multiple = false, accept = 'application/pdf', label = 'PDF file', selectedNames = [] }: Props) => {
+const PdfFileDropzone = ({ onFilesSelected, multiple = false, accept = 'application/pdf', label = 'PDF file', selectedNames = [], privacyNote = 'Your file never leaves your browser' }: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [isDragOver, setIsDragOver] = useState(false);
 
@@ -65,7 +67,7 @@ const PdfFileDropzone = ({ onFilesSelected, multiple = false, accept = 'applicat
         <Box>
           <UploadFileIcon sx={{ fontSize: 40, mb: 1, color: 'text.secondary' }} />
           <Typography variant="body1">Click to select {multiple ? `${label}s` : `a ${label}`}, or drag and drop</Typography>
-          <Typography variant="caption" color="text.secondary">Your file never leaves your browser</Typography>
+          <Typography variant="caption" color="text.secondary">{privacyNote}</Typography>
         </Box>
       )}
       {selectedNames.length === 0 && (
