@@ -11,14 +11,16 @@ import AdSenseUnit from '../../components/AdSenseUnit';
 import { useFullscreen } from './useFullscreen';
 
 const COLORS = ['#e11d48', '#1a56db', '#00b140', '#eab308', '#7c3aed', '#f97316', '#ec4899', '#06b6d4'];
-const DEFAULT_IMAGE = '/dvd.png';
+// No bundled logo: the official DVD Video logo is trademarked artwork (DVD
+// Format/Logo Licensing Corporation). The default is the plain word "DVD";
+// image mode only shows a picture the visitor uploads.
 
 const DvdScreensaverContent = () => {
   const { targetRef, isFullscreen, toggle } = useFullscreen<HTMLDivElement>();
   const logoRef = useRef<HTMLDivElement>(null);
-  const [mode, setMode] = useState<'image' | 'text'>('image');
+  const [mode, setMode] = useState<'image' | 'text'>('text');
   const [text, setText] = useState('DVD');
-  const [imageSrc, setImageSrc] = useState(DEFAULT_IMAGE);
+  const [imageSrc, setImageSrc] = useState<string | null>(null);
   const objectUrlRef = useRef<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const pos = useRef({ x: 40, y: 40, dx: 2.2, dy: 1.7 });
@@ -47,7 +49,8 @@ const DvdScreensaverContent = () => {
       URL.revokeObjectURL(objectUrlRef.current);
       objectUrlRef.current = null;
     }
-    setImageSrc(DEFAULT_IMAGE);
+    setImageSrc(null);
+    setMode('text');
   };
 
   useEffect(() => {
@@ -112,12 +115,14 @@ const DvdScreensaverContent = () => {
           />
         ) : (
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-            <Box
-              component="img"
-              src={imageSrc}
-              alt="Current logo"
-              sx={{ height: 40, width: 40, objectFit: 'contain', borderRadius: 1, bgcolor: 'action.hover' }}
-            />
+            {imageSrc && (
+              <Box
+                component="img"
+                src={imageSrc}
+                alt="Your uploaded image"
+                sx={{ height: 40, width: 40, objectFit: 'contain', borderRadius: 1, bgcolor: 'action.hover' }}
+              />
+            )}
             <Button
               variant="outlined"
               size="small"
@@ -126,9 +131,9 @@ const DvdScreensaverContent = () => {
             >
               Upload Image
             </Button>
-            {imageSrc !== DEFAULT_IMAGE && (
+            {imageSrc && (
               <Button variant="text" size="small" onClick={resetImage}>
-                Reset
+                Back to text
               </Button>
             )}
             <input
@@ -170,7 +175,7 @@ const DvdScreensaverContent = () => {
             willChange: 'transform',
           }}
         >
-          {mode === 'image' ? (
+          {mode === 'image' && imageSrc ? (
             <Box
               component="img"
               src={imageSrc}
@@ -207,16 +212,16 @@ const DvdScreensaver = () => {
     <>
       <Typography variant="h2">The Classic DVD Screensaver</Typography>
       <Typography variant="body1">
-        A recreation of the iconic bouncing DVD logo screensaver. The logo bounces around your screen and
-        changes color every time it hits an edge — choose between the classic image logo or custom text,
-        upload your own picture, and go fullscreen for the full effect.
+        A tribute to the classic bouncing DVD screensaver. The word bounces around your screen and changes
+        color every time it hits an edge — keep &quot;DVD&quot;, type your own text, or upload your own picture,
+        and go fullscreen for the full effect.
       </Typography>
 
       <Typography variant="h2">How to use it</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
           <li>Toggle between <strong>Image</strong> and <strong>Text</strong> mode.</li>
-          <li>In Image mode, click <strong>Upload Image</strong> to bounce your own picture, or use the default DVD logo. Click <strong>Reset</strong> to go back to the default.</li>
+          <li>In Image mode, click <strong>Upload Image</strong> to bounce your own picture. Click <strong>Back to text</strong> to return to the text.</li>
           <li>In Text mode, type custom text into the &quot;Logo Text&quot; field (up to 12 characters), or leave it as &quot;DVD&quot;.</li>
           <li>Click <strong>Click to Fullscreen</strong> (or press F / Space) for the full effect.</li>
           <li>Watch it bounce — and see if it ever perfectly hits a corner.</li>
@@ -234,7 +239,7 @@ const DvdScreensaver = () => {
         <ul>
           <li>Nostalgic background for a stream, party, or office screen.</li>
           <li>Bounce a company logo or a friend&apos;s photo around the screen for a laugh.</li>
-          <li>A lighthearted "waiting" screen between meetings or presentations.</li>
+          <li>A lighthearted &quot;waiting&quot; screen between meetings or presentations.</li>
           <li>The classic office bet: will it ever hit the corner exactly?</li>
         </ul>
       </Box>
@@ -246,6 +251,7 @@ const DvdScreensaver = () => {
           <li><strong>Can I change the logo text?</strong> Yes, switch to Text mode and type anything up to 12 characters before going fullscreen.</li>
           <li><strong>Does the color change randomly?</strong> In Text mode, the logo cycles through a fixed sequence of colors, one step forward each time it bounces off an edge.</li>
           <li><strong>Is my uploaded image saved anywhere?</strong> No, it stays only in your browser for this session and is never uploaded to a server.</li>
+          <li><strong>Is this the official DVD logo?</strong> No. It bounces the letters DVD in a plain bold font. The official DVD Video logo is a trademark of DVD Format/Logo Licensing Corporation, which has no connection with this site.</li>
         </ul>
       </Box>
     </>
