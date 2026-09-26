@@ -7,7 +7,7 @@
 @import 'tailwindcss/utilities.css' layer(utilities);
 
 @theme {
-  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
 
   /* Productivity Tool palette — teal focus + orange action, from ui-ux-pro-max */
   --color-primary: #0d9488;

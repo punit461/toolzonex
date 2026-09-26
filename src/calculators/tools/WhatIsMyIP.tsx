@@ -124,6 +124,10 @@ const WhatIsMyIPContent = () => {
                 >
                   Refresh
                 </Button>
+                <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 1.5 }}>
+                  Your IP address is looked up by ipapi.co (or api.ipify.org if that fails) when this page loads.
+                  ToolZoneX doesn&apos;t store it. See our <a href="/privacy-policy#outside-services">Privacy Policy</a>.
+                </Typography>
               </>
             )}
           </>

@@ -65,6 +65,12 @@ const RemoveRestrictionsContent = () => {
     <Box>
       {dialog}
       <PdfFileDropzone onFilesSelected={(files) => { setFile(files[0] ?? null); setFoundRestrictions(null); setRemoved(false); }} label="PDF file" selectedNames={file ? [file.name] : []} />
+      {/* Removing permission restrictions on someone else's document can break
+          copyright anti-circumvention law, so say who the tool is for. */}
+      <Alert severity="info" sx={{ mt: 2 }}>
+        Only use this on PDFs you own or are authorised to modify. Removing restrictions from someone else&apos;s
+        document can break copyright law.
+      </Alert>
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       {foundRestrictions && (
