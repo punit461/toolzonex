@@ -36,7 +36,7 @@ ToolZoneX is a comprehensive, open-source platform of high-performance calculato
 - **Language:** TypeScript
 - **Styling:** Material UI (MUI) v6
 - **SEO:** Native Next.js Metadata API, automated `sitemap.xml` and `robots.txt`
-- **Deployment:** Static Export (`output: 'export'`) to GitHub Pages via GitHub Actions
+- **Deployment:** Static Export (`output: 'export'`) to Cloudflare Pages (production builds from the `deploy` branch; `main` builds a preview)
 
 ---
 
@@ -97,4 +97,5 @@ The contact form is integrated with **Google Sheets** for lead capture and uses 
 ---
 
 ## ⚖️ License
-This project is open-source and available under the MIT License.
+The source code is available under the MIT License — see [LICENSE](LICENSE).
+The ToolZoneX name and logos, and the written content (blog articles, tool guides and legal pages), are **not** covered by the MIT License: all rights reserved.
