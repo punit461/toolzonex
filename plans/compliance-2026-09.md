@@ -18,7 +18,21 @@ Written 2026-09-26 after a compliance pass on toolzonex.com. This is not legal a
 
 Browser storage (first-party, stays on device): `toolzonex-color-mode`, `calcbharat_notepad`, `ai-pomodoro-settings` (localStorage), `ai-pomodoro-db` (IndexedDB). The site sets no cookies of its own. Google Analytics code exists but is **not enabled** in production.
 
-## Shipped (commits fdf7569 … 459f9ed)
+## Accessibility results (axe-core, WCAG 2.2 AA + best practice)
+
+| | Before (live, 266 pages) | After (preview, 279 pages light + 35 dark) |
+|---|---|---|
+| Unnamed links (link-name) | 246 pages | 0 |
+| Unlabelled form fields (label) | 63 pages | 0 |
+| Unnamed dropdowns (aria-input-field-name) | 55 pages | 0 |
+| Colour contrast | 16 pages | 0 (light and dark) |
+| Unnamed buttons (button-name) | 11 pages | 0 |
+| Heading order (moderate) | 257 pages | 0 after the last fix |
+| Remaining | — | 1 minor: MUI `component="label"` upload button role |
+
+Automated checks don't prove full WCAG conformance. Manual keyboard and screen-reader testing of the main flows is still worth doing.
+
+## Shipped (commits fdf7569 … 837003e, deployed 2026-09-26)
 
 - **Legal pages**:
   - `/privacy-policy`, `/terms-of-service` (Terms and Conditions), `/cookie-policy` and `/refund-policy`, on a shared `LegalPage` shell.
