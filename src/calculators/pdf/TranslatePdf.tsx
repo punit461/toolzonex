@@ -124,7 +124,7 @@ const TranslatePdfContent = () => {
 
   return (
     <Box>
-      <PdfFileDropzone onFilesSelected={(files) => { setFile(files[0] ?? null); setTranslatedText(null); setExtractedText(''); }} label="PDF file" selectedNames={file ? [file.name] : []} />
+      <PdfFileDropzone onFilesSelected={(files) => { setFile(files[0] ?? null); setTranslatedText(null); setExtractedText(''); }} label="PDF file" selectedNames={file ? [file.name] : []} privacyNote="Your PDF stays in your browser; only its extracted text is sent to the translation service" />
 
       <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mt: 3 }}>
         <TextField select fullWidth label="Translate from" value={sourceLang} onChange={(e) => setSourceLang(e.target.value)}>

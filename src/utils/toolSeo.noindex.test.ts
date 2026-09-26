@@ -45,6 +45,20 @@ describe('buildToolMetadata robots handling', () => {
     });
   });
 
+  it('keeps Google out but lets Bing index when bingIndexable is set', () => {
+    // Google applies the stricter of `robots` and `googlebot`, so the page must
+    // still carry an explicit googlebot noindex; Bing only reads `robots`.
+    expect(buildToolMetadata({ ...base, noindex: true, bingIndexable: true }).robots).toEqual({
+      index: true,
+      follow: true,
+      googleBot: { index: false, follow: true },
+    });
+  });
+
+  it('ignores bingIndexable on a page that is not noindexed', () => {
+    expect(buildToolMetadata({ ...base, bingIndexable: true }).robots).toBeUndefined();
+  });
+
   it('keeps the canonical pointing at the page itself even when noindexed', () => {
     // A noindexed page must not lose or redirect its canonical: the page stays
     // live, and we want to flip it back to indexed later without another edit.

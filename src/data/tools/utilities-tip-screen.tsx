@@ -19,7 +19,7 @@ const tool: ToolRegistryEntry = {
     schemaDescription: "A fullscreen tip screen with a custom heading, subtotal, and tip percentages — use it for real restaurant/POS tipping, or as a funny joke tip screen for friends.",
     applicationCategory: "UtilityApplication",
     currency: "USD",
-    faqs: [{ question: "Can I use this for a joke tip screen?", answer: "Yes — change the Screen Heading field to whatever you want (a chore, a favor, an inside joke), set the subtotal and percentages, then go fullscreen and show it to whoever you're \"charging.\"" }, { question: "Does this process real payments?", answer: "No — it's a display only, showing tip amounts for reference. It doesn't charge cards or record transactions, whether you're using it for a real restaurant bill or a joke." }],
+    faqs: [{ question: "Can I use this for a joke tip screen?", answer: "Yes — use the Joke preset or turn on Joke mode, and \"No Tip\" asks \"Are you sure?\" a few times before it gives in. You can also hide the No Tip button entirely, or change the heading to any favor you want \"tipped\" for." }, { question: "What happens when someone taps a tip?", answer: "The screen shows the tip and the total with a thank-you message, then returns to the tip choice after a few seconds, ready for the next person." }, { question: "Does this process real payments?", answer: "No — it's a display only, showing tip amounts for reference. It doesn't charge cards or record transactions, whether you're using it for a real restaurant bill or a joke." }],
     extraSchemaFields: undefined,
     isHub: false,
 };

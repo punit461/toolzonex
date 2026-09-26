@@ -54,6 +54,11 @@ function getSourceFileForRoute(route) {
   return null;
 }
 
+/** True when the built page carries a `noindex` in the named robots meta ("robots" or "googlebot"). */
+function hasNoindex(html, metaName) {
+  return new RegExp(`<meta[^>]+name="${metaName}"[^>]+content="[^"]*noindex`, 'i').test(html);
+}
+
 function getPriority(route) {
   if (route === '/') return '1.0';
   if (route.startsWith('/blog/tools/')) return '0.7';
@@ -92,6 +97,7 @@ async function generateSitemap() {
 
   const urls = [];
   const noindexRoutes = [];
+  const bingOnlyUrls = [];
 
   function toRoute(basePath, basename) {
     let route = `${basePath}/${basename}`;
@@ -122,8 +128,16 @@ async function generateSitemap() {
         }
 
         const html = fs.readFileSync(fullPath, 'utf8');
-        if (/<meta[^>]+name="robots"[^>]+content="[^"]*noindex/i.test(html)) {
+        if (hasNoindex(html, 'robots')) {
           noindexRoutes.push(toRoute(basePath, basename));
+          continue;
+        }
+        // `bingIndexable` tools: `robots` allows indexing but the googlebot meta
+        // doesn't. They stay out of sitemap.xml, remain in the cleanup sitemap
+        // (Google must keep seeing the noindex), and go to sitemap-bing.xml.
+        if (hasNoindex(html, 'googlebot')) {
+          noindexRoutes.push(toRoute(basePath, basename));
+          bingOnlyUrls.push({ route: toRoute(basePath, basename), filePath: fullPath });
           continue;
         }
 
@@ -175,6 +189,20 @@ ${cleanupRoutes
 </urlset>`;
   fs.writeFileSync(path.join(outPath, 'sitemap-cleanup.xml'), cleanupSitemap);
   console.log(`✅ sitemap-cleanup.xml generated with ${cleanupRoutes.length} noindexed/redirected URLs`);
+
+  // Pages that only Bing may index. Deliberately left out of robots.txt, which
+  // Google also reads: submit it in Bing Webmaster Tools (Sitemaps) instead.
+  const bingSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${bingOnlyUrls
+  .map(({ route, filePath }) => `  <url>
+    <loc>${SITE_URL}${route}</loc>
+    <lastmod>${getLastMod(route, filePath)}</lastmod>
+  </url>`)
+  .join('\n')}
+</urlset>`;
+  fs.writeFileSync(path.join(outPath, 'sitemap-bing.xml'), bingSitemap);
+  console.log(`✅ sitemap-bing.xml generated with ${bingOnlyUrls.length} Bing-only URLs`);
 
   // /_next/ must stay crawlable: it holds every page's CSS and JS, and blocking
   // it made Googlebot render every tool as an unstyled, non-working form.
