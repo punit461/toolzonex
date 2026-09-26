@@ -39,7 +39,7 @@ const CssTextShadowGeneratorContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Paper variant="outlined" sx={{ p: 4, display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 140, bgcolor: 'action.hover' }}>
-          <Typography variant="h3" sx={{ fontWeight: 700, textShadow }}>Sample Text</Typography>
+          <Typography component="p" variant="h3" sx={{ fontWeight: 700, textShadow }}>Sample Text</Typography>
         </Paper>
         <Box sx={{ position: 'relative' }}>
           <Paper variant="outlined" sx={{ p: 2, bgcolor: 'grey.900', color: '#10b981', fontFamily: 'monospace' }}>

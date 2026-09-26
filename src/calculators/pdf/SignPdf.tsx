@@ -171,7 +171,7 @@ const SignPdfContent = () => {
   return (
     <Box>
       {dialog}
-      <Typography variant="h3" sx={{ fontSize: '1.1rem', mb: 1 }}>1. Create your signature</Typography>
+      <Typography component="h2" variant="h3" sx={{ fontSize: '1.1rem', mb: 1 }}>1. Create your signature</Typography>
       <Tabs value={mode} onChange={(_, v) => setMode(v)} sx={{ mb: 2 }}>
         <Tab value="draw" label="Draw" />
         <Tab value="type" label="Type" />
@@ -213,12 +213,12 @@ const SignPdfContent = () => {
         </Paper>
       )}
 
-      <Typography variant="h3" sx={{ fontSize: '1.1rem', mt: 4, mb: 1 }}>2. Upload the PDF to sign</Typography>
+      <Typography component="h2" variant="h3" sx={{ fontSize: '1.1rem', mt: 4, mb: 1 }}>2. Upload the PDF to sign</Typography>
       <PdfFileDropzone onFilesSelected={handleFiles} label="PDF file" selectedNames={file ? [file.name] : []} />
 
       {file && (
         <Box sx={{ mt: 3 }}>
-          <Typography variant="h3" sx={{ fontSize: '1.1rem', mb: 1 }}>3. Position the signature</Typography>
+          <Typography component="h2" variant="h3" sx={{ fontSize: '1.1rem', mb: 1 }}>3. Position the signature</Typography>
           <TextField
             type="number"
             label="Page number"

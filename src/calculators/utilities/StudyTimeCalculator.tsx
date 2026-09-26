@@ -57,7 +57,7 @@ const StudyTimeCalculatorContent = () => {
         <Typography variant="subtitle1" fontWeight={600} mb={2}>Results</Typography>
         <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">Recommended Study Time</Typography>
-          <Typography variant="h3" fontWeight="bold">{result.hoursPerDay.toFixed(1)} hrs/day</Typography>
+          <Typography component="p" variant="h3" fontWeight="bold">{result.hoursPerDay.toFixed(1)} hrs/day</Typography>
         </Paper>
         <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
           <Typography>Total Hours Needed</Typography>
