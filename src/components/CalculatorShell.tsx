@@ -6,7 +6,7 @@ import Link from 'next/link';
 import ArticleIcon from '@mui/icons-material/Article';
 import Breadcrumbs from './Breadcrumbs';
 import { categories } from '../data/toolCategories';
-import { getTool } from '../data/toolRegistry';
+import { getTool, getToolOrNull } from '../data/toolRegistry';
 import { getToolBlogByRoute } from '../data/tool-blogs';
 
 interface CalculatorShellProps {
@@ -29,12 +29,20 @@ const CATEGORY_DASHBOARD_ROUTES: Record<string, string> = {
   'PDF Tools': '/tools/pdf-tools',
 };
 
+const isIndexed = (path: string) => !getToolOrNull(path)?.noindex;
+
 /**
  * Picks a deterministic window of "next N" tools after the current one in
- * its category (wrapping around), rather than always the same first N --
- * this spreads internal links across every tool in the category instead of
- * funneling them all to a fixed handful. Deterministic (no randomness) so
- * it can't cause a hydration mismatch on this client component.
+ * its nav category (wrapping around), rather than always the same first N --
+ * this spreads internal links across the category instead of funneling them
+ * all to a fixed handful. Deterministic (no randomness) so it can't cause a
+ * hydration mismatch on this client component.
+ *
+ * Uses navCategory (13 groups) rather than shellCategory (9): a screen prank
+ * sits in the "Utilities" shell next to 340 unrelated calculators, so its
+ * related links used to be Age/Percentage/Date calculators instead of the
+ * other screens. Indexed tools are listed first so internal links concentrate
+ * on the pages that can actually rank.
  */
 function getRelatedTools(category: string, currentUrl: string) {
   const cat = categories.find((c) => c.label === category);
@@ -42,20 +50,22 @@ function getRelatedTools(category: string, currentUrl: string) {
 
   const currentIndex = cat.tools.findIndex((t) => t.path === currentUrl);
   const startIndex = currentIndex === -1 ? 0 : currentIndex + 1;
-  const count = Math.min(RELATED_COUNT, cat.tools.length - 1);
 
-  const related = [];
-  for (let i = 0; i < count; i++) {
+  const ordered = [];
+  for (let i = 0; i < cat.tools.length; i++) {
     const tool = cat.tools[(startIndex + i) % cat.tools.length];
-    if (tool.path !== currentUrl) related.push(tool);
+    if (tool.path !== currentUrl) ordered.push(tool);
   }
-  return related;
+  return [
+    ...ordered.filter((t) => isIndexed(t.path)),
+    ...ordered.filter((t) => !isIndexed(t.path)),
+  ].slice(0, RELATED_COUNT);
 }
 
 const CalculatorShell = ({ url, children, content }: CalculatorShellProps) => {
   const entry = getTool(url);
-  const { name: title, description, shellCategory: category, faqs } = entry;
-  const relatedTools = getRelatedTools(category, url);
+  const { name: title, description, shellCategory: category, navCategory, faqs } = entry;
+  const relatedTools = getRelatedTools(navCategory, url);
   const blog = getToolBlogByRoute(url);
 
   const faqSchema = faqs && faqs.length > 0 ? {
@@ -124,7 +134,7 @@ const CalculatorShell = ({ url, children, content }: CalculatorShellProps) => {
         <Box sx={{ mt: 6 }}>
           <Divider sx={{ mb: 6 }} />
           <Typography variant="h2" sx={{ mb: 3, fontWeight: 600, fontSize: '1.5rem' }}>
-            More in {category}
+            More in {navCategory}
           </Typography>
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' }, gap: 2 }}>
             {relatedTools.map((tool) => (

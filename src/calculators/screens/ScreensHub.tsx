@@ -16,6 +16,7 @@ const SCREENS = [
   { slug: 'zoom-lighting-screen', name: 'Zoom Lighting Screen', desc: 'Warm light for video calls.' },
   { slug: 'dead-pixel-test', name: 'Dead Pixel Test', desc: 'Find stuck or dead pixels.' },
   { slug: 'dvd-screensaver', name: 'DVD Screensaver', desc: 'The classic bouncing logo.' },
+  { slug: 'tip-screen', name: 'Tip Screen', desc: 'POS-style tip prompt, real or as a joke.' },
   { slug: 'broken-screen', name: 'Broken Screen', desc: 'Fake cracked-screen prank.' },
   { slug: 'windows-10-blue-screen', name: 'Windows 10 Blue Screen', desc: 'Fake BSOD prank.' },
   { slug: 'windows-10-update-screen', name: 'Windows 10 Update Screen', desc: 'Fake update prank.' },
