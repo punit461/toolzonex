@@ -81,7 +81,7 @@ const Home = () => {
         </Typography>
         <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.125rem', mb: 4, maxWidth: '58ch' }}>
           {totalTools.toLocaleString('en-IN')} free calculators and converters for finance, health, and everyday
-          questions. Nothing to install, no sign-up, and your numbers never leave the browser.
+          questions. Nothing to install, no sign-up, and calculations run in your browser.
         </Typography>
 
         <TextField
@@ -193,10 +193,10 @@ const Home = () => {
             Why ToolZoneX
           </Typography>
           <Typography variant="body1" color="text.secondary">
-            Every tool here runs entirely in your browser — enter your salary, your loan amount, or your medical
-            numbers and none of it is uploaded anywhere. The finance tools are built for Indian rules specifically:
-            current FY tax slabs, PPF and SSY limits, GST rates, and HRA exemption maths, rather than a US calculator
-            with the currency symbol swapped. And when a number needs explaining, the{' '}
+            Calculators run in your browser: enter your salary, your loan amount, or your medical numbers and none
+            of it is sent to us. The few tools that need live data, such as exchange rates or PDF translation, say so
+            on the page. The finance tools are built for Indian rules specifically: income tax regimes, PPF and SSY
+            rules, GST rates, and HRA exemption maths, rather than a US calculator with the currency symbol swapped. And when a number needs explaining, the{' '}
             <Box component={RouterLink} href="/blog" sx={{ color: 'primary.main', fontWeight: 500 }}>
               guides
             </Box>{' '}

@@ -11,7 +11,7 @@ const tool: ToolRegistryEntry = {
     shellCategory: "Finance",
     icon: <ReceiptIcon fontSize="large" color="primary"/>,
     seoTitle: "GST Calculator - Add or Remove GST from Amount",
-    seoDescription: "Free GST calculator to add or remove GST from any amount. Calculate inclusive and exclusive prices instantly for 5%, 12%, 18%, and 28% GST rates.",
+    seoDescription: "Free GST calculator to add or remove GST from any amount. Calculate inclusive and exclusive prices for the 5%, 18% and 40% GST rates, or any other rate.",
     keywords: ["GST calculator", "GST rate", "add GST", "remove GST", "inclusive GST", "exclusive GST", "goods and services tax"],
     ogTitle: "GST Calculator - Add or Remove GST from Amount | ToolZoneX",
     ogDescription: "Free GST calculator to add or remove GST from any amount instantly.",

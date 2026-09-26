@@ -10,23 +10,23 @@ const faqs = [
   },
   {
     question: "Do you store my personal financial data?",
-    answer: "Absolutely not. All mathematical calculations happen directly inside your web browser (client-side). We do not transmit, save, or store your salary, loan amounts, or health metrics on our servers."
+    answer: "No. Calculations happen in your web browser, so your salary, loan amounts and health numbers aren't sent to us or stored by us. A few tools that need live data — exchange rates, IP lookup and PDF translation — contact an outside service and say so on the page. Our Privacy Policy lists them."
   },
   {
     question: "How accurate are these calculators?",
-    answer: "We use standard financial and mathematical formulas to ensure high accuracy. However, they are designed for informational and educational purposes. For official tax filing or medical decisions, we always recommend consulting a certified professional."
+    answer: "We use standard, published formulas and rates, and fix errors as soon as they're reported. Results are still estimates for information and education: rules and rates change, and your situation may differ. For tax filing, investments or medical decisions, check with a qualified professional or the official source."
   },
   {
     question: "Why does the BMI calculator use Indian-specific categories?",
-    answer: "Studies show that South Asians, including Indians, are at a higher risk of metabolic diseases at lower body weights compared to Caucasian populations. Therefore, the Indian Ministry of Health recommends a stricter BMI threshold (overweight starts at 23 instead of 25) to provide a more accurate health assessment."
+    answer: "Research, including a WHO expert consultation, has found that South Asians face higher metabolic risk at lower body weights. Indian clinical guidelines therefore treat a BMI of 23 or more as overweight for adults, rather than the international 25. BMI is a screening measure, not a diagnosis — talk to a doctor about your own health."
   },
   {
     question: "Will you be adding more tools in the future?",
-    answer: "Yes! We are constantly working on building more India-centric financial, fitness, and lifestyle calculators. If you have a specific tool request, feel free to reach out to us via the Contact page."
+    answer: "We add and improve tools based on what people ask for. If you have a specific tool request, get in touch through the Contact page."
   },
   {
     question: "Can I use this website on my mobile phone?",
-    answer: "Yes, ToolZoneX is fully optimized for mobile devices. It works perfectly on smartphones, tablets, and desktop computers alike."
+    answer: "Yes. The site is designed to work on phones, tablets and desktop computers. If something doesn't work on your device, please tell us so we can fix it."
   }
 ];
 

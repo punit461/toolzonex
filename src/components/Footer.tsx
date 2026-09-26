@@ -2,6 +2,7 @@
 
 import { Box, Typography, Link, Container } from '@mui/material';
 import RouterLink from 'next/link';
+import { OPERATOR_NAME, OPERATOR_LOCATION, CONTACT_EMAIL } from '../data/siteInfo';
 
 /**
  * The footer stays a dark slab in both themes -- it anchors the bottom of the
@@ -86,8 +87,16 @@ const COLUMNS: { heading: string; links: [string, string][] }[][] = [
         ['About', '/about'],
         ['FAQ', '/faq'],
         ['Contact', '/contact'],
+      ],
+    },
+    {
+      heading: 'Legal',
+      links: [
         ['Privacy Policy', '/privacy-policy'],
-        ['Terms of Service', '/terms-of-service'],
+        ['Terms and Conditions', '/terms-of-service'],
+        ['Cookie Policy', '/cookie-policy'],
+        ['Cookie settings', '/cookie-policy#your-choices'],
+        ['Refund Policy', '/refund-policy'],
       ],
     },
   ],
@@ -126,9 +135,15 @@ const Footer = () => {
           ))}
         </Box>
 
-        <Box sx={{ borderTop: `1px solid ${FOOT_RULE}`, pt: 3, display: 'flex', justifyContent: 'center' }}>
+        <Box sx={{ borderTop: `1px solid ${FOOT_RULE}`, pt: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, textAlign: 'center' }}>
+          <Typography variant="body2" sx={{ color: FOOT_MUTED, maxWidth: 720 }}>
+            Results are estimates for information only, not financial, tax, legal or medical advice.
+          </Typography>
           <Typography variant="body2" sx={{ color: FOOT_MUTED }}>
-            © {new Date().getFullYear()} ToolZoneX
+            © {new Date().getFullYear()} ToolZoneX · Run by {OPERATOR_NAME}, {OPERATOR_LOCATION} ·{' '}
+            <Link href={`mailto:${CONTACT_EMAIL}`} sx={{ color: FOOT_TEXT, '&:hover': { color: FOOT_HEADING } }}>
+              {CONTACT_EMAIL}
+            </Link>
           </Typography>
         </Box>
       </Container>
