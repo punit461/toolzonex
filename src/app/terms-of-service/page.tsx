@@ -5,30 +5,22 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Terms of Service - ToolZoneX",
-  description: "Read the terms and conditions governing your use of ToolZoneX calculators and services. Understand your rights and responsibilities when using our free tools.",
-  keywords: ["terms of service", "terms and conditions", "ToolZoneX terms", "usage terms", "disclaimer", "liability"],
+  title: "Terms and Conditions",
+  description: "The terms for using ToolZoneX's free tools: results are estimates, not professional advice; acceptable use; our liability; and governing law.",
   alternates: { canonical: "/terms-of-service" },
   openGraph: {
-    title: "Terms of Service - ToolZoneX",
-    description: "Terms and conditions for using ToolZoneX tools and calculators.",
+    title: "Terms and Conditions | ToolZoneX",
+    description: "The terms for using ToolZoneX's free tools: results are estimates, not professional advice; acceptable use; our liability; and governing law.",
     url: `${SITE_URL}/terms-of-service`,
     type: "website",
     images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: "ToolZoneX" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Terms of Service - ToolZoneX",
-    description: "Terms and conditions for using ToolZoneX tools and calculators.",
-    images: [`${SITE_URL}/og-image.jpg`],
-    creator: "@toolzonex",
   },
 };
 
 export default function Page() {
   return (
     <>
-      <Breadcrumbs items={[{ label: "Terms of Service" }]} />
+      <Breadcrumbs items={[{ label: "Terms and Conditions" }]} />
       <TermsOfService />
     </>
   );
