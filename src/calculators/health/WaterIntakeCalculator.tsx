@@ -57,7 +57,7 @@ const WaterIntakeCalculatorContent = () => {
         <Box sx={{ mb: 4 }}>
           <Typography gutterBottom>Body Weight</Typography>
           <Box sx={{ display: 'flex', gap: 1 }}>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Body Weight' } }}
               fullWidth
               type="number"
               onFocus={(e) => e.target.select()}
@@ -74,7 +74,7 @@ const WaterIntakeCalculatorContent = () => {
         <Box sx={{ mb: 4 }}>
           <Typography gutterBottom>Exercise Level</Typography>
           <FormControl fullWidth>
-            <Select value={activity} onChange={(e) => setActivity(e.target.value as keyof typeof activityLevels)}>
+            <Select inputProps={{ 'aria-label': 'Exercise Level' }} value={activity} onChange={(e) => setActivity(e.target.value as keyof typeof activityLevels)}>
               {Object.entries(activityLevels).map(([key, item]) => (
                 <MenuItem key={key} value={key}>{item.label}</MenuItem>
               ))}
@@ -85,7 +85,7 @@ const WaterIntakeCalculatorContent = () => {
         <Box>
           <Typography gutterBottom>Climate</Typography>
           <FormControl fullWidth>
-            <Select value={climate} onChange={(e) => setClimate(e.target.value as keyof typeof climates)}>
+            <Select inputProps={{ 'aria-label': 'Climate' }} value={climate} onChange={(e) => setClimate(e.target.value as keyof typeof climates)}>
               {Object.entries(climates).map(([key, item]) => (
                 <MenuItem key={key} value={key}>{item.label}</MenuItem>
               ))}

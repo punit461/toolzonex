@@ -74,14 +74,14 @@ const PdfStyleEditorContent = () => {
         />
         <Box sx={{ flex: 1 }}>
           <Typography gutterBottom>Opacity: {Math.round(opacity * 100)}%</Typography>
-          <Slider value={opacity} min={0.05} max={0.8} step={0.05} onChange={(_, v) => setOpacity(v as number)} />
+          <Slider aria-label="Opacity" value={opacity} min={0.05} max={0.8} step={0.05} onChange={(_, v) => setOpacity(v as number)} />
         </Box>
       </Stack>
 
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleApply} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Processing...</> : 'Apply Style'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Processing...</> : 'Apply Style'}
       </Button>
     </Box>
   );

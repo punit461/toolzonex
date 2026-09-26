@@ -92,7 +92,7 @@ const BabyCareLogContent = () => {
                 </Select>
               </FormControl>
               <TextField size="small" label="Amount" value={f.amount} onChange={(e) => updateFeeding(f.id, { amount: e.target.value })} placeholder="e.g. 4 oz" sx={{ minWidth: 120 }} />
-              <IconButton onClick={() => removeFeeding(f.id)} disabled={feedings.length <= 1} size="small">
+              <IconButton aria-label="Remove" onClick={() => removeFeeding(f.id)} disabled={feedings.length <= 1} size="small">
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Stack>
@@ -115,7 +115,7 @@ const BabyCareLogContent = () => {
               <Typography variant="body2" color="text.secondary">
                 {computeDuration(s.start, s.end) || '—'}
               </Typography>
-              <IconButton onClick={() => removeSleep(s.id)} disabled={sleeps.length <= 1} size="small">
+              <IconButton aria-label="Remove" onClick={() => removeSleep(s.id)} disabled={sleeps.length <= 1} size="small">
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Stack>

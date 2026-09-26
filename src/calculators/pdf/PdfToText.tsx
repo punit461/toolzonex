@@ -71,7 +71,7 @@ const PdfToTextContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleExtract} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Extracting Text...</> : 'Extract Text'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Extracting Text...</> : 'Extract Text'}
       </Button>
 
       {noTextFound && (
@@ -88,7 +88,7 @@ const PdfToTextContent = () => {
             minRows={12}
             maxRows={24}
             value={text}
-            slotProps={{ input: { readOnly: true } }}
+            slotProps={{ htmlInput: { 'aria-label': 'Extracted text' }, input: { readOnly: true } }}
             sx={{ '& .MuiInputBase-root': { fontFamily: 'monospace', fontSize: '0.85rem' } }}
           />
           <Box sx={{ display: 'flex', gap: 2, mt: 2, flexWrap: 'wrap' }}>

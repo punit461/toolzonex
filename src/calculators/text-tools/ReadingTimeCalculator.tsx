@@ -46,7 +46,7 @@ const ReadingTimeCalculatorContent = () => {
         <Typography gutterBottom>
           Reading speed: <strong>{wpm}</strong> words per minute
         </Typography>
-        <Slider
+        <Slider aria-label="Reading speed"
           value={wpm}
           onChange={(_, value) => setWpm(value as number)}
           min={100}

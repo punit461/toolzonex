@@ -163,7 +163,7 @@ const NicknameGeneratorContent = () => {
                 label={
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
                     {n}
-                    <IconButton size="small" onClick={(e) => { e.stopPropagation(); handleCopy(n, idx); }} sx={{ ml: 0.5, p: 0 }}>
+                    <IconButton aria-label="Copy" size="small" onClick={(e) => { e.stopPropagation(); handleCopy(n, idx); }} sx={{ ml: 0.5, p: 0 }}>
                       <ContentCopyIcon sx={{ fontSize: '0.9rem' }} />
                     </IconButton>
                   </Box>

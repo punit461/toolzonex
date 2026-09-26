@@ -80,7 +80,7 @@ const GeneratorSizeCalculatorContent = () => {
                 value={Number.isNaN(a.surgeWatts) ? '' : a.surgeWatts}
                 onChange={(e) => updateAppliance(a.id, 'surgeWatts', e.target.value === '' ? NaN : Number(e.target.value))}
               />
-              <IconButton color="error" size="small" onClick={() => removeAppliance(a.id)} disabled={appliances.length <= 1}>
+              <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeAppliance(a.id)} disabled={appliances.length <= 1}>
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Stack>

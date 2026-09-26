@@ -83,7 +83,7 @@ const GameScoreTrackerContent = () => {
                 <ListItem sx={{ py: 2, display: 'flex', flexWrap: 'wrap', gap: 2, justifyContent: 'space-between' }}>
                   
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, minWidth: 200 }}>
-                    <IconButton edge="start" onClick={() => removePlayer(player.id)} color="error" size="small">
+                    <IconButton aria-label="Remove" edge="start" onClick={() => removePlayer(player.id)} color="error" size="small">
                       <DeleteIcon fontSize="small" />
                     </IconButton>
                     <Typography variant="h6" fontWeight={player.score === highestScore && highestScore > 0 ? 'bold' : 'normal'}>

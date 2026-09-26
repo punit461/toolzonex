@@ -39,7 +39,7 @@ const SecretSantaGeneratorContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box>
           <Typography variant="subtitle2" mb={1} color="text.secondary">Enter names (one per line):</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Enter names (one per line)' } }}
             multiline
             rows={8}
             value={namesText}
@@ -59,7 +59,7 @@ const SecretSantaGeneratorContent = () => {
           <Paper sx={{ p: 4, bgcolor: 'primary.main', color: 'white', borderRadius: 4, minHeight: 250 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
               <Typography variant="h5" fontWeight="bold" sx={{ opacity: 0.9 }}>Secret Santa Pairs</Typography>
-              <IconButton size="small" onClick={copyPairs} sx={{ color: 'white' }}><ContentCopyIcon fontSize="small" /></IconButton>
+              <IconButton aria-label="Copy" size="small" onClick={copyPairs} sx={{ color: 'white' }}><ContentCopyIcon fontSize="small" /></IconButton>
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               {pairs.map((pair, idx) => (

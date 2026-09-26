@@ -88,7 +88,7 @@ const GradientLibraryContent = () => {
                   {copied === g.name ? 'CSS copied!' : g.tags.join(' · ')}
                 </Typography>
               </Box>
-              <IconButton size="small" onClick={() => handleCopy(g)}>
+              <IconButton aria-label="Copy" size="small" onClick={() => handleCopy(g)}>
                 <ContentCopyIcon fontSize="small" />
               </IconButton>
             </Box>

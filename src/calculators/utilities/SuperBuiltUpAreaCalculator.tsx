@@ -98,12 +98,12 @@ const SuperBuiltUpAreaCalculator = () => {
 
           <Box>
             <Typography gutterBottom>Loading Factor: {loadingFactor}%</Typography>
-            <Slider value={loadingFactor} onChange={(_, v) => setLoadingFactor(v as number)} min={10} max={20} step={0.5} valueLabelDisplay="auto" />
+            <Slider aria-label={`Loading Factor: ${loadingFactor}%`} value={loadingFactor} onChange={(_, v) => setLoadingFactor(v as number)} min={10} max={20} step={0.5} valueLabelDisplay="auto" />
           </Box>
 
           <Box>
             <Typography gutterBottom>Common-Area Factor: {commonAreaFactor}%</Typography>
-            <Slider value={commonAreaFactor} onChange={(_, v) => setCommonAreaFactor(v as number)} min={15} max={30} step={0.5} valueLabelDisplay="auto" />
+            <Slider aria-label={`Common-Area Factor: ${commonAreaFactor}%`} value={commonAreaFactor} onChange={(_, v) => setCommonAreaFactor(v as number)} min={15} max={30} step={0.5} valueLabelDisplay="auto" />
           </Box>
         </Box>
 

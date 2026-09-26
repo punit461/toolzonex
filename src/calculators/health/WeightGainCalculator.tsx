@@ -77,7 +77,7 @@ const WeightGainCalculatorContent = () => {
         <Box sx={{ mb: 4, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
           <Box>
             <Typography gutterBottom>Age</Typography>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Age' } }}
               fullWidth
               type="number"
               onFocus={(e) => e.target.select()}
@@ -93,7 +93,7 @@ const WeightGainCalculatorContent = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(height) ? '' : height}
               onChange={(e) => setHeight(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Height' }, input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
             />
           </Box>
         </Box>
@@ -101,7 +101,7 @@ const WeightGainCalculatorContent = () => {
         <Box sx={{ mb: 4 }}>
           <Typography gutterBottom>Weight</Typography>
           <Box sx={{ display: 'flex', gap: 1 }}>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Weight' } }}
               fullWidth
               type="number"
               onFocus={(e) => e.target.select()}
@@ -118,7 +118,7 @@ const WeightGainCalculatorContent = () => {
         <Box sx={{ mb: 4 }}>
           <Typography gutterBottom>Activity Level</Typography>
           <FormControl fullWidth>
-            <Select value={activity} onChange={(e) => setActivity(e.target.value as keyof typeof activityMultipliers)}>
+            <Select inputProps={{ 'aria-label': 'Activity Level' }} value={activity} onChange={(e) => setActivity(e.target.value as keyof typeof activityMultipliers)}>
               {Object.entries(activityMultipliers).map(([key, item]) => (
                 <MenuItem key={key} value={key}>{item.label}</MenuItem>
               ))}
@@ -129,7 +129,7 @@ const WeightGainCalculatorContent = () => {
         <Box sx={{ mb: 4 }}>
           <Typography gutterBottom>Gain Pace</Typography>
           <FormControl fullWidth>
-            <Select value={surplus} onChange={(e) => setSurplus(e.target.value as keyof typeof surplusTiers)}>
+            <Select inputProps={{ 'aria-label': 'Calorie surplus' }} value={surplus} onChange={(e) => setSurplus(e.target.value as keyof typeof surplusTiers)}>
               {Object.entries(surplusTiers).map(([key, item]) => (
                 <MenuItem key={key} value={key}>{item.label}</MenuItem>
               ))}
@@ -145,7 +145,7 @@ const WeightGainCalculatorContent = () => {
             onFocus={(e) => e.target.select()}
             value={Number.isNaN(targetGain) ? '' : targetGain}
             onChange={(e) => setTargetGain(e.target.value === '' ? NaN : Number(e.target.value))}
-            slotProps={{ input: { endAdornment: <InputAdornment position="end">kg</InputAdornment> } }}
+            slotProps={{ htmlInput: { 'aria-label': 'Target weight gain' }, input: { endAdornment: <InputAdornment position="end">kg</InputAdornment> } }}
           />
         </Box>
       </Box>

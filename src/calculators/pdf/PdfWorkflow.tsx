@@ -166,7 +166,7 @@ const PdfWorkflowContent = () => {
       {error && <Alert severity="error" sx={{ mt: 3 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleRun} disabled={busy}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Running...'}</> : `Run: ${step1Op} then ${step2Op}`}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Running...'}</> : `Run: ${step1Op} then ${step2Op}`}
       </Button>
     </Box>
   );

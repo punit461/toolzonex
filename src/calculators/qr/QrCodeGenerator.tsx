@@ -753,11 +753,11 @@ const QrCodeGeneratorContent = () => {
               <Grid container spacing={2}>
                 <Grid item xs={4}>
                   <Typography variant="body2" color="text.secondary" noWrap>Size: {size}px</Typography>
-                  <Slider size="small" value={size} min={150} max={500} step={10} onChange={(_, val) => setSize(val as number)} />
+                  <Slider aria-label={`Size: ${size}px`} size="small" value={size} min={150} max={500} step={10} onChange={(_, val) => setSize(val as number)} />
                 </Grid>
                 <Grid item xs={4}>
                   <Typography variant="body2" color="text.secondary" noWrap>Margin: {margin}px</Typography>
-                  <Slider size="small" value={margin} min={0} max={50} step={5} onChange={(_, val) => setMargin(val as number)} />
+                  <Slider aria-label={`Margin: ${margin}px`} size="small" value={margin} min={0} max={50} step={5} onChange={(_, val) => setMargin(val as number)} />
                 </Grid>
                 <Grid item xs={4}>
                   <FormControl fullWidth size="small">
@@ -904,7 +904,7 @@ const QrCodeGeneratorContent = () => {
                   </Box>
                   <Box>
                     <Typography variant="body2" color="text.secondary">Logo Size: {Math.round(logoSize * 100)}%</Typography>
-                    <Slider value={logoSize} min={0.1} max={0.5} step={0.05} onChange={(_, val) => setLogoSize(val as number)} />
+                    <Slider aria-label="Logo Size" value={logoSize} min={0.1} max={0.5} step={0.05} onChange={(_, val) => setLogoSize(val as number)} />
                   </Box>
                 </>
               )}

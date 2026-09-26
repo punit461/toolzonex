@@ -64,7 +64,7 @@ const CssTriangleGeneratorContent = () => {
 
         <Box>
           <Typography variant="subtitle2" color="text.secondary" mb={1}>Size: {size}px</Typography>
-          <Slider value={size} min={10} max={300} step={5} onChange={(_, v) => setSize(v as number)} valueLabelDisplay="auto" />
+          <Slider aria-label={`Size: ${size}px`} value={size} min={10} max={300} step={5} onChange={(_, v) => setSize(v as number)} valueLabelDisplay="auto" />
         </Box>
 
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>

@@ -110,7 +110,7 @@ const WeightedAverageCalculator = () => {
                   value={Number.isNaN(entry.weight) ? '' : entry.weight}
                   onChange={(e) => updateEntry(entry.id, 'weight', e.target.value === '' ? NaN : Number(e.target.value))}
                 />
-                <IconButton color="error" size="small" onClick={() => removeEntry(entry.id)} disabled={entries.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeEntry(entry.id)} disabled={entries.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

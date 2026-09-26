@@ -70,7 +70,7 @@ const WheelOfFortuneSpinnerContent = () => {
         <Typography variant="h5" fontWeight="700">Wheel Choices</Typography>
         
         <form onSubmit={handleAddItem} style={{ display: 'flex', gap: '8px' }}>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Wheel Choices' } }}
             value={newItem}
             onChange={(e) => setNewItem(e.target.value)}
             placeholder="Add new choice..."
@@ -87,7 +87,7 @@ const WheelOfFortuneSpinnerContent = () => {
           {items.map((item, index) => (
             <Box key={index} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 1, borderBottom: '1px solid #eee' }}>
               <Typography>{item}</Typography>
-              <IconButton 
+              <IconButton aria-label="Remove" 
                 size="small" 
                 color="error" 
                 onClick={() => handleRemoveItem(index)}

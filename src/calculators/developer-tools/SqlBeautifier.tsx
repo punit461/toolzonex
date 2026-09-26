@@ -93,7 +93,7 @@ const SqlBeautifierContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Minified SQL</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Minified SQL' } }}
           multiline
           rows={15}
           value={input}

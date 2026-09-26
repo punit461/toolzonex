@@ -169,7 +169,7 @@ const KrwToUsdConverter = () => {
 
           <Box sx={{ mb: 2 }}>
             <Typography gutterBottom>Amount in {fromCurrency}</Typography>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': `Amount in ${fromCurrency}` } }}
               fullWidth
               variant="outlined"
               type="number"
@@ -209,7 +209,7 @@ const KrwToUsdConverter = () => {
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             {loading && (
               <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
-                <CircularProgress size={32} />
+                <CircularProgress aria-label="Loading" size={32} />
                 <Typography variant="body2" color="text.secondary">Fetching live exchange rates...</Typography>
               </Box>
             )}

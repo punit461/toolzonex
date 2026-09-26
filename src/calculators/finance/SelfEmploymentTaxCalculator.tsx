@@ -134,7 +134,7 @@ const SelfEmploymentTaxCalculator = () => {
             <TextField
               fullWidth type="number" value={netProfit} onFocus={(e) => e.target.select()}
               onChange={(e) => setNetProfit(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Net Self-Employment Profit (annual)' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
             />
           </Box>
 
@@ -143,13 +143,13 @@ const SelfEmploymentTaxCalculator = () => {
             <TextField
               fullWidth type="number" value={otherW2Wages} onFocus={(e) => e.target.select()}
               onChange={(e) => setOtherW2Wages(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Other W-2 Wages (if any)' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
             />
           </Box>
 
           <Box sx={{ mb: 3 }}>
             <Typography gutterBottom>Filing Status</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Filing Status' }}
               fullWidth value={filingStatus}
               onChange={(e) => setFilingStatus(e.target.value as FilingStatus)}
             >

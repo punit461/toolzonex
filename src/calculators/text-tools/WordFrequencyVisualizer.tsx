@@ -47,7 +47,7 @@ const WordFrequencyVisualizerContent = () => {
                 <Typography variant="body2" sx={{ width: 120, fontFamily: 'monospace', flexShrink: 0 }}>
                   {word}
                 </Typography>
-                <LinearProgress
+                <LinearProgress aria-label="Progress"
                   variant="determinate"
                   value={percent}
                   sx={{ flexGrow: 1, height: 12, borderRadius: 1 }}

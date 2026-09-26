@@ -168,7 +168,7 @@ const BMICalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(weight) ? '' : weight}
               onChange={(e) => setWeight(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">{weightUnit}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Weight' }, input: { endAdornment: <InputAdornment position="end">{weightUnit}</InputAdornment> } }}
             />
           </Box>
 
@@ -195,7 +195,7 @@ const BMICalculator = () => {
                 onFocus={(e) => e.target.select()}
                 value={Number.isNaN(heightCm) ? '' : heightCm}
                 onChange={(e) => setHeightCm(e.target.value === '' ? NaN : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Height' }, input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
               />
             </Box>
           ) : (
@@ -208,7 +208,7 @@ const BMICalculator = () => {
                   onFocus={(e) => e.target.select()}
                   value={Number.isNaN(heightFt) ? '' : heightFt}
                   onChange={(e) => setHeightFt(e.target.value === '' ? NaN : Number(e.target.value))}
-                  slotProps={{ input: { endAdornment: <InputAdornment position="end">ft</InputAdornment> } }}
+                  slotProps={{ htmlInput: { 'aria-label': 'Height (feet)' }, input: { endAdornment: <InputAdornment position="end">ft</InputAdornment> } }}
                 />
               </Box>
               <Box sx={{ flex: 1 }}>
@@ -219,7 +219,7 @@ const BMICalculator = () => {
                   onFocus={(e) => e.target.select()}
                   value={Number.isNaN(heightIn) ? '' : heightIn}
                   onChange={(e) => setHeightIn(e.target.value === '' ? NaN : Number(e.target.value))}
-                  slotProps={{ input: { endAdornment: <InputAdornment position="end">in</InputAdornment> } }}
+                  slotProps={{ htmlInput: { 'aria-label': 'Height (inches)' }, input: { endAdornment: <InputAdornment position="end">in</InputAdornment> } }}
                 />
               </Box>
             </Box>

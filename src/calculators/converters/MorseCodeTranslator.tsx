@@ -74,7 +74,7 @@ const MorseCodeContent = () => {
         <Typography variant="subtitle1" fontWeight="600">
           {mode === 'encode' ? 'Plain Text Input:' : 'Morse Code Input:'}
         </Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': mode === 'encode' ? 'Plain Text Input' : 'Morse Code Input' } }}
           multiline
           rows={10}
           fullWidth
@@ -103,7 +103,7 @@ const MorseCodeContent = () => {
             Copy
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': mode === 'encode' ? 'Morse Code Output' : 'Plain Text Output' } }}
           multiline
           rows={10}
           fullWidth

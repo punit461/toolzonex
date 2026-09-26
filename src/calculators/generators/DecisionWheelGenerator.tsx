@@ -79,7 +79,7 @@ const DecisionWheelGeneratorContent = () => {
                 value={o.label}
                 onChange={(e) => updateOption(o.id, e.target.value)}
               />
-              <IconButton onClick={() => removeOption(o.id)} disabled={options.length <= 2} size="small">
+              <IconButton aria-label="Remove" onClick={() => removeOption(o.id)} disabled={options.length <= 2} size="small">
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Box>

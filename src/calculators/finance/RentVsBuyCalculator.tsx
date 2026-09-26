@@ -131,7 +131,7 @@ const RentVsBuyCalculator = () => {
         <Box sx={{ bgcolor: '#f0f9ff', p: 4, borderRadius: 3, border: '1px solid #bae6fd', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
             <Typography variant="h5" sx={{ color: '#0369a1', fontWeight: 800 }}>Rent Details</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Currency' }}
               size="small"
               value={currency}
               onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -151,7 +151,7 @@ const RentVsBuyCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(rentAmount) ? '' : rentAmount}
               onChange={(e) => setRentAmount(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Monthly Rent' }, input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
             />
           </Box>
           <Box>
@@ -163,7 +163,7 @@ const RentVsBuyCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(rentIncrease) ? '' : rentIncrease}
               onChange={(e) => setRentIncrease(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Annual Rent Increase (%)' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
           </Box>
         </Box>
@@ -180,7 +180,7 @@ const RentVsBuyCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(propertyValue) ? '' : propertyValue}
               onChange={(e) => setPropertyValue(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Property Value' }, input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
             />
           </Box>
           <Box sx={{ mb: 4, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 3 }}>
@@ -193,7 +193,7 @@ const RentVsBuyCalculator = () => {
                 onFocus={(e) => e.target.select()}
                 value={Number.isNaN(downPaymentPct) ? '' : downPaymentPct}
                 onChange={(e) => setDownPaymentPct(e.target.value === '' ? NaN : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Down Payment (%)' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
               />
             </Box>
             <Box>
@@ -205,7 +205,7 @@ const RentVsBuyCalculator = () => {
                 onFocus={(e) => e.target.select()}
                 value={Number.isNaN(loanTenure) ? '' : loanTenure}
                 onChange={(e) => setLoanTenure(e.target.value === '' ? NaN : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">Yr</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Loan Tenure (Years)' }, input: { endAdornment: <InputAdornment position="end">Yr</InputAdornment> } }}
               />
             </Box>
           </Box>
@@ -219,7 +219,7 @@ const RentVsBuyCalculator = () => {
                 onFocus={(e) => e.target.select()}
                 value={Number.isNaN(loanRate) ? '' : loanRate}
                 onChange={(e) => setLoanRate(e.target.value === '' ? NaN : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Home Loan Rate (%)' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
               />
             </Box>
             <Box>
@@ -231,7 +231,7 @@ const RentVsBuyCalculator = () => {
                 onFocus={(e) => e.target.select()}
                 value={Number.isNaN(propertyAppreciation) ? '' : propertyAppreciation}
                 onChange={(e) => setPropertyAppreciation(e.target.value === '' ? NaN : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Property Appr. (%)' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
               />
             </Box>
           </Box>

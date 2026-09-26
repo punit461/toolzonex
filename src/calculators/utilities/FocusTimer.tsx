@@ -142,7 +142,7 @@ const FocusTimerContent = () => {
           >
             {isActive ? 'Pause' : 'Start'}
           </Button>
-          <IconButton 
+          <IconButton aria-label="Reset" 
             onClick={resetTimer}
             sx={{ 
               bgcolor: 'rgba(255,255,255,0.1)', 

@@ -117,7 +117,7 @@ const TipScreenContent = () => {
         </Box>
         <Box sx={{ mb: 3 }}>
           <Typography gutterBottom>Screen Heading</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Screen Heading' } }}
             fullWidth
             value={heading}
             onFocus={(e) => e.target.select()}
@@ -134,12 +134,12 @@ const TipScreenContent = () => {
               value={subtotal}
               onFocus={(e) => e.target.select()}
               onChange={(e) => setSubtotal(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Subtotal Amount' }, input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
             />
           </Box>
           <Box>
             <Typography gutterBottom>Currency</Typography>
-            <Select fullWidth value={currency} onChange={(e) => setCurrency(e.target.value as CurrencyCode)}>
+            <Select inputProps={{ 'aria-label': 'Currency' }} fullWidth value={currency} onChange={(e) => setCurrency(e.target.value as CurrencyCode)}>
               {CURRENCIES.map((c) => (
                 <MenuItem key={c.value} value={c.value}>{c.label}</MenuItem>
               ))}
@@ -155,7 +155,7 @@ const TipScreenContent = () => {
               value={pct}
               onFocus={(e) => e.target.select()}
               onChange={(e) => updatePercentage(i, e.target.value)}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': `Tip percentage ${i + 1}` }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
           ))}
         </Box>
@@ -220,7 +220,7 @@ const TipScreenContent = () => {
               value={customTip}
               onChange={(e) => setCustomTip(e.target.value)}
               onKeyDown={(e) => { if (e.key === 'Enter') addCustomTip(); }}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Custom tip' }, input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
               sx={{ mb: 2, bgcolor: 'background.paper' }}
             />
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>

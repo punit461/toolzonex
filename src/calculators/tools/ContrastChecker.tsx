@@ -66,7 +66,7 @@ const ContrastCheckerContent = () => {
               <Box 
                 sx={{ width: 56, height: 56, borderRadius: 1, bgcolor: /^#([0-9A-F]{3}){1,2}$/i.test(textColor) ? textColor : 'transparent', border: '1px solid #ddd' }} 
               />
-              <TextField
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Text Color (HEX)' } }}
                 value={textColor}
                 onChange={(e) => setTextColor(e.target.value)}
                 fullWidth
@@ -80,7 +80,7 @@ const ContrastCheckerContent = () => {
               <Box 
                 sx={{ width: 56, height: 56, borderRadius: 1, bgcolor: /^#([0-9A-F]{3}){1,2}$/i.test(bgColor) ? bgColor : 'transparent', border: '1px solid #ddd' }} 
               />
-              <TextField
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Background Color (HEX)' } }}
                 value={bgColor}
                 onChange={(e) => setBgColor(e.target.value)}
                 fullWidth

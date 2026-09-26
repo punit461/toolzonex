@@ -115,7 +115,7 @@ const WeightedGradeCalculator = () => {
                   value={Number.isNaN(c.weight) ? '' : c.weight}
                   onChange={(e) => updateCategory(c.id, 'weight', e.target.value === '' ? NaN : Number(e.target.value))}
                 />
-                <IconButton color="error" size="small" onClick={() => removeCategory(c.id)} disabled={categories.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeCategory(c.id)} disabled={categories.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

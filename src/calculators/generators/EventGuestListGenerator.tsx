@@ -67,7 +67,7 @@ const EventGuestListGeneratorContent = () => {
                   onChange={(e) => updateGuest(g.id, { name: e.target.value })}
                   sx={{ flex: 2, minWidth: 150 }}
                 />
-                <Select
+                <Select inputProps={{ 'aria-label': 'RSVP' }}
                   size="small"
                   value={g.rsvp}
                   onChange={(e) => updateGuest(g.id, { rsvp: e.target.value as Rsvp })}
@@ -85,7 +85,7 @@ const EventGuestListGeneratorContent = () => {
                   onChange={(e) => updateGuest(g.id, { plusOnes: e.target.value })}
                   sx={{ width: 100 }}
                 />
-                <IconButton onClick={() => removeGuest(g.id)} disabled={guests.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeGuest(g.id)} disabled={guests.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

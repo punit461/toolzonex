@@ -384,7 +384,7 @@ const Header = () => {
           <Box sx={{ width: 280, pt: 2, height: '100%', overflowY: 'auto' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 2, mb: 1 }}>
               <img src={mode === 'dark' ? '/logo-tzx-dark.webp' : '/logo-tzx.webp'} alt="ToolZoneX" width={98} height={36} style={{ height: 36, width: 'auto', display: 'block' }} />
-              <IconButton onClick={() => setDrawerOpen(false)}><CloseIcon /></IconButton>
+              <IconButton aria-label="Close" onClick={() => setDrawerOpen(false)}><CloseIcon /></IconButton>
             </Box>
             <Divider sx={{ mb: 1 }} />
 

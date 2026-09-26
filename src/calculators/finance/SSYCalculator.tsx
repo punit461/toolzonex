@@ -127,9 +127,9 @@ const SSYCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={yearlyInvestment}
               onChange={(e) => setYearlyInvestment(Math.min(150000, Number(e.target.value)))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment>, inputProps: { max: 150000, min: 250 } } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Yearly Investment (₹)' }, input: { startAdornment: <InputAdornment position="start">₹</InputAdornment>, inputProps: { max: 150000, min: 250 } } }}
             />
-            <Slider
+            <Slider aria-label="Yearly Investment (₹)"
               value={yearlyInvestment}
               min={250}
               max={150000}
@@ -149,9 +149,9 @@ const SSYCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(girlAge) ? '' : girlAge}
               onChange={(e) => setGirlAge(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">Yr</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Girl\'s Age (Years)' }, input: { endAdornment: <InputAdornment position="end">Yr</InputAdornment> } }}
             />
-            <Slider
+            <Slider aria-label="Girl's Age (Years)"
               value={Number.isNaN(girlAge) ? 0 : girlAge}
               min={1}
               max={10}

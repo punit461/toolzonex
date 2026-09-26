@@ -56,13 +56,13 @@ const DeadPixelTestContent = () => {
             {current.name} ({index + 1} / {TEST_COLORS.length})
           </Typography>
         </Box>
-        <IconButton
+        <IconButton aria-label="Previous"
           onClick={(e) => { e.stopPropagation(); prev(); }}
           sx={{ position: 'absolute', left: 16, color: current.value === '#ffffff' || current.value === '#00ff00' ? '#000' : '#fff' }}
         >
           <ArrowBackIosNewIcon />
         </IconButton>
-        <IconButton
+        <IconButton aria-label="Next"
           onClick={(e) => { e.stopPropagation(); next(); }}
           sx={{ position: 'absolute', right: 16, color: current.value === '#ffffff' || current.value === '#00ff00' ? '#000' : '#fff' }}
         >

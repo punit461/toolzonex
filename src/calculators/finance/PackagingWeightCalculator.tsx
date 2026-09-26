@@ -68,7 +68,7 @@ const PackagingWeightContent = () => {
                 onChange={(e) => updateComponent(c.id, 'weight', e.target.value)}
                 slotProps={{ input: { endAdornment: <InputAdornment position="end">lbs</InputAdornment> } }}
               />
-              <IconButton color="error" size="small" onClick={() => removeComponent(c.id)} disabled={components.length <= 1}>
+              <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeComponent(c.id)} disabled={components.length <= 1}>
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Stack>

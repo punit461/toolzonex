@@ -55,7 +55,7 @@ const JsonFormatterContent = () => {
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Input JSON</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Input JSON' } }}
           multiline
           rows={15}
           value={input}

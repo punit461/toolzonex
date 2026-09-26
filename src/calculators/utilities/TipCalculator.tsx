@@ -26,7 +26,7 @@ const TipCalculatorContent = () => {
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
         <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <Select
+          <Select inputProps={{ 'aria-label': 'Currency' }}
             size="small"
             value={currency}
             onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -53,7 +53,7 @@ const TipCalculatorContent = () => {
             <Typography variant="subtitle2" fontWeight="bold">Tip %</Typography>
             <Typography variant="subtitle2" fontWeight="bold">{tipPercentage}%</Typography>
           </Box>
-          <Slider
+          <Slider aria-label="Tip %"
             value={tipPercentage}
             min={0}
             max={50}
@@ -73,7 +73,7 @@ const TipCalculatorContent = () => {
             <Typography variant="subtitle2" fontWeight="bold">Split between (people)</Typography>
             <Typography variant="subtitle2" fontWeight="bold">{splitCount}</Typography>
           </Box>
-          <Slider
+          <Slider aria-label="Split between (people)"
             value={splitCount}
             min={1}
             max={20}

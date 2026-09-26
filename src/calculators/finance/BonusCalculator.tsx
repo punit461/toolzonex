@@ -76,7 +76,7 @@ const BonusCalculator = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <Typography gutterBottom>Currency</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Currency' }}
               size="small"
               value={currency}
               onChange={(e) => setCurrency(e.target.value as CurrencyCode)}

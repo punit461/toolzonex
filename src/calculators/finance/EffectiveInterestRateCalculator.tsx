@@ -90,7 +90,7 @@ const EffectiveInterestRateCalculator = () => {
           />
           <Box>
             <Typography gutterBottom>Compounding Frequency</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Compounding Frequency' }}
               fullWidth
               value={frequency}
               onChange={(e) => setFrequency(Number(e.target.value))}

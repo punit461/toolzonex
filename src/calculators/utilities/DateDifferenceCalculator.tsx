@@ -94,7 +94,7 @@ const DateDifferenceCalculator = () => {
               type="date"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
-              slotProps={{ inputLabel: { shrink: true } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Start Date' }, inputLabel: { shrink: true } }}
             />
           </Box>
           <Box>
@@ -105,7 +105,7 @@ const DateDifferenceCalculator = () => {
               type="date"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
-              slotProps={{ inputLabel: { shrink: true } }}
+              slotProps={{ htmlInput: { 'aria-label': 'End Date' }, inputLabel: { shrink: true } }}
             />
           </Box>
         </Box>

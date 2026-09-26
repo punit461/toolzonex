@@ -54,7 +54,7 @@ const HtmlMinifierContent = () => {
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Original HTML</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Original HTML' } }}
           multiline
           rows={15}
           value={input}

@@ -142,7 +142,7 @@ const FixedDepositMaturityCalculator = () => {
           />
           <Box>
             <Typography variant="body2" color="text.secondary" mb={1}>Compounding Frequency</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Compounding Frequency' }}
               value={compoundingFrequency}
               onChange={(e) => setCompoundingFrequency(Number(e.target.value))}
               fullWidth

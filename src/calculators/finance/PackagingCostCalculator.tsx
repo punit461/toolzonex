@@ -113,7 +113,7 @@ const PackagingCostCalculator = () => {
                   onChange={(e) => updateMaterial(m.id, 'cost', e.target.value)}
                   slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
                 />
-                <IconButton color="error" size="small" onClick={() => removeMaterial(m.id)} disabled={materials.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeMaterial(m.id)} disabled={materials.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

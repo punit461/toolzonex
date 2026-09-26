@@ -52,7 +52,7 @@ const ContactListFormatterContent = () => {
           {contacts.map((c) => (
             <Paper key={c.id} variant="outlined" sx={{ p: 2 }}>
               <Stack direction="row" justifyContent="flex-end">
-                <IconButton size="small" onClick={() => removeContact(c.id)} disabled={contacts.length <= 1}>
+                <IconButton aria-label="Remove" size="small" onClick={() => removeContact(c.id)} disabled={contacts.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

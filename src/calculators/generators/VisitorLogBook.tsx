@@ -68,7 +68,7 @@ const VisitorLogBookContent = () => {
             <Paper key={v.id} variant="outlined" sx={{ p: 2 }}>
               <Box sx={{ display: 'flex', gap: 1, mb: 1, alignItems: 'center' }}>
                 <TextField size="small" fullWidth label="Visitor name" value={v.name} onChange={(e) => updateVisitor(v.id, { name: e.target.value })} />
-                <IconButton onClick={() => removeVisitor(v.id)} disabled={visitors.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeVisitor(v.id)} disabled={visitors.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

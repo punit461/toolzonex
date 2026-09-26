@@ -66,7 +66,7 @@ const AlphabetLearningToolContent = () => {
       
       {/* Main Card */}
       <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 1, md: 4 } }}>
-        <IconButton onClick={prevLetter} size="large" sx={{ bgcolor: 'grey.100' }}>
+        <IconButton aria-label="Previous" onClick={prevLetter} size="large" sx={{ bgcolor: 'grey.100' }}>
           <ArrowBackIosNewIcon />
         </IconButton>
 
@@ -111,7 +111,7 @@ const AlphabetLearningToolContent = () => {
             {currentItem.word}
           </Typography>
 
-          <IconButton 
+          <IconButton aria-label="Play sound" 
             onClick={playSound} 
             sx={{ 
               position: 'absolute', 
@@ -125,7 +125,7 @@ const AlphabetLearningToolContent = () => {
           </IconButton>
         </Paper>
 
-        <IconButton onClick={nextLetter} size="large" sx={{ bgcolor: 'grey.100' }}>
+        <IconButton aria-label="Next" onClick={nextLetter} size="large" sx={{ bgcolor: 'grey.100' }}>
           <ArrowForwardIosIcon />
         </IconButton>
       </Box>

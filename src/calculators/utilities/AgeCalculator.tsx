@@ -92,7 +92,7 @@ const AgeCalculator = () => {
               type="date"
               value={dob}
               onChange={(e) => setDob(e.target.value)}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Date of Birth' },
                 inputLabel: {
                   shrink: true,
                 }
@@ -108,7 +108,7 @@ const AgeCalculator = () => {
               type="date"
               value={targetDate}
               onChange={(e) => setTargetDate(e.target.value)}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Calculate Age' },
                 inputLabel: {
                   shrink: true,
                 }

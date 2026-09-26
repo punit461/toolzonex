@@ -146,7 +146,7 @@ const RoomPerimeterCalculator = () => {
                       onChange={(e) => updateSegment(s.id, e.target.value)}
                       slotProps={{ input: { endAdornment: <InputAdornment position="end">ft</InputAdornment> } }}
                     />
-                    <IconButton color="error" size="small" onClick={() => removeSegment(s.id)} disabled={segments.length <= 1}>
+                    <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeSegment(s.id)} disabled={segments.length <= 1}>
                       <DeleteIcon fontSize="small" />
                     </IconButton>
                   </Stack>

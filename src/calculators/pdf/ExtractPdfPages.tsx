@@ -48,7 +48,7 @@ const ExtractPdfPagesContent = () => {
 
       <Box sx={{ mt: 3 }}>
         <Typography gutterBottom>Pages to extract</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Pages to extract' } }}
           fullWidth
           placeholder="e.g. 1, 3-5"
           value={pages}

@@ -152,7 +152,7 @@ const BacCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(weight) ? '' : weight}
               onChange={(e) => setWeight(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">{weightUnit}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Body Weight' }, input: { endAdornment: <InputAdornment position="end">{weightUnit}</InputAdornment> } }}
             />
           </Box>
 
@@ -182,13 +182,13 @@ const BacCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(drinks) ? '' : drinks}
               onChange={(e) => setDrinks(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">drinks</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Number of Drinks' }, input: { endAdornment: <InputAdornment position="end">drinks</InputAdornment> } }}
             />
           </Box>
 
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom>Drink Type</Typography>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Drink Type' } }}
               fullWidth
               select
               variant="outlined"
@@ -210,7 +210,7 @@ const BacCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(hours) ? '' : hours}
               onChange={(e) => setHours(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">hrs</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Hours Since First Drink' }, input: { endAdornment: <InputAdornment position="end">hrs</InputAdornment> } }}
             />
           </Box>
         </Box>

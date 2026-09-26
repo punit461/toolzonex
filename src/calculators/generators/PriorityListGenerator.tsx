@@ -60,7 +60,7 @@ const PriorityListGeneratorContent = () => {
                 value={r.task}
                 onChange={(e) => updateRow(r.id, { task: e.target.value })}
               />
-              <Select
+              <Select inputProps={{ 'aria-label': 'Priority' }}
                 size="small"
                 value={r.priority}
                 onChange={(e) => updateRow(r.id, { priority: e.target.value as Priority })}
@@ -70,7 +70,7 @@ const PriorityListGeneratorContent = () => {
                   <MenuItem key={p} value={p}>{p}</MenuItem>
                 ))}
               </Select>
-              <IconButton onClick={() => removeRow(r.id)} disabled={rows.length <= 1} size="small">
+              <IconButton aria-label="Remove" onClick={() => removeRow(r.id)} disabled={rows.length <= 1} size="small">
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Box>

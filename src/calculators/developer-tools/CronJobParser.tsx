@@ -39,7 +39,7 @@ const CronJobParserContent = () => {
             value={cronExp}
             onChange={(e) => setCronExp(e.target.value)}
             placeholder="* * * * *"
-            inputProps={{ style: { fontSize: '1.5rem', fontFamily: 'monospace', textAlign: 'center', letterSpacing: '4px' } }}
+            inputProps={{ 'aria-label': 'Enter Cron Expression', style: { fontSize: '1.5rem', fontFamily: 'monospace', textAlign: 'center', letterSpacing: '4px' } }}
           />
           <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 0.5, mt: 1, px: 2, color: 'text.secondary', typography: 'caption', fontFamily: 'monospace' }}>
             <Typography>Minute</Typography>

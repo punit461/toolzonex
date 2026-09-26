@@ -42,7 +42,7 @@ const HashRateCalculatorContent = () => {
         <Typography variant="subtitle1" fontWeight={600}>Hash Rate</Typography>
         <Box sx={{ display: 'flex', gap: 2 }}>
           <TextField label="Value" type="number" value={value} onChange={(e) => setValue(e.target.value)} fullWidth />
-          <Select value={unit} onChange={(e) => setUnit(e.target.value as Unit)} sx={{ minWidth: 100 }}>
+          <Select inputProps={{ 'aria-label': 'Hash Rate unit' }} value={unit} onChange={(e) => setUnit(e.target.value as Unit)} sx={{ minWidth: 100 }}>
             {UNIT_ORDER.map((u) => (
               <MenuItem key={u} value={u}>{u}/s</MenuItem>
             ))}

@@ -88,7 +88,7 @@ const VehicleMaintenanceFuelLogContent = () => {
             <Box sx={{ display: 'flex', gap: 1, mb: 1, flexWrap: 'wrap' }}>
               <TextField size="small" type="date" label="Date" InputLabelProps={{ shrink: true }} value={s.date} onChange={(e) => updateService(s.id, { date: e.target.value })} sx={{ flex: 1, minWidth: 140 }} />
               <TextField size="small" label="Mileage" value={s.mileage} onChange={(e) => updateService(s.id, { mileage: e.target.value })} sx={{ flex: 1, minWidth: 100 }} />
-              <IconButton onClick={() => removeService(s.id)} disabled={service.length <= 1} size="small">
+              <IconButton aria-label="Remove" onClick={() => removeService(s.id)} disabled={service.length <= 1} size="small">
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Box>
@@ -113,7 +113,7 @@ const VehicleMaintenanceFuelLogContent = () => {
             <Box sx={{ display: 'flex', gap: 1, mb: 1, flexWrap: 'wrap', alignItems: 'center' }}>
               <TextField size="small" type="date" label="Date" InputLabelProps={{ shrink: true }} value={f.date} onChange={(e) => updateFuel(f.id, { date: e.target.value })} sx={{ flex: 1, minWidth: 140 }} />
               <TextField size="small" label="Mileage" value={f.mileage} onChange={(e) => updateFuel(f.id, { mileage: e.target.value })} sx={{ flex: 1, minWidth: 100 }} />
-              <IconButton onClick={() => removeFuel(f.id)} disabled={fuel.length <= 1} size="small">
+              <IconButton aria-label="Remove" onClick={() => removeFuel(f.id)} disabled={fuel.length <= 1} size="small">
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Box>

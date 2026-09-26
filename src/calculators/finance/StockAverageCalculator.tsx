@@ -116,7 +116,7 @@ const StockAverageCalculator = () => {
         <Box>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
             <Typography variant="h6">Buy Transactions</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Currency' }}
               size="small"
               value={currency}
               onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -154,7 +154,7 @@ const StockAverageCalculator = () => {
                     }
                   }}
                 />
-                <IconButton color="error" size="small" onClick={() => removeTrade(trade.id)} disabled={trades.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeTrade(trade.id)} disabled={trades.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

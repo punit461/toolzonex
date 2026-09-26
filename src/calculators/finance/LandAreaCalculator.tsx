@@ -38,7 +38,7 @@ const LandAreaCalculatorContent = () => {
           onChange={(e) => setInputValue(e.target.value)}
           fullWidth
         />
-        <Select
+        <Select inputProps={{ 'aria-label': 'Unit' }}
           value={selectedUnit}
           onChange={(e) => setSelectedUnit(e.target.value)}
           fullWidth

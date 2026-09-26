@@ -48,7 +48,7 @@ const UnicodeToTextContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Unicode Code Point Input:</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Unicode Code Point Input' } }}
           multiline
           rows={12}
           fullWidth
@@ -68,7 +68,7 @@ const UnicodeToTextContent = () => {
             {copied ? 'Copied!' : 'Copy'}
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Decoded Text' } }}
           multiline
           rows={12}
           fullWidth

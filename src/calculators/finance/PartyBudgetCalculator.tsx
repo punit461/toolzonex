@@ -64,7 +64,7 @@ const PartyBudgetCalculatorContent = () => {
               onChange={(e) => updatePct(r.id, e.target.value)}
               size="small"
               sx={{ flex: 1 }}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': r.category }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
           </Box>
         ))}
@@ -90,7 +90,7 @@ const PartyBudgetCalculatorContent = () => {
               <Typography variant="body2">{b.category}</Typography>
               <Typography variant="body2" fontWeight={600}>{money(b.amount)}</Typography>
             </Box>
-            <LinearProgress
+            <LinearProgress aria-label="Progress"
               variant="determinate"
               value={Math.min(b.pct, 100)}
               sx={{ height: 8, borderRadius: 4, bgcolor: 'action.hover', '& .MuiLinearProgress-bar': { bgcolor: COLORS[i % COLORS.length] } }}

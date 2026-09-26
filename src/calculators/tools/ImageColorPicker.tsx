@@ -180,7 +180,7 @@ const ImageColorPickerContent = () => {
                 <Box sx={{ height: 56, bgcolor: hex }} />
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: 1, py: 0.5 }}>
                   <Typography variant="caption" fontFamily="monospace">{copied === hex ? 'Copied!' : hex}</Typography>
-                  <IconButton size="small" onClick={() => handleCopy(hex)}>
+                  <IconButton aria-label="Copy" size="small" onClick={() => handleCopy(hex)}>
                     <ContentCopyIcon sx={{ fontSize: 14 }} />
                   </IconButton>
                 </Box>
@@ -202,7 +202,7 @@ const ImageColorPickerContent = () => {
                 <Box sx={{ height: 56, bgcolor: hex }} />
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: 1, py: 0.5 }}>
                   <Typography variant="caption" fontFamily="monospace">{copied === hex ? 'Copied!' : hex}</Typography>
-                  <IconButton size="small" onClick={() => handleCopy(hex)}>
+                  <IconButton aria-label="Copy" size="small" onClick={() => handleCopy(hex)}>
                     <ContentCopyIcon sx={{ fontSize: 14 }} />
                   </IconButton>
                 </Box>

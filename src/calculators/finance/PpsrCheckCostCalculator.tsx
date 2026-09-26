@@ -35,7 +35,7 @@ const PpsrCheckCostCalculatorContent = () => {
             onFocus={(e) => e.target.select()}
             value={Number.isNaN(vehicleCount) ? '' : vehicleCount}
             onChange={(e) => setVehicleCount(e.target.value === '' ? NaN : Number(e.target.value))}
-            inputProps={{ min: 1 }}
+            inputProps={{ 'aria-label': 'Number of vehicles / items to check', min: 1 }}
           />
         </Box>
 

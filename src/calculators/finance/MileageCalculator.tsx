@@ -103,7 +103,7 @@ const MileageCalculator = () => {
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom>Distance Traveled</Typography>
             <Box sx={{ display: 'flex', gap: 1.5 }}>
-              <TextField
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Distance Traveled' } }}
                 fullWidth
                 variant="outlined"
                 type="number"
@@ -111,7 +111,7 @@ const MileageCalculator = () => {
                 value={Number.isNaN(distance) ? '' : distance}
                 onChange={(e) => setDistance(e.target.value === '' ? NaN : Number(e.target.value))}
               />
-              <Select value={distanceUnit} onChange={(e) => setDistanceUnit(e.target.value)} sx={{ minWidth: 150 }}>
+              <Select inputProps={{ 'aria-label': 'Distance Traveled unit' }} value={distanceUnit} onChange={(e) => setDistanceUnit(e.target.value)} sx={{ minWidth: 150 }}>
                 {DISTANCE_UNITS.map((u) => (
                   <MenuItem key={u.value} value={u.value}>{u.label}</MenuItem>
                 ))}
@@ -122,7 +122,7 @@ const MileageCalculator = () => {
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom>Fuel Consumed</Typography>
             <Box sx={{ display: 'flex', gap: 1.5 }}>
-              <TextField
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Fuel Consumed' } }}
                 fullWidth
                 variant="outlined"
                 type="number"
@@ -130,7 +130,7 @@ const MileageCalculator = () => {
                 value={Number.isNaN(fuelUsed) ? '' : fuelUsed}
                 onChange={(e) => setFuelUsed(e.target.value === '' ? NaN : Number(e.target.value))}
               />
-              <Select value={fuelUnit} onChange={(e) => setFuelUnit(e.target.value)} sx={{ minWidth: 150 }}>
+              <Select inputProps={{ 'aria-label': 'Fuel Consumed unit' }} value={fuelUnit} onChange={(e) => setFuelUnit(e.target.value)} sx={{ minWidth: 150 }}>
                 {FUEL_UNITS.map((u) => (
                   <MenuItem key={u.value} value={u.value}>{u.label}</MenuItem>
                 ))}
@@ -141,7 +141,7 @@ const MileageCalculator = () => {
           <Box sx={{ mb: 4 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Typography gutterBottom>Fuel Price per Unit (optional)</Typography>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Currency' }}
                 size="small"
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -159,7 +159,7 @@ const MileageCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(fuelPrice) ? '' : fuelPrice}
               onChange={(e) => setFuelPrice(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Fuel Price per Unit (optional)' },
                 input: {
                   startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }

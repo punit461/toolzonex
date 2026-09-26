@@ -135,7 +135,7 @@ const GpaCalculator = () => {
                   value={Number.isNaN(course.credits) ? '' : course.credits}
                   onChange={(e) => updateCourse(course.id, 'credits', e.target.value === '' ? NaN : Number(e.target.value))}
                 />
-                <Select
+                <Select inputProps={{ 'aria-label': 'Grade' }}
                   size="small"
                   value={course.grade}
                   onChange={(e) => updateCourse(course.id, 'grade', e.target.value)}
@@ -145,7 +145,7 @@ const GpaCalculator = () => {
                     <MenuItem key={g} value={g}>{g}</MenuItem>
                   ))}
                 </Select>
-                <IconButton color="error" size="small" onClick={() => removeCourse(course.id)} disabled={courses.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeCourse(course.id)} disabled={courses.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

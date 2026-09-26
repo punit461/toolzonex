@@ -102,7 +102,7 @@ const ShiftHoursCalculator = () => {
               type="time"
               value={startTime}
               onChange={(e) => setStartTime(e.target.value)}
-              slotProps={{ inputLabel: { shrink: true } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Shift Start Time' }, inputLabel: { shrink: true } }}
             />
           </Box>
           <Box sx={{ mb: 3 }}>
@@ -112,7 +112,7 @@ const ShiftHoursCalculator = () => {
               type="time"
               value={endTime}
               onChange={(e) => setEndTime(e.target.value)}
-              slotProps={{ inputLabel: { shrink: true } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Shift End Time' }, inputLabel: { shrink: true } }}
             />
           </Box>
           <Box sx={{ mb: 3 }}>

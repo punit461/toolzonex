@@ -95,7 +95,7 @@ const PdfColorDetectorContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleDetect} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Analyzing...'}</> : 'Detect Colors'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Analyzing...'}</> : 'Detect Colors'}
       </Button>
 
       {colors.length > 0 && (

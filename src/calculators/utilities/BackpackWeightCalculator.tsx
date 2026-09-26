@@ -161,7 +161,7 @@ const BackpackWeightCalculator = () => {
                   value={i.weight}
                   onChange={(e) => updateItem(i.id, 'weight', e.target.value)}
                 />
-                <IconButton color="error" size="small" onClick={() => removeItem(i.id)} disabled={items.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeItem(i.id)} disabled={items.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

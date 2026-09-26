@@ -83,7 +83,7 @@ const ColorContrastChecker = () => {
                 variant="outlined"
                 value={fgInput}
                 onChange={(e) => setFgInput(e.target.value)}
-                slotProps={{
+                slotProps={{ htmlInput: { 'aria-label': 'Foreground color' },
                   input: {
                     startAdornment: (
                       <InputAdornment position="start">
@@ -109,7 +109,7 @@ const ColorContrastChecker = () => {
                 variant="outlined"
                 value={bgInput}
                 onChange={(e) => setBgInput(e.target.value)}
-                slotProps={{
+                slotProps={{ htmlInput: { 'aria-label': 'Background color' },
                   input: {
                     startAdornment: (
                       <InputAdornment position="start">

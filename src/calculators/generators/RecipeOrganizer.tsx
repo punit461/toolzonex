@@ -48,7 +48,7 @@ const RecipeOrganizerContent = () => {
       <Box>
         <Stack direction="row" justifyContent="space-between" alignItems="center" mb={2}>
           <Typography variant="subtitle1" fontWeight={600}>Your Recipes</Typography>
-          <Select size="small" value={filter} onChange={(e) => setFilter(e.target.value as Category | 'All')}>
+          <Select inputProps={{ 'aria-label': 'Your Recipes' }} size="small" value={filter} onChange={(e) => setFilter(e.target.value as Category | 'All')}>
             <MenuItem value="All">All</MenuItem>
             {CATEGORIES.map((c) => <MenuItem key={c} value={c}>{c}</MenuItem>)}
           </Select>
@@ -70,7 +70,7 @@ const RecipeOrganizerContent = () => {
                   <Chip label={r.category} size="small" sx={{ mt: 0.5 }} />
                   {r.prepTime && <Typography variant="caption" color="text.secondary" sx={{ ml: 1 }}>{r.prepTime}</Typography>}
                 </Box>
-                <IconButton size="small" onClick={(e) => { e.stopPropagation(); removeRecipe(r.id); }}>
+                <IconButton aria-label="Remove" size="small" onClick={(e) => { e.stopPropagation(); removeRecipe(r.id); }}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>
@@ -90,7 +90,7 @@ const RecipeOrganizerContent = () => {
               <TextField label="Recipe Name" fullWidth value={selected.name} onChange={(e) => updateRecipe(selected.id, { name: e.target.value })} />
               <Grid container spacing={2}>
                 <Grid item xs={6}>
-                  <Select fullWidth size="small" value={selected.category} onChange={(e) => updateRecipe(selected.id, { category: e.target.value as Category })}>
+                  <Select inputProps={{ 'aria-label': 'Category' }} fullWidth size="small" value={selected.category} onChange={(e) => updateRecipe(selected.id, { category: e.target.value as Category })}>
                     {CATEGORIES.map((c) => <MenuItem key={c} value={c}>{c}</MenuItem>)}
                   </Select>
                 </Grid>

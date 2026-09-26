@@ -60,7 +60,7 @@ const CategoryDashboard = ({ pageTitle, intro, sections, featuredGuides }: Categ
         </Typography>
 
         <Box sx={{ maxWidth: 600 }}>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Search tools' } }}
             fullWidth
             placeholder="Search for a tool..."
             variant="outlined"

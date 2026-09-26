@@ -57,7 +57,7 @@ const StorageConverterContent = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr auto 1fr' }, gap: 2, alignItems: 'end' }}>
         <Box sx={{ minWidth: 0 }}>
           <Typography gutterBottom>From</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'From value' } }}
             fullWidth
             type="number"
             value={value}
@@ -81,7 +81,7 @@ const StorageConverterContent = () => {
 
         <Box sx={{ minWidth: 0 }}>
           <Typography gutterBottom>To</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'To value' } }}
             fullWidth
             value={formatResult(result)}
             InputProps={{ readOnly: true }}

@@ -89,7 +89,7 @@ const DailyCarbIntakeCalculator = () => {
             <Typography gutterBottom>
               Carbohydrates: <strong>{carbPct}%</strong> of calories
             </Typography>
-            <Slider
+            <Slider aria-label="Carbohydrates"
               value={carbPct}
               onChange={(_, v) => setCarbPct(v as number)}
               min={10}

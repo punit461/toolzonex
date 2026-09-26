@@ -100,7 +100,7 @@ const ImageToBase64ConverterContent = () => {
           </Button>
         </Box>
 
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Base64 Output' } }}
           multiline
           rows={15}
           value={base64String}

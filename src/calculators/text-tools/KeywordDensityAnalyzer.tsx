@@ -92,7 +92,7 @@ const KeywordDensityAnalyzerContent = () => {
                           <Typography variant="body2" sx={{ width: 40 }}>
                             {row.density.toFixed(2)}%
                           </Typography>
-                          <LinearProgress 
+                          <LinearProgress aria-label="Progress" 
                             variant="determinate" 
                             value={Math.min(row.density * 10, 100)} // Scale for visual (10% = full bar)
                             color={row.density > 5 ? "error" : row.density > 2 ? "success" : "primary"}

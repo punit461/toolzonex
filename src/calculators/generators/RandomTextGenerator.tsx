@@ -130,7 +130,7 @@ const RandomTextGeneratorContent = () => {
           multiline
           rows={12}
           value={output}
-          inputProps={{ readOnly: true, style: { fontFamily: 'monospace' } }}
+          inputProps={{ 'aria-label': 'Output', readOnly: true, style: { fontFamily: 'monospace' } }}
           fullWidth
           variant="standard"
         />

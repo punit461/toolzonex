@@ -231,16 +231,16 @@ const SignPdfContent = () => {
           <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 3, mb: 2 }}>
             <Box>
               <Typography variant="body2" gutterBottom>Horizontal position: {xPct}%</Typography>
-              <Slider value={xPct} min={0} max={90} onChange={(_, v) => setXPct(v as number)} />
+              <Slider aria-label={`Horizontal position: ${xPct}%`} value={xPct} min={0} max={90} onChange={(_, v) => setXPct(v as number)} />
             </Box>
             <Box>
               <Typography variant="body2" gutterBottom>Vertical position: {yPct}%</Typography>
-              <Slider value={yPct} min={0} max={90} onChange={(_, v) => setYPct(v as number)} />
+              <Slider aria-label={`Vertical position: ${yPct}%`} value={yPct} min={0} max={90} onChange={(_, v) => setYPct(v as number)} />
             </Box>
           </Box>
           <Box sx={{ maxWidth: 300, mb: 2 }}>
             <Typography variant="body2" gutterBottom>Signature width: {widthPct}% of page</Typography>
-            <Slider value={widthPct} min={10} max={70} onChange={(_, v) => setWidthPct(v as number)} />
+            <Slider aria-label={`Signature width: ${widthPct}% of page`} value={widthPct} min={10} max={70} onChange={(_, v) => setWidthPct(v as number)} />
           </Box>
 
           {preview && (
@@ -272,7 +272,7 @@ const SignPdfContent = () => {
       {error && <Alert severity="error" sx={{ mt: 3 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handlePlace} disabled={busy || !file || !signatureUrl}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Signing...</> : 'Place Signature & Download PDF'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Signing...</> : 'Place Signature & Download PDF'}
       </Button>
     </Box>
   );

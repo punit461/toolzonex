@@ -85,9 +85,9 @@ const PdfMergeSelectedPagesContent = () => {
               <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
                 <ListItemText primary={`${i + 1}. ${entry.file.name}`} />
                 <Box>
-                  <IconButton size="small" onClick={() => moveEntry(i, -1)} disabled={i === 0}><ArrowUpwardIcon fontSize="small" /></IconButton>
-                  <IconButton size="small" onClick={() => moveEntry(i, 1)} disabled={i === entries.length - 1}><ArrowDownwardIcon fontSize="small" /></IconButton>
-                  <IconButton size="small" onClick={() => removeEntry(i)}><DeleteIcon fontSize="small" /></IconButton>
+                  <IconButton aria-label="Move up" size="small" onClick={() => moveEntry(i, -1)} disabled={i === 0}><ArrowUpwardIcon fontSize="small" /></IconButton>
+                  <IconButton aria-label="Move down" size="small" onClick={() => moveEntry(i, 1)} disabled={i === entries.length - 1}><ArrowDownwardIcon fontSize="small" /></IconButton>
+                  <IconButton aria-label="Remove" size="small" onClick={() => removeEntry(i)}><DeleteIcon fontSize="small" /></IconButton>
                 </Box>
               </Box>
               <TextField
@@ -106,7 +106,7 @@ const PdfMergeSelectedPagesContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleMerge} disabled={busy || entries.length < 1}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Merging...</> : 'Merge Selected Pages'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Merging...</> : 'Merge Selected Pages'}
       </Button>
     </Box>
   );

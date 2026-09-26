@@ -107,14 +107,14 @@ const RobotsTxtGeneratorContent = () => {
                 <MenuItem value="disallow">Disallow</MenuItem>
               </Select>
             </FormControl>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Rules' } }}
               size="small"
               value={rule.path}
               onChange={(e) => updateRule(idx, 'path', e.target.value)}
               placeholder="/path/"
               fullWidth
             />
-            <IconButton onClick={() => removeRule(idx)} size="small" color="error">
+            <IconButton aria-label="Remove" onClick={() => removeRule(idx)} size="small" color="error">
               <DeleteIcon />
             </IconButton>
           </Box>

@@ -32,7 +32,7 @@ const CmykToRgbContent = () => {
             <Typography variant="subtitle2" sx={{ color: '#00AEEF' }} fontWeight="bold">Cyan (C)</Typography>
             <Typography variant="subtitle2">{c}%</Typography>
           </Box>
-          <Slider value={c} min={0} max={100} onChange={(e, val) => setC(val as number)} />
+          <Slider aria-label="Cyan (C)" value={c} min={0} max={100} onChange={(e, val) => setC(val as number)} />
         </Box>
 
         <Box>
@@ -40,7 +40,7 @@ const CmykToRgbContent = () => {
             <Typography variant="subtitle2" sx={{ color: '#EC008C' }} fontWeight="bold">Magenta (M)</Typography>
             <Typography variant="subtitle2">{m}%</Typography>
           </Box>
-          <Slider value={m} min={0} max={100} onChange={(e, val) => setM(val as number)} />
+          <Slider aria-label="Magenta (M)" value={m} min={0} max={100} onChange={(e, val) => setM(val as number)} />
         </Box>
 
         <Box>
@@ -48,7 +48,7 @@ const CmykToRgbContent = () => {
             <Typography variant="subtitle2" sx={{ color: '#FFF200' }} fontWeight="bold">Yellow (Y)</Typography>
             <Typography variant="subtitle2">{y}%</Typography>
           </Box>
-          <Slider value={y} min={0} max={100} onChange={(e, val) => setY(val as number)} />
+          <Slider aria-label="Yellow (Y)" value={y} min={0} max={100} onChange={(e, val) => setY(val as number)} />
         </Box>
 
         <Box>
@@ -56,14 +56,14 @@ const CmykToRgbContent = () => {
             <Typography variant="subtitle2" color="text.secondary" fontWeight="bold">Key (K / Black)</Typography>
             <Typography variant="subtitle2">{k}%</Typography>
           </Box>
-          <Slider value={k} min={0} max={100} onChange={(e, val) => setK(val as number)} color="secondary" />
+          <Slider aria-label="Key (K / Black)" value={k} min={0} max={100} onChange={(e, val) => setK(val as number)} color="secondary" />
         </Box>
       </Box>
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box>
           <Typography variant="subtitle1" fontWeight="600" mb={1}>RGB Result:</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'RGB Result' } }}
             value={`rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`}
             InputProps={{ readOnly: true, sx: { fontFamily: 'monospace', fontSize: '1.1rem', fontWeight: 'bold' } }}
             fullWidth
@@ -72,7 +72,7 @@ const CmykToRgbContent = () => {
 
         <Box>
           <Typography variant="subtitle1" fontWeight="600" mb={1}>HEX Equivalent:</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'HEX Equivalent' } }}
             value={hex}
             InputProps={{ readOnly: true, sx: { fontFamily: 'monospace', fontSize: '1.1rem', fontWeight: 'bold' } }}
             fullWidth

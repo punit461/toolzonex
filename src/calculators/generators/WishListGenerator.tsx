@@ -72,7 +72,7 @@ const WishListGeneratorContent = () => {
                   onChange={(e) => updateItem(item.id, { price: e.target.value })}
                   sx={{ flex: 1, minWidth: 100 }}
                 />
-                <Select
+                <Select inputProps={{ 'aria-label': 'Priority' }}
                   size="small"
                   value={item.priority}
                   onChange={(e) => updateItem(item.id, { priority: e.target.value as Priority })}
@@ -82,7 +82,7 @@ const WishListGeneratorContent = () => {
                     <MenuItem key={p} value={p}>{p}</MenuItem>
                   ))}
                 </Select>
-                <IconButton onClick={() => removeItem(item.id)} disabled={items.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeItem(item.id)} disabled={items.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

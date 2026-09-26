@@ -149,7 +149,7 @@ const USMortgageCalculator = () => {
             <TextField
               fullWidth type="number" value={homePrice} onFocus={(e) => e.target.select()}
               onChange={(e) => setHomePrice(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Home Price' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
             />
           </Box>
 
@@ -157,7 +157,7 @@ const USMortgageCalculator = () => {
             <Typography gutterBottom>
               Down Payment ({downPaymentPct}% = {formatUSD(result.downPaymentAmount)})
             </Typography>
-            <Slider
+            <Slider aria-label="Down Payment ("
               value={downPaymentPct} min={0} max={50} step={1}
               onChange={(_, value) => setDownPaymentPct(value as number)}
               valueLabelDisplay="auto"
@@ -180,7 +180,7 @@ const USMortgageCalculator = () => {
             <TextField
               fullWidth type="number" value={interestRate} onFocus={(e) => e.target.select()}
               onChange={(e) => setInterestRate(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Interest Rate' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
           </Box>
 
@@ -190,7 +190,7 @@ const USMortgageCalculator = () => {
               <TextField
                 fullWidth type="number" value={propertyTaxPct} onFocus={(e) => e.target.select()}
                 onChange={(e) => setPropertyTaxPct(e.target.value === '' ? 0 : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Property Tax Rate (annual)' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
               />
             </Box>
             <Box>
@@ -198,7 +198,7 @@ const USMortgageCalculator = () => {
               <TextField
                 fullWidth type="number" value={annualInsurance} onFocus={(e) => e.target.select()}
                 onChange={(e) => setAnnualInsurance(e.target.value === '' ? 0 : Number(e.target.value))}
-                slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Home Insurance (annual)' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
               />
             </Box>
           </Box>
@@ -209,7 +209,7 @@ const USMortgageCalculator = () => {
               <TextField
                 fullWidth type="number" value={pmiPct} onFocus={(e) => e.target.select()}
                 onChange={(e) => setPmiPct(e.target.value === '' ? 0 : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'PMI Rate (if <20% down)' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
               />
             </Box>
             <Box>
@@ -217,7 +217,7 @@ const USMortgageCalculator = () => {
               <TextField
                 fullWidth type="number" value={hoaMonthly} onFocus={(e) => e.target.select()}
                 onChange={(e) => setHoaMonthly(e.target.value === '' ? 0 : Number(e.target.value))}
-                slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'HOA Dues (monthly)' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
               />
             </Box>
           </Box>

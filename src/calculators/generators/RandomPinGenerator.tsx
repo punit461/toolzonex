@@ -45,7 +45,7 @@ const RandomPinGeneratorContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box>
         <Typography variant="subtitle1" gutterBottom>PIN Length: {length}</Typography>
-        <Slider
+        <Slider aria-label={`PIN Length: ${length}`}
           value={length}
           onChange={handleLengthChange}
           min={4}

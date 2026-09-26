@@ -90,7 +90,7 @@ const IniFormatterContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box>
         <Typography variant="subtitle1" fontWeight={600} mb={1}>Raw INI Input</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Raw INI Input' } }}
           multiline
           rows={14}
           value={raw}
@@ -107,7 +107,7 @@ const IniFormatterContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight={600} mb={1}>Formatted Output</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Formatted Output' } }}
           multiline
           rows={14}
           value={formatted}

@@ -91,7 +91,7 @@ const WhatIsMyIPContent = () => {
       <Box>
         {loading ? (
           <Box sx={{ display: 'flex', justifyContent: 'center', py: 6 }}>
-            <CircularProgress />
+            <CircularProgress aria-label="Loading" />
           </Box>
         ) : (
           <>

@@ -41,7 +41,7 @@ const JwtDecoderContent = () => {
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Encoded JWT</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Encoded JWT' } }}
           multiline
           rows={15}
           value={token}

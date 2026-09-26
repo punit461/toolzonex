@@ -93,7 +93,7 @@ const BarcodeGeneratorContent = () => {
         
         <Box>
           <Typography variant="subtitle2" mb={1}>Bar Width: {width}px</Typography>
-          <Slider 
+          <Slider aria-label={`Bar Width: ${width}px`} 
             value={width} 
             min={1} 
             max={5} 
@@ -104,7 +104,7 @@ const BarcodeGeneratorContent = () => {
 
         <Box>
           <Typography variant="subtitle2" mb={1}>Height: {height}px</Typography>
-          <Slider 
+          <Slider aria-label={`Height: ${height}px`} 
             value={height} 
             min={50} 
             max={200} 

@@ -73,7 +73,7 @@ const ResizeAndRescalePdfContent = () => {
 
       <Box sx={{ mt: 3 }}>
         <Typography gutterBottom>Scale: {scale}%</Typography>
-        <Slider
+        <Slider aria-label={`Scale: ${scale}%`}
           value={scale}
           min={50}
           max={200}

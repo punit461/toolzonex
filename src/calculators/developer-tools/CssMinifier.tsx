@@ -55,7 +55,7 @@ const CssMinifierContent = () => {
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Original CSS</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Original CSS' } }}
           multiline
           rows={15}
           value={input}

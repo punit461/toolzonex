@@ -44,7 +44,7 @@ const GradientGeneratorContent = () => {
         
         <Box>
           <Typography variant="subtitle2" mb={1}>Angle: {angle}°</Typography>
-          <Slider value={angle} min={0} max={360} onChange={(e, val) => setAngle(val as number)} />
+          <Slider aria-label={`Angle: ${angle}°`} value={angle} min={0} max={360} onChange={(e, val) => setAngle(val as number)} />
         </Box>
 
       </Box>

@@ -60,7 +60,7 @@ const TvSeriesTrackerContent = () => {
                   onChange={(e) => updateShow(s.id, { title: e.target.value })}
                   sx={{ flex: 2, minWidth: 150 }}
                 />
-                <Select
+                <Select inputProps={{ 'aria-label': 'Status' }}
                   size="small"
                   value={s.status}
                   onChange={(e) => updateShow(s.id, { status: e.target.value as Status })}
@@ -70,7 +70,7 @@ const TvSeriesTrackerContent = () => {
                     <MenuItem key={opt} value={opt}>{opt}</MenuItem>
                   ))}
                 </Select>
-                <IconButton onClick={() => removeShow(s.id)} disabled={shows.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeShow(s.id)} disabled={shows.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

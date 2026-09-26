@@ -30,7 +30,7 @@ const UpsRuntimeCalculatorContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box sx={{ display: 'flex', gap: 2 }}>
           <TextField label="UPS Capacity" type="number" value={capacity} onChange={(e) => setCapacity(e.target.value)} fullWidth />
-          <Select value={capacityType} onChange={(e) => setCapacityType(e.target.value as 'VA' | 'Wh')} sx={{ minWidth: 100 }}>
+          <Select inputProps={{ 'aria-label': 'Capacity type' }} value={capacityType} onChange={(e) => setCapacityType(e.target.value as 'VA' | 'Wh')} sx={{ minWidth: 100 }}>
             <MenuItem value="VA">VA</MenuItem>
             <MenuItem value="Wh">Wh</MenuItem>
           </Select>

@@ -137,7 +137,7 @@ const SgpaCalculator = () => {
                   value={Number.isNaN(subject.gradePoint) ? '' : subject.gradePoint}
                   onChange={(e) => updateSubject(subject.id, 'gradePoint', e.target.value === '' ? NaN : Number(e.target.value))}
                 />
-                <IconButton color="error" size="small" onClick={() => removeSubject(subject.id)} disabled={subjects.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeSubject(subject.id)} disabled={subjects.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

@@ -56,7 +56,7 @@ const OrganizePdfContent = () => {
 
       <Box sx={{ mt: 3 }}>
         <Typography gutterBottom>New page order</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'New page order' } }}
           fullWidth
           placeholder="e.g. 3, 1, 2, 4"
           value={order}

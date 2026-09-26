@@ -62,7 +62,7 @@ const BitcoinMiningCalculatorContent = () => {
             onChange={(e) => setHashRate(e.target.value)}
             fullWidth
           />
-          <Select value={hashUnit} onChange={(e) => setHashUnit(e.target.value as HashUnit)} sx={{ minWidth: 100 }}>
+          <Select inputProps={{ 'aria-label': 'Hash rate unit' }} value={hashUnit} onChange={(e) => setHashUnit(e.target.value as HashUnit)} sx={{ minWidth: 100 }}>
             <MenuItem value="GH">GH/s</MenuItem>
             <MenuItem value="TH">TH/s</MenuItem>
             <MenuItem value="PH">PH/s</MenuItem>

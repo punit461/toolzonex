@@ -52,7 +52,7 @@ function Field({ label, options, value, onChange }: { label: string; options: st
   return (
     <Box sx={{ minWidth: 110, flex: 1 }}>
       <Typography variant="caption" color="text.secondary">{label}</Typography>
-      <Select value={value} onChange={(e) => onChange(e.target.value)} size="small" fullWidth sx={{ fontFamily: 'monospace' }}>
+      <Select inputProps={{ 'aria-label': label }} value={value} onChange={(e) => onChange(e.target.value)} size="small" fullWidth sx={{ fontFamily: 'monospace' }}>
         {options.map((o) => (
           <MenuItem key={o} value={o}>{o}</MenuItem>
         ))}
@@ -164,7 +164,7 @@ const CronExpressionGenerator = () => {
           <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', flexWrap: 'wrap' }}>
             <TextField
               value={expr}
-              inputProps={{ readOnly: true, style: { fontFamily: 'monospace', fontSize: '1.25rem', letterSpacing: '2px' } }}
+              inputProps={{ 'aria-label': 'Cron expression', readOnly: true, style: { fontFamily: 'monospace', fontSize: '1.25rem', letterSpacing: '2px' } }}
               size="medium"
               fullWidth
               sx={{ maxWidth: 380 }}

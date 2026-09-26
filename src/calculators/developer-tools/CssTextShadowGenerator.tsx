@@ -21,15 +21,15 @@ const CssTextShadowGeneratorContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box>
           <Typography variant="subtitle2" mb={1}>Offset X: {offsetX}px</Typography>
-          <Slider value={offsetX} min={-20} max={20} onChange={(_, v) => setOffsetX(v as number)} />
+          <Slider aria-label={`Offset X: ${offsetX}px`} value={offsetX} min={-20} max={20} onChange={(_, v) => setOffsetX(v as number)} />
         </Box>
         <Box>
           <Typography variant="subtitle2" mb={1}>Offset Y: {offsetY}px</Typography>
-          <Slider value={offsetY} min={-20} max={20} onChange={(_, v) => setOffsetY(v as number)} />
+          <Slider aria-label={`Offset Y: ${offsetY}px`} value={offsetY} min={-20} max={20} onChange={(_, v) => setOffsetY(v as number)} />
         </Box>
         <Box>
           <Typography variant="subtitle2" mb={1}>Blur Radius: {blur}px</Typography>
-          <Slider value={blur} min={0} max={30} onChange={(_, v) => setBlur(v as number)} />
+          <Slider aria-label={`Blur Radius: ${blur}px`} value={blur} min={0} max={30} onChange={(_, v) => setBlur(v as number)} />
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
           <input type="color" value={color} onChange={(e) => setColor(e.target.value)} style={{ width: 36, height: 36, border: 'none', cursor: 'pointer' }} />

@@ -57,7 +57,7 @@ const MovieWatchlistGeneratorContent = () => {
                   onChange={(e) => updateMovie(m.id, { title: e.target.value })}
                   sx={{ flex: 2, minWidth: 160 }}
                 />
-                <Select
+                <Select inputProps={{ 'aria-label': 'Status' }}
                   size="small"
                   value={m.status}
                   onChange={(e) => updateMovie(m.id, { status: e.target.value as Status })}
@@ -67,7 +67,7 @@ const MovieWatchlistGeneratorContent = () => {
                     <MenuItem key={s} value={s}>{s}</MenuItem>
                   ))}
                 </Select>
-                <IconButton onClick={() => removeMovie(m.id)} disabled={movies.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeMovie(m.id)} disabled={movies.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

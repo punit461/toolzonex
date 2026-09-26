@@ -112,7 +112,7 @@ const PrimeFactorizationCalculator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>
           <Typography gutterBottom>Enter a number (≥ 2)</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Enter a number (≥ 2)' } }}
             fullWidth
             type="number"
             value={input}

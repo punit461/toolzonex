@@ -125,7 +125,7 @@ const EventCostCalculator = () => {
                   onChange={(e) => updateItem(item.id, 'unitCost', e.target.value)}
                 />
                 <Typography variant="body2" fontWeight={600} sx={{ minWidth: 90 }}>{money(item.lineTotal)}</Typography>
-                <IconButton color="error" size="small" onClick={() => removeItem(item.id)} disabled={items.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeItem(item.id)} disabled={items.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

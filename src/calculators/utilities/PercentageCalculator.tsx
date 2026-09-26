@@ -81,7 +81,7 @@ const PercentageCalculator = () => {
           <Typography variant="h6" gutterBottom>1. What is X% of Y?</Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap', mt: 2 }}>
             <Typography>What is</Typography>
-            <TextField 
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Percentage (X)' } }} 
               type="number"
               onFocus={(e) => e.target.select()} 
               variant="outlined" 
@@ -91,7 +91,7 @@ const PercentageCalculator = () => {
               sx={{ width: 100 }}
             />
             <Typography>% of</Typography>
-            <TextField 
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Of value (Y)' } }} 
               type="number"
               onFocus={(e) => e.target.select()} 
               variant="outlined" 
@@ -112,7 +112,7 @@ const PercentageCalculator = () => {
         <Paper elevation={0} sx={{ p: 4, border: '1px solid', borderRadius: 2 }}>
           <Typography variant="h6" gutterBottom>2. X is what percent of Y? (Marks, Grades, or Actual vs. Target)</Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap', mt: 2 }}>
-            <TextField 
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Value (X)' } }} 
               type="number"
               onFocus={(e) => e.target.select()} 
               variant="outlined" 
@@ -122,7 +122,7 @@ const PercentageCalculator = () => {
               sx={{ width: 150 }}
             />
             <Typography>is what % of</Typography>
-            <TextField 
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Total (Y)' } }} 
               type="number"
               onFocus={(e) => e.target.select()} 
               variant="outlined" 
@@ -143,7 +143,7 @@ const PercentageCalculator = () => {
           <Typography variant="h6" gutterBottom>3. Percentage Increase / Decrease</Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap', mt: 2 }}>
             <Typography>From</Typography>
-            <TextField 
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'From value' } }} 
               type="number"
               onFocus={(e) => e.target.select()} 
               variant="outlined" 
@@ -153,7 +153,7 @@ const PercentageCalculator = () => {
               sx={{ width: 150 }}
             />
             <Typography>to</Typography>
-            <TextField 
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'To value' } }} 
               type="number"
               onFocus={(e) => e.target.select()} 
               variant="outlined" 

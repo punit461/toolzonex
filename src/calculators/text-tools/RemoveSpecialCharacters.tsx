@@ -66,7 +66,7 @@ const RemoveSpecialCharactersContent = () => {
             </Button>
           )}
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Result (updates live)' } }}
           value={result}
           multiline
           rows={12}

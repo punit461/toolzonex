@@ -229,7 +229,7 @@ const PdfEditorContent = () => {
 
       {loadingMessage && (
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mt: 2 }}>
-          <CircularProgress size={20} />
+          <CircularProgress aria-label="Loading" size={20} />
           <Typography variant="body2" color="text.secondary">{loadingMessage}</Typography>
         </Box>
       )}
@@ -258,7 +258,7 @@ const PdfEditorContent = () => {
             </Button>
             <Box sx={{ flex: 1 }} />
             <Button
-              startIcon={exporting ? <CircularProgress size={18} color="inherit" /> : <FileDownloadIcon />}
+              startIcon={exporting ? <CircularProgress aria-label="Loading" size={18} color="inherit" /> : <FileDownloadIcon />}
               variant="contained"
               size="large"
               disabled={exporting}
@@ -283,7 +283,7 @@ const PdfEditorContent = () => {
                 sx={{ mb: 2 }}
               />
               <Typography gutterBottom variant="body2">Opacity: {Math.round(watermark.opacity * 100)}%</Typography>
-              <Slider
+              <Slider aria-label="Opacity"
                 value={watermark.opacity}
                 min={0.05}
                 max={0.6}

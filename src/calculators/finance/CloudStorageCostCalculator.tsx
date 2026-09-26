@@ -110,7 +110,7 @@ const CloudStorageCostCalculator = () => {
             </ToggleButtonGroup>
           </Box>
 
-          <Select value={provider} onChange={(e) => setProvider(e.target.value)} fullWidth>
+          <Select inputProps={{ 'aria-label': 'Provider' }} value={provider} onChange={(e) => setProvider(e.target.value)} fullWidth>
             {PROVIDER_PRESETS.map((p) => (
               <MenuItem key={p.label} value={p.label}>{p.label}</MenuItem>
             ))}

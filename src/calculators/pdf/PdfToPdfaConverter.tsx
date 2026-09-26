@@ -76,7 +76,7 @@ const PdfToPdfaConverterContent = () => {
       {notice && <Alert severity="success" sx={{ mt: 2 }}>{notice}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleConvert} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Converting...</> : 'Convert to PDF/A-style'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Converting...</> : 'Convert to PDF/A-style'}
       </Button>
     </Box>
   );

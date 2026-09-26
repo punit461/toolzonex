@@ -51,7 +51,7 @@ const UrlEncoderContent = () => {
         <Typography variant="subtitle1" fontWeight="600">
           {mode === 'encode' ? 'Plain Text/URL Input:' : 'Encoded URL Input:'}
         </Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': mode === 'encode' ? 'Plain Text/URL Input' : 'Encoded URL Input' } }}
           multiline
           rows={10}
           fullWidth
@@ -82,7 +82,7 @@ const UrlEncoderContent = () => {
             Copy
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': mode === 'encode' ? 'Encoded URL Output' : 'Decoded Text Output' } }}
           multiline
           rows={10}
           fullWidth

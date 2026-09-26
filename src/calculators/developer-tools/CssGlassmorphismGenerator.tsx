@@ -43,20 +43,20 @@ border-radius: ${radius}px;`;
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box>
           <Typography gutterBottom>Blur: {blur}px</Typography>
-          <Slider value={blur} onChange={(_, v) => setBlur(v as number)} min={0} max={40} />
+          <Slider aria-label={`Blur: ${blur}px`} value={blur} onChange={(_, v) => setBlur(v as number)} min={0} max={40} />
         </Box>
         <TextField label="Tint Color" type="color" value={tintColor} onChange={(e) => setTintColor(e.target.value)} sx={{ width: { xs: '100%', sm: '50%' } }} />
         <Box>
           <Typography gutterBottom>Tint Opacity: {tintOpacity.toFixed(2)}</Typography>
-          <Slider value={tintOpacity} onChange={(_, v) => setTintOpacity(v as number)} min={0} max={1} step={0.01} />
+          <Slider aria-label="Tint Opacity" value={tintOpacity} onChange={(_, v) => setTintOpacity(v as number)} min={0} max={1} step={0.01} />
         </Box>
         <Box>
           <Typography gutterBottom>Border Opacity: {borderOpacity.toFixed(2)}</Typography>
-          <Slider value={borderOpacity} onChange={(_, v) => setBorderOpacity(v as number)} min={0} max={1} step={0.01} />
+          <Slider aria-label="Border Opacity" value={borderOpacity} onChange={(_, v) => setBorderOpacity(v as number)} min={0} max={1} step={0.01} />
         </Box>
         <Box>
           <Typography gutterBottom>Border Radius: {radius}px</Typography>
-          <Slider value={radius} onChange={(_, v) => setRadius(v as number)} min={0} max={48} />
+          <Slider aria-label={`Border Radius: ${radius}px`} value={radius} onChange={(_, v) => setRadius(v as number)} min={0} max={48} />
         </Box>
       </Box>
 

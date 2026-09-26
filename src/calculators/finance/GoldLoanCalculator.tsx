@@ -119,9 +119,9 @@ const GoldLoanCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(weight) ? '' : weight}
               onChange={(e) => setWeight(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">g</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Gold Weight (grams)' }, input: { endAdornment: <InputAdornment position="end">g</InputAdornment> } }}
             />
-            <Slider
+            <Slider aria-label="Gold Weight (grams)"
               value={Number.isNaN(weight) ? 0 : weight}
               min={1}
               max={500}
@@ -133,7 +133,7 @@ const GoldLoanCalculator = () => {
 
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom>Gold Purity</Typography>
-            <Select fullWidth value={karat} onChange={(e) => setKarat(Number(e.target.value))}>
+            <Select inputProps={{ 'aria-label': 'Gold Purity' }} fullWidth value={karat} onChange={(e) => setKarat(Number(e.target.value))}>
               {KARAT_OPTIONS.map((k) => (
                 <MenuItem key={k.value} value={k.value}>{k.label}</MenuItem>
               ))}
@@ -149,7 +149,7 @@ const GoldLoanCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(rate24k) ? '' : rate24k}
               onChange={(e) => setRate24k(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Current Gold Rate (24K, per gram)' }, input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
             />
           </Box>
 
@@ -162,9 +162,9 @@ const GoldLoanCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(ltvPct) ? '' : ltvPct}
               onChange={(e) => setLtvPct(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Loan-to-Value (LTV %)' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
-            <Slider
+            <Slider aria-label="Loan-to-Value (LTV %)"
               value={Number.isNaN(ltvPct) ? 0 : ltvPct}
               min={40}
               max={75}
@@ -183,7 +183,7 @@ const GoldLoanCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(interestRate) ? '' : interestRate}
               onChange={(e) => setInterestRate(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Interest Rate (% p.a., optional)' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
           </Box>
 
@@ -196,7 +196,7 @@ const GoldLoanCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(tenureMonths) ? '' : tenureMonths}
               onChange={(e) => setTenureMonths(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">months</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Tenure (months, optional)' }, input: { endAdornment: <InputAdornment position="end">months</InputAdornment> } }}
             />
           </Box>
         </Box>

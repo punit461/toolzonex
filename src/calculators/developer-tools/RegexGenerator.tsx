@@ -212,7 +212,7 @@ const RegexGenerator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2 }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <Typography variant="subtitle1" fontWeight="600">Generated Regex</Typography>
-            <IconButton onClick={copyToClipboard} disabled={!regex} size="small">
+            <IconButton aria-label="Copy" onClick={copyToClipboard} disabled={!regex} size="small">
               <ContentCopyIcon fontSize="small" />
             </IconButton>
           </Box>

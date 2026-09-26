@@ -44,7 +44,7 @@ const RgbToHexContent = () => {
             <Typography variant="subtitle2" color="error.main" fontWeight="bold">Red (R)</Typography>
             <Typography variant="subtitle2">{r}</Typography>
           </Box>
-          <Slider value={r} min={0} max={255} onChange={(e, val) => setR(val as number)} color="error" />
+          <Slider aria-label="Red (R)" value={r} min={0} max={255} onChange={(e, val) => setR(val as number)} color="error" />
         </Box>
 
         {/* Green */}
@@ -53,7 +53,7 @@ const RgbToHexContent = () => {
             <Typography variant="subtitle2" color="success.main" fontWeight="bold">Green (G)</Typography>
             <Typography variant="subtitle2">{g}</Typography>
           </Box>
-          <Slider value={g} min={0} max={255} onChange={(e, val) => setG(val as number)} color="success" />
+          <Slider aria-label="Green (G)" value={g} min={0} max={255} onChange={(e, val) => setG(val as number)} color="success" />
         </Box>
 
         {/* Blue */}
@@ -62,7 +62,7 @@ const RgbToHexContent = () => {
             <Typography variant="subtitle2" color="primary.main" fontWeight="bold">Blue (B)</Typography>
             <Typography variant="subtitle2">{b}</Typography>
           </Box>
-          <Slider value={b} min={0} max={255} onChange={(e, val) => setB(val as number)} color="primary" />
+          <Slider aria-label="Blue (B)" value={b} min={0} max={255} onChange={(e, val) => setB(val as number)} color="primary" />
         </Box>
 
         {/* Alpha */}
@@ -71,7 +71,7 @@ const RgbToHexContent = () => {
             <Typography variant="subtitle2" color="text.secondary" fontWeight="bold">Opacity (Alpha)</Typography>
             <Typography variant="subtitle2">{a}</Typography>
           </Box>
-          <Slider value={a} min={0} max={1} step={0.01} onChange={(e, val) => setA(val as number)} color="secondary" />
+          <Slider aria-label="Opacity (Alpha)" value={a} min={0} max={1} step={0.01} onChange={(e, val) => setA(val as number)} color="secondary" />
         </Box>
 
       </Box>
@@ -81,7 +81,7 @@ const RgbToHexContent = () => {
         <Box>
           <Typography variant="subtitle1" fontWeight="600" mb={1}>Generated HEX Code:</Typography>
           <Box sx={{ display: 'flex', gap: 2 }}>
-            <TextField 
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Hex value' } }} 
               value={hex} 
               InputProps={{ readOnly: true, sx: { fontFamily: 'monospace', fontSize: '1.2rem', fontWeight: 'bold' } }} 
               fullWidth 

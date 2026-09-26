@@ -51,7 +51,7 @@ const CssAnimationGeneratorContent = () => {
         </FormControl>
         <Box>
           <Typography variant="subtitle2" mb={1}>Duration: {duration}s</Typography>
-          <Slider value={duration} min={0.2} max={5} step={0.1} onChange={(_, v) => setDuration(v as number)} />
+          <Slider aria-label={`Duration: ${duration}s`} value={duration} min={0.2} max={5} step={0.1} onChange={(_, v) => setDuration(v as number)} />
         </Box>
         <FormControl fullWidth>
           <InputLabel>Timing Function</InputLabel>

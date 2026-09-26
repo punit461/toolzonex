@@ -144,14 +144,14 @@ const US401kCalculator = () => {
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mb: 3 }}>
             <Box>
               <Typography gutterBottom>Current Age</Typography>
-              <TextField
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Current Age' } }}
                 fullWidth type="number" value={currentAge} onFocus={(e) => e.target.select()}
                 onChange={(e) => setCurrentAge(e.target.value === '' ? 0 : Number(e.target.value))}
               />
             </Box>
             <Box>
               <Typography gutterBottom>Retirement Age</Typography>
-              <TextField
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Retirement Age' } }}
                 fullWidth type="number" value={retirementAge} onFocus={(e) => e.target.select()}
                 onChange={(e) => setRetirementAge(e.target.value === '' ? 0 : Number(e.target.value))}
               />
@@ -163,7 +163,7 @@ const US401kCalculator = () => {
             <TextField
               fullWidth type="number" value={currentBalance} onFocus={(e) => e.target.select()}
               onChange={(e) => setCurrentBalance(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Current 401(k) Balance' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
             />
           </Box>
 
@@ -172,13 +172,13 @@ const US401kCalculator = () => {
             <TextField
               fullWidth type="number" value={annualSalary} onFocus={(e) => e.target.select()}
               onChange={(e) => setAnnualSalary(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Annual Salary' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
             />
           </Box>
 
           <Box sx={{ mb: 3 }}>
             <Typography gutterBottom>Your Contribution ({contributionPct}% of salary)</Typography>
-            <Slider
+            <Slider aria-label={`Your Contribution (${contributionPct}% of salary)`}
               value={contributionPct} min={0} max={50} step={1}
               onChange={(_, value) => setContributionPct(value as number)}
               valueLabelDisplay="auto"
@@ -191,7 +191,7 @@ const US401kCalculator = () => {
               <TextField
                 fullWidth type="number" value={employerMatchPct} onFocus={(e) => e.target.select()}
                 onChange={(e) => setEmployerMatchPct(e.target.value === '' ? 0 : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Employer Match' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
               />
             </Box>
             <Box>
@@ -199,7 +199,7 @@ const US401kCalculator = () => {
               <TextField
                 fullWidth type="number" value={employerMatchCapPct} onFocus={(e) => e.target.select()}
                 onChange={(e) => setEmployerMatchCapPct(e.target.value === '' ? 0 : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Match Cap (% of salary)' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
               />
             </Box>
           </Box>
@@ -210,7 +210,7 @@ const US401kCalculator = () => {
               <TextField
                 fullWidth type="number" value={annualReturn} onFocus={(e) => e.target.select()}
                 onChange={(e) => setAnnualReturn(e.target.value === '' ? 0 : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Expected Annual Return' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
               />
             </Box>
             <Box>
@@ -218,7 +218,7 @@ const US401kCalculator = () => {
               <TextField
                 fullWidth type="number" value={salaryGrowth} onFocus={(e) => e.target.select()}
                 onChange={(e) => setSalaryGrowth(e.target.value === '' ? 0 : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Annual Salary Growth' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
               />
             </Box>
           </Box>

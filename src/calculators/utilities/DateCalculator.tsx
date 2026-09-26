@@ -135,7 +135,7 @@ const DateCalculator = () => {
                 type="date"
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
-                slotProps={{ inputLabel: { shrink: true } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Start Date' }, inputLabel: { shrink: true } }}
               />
             </Box>
             <Box sx={{ mb: 4 }}>
@@ -146,7 +146,7 @@ const DateCalculator = () => {
                 type="date"
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
-                slotProps={{ inputLabel: { shrink: true } }}
+                slotProps={{ htmlInput: { 'aria-label': 'End Date' }, inputLabel: { shrink: true } }}
               />
             </Box>
             <Button variant="outlined" onClick={() => { const today = new Date().toISOString().split('T')[0]; const plus30 = new Date(Date.now() + 86400000 * 30).toISOString().split('T')[0]; setStartDate(today); setEndDate(plus30); }}>Reset to Today</Button>
@@ -182,7 +182,7 @@ const DateCalculator = () => {
                 type="date"
                 value={baseDate}
                 onChange={(e) => setBaseDate(e.target.value)}
-                slotProps={{ inputLabel: { shrink: true } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Start Date' }, inputLabel: { shrink: true } }}
               />
             </Box>
             <Box sx={{ mb: 4 }}>

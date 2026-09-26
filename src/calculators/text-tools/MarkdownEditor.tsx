@@ -101,7 +101,7 @@ const MarkdownEditorContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 2 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
         <Typography variant="subtitle1" fontWeight="600">Markdown</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Markdown' } }}
           multiline
           minRows={20}
           value={markdown}

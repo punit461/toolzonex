@@ -113,7 +113,7 @@ const CsvMinifierContent = () => {
             placeholder={SAMPLE}
             fullWidth
             variant="outlined"
-            inputProps={{ style: { fontFamily: 'monospace' } }}
+            inputProps={{ 'aria-label': 'Raw CSV Input', style: { fontFamily: 'monospace' } }}
           />
           <Button variant="outlined" onClick={() => setInput(SAMPLE)}>Load Sample</Button>
         </Box>

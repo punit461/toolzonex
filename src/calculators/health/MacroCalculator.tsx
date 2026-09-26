@@ -84,7 +84,7 @@ const MacroCalculatorContent = () => {
         <Box sx={{ mb: 4, display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 2 }}>
           <Box>
             <Typography gutterBottom>Age</Typography>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Age' } }}
               fullWidth
               type="number"
               onFocus={(e) => e.target.select()}
@@ -94,7 +94,7 @@ const MacroCalculatorContent = () => {
           </Box>
           <Box>
             <Typography gutterBottom>Weight (kg)</Typography>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Weight (kg)' } }}
               fullWidth
               type="number"
               onFocus={(e) => e.target.select()}
@@ -104,7 +104,7 @@ const MacroCalculatorContent = () => {
           </Box>
           <Box>
             <Typography gutterBottom>Height (cm)</Typography>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Height (cm)' } }}
               fullWidth
               type="number"
               onFocus={(e) => e.target.select()}
@@ -117,7 +117,7 @@ const MacroCalculatorContent = () => {
         <Box sx={{ mb: 4 }}>
           <Typography gutterBottom>Activity Level</Typography>
           <FormControl fullWidth>
-            <Select value={activity} onChange={(e) => setActivity(e.target.value as keyof typeof activityMultipliers)}>
+            <Select inputProps={{ 'aria-label': 'Activity Level' }} value={activity} onChange={(e) => setActivity(e.target.value as keyof typeof activityMultipliers)}>
               {Object.entries(activityMultipliers).map(([key, item]) => (
                 <MenuItem key={key} value={key}>{item.label}</MenuItem>
               ))}
@@ -128,7 +128,7 @@ const MacroCalculatorContent = () => {
         <Box sx={{ mb: 4 }}>
           <Typography gutterBottom>Goal</Typography>
           <FormControl fullWidth>
-            <Select value={goal} onChange={(e) => setGoal(e.target.value as keyof typeof goals)}>
+            <Select inputProps={{ 'aria-label': 'Goal' }} value={goal} onChange={(e) => setGoal(e.target.value as keyof typeof goals)}>
               {Object.entries(goals).map(([key, item]) => (
                 <MenuItem key={key} value={key}>{item.label}</MenuItem>
               ))}
@@ -139,7 +139,7 @@ const MacroCalculatorContent = () => {
         <Box>
           <Typography gutterBottom>Diet Style</Typography>
           <FormControl fullWidth>
-            <Select value={diet} onChange={(e) => setDiet(e.target.value as keyof typeof dietStyles)}>
+            <Select inputProps={{ 'aria-label': 'Diet Style' }} value={diet} onChange={(e) => setDiet(e.target.value as keyof typeof dietStyles)}>
               {Object.entries(dietStyles).map(([key, item]) => (
                 <MenuItem key={key} value={key}>{item.label}</MenuItem>
               ))}

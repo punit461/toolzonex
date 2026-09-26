@@ -134,7 +134,7 @@ const CombinationCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(n) ? '' : n}
               onChange={(e) => setN(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">n</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'n (total items)' }, input: { endAdornment: <InputAdornment position="end">n</InputAdornment> } }}
             />
           </Box>
 
@@ -147,7 +147,7 @@ const CombinationCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(r) ? '' : r}
               onChange={(e) => setR(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">r</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'r (choose/arrange)' }, input: { endAdornment: <InputAdornment position="end">r</InputAdornment> } }}
             />
           </Box>
         </Box>

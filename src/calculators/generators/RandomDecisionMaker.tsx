@@ -31,7 +31,7 @@ const RandomDecisionMakerContent = () => {
         <Typography variant="subtitle2" color="text.secondary">
           Enter your options (one per line) — leave blank for a simple Yes/No decision:
         </Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Enter your options (one per line) — leave blank for a simple Yes/No decision' } }}
           multiline
           rows={8}
           fullWidth

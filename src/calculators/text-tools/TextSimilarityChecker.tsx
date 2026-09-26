@@ -61,7 +61,7 @@ const TextSimilarityCheckerContent = () => {
           <Typography variant="subtitle1" fontWeight="600" gutterBottom>
             Similarity: {similarity.toFixed(1)}%
           </Typography>
-          <LinearProgress
+          <LinearProgress aria-label="Progress"
             variant="determinate"
             value={Math.min(similarity, 100)}
             sx={{ height: 12, borderRadius: 1, mb: 1.5 }}

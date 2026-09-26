@@ -119,7 +119,7 @@ const CorrelationCoefficientCalculator = () => {
                   value={Number.isNaN(p.y) ? '' : p.y}
                   onChange={(e) => updatePoint(p.id, 'y', e.target.value === '' ? NaN : Number(e.target.value))}
                 />
-                <IconButton color="error" size="small" onClick={() => removePoint(p.id)} disabled={points.length <= 2}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removePoint(p.id)} disabled={points.length <= 2}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

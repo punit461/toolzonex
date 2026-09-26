@@ -53,7 +53,7 @@ const ChangePdfTextColorContent = () => {
 
       <Box sx={{ mt: 3, mb: 1 }}>
         <Typography gutterBottom>Darkness threshold: {threshold}</Typography>
-        <Slider value={threshold} min={30} max={220} step={1} onChange={(_, v) => setThreshold(v as number)} />
+        <Slider aria-label={`Darkness threshold: ${threshold}`} value={threshold} min={30} max={220} step={1} onChange={(_, v) => setThreshold(v as number)} />
         <Typography variant="caption" color="text.secondary">
           Pixels darker than this are recolored; lighter background pixels are left alone. Raise it if some text is
           being missed, lower it if background shading is being recolored too.
@@ -68,7 +68,7 @@ const ChangePdfTextColorContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleAction} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Recoloring...'}</> : 'Change Text Color'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Recoloring...'}</> : 'Change Text Color'}
       </Button>
     </Box>
   );

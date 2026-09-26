@@ -82,7 +82,7 @@ const CharacterDistributionAnalyzerContent = () => {
                           <Typography variant="body2" sx={{ width: 45 }}>
                             {row.density.toFixed(2)}%
                           </Typography>
-                          <LinearProgress 
+                          <LinearProgress aria-label="Progress" 
                             variant="determinate" 
                             value={Math.min(row.density * 5, 100)} 
                             color="secondary"

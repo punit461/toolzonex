@@ -56,7 +56,7 @@ const PaycheckCalculatorContent = ({ stateSlug }: Props) => {
             value={grossAnnual}
             onFocus={(e) => e.target.select()}
             onChange={(e) => setGrossAnnual(e.target.value === '' ? 0 : Number(e.target.value))}
-            slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+            slotProps={{ htmlInput: { 'aria-label': 'Gross Annual Salary' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
           />
         </Box>
 

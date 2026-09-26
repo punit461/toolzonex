@@ -160,7 +160,7 @@ const JsonTreeViewerContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Paste JSON</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Paste JSON' } }}
           multiline
           rows={16}
           value={input}
@@ -177,7 +177,7 @@ const JsonTreeViewerContent = () => {
       </Box>
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2 }}>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Paste JSON' } }}
           size="small"
           fullWidth
           value={search}

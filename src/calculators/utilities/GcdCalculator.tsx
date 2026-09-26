@@ -140,7 +140,7 @@ const GcdCalculator = () => {
                   value={Number.isNaN(row.value) ? '' : row.value}
                   onChange={(e) => updateRow(row.id, e.target.value === '' ? NaN : Number(e.target.value))}
                 />
-                <IconButton color="error" size="small" onClick={() => removeRow(row.id)} disabled={rows.length <= 2}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeRow(row.id)} disabled={rows.length <= 2}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

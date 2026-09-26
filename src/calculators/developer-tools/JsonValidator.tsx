@@ -41,7 +41,7 @@ const JsonValidatorContent = () => {
           />
         )}
       </Box>
-      <TextField
+      <TextField slotProps={{ htmlInput: { 'aria-label': 'Paste JSON to Validate' } }}
         multiline
         rows={16}
         value={input}

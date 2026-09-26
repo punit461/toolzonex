@@ -66,7 +66,7 @@ const PasswordStrengthCheckerContent = () => {
               {strength.label}
             </Typography>
           </Box>
-          <LinearProgress 
+          <LinearProgress aria-label="Progress" 
             variant="determinate" 
             value={password.length === 0 ? 0 : Math.max(5, (strength.score / 6) * 100)} 
             color={strength.color as any}

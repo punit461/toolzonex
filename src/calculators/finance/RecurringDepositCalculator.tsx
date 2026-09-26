@@ -49,7 +49,7 @@ const RecurringDepositCalculatorContent = () => {
             onChange={(e) => setTenureValue(e.target.value)}
             fullWidth
           />
-          <Select
+          <Select inputProps={{ 'aria-label': 'Tenure unit' }}
             value={tenureUnit}
             onChange={(e) => setTenureUnit(e.target.value as 'months' | 'years')}
             sx={{ minWidth: 120 }}

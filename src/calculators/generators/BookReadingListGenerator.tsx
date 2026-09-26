@@ -66,7 +66,7 @@ const BookReadingListGeneratorContent = () => {
                   onChange={(e) => updateBook(b.id, { author: e.target.value })}
                   sx={{ flex: 1, minWidth: 120 }}
                 />
-                <Select
+                <Select inputProps={{ 'aria-label': 'Status' }}
                   size="small"
                   value={b.status}
                   onChange={(e) => updateBook(b.id, { status: e.target.value as Status })}
@@ -76,7 +76,7 @@ const BookReadingListGeneratorContent = () => {
                     <MenuItem key={s} value={s}>{s}</MenuItem>
                   ))}
                 </Select>
-                <IconButton onClick={() => removeBook(b.id)} disabled={books.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeBook(b.id)} disabled={books.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

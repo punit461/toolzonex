@@ -83,7 +83,7 @@ const HouseholdInventoryListContent = () => {
             <Paper key={i.id} variant="outlined" sx={{ p: 2 }}>
               <Box sx={{ display: 'flex', gap: 1, mb: 1, alignItems: 'center' }}>
                 <TextField size="small" fullWidth label="Item name" value={i.name} onChange={(e) => updateItem(i.id, { name: e.target.value })} />
-                <IconButton onClick={() => removeItem(i.id)} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeItem(i.id)} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

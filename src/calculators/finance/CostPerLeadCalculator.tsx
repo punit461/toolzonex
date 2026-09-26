@@ -151,7 +151,7 @@ const CostPerLeadCalculator = () => {
             {channelBreakdown.map((row) => (
               <TableRow key={row.id}>
                 <TableCell>
-                  <TextField
+                  <TextField slotProps={{ htmlInput: { 'aria-label': 'Channel name' } }}
                     value={row.name}
                     onChange={(e) => updateRow(row.id, 'name', e.target.value)}
                     size="small"
@@ -165,11 +165,11 @@ const CostPerLeadCalculator = () => {
                     onChange={(e) => updateRow(row.id, 'spend', e.target.value)}
                     size="small"
                     variant="standard"
-                    slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+                    slotProps={{ htmlInput: { 'aria-label': 'Spend' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
                   />
                 </TableCell>
                 <TableCell>
-                  <TextField
+                  <TextField slotProps={{ htmlInput: { 'aria-label': 'Leads' } }}
                     type="number"
                     value={rows.find((r) => r.id === row.id)?.leads ?? ''}
                     onChange={(e) => updateRow(row.id, 'leads', e.target.value)}

@@ -64,7 +64,7 @@ const SplitPdfContent = () => {
 
       <Box sx={{ mt: 3 }}>
         <Typography gutterBottom>Split after page(s)</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Split after page(s)' } }}
           fullWidth
           placeholder="e.g. 3  or  3, 7"
           value={splitAfter}

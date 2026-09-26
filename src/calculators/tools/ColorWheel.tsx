@@ -107,15 +107,15 @@ const ColorWheelContent = () => {
 
         <Box sx={{ width: '100%' }}>
           <Typography variant="body2" color="text.secondary" mb={0.5}>Base Hue: {Math.round(((baseHue % 360) + 360) % 360)}°</Typography>
-          <Slider value={baseHue} min={0} max={359} onChange={(_, v) => setBaseHue(v as number)} />
+          <Slider aria-label="Base Hue" value={baseHue} min={0} max={359} onChange={(_, v) => setBaseHue(v as number)} />
         </Box>
         <Box sx={{ width: '100%' }}>
           <Typography variant="body2" color="text.secondary" mb={0.5}>Saturation: {saturation}%</Typography>
-          <Slider value={saturation} min={0} max={100} onChange={(_, v) => setSaturation(v as number)} />
+          <Slider aria-label={`Saturation: ${saturation}%`} value={saturation} min={0} max={100} onChange={(_, v) => setSaturation(v as number)} />
         </Box>
         <Box sx={{ width: '100%' }}>
           <Typography variant="body2" color="text.secondary" mb={0.5}>Lightness: {lightness}%</Typography>
-          <Slider value={lightness} min={10} max={90} onChange={(_, v) => setLightness(v as number)} />
+          <Slider aria-label={`Lightness: ${lightness}%`} value={lightness} min={10} max={90} onChange={(_, v) => setLightness(v as number)} />
         </Box>
       </Box>
 

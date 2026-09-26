@@ -171,7 +171,7 @@ const BudgetPlanner = () => {
                 <Typography variant="body2">{b.category}</Typography>
                 <Typography variant="body2" fontWeight={600}>{fmt(b.amount)} ({b.pct.toFixed(1)}%)</Typography>
               </Box>
-              <LinearProgress
+              <LinearProgress aria-label="Progress"
                 variant="determinate"
                 value={Math.min(b.pct, 100)}
                 sx={{ height: 8, borderRadius: 4, bgcolor: 'action.hover', '& .MuiLinearProgress-bar': { bgcolor: COLORS[i % COLORS.length] } }}

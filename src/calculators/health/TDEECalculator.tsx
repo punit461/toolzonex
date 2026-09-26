@@ -134,7 +134,7 @@ const TDEECalculator = () => {
           <Box sx={{ mb: 4, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
             <Box>
               <Typography gutterBottom>Age (Years)</Typography>
-              <TextField
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Age (Years)' } }}
                 fullWidth
                 variant="outlined"
                 type="number"
@@ -146,7 +146,7 @@ const TDEECalculator = () => {
             <Box>
               <Typography gutterBottom>Weight</Typography>
               <Box sx={{ display: 'flex', gap: 1 }}>
-                <TextField
+                <TextField slotProps={{ htmlInput: { 'aria-label': 'Weight' } }}
                   fullWidth
                   variant="outlined"
                   type="number"
@@ -191,7 +191,7 @@ const TDEECalculator = () => {
                 onFocus={(e) => e.target.select()}
                 value={Number.isNaN(heightCm) ? '' : heightCm}
                 onChange={(e) => setHeightCm(e.target.value === '' ? NaN : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Height' }, input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
               />
             ) : (
               <Box sx={{ display: 'flex', gap: 2 }}>
@@ -203,7 +203,7 @@ const TDEECalculator = () => {
                     onFocus={(e) => e.target.select()}
                     value={Number.isNaN(heightFt) ? '' : heightFt}
                     onChange={(e) => setHeightFt(e.target.value === '' ? NaN : Number(e.target.value))}
-                    slotProps={{ input: { endAdornment: <InputAdornment position="end">ft</InputAdornment> } }}
+                    slotProps={{ htmlInput: { 'aria-label': 'Height (feet)' }, input: { endAdornment: <InputAdornment position="end">ft</InputAdornment> } }}
                   />
                 </Box>
                 <Box sx={{ flex: 1 }}>
@@ -214,7 +214,7 @@ const TDEECalculator = () => {
                     onFocus={(e) => e.target.select()}
                     value={Number.isNaN(heightIn) ? '' : heightIn}
                     onChange={(e) => setHeightIn(e.target.value === '' ? NaN : Number(e.target.value))}
-                    slotProps={{ input: { endAdornment: <InputAdornment position="end">in</InputAdornment> } }}
+                    slotProps={{ htmlInput: { 'aria-label': 'Height (inches)' }, input: { endAdornment: <InputAdornment position="end">in</InputAdornment> } }}
                   />
                 </Box>
               </Box>
@@ -224,7 +224,7 @@ const TDEECalculator = () => {
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom>Activity Level</Typography>
             <FormControl fullWidth>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Activity Level' }}
                 value={activity}
                 onChange={(e) => setActivity(e.target.value as keyof typeof activityMultipliers)}
               >

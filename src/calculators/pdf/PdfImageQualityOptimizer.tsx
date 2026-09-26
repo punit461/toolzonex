@@ -69,7 +69,7 @@ const PdfImageQualityOptimizerContent = () => {
 
       <Box sx={{ mt: 3, px: 1 }}>
         <Typography variant="subtitle2" gutterBottom>Image Quality: {quality}%</Typography>
-        <Slider
+        <Slider aria-label={`Image Quality: ${quality}%`}
           value={quality}
           onChange={(_, v) => setQuality(v as number)}
           min={10}

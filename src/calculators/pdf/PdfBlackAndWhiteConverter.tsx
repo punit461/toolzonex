@@ -41,7 +41,7 @@ const PdfBlackAndWhiteConverterContent = () => {
 
       <Box sx={{ mt: 3, mb: 1 }}>
         <Typography gutterBottom>Black/white threshold: {threshold}</Typography>
-        <Slider value={threshold} min={1} max={254} step={1} onChange={(_, v) => setThreshold(v as number)} />
+        <Slider aria-label={`Black/white threshold: ${threshold}`} value={threshold} min={1} max={254} step={1} onChange={(_, v) => setThreshold(v as number)} />
         <Typography variant="caption" color="text.secondary">
           Pixels brighter than this value turn white, everything else turns black. Lower the threshold if your
           output looks too dark; raise it if too much detail is lost to white.
@@ -56,7 +56,7 @@ const PdfBlackAndWhiteConverterContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleAction} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Converting...'}</> : 'Convert to Black & White'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Converting...'}</> : 'Convert to Black & White'}
       </Button>
     </Box>
   );

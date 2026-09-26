@@ -74,7 +74,7 @@ const CommissionCalculator = () => {
           <TextField label="Commission Rate" type="number" value={commissionRate} onChange={(e) => setCommissionRate(e.target.value)} slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }} fullWidth />
           <Box>
             <Typography variant="body2" color="text.secondary" mb={1}>Salesperson Split: {splitPct}%</Typography>
-            <Slider value={parseFloat(splitPct) || 70} onChange={(_, v) => setSplitPct(String(v))} min={0} max={100} valueLabelDisplay="auto" valueLabelFormat={(v) => `${v}%`} />
+            <Slider aria-label={`Salesperson Split: ${splitPct}%`} value={parseFloat(splitPct) || 70} onChange={(_, v) => setSplitPct(String(v))} min={0} max={100} valueLabelDisplay="auto" valueLabelFormat={(v) => `${v}%`} />
             <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
               <Typography variant="caption" color="text.secondary">Company {100 - (parseFloat(splitPct) || 70)}%</Typography>
               <Typography variant="caption" color="text.secondary">Salesperson {splitPct}%</Typography>

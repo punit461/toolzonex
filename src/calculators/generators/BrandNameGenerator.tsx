@@ -92,7 +92,7 @@ const BrandNameGeneratorContent = () => {
               onClick={() => copyName(name)}
             >
               <Typography variant="body1" fontWeight="500">{name}</Typography>
-              <IconButton size="small"><ContentCopyIcon fontSize="small" /></IconButton>
+              <IconButton aria-label="Copy" size="small"><ContentCopyIcon fontSize="small" /></IconButton>
             </Paper>
           ))}
         </Box>

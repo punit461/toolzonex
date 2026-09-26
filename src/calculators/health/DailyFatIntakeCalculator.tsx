@@ -89,7 +89,7 @@ const DailyFatIntakeCalculator = () => {
             <Typography gutterBottom>
               Fat: <strong>{fatPct}%</strong> of calories
             </Typography>
-            <Slider
+            <Slider aria-label="Fat"
               value={fatPct}
               onChange={(_, v) => setFatPct(v as number)}
               min={10}

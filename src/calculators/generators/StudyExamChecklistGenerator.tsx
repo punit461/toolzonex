@@ -61,7 +61,7 @@ const StudyExamChecklistGeneratorContent = () => {
                   onChange={(e) => updateSubjectName(s.id, e.target.value)}
                   sx={{ textDecoration: s.reviewed ? 'line-through' : 'none' }}
                 />
-                <IconButton size="small" onClick={() => removeSubject(s.id)} disabled={subjects.length <= 1}>
+                <IconButton aria-label="Remove" size="small" onClick={() => removeSubject(s.id)} disabled={subjects.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

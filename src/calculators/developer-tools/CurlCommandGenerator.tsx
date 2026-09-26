@@ -74,7 +74,7 @@ const CurlCommandGeneratorContent = () => {
               <Stack key={h.id} direction="row" spacing={1.5}>
                 <TextField label="Key" size="small" fullWidth value={h.key} onChange={(e) => updateHeader(h.id, 'key', e.target.value)} />
                 <TextField label="Value" size="small" fullWidth value={h.value} onChange={(e) => updateHeader(h.id, 'value', e.target.value)} />
-                <IconButton color="error" size="small" onClick={() => removeHeader(h.id)}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeHeader(h.id)}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

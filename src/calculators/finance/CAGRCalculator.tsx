@@ -80,7 +80,7 @@ const CAGRCalculator = () => {
           <Box sx={{ mb: 4 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Typography gutterBottom>Initial Value</Typography>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Currency' }}
                 size="small"
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -98,7 +98,7 @@ const CAGRCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(initialValue) ? '' : initialValue}
               onChange={(e) => setInitialValue(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Initial Value' },
                 input: {
                   startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
@@ -115,7 +115,7 @@ const CAGRCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(finalValue) ? '' : finalValue}
               onChange={(e) => setFinalValue(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Final Value' },
                 input: {
                   startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
@@ -132,13 +132,13 @@ const CAGRCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(years) ? '' : years}
               onChange={(e) => setYears(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Number of Years' },
                 input: {
                   endAdornment: <InputAdornment position="end">Yr</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Number of Years"
               value={Number.isNaN(years) ? 0 : years}
               min={1}
               max={30}

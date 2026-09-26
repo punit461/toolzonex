@@ -70,7 +70,7 @@ const DailyRoutineGeneratorContent = () => {
                     placeholder="Routine item"
                     onChange={(e) => updateItem(section, item.id, e.target.value)}
                   />
-                  <IconButton size="small" onClick={() => removeItem(section, item.id)} disabled={routine[section].length <= 1}>
+                  <IconButton aria-label="Remove" size="small" onClick={() => removeItem(section, item.id)} disabled={routine[section].length <= 1}>
                     <DeleteIcon fontSize="small" />
                   </IconButton>
                 </Box>

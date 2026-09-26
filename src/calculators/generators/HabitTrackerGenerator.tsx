@@ -74,7 +74,7 @@ const HabitTrackerGeneratorContent = () => {
               fullWidth
               placeholder="e.g. Drink water"
             />
-            <IconButton size="small" onClick={() => removeHabit(idx)} disabled={habits.length <= 1}>
+            <IconButton aria-label="Remove" size="small" onClick={() => removeHabit(idx)} disabled={habits.length <= 1}>
               <DeleteIcon fontSize="small" />
             </IconButton>
           </Stack>

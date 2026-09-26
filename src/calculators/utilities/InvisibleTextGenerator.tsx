@@ -128,11 +128,11 @@ const InvisibleTextGenerator = () => {
           <Paper variant="outlined" sx={{ p: 3 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
               <Typography variant="subtitle2">Generated Output</Typography>
-              <IconButton size="small" onClick={() => copyToClipboard(generated)}>
+              <IconButton aria-label="Copy" size="small" onClick={() => copyToClipboard(generated)}>
                 <ContentCopyIcon fontSize="small" />
               </IconButton>
             </Box>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Generated Output' } }}
               multiline
               rows={3}
               value={generated}

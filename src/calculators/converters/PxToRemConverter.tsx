@@ -46,7 +46,7 @@ const PxToRemContent = () => {
         <Box>
           <Typography variant="subtitle1" fontWeight="600" mb={1}>Base Font Size (px)</Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
-            <Slider
+            <Slider aria-label="Base Font Size (px)"
               value={baseSize}
               min={8}
               max={32}
@@ -55,7 +55,7 @@ const PxToRemContent = () => {
               onChange={handleBaseChange}
               sx={{ flex: 1 }}
             />
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Base Font Size (px)' } }}
               type="number"
               size="small"
               value={baseSize}

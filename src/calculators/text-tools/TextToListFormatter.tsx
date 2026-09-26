@@ -101,7 +101,7 @@ const TextToListFormatterContent = () => {
             {copied ? 'Copied!' : 'Copy'}
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Formatted List' } }}
           value={output}
           multiline
           rows={7}

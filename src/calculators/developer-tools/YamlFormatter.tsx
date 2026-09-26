@@ -80,7 +80,7 @@ const YamlFormatterContent = () => {
           placeholder={SAMPLE}
           fullWidth
           variant="outlined"
-          inputProps={{ style: { fontFamily: 'monospace' } }}
+          inputProps={{ 'aria-label': 'Unformatted YAML', style: { fontFamily: 'monospace' } }}
         />
         <Box sx={{ display: 'flex', gap: 2 }}>
           <Button variant="contained" onClick={format} fullWidth>Format YAML</Button>

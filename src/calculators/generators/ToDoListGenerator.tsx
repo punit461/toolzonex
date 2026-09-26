@@ -63,7 +63,7 @@ const ToDoListGeneratorContent = () => {
               >
                 {item.text}
               </Typography>
-              <IconButton color="error" size="small" onClick={() => removeItem(item.id)}>
+              <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeItem(item.id)}>
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Paper>

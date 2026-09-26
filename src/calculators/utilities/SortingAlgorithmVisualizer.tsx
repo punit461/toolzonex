@@ -165,7 +165,7 @@ const SortingAlgorithmVisualizerContent = () => {
 
         <Box sx={{ width: 200, px: 2 }}>
           <Typography variant="caption" color="text.secondary">Animation Speed</Typography>
-          <Slider
+          <Slider aria-label="Animation Speed"
             value={speed}
             onChange={(e, val) => setSpeed(val as number)}
             min={1}

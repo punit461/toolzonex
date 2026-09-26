@@ -190,13 +190,13 @@ const VATCalculator = () => {
               value={amount}
               onFocus={(e) => e.target.select()}
               onChange={(e) => setAmount(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">{selectedCountry.currencySymbol}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': mode === 'add' ? 'Net Amount (excl. VAT)' : 'Gross Amount (incl. VAT)' }, input: { startAdornment: <InputAdornment position="start">{selectedCountry.currencySymbol}</InputAdornment> } }}
             />
           </Box>
 
           <Box sx={{ mb: 3 }}>
             <Typography gutterBottom>Country</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Country' }}
               fullWidth
               value={countryCode}
               disabled={useCustomRate}
@@ -225,7 +225,7 @@ const VATCalculator = () => {
                 value={customRate}
                 onFocus={(e) => e.target.select()}
                 onChange={(e) => setCustomRate(e.target.value === '' ? 0 : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Custom VAT rate (%)' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
                 sx={{ width: 100 }}
               />
             )}

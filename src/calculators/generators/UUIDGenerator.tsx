@@ -76,7 +76,7 @@ const UUIDGeneratorContent = () => {
           </Button>
         </Box>
         
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Generated UUIDs' } }}
           value={uuids.join('\n')}
           multiline
           rows={10}

@@ -66,7 +66,7 @@ const PdfPreviewGeneratorContent = () => {
 
       <Dialog open={!!selected} onClose={() => setSelected(null)} maxWidth="lg" fullWidth>
         <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 1 }}>
-          <IconButton onClick={() => setSelected(null)}><CloseIcon /></IconButton>
+          <IconButton aria-label="Close" onClick={() => setSelected(null)}><CloseIcon /></IconButton>
         </Box>
         {selected && (
           <Box sx={{ textAlign: 'center', p: 2 }}>

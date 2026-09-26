@@ -134,7 +134,7 @@ const ExtractImagesFromPdfContent = () => {
                   <CardMedia component="img" image={img.dataUrl} alt={`Image ${img.index}`} sx={{ objectFit: 'contain', height: 160, bgcolor: 'grey.100' }} />
                   <CardActions sx={{ justifyContent: 'space-between', px: 1 }}>
                     <Typography variant="caption" color="text.secondary">Page {img.page}</Typography>
-                    <IconButton size="small" onClick={() => downloadImage(img)}>
+                    <IconButton aria-label="Download" size="small" onClick={() => downloadImage(img)}>
                       <DownloadIcon fontSize="small" />
                     </IconButton>
                   </CardActions>

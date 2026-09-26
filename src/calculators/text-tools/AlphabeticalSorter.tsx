@@ -89,7 +89,7 @@ const AlphabeticalSorterContent = () => {
             </Button>
           )}
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Sorted Result' } }}
           value={result}
           multiline
           rows={12}

@@ -136,7 +136,7 @@ const SemesterPercentageCalculator = () => {
               value={Number.isNaN(subject.max) ? '' : subject.max}
               onChange={(e) => updateSubject(subject.id, 'max', e.target.value === '' ? NaN : Number(e.target.value))}
             />
-            <IconButton color="error" size="small" onClick={() => removeSubject(subject.id)} disabled={subjects.length <= 1}>
+            <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeSubject(subject.id)} disabled={subjects.length <= 1}>
               <DeleteIcon fontSize="small" />
             </IconButton>
           </Stack>

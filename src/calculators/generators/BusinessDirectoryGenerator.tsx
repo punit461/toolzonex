@@ -95,7 +95,7 @@ const BusinessDirectoryGeneratorContent = () => {
                   </Select>
                 </FormControl>
                 <TextField size="small" label="Name" value={e.name} onChange={(ev) => updateEntry(e.id, { name: ev.target.value })} sx={{ flex: 1, minWidth: 130 }} />
-                <IconButton onClick={() => removeEntry(e.id)} disabled={entries.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeEntry(e.id)} disabled={entries.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

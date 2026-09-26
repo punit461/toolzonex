@@ -81,7 +81,7 @@ const TextCaseMixerContent = () => {
              </Button>
           )}
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Result' } }}
           value={result}
           multiline
           rows={10}

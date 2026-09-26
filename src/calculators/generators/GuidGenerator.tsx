@@ -89,7 +89,7 @@ const GuidGeneratorContent = () => {
             {guids.map((g, i) => (
               <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <Typography sx={{ fontFamily: 'monospace', fontSize: '0.9rem', flex: 1, overflow: 'auto' }}>{g}</Typography>
-                <IconButton size="small" onClick={() => copySingle(g)}>
+                <IconButton aria-label="Copy" size="small" onClick={() => copySingle(g)}>
                   <ContentCopyIcon fontSize="small" />
                 </IconButton>
               </Box>

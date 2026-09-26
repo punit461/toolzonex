@@ -108,7 +108,7 @@ const CompareTwoPdfsContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleCompare} disabled={busy || !file1 || !file2}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Comparing...</> : 'Compare PDFs'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Comparing...</> : 'Compare PDFs'}
       </Button>
 
       {result && (
@@ -126,7 +126,7 @@ const CompareTwoPdfsContent = () => {
             <Box sx={{ minWidth: 150 }}>
               <Typography variant="body2" color="text.secondary">Text Similarity</Typography>
               <Typography variant="h4">{result.similarity}%</Typography>
-              <LinearProgress variant="determinate" value={result.similarity} sx={{ mt: 0.5 }} color={result.similarity > 80 ? 'success' : result.similarity > 50 ? 'warning' : 'error'} />
+              <LinearProgress aria-label="Progress" variant="determinate" value={result.similarity} sx={{ mt: 0.5 }} color={result.similarity > 80 ? 'success' : result.similarity > 50 ? 'warning' : 'error'} />
             </Box>
           </Box>
           <Typography variant="subtitle2" gutterBottom>Differences</Typography>

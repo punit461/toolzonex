@@ -35,7 +35,7 @@ const APYCalculatorContent = () => {
         />
         <Box>
           <Typography gutterBottom fontWeight={600}>Compounding Frequency</Typography>
-          <Select
+          <Select inputProps={{ 'aria-label': 'Compounding Frequency' }}
             fullWidth
             value={compounding}
             onChange={(e) => setCompounding(Number(e.target.value))}

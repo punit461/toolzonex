@@ -80,7 +80,7 @@ const MovingChecklistGeneratorContent = () => {
         <Paper variant="outlined" sx={{ p: 2, mt: 2 }}>
           <Typography variant="subtitle1" fontWeight={600} gutterBottom>Add Custom Task</Typography>
           <Stack direction="row" spacing={1}>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Add Custom Task' } }}
               size="small"
               fullWidth
               value={customItem}

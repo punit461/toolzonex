@@ -100,7 +100,7 @@ const CsvToJsonContent = () => {
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Input CSV:</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Input CSV' } }}
           multiline
           rows={16}
           fullWidth
@@ -129,7 +129,7 @@ const CsvToJsonContent = () => {
             </Button>
           </Box>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Output JSON Array' } }}
           multiline
           rows={16}
           fullWidth

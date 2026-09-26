@@ -113,7 +113,7 @@ const PayrollCalculator = () => {
           />
           <Box>
             <Typography gutterBottom>Pay Period</Typography>
-            <Select fullWidth value={period} onChange={(e) => setPeriod(e.target.value)}>
+            <Select inputProps={{ 'aria-label': 'Pay Period' }} fullWidth value={period} onChange={(e) => setPeriod(e.target.value)}>
               {PERIODS.map((p) => (
                 <MenuItem key={p.value} value={p.value}>{p.label}</MenuItem>
               ))}

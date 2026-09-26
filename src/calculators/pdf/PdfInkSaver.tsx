@@ -52,7 +52,7 @@ const PdfInkSaverContent = () => {
 
       <Box sx={{ mt: 1, mb: 1 }}>
         <Typography gutterBottom>Lighten by: {lighten}%</Typography>
-        <Slider value={lighten} min={0} max={80} step={5} onChange={(_, v) => setLighten(v as number)} />
+        <Slider aria-label={`Lighten by: ${lighten}%`} value={lighten} min={0} max={80} step={5} onChange={(_, v) => setLighten(v as number)} />
         <Typography variant="caption" color="text.secondary">
           Blends every non-white pixel toward white by this percentage, reducing how much ink or toner a printer
           uses. Higher values save more ink but produce a lighter, lower-contrast printout.
@@ -67,7 +67,7 @@ const PdfInkSaverContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleAction} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Processing...'}</> : 'Save Ink'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Processing...'}</> : 'Save Ink'}
       </Button>
     </Box>
   );

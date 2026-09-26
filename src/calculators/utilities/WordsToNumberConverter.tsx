@@ -172,7 +172,7 @@ const WordsToNumberConverterContent = () => {
                 <Typography variant="h3" fontWeight="bold" sx={{ wordBreak: 'break-all' }}>
                   {result.value.toLocaleString('en-US', { maximumFractionDigits: 10 })}
                 </Typography>
-                <IconButton size="small" onClick={handleCopy} sx={{ color: 'white' }}>
+                <IconButton aria-label="Copy" size="small" onClick={handleCopy} sx={{ color: 'white' }}>
                   <ContentCopyIcon fontSize="small" />
                 </IconButton>
               </Box>

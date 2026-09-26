@@ -79,7 +79,7 @@ const SchoolSupplyChecklistContent = () => {
         <Paper variant="outlined" sx={{ p: 2, mt: 2 }}>
           <Typography variant="subtitle1" fontWeight={600} gutterBottom>Add Custom Item</Typography>
           <Stack direction="row" spacing={1}>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Add Custom Item' } }}
               size="small"
               fullWidth
               value={customItem}

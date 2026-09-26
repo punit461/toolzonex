@@ -107,7 +107,7 @@ const CaloriesBurnedWalkingCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={weight}
               onChange={(e) => setWeight(e.target.value)}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">{weightUnit}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Weight' }, input: { endAdornment: <InputAdornment position="end">{weightUnit}</InputAdornment> } }}
             />
           </Box>
 

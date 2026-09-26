@@ -90,7 +90,7 @@ const Home = () => {
           variant="outlined"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          slotProps={{
+          slotProps={{ htmlInput: { 'aria-label': 'Search tools' },
             input: {
               startAdornment: (
                 <InputAdornment position="start">

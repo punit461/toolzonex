@@ -108,7 +108,7 @@ const PersonalLoanCalculator = () => {
           <Box sx={{ mb: 4 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Typography gutterBottom>Loan Amount</Typography>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Currency' }}
                 size="small"
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -129,13 +129,13 @@ const PersonalLoanCalculator = () => {
                 const val = e.target.value;
                 setPrincipal(val === '' ? 0 : Number(val));
               }}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Loan Amount' },
                 input: {
                   startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Loan Amount"
               value={principal}
               min={10000}
               max={2000000}
@@ -154,13 +154,13 @@ const PersonalLoanCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(rate) ? '' : rate}
               onChange={(e) => setRate(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Interest Rate (% p.a.)' },
                 input: {
                   endAdornment: <InputAdornment position="end">%</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Interest Rate (% p.a.)"
               value={Number.isNaN(rate) ? 0 : rate}
               min={8}
               max={30}
@@ -179,13 +179,13 @@ const PersonalLoanCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(tenureYears) ? '' : tenureYears}
               onChange={(e) => setTenureYears(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Loan Tenure (Years)' },
                 input: {
                   endAdornment: <InputAdornment position="end">Yr</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Loan Tenure (Years)"
               value={Number.isNaN(tenureYears) ? 0 : tenureYears}
               min={1}
               max={7}

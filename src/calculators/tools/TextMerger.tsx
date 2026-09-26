@@ -64,7 +64,7 @@ const TextMergerContent = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 3 }}>
         <Box>
           <Typography variant="subtitle1" fontWeight="bold" mb={1}>List 1</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'List 1' } }}
             multiline
             rows={8}
             value={list1}
@@ -75,7 +75,7 @@ const TextMergerContent = () => {
         </Box>
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight="bold" mb={1}>List 2</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'List 2' } }}
             multiline
             rows={8}
             value={list2}
@@ -137,7 +137,7 @@ const TextMergerContent = () => {
           </Button>
         </Box>
         <Box sx={{ p: 0 }}>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Merged Result' } }}
             multiline
             rows={10}
             value={mergedText}

@@ -61,7 +61,7 @@ const GardenPlannerContent = () => {
             <Paper key={p.id} variant="outlined" sx={{ p: 2 }}>
               <Box sx={{ display: 'flex', gap: 1, mb: 1, alignItems: 'center' }}>
                 <TextField size="small" fullWidth label="Plant/crop name" value={p.name} onChange={(e) => updatePlant(p.id, { name: e.target.value })} />
-                <IconButton onClick={() => removePlant(p.id)} disabled={plants.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removePlant(p.id)} disabled={plants.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

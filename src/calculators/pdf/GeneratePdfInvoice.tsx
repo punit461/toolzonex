@@ -189,7 +189,7 @@ const GeneratePdfInvoiceContent = () => {
               sx={{ flex: 1 }}
               inputProps={{ min: 0 }}
             />
-            <IconButton onClick={() => removeItem(idx)} disabled={items.length <= 1} size="small">
+            <IconButton aria-label="Remove" onClick={() => removeItem(idx)} disabled={items.length <= 1} size="small">
               <DeleteIcon fontSize="small" />
             </IconButton>
           </Stack>

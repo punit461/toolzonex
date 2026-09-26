@@ -97,7 +97,7 @@ const SortTextLinesContent = () => {
           <Typography variant="subtitle1" fontWeight="600">Sorted Result</Typography>
           <Button size="small" startIcon={<ContentCopyIcon />} onClick={copy} disabled={!sorted}>Copy</Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Sorted Result' } }}
           value={sorted}
           multiline
           rows={14}

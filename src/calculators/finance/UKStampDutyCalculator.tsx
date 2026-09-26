@@ -138,7 +138,7 @@ const UKStampDutyCalculator = () => {
             <TextField
               fullWidth type="number" value={price} onFocus={(e) => e.target.select()}
               onChange={(e) => setPrice(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">£</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Property Price' }, input: { startAdornment: <InputAdornment position="start">£</InputAdornment> } }}
             />
           </Box>
 

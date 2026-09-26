@@ -136,7 +136,7 @@ const TypingSpeedTestContent = () => {
         </Typography>
       </Paper>
 
-      <TextField
+      <TextField slotProps={{ htmlInput: { 'aria-label': 'Typing area' } }}
         value={userInput}
         onChange={handleInput}
         disabled={timeLeft === 0}

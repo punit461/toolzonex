@@ -47,28 +47,28 @@ const HslToRgbContent = () => {
             <Typography variant="subtitle2" fontWeight="bold">Hue (H)</Typography>
             <Typography variant="subtitle2">{h}°</Typography>
           </Box>
-          <Slider value={h} min={0} max={360} onChange={(e, val) => setH(val as number)} />
+          <Slider aria-label="Hue (H)" value={h} min={0} max={360} onChange={(e, val) => setH(val as number)} />
         </Box>
         <Box>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
             <Typography variant="subtitle2" fontWeight="bold">Saturation (S)</Typography>
             <Typography variant="subtitle2">{s}%</Typography>
           </Box>
-          <Slider value={s} min={0} max={100} onChange={(e, val) => setS(val as number)} />
+          <Slider aria-label="Saturation (S)" value={s} min={0} max={100} onChange={(e, val) => setS(val as number)} />
         </Box>
         <Box>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
             <Typography variant="subtitle2" fontWeight="bold">Lightness (L)</Typography>
             <Typography variant="subtitle2">{l}%</Typography>
           </Box>
-          <Slider value={l} min={0} max={100} onChange={(e, val) => setL(val as number)} />
+          <Slider aria-label="Lightness (L)" value={l} min={0} max={100} onChange={(e, val) => setL(val as number)} />
         </Box>
       </Box>
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box>
           <Typography variant="subtitle1" fontWeight="600" mb={1}>RGB Result:</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'RGB Result' } }}
             value={`rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`}
             InputProps={{ readOnly: true, sx: { fontFamily: 'monospace', fontSize: '1.1rem', fontWeight: 'bold' } }}
             fullWidth

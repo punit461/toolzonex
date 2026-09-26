@@ -81,7 +81,7 @@ const BookSummaryTemplateContent = () => {
               {takeaways.map((t) => (
                 <Box key={t.id} sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
                   <TextField size="small" fullWidth value={t.text} onChange={(e) => updateTakeaway(t.id, e.target.value)} placeholder="A key takeaway from the book" />
-                  <IconButton onClick={() => removeTakeaway(t.id)} disabled={takeaways.length <= 1} size="small">
+                  <IconButton aria-label="Remove" onClick={() => removeTakeaway(t.id)} disabled={takeaways.length <= 1} size="small">
                     <DeleteIcon fontSize="small" />
                   </IconButton>
                 </Box>

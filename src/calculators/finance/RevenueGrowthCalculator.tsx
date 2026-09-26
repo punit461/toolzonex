@@ -118,7 +118,7 @@ const RevenueGrowthCalculator = () => {
                 <Typography variant="body2" sx={{ minWidth: 70, textAlign: 'right', color: p.growth === null ? 'text.secondary' : p.growth >= 0 ? 'success.main' : 'error.main' }}>
                   {p.growth === null ? '—' : `${p.growth >= 0 ? '+' : ''}${p.growth.toFixed(1)}%`}
                 </Typography>
-                <IconButton color="error" size="small" onClick={() => removePeriod(p.id)} disabled={periods.length <= 2}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removePeriod(p.id)} disabled={periods.length <= 2}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

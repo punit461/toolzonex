@@ -88,7 +88,7 @@ const BuiltUpAreaCalculator = () => {
 
           <Box>
             <Typography gutterBottom>Loading Factor: {loadingFactor}%</Typography>
-            <Slider
+            <Slider aria-label={`Loading Factor: ${loadingFactor}%`}
               value={loadingFactor}
               onChange={(_, v) => setLoadingFactor(v as number)}
               min={10}

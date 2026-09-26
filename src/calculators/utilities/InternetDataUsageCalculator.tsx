@@ -107,7 +107,7 @@ const InternetDataUsageCalculator = () => {
           <Stack spacing={2}>
             {rows.map((a) => (
               <Stack key={a.id} direction={{ xs: 'column', sm: 'row' }} spacing={1.5} alignItems={{ sm: 'center' }}>
-                <Select
+                <Select inputProps={{ 'aria-label': 'Preset' }}
                   size="small"
                   value={a.preset}
                   onChange={(e) => updateActivity(a.id, 'preset', e.target.value)}
@@ -133,7 +133,7 @@ const InternetDataUsageCalculator = () => {
                   value={a.hoursPerDay}
                   onChange={(e) => updateActivity(a.id, 'hoursPerDay', e.target.value)}
                 />
-                <IconButton color="error" size="small" onClick={() => removeActivity(a.id)} disabled={activities.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeActivity(a.id)} disabled={activities.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

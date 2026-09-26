@@ -90,13 +90,13 @@ const PPFCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(yearlyInvestment) ? '' : yearlyInvestment}
               onChange={(e) => setYearlyInvestment(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Yearly Investment (₹)' },
                 input: {
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Yearly Investment (₹)"
               value={Number.isNaN(yearlyInvestment) ? 0 : yearlyInvestment}
               min={500}
               max={150000}
@@ -115,14 +115,14 @@ const PPFCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(timePeriod) ? '' : timePeriod}
               onChange={(e) => setTimePeriod(e.target.value === '' ? NaN : Number(e.target.value))}
-             slotProps={{
+             slotProps={{ htmlInput: { 'aria-label': 'Time Period (Years)' },
                 input: {
                   endAdornment: <InputAdornment position="end">Yr</InputAdornment>,
                   inputProps: { min: 15 },
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Time Period (Years)"
               value={Number.isNaN(timePeriod) ? 0 : timePeriod}
               min={15}
               max={50}

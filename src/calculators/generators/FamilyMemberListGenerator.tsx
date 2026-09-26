@@ -56,7 +56,7 @@ const FamilyMemberListGeneratorContent = () => {
               <Box sx={{ display: 'flex', gap: 1, mb: 1, flexWrap: 'wrap', alignItems: 'center' }}>
                 <TextField size="small" label="Name" value={m.name} onChange={(e) => updateMember(m.id, { name: e.target.value })} sx={{ flex: 1.5, minWidth: 140 }} />
                 <TextField size="small" label="Relationship to you" value={m.relationship} onChange={(e) => updateMember(m.id, { relationship: e.target.value })} sx={{ flex: 1, minWidth: 130 }} placeholder="e.g. Mother, Cousin" />
-                <IconButton onClick={() => removeMember(m.id)} disabled={members.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeMember(m.id)} disabled={members.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

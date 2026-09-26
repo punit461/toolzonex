@@ -55,7 +55,7 @@ const FDCalculatorContent = () => {
             onChange={(e) => setTenureValue(e.target.value)}
             fullWidth
           />
-          <Select
+          <Select inputProps={{ 'aria-label': 'Tenure unit' }}
             value={tenureUnit}
             onChange={(e) => setTenureUnit(e.target.value as 'months' | 'years')}
             sx={{ minWidth: 120 }}
@@ -66,7 +66,7 @@ const FDCalculatorContent = () => {
         </Box>
         <Box>
           <Typography variant="body2" color="text.secondary" mb={1}>Compounding Frequency</Typography>
-          <Select
+          <Select inputProps={{ 'aria-label': 'Compounding Frequency' }}
             value={compoundingFrequency}
             onChange={(e) => setCompoundingFrequency(Number(e.target.value))}
             fullWidth

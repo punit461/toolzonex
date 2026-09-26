@@ -41,7 +41,7 @@ const BcryptHashGeneratorContent = () => {
         <Typography variant="body2" gutterBottom>
           Cost / Salt Rounds: {rounds} {rounds >= 12 && '(this will be noticeably slow — that is expected)'}
         </Typography>
-        <Slider
+        <Slider aria-label="Cost / Salt Rounds"
           value={rounds}
           onChange={(_, v) => setRounds(v as number)}
           min={4}
@@ -60,7 +60,7 @@ const BcryptHashGeneratorContent = () => {
         <Button variant="contained" onClick={generate} disabled={loading || !input}>
           {loading ? 'Computing…' : 'Generate Hash'}
         </Button>
-        {loading && <CircularProgress size={24} />}
+        {loading && <CircularProgress aria-label="Loading" size={24} />}
       </Stack>
 
       <Box>

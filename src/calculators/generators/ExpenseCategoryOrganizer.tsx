@@ -73,7 +73,7 @@ const ExpenseCategoryOrganizerContent = () => {
             <Paper key={e.id} variant="outlined" sx={{ p: 2 }}>
               <Box sx={{ display: 'flex', gap: 1, mb: 1, alignItems: 'center' }}>
                 <TextField size="small" fullWidth label="Description" value={e.description} onChange={(ev) => updateExpense(e.id, { description: ev.target.value })} />
-                <IconButton onClick={() => removeExpense(e.id)} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeExpense(e.id)} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

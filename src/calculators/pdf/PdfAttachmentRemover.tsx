@@ -79,7 +79,7 @@ const PdfAttachmentRemoverContent = () => {
       )}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleRemove} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Processing...</> : 'Remove Attachments'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Processing...</> : 'Remove Attachments'}
       </Button>
     </Box>
   );

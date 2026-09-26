@@ -73,7 +73,7 @@ export function ActiveSession({
           }`}
           aria-hidden="true"
         />
-        <CircularProgress
+        <CircularProgress aria-label="Loading"
           progress={progress}
           size={300}
           strokeWidth={16}

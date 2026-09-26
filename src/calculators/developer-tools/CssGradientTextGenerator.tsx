@@ -32,7 +32,7 @@ const CssGradientTextGeneratorContent = () => {
         </Box>
         <Box>
           <Typography variant="subtitle2" mb={1}>Angle: {angle}°</Typography>
-          <Slider value={angle} min={0} max={360} onChange={(_, v) => setAngle(v as number)} />
+          <Slider aria-label={`Angle: ${angle}°`} value={angle} min={0} max={360} onChange={(_, v) => setAngle(v as number)} />
         </Box>
         <input
           value={text}

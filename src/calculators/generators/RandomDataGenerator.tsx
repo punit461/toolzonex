@@ -105,7 +105,7 @@ const RandomDataGeneratorContent = () => {
           )}
         </Box>
         
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Generated Profiles' } }}
           value={data.join('\n')}
           multiline
           rows={14}

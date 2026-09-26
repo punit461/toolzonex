@@ -100,10 +100,10 @@ const URLExtractorContent = () => {
                   }}
                   secondaryAction={
                     <Box>
-                      <IconButton onClick={() => copyURL(url)} size="small">
+                      <IconButton aria-label="Copy" onClick={() => copyURL(url)} size="small">
                         <ContentCopyIcon fontSize="small" />
                       </IconButton>
-                      <IconButton 
+                      <IconButton aria-label="Open in new tab" 
                         component="a" 
                         href={url} 
                         target="_blank" 

@@ -145,7 +145,7 @@ const LuggageWeightCalculator = () => {
                   onChange={(e) => updateBag(b.id, 'weight', e.target.value)}
                 />
                 {b.pass ? <CheckCircleIcon color="success" fontSize="small" /> : <CancelIcon color="error" fontSize="small" />}
-                <IconButton color="error" size="small" onClick={() => removeBag(b.id)} disabled={bags.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeBag(b.id)} disabled={bags.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

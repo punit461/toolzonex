@@ -104,7 +104,7 @@ const BatteryBackupCalculator = () => {
             {result.barData.map((d, i) => (
               <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                 <Typography variant="body2" sx={{ minWidth: 60, textAlign: 'right' }}>{d.hour}h</Typography>
-                <LinearProgress variant="determinate" value={d.remaining} sx={{ flex: 1, height: 16, borderRadius: 1, '& .MuiLinearProgress-bar': { bgcolor: d.remaining > 50 ? 'success.main' : d.remaining > 20 ? 'warning.main' : 'error.main' } }} />
+                <LinearProgress aria-label="Progress" variant="determinate" value={d.remaining} sx={{ flex: 1, height: 16, borderRadius: 1, '& .MuiLinearProgress-bar': { bgcolor: d.remaining > 50 ? 'success.main' : d.remaining > 20 ? 'warning.main' : 'error.main' } }} />
                 <Typography variant="body2" sx={{ minWidth: 40 }}>{Math.round(d.remaining)}%</Typography>
               </Box>
             ))}

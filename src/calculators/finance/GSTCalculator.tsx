@@ -125,7 +125,7 @@ const GSTCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(amount) ? '' : amount}
               onChange={(e) => setAmount(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Amount (₹)' },
                 input: {
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
                 }

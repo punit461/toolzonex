@@ -33,7 +33,7 @@ const Base64DecoderContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Base64 Input:</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Base64 Input' } }}
           multiline
           rows={12}
           fullWidth
@@ -51,7 +51,7 @@ const Base64DecoderContent = () => {
             {copied ? 'Copied!' : 'Copy'}
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Decoded Text' } }}
           multiline
           rows={12}
           fullWidth

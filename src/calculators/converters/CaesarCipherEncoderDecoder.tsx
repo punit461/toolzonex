@@ -51,7 +51,7 @@ const CaesarCipherEncoderDecoderContent = () => {
 
         <Box sx={{ minWidth: 260, flexGrow: 1, maxWidth: 400 }}>
           <Typography variant="body2" gutterBottom>Shift Amount: {shift}</Typography>
-          <Slider
+          <Slider aria-label={`Shift Amount: ${shift}`}
             value={shift}
             onChange={(_, v) => setShift(v as number)}
             min={1}
@@ -78,7 +78,7 @@ const CaesarCipherEncoderDecoderContent = () => {
             <Typography variant="subtitle1" fontWeight={600}>{mode === 'encode' ? 'Ciphertext' : 'Plain Text'}</Typography>
             <Button size="small" startIcon={<ContentCopyIcon />} onClick={copy} disabled={!output}>Copy</Button>
           </Box>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': mode === 'encode' ? 'Ciphertext' : 'Plain Text' } }}
             multiline
             rows={8}
             fullWidth

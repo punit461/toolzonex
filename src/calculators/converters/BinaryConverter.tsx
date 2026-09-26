@@ -68,7 +68,7 @@ const BinaryConverterContent = () => {
         <Typography variant="subtitle1" fontWeight="600">
           {mode === 'encode' ? 'Plain Text Input:' : 'Binary Input (Space-separated):'}
         </Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': mode === 'encode' ? 'Plain Text Input' : 'Binary Input (Space-separated)' } }}
           multiline
           rows={10}
           fullWidth
@@ -100,7 +100,7 @@ const BinaryConverterContent = () => {
             Copy
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': mode === 'encode' ? 'Binary Output' : 'Plain Text Output' } }}
           multiline
           rows={10}
           fullWidth

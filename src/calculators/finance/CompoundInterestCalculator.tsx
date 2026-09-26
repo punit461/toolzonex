@@ -108,7 +108,7 @@ const CompoundInterestCalculator = () => {
           <Box sx={{ mb: 4 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Typography gutterBottom>Principal Amount</Typography>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Currency' }}
                 size="small"
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -126,13 +126,13 @@ const CompoundInterestCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(principal) ? '' : principal}
               onChange={(e) => setPrincipal(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Principal Amount' },
                 input: {
                   startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Principal Amount"
               value={Number.isNaN(principal) ? 0 : principal}
               min={1000}
               max={5000000}
@@ -151,13 +151,13 @@ const CompoundInterestCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(rate) ? '' : rate}
               onChange={(e) => setRate(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Annual Interest Rate (%)' },
                 input: {
                   endAdornment: <InputAdornment position="end">%</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Annual Interest Rate (%)"
               value={Number.isNaN(rate) ? 0 : rate}
               min={1}
               max={30}
@@ -176,13 +176,13 @@ const CompoundInterestCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(years) ? '' : years}
               onChange={(e) => setYears(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Time Period (Years)' },
                 input: {
                   endAdornment: <InputAdornment position="end">Yr</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Time Period (Years)"
               value={Number.isNaN(years) ? 0 : years}
               min={1}
               max={40}
@@ -194,7 +194,7 @@ const CompoundInterestCalculator = () => {
 
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom>Compounding Frequency</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Compounding Frequency' }}
               fullWidth
               value={frequency}
               onChange={(e) => setFrequency(Number(e.target.value))}

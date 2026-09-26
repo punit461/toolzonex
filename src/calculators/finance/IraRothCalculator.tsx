@@ -133,14 +133,14 @@ const IraRothCalculator = () => {
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mb: 3 }}>
             <Box>
               <Typography gutterBottom>Your Age</Typography>
-              <TextField
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Your Age' } }}
                 fullWidth type="number" value={age} onFocus={(e) => e.target.select()}
                 onChange={(e) => setAge(e.target.value === '' ? 0 : Number(e.target.value))}
               />
             </Box>
             <Box>
               <Typography gutterBottom>Filing Status</Typography>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Filing Status' }}
                 fullWidth value={filingStatus}
                 onChange={(e) => setFilingStatus(e.target.value as FilingStatus)}
               >
@@ -157,7 +157,7 @@ const IraRothCalculator = () => {
             <TextField
               fullWidth type="number" value={magi} onFocus={(e) => e.target.select()}
               onChange={(e) => setMagi(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Modified AGI (MAGI)' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
             />
           </Box>
 

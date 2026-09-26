@@ -68,7 +68,7 @@ const ZalgoTextGeneratorContent = () => {
 
       <Box>
         <Typography variant="subtitle2" color="text.secondary" mb={1}>Intensity: {INTENSITY_LABELS[intensity]}</Typography>
-        <Slider
+        <Slider aria-label={`Intensity: ${INTENSITY_LABELS[intensity]}`}
           value={intensity}
           min={1}
           max={3}

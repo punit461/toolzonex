@@ -126,7 +126,7 @@ function captionSearch(elPath, src) {
 }
 
 // Inline sentence fragments ("What is [x] % of [y]") and symbols aren't names.
-const NOT_A_CAPTION = /^(?:[^A-Za-z0-9]*|to|of|is|and|or|by|from|x|vs\.?|% of|is what % of|what is)$/i;
+const NOT_A_CAPTION = /^(?:[^A-Za-z0-9]*|of|is|and|or|by|x|vs\.?|% of|is what % of|what is)$/i;
 
 /**
  * Mixed text + simple expressions ("{regionConfig.taxLabel} (%)", "Weight in {unit}")
@@ -146,7 +146,14 @@ function templateCaption(kids, src) {
     return undefined;
   }
   if (!dynamic) return undefined;
-  if (!/[A-Za-z]{2,}/.test(words)) return null;
+  if (!/[A-Za-z]{2,}/.test(words)) {
+    // "{s.label}: {value}{unit}" -- the leading expression is the name.
+    const first = kids[0];
+    if (first.type === 'JSXExpressionContainer' && ['Identifier', 'MemberExpression'].includes(first.expression.type)) {
+      return { expr: src.slice(first.expression.start, first.expression.end) };
+    }
+    return null;
+  }
   const body = parts.join('').trim().replace(/[:：]\s*$/, '').trim();
   return { expr: '`' + body + '`' };
 }
@@ -162,6 +169,12 @@ function captionFrom(el, src) {
     if (kids.length === 1 && kids[0].type === 'JSXExpressionContainer' &&
         ['Identifier', 'MemberExpression'].includes(kids[0].expression.type)) {
       return { expr: src.slice(kids[0].expression.start, kids[0].expression.end) };
+    }
+    // {mode === 'encode' ? 'Plain Text Input:' : 'Base64 Input:'}
+    const only = kids.length === 1 && kids[0].type === 'JSXExpressionContainer' ? kids[0].expression : null;
+    if (only?.type === 'ConditionalExpression' && only.consequent.type === 'StringLiteral' && only.alternate.type === 'StringLiteral') {
+      const clean = (v) => jsString(v.replace(/[:：]\s*$/, '').trim());
+      return { expr: `${src.slice(only.test.start, only.test.end)} ? ${clean(only.consequent.value)} : ${clean(only.alternate.value)}` };
     }
     const tpl = templateCaption(kids, src);
     if (tpl !== undefined) return tpl; // null = has a dynamic part but no words: not a caption
@@ -216,11 +229,15 @@ function proposeControlLabel(elPath, src, rel) {
     }
   }
   const cap = captionSearch(elPath, src);
-  if (cap?.expr && attr(el, 'placeholder')) return { label: null, how: 'placeholder-only' }; // dynamic prose above a search box isn't its label
+  // A bare {variable} above a field that has its own placeholder is usually prose
+  // (a page intro above a search box), not the field's caption.
+  if (cap?.expr && /^[\w.]+$/.test(cap.expr) && attr(el, 'placeholder')) return { label: null, how: 'placeholder-only' };
   if (cap) {
     if (cap.expr) return { expr: cap.expr, how: cap.how };
     const isUnitPicker = (t === 'Select' || attr(el, 'select')) && valueId && /unit$/i.test(valueId) && !/\bunit\b/i.test(cap.text);
-    return { label: isUnitPicker ? `${cap.text} unit` : cap.text, how: cap.how };
+    if (isUnitPicker) return { label: `${cap.text} unit`, how: cap.how };
+    if (/^(from|to)$/i.test(cap.text)) return { label: `${cap.text} value`, how: cap.how };
+    return { label: cap.text, how: cap.how };
   }
   const ph = attr(el, 'placeholder');
   if (ph?.value?.type === 'StringLiteral' && ph.value.value.trim()) return { label: null, how: 'placeholder-only' };
@@ -268,6 +285,17 @@ const OVERRIDES = {
   'src/calculators/health/ChildHeightPredictorCalculator.tsx:161': { label: 'Father’s height (feet)' },
   'src/calculators/health/ChildHeightPredictorCalculator.tsx:162': { label: 'Father’s height (inches)' },
   'src/components/CategoryDashboard.tsx:63': { label: 'Search tools' },
+  'src/app/page.tsx:87': { label: 'Search tools' },
+  'src/calculators/finance/CostPerLeadCalculator.tsx:162': { label: 'Spend' },
+  'src/calculators/finance/CostPerLeadCalculator.tsx:172': { label: 'Leads' },
+  'src/calculators/generators/DailyPlannerGenerator.tsx:122': { expr: '`Plan for ${formatHour(h)}`' },
+  'src/calculators/pdf/OcrPdf.tsx:128': { label: 'Extracted text' },
+  'src/calculators/converters/HexToHsvConverter.tsx:70': { label: 'HSV value' },
+  'src/calculators/pdf/PdfToText.tsx:85': { label: 'Extracted text' },
+  // Icon-only buttons whose icon alone doesn't say what they do.
+  'src/calculators/tools/OnlineImageEditor.tsx:237': { label: 'Reset filters' },
+  'src/calculators/utilities/AlphabetLearningTool.tsx:114': { label: 'Play sound' },
+  'src/calculators/utilities/WaterDrinkingTracker.tsx:70': { label: 'Remove a glass' },
 };
 
 function proposeIconLabel(elPath) {
@@ -281,7 +309,7 @@ const jsxString = (s) => (/["{}<>&\\]/.test(s) ? `{${JSON.stringify(s)}}` : `"${
 const jsString = (s) => `'${s.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`;
 
 /** Returns [offset, text] insertions that give `el` the aria-label in `name` ({ label } or { expr }). */
-function edits(el, name, src) {
+function edits(el, name) {
   const t = tagName(el);
   const afterName = el.openingElement.name.end;
   const jsxVal = name.expr ? `{${name.expr}}` : jsxString(name.label);
@@ -326,7 +354,7 @@ let unresolved = 0;
 
 for (const file of listFiles(ROOT)) {
   const src = fs.readFileSync(file, 'utf8');
-  if (!/TextField|Select|Slider|IconButton/.test(src)) continue;
+  if (!/TextField|Select|Slider|IconButton|Progress/.test(src)) continue;
   let ast;
   try {
     ast = parse(src, { sourceType: 'module', plugins: ['typescript', 'jsx'] });
@@ -345,10 +373,19 @@ for (const file of listFiles(ROOT)) {
         if (hasName(el, src)) return;
         const inTooltip = p.findParent((pp) => pp.isJSXElement() && tagName(pp.node) === 'Tooltip');
         if (inTooltip) return; // MUI Tooltip names its child from `title`
-        const prop = proposeIconLabel(p);
+        const ov = OVERRIDES[`${rel}:${line}`];
+        const prop = ov ? { ...ov, how: 'override' } : proposeIconLabel(p);
         if (!prop) { unresolved++; report.push(`UNRESOLVED ${rel}:${line} IconButton`); return; }
         report.push(`${rel}:${line} IconButton -> "${prop.label}" [${prop.how}]`);
-        ins.push(...edits(el, { label: prop.label }, src));
+        ins.push(...edits(el, prop));
+        return;
+      }
+      if (t === 'LinearProgress' || t === 'CircularProgress') {
+        if (hasName(el, src)) return;
+        const determinate = attr(el, 'variant')?.value?.value === 'determinate';
+        const label = determinate ? 'Progress' : 'Loading';
+        report.push(`${rel}:${line} ${t} -> "${label}" [progress]`);
+        ins.push([el.openingElement.name.end, ` aria-label="${label}"`]);
         return;
       }
       if (!CONTROLS.has(t) || hasName(el, src)) return;
@@ -357,7 +394,7 @@ for (const file of listFiles(ROOT)) {
         if (prop.how !== 'placeholder-only') { unresolved++; report.push(`UNRESOLVED ${rel}:${line} ${t} [${prop.how}]`); }
         return;
       }
-      const e = edits(el, prop, src);
+      const e = edits(el, prop);
       if (!e) { unresolved++; report.push(`UNRESOLVED ${rel}:${line} ${t} [non-literal props]`); return; }
       report.push(`${rel}:${line} ${t} -> ${prop.expr ? `{${prop.expr}}` : `"${prop.label}"`} [${prop.how}]`);
       ins.push(...e);

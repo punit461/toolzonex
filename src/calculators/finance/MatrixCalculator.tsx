@@ -216,7 +216,7 @@ const MatrixCalculator = () => {
             >
               {A.map((row, i) =>
                 row.map((cell, j) => (
-                  <TextField
+                  <TextField slotProps={{ htmlInput: { 'aria-label': `Matrix A, row ${i + 1}, column ${j + 1}` } }}
                     key={`a-${i}-${j}`}
                     size="small"
                     type="number"
@@ -243,7 +243,7 @@ const MatrixCalculator = () => {
               >
                 {B.map((row, i) =>
                   row.map((cell, j) => (
-                    <TextField
+                    <TextField slotProps={{ htmlInput: { 'aria-label': `Matrix B, row ${i + 1}, column ${j + 1}` } }}
                       key={`b-${i}-${j}`}
                       size="small"
                       type="number"

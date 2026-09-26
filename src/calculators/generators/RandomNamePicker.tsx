@@ -39,7 +39,7 @@ const RandomNamePickerContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box>
           <Typography variant="subtitle2" mb={1} color="text.secondary">Enter names (one per line):</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Enter names (one per line)' } }}
             multiline
             rows={8}
             value={namesText}
@@ -80,7 +80,7 @@ const RandomNamePickerContent = () => {
               <Typography variant="h5" fontWeight="bold" sx={{ opacity: 0.9 }}>
                 Picked ({pickedNames.length})
               </Typography>
-              <IconButton size="small" onClick={copyResults} sx={{ color: 'white' }}><ContentCopyIcon fontSize="small" /></IconButton>
+              <IconButton aria-label="Copy" size="small" onClick={copyResults} sx={{ color: 'white' }}><ContentCopyIcon fontSize="small" /></IconButton>
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               {pickedNames.map((name, idx) => (

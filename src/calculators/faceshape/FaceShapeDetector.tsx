@@ -64,7 +64,7 @@ const FaceShapeDetectorContent = () => {
         )}
         {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
         <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleDetect} disabled={busy || !file}>
-          {busy ? <CircularProgress size={24} color="inherit" /> : 'Detect Face Shape'}
+          {busy ? <CircularProgress aria-label="Loading" size={24} color="inherit" /> : 'Detect Face Shape'}
         </Button>
         <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 1 }}>
           Your photo is analyzed entirely in your browser and is never uploaded anywhere.

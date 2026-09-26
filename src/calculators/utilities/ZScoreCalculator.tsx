@@ -145,7 +145,7 @@ const ZScoreCalculator = () => {
               <Typography variant="body2" color="text.secondary" gutterBottom>
                 Percentile: {pct(percentile)}th
               </Typography>
-              <Slider
+              <Slider aria-label="Percentile"
                 value={percentile}
                 min={0}
                 max={100}

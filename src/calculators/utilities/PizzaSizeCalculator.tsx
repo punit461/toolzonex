@@ -124,7 +124,7 @@ const PizzaSizeCalculator = () => {
                       value={r.diameter}
                       onChange={(e) => updateRow(r.id, 'diameter', e.target.value)}
                       onFocus={(e) => e.target.select()}
-                      slotProps={{ input: { endAdornment: <InputAdornment position="end">in</InputAdornment> } }}
+                      slotProps={{ htmlInput: { 'aria-label': 'Diameter' }, input: { endAdornment: <InputAdornment position="end">in</InputAdornment> } }}
                     />
                   </TableCell>
                   <TableCell>
@@ -134,7 +134,7 @@ const PizzaSizeCalculator = () => {
                       value={r.price}
                       onChange={(e) => updateRow(r.id, 'price', e.target.value)}
                       onFocus={(e) => e.target.select()}
-                      slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+                      slotProps={{ htmlInput: { 'aria-label': 'Price' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
                     />
                   </TableCell>
                   <TableCell align="right">{r.area > 0 ? r.area.toFixed(1) : '—'}</TableCell>

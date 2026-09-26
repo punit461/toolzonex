@@ -70,7 +70,7 @@ const BurnRateCalculatorContent = () => {
                 value={Number.isNaN(m.amount) ? '' : m.amount}
                 onChange={(e) => updateMonth(m.id, 'amount', e.target.value === '' ? NaN : Number(e.target.value))}
               />
-              <IconButton color="error" size="small" onClick={() => removeMonth(m.id)} disabled={months.length <= 1}>
+              <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeMonth(m.id)} disabled={months.length <= 1}>
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Stack>

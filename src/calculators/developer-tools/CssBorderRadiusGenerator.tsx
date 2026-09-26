@@ -42,25 +42,25 @@ const CssBorderRadiusGeneratorContent = () => {
         {uniform ? (
           <Box>
             <Typography variant="subtitle2" mb={1}>All Corners: {topLeft}px</Typography>
-            <Slider value={topLeft} min={0} max={200} onChange={(_e, val) => setAll(val as number)} />
+            <Slider aria-label={`All Corners: ${topLeft}px`} value={topLeft} min={0} max={200} onChange={(_e, val) => setAll(val as number)} />
           </Box>
         ) : (
           <>
             <Box>
               <Typography variant="subtitle2" mb={1}>Top-Left: {topLeft}px</Typography>
-              <Slider value={topLeft} min={0} max={200} onChange={(_e, val) => setTopLeft(val as number)} />
+              <Slider aria-label={`Top-Left: ${topLeft}px`} value={topLeft} min={0} max={200} onChange={(_e, val) => setTopLeft(val as number)} />
             </Box>
             <Box>
               <Typography variant="subtitle2" mb={1}>Top-Right: {topRight}px</Typography>
-              <Slider value={topRight} min={0} max={200} onChange={(_e, val) => setTopRight(val as number)} />
+              <Slider aria-label={`Top-Right: ${topRight}px`} value={topRight} min={0} max={200} onChange={(_e, val) => setTopRight(val as number)} />
             </Box>
             <Box>
               <Typography variant="subtitle2" mb={1}>Bottom-Right: {bottomRight}px</Typography>
-              <Slider value={bottomRight} min={0} max={200} onChange={(_e, val) => setBottomRight(val as number)} />
+              <Slider aria-label={`Bottom-Right: ${bottomRight}px`} value={bottomRight} min={0} max={200} onChange={(_e, val) => setBottomRight(val as number)} />
             </Box>
             <Box>
               <Typography variant="subtitle2" mb={1}>Bottom-Left: {bottomLeft}px</Typography>
-              <Slider value={bottomLeft} min={0} max={200} onChange={(_e, val) => setBottomLeft(val as number)} />
+              <Slider aria-label={`Bottom-Left: ${bottomLeft}px`} value={bottomLeft} min={0} max={200} onChange={(_e, val) => setBottomLeft(val as number)} />
             </Box>
           </>
         )}

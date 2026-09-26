@@ -70,7 +70,7 @@ const PregnancyDueDateContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
       <Box>
         <Typography gutterBottom>First day of your last menstrual period (LMP)</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'First day of your last menstrual period (LMP)' } }}
           fullWidth
           type="date"
           value={lmp}
