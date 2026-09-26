@@ -84,7 +84,7 @@ const HarmonicMeanCalculator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>
           <Typography gutterBottom>Numbers (comma, space, or line separated, all positive)</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Numbers (comma, space, or line separated, all positive)' } }}
             fullWidth
             multiline
             minRows={6}
@@ -99,7 +99,7 @@ const HarmonicMeanCalculator = () => {
 
         <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Harmonic Mean</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>
             {harmonicMean !== null ? harmonicMean.toFixed(4) : '—'}
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>Arithmetic Mean (for comparison)</Typography>

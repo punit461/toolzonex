@@ -114,7 +114,7 @@ const PetFoodCalculator = () => {
           <TextField label="Weight (lb)" type="number" fullWidth value={weight} onChange={(e) => setWeight(e.target.value)} onFocus={(e) => e.target.select()} />
           <FormControl fullWidth size="small">
             <InputLabel>Activity Level</InputLabel>
-            <Select label="Activity Level" value={activity} onChange={(e) => setActivity(e.target.value as Activity)}>
+            <Select inputProps={{ 'aria-label': 'Activity Level' }} label="Activity Level" value={activity} onChange={(e) => setActivity(e.target.value as Activity)}>
               {(Object.keys(ACTIVITY_LABEL) as Activity[]).map((a) => (
                 <MenuItem key={a} value={a}>{ACTIVITY_LABEL[a]}</MenuItem>
               ))}
@@ -124,7 +124,7 @@ const PetFoodCalculator = () => {
 
         <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Recommended Daily Amount</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>
             {result ? `${result.amount} ${result.unit}` : '—'}
           </Typography>
           <Typography variant="caption" color="text.secondary">per day of dry food, split across meals</Typography>

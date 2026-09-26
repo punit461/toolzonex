@@ -66,7 +66,7 @@ const PdfToXmlContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleConvert} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Converting...</> : 'Convert to XML'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Converting...</> : 'Convert to XML'}
       </Button>
 
       {xml !== null && (
@@ -77,7 +77,7 @@ const PdfToXmlContent = () => {
             minRows={10}
             maxRows={20}
             value={xml}
-            slotProps={{ input: { readOnly: true } }}
+            slotProps={{ htmlInput: { 'aria-label': 'XML output' }, input: { readOnly: true } }}
             sx={{ '& .MuiInputBase-root': { fontFamily: 'monospace', fontSize: '0.8rem' } }}
           />
           <Box sx={{ display: 'flex', gap: 2, mt: 2, flexWrap: 'wrap' }}>

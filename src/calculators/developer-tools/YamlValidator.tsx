@@ -146,7 +146,7 @@ const YamlValidator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 2, minHeight: 400 }}>
         <Box>
           <Typography variant="subtitle1" fontWeight="600" gutterBottom>YAML Input</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'YAML Input' } }}
             multiline
             rows={16}
             fullWidth

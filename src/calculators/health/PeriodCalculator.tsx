@@ -92,7 +92,7 @@ const PeriodCalculatorContent = () => {
       <Box>
         <Box sx={{ mb: 4 }}>
           <Typography gutterBottom>First day of your last period</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'First day of your last period' } }}
             fullWidth
             type="date"
             value={lastPeriod}
@@ -108,7 +108,7 @@ const PeriodCalculatorContent = () => {
               type="number"
               value={Number.isNaN(cycleLength) ? '' : cycleLength}
               onChange={(e) => setCycleLength(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">days</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Average cycle length' }, input: { endAdornment: <InputAdornment position="end">days</InputAdornment> } }}
             />
           </Box>
           <Box>
@@ -118,7 +118,7 @@ const PeriodCalculatorContent = () => {
               type="number"
               value={Number.isNaN(periodLength) ? '' : periodLength}
               onChange={(e) => setPeriodLength(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">days</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Period length' }, input: { endAdornment: <InputAdornment position="end">days</InputAdornment> } }}
             />
           </Box>
         </Box>

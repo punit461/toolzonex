@@ -48,7 +48,7 @@ export function SessionSummary({
       </div>
 
       <div className="flex flex-col items-center gap-3">
-        <CircularProgress progress={score / 100} size={180} strokeWidth={12} colorClassName={toneClasses.stroke}>
+        <CircularProgress aria-label="Loading" progress={score / 100} size={180} strokeWidth={12} colorClassName={toneClasses.stroke}>
           <span className={`text-4xl font-bold ${toneClasses.text}`}>{score}</span>
         </CircularProgress>
         <span className={`rounded-full px-3 py-1 text-sm font-semibold ${toneClasses.bg} ${toneClasses.text}`}>

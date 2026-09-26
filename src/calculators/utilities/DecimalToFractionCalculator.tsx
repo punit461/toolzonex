@@ -119,7 +119,7 @@ const DecimalToFractionCalculator = () => {
           {result ? (
             <>
               <Typography variant="body2" color="text.secondary" gutterBottom>Fraction</Typography>
-              <Typography variant="h3" fontWeight={800} color="primary.main" sx={{ fontFamily: 'monospace' }}>
+              <Typography component="p" variant="h3" fontWeight={800} color="primary.main" sx={{ fontFamily: 'monospace' }}>
                 {result.numerator}/{result.denominator}
               </Typography>
               <Typography variant="body2" color="text.secondary" mt={1}>

@@ -86,7 +86,7 @@ const DuplicateContactFinderContent = () => {
         <Typography variant="subtitle1" fontWeight={600} mb={1}>
           Paste contacts (one per line: Name, Phone, Email)
         </Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Paste contacts (one per line: Name, Phone, Email)' } }}
           value={text}
           onChange={(e) => setText(e.target.value)}
           fullWidth

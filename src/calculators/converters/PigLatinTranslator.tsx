@@ -73,7 +73,7 @@ const PigLatinTranslatorContent = () => {
           <Typography variant="subtitle1" fontWeight={600}>Pig Latin</Typography>
           <Button size="small" startIcon={<ContentCopyIcon />} onClick={copy} disabled={!output}>Copy</Button>
         </Stack>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Pig Latin' } }}
           multiline
           rows={8}
           fullWidth

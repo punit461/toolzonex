@@ -116,7 +116,7 @@ const StockAverageCalculator = () => {
         <Box>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
             <Typography variant="h6">Buy Transactions</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Currency' }}
               size="small"
               value={currency}
               onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -154,7 +154,7 @@ const StockAverageCalculator = () => {
                     }
                   }}
                 />
-                <IconButton color="error" size="small" onClick={() => removeTrade(trade.id)} disabled={trades.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeTrade(trade.id)} disabled={trades.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>
@@ -169,7 +169,7 @@ const StockAverageCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Average Price / Share</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               {formatMoney(averagePrice, currency)}
             </Typography>
 

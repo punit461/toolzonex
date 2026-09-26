@@ -126,7 +126,7 @@ const RatioCalculator = () => {
           </Box>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center' }}>
             <Typography variant="h6" color="text.secondary">Simplified Ratio</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main' }}>
               {simplified.simpA} : {simplified.simpB}
             </Typography>
           </Box>

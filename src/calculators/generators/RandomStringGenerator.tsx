@@ -123,7 +123,7 @@ const RandomStringGeneratorContent = () => {
           </Button>
         </Box>
         
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Generated Strings' } }}
           value={strings.join('\n')}
           multiline
           rows={14}

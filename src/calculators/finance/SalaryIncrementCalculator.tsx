@@ -167,7 +167,7 @@ const SalaryIncrementCalculator = () => {
           <Box sx={{ mb: 4 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Typography gutterBottom>Current CTC (/ Year)</Typography>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Currency' }}
                 size="small"
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -185,13 +185,13 @@ const SalaryIncrementCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(currentCTC) ? '' : currentCTC}
               onChange={(e) => setCurrentCTC(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Current CTC (/ Year)' },
                 input: {
                   startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Current CTC (/ Year)"
               value={Number.isNaN(currentCTC) ? 0 : currentCTC}
               min={100000}
               max={10000000}
@@ -210,13 +210,13 @@ const SalaryIncrementCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(incrementPercent) ? '' : incrementPercent}
               onChange={(e) => setIncrementPercent(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Expected Increment (%)' },
                 input: {
                   endAdornment: <InputAdornment position="end">%</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Expected Increment (%)"
               value={Number.isNaN(incrementPercent) ? 0 : incrementPercent}
               min={0}
               max={100}
@@ -228,7 +228,7 @@ const SalaryIncrementCalculator = () => {
 
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom>Arrears (months)</Typography>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Arrears (months)' } }}
               fullWidth
               variant="outlined"
               type="number"
@@ -243,7 +243,7 @@ const SalaryIncrementCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">New CTC</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               {formatMoney(newCTC, currency)}
             </Typography>
 
@@ -267,7 +267,7 @@ const SalaryIncrementCalculator = () => {
               </Box>
             )}
 
-            <Box sx={{ height: 300 }}>
+            <Box aria-hidden="true" sx={{ height: 300 }}>
               {isClient && (
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>

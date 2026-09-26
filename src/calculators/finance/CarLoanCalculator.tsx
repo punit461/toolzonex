@@ -107,9 +107,9 @@ const CarLoanCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           {result ? (
             <Stack spacing={2}>
-              <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+              <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
                 <Typography variant="body2">Monthly Payment</Typography>
-                <Typography variant="h3" fontWeight="bold">{currency.format(result.monthlyPayment)}</Typography>
+                <Typography component="p" variant="h3" fontWeight="bold">{currency.format(result.monthlyPayment)}</Typography>
               </Paper>
               <Paper variant="outlined" sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
                 <Typography>Sales Tax</Typography>

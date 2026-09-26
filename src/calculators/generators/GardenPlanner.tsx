@@ -61,27 +61,27 @@ const GardenPlannerContent = () => {
             <Paper key={p.id} variant="outlined" sx={{ p: 2 }}>
               <Box sx={{ display: 'flex', gap: 1, mb: 1, alignItems: 'center' }}>
                 <TextField size="small" fullWidth label="Plant/crop name" value={p.name} onChange={(e) => updatePlant(p.id, { name: e.target.value })} />
-                <IconButton onClick={() => removePlant(p.id)} disabled={plants.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removePlant(p.id)} disabled={plants.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>
               <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
                 <FormControl size="small" fullWidth>
                   <InputLabel>Planting month</InputLabel>
-                  <Select label="Planting month" value={p.plantMonth} onChange={(e: SelectChangeEvent) => updatePlant(p.id, { plantMonth: e.target.value })}>
+                  <Select inputProps={{ 'aria-label': 'Planting month' }} label="Planting month" value={p.plantMonth} onChange={(e: SelectChangeEvent) => updatePlant(p.id, { plantMonth: e.target.value })}>
                     {MONTHS.map((m) => <MenuItem key={m} value={m}>{m}</MenuItem>)}
                   </Select>
                 </FormControl>
                 <FormControl size="small" fullWidth>
                   <InputLabel>Harvest month</InputLabel>
-                  <Select label="Harvest month" value={p.harvestMonth} onChange={(e: SelectChangeEvent) => updatePlant(p.id, { harvestMonth: e.target.value })}>
+                  <Select inputProps={{ 'aria-label': 'Harvest month' }} label="Harvest month" value={p.harvestMonth} onChange={(e: SelectChangeEvent) => updatePlant(p.id, { harvestMonth: e.target.value })}>
                     {MONTHS.map((m) => <MenuItem key={m} value={m}>{m}</MenuItem>)}
                   </Select>
                 </FormControl>
               </Stack>
               <FormControl size="small" fullWidth>
                 <InputLabel>Watering frequency</InputLabel>
-                <Select label="Watering frequency" value={p.watering} onChange={(e: SelectChangeEvent) => updatePlant(p.id, { watering: e.target.value })}>
+                <Select inputProps={{ 'aria-label': 'Watering frequency' }} label="Watering frequency" value={p.watering} onChange={(e: SelectChangeEvent) => updatePlant(p.id, { watering: e.target.value })}>
                   {WATERING_OPTIONS.map((w) => <MenuItem key={w} value={w}>{w}</MenuItem>)}
                 </Select>
               </FormControl>

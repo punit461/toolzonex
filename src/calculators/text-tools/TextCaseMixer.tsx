@@ -54,7 +54,7 @@ const TextCaseMixerContent = () => {
         <Box sx={{ mb: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Mixing Mode</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Mixing Mode' }}
               value={mode}
               label="Mixing Mode"
               onChange={(e) => setMode(e.target.value)}
@@ -81,7 +81,7 @@ const TextCaseMixerContent = () => {
              </Button>
           )}
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Result' } }}
           value={result}
           multiline
           rows={10}

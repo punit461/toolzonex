@@ -6,6 +6,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 interface GradientPreset {
   name: string;
   tags: string[];
@@ -76,7 +77,7 @@ const GradientLibraryContent = () => {
         {filtered.map((g) => (
           <Paper key={g.name} variant="outlined" sx={{ overflow: 'hidden' }}>
             <Tooltip title="Click to copy CSS" arrow>
-              <Box
+              <Box {...keyboardClickable} aria-label={`Copy ${g.name} CSS`}
                 onClick={() => handleCopy(g)}
                 sx={{ height: 110, background: gradientCss(g), cursor: 'pointer' }}
               />
@@ -88,7 +89,7 @@ const GradientLibraryContent = () => {
                   {copied === g.name ? 'CSS copied!' : g.tags.join(' · ')}
                 </Typography>
               </Box>
-              <IconButton size="small" onClick={() => handleCopy(g)}>
+              <IconButton aria-label="Copy" size="small" onClick={() => handleCopy(g)}>
                 <ContentCopyIcon fontSize="small" />
               </IconButton>
             </Box>

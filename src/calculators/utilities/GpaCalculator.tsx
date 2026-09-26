@@ -135,7 +135,7 @@ const GpaCalculator = () => {
                   value={Number.isNaN(course.credits) ? '' : course.credits}
                   onChange={(e) => updateCourse(course.id, 'credits', e.target.value === '' ? NaN : Number(e.target.value))}
                 />
-                <Select
+                <Select inputProps={{ 'aria-label': 'Grade' }}
                   size="small"
                   value={course.grade}
                   onChange={(e) => updateCourse(course.id, 'grade', e.target.value)}
@@ -145,7 +145,7 @@ const GpaCalculator = () => {
                     <MenuItem key={g} value={g}>{g}</MenuItem>
                   ))}
                 </Select>
-                <IconButton color="error" size="small" onClick={() => removeCourse(course.id)} disabled={courses.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeCourse(course.id)} disabled={courses.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>
@@ -160,7 +160,7 @@ const GpaCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Your GPA</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               {gpa.toFixed(2)} <span style={{ fontSize: '1.2rem', fontWeight: 500 }}>/ 4.0</span>
             </Typography>
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>

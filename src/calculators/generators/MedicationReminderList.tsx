@@ -68,7 +68,7 @@ const MedicationReminderListContent = () => {
                   onChange={(e) => updateMed(m.id, { dosage: e.target.value })}
                   sx={{ flex: 1, minWidth: 100 }}
                 />
-                <IconButton onClick={() => removeMed(m.id)} disabled={meds.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeMed(m.id)} disabled={meds.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

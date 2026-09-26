@@ -145,7 +145,7 @@ const ZScoreCalculator = () => {
               <Typography variant="body2" color="text.secondary" gutterBottom>
                 Percentile: {pct(percentile)}th
               </Typography>
-              <Slider
+              <Slider aria-label="Percentile"
                 value={percentile}
                 min={0}
                 max={100}
@@ -168,7 +168,7 @@ const ZScoreCalculator = () => {
               <>
                 <Box sx={{ textAlign: 'center', mb: 3 }}>
                   <Typography variant="h6" color="text.secondary" gutterBottom>Z-Score</Typography>
-                  <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main' }}>
+                  <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main' }}>
                     {fmt(zScore)}
                   </Typography>
                 </Box>

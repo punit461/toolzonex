@@ -112,7 +112,7 @@ const PrimeFactorizationCalculator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>
           <Typography gutterBottom>Enter a number (≥ 2)</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Enter a number (≥ 2)' } }}
             fullWidth
             type="number"
             value={input}
@@ -148,7 +148,7 @@ const PrimeFactorizationCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Prime Factorization</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', wordBreak: 'break-word' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main', wordBreak: 'break-word' }}>
               {number >= 2 ? formatted : '—'}
             </Typography>
             {number >= 2 && (

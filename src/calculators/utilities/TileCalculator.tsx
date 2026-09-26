@@ -126,7 +126,7 @@ const TileCalculator = () => {
           </Box>
           <Box textAlign="center">
             <Typography variant="body2" color="text.secondary">Tiles Needed (with waste)</Typography>
-            <Typography variant="h3" color="primary" fontWeight={800}>
+            <Typography component="p" variant="h3" color="primary" fontWeight={800}>
               {Math.ceil(tilesWithWaste)}
             </Typography>
             <Typography variant="caption" color="text.secondary">{Math.ceil(tilesNeeded)} tiles without waste allowance</Typography>

@@ -65,7 +65,7 @@ const EmojiTextConverterContent = () => {
             {copied ? 'Copied!' : 'Copy'}
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Result' } }}
           value={output}
           multiline
           rows={6}

@@ -56,7 +56,7 @@ const HexToHsvContent = () => {
           error={!rgb}
           helperText={!rgb ? 'Enter a valid 6-digit hex code, like #2196F3' : ' '}
         />
-        <input
+        <input aria-label="Pick a color"
           type="color"
           value={rgb ? hex.startsWith('#') ? hex : `#${hex}` : '#2196F3'}
           onChange={(e) => setHex(e.target.value)}
@@ -67,7 +67,7 @@ const HexToHsvContent = () => {
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 3 }}>
         {hsv ? (
           <>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'HSV value' } }}
               value={`hsv(${hsv.h}, ${hsv.s}%, ${hsv.v}%)`}
               InputProps={{ readOnly: true, sx: { fontFamily: 'monospace', fontSize: '1.1rem', fontWeight: 'bold' } }}
               fullWidth

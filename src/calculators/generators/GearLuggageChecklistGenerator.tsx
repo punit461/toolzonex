@@ -86,7 +86,7 @@ const GearLuggageChecklistGeneratorContent = () => {
       <Box>
         <FormControl size="small" sx={{ minWidth: 220, mb: 2 }}>
           <InputLabel>Category</InputLabel>
-          <Select label="Category" value={category} onChange={handleCategoryChange}>
+          <Select inputProps={{ 'aria-label': 'Category' }} label="Category" value={category} onChange={handleCategoryChange}>
             {CATEGORIES.map((cat) => (
               <MenuItem key={cat} value={cat}>{cat}</MenuItem>
             ))}
@@ -100,7 +100,7 @@ const GearLuggageChecklistGeneratorContent = () => {
                 <Paper key={i.id} variant="outlined" sx={{ p: 2 }}>
                   <Box sx={{ display: 'flex', gap: 1, mb: 1, alignItems: 'center' }}>
                     <TextField size="small" fullWidth label="Bag name" value={i.bagName} onChange={(e) => updateLuggageItem(i.id, { bagName: e.target.value })} />
-                    <IconButton onClick={() => removeLuggageItem(i.id)} size="small">
+                    <IconButton aria-label="Remove" onClick={() => removeLuggageItem(i.id)} size="small">
                       <DeleteIcon fontSize="small" />
                     </IconButton>
                   </Box>

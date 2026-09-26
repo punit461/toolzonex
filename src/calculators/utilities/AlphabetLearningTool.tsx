@@ -11,27 +11,27 @@ import AdSenseUnit from '../../components/AdSenseUnit';
 const ALPHABET = [
   { letter: 'A', word: 'Apple', emoji: '🍎', color: '#ef4444' },
   { letter: 'B', word: 'Bear', emoji: '🐻', color: '#8b5cf6' },
-  { letter: 'C', word: 'Cat', emoji: '🐱', color: '#f59e0b' },
-  { letter: 'D', word: 'Dog', emoji: '🐶', color: '#10b981' },
+  { letter: 'C', word: 'Cat', emoji: '🐱', color: '#c57f08' },
+  { letter: 'D', word: 'Dog', emoji: '🐶', color: '#0ea271' },
   { letter: 'E', word: 'Elephant', emoji: '🐘', color: '#64748b' },
-  { letter: 'F', word: 'Frog', emoji: '🐸', color: '#22c55e' },
-  { letter: 'G', word: 'Giraffe', emoji: '🦒', color: '#eab308' },
+  { letter: 'F', word: 'Frog', emoji: '🐸', color: '#1ca24d' },
+  { letter: 'G', word: 'Giraffe', emoji: '🦒', color: '#af8606' },
   { letter: 'H', word: 'Horse', emoji: '🐴', color: '#a16207' },
   { letter: 'I', word: 'Ice Cream', emoji: '🍦', color: '#ec4899' },
-  { letter: 'J', word: 'Jellyfish', emoji: '🪼', color: '#0ea5e9' },
+  { letter: 'J', word: 'Jellyfish', emoji: '🪼', color: '#0d97d6' },
   { letter: 'K', word: 'Kangaroo', emoji: '🦘', color: '#d97706' },
-  { letter: 'L', word: 'Lion', emoji: '🦁', color: '#f59e0b' },
+  { letter: 'L', word: 'Lion', emoji: '🦁', color: '#c57f08' },
   { letter: 'M', word: 'Monkey', emoji: '🐒', color: '#8b5cf6' },
   { letter: 'N', word: 'Nest', emoji: '🪹', color: '#64748b' },
   { letter: 'O', word: 'Owl', emoji: '🦉', color: '#78716c' },
   { letter: 'P', word: 'Penguin', emoji: '🐧', color: '#000000' },
   { letter: 'Q', word: 'Queen', emoji: '👸', color: '#ec4899' },
   { letter: 'R', word: 'Rabbit', emoji: '🐰', color: '#f43f5e' },
-  { letter: 'S', word: 'Sun', emoji: '☀️', color: '#eab308' },
-  { letter: 'T', word: 'Tiger', emoji: '🐯', color: '#f97316' },
+  { letter: 'S', word: 'Sun', emoji: '☀️', color: '#af8606' },
+  { letter: 'T', word: 'Tiger', emoji: '🐯', color: '#ea6406' },
   { letter: 'U', word: 'Umbrella', emoji: '☂️', color: '#3b82f6' },
   { letter: 'V', word: 'Volcano', emoji: '🌋', color: '#dc2626' },
-  { letter: 'W', word: 'Whale', emoji: '🐳', color: '#0ea5e9' },
+  { letter: 'W', word: 'Whale', emoji: '🐳', color: '#0d97d6' },
   { letter: 'X', word: 'Xylophone', emoji: '🎵', color: '#8b5cf6' },
   { letter: 'Y', word: 'Yacht', emoji: '⛵', color: '#3b82f6' },
   { letter: 'Z', word: 'Zebra', emoji: '🦓', color: '#171717' },
@@ -66,7 +66,7 @@ const AlphabetLearningToolContent = () => {
       
       {/* Main Card */}
       <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 1, md: 4 } }}>
-        <IconButton onClick={prevLetter} size="large" sx={{ bgcolor: 'grey.100' }}>
+        <IconButton aria-label="Previous" onClick={prevLetter} size="large" sx={{ bgcolor: 'action.hover' }}>
           <ArrowBackIosNewIcon />
         </IconButton>
 
@@ -88,7 +88,7 @@ const AlphabetLearningToolContent = () => {
           }}
         >
           {/* Top Left Letter */}
-          <Typography 
+          <Typography component="p" 
             variant="h2" 
             sx={{ position: 'absolute', top: 16, left: 24, fontWeight: 'bold', color: currentItem.color }}
           >
@@ -96,9 +96,9 @@ const AlphabetLearningToolContent = () => {
           </Typography>
           
           {/* Bottom Right Letter (Lowercase) */}
-          <Typography 
+          <Typography component="p" 
             variant="h3" 
-            sx={{ position: 'absolute', bottom: 16, right: 24, fontWeight: 'bold', color: currentItem.color, opacity: 0.5 }}
+            sx={{ position: 'absolute', bottom: 16, right: 24, fontWeight: 'bold', color: currentItem.color }}
           >
             {currentItem.letter.toLowerCase()}
           </Typography>
@@ -107,11 +107,11 @@ const AlphabetLearningToolContent = () => {
             {currentItem.emoji}
           </Typography>
 
-          <Typography variant="h3" sx={{ fontWeight: 'bold', color: 'text.primary', mt: 2 }}>
+          <Typography component="p" variant="h3" sx={{ fontWeight: 'bold', color: 'text.primary', mt: 2 }}>
             {currentItem.word}
           </Typography>
 
-          <IconButton 
+          <IconButton aria-label="Play sound" 
             onClick={playSound} 
             sx={{ 
               position: 'absolute', 
@@ -125,7 +125,7 @@ const AlphabetLearningToolContent = () => {
           </IconButton>
         </Paper>
 
-        <IconButton onClick={nextLetter} size="large" sx={{ bgcolor: 'grey.100' }}>
+        <IconButton aria-label="Next" onClick={nextLetter} size="large" sx={{ bgcolor: 'action.hover' }}>
           <ArrowForwardIosIcon />
         </IconButton>
       </Box>

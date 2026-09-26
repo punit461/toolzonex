@@ -119,7 +119,7 @@ const DailyPlannerGeneratorContent = () => {
                   <Typography variant="body2" sx={{ width: 90, flexShrink: 0, color: 'text.secondary' }}>
                     {formatHour(h)}
                   </Typography>
-                  <TextField
+                  <TextField slotProps={{ htmlInput: { 'aria-label': `Plan for ${formatHour(h)}` } }}
                     size="small"
                     fullWidth
                     value={schedule[h] || ''}

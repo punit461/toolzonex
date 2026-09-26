@@ -99,7 +99,7 @@ const OneRepMaxCalculator = () => {
           <Typography variant="subtitle1" fontWeight="600" mb={2}>
             Estimated 1RM
           </Typography>
-          <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="h6">Epley</Typography>
             <Typography variant="h6" fontWeight="bold">{epley.toFixed(1)} {unit}</Typography>
           </Paper>

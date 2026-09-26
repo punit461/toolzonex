@@ -61,7 +61,7 @@ const YesOrNoGeneratorContent = () => {
             transition: 'background-color 0.4s ease',
           }}
         >
-          <Typography variant="h2" fontWeight="bold" sx={{ letterSpacing: 4, textAlign: 'center' }}>
+          <Typography component="p" variant="h2" fontWeight="bold" sx={{ letterSpacing: 4, textAlign: 'center' }}>
             {result.toUpperCase()}
           </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 3 }}>

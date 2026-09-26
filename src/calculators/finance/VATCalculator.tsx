@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react';
 import {
   Box, TextField, Typography, MenuItem, Select, InputAdornment,
-  ToggleButtonGroup, ToggleButton,
+  ToggleButtonGroup, ToggleButton, Button,
 } from '@mui/material';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
@@ -190,13 +190,13 @@ const VATCalculator = () => {
               value={amount}
               onFocus={(e) => e.target.select()}
               onChange={(e) => setAmount(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">{selectedCountry.currencySymbol}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': mode === 'add' ? 'Net Amount (excl. VAT)' : 'Gross Amount (incl. VAT)' }, input: { startAdornment: <InputAdornment position="start">{selectedCountry.currencySymbol}</InputAdornment> } }}
             />
           </Box>
 
           <Box sx={{ mb: 3 }}>
             <Typography gutterBottom>Country</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Country' }}
               fullWidth
               value={countryCode}
               disabled={useCustomRate}
@@ -211,13 +211,16 @@ const VATCalculator = () => {
           </Box>
 
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            <Typography
-              variant="body2"
-              sx={{ cursor: 'pointer', color: useCustomRate ? 'primary.main' : 'text.secondary', fontWeight: 600 }}
+            {/* Was a clickable <p>, unreachable by keyboard. */}
+            <Button
+              size="small"
+              variant="text"
+              aria-pressed={useCustomRate}
               onClick={() => setUseCustomRate(!useCustomRate)}
+              sx={{ p: 0, minWidth: 0, fontWeight: 600, color: useCustomRate ? 'primary.main' : 'text.secondary' }}
             >
               {useCustomRate ? '✓ ' : ''}Use a custom rate instead
-            </Typography>
+            </Button>
             {useCustomRate && (
               <TextField
                 size="small"
@@ -225,7 +228,7 @@ const VATCalculator = () => {
                 value={customRate}
                 onFocus={(e) => e.target.select()}
                 onChange={(e) => setCustomRate(e.target.value === '' ? 0 : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Custom VAT rate (%)' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
                 sx={{ width: 100 }}
               />
             )}
@@ -237,7 +240,7 @@ const VATCalculator = () => {
             <Typography variant="h6" color="text.secondary">
               {mode === 'add' ? 'Gross Amount (incl. VAT)' : 'Net Amount (excl. VAT)'}
             </Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               {formatMoney(mode === 'add' ? grossAmount : netAmount, selectedCountry)}
             </Typography>
 

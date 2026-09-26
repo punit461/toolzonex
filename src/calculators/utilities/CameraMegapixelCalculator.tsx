@@ -124,9 +124,9 @@ const CameraMegapixelCalculator = () => {
           </Stack>
           <Box>
             <Typography variant="subtitle1" fontWeight={600} mb={2}>Result</Typography>
-            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="body2">Megapixels</Typography>
-              <Typography variant="h3" fontWeight="bold">{validDims ? megapixels.toFixed(2) : '—'}</Typography>
+              <Typography component="p" variant="h3" fontWeight="bold">{validDims ? megapixels.toFixed(2) : '—'}</Typography>
               <Typography variant="body2">MP</Typography>
             </Paper>
           </Box>
@@ -143,7 +143,7 @@ const CameraMegapixelCalculator = () => {
           </Stack>
           <Box>
             <Typography variant="subtitle1" fontWeight={600} mb={2}>Suggested Dimensions</Typography>
-            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="body2">Width × Height</Typography>
               <Typography variant="h4" fontWeight="bold">
                 {validTarget ? `${Math.round(suggestedWidth)} × ${Math.round(suggestedHeight)}` : '—'}

@@ -335,7 +335,7 @@ const LoremIpsumGeneratorContent = () => {
           />
           <FormControl fullWidth>
             <InputLabel>Type</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Type' }}
               value={type}
               label="Type"
               onChange={(e) => setType(e.target.value as 'paragraphs' | 'sentences' | 'words')}
@@ -351,7 +351,7 @@ const LoremIpsumGeneratorContent = () => {
           {type !== 'words' && (
             <FormControl fullWidth>
               <InputLabel>Length</InputLabel>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Length' }}
                 value={paragraphLength}
                 label="Length"
                 onChange={(e) => setParagraphLength(e.target.value as ParagraphLength)}
@@ -364,7 +364,7 @@ const LoremIpsumGeneratorContent = () => {
           )}
           <FormControl fullWidth>
             <InputLabel>Case</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Case' }}
               value={textCase}
               label="Case"
               onChange={(e) => setTextCase(e.target.value as TextCase)}
@@ -448,7 +448,8 @@ const LoremIpsumGeneratorContent = () => {
           </Box>
         </Box>
 
-        <Paper sx={{ p: 2, bgcolor: 'background.default', border: '1px solid', borderColor: 'divider', minHeight: 300, maxHeight: 600, overflow: 'auto' }}>
+        {/* Scrollable, so it must be focusable for keyboard users to scroll it (WCAG 2.1.1). */}
+        <Paper tabIndex={0} role="region" aria-label="Generated text" sx={{ p: 2, bgcolor: 'background.default', border: '1px solid', borderColor: 'divider', minHeight: 300, maxHeight: 600, overflow: 'auto' }}>
           {htmlResult ? (
             view === 'source' ? (
               <Box component="pre" sx={{ m: 0, whiteSpace: 'pre-wrap', fontFamily: 'monospace', fontSize: '0.85rem', color: 'text.secondary' }}>

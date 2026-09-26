@@ -123,7 +123,7 @@ const GoldRateCalculator = () => {
         <Box>
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom>Region</Typography>
-            <Select fullWidth value={region} onChange={(e) => handleRegionChange(e.target.value as Region)}>
+            <Select inputProps={{ 'aria-label': 'Region' }} fullWidth value={region} onChange={(e) => handleRegionChange(e.target.value as Region)}>
               {REGIONS.map((r) => (
                 <MenuItem key={r.value} value={r.value}>{r.label}</MenuItem>
               ))}
@@ -133,7 +133,7 @@ const GoldRateCalculator = () => {
           {region === 'custom' && (
             <Box sx={{ mb: 4 }}>
               <Typography gutterBottom>Currency</Typography>
-              <Select fullWidth value={customCurrency} onChange={(e) => setCustomCurrency(e.target.value as CurrencyCode)}>
+              <Select inputProps={{ 'aria-label': 'Currency' }} fullWidth value={customCurrency} onChange={(e) => setCustomCurrency(e.target.value as CurrencyCode)}>
                 {CURRENCIES.map((c) => (
                   <MenuItem key={c.value} value={c.value}>{c.label}</MenuItem>
                 ))}
@@ -144,7 +144,7 @@ const GoldRateCalculator = () => {
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom>Gold Weight</Typography>
             <Stack direction="row" spacing={1.5}>
-              <TextField
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Gold Weight' } }}
                 fullWidth
                 variant="outlined"
                 type="number"
@@ -152,7 +152,7 @@ const GoldRateCalculator = () => {
                 onChange={(e) => setWeight(e.target.value === '' ? NaN : Number(e.target.value))}
                 onFocus={(e) => e.target.select()}
               />
-              <Select value={weightUnit} onChange={(e) => setWeightUnit(e.target.value)} sx={{ minWidth: 150 }}>
+              <Select inputProps={{ 'aria-label': 'Gold Weight unit' }} value={weightUnit} onChange={(e) => setWeightUnit(e.target.value)} sx={{ minWidth: 150 }}>
                 {WEIGHT_UNITS.map((u) => (
                   <MenuItem key={u.value} value={u.value}>{u.label}</MenuItem>
                 ))}
@@ -170,9 +170,9 @@ const GoldRateCalculator = () => {
                 value={Number.isNaN(rate) ? '' : rate}
                 onChange={(e) => setRate(e.target.value === '' ? NaN : Number(e.target.value))}
                 onFocus={(e) => e.target.select()}
-                slotProps={{ input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Gold Rate' }, input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
               />
-              <Select value={rateUnit} onChange={(e) => setRateUnit(e.target.value)} sx={{ minWidth: 150 }}>
+              <Select inputProps={{ 'aria-label': 'Gold Rate unit' }} value={rateUnit} onChange={(e) => setRateUnit(e.target.value)} sx={{ minWidth: 150 }}>
                 {RATE_UNITS.map((u) => (
                   <MenuItem key={u.value} value={u.value}>{u.label}</MenuItem>
                 ))}
@@ -207,7 +207,7 @@ const GoldRateCalculator = () => {
               value={Number.isNaN(makingChargesPct) ? '' : makingChargesPct}
               onChange={(e) => setMakingChargesPct(e.target.value === '' ? NaN : Number(e.target.value))}
               onFocus={(e) => e.target.select()}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Making Charges (%)' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
           </Box>
 
@@ -220,7 +220,7 @@ const GoldRateCalculator = () => {
               value={Number.isNaN(taxPct) ? '' : taxPct}
               onChange={(e) => setTaxPct(e.target.value === '' ? NaN : Number(e.target.value))}
               onFocus={(e) => e.target.select()}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': regionConfig.taxLabel }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
             <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 0.5 }}>
               {regionConfig.taxNote}

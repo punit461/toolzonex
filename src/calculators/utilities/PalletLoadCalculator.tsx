@@ -110,7 +110,7 @@ const PalletLoadCalculator = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Pallet Preset</InputLabel>
-            <Select value={preset} label="Pallet Preset" onChange={(e) => applyPreset(e.target.value as Preset)}>
+            <Select inputProps={{ 'aria-label': 'Pallet Preset' }} value={preset} label="Pallet Preset" onChange={(e) => applyPreset(e.target.value as Preset)}>
               <MenuItem value="us">US Standard (48&quot; × 40&quot;)</MenuItem>
               <MenuItem value="eu">EU Standard (1200mm × 800mm)</MenuItem>
               <MenuItem value="custom">Custom</MenuItem>
@@ -175,9 +175,9 @@ const PalletLoadCalculator = () => {
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Total Boxes Per Pallet</Typography>
-            <Typography variant="h3" fontWeight="bold">{result.totalBoxes}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{result.totalBoxes}</Typography>
           </Paper>
           <Paper sx={{ p: 2, mb: 1, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Boxes Per Layer</Typography>

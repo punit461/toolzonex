@@ -103,7 +103,7 @@ const ImageConverterContent = () => {
 
         {error && <Alert severity="error" sx={{ mb: 2 }}>{error}</Alert>}
 
-        {loading && <LinearProgress sx={{ mb: 2 }} />}
+        {loading && <LinearProgress aria-label="Loading" sx={{ mb: 2 }} />}
 
         {preview && (
           <Paper sx={{ p: 2, mb: 3 }}>
@@ -116,7 +116,7 @@ const ImageConverterContent = () => {
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <FormControl fullWidth sx={{ mb: 2 }}>
           <InputLabel>Output Format</InputLabel>
-          <Select
+          <Select inputProps={{ 'aria-label': 'Output Format' }}
             value={outputFormat}
             label="Output Format"
             onChange={(e) => setOutputFormat(e.target.value)}

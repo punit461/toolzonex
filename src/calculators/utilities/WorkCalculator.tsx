@@ -81,7 +81,7 @@ const WorkCalculator = () => {
 
         <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Work Done</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>
             {result !== null ? `${result.toLocaleString(undefined, { maximumFractionDigits: 3 })} J` : '—'}
           </Typography>
         </Paper>

@@ -39,14 +39,14 @@ const CementCalculatorContent = () => {
         />
         <FormControl fullWidth>
           <InputLabel>Unit</InputLabel>
-          <Select value={unit} label="Unit" onChange={(e) => setUnit(e.target.value as 'ft3' | 'm3')}>
+          <Select inputProps={{ 'aria-label': 'Unit' }} value={unit} label="Unit" onChange={(e) => setUnit(e.target.value as 'ft3' | 'm3')}>
             <MenuItem value="ft3">Cubic Feet (ft³)</MenuItem>
             <MenuItem value="m3">Cubic Meters (m³)</MenuItem>
           </Select>
         </FormControl>
         <FormControl fullWidth>
           <InputLabel>Mix Ratio</InputLabel>
-          <Select value={ratioIdx} label="Mix Ratio" onChange={(e) => setRatioIdx(Number(e.target.value))}>
+          <Select inputProps={{ 'aria-label': 'Mix Ratio' }} value={ratioIdx} label="Mix Ratio" onChange={(e) => setRatioIdx(Number(e.target.value))}>
             {MIX_RATIOS.map((r, i) => (
               <MenuItem key={i} value={i}>{r.label}</MenuItem>
             ))}
@@ -68,7 +68,7 @@ const CementCalculatorContent = () => {
           sx={{
             p: 4,
             bgcolor: 'primary.main',
-            color: 'white',
+            color: 'primary.contrastText',
             borderRadius: 4,
             minHeight: 200,
             display: 'flex',

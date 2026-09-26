@@ -87,9 +87,9 @@ const DoubleTimePayCalculator = () => {
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Total Pay for the Day</Typography>
-            <Typography variant="h3" fontWeight="bold">{money(result.totalPay)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{money(result.totalPay)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, mb: 1, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Regular (0–8 hrs, {result.regularHours.toFixed(1)} hrs)</Typography>

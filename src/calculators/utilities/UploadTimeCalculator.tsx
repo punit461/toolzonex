@@ -145,17 +145,17 @@ const UploadTimeCalculator = () => {
 
           <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
             <Typography variant="subtitle1" fontWeight={600} mb={2}>Result</Typography>
-            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               {mode === 'time' ? (
                 <>
                   <Typography variant="body2">Estimated Upload Time</Typography>
-                  <Typography variant="h3" fontWeight="bold">{dur.primary}</Typography>
+                  <Typography component="p" variant="h3" fontWeight="bold">{dur.primary}</Typography>
                   {dur.secondary && <Typography variant="body2" mt={1}>({dur.secondary})</Typography>}
                 </>
               ) : (
                 <>
                   <Typography variant="body2">Required Upload Speed</Typography>
-                  <Typography variant="h3" fontWeight="bold">
+                  <Typography component="p" variant="h3" fontWeight="bold">
                     {requiredSpeed !== null ? `${requiredSpeed.toFixed(2)} Mbps` : '—'}
                   </Typography>
                 </>

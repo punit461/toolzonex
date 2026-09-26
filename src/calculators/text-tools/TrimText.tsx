@@ -40,7 +40,7 @@ const TrimTextContent = () => {
           multiline
           rows={10}
           fullWidth
-          slotProps={{ input: { readOnly: true } }}
+          slotProps={{ htmlInput: { 'aria-label': 'Trimmed Result' }, input: { readOnly: true } }}
           placeholder="Trimmed text will appear here..."
         />
         <Paper variant="outlined" sx={{ p: 1.5, mt: 1.5, textAlign: 'center' }}>

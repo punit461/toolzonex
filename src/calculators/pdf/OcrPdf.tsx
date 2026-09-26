@@ -118,10 +118,10 @@ const OcrPdfContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleOcr} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />{status || 'Processing...'}</> : 'Extract Text with OCR'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />{status || 'Processing...'}</> : 'Extract Text with OCR'}
       </Button>
 
-      {busy && <LinearProgress variant="determinate" value={pagePercent} sx={{ mt: 2 }} />}
+      {busy && <LinearProgress aria-label="Progress" variant="determinate" value={pagePercent} sx={{ mt: 2 }} />}
 
       {text !== null && (
         <Box sx={{ mt: 3 }}>
@@ -131,7 +131,7 @@ const OcrPdfContent = () => {
             minRows={12}
             maxRows={24}
             value={text}
-            slotProps={{ input: { readOnly: true } }}
+            slotProps={{ htmlInput: { 'aria-label': 'Extracted text' }, input: { readOnly: true } }}
             sx={{ '& .MuiInputBase-root': { fontFamily: 'monospace', fontSize: '0.85rem' } }}
           />
           <Box sx={{ display: 'flex', gap: 2, mt: 2, flexWrap: 'wrap' }}>

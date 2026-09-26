@@ -163,7 +163,7 @@ const BodyFatCalculatorContent = () => {
             </Box>
           </Paper>
         ) : (
-          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'grey.50' }}>
+          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'action.hover' }}>
             <Typography color="text.secondary" align="center">
               Enter your tape measurements and click Calculate to estimate your body fat percentage using the US Navy Method.
             </Typography>

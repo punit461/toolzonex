@@ -106,7 +106,7 @@ const SpeakingTimeCalculator = () => {
           {result?.type === 'time' && (
             <>
               <Typography variant="body2" color="text.secondary">Estimated Speaking Time</Typography>
-              <Typography variant="h3" color="primary" fontWeight={800}>{formatMinutesSeconds(result.minutes)}</Typography>
+              <Typography component="p" variant="h3" color="primary" fontWeight={800}>{formatMinutesSeconds(result.minutes)}</Typography>
             </>
           )}
           {result?.type === 'words' && (

@@ -90,7 +90,7 @@ const SecretCodeEncoderDecoderContent = () => {
             <Typography variant="subtitle1" fontWeight={600}>{mode === 'encode' ? 'Encoded Output' : 'Decoded Text'}</Typography>
             <Button size="small" startIcon={<ContentCopyIcon />} onClick={copy} disabled={!output}>Copy</Button>
           </Box>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': mode === 'encode' ? 'Encoded Output' : 'Decoded Text' } }}
             multiline
             rows={6}
             fullWidth

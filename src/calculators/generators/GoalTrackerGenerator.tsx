@@ -69,7 +69,7 @@ const GoalTrackerGeneratorContent = () => {
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>
-              <LinearProgress variant="determinate" value={pct} sx={{ height: 10, borderRadius: 5, mb: 0.5 }} />
+              <LinearProgress aria-label="Progress" variant="determinate" value={pct} sx={{ height: 10, borderRadius: 5, mb: 0.5 }} />
               <Typography variant="body2" color="text.secondary">
                 {current.toLocaleString()} / {target.toLocaleString()} — {pct.toFixed(1)}% complete
               </Typography>

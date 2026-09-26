@@ -87,12 +87,12 @@ const BabyCareLogContent = () => {
               <TextField size="small" type="time" label="Time" InputLabelProps={{ shrink: true }} value={f.time} onChange={(e) => updateFeeding(f.id, { time: e.target.value })} sx={{ minWidth: 130 }} />
               <FormControl size="small" sx={{ minWidth: 130 }}>
                 <InputLabel>Type</InputLabel>
-                <Select label="Type" value={f.type} onChange={(e: SelectChangeEvent) => updateFeeding(f.id, { type: e.target.value })}>
+                <Select inputProps={{ 'aria-label': 'Type' }} label="Type" value={f.type} onChange={(e: SelectChangeEvent) => updateFeeding(f.id, { type: e.target.value })}>
                   {FEEDING_TYPES.map((t) => <MenuItem key={t} value={t}>{t}</MenuItem>)}
                 </Select>
               </FormControl>
               <TextField size="small" label="Amount" value={f.amount} onChange={(e) => updateFeeding(f.id, { amount: e.target.value })} placeholder="e.g. 4 oz" sx={{ minWidth: 120 }} />
-              <IconButton onClick={() => removeFeeding(f.id)} disabled={feedings.length <= 1} size="small">
+              <IconButton aria-label="Remove" onClick={() => removeFeeding(f.id)} disabled={feedings.length <= 1} size="small">
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Stack>
@@ -115,7 +115,7 @@ const BabyCareLogContent = () => {
               <Typography variant="body2" color="text.secondary">
                 {computeDuration(s.start, s.end) || '—'}
               </Typography>
-              <IconButton onClick={() => removeSleep(s.id)} disabled={sleeps.length <= 1} size="small">
+              <IconButton aria-label="Remove" onClick={() => removeSleep(s.id)} disabled={sleeps.length <= 1} size="small">
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Stack>

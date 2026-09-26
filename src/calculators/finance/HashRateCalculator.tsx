@@ -42,7 +42,7 @@ const HashRateCalculatorContent = () => {
         <Typography variant="subtitle1" fontWeight={600}>Hash Rate</Typography>
         <Box sx={{ display: 'flex', gap: 2 }}>
           <TextField label="Value" type="number" value={value} onChange={(e) => setValue(e.target.value)} fullWidth />
-          <Select value={unit} onChange={(e) => setUnit(e.target.value as Unit)} sx={{ minWidth: 100 }}>
+          <Select inputProps={{ 'aria-label': 'Hash Rate unit' }} value={unit} onChange={(e) => setUnit(e.target.value as Unit)} sx={{ minWidth: 100 }}>
             {UNIT_ORDER.map((u) => (
               <MenuItem key={u} value={u}>{u}/s</MenuItem>
             ))}
@@ -77,7 +77,7 @@ const HashRateCalculatorContent = () => {
         </TableContainer>
 
         {timeEstimate && (
-          <Paper sx={{ mt: 3, p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ mt: 3, p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Estimated Average Time to Find a Block Solo</Typography>
             <Typography variant="h4" fontWeight="bold">
               {timeEstimate.years >= 1 ? `${timeEstimate.years.toFixed(1)} years` : `${timeEstimate.days.toFixed(1)} days`}

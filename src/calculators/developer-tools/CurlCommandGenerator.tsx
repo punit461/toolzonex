@@ -58,7 +58,7 @@ const CurlCommandGeneratorContent = () => {
         <Stack direction="row" spacing={2}>
           <FormControl sx={{ minWidth: 130 }}>
             <InputLabel>Method</InputLabel>
-            <Select value={method} label="Method" onChange={(e) => setMethod(e.target.value as Method)}>
+            <Select inputProps={{ 'aria-label': 'Method' }} value={method} label="Method" onChange={(e) => setMethod(e.target.value as Method)}>
               {(['GET', 'POST', 'PUT', 'DELETE', 'PATCH'] as Method[]).map((m) => (
                 <MenuItem key={m} value={m}>{m}</MenuItem>
               ))}
@@ -74,7 +74,7 @@ const CurlCommandGeneratorContent = () => {
               <Stack key={h.id} direction="row" spacing={1.5}>
                 <TextField label="Key" size="small" fullWidth value={h.key} onChange={(e) => updateHeader(h.id, 'key', e.target.value)} />
                 <TextField label="Value" size="small" fullWidth value={h.value} onChange={(e) => updateHeader(h.id, 'value', e.target.value)} />
-                <IconButton color="error" size="small" onClick={() => removeHeader(h.id)}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeHeader(h.id)}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

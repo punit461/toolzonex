@@ -115,7 +115,7 @@ const WindowAreaCalculator = () => {
                   value={w.height}
                   onChange={(e) => updateWindow(w.id, 'height', e.target.value)}
                 />
-                <IconButton color="error" size="small" onClick={() => removeWindow(w.id)} disabled={windows.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeWindow(w.id)} disabled={windows.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

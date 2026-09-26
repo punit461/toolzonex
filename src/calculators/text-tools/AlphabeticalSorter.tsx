@@ -57,7 +57,7 @@ const AlphabeticalSorterContent = () => {
         <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mb: 2 }}>
           <FormControl sx={{ minWidth: 180 }}>
             <InputLabel>List Format</InputLabel>
-            <Select value={delimiter} label="List Format" onChange={(e) => setDelimiter(e.target.value as Delimiter)}>
+            <Select inputProps={{ 'aria-label': 'List Format' }} value={delimiter} label="List Format" onChange={(e) => setDelimiter(e.target.value as Delimiter)}>
               <MenuItem value="line">One Item per Line</MenuItem>
               <MenuItem value="comma">Comma-Separated</MenuItem>
             </Select>
@@ -89,7 +89,7 @@ const AlphabeticalSorterContent = () => {
             </Button>
           )}
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Sorted Result' } }}
           value={result}
           multiline
           rows={12}

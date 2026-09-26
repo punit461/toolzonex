@@ -110,7 +110,7 @@ const BinomialProbabilityCalculator = () => {
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Results</Typography>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">P(X = {result.k})</Typography>
             <Typography variant="h4" fontWeight="bold">{result.valid ? `${(result.exact * 100).toFixed(3)}%` : '—'}</Typography>
           </Paper>

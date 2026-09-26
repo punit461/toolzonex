@@ -79,7 +79,7 @@ const DepthOfFieldCalculatorContent = () => {
         />
         <FormControl fullWidth>
           <InputLabel>Camera Sensor Size</InputLabel>
-          <Select label="Camera Sensor Size" value={sensor} onChange={(e) => setSensor(e.target.value as keyof typeof SENSORS)}>
+          <Select inputProps={{ 'aria-label': 'Camera Sensor Size' }} label="Camera Sensor Size" value={sensor} onChange={(e) => setSensor(e.target.value as keyof typeof SENSORS)}>
             {Object.entries(SENSORS).map(([key, item]) => (
               <MenuItem key={key} value={key}>{item.label}</MenuItem>
             ))}

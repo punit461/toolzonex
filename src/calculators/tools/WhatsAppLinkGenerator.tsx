@@ -79,7 +79,7 @@ const WhatsAppLinkGeneratorContent = () => {
         <Box sx={{ display: 'flex', gap: 2 }}>
           <FormControl fullWidth size="small">
             <InputLabel>Country</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Country' }}
               value={countryCode}
               onChange={(e) => setCountryCode(e.target.value)}
               label="Country"

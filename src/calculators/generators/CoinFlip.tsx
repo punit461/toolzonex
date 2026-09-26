@@ -56,13 +56,13 @@ const CoinFlipContent = () => {
         {isFlipping ? (
            <Typography variant="h4" color="white" fontWeight="bold">?</Typography>
         ) : (
-           <Typography variant="h3" color="white" fontWeight="bold">
+           <Typography component="p" variant="h3" color="white" fontWeight="bold">
              {result ? (result === 'Heads' ? 'H' : 'T') : '?'}
            </Typography>
         )}
       </Box>
 
-      <Typography variant="h3" fontWeight="800" sx={{ minHeight: 48 }}>
+      <Typography component="p" variant="h3" fontWeight="800" sx={{ minHeight: 48 }}>
         {isFlipping ? 'Flipping...' : (result || 'Ready to flip')}
       </Typography>
 

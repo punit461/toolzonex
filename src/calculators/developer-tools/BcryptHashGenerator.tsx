@@ -41,7 +41,7 @@ const BcryptHashGeneratorContent = () => {
         <Typography variant="body2" gutterBottom>
           Cost / Salt Rounds: {rounds} {rounds >= 12 && '(this will be noticeably slow — that is expected)'}
         </Typography>
-        <Slider
+        <Slider aria-label="Cost / Salt Rounds"
           value={rounds}
           onChange={(_, v) => setRounds(v as number)}
           min={4}
@@ -60,7 +60,7 @@ const BcryptHashGeneratorContent = () => {
         <Button variant="contained" onClick={generate} disabled={loading || !input}>
           {loading ? 'Computing…' : 'Generate Hash'}
         </Button>
-        {loading && <CircularProgress size={24} />}
+        {loading && <CircularProgress aria-label="Loading" size={24} />}
       </Stack>
 
       <Box>
@@ -69,7 +69,7 @@ const BcryptHashGeneratorContent = () => {
           <Button size="small" startIcon={<ContentCopyIcon />} onClick={copy} disabled={!hash}>Copy</Button>
         </Stack>
         <Paper variant="outlined" sx={{ p: 2, minHeight: 60, fontFamily: 'monospace', wordBreak: 'break-all', bgcolor: 'grey.900', color: '#10b981' }}>
-          {hash || <Typography color="text.secondary" component="span" sx={{ fontFamily: 'inherit' }}>Click Generate Hash to compute a bcrypt hash…</Typography>}
+          {hash || <Typography component="span" sx={{ fontFamily: 'inherit', color: 'grey.400' }}>Click Generate Hash to compute a bcrypt hash…</Typography>}
         </Paper>
       </Box>
     </Box>

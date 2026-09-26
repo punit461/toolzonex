@@ -116,7 +116,7 @@ const CouponSavingsContent = () => {
       </TableContainer>
 
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 2 }}>
-        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">Final Price</Typography>
           <Typography variant="h4" fontWeight="bold">{money(finalPrice)}</Typography>
         </Paper>

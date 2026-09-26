@@ -3,6 +3,8 @@
 import { Typography, Box } from '@mui/material';
 import ColorScreen from './ColorScreen';
 
+// Hint colours ("Click to go fullscreen") are the lightest that still clear
+// WCAG AA 4.5:1 on each background.
 const USE_CASES: Record<string, string[]> = {
   'Black Screen': [
     'Spotting stuck (always-lit) pixels, backlight bleed, and IPS glow, which only show up against pure black in a dark room.',
@@ -103,29 +105,29 @@ function seoContent(colorName: string) {
 }
 
 export const BlackScreen = () => (
-  <ColorScreen name="Black Screen" color="#000000" hintColor="rgba(255,255,255,0.4)" description="A simple fullscreen black screen. Free online black screen for testing, backgrounds, or fun." url="/utilities/black-screen" seoContent={seoContent('Black Screen')} />
+  <ColorScreen name="Black Screen" color="#000000" hintColor="rgba(255,255,255,0.7)" description="A simple fullscreen black screen. Free online black screen for testing, backgrounds, or fun." url="/utilities/black-screen" seoContent={seoContent('Black Screen')} />
 );
 export const RedScreen = () => (
-  <ColorScreen name="Red Screen" color="#e11d48" hintColor="rgba(255,255,255,0.7)" description="A simple fullscreen red screen. Free online red screen for testing, backgrounds, or fun." url="/utilities/red-screen" seoContent={seoContent('Red Screen')} />
+  <ColorScreen name="Red Screen" color="#e11d48" hintColor="#ffffff" description="A simple fullscreen red screen. Free online red screen for testing, backgrounds, or fun." url="/utilities/red-screen" seoContent={seoContent('Red Screen')} />
 );
 export const BlueScreen = () => (
-  <ColorScreen name="Blue Screen" color="#1a56db" hintColor="rgba(255,255,255,0.7)" description="A simple fullscreen blue screen. Free online blue screen for testing, backgrounds, or fun." url="/utilities/blue-screen" seoContent={seoContent('Blue Screen')} />
+  <ColorScreen name="Blue Screen" color="#1a56db" hintColor="rgba(255,255,255,0.9)" description="A simple fullscreen blue screen. Free online blue screen for testing, backgrounds, or fun." url="/utilities/blue-screen" seoContent={seoContent('Blue Screen')} />
 );
 export const GreenScreen = () => (
-  <ColorScreen name="Green Screen" color="#00b140" hintColor="rgba(255,255,255,0.7)" description="A simple fullscreen chroma-key green screen. Free online green screen for backgrounds, testing, or streaming." url="/utilities/green-screen" seoContent={seoContent('Green Screen')} />
+  <ColorScreen name="Green Screen" color="#00b140" hintColor="rgba(0,0,0,0.8)" description="A simple fullscreen chroma-key green screen. Free online green screen for backgrounds, testing, or streaming." url="/utilities/green-screen" seoContent={seoContent('Green Screen')} />
 );
 export const PinkScreen = () => (
-  <ColorScreen name="Pink Screen" color="#ec4899" hintColor="rgba(255,255,255,0.7)" description="A simple fullscreen pink screen. Free online pink screen for testing, backgrounds, or fun." url="/utilities/pink-screen" seoContent={seoContent('Pink Screen')} />
+  <ColorScreen name="Pink Screen" color="#ec4899" hintColor="rgba(0,0,0,0.9)" description="A simple fullscreen pink screen. Free online pink screen for testing, backgrounds, or fun." url="/utilities/pink-screen" seoContent={seoContent('Pink Screen')} />
 );
 export const PurpleScreen = () => (
-  <ColorScreen name="Purple Screen" color="#7c3aed" hintColor="rgba(255,255,255,0.7)" description="A simple fullscreen purple screen. Free online purple screen for testing, backgrounds, or fun." url="/utilities/purple-screen" seoContent={seoContent('Purple Screen')} />
+  <ColorScreen name="Purple Screen" color="#7c3aed" hintColor="#ffffff" description="A simple fullscreen purple screen. Free online purple screen for testing, backgrounds, or fun." url="/utilities/purple-screen" seoContent={seoContent('Purple Screen')} />
 );
 export const OrangeScreen = () => (
-  <ColorScreen name="Orange Screen" color="#f97316" hintColor="rgba(0,0,0,0.5)" description="A simple fullscreen orange screen. Free online orange screen for testing, backgrounds, or fun." url="/utilities/orange-screen" seoContent={seoContent('Orange Screen')} />
+  <ColorScreen name="Orange Screen" color="#f97316" hintColor="rgba(0,0,0,0.8)" description="A simple fullscreen orange screen. Free online orange screen for testing, backgrounds, or fun." url="/utilities/orange-screen" seoContent={seoContent('Orange Screen')} />
 );
 export const YellowScreen = () => (
-  <ColorScreen name="Yellow Screen" color="#eab308" hintColor="rgba(0,0,0,0.5)" description="A simple fullscreen yellow screen. Free online yellow screen for testing, backgrounds, or fun." url="/utilities/yellow-screen" seoContent={seoContent('Yellow Screen')} />
+  <ColorScreen name="Yellow Screen" color="#eab308" hintColor="rgba(0,0,0,0.7)" description="A simple fullscreen yellow screen. Free online yellow screen for testing, backgrounds, or fun." url="/utilities/yellow-screen" seoContent={seoContent('Yellow Screen')} />
 );
 export const ZoomLightingScreen = () => (
-  <ColorScreen name="Zoom Lighting Screen" color="#fff8ee" hintColor="rgba(0,0,0,0.4)" description="A bright, warm fullscreen light for video calls. Turn your screen into a ring light for better video lighting." url="/utilities/zoom-lighting-screen" seoContent={seoContent('Zoom Lighting Screen')} />
+  <ColorScreen name="Zoom Lighting Screen" color="#fff8ee" hintColor="rgba(0,0,0,0.7)" description="A bright, warm fullscreen light for video calls. Turn your screen into a ring light for better video lighting." url="/utilities/zoom-lighting-screen" seoContent={seoContent('Zoom Lighting Screen')} />
 );

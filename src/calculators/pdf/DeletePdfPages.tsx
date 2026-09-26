@@ -48,7 +48,7 @@ const DeletePdfPagesContent = () => {
 
       <Box sx={{ mt: 3 }}>
         <Typography gutterBottom>Pages to delete</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Pages to delete' } }}
           fullWidth
           placeholder="e.g. 2, 5-7"
           value={pages}

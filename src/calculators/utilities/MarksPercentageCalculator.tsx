@@ -135,7 +135,7 @@ const MarksPercentageCalculator = () => {
                   value={Number.isNaN(subject.max) ? '' : subject.max}
                   onChange={(e) => updateSubject(subject.id, 'max', e.target.value === '' ? NaN : Number(e.target.value))}
                 />
-                <IconButton color="error" size="small" onClick={() => removeSubject(subject.id)} disabled={subjects.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeSubject(subject.id)} disabled={subjects.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>
@@ -150,7 +150,7 @@ const MarksPercentageCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Overall Percentage</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 1, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 1, color: 'primary.main' }}>
               {percentage.toFixed(2)}%
             </Typography>
             <Typography variant="subtitle2" sx={{ mb: 3 }}>Grade: {gradeBand(percentage)}</Typography>

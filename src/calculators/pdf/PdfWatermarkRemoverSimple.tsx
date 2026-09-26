@@ -125,7 +125,8 @@ const PdfWatermarkRemoverSimpleContent = () => {
       <Alert severity="info" sx={{ mt: 2 }}>
         This tool only finds and removes watermarks added as PDF <strong>annotations</strong> (stamp/watermark
         overlays). It cannot detect or remove a watermark that was flattened into the page content itself or
-        baked into a scanned image — see the FAQ below.
+        baked into a scanned image — see the FAQ below. Only remove watermarks from documents you own or are
+        authorised to modify: removing a rights holder&apos;s watermark or copyright notice can break copyright law.
       </Alert>
 
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
@@ -149,7 +150,7 @@ const PdfWatermarkRemoverSimpleContent = () => {
           <Typography variant="subtitle1" fontWeight={600} gutterBottom>
             Found {candidates.length} candidate{candidates.length !== 1 ? 's' : ''} — uncheck any you want to keep
           </Typography>
-          <Box sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', p: 1, mb: 2 }}>
+          <Box sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', p: 1, mb: 2 }}>
             {candidates.map((c) => (
               <FormControlLabel
                 key={c.id}

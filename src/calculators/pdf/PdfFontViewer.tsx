@@ -123,7 +123,7 @@ const PdfFontViewerContent = () => {
           <Typography variant="subtitle1" fontWeight={600} gutterBottom>
             {fonts.filter((f) => f.source === 'page').length} font{fonts.filter((f) => f.source === 'page').length !== 1 ? 's' : ''} found
           </Typography>
-          <Box sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', overflow: 'hidden' }}>
+          <Box sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', overflow: 'hidden' }}>
             {fonts.map((font, i) => (
               <Box
                 key={i}

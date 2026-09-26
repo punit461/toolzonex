@@ -71,7 +71,7 @@ const RandomFruitGeneratorContent = () => {
 
       {fruit && (
         <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', maxWidth: 480 }}>
-          <Typography variant="h2" sx={{ fontSize: '3rem', lineHeight: 1 }}>{fruit.emoji}</Typography>
+          <Typography component="p" variant="h2" sx={{ fontSize: '3rem', lineHeight: 1 }}>{fruit.emoji}</Typography>
           <Typography variant="h4" fontWeight={700} sx={{ mt: 1 }}>{fruit.name}</Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 1.5 }}>{fruit.fact}</Typography>
         </Paper>

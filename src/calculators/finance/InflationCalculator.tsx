@@ -122,13 +122,13 @@ const InflationCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(amount) ? '' : amount}
               onChange={(e) => setAmount(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Amount' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
             />
           </Box>
 
           <Box sx={{ mb: 3 }}>
             <Typography gutterBottom>Start Year</Typography>
-            <Select fullWidth value={startYear} onChange={(e) => setStartYear(Number(e.target.value))}>
+            <Select inputProps={{ 'aria-label': 'Start Year' }} fullWidth value={startYear} onChange={(e) => setStartYear(Number(e.target.value))}>
               {YEARS.map((y) => (
                 <MenuItem key={y} value={y}>{y}</MenuItem>
               ))}
@@ -137,7 +137,7 @@ const InflationCalculator = () => {
 
           <Box sx={{ mb: 3 }}>
             <Typography gutterBottom>End Year</Typography>
-            <Select fullWidth value={endYear} onChange={(e) => setEndYear(Number(e.target.value))}>
+            <Select inputProps={{ 'aria-label': 'End Year' }} fullWidth value={endYear} onChange={(e) => setEndYear(Number(e.target.value))}>
               {YEARS.map((y) => (
                 <MenuItem key={y} value={y}>{y}</MenuItem>
               ))}
@@ -152,7 +152,7 @@ const InflationCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Equivalent Amount in {endYear}</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               {formatUSD(equivalentAmount)}
             </Typography>
 

@@ -104,9 +104,9 @@ const ImageToPdfContent = () => {
               sx={{ border: '1px solid', borderColor: 'divider', borderRadius: 1, mb: 1 }}
               secondaryAction={
                 <Stack direction="row" spacing={0.5}>
-                  <IconButton size="small" onClick={() => move(i, -1)} disabled={i === 0}><ArrowUpwardIcon fontSize="small" /></IconButton>
-                  <IconButton size="small" onClick={() => move(i, 1)} disabled={i === files.length - 1}><ArrowDownwardIcon fontSize="small" /></IconButton>
-                  <IconButton size="small" onClick={() => removeFile(i)}><DeleteIcon fontSize="small" /></IconButton>
+                  <IconButton aria-label="Move up" size="small" onClick={() => move(i, -1)} disabled={i === 0}><ArrowUpwardIcon fontSize="small" /></IconButton>
+                  <IconButton aria-label="Move down" size="small" onClick={() => move(i, 1)} disabled={i === files.length - 1}><ArrowDownwardIcon fontSize="small" /></IconButton>
+                  <IconButton aria-label="Remove" size="small" onClick={() => removeFile(i)}><DeleteIcon fontSize="small" /></IconButton>
                 </Stack>
               }
             >

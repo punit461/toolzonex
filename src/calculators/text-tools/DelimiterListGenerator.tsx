@@ -128,7 +128,7 @@ const DelimiterListGeneratorContent = () => {
             {copied ? 'Copied!' : 'Copy'}
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Result' } }}
           value={output}
           multiline
           rows={direction === 'join' ? 3 : 6}

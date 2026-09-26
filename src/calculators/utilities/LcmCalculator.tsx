@@ -137,7 +137,7 @@ const LcmCalculator = () => {
                   value={Number.isNaN(row.value) ? '' : row.value}
                   onChange={(e) => updateRow(row.id, e.target.value === '' ? NaN : Number(e.target.value))}
                 />
-                <IconButton color="error" size="small" onClick={() => removeRow(row.id)} disabled={rows.length <= 2}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeRow(row.id)} disabled={rows.length <= 2}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>
@@ -151,7 +151,7 @@ const LcmCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center' }}>
             <Typography variant="h6" color="text.secondary">LCM</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main' }}>
               {lcm.toLocaleString()}
             </Typography>
           </Box>

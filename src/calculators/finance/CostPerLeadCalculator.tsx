@@ -129,9 +129,9 @@ const CostPerLeadCalculator = () => {
           />
         </Box>
 
-        <Paper sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <Paper sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <Typography variant="body2">Overall Cost Per Lead</Typography>
-          <Typography variant="h3" fontWeight="bold">{money(overallCpl)}</Typography>
+          <Typography component="p" variant="h3" fontWeight="bold">{money(overallCpl)}</Typography>
         </Paper>
       </Box>
 
@@ -151,7 +151,7 @@ const CostPerLeadCalculator = () => {
             {channelBreakdown.map((row) => (
               <TableRow key={row.id}>
                 <TableCell>
-                  <TextField
+                  <TextField slotProps={{ htmlInput: { 'aria-label': 'Channel name' } }}
                     value={row.name}
                     onChange={(e) => updateRow(row.id, 'name', e.target.value)}
                     size="small"
@@ -165,11 +165,11 @@ const CostPerLeadCalculator = () => {
                     onChange={(e) => updateRow(row.id, 'spend', e.target.value)}
                     size="small"
                     variant="standard"
-                    slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+                    slotProps={{ htmlInput: { 'aria-label': 'Spend' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
                   />
                 </TableCell>
                 <TableCell>
-                  <TextField
+                  <TextField slotProps={{ htmlInput: { 'aria-label': 'Leads' } }}
                     type="number"
                     value={rows.find((r) => r.id === row.id)?.leads ?? ''}
                     onChange={(e) => updateRow(row.id, 'leads', e.target.value)}

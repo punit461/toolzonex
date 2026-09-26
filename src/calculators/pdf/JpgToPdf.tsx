@@ -47,7 +47,7 @@ const JpgToPdfContent = () => {
         <List sx={{ mt: 2 }}>
           {files.map((f, i) => (
             <ListItem key={`${f.name}-${i}`} sx={{ border: '1px solid', borderColor: 'divider', borderRadius: 1, mb: 1 }}
-              secondaryAction={<IconButton size="small" onClick={() => removeFile(i)}><DeleteIcon fontSize="small" /></IconButton>}
+              secondaryAction={<IconButton aria-label="Remove" size="small" onClick={() => removeFile(i)}><DeleteIcon fontSize="small" /></IconButton>}
             >
               <ListItemText primary={`${i + 1}. ${f.name}`} />
             </ListItem>

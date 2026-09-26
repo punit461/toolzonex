@@ -86,7 +86,7 @@ const SIPCalculator = () => {
           <Box sx={{ mb: 4 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Typography gutterBottom>Monthly Investment</Typography>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Currency' }}
                 size="small"
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -104,13 +104,13 @@ const SIPCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(monthlyInvestment) ? '' : monthlyInvestment}
               onChange={(e) => setMonthlyInvestment(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Monthly Investment' },
                 input: {
                   startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Monthly Investment"
               value={Number.isNaN(monthlyInvestment) ? 0 : monthlyInvestment}
               min={500}
               max={100000}
@@ -129,13 +129,13 @@ const SIPCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(expectedReturnRate) ? '' : expectedReturnRate}
               onChange={(e) => setExpectedReturnRate(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Expected Return Rate (% p.a.)' },
                 input: {
                   endAdornment: <InputAdornment position="end">%</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Expected Return Rate (% p.a.)"
               value={Number.isNaN(expectedReturnRate) ? 0 : expectedReturnRate}
               min={1}
               max={30}
@@ -154,13 +154,13 @@ const SIPCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(timePeriod) ? '' : timePeriod}
               onChange={(e) => setTimePeriod(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Time Period (Years)' },
                 input: {
                   endAdornment: <InputAdornment position="end">Yr</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Time Period (Years)"
               value={Number.isNaN(timePeriod) ? 0 : timePeriod}
               min={1}
               max={40}
@@ -174,7 +174,7 @@ const SIPCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Total Value</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               {formatMoney(totalValue, currency)}
             </Typography>
 
@@ -189,7 +189,7 @@ const SIPCalculator = () => {
               </Box>
             </Box>
 
-            <Box sx={{ height: 250 }}>
+            <Box aria-hidden="true" sx={{ height: 250 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={chartData}>
                   <XAxis dataKey="year" hide />

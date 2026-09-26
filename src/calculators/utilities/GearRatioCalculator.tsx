@@ -129,7 +129,7 @@ const GearRatioCalculator = () => {
         <Typography variant="body2" color="text.secondary" gutterBottom>
           {pairs.length > 1 ? 'Compound Gear Ratio' : 'Gear Ratio'}
         </Typography>
-        <Typography variant="h3" fontWeight={800} color="primary.main">
+        <Typography component="p" variant="h3" fontWeight={800} color="primary.main">
           {results.valid ? `${results.compound.toFixed(4)}:1` : 'Enter valid teeth counts'}
         </Typography>
       </Paper>

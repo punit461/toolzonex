@@ -133,7 +133,7 @@ const LawnAreaCalculator = () => {
                     />
                   )}
                   <Typography variant="body2" color="text.secondary" sx={{ minWidth: 90 }}>{s.area.toFixed(1)} sq ft</Typography>
-                  <IconButton color="error" size="small" onClick={() => removeSection(s.id)} disabled={sections.length <= 1}>
+                  <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeSection(s.id)} disabled={sections.length <= 1}>
                     <DeleteIcon fontSize="small" />
                   </IconButton>
                 </Stack>

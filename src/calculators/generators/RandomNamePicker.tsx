@@ -39,7 +39,7 @@ const RandomNamePickerContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box>
           <Typography variant="subtitle2" mb={1} color="text.secondary">Enter names (one per line):</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Enter names (one per line)' } }}
             multiline
             rows={8}
             value={namesText}
@@ -75,12 +75,12 @@ const RandomNamePickerContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         {pickedNames.length > 0 ? (
-          <Paper sx={{ p: 4, bgcolor: 'primary.main', color: 'white', borderRadius: 4, minHeight: 250 }}>
+          <Paper sx={{ p: 4, bgcolor: 'primary.main', color: 'primary.contrastText', borderRadius: 4, minHeight: 250 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
               <Typography variant="h5" fontWeight="bold" sx={{ opacity: 0.9 }}>
                 Picked ({pickedNames.length})
               </Typography>
-              <IconButton size="small" onClick={copyResults} sx={{ color: 'white' }}><ContentCopyIcon fontSize="small" /></IconButton>
+              <IconButton aria-label="Copy" size="small" onClick={copyResults} sx={{ color: 'white' }}><ContentCopyIcon fontSize="small" /></IconButton>
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               {pickedNames.map((name, idx) => (
@@ -91,7 +91,7 @@ const RandomNamePickerContent = () => {
             </Box>
           </Paper>
         ) : (
-          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'grey.50' }}>
+          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'action.hover' }}>
             <Typography color="text.secondary" align="center">
               Enter names and click Pick to randomly select winners.
             </Typography>

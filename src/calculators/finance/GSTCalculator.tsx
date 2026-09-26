@@ -5,11 +5,15 @@ import { Box, TextField, Typography, ToggleButtonGroup, ToggleButton, InputAdorn
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
-const GST_RATES = [0, 5, 12, 18, 28];
+// Slabs from 22 September 2025 (GST Council, 56th meeting): 5% and 18% main
+// rates, 40% for sin/luxury goods, 3% for gold and silver. 12% and 28% were
+// removed for most goods; "Other rate" covers older invoices and special rates.
+const GST_RATES = [0, 3, 5, 18, 40];
 
 const GSTCalculator = () => {
   const [amount, setAmount] = useState<number>(1000);
   const [gstRate, setGstRate] = useState<number>(18);
+  const [customRate, setCustomRate] = useState<string>('');
   const [mode, setMode] = useState<'add' | 'remove'>('add');
 
   const { baseAmount, totalGst, cgst, sgst, totalAmount } = useMemo(() => {
@@ -51,7 +55,11 @@ const GSTCalculator = () => {
         Net Price = Original Cost - GST Amount
       </Typography>
 
-      <Typography variant="h2">GST Slabs in India</Typography>
+      <Typography variant="h2">GST Slabs in India (from 22 September 2025)</Typography>
+      <Typography variant="body1">
+        India moved to two main GST rates, 5% and 18%, with a 40% rate for luxury and sin goods, from
+        22 September 2025. The earlier 12% and 28% slabs were removed for most goods. Examples:
+      </Typography>
       <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid', my: 2 }}>
         <Table>
           <TableHead>
@@ -61,14 +69,18 @@ const GSTCalculator = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            <TableRow><TableCell>0%</TableCell><TableCell>Milk, eggs, fresh vegetables, unbranded wheat</TableCell></TableRow>
-            <TableRow><TableCell>5%</TableCell><TableCell>Sugar, tea, coffee, edible oil, spices</TableCell></TableRow>
-            <TableRow><TableCell>12%</TableCell><TableCell>Mobile phones, computers, processed food</TableCell></TableRow>
-            <TableRow><TableCell>18%</TableCell><TableCell>Financial services, IT services, branded garments</TableCell></TableRow>
-            <TableRow><TableCell>28%</TableCell><TableCell>Automobiles, luxury items, aerated drinks</TableCell></TableRow>
+            <TableRow><TableCell>0% (exempt)</TableCell><TableCell>Fresh milk, eggs, fresh fruit and vegetables; individual life and health insurance premiums</TableCell></TableRow>
+            <TableRow><TableCell>3%</TableCell><TableCell>Gold and silver, including jewellery</TableCell></TableRow>
+            <TableRow><TableCell>5%</TableCell><TableCell>Toilet soap, shampoo, hair oil, toothpaste, bicycles</TableCell></TableRow>
+            <TableRow><TableCell>18%</TableCell><TableCell>Mobile phones, cement, air conditioners, small cars, motorcycles up to 350cc, most services</TableCell></TableRow>
+            <TableRow><TableCell>40%</TableCell><TableCell>Aerated and caffeinated drinks, pan masala, motorcycles above 350cc</TableCell></TableRow>
           </TableBody>
         </Table>
       </TableContainer>
+      <Typography variant="body2" color="text.secondary">
+        Rates depend on the exact item or service (its HSN or SAC code), and some products have special rates. Check the
+        current rate on the official CBIC GST site (cbic-gst.gov.in) before issuing an invoice.
+      </Typography>
 
       <Typography variant="h2">Example</Typography>
       <Typography variant="body1">
@@ -86,6 +98,12 @@ const GSTCalculator = () => {
       </Box>
 
       <Typography variant="h2">FAQs</Typography>
+      <Typography variant="h3">What happened to the 12% and 28% GST rates?</Typography>
+      <Typography variant="body1">
+        From 22 September 2025, most goods in the 12% slab moved to 5% and most in the 28% slab moved to 18%, while
+        luxury and sin goods moved to 40%. Invoices dated before then used the old rates. To check one, enter the
+        old rate under &quot;Other rate&quot;.
+      </Typography>
       <Typography variant="h3">What&apos;s the difference between CGST, SGST, and IGST?</Typography>
       <Typography variant="body1">
         For sales within a state, GST splits equally into CGST (central) and SGST (state). For inter-state
@@ -125,7 +143,7 @@ const GSTCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(amount) ? '' : amount}
               onChange={(e) => setAmount(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Amount (₹)' },
                 input: {
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
                 }
@@ -139,7 +157,7 @@ const GSTCalculator = () => {
               color="primary"
               value={gstRate}
               exclusive
-              onChange={(_, value) => { if (value !== null) setGstRate(value); }}
+              onChange={(_, value) => { if (value !== null) { setGstRate(value); setCustomRate(''); } }}
               fullWidth
               sx={{ mt: 1, display: 'flex', flexWrap: 'wrap' }}
             >
@@ -149,6 +167,19 @@ const GSTCalculator = () => {
                 </ToggleButton>
               ))}
             </ToggleButtonGroup>
+            <TextField
+              label="Other rate (%)"
+              type="number"
+              size="small"
+              value={customRate}
+              onChange={(e) => {
+                setCustomRate(e.target.value);
+                const n = Number(e.target.value);
+                if (e.target.value !== '' && Number.isFinite(n) && n >= 0) setGstRate(n);
+              }}
+              helperText="For older invoices (12%, 28%) or special rates"
+              sx={{ mt: 2 }}
+            />
           </Box>
         </Box>
 

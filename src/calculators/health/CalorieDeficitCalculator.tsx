@@ -78,7 +78,7 @@ const CalorieDeficitCalculatorContent = () => {
         <Box sx={{ mb: 4, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
           <Box>
             <Typography gutterBottom>Age</Typography>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Age' } }}
               fullWidth
               type="number"
               onFocus={(e) => e.target.select()}
@@ -94,7 +94,7 @@ const CalorieDeficitCalculatorContent = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(height) ? '' : height}
               onChange={(e) => setHeight(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Height' }, input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
             />
           </Box>
         </Box>
@@ -102,7 +102,7 @@ const CalorieDeficitCalculatorContent = () => {
         <Box sx={{ mb: 4 }}>
           <Typography gutterBottom>Weight</Typography>
           <Box sx={{ display: 'flex', gap: 1 }}>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Weight' } }}
               fullWidth
               type="number"
               onFocus={(e) => e.target.select()}
@@ -119,7 +119,7 @@ const CalorieDeficitCalculatorContent = () => {
         <Box sx={{ mb: 4 }}>
           <Typography gutterBottom>Activity Level</Typography>
           <FormControl fullWidth>
-            <Select value={activity} onChange={(e) => setActivity(e.target.value as keyof typeof activityMultipliers)}>
+            <Select inputProps={{ 'aria-label': 'Activity Level' }} value={activity} onChange={(e) => setActivity(e.target.value as keyof typeof activityMultipliers)}>
               {Object.entries(activityMultipliers).map(([key, item]) => (
                 <MenuItem key={key} value={key}>{item.label}</MenuItem>
               ))}
@@ -130,7 +130,7 @@ const CalorieDeficitCalculatorContent = () => {
         <Box sx={{ mb: 4 }}>
           <Typography gutterBottom>Deficit Pace</Typography>
           <FormControl fullWidth>
-            <Select value={deficit} onChange={(e) => setDeficit(e.target.value as keyof typeof deficitTiers)}>
+            <Select inputProps={{ 'aria-label': 'Calorie deficit' }} value={deficit} onChange={(e) => setDeficit(e.target.value as keyof typeof deficitTiers)}>
               {Object.entries(deficitTiers).map(([key, item]) => (
                 <MenuItem key={key} value={key}>{item.label}</MenuItem>
               ))}
@@ -146,7 +146,7 @@ const CalorieDeficitCalculatorContent = () => {
             onFocus={(e) => e.target.select()}
             value={Number.isNaN(targetLoss) ? '' : targetLoss}
             onChange={(e) => setTargetLoss(e.target.value === '' ? NaN : Number(e.target.value))}
-            slotProps={{ input: { endAdornment: <InputAdornment position="end">kg</InputAdornment> } }}
+            slotProps={{ htmlInput: { 'aria-label': 'Target weight loss' }, input: { endAdornment: <InputAdornment position="end">kg</InputAdornment> } }}
           />
         </Box>
       </Box>

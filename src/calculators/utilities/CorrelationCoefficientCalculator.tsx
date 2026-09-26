@@ -119,7 +119,7 @@ const CorrelationCoefficientCalculator = () => {
                   value={Number.isNaN(p.y) ? '' : p.y}
                   onChange={(e) => updatePoint(p.id, 'y', e.target.value === '' ? NaN : Number(e.target.value))}
                 />
-                <IconButton color="error" size="small" onClick={() => removePoint(p.id)} disabled={points.length <= 2}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removePoint(p.id)} disabled={points.length <= 2}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>
@@ -130,7 +130,7 @@ const CorrelationCoefficientCalculator = () => {
 
         <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center', height: 'fit-content' }}>
           <Typography variant="body2" color="text.secondary">Correlation Coefficient (r)</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>{r !== null ? r.toFixed(4) : '—'}</Typography>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>{r !== null ? r.toFixed(4) : '—'}</Typography>
         </Paper>
       </Box>
 

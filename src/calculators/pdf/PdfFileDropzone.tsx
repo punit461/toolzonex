@@ -62,6 +62,7 @@ const PdfFileDropzone = ({ onFilesSelected, multiple = false, accept = 'applicat
           <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 1 }}>
             Click or drop to replace
           </Typography>
+          <Typography variant="caption" color="text.secondary" sx={{ display: 'block' }}>{privacyNote}</Typography>
         </Box>
       ) : (
         <Box>
@@ -70,9 +71,17 @@ const PdfFileDropzone = ({ onFilesSelected, multiple = false, accept = 'applicat
           <Typography variant="caption" color="text.secondary">{privacyNote}</Typography>
         </Box>
       )}
-      {selectedNames.length === 0 && (
-        <Button size="small" sx={{ mt: 2 }} variant="outlined">Choose File{multiple ? 's' : ''}</Button>
-      )}
+      {/* The keyboard route into every PDF tool: the dashed area is mouse-only,
+          and this button used to vanish once a file was chosen, leaving
+          keyboard users no way to pick a different one. */}
+      <Button
+        size="small"
+        sx={{ mt: 2 }}
+        variant="outlined"
+        onClick={(e) => { e.stopPropagation(); inputRef.current?.click(); }}
+      >
+        {selectedNames.length > 0 ? `Replace file${multiple ? 's' : ''}` : `Choose File${multiple ? 's' : ''}`}
+      </Button>
     </Box>
   );
 };

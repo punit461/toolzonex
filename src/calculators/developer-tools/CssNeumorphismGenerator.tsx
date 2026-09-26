@@ -52,15 +52,15 @@ box-shadow: ${boxShadow};`;
         <TextField label="Base Background Color" type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} sx={{ width: { xs: '100%', sm: '50%' } }} />
         <Box>
           <Typography gutterBottom>Shadow Distance: {distance}px</Typography>
-          <Slider value={distance} onChange={(_, v) => setDistance(v as number)} min={1} max={30} />
+          <Slider aria-label={`Shadow Distance: ${distance}px`} value={distance} onChange={(_, v) => setDistance(v as number)} min={1} max={30} />
         </Box>
         <Box>
           <Typography gutterBottom>Blur Radius: {blurRadius}px</Typography>
-          <Slider value={blurRadius} onChange={(_, v) => setBlurRadius(v as number)} min={0} max={60} />
+          <Slider aria-label={`Blur Radius: ${blurRadius}px`} value={blurRadius} onChange={(_, v) => setBlurRadius(v as number)} min={0} max={60} />
         </Box>
         <Box>
           <Typography gutterBottom>Shadow Intensity: {intensity.toFixed(2)}</Typography>
-          <Slider value={intensity} onChange={(_, v) => setIntensity(v as number)} min={0.02} max={0.3} step={0.01} />
+          <Slider aria-label="Shadow Intensity" value={intensity} onChange={(_, v) => setIntensity(v as number)} min={0.02} max={0.3} step={0.01} />
         </Box>
       </Box>
 

@@ -98,7 +98,7 @@ const RoofingCalculatorContent = () => {
           {result ? (
             <>
               <Typography variant="body2" color="text.secondary" gutterBottom>Roofing Squares Needed</Typography>
-              <Typography variant="h2" fontWeight={800} color="primary.main">{result.squares.toFixed(2)}</Typography>
+              <Typography component="p" variant="h2" fontWeight={800} color="primary.main">{result.squares.toFixed(2)}</Typography>
               <Typography variant="body2" color="text.secondary" mt={1} mb={2}>
                 (1 square = 100 sq ft)
               </Typography>

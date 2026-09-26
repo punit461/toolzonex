@@ -69,7 +69,7 @@ const ExtractHyperlinksContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleExtract} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Extracting Links...</> : 'Extract Hyperlinks'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Extracting Links...</> : 'Extract Hyperlinks'}
       </Button>
 
       {links && (
@@ -81,7 +81,7 @@ const ExtractHyperlinksContent = () => {
               <Typography variant="body2" color="text.secondary" gutterBottom>
                 Found {links.length} hyperlink{links.length !== 1 ? 's' : ''}
               </Typography>
-              <List sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', maxHeight: 400, overflow: 'auto' }}>
+              <List sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', maxHeight: 400, overflow: 'auto' }}>
                 {links.map((link, i) => (
                   <ListItem key={`${link.url}-${i}`} divider>
                     <Chip label={`Page ${link.pageNumber}`} size="small" sx={{ mr: 2 }} />

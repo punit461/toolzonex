@@ -81,7 +81,7 @@ const PrimeNumberCheckerContent = () => {
               borderRadius: 4
             }}
           >
-            <Typography variant="h3" sx={{ fontWeight: 800, mb: 1 }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 800, mb: 1 }}>
               {result.isPrime ? "It's a Prime!" : "Not a Prime."}
             </Typography>
             <Typography variant="h6">
@@ -116,7 +116,7 @@ const PrimeNumberCheckerContent = () => {
             )}
           </Paper>
         ) : (
-          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'grey.50' }}>
+          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'action.hover' }}>
             <Typography color="text.secondary" align="center">
               Enter a number and click Check to see if it is a prime number.
             </Typography>

@@ -102,7 +102,7 @@ const GratuityCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(basicSalary) ? '' : basicSalary}
               onChange={(e) => setBasicSalary(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Basic Salary (Monthly)' }, input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
             />
           </Box>
           
@@ -115,7 +115,7 @@ const GratuityCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(dearnessAllowance) ? '' : dearnessAllowance}
               onChange={(e) => setDearnessAllowance(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Dearness Allowance (DA)' }, input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
             />
             <Typography variant="caption" color="text.secondary">Enter 0 if not applicable</Typography>
           </Box>
@@ -129,7 +129,7 @@ const GratuityCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(yearsOfService) ? '' : yearsOfService}
               onChange={(e) => setYearsOfService(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">Yrs</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Years of Service' }, input: { endAdornment: <InputAdornment position="end">Yrs</InputAdornment> } }}
             />
           </Box>
         </Box>
@@ -149,7 +149,7 @@ const GratuityCalculator = () => {
               <Box sx={{ textAlign: 'center', width: '100%' }}>
                 <Typography variant="h6" color="text.secondary" gutterBottom>Estimated Gratuity Amount</Typography>
                 
-                <Typography variant="h2" sx={{ fontWeight: 800, color: 'primary.main', my: 3 }}>
+                <Typography component="p" variant="h2" sx={{ fontWeight: 800, color: 'primary.main', my: 3 }}>
                   ₹ {Math.round(gratuity).toLocaleString('en-IN')}
                 </Typography>
                 

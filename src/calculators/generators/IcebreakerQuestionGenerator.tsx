@@ -86,7 +86,7 @@ const IcebreakerQuestionGeneratorContent = () => {
 
   return (
     <Box>
-      <Paper sx={{ p: 4, mb: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white', minHeight: 100, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <Paper sx={{ p: 4, mb: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText', minHeight: 100, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <Typography variant="h5" fontWeight="bold">{ICEBREAKERS[index]}</Typography>
       </Paper>
       <Button variant="contained" startIcon={<ShuffleIcon />} onClick={regenerate}>

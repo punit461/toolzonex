@@ -81,7 +81,7 @@ function OutlineRow({ item, depth }: { item: OutlineItem; depth: number }) {
           pl: 2 + indent,
           borderBottom: '1px solid',
           borderColor: 'grey.100',
-          '&:hover': { bgcolor: 'grey.50' },
+          '&:hover': { bgcolor: 'action.hover' },
         }}
       >
         <AccountTreeIcon fontSize="small" sx={{ color: depth === 0 ? 'primary.main' : 'grey.400', mr: 0.5 }} />
@@ -177,7 +177,7 @@ const PdfOutlineViewerContent = () => {
             <Chip label={`${maxDepth(outline)} levels deep`} size="small" color="secondary" variant="outlined" />
             <Chip label={`${pageCount} pages`} size="small" variant="outlined" />
           </Box>
-          <Box sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', overflow: 'hidden' }}>
+          <Box sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', overflow: 'hidden' }}>
             {outline.map((item, i) => (
               <OutlineRow key={i} item={item} depth={0} />
             ))}

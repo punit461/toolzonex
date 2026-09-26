@@ -134,7 +134,7 @@ const TimeZoneFinderContent = () => {
         <Typography variant="overline" color="text.secondary">
           {selected.city}, {selected.country}
         </Typography>
-        <Typography variant="h3" fontWeight={800} sx={{ my: 1 }}>
+        <Typography component="p" variant="h3" fontWeight={800} sx={{ my: 1 }}>
           {info ? info.time : '--:--:--'}
         </Typography>
         <Typography variant="body1" color="text.secondary">

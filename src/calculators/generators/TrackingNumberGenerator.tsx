@@ -65,7 +65,7 @@ const TrackingNumberGeneratorContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <FormControl fullWidth>
           <InputLabel>Carrier Format</InputLabel>
-          <Select value={carrier} label="Carrier Format" onChange={(e) => setCarrier(e.target.value as Carrier)}>
+          <Select inputProps={{ 'aria-label': 'Carrier Format' }} value={carrier} label="Carrier Format" onChange={(e) => setCarrier(e.target.value as Carrier)}>
             {(Object.keys(CARRIER_LABELS) as Carrier[]).map((c) => (
               <MenuItem key={c} value={c}>{CARRIER_LABELS[c]}</MenuItem>
             ))}
@@ -73,7 +73,7 @@ const TrackingNumberGeneratorContent = () => {
         </FormControl>
         <FormControl fullWidth>
           <InputLabel>Count to Generate</InputLabel>
-          <Select value={count} label="Count to Generate" onChange={(e) => setCount(Number(e.target.value))}>
+          <Select inputProps={{ 'aria-label': 'Count to Generate' }} value={count} label="Count to Generate" onChange={(e) => setCount(Number(e.target.value))}>
             {[1, 5, 10, 20, 50].map((n) => (
               <MenuItem key={n} value={n}>{n}</MenuItem>
             ))}

@@ -91,7 +91,7 @@ const HomeEnergyUsageCalculator = () => {
           />
           <FormControl fullWidth>
             <InputLabel>Usage Intensity</InputLabel>
-            <Select label="Usage Intensity" value={intensity} onChange={(e) => setIntensity(e.target.value as Intensity)}>
+            <Select inputProps={{ 'aria-label': 'Usage Intensity' }} label="Usage Intensity" value={intensity} onChange={(e) => setIntensity(e.target.value as Intensity)}>
               <MenuItem value="low">{LABELS.low}</MenuItem>
               <MenuItem value="medium">{LABELS.medium}</MenuItem>
               <MenuItem value="high">{LABELS.high}</MenuItem>
@@ -106,9 +106,9 @@ const HomeEnergyUsageCalculator = () => {
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Results</Typography>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Monthly Cost</Typography>
-            <Typography variant="h3" fontWeight="bold">{money(result.monthlyCost)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{money(result.monthlyCost)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, mb: 1, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Monthly Usage</Typography>

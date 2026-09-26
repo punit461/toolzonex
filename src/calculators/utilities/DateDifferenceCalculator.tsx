@@ -94,7 +94,7 @@ const DateDifferenceCalculator = () => {
               type="date"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
-              slotProps={{ inputLabel: { shrink: true } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Start Date' }, inputLabel: { shrink: true } }}
             />
           </Box>
           <Box>
@@ -105,7 +105,7 @@ const DateDifferenceCalculator = () => {
               type="date"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
-              slotProps={{ inputLabel: { shrink: true } }}
+              slotProps={{ htmlInput: { 'aria-label': 'End Date' }, inputLabel: { shrink: true } }}
             />
           </Box>
         </Box>
@@ -113,7 +113,7 @@ const DateDifferenceCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Total Difference</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 1 }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 1 }}>
               {totalDays.toLocaleString()} Days
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>

@@ -192,7 +192,7 @@ const CapitalGainsTaxCalculator = () => {
             <TextField
               fullWidth type="number" value={otherIncome} onFocus={(e) => e.target.select()}
               onChange={(e) => setOtherIncome(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Other Annual Income (before this gain)' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
             />
           </Box>
 
@@ -201,7 +201,7 @@ const CapitalGainsTaxCalculator = () => {
             <TextField
               fullWidth type="number" value={gain} onFocus={(e) => e.target.select()}
               onChange={(e) => setGain(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Capital Gain Amount' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
             />
           </Box>
 
@@ -219,7 +219,7 @@ const CapitalGainsTaxCalculator = () => {
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mb: 3 }}>
             <Box>
               <Typography gutterBottom>Filing Status</Typography>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Filing Status' }}
                 fullWidth value={filingStatus}
                 onChange={(e) => setFilingStatus(e.target.value as FilingStatus)}
               >
@@ -230,7 +230,7 @@ const CapitalGainsTaxCalculator = () => {
             </Box>
             <Box>
               <Typography gutterBottom>State (optional)</Typography>
-              <Select
+              <Select inputProps={{ 'aria-label': 'State (optional)' }}
                 fullWidth value={stateSlug}
                 onChange={(e) => setStateSlug(e.target.value)}
               >
@@ -248,7 +248,7 @@ const CapitalGainsTaxCalculator = () => {
             <Typography variant="h6" color="text.secondary">
               Total Tax on This Gain
             </Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 3, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 3, color: 'primary.main' }}>
               {formatUSD(result.totalTax)}
             </Typography>
 

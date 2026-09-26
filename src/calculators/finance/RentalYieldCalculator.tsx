@@ -36,7 +36,7 @@ const RentalYieldCalculatorContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography>Currency</Typography>
-          <Select
+          <Select inputProps={{ 'aria-label': 'Currency' }}
             size="small"
             value={currency}
             onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -96,7 +96,7 @@ const RentalYieldCalculatorContent = () => {
           sx={{
             p: 4,
             bgcolor: 'primary.main',
-            color: 'white',
+            color: 'primary.contrastText',
             borderRadius: 4,
             minHeight: 200,
             display: 'flex',
@@ -105,7 +105,7 @@ const RentalYieldCalculatorContent = () => {
             alignItems: 'center',
           }}
         >
-          <Typography variant="h3" fontWeight="bold">
+          <Typography component="p" variant="h3" fontWeight="bold">
             {netYield !== null ? `${netYield.toFixed(2)}%` : '--'}
           </Typography>
           <Typography variant="h6" sx={{ opacity: 0.9 }}>

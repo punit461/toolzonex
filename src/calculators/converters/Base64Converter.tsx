@@ -55,7 +55,7 @@ const Base64Content = () => {
         <Typography variant="subtitle1" fontWeight="600">
           {mode === 'encode' ? 'Plain Text Input:' : 'Base64 Input:'}
         </Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': mode === 'encode' ? 'Plain Text Input' : 'Base64 Input' } }}
           multiline
           rows={10}
           fullWidth
@@ -86,7 +86,7 @@ const Base64Content = () => {
             Copy
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': mode === 'encode' ? 'Base64 Output' : 'Plain Text Output' } }}
           multiline
           rows={10}
           fullWidth

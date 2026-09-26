@@ -145,7 +145,7 @@ const CurrencyConverter = () => {
         <Box>
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom>Amount</Typography>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Amount' } }}
               fullWidth
               variant="outlined"
               type="number"
@@ -158,7 +158,7 @@ const CurrencyConverter = () => {
           <Box sx={{ mb: 3, display: 'flex', gap: 1.5, alignItems: 'center' }}>
             <Box sx={{ flex: 1 }}>
               <Typography gutterBottom>From</Typography>
-              <Select fullWidth value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)}>
+              <Select inputProps={{ 'aria-label': 'Currency' }} fullWidth value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)}>
                 {MAJOR_CURRENCIES.map((c) => (
                   <MenuItem key={c.code} value={c.code}>{c.label}</MenuItem>
                 ))}
@@ -171,7 +171,7 @@ const CurrencyConverter = () => {
 
             <Box sx={{ flex: 1 }}>
               <Typography gutterBottom>To</Typography>
-              <Select fullWidth value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
+              <Select inputProps={{ 'aria-label': 'Currency' }} fullWidth value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
                 {MAJOR_CURRENCIES.map((c) => (
                   <MenuItem key={c.code} value={c.code}>{c.label}</MenuItem>
                 ))}
@@ -191,7 +191,7 @@ const CurrencyConverter = () => {
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             {loading && (
               <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
-                <CircularProgress size={32} />
+                <CircularProgress aria-label="Loading" size={32} />
                 <Typography variant="body2" color="text.secondary">Fetching live exchange rates...</Typography>
               </Box>
             )}
@@ -204,7 +204,7 @@ const CurrencyConverter = () => {
               <>
                 <Typography variant="h6" color="text.secondary">Converted Amount</Typography>
                 {convertedAmount !== null ? (
-                  <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main' }}>
+                  <Typography component="p" variant="h3" sx={{ fontWeight: 700, color: 'primary.main' }}>
                     {convertedAmount.toLocaleString(undefined, { maximumFractionDigits: 2 })} {toCurrency}
                   </Typography>
                 ) : (

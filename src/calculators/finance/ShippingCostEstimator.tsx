@@ -5,6 +5,7 @@ import { Box, TextField, Typography, Paper, Stack } from '@mui/material';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 const money = (v: number) => `$${v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
 const TIERS = [
@@ -71,7 +72,7 @@ const ShippingCostEstimator = () => {
               const cost = t.base + t.perLb * w;
               const selected = tier === t.key;
               return (
-                <Paper
+                <Paper {...keyboardClickable} aria-pressed={tier === t.key}
                   key={t.key}
                   onClick={() => setTier(t.key)}
                   sx={{

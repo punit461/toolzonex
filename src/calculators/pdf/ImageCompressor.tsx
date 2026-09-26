@@ -95,7 +95,7 @@ const ImageCompressorContent = () => {
         <Typography variant="caption" color="text.secondary">
           Quality: {Math.round(quality * 100)}%
         </Typography>
-        <Slider
+        <Slider aria-label="Quality"
           value={quality}
           onChange={(_, v) => { setQuality(v as number); setPreset(''); }}
           min={0.05}

@@ -110,7 +110,7 @@ const WordWrapToolContent = () => {
              </Button>
           )}
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Result' } }}
           value={result}
           multiline
           rows={12}

@@ -81,7 +81,7 @@ const ExtensionCordLoadCalculatorContent = () => {
         <Typography variant="subtitle1" fontWeight={600} mb={2}>Result</Typography>
         {result ? (
           <>
-            <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="h6">Voltage Drop</Typography>
               <Typography variant="h6" fontWeight="bold">{result.drop.toFixed(2)} V ({result.dropPct.toFixed(1)}%)</Typography>
             </Paper>

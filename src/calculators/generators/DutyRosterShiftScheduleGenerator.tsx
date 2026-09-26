@@ -102,11 +102,11 @@ const DutyRosterShiftScheduleGeneratorContent = () => {
               <Box sx={{ display: 'flex', gap: 1, mb: 1, flexWrap: 'wrap', alignItems: 'center' }}>
                 <TextField size="small" label="Day" value={s.day} onChange={(e) => updateShift(s.id, { day: e.target.value })} sx={{ flex: 1, minWidth: 110 }} />
                 <TextField size="small" label="Time slot" value={s.timeSlot} onChange={(e) => updateShift(s.id, { timeSlot: e.target.value })} sx={{ flex: 1, minWidth: 110 }} />
-                <IconButton onClick={() => removeShift(s.id)} disabled={shifts.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeShift(s.id)} disabled={shifts.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Assigned staff' }}
                 size="small"
                 multiple
                 fullWidth

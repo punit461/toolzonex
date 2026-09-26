@@ -64,7 +64,7 @@ const SortTextLinesContent = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           <FormControl fullWidth>
             <InputLabel>Sort Mode</InputLabel>
-            <Select value={mode} label="Sort Mode" onChange={(e) => setMode(e.target.value as SortMode)}>
+            <Select inputProps={{ 'aria-label': 'Sort Mode' }} value={mode} label="Sort Mode" onChange={(e) => setMode(e.target.value as SortMode)}>
               <MenuItem value="alphabetical">Alphabetical</MenuItem>
               <MenuItem value="numerical">Numerical (parse each line as a number)</MenuItem>
               <MenuItem value="length">By Line Length</MenuItem>
@@ -73,7 +73,7 @@ const SortTextLinesContent = () => {
 
           <FormControl fullWidth>
             <InputLabel>Direction</InputLabel>
-            <Select value={direction} label="Direction" onChange={(e) => setDirection(e.target.value as 'asc' | 'desc')}>
+            <Select inputProps={{ 'aria-label': 'Direction' }} value={direction} label="Direction" onChange={(e) => setDirection(e.target.value as 'asc' | 'desc')}>
               <MenuItem value="asc">Ascending (A-Z / Low-High)</MenuItem>
               <MenuItem value="desc">Descending (Z-A / High-Low)</MenuItem>
             </Select>
@@ -97,7 +97,7 @@ const SortTextLinesContent = () => {
           <Typography variant="subtitle1" fontWeight="600">Sorted Result</Typography>
           <Button size="small" startIcon={<ContentCopyIcon />} onClick={copy} disabled={!sorted}>Copy</Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Sorted Result' } }}
           value={sorted}
           multiline
           rows={14}

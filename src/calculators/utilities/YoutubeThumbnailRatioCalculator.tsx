@@ -102,16 +102,16 @@ const YoutubeThumbnailRatioCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Result</Typography>
           {mode === 'fromWidth' && (
-            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="body2">Proportional Height</Typography>
-              <Typography variant="h3" fontWeight="bold">{calculatedHeight > 0 ? Math.round(calculatedHeight) : '—'}</Typography>
+              <Typography component="p" variant="h3" fontWeight="bold">{calculatedHeight > 0 ? Math.round(calculatedHeight) : '—'}</Typography>
               <Typography variant="body2">px</Typography>
             </Paper>
           )}
           {mode === 'fromHeight' && (
-            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="body2">Proportional Width</Typography>
-              <Typography variant="h3" fontWeight="bold">{calculatedWidth > 0 ? Math.round(calculatedWidth) : '—'}</Typography>
+              <Typography component="p" variant="h3" fontWeight="bold">{calculatedWidth > 0 ? Math.round(calculatedWidth) : '—'}</Typography>
               <Typography variant="body2">px</Typography>
             </Paper>
           )}

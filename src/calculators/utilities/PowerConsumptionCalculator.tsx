@@ -107,7 +107,7 @@ const PowerConsumptionCalculatorContent = () => {
           sx={{
             p: 4,
             bgcolor: 'primary.main',
-            color: 'white',
+            color: 'primary.contrastText',
             borderRadius: 4,
             minHeight: 200,
             display: 'flex',
@@ -119,7 +119,7 @@ const PowerConsumptionCalculatorContent = () => {
           <Typography variant="body1" sx={{ opacity: 0.9 }}>
             Energy Used Per Day
           </Typography>
-          <Typography variant="h3" fontWeight="bold">
+          <Typography component="p" variant="h3" fontWeight="bold">
             {kwhPerDay.toFixed(2)} kWh
           </Typography>
           <Typography variant="body1" sx={{ opacity: 0.9, mt: 1 }}>

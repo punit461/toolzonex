@@ -125,7 +125,7 @@ const BannerSizeCalculator = () => {
           </Box>
           <FormControl fullWidth>
             <InputLabel>Size Unit</InputLabel>
-            <Select label="Size Unit" value={unit} onChange={(e) => setUnit(e.target.value as SizeUnit)}>
+            <Select inputProps={{ 'aria-label': 'Size Unit' }} label="Size Unit" value={unit} onChange={(e) => setUnit(e.target.value as SizeUnit)}>
               <MenuItem value="ft">Feet</MenuItem>
               <MenuItem value="in">Inches</MenuItem>
               <MenuItem value="m">Meters</MenuItem>
@@ -134,7 +134,7 @@ const BannerSizeCalculator = () => {
           </FormControl>
           <FormControl fullWidth>
             <InputLabel>Print Resolution (DPI)</InputLabel>
-            <Select label="Print Resolution (DPI)" value={dpi} onChange={(e) => setDpi(Number(e.target.value))}>
+            <Select inputProps={{ 'aria-label': 'Print Resolution (DPI)' }} label="Print Resolution (DPI)" value={dpi} onChange={(e) => setDpi(Number(e.target.value))}>
               {DPI_PRESETS.map((d) => (
                 <MenuItem key={d} value={d}>{d} DPI</MenuItem>
               ))}
@@ -143,7 +143,7 @@ const BannerSizeCalculator = () => {
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Required Pixel Dimensions</Typography>
             <Typography variant="h4" fontWeight="bold">
               {pixelWidth.toLocaleString('en-US')} × {pixelHeight.toLocaleString('en-US')} px

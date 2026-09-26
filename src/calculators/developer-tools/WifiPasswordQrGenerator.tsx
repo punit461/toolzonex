@@ -73,7 +73,7 @@ const WifiPasswordQrGeneratorContent = () => {
         <TextField label="Network Name (SSID)" value={ssid} onChange={(e) => setSsid(e.target.value)} fullWidth required />
         <FormControl fullWidth>
           <InputLabel>Encryption</InputLabel>
-          <Select value={encryption} label="Encryption" onChange={(e) => setEncryption(e.target.value as Encryption)}>
+          <Select inputProps={{ 'aria-label': 'Encryption' }} value={encryption} label="Encryption" onChange={(e) => setEncryption(e.target.value as Encryption)}>
             <MenuItem value="WPA">WPA/WPA2</MenuItem>
             <MenuItem value="WEP">WEP</MenuItem>
             <MenuItem value="nopass">None (Open Network)</MenuItem>

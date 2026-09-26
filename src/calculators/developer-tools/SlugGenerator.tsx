@@ -94,7 +94,7 @@ const SlugGenerator = () => {
             variant="outlined"
             value={slug}
             inputProps={{ readOnly: true }}
-            slotProps={{
+            slotProps={{ htmlInput: { 'aria-label': 'Generated Slug' },
               input: {
                 endAdornment: (
                   <InputAdornment position="end">

@@ -85,7 +85,7 @@ const HealthyWeightRangeCalculator = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Height Unit</InputLabel>
-            <Select label="Height Unit" value={unit} onChange={(e) => setUnit(e.target.value as 'cm' | 'ft')}>
+            <Select inputProps={{ 'aria-label': 'Height Unit' }} label="Height Unit" value={unit} onChange={(e) => setUnit(e.target.value as 'cm' | 'ft')}>
               <MenuItem value="cm">Centimeters (cm)</MenuItem>
               <MenuItem value="ft">Feet & Inches</MenuItem>
             </Select>
@@ -111,7 +111,7 @@ const HealthyWeightRangeCalculator = () => {
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Healthy Weight Range</Typography>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">In Kilograms</Typography>
             <Typography variant="h5" fontWeight="bold">
               {result ? `${result.minKg.toFixed(1)} – ${result.maxKg.toFixed(1)} kg` : '—'}

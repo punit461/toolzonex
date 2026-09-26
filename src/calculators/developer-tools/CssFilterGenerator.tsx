@@ -56,7 +56,7 @@ const CssFilterGeneratorContent = () => {
         {SLIDERS.map((s) => (
           <Box key={s.key}>
             <Typography variant="subtitle2" mb={0.5}>{s.label}: {filters[s.key]}{s.unit}</Typography>
-            <Slider
+            <Slider aria-label={s.label}
               value={filters[s.key]}
               min={s.min}
               max={s.max}

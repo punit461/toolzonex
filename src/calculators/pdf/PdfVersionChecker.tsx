@@ -89,14 +89,14 @@ const PdfVersionCheckerContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleCheck} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Checking...</> : 'Check Version'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Checking...</> : 'Check Version'}
       </Button>
 
       {result && (
         <Paper variant="outlined" sx={{ mt: 3, p: 2.5 }}>
           <Box sx={{ textAlign: 'center', mb: 3 }}>
             <Typography variant="caption" color="text.secondary">PDF Version</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 'bold' }}>{result.version}</Typography>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 'bold' }}>{result.version}</Typography>
           </Box>
           <Alert severity="info" sx={{ mb: 2 }}>{result.compatibility}</Alert>
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr 1fr' }, gap: 2 }}>

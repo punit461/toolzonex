@@ -98,7 +98,7 @@ const RobotsTxtGeneratorContent = () => {
           <Box key={idx} sx={{ display: 'flex', gap: 1, mb: 1, alignItems: 'center' }}>
             <FormControl size="small" sx={{ minWidth: 120 }}>
               <InputLabel>Type</InputLabel>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Type' }}
                 value={rule.type}
                 label="Type"
                 onChange={(e) => updateRule(idx, 'type', e.target.value)}
@@ -107,14 +107,14 @@ const RobotsTxtGeneratorContent = () => {
                 <MenuItem value="disallow">Disallow</MenuItem>
               </Select>
             </FormControl>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Rules' } }}
               size="small"
               value={rule.path}
               onChange={(e) => updateRule(idx, 'path', e.target.value)}
               placeholder="/path/"
               fullWidth
             />
-            <IconButton onClick={() => removeRule(idx)} size="small" color="error">
+            <IconButton aria-label="Remove" onClick={() => removeRule(idx)} size="small" color="error">
               <DeleteIcon />
             </IconButton>
           </Box>
@@ -151,7 +151,7 @@ const RobotsTxtGeneratorContent = () => {
               {copied ? 'Copied!' : 'Copy'}
             </Button>
           </Box>
-          <Paper sx={{ p: 2, bgcolor: 'grey.50', fontFamily: 'monospace', whiteSpace: 'pre-wrap', overflow: 'auto' }}>
+          <Paper sx={{ p: 2, bgcolor: 'action.hover', fontFamily: 'monospace', whiteSpace: 'pre-wrap', overflow: 'auto' }}>
             {output}
           </Paper>
         </Paper>

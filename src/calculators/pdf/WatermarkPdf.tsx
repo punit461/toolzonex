@@ -67,7 +67,7 @@ const WatermarkPdfContent = () => {
           sx={{ mb: 3 }}
         />
         <Typography gutterBottom>Opacity: {Math.round(opacity * 100)}%</Typography>
-        <Slider value={opacity} min={0.05} max={0.6} step={0.05} onChange={(_, v) => setOpacity(v as number)} />
+        <Slider aria-label="Opacity" value={opacity} min={0.05} max={0.6} step={0.05} onChange={(_, v) => setOpacity(v as number)} />
       </Box>
 
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}

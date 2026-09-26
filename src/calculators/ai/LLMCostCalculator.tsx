@@ -164,7 +164,7 @@ const LLMCostCalculator = () => {
         <Box sx={{ minWidth: 0 }}>
           <Box sx={{ mb: 3 }}>
             <Typography gutterBottom>Model</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Model' }}
               fullWidth
               value={modelId}
               onChange={(e) => setModelId(e.target.value)}
@@ -180,7 +180,7 @@ const LLMCostCalculator = () => {
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mb: 3 }}>
             <Box>
               <Typography gutterBottom>Input tokens</Typography>
-              <TextField
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Input tokens' } }}
                 fullWidth
                 type="number"
                 value={inputTokens}
@@ -190,7 +190,7 @@ const LLMCostCalculator = () => {
             </Box>
             <Box>
               <Typography gutterBottom>Output tokens</Typography>
-              <TextField
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Output tokens' } }}
                 fullWidth
                 type="number"
                 value={outputTokens}
@@ -208,7 +208,7 @@ const LLMCostCalculator = () => {
               value={monthlyRequests}
               onFocus={(e) => e.target.select()}
               onChange={(e) => setMonthlyRequests(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">req/mo</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Requests per month' }, input: { endAdornment: <InputAdornment position="end">req/mo</InputAdornment> } }}
             />
           </Box>
 
@@ -222,7 +222,7 @@ const LLMCostCalculator = () => {
               <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 1.5 }}>
                 Estimated at ~{CHARS_PER_TOKEN} characters per token. Paste your prompt and expected response below.
               </Typography>
-              <TextField
+              <TextField slotProps={{ htmlInput: { 'aria-label': `Estimated at ~${CHARS_PER_TOKEN} characters per token. Paste your prompt and expected response below.` } }}
                 fullWidth
                 multiline
                 minRows={3}
@@ -260,7 +260,7 @@ const LLMCostCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Cost per Request</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 3, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 3, color: 'primary.main' }}>
               {formatUSD(costPerRequest)}
             </Typography>
 
@@ -285,10 +285,10 @@ const LLMCostCalculator = () => {
             </Box>
 
             {(inputCost > 0 || outputCost > 0) && (
-              <Box sx={{ height: 220 }}>
+              <Box aria-hidden="true" sx={{ height: 220 }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
-                    <Pie
+                    <Pie rootTabIndex={-1}
                       data={chartData}
                       cx="50%"
                       cy="50%"

@@ -58,7 +58,7 @@ const PdfPasswordStrengthCheckerContent = () => {
       <PdfFileDropzone onFilesSelected={(files) => { setFile(files[0] ?? null); setResult(null); }} label="PDF file" selectedNames={file ? [file.name] : []} />
 
       {result && (
-        <Box sx={{ mt: 3, p: 3, borderRadius: 2, bgcolor: 'grey.50', border: '1px solid', borderColor: 'grey.300' }}>
+        <Box sx={{ mt: 3, p: 3, borderRadius: 2, bgcolor: 'action.hover', border: '1px solid', borderColor: 'grey.300' }}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
             {result.encrypted
               ? <LockIcon color="warning" />

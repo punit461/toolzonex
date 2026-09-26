@@ -182,7 +182,7 @@ const CrosswordPuzzleGeneratorContent = () => {
             <Box key={index} sx={{ p: 1.5, borderBottom: '1px solid #eee', position: 'relative' }}>
               <Typography variant="subtitle2" fontWeight="bold">{item.word}</Typography>
               <Typography variant="body2" color="text.secondary" noWrap>{item.clue}</Typography>
-              <IconButton 
+              <IconButton aria-label="Remove" 
                 size="small" 
                 color="error" 
                 onClick={() => handleRemoveItem(index)}

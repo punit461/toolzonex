@@ -71,7 +71,7 @@ const ChoreAssignmentGeneratorContent = () => {
             {members.map((m) => (
               <Box key={m.id} sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
                 <TextField size="small" fullWidth value={m.name} placeholder="Name" onChange={(e) => updateMember(m.id, e.target.value)} />
-                <IconButton size="small" onClick={() => removeMember(m.id)} disabled={members.length <= 1}>
+                <IconButton aria-label="Remove" size="small" onClick={() => removeMember(m.id)} disabled={members.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>
@@ -86,7 +86,7 @@ const ChoreAssignmentGeneratorContent = () => {
             {chores.map((c) => (
               <Box key={c.id} sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
                 <TextField size="small" fullWidth value={c.name} placeholder="Chore" onChange={(e) => updateChore(c.id, e.target.value)} />
-                <IconButton size="small" onClick={() => removeChore(c.id)} disabled={chores.length <= 1}>
+                <IconButton aria-label="Remove" size="small" onClick={() => removeChore(c.id)} disabled={chores.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

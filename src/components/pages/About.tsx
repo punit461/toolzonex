@@ -1,6 +1,11 @@
 'use client';
 
-import { Box, Typography, Container, Paper } from '@mui/material';
+import { Box, Typography, Container, Paper, Link } from '@mui/material';
+import { CONTACT_EMAIL } from '../../data/siteInfo';
+
+// Screen-reader-only text (e.g. "opens in a new tab" on external links).
+const srOnly = { border: 0, clip: 'rect(0 0 0 0)', height: '1px', margin: '-1px', overflow: 'hidden', padding: 0, position: 'absolute', whiteSpace: 'nowrap', width: '1px' } as const;
+const VisuallyHidden = ({ children }: { children: React.ReactNode }) => <Box component="span" sx={srOnly}>{children}</Box>;
 
 const About = () => {
   return (
@@ -9,42 +14,43 @@ const About = () => {
         <Typography variant="h1" gutterBottom sx={{ mb: 4 }}>
           About ToolZoneX
         </Typography>
-        <Paper elevation={0} sx={{ p: 4, border: '1px solid #E5E5E5', borderRadius: 2 }}>
+        <Paper variant="outlined" sx={{ p: 4, borderRadius: 2 }}>
           <Typography variant="h2" sx={{ mb: 3 }}>
             Our Mission
           </Typography>
           <Typography variant="body1" sx={{ mb: 2 }}>
-            ToolZoneX started as a handful of Indian finance calculators. It has since grown into something bigger: a single platform of 200+ tools spanning finance, health, developer utilities, text processing, file conversion, content generation, and AI cost estimation — the kind of toolkit you would otherwise assemble from a dozen different single-purpose sites, each with its own ads, sign-up wall, or half-finished feature set.
+            ToolZoneX started as a handful of Indian finance calculators. It has since grown into something bigger: a single platform of more than 1,000 tools spanning finance, health, developer utilities, text processing, file conversion, content generation, and AI cost estimation — the kind of toolkit you would otherwise assemble from a dozen different single-purpose sites, each with its own ads, sign-up wall, or half-finished feature set.
           </Typography>
           <Typography variant="body1" sx={{ mb: 2 }}>
-            The scope changed; the standard did not. Whether it is an Indian income tax calculator, a US state paycheck calculator, a JSON formatter, a QR code generator, or a PDF merger, every tool is built to be accurate, fast, and free — one destination instead of ten browser tabs, with no drop in quality when the category changes.
+            The scope changed; the standard did not. Whether it is an Indian income tax calculator, a US state paycheck calculator, a JSON formatter, a QR code generator, or a PDF merger, every tool is meant to be quick to use and free — one destination instead of ten browser tabs. When someone reports a wrong result, it gets fixed.
           </Typography>
 
           <Typography variant="h2" sx={{ mb: 3, mt: 5 }}>
             Why Choose Us?
           </Typography>
           <Typography variant="body1" sx={{ mb: 2 }}>
-            - <strong>Genuinely Broad:</strong> 200+ tools across finance, health, developer utilities, text tools, converters, generators, and AI cost calculators — not a single calculator with a blog bolted on.
+            - <strong>Genuinely Broad:</strong> more than 1,000 tools across finance, health, developer utilities, text tools, converters, generators, and AI cost calculators — not a single calculator with a blog bolted on.
           </Typography>
           <Typography variant="body1" sx={{ mb: 2 }}>
-            - <strong>Domain-Accurate:</strong> Indian tax regimes and health guidelines, real US state paycheck rules, UK/EU VAT, correct formula logic in every category — each tool is built for its actual use case, not adapted from a one-size-fits-all template.
+            - <strong>Built for the Real Rules:</strong> Indian tax regimes and health guidelines, US state paycheck rules, UK/EU VAT — each tool uses the published formula or rates for its case rather than a one-size-fits-all template. Rules and rates change, so check anything important against the official source.
           </Typography>
           <Typography variant="body1" sx={{ mb: 2 }}>
-            - <strong>Privacy First:</strong> All calculations happen right inside your browser. We do not store your personal financial data or health metrics on our servers.
+            - <strong>Privacy First:</strong> Calculations happen in your browser, so the numbers you enter — salary, loans, health metrics — aren&apos;t sent to us. The few tools that need live data (exchange rates, IP lookup, PDF translation) say so on the page.
           </Typography>
           <Typography variant="body1" sx={{ mb: 2 }}>
             - <strong>100% Free:</strong> Every tool is free to use, with no hidden charges or mandatory sign-ups.
           </Typography>
           <Typography variant="body1" sx={{ mb: 2 }}>
-            - <strong>Built to Load Fast:</strong> Every page is statically pre-rendered, so there is no server round-trip standing between you and your answer.
+            - <strong>Built to Load Fast:</strong> Pages are pre-built and calculations run on your device, so results update as you type.
           </Typography>
 
           <Typography variant="body1" sx={{ mt: 4 }}>
-            We are constantly working to bring more valuable tools to you. If you have any suggestions or feedback, please feel free to reach out to us.
+            ToolZoneX is run by Punit Bharadwaj, an individual developer based in Bengaluru, India. It has no paid products and never asks for payment details. Suggestions, corrections and bug reports are welcome at{' '}
+            <Link href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</Link>.
           </Typography>
         </Paper>
 
-        <Paper elevation={0} sx={{ p: 4, mt: 4, border: '1px solid #E5E5E5', borderRadius: 2, bgcolor: '#fcfcfc' }}>
+        <Paper variant="outlined" sx={{ p: 4, mt: 4, borderRadius: 2, bgcolor: 'action.hover' }}>
           <Typography variant="h2" sx={{ mb: 3 }}>
             Meet the Developer
           </Typography>
@@ -59,19 +65,19 @@ const About = () => {
                 That range shows up in what he has shipped: dent-and-scratch detection for automotive manufacturing, government document OCR, a battery conveyor counter, a face-recognition attendance system, an enterprise computer vision platform — and, nights and weekends, ToolZoneX itself.
               </Typography>
               <Typography variant="body1" sx={{ mb: 2 }}>
-                Before AI, he spent years leading quality engineering — building test automation frameworks and running a test team — which is still why every ToolZoneX tool ships with validated logic, not just a clean interface. It is also part of why he won the Innovative Visionary Award at NSPLUS Technologies in 2024.
+                Before AI, he spent years leading quality engineering — building test automation frameworks and running a test team — and that habit of checking the logic, not just the interface, carries over to how ToolZoneX is built. He received the Innovative Visionary Award at NSPLUS Technologies in 2024.
               </Typography>
               <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
                 Want the fuller picture — the AI/ML work, computer vision projects, and everything else he has built? Visit his{' '}
-                <a href="https://punit461.github.io/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600 }}>portfolio</a>.
+                <Link href="https://punit461.github.io/" target="_blank" rel="noopener noreferrer" sx={{ fontWeight: 600 }}>portfolio<VisuallyHidden> (opens in a new tab)</VisuallyHidden></Link>.
               </Typography>
               <Box sx={{ display: 'flex', gap: 2, mt: 2 }}>
-                <a href="https://github.com/punit461" target="_blank" rel="noopener noreferrer" style={{ color: '#171717', textDecoration: 'none', fontWeight: 600 }}>GitHub</a>
-                <a href="https://www.linkedin.com/in/punit461bhardwaj/" target="_blank" rel="noopener noreferrer" style={{ color: '#0077b5', textDecoration: 'none', fontWeight: 600 }}>LinkedIn</a>
-                <a href="mailto:punit461bhardwaj@gmail.com" style={{ color: '#171717', textDecoration: 'none', fontWeight: 600 }}>Email</a>
+                <Link href="https://github.com/punit461" target="_blank" rel="noopener noreferrer" sx={{ fontWeight: 600 }}>GitHub<VisuallyHidden> (opens in a new tab)</VisuallyHidden></Link>
+                <Link href="https://www.linkedin.com/in/punit461bhardwaj/" target="_blank" rel="noopener noreferrer" sx={{ fontWeight: 600 }}>LinkedIn<VisuallyHidden> (opens in a new tab)</VisuallyHidden></Link>
+                <Link href={`mailto:${CONTACT_EMAIL}`} sx={{ fontWeight: 600 }}>Email</Link>
               </Box>
             </Box>
-            <Box sx={{ flex: 1, p: 2, bgcolor: '#fff', borderRadius: 2, border: '1px dashed #ccc' }}>
+            <Box sx={{ flex: 1, p: 2, bgcolor: 'background.paper', borderRadius: 2, border: '1px dashed', borderColor: 'divider' }}>
               <Typography variant="subtitle2" color="text.secondary" sx={{ mb: 1, textTransform: 'uppercase' }}>Tech Arsenal</Typography>
               <Typography variant="body2" sx={{ lineHeight: 1.8 }}>
                 <strong>Generative AI & LLMs:</strong> RAG, Agentic AI Systems, Prompt Engineering, LangChain, Ollama, AI Chatbots, Fine-tuning<br />

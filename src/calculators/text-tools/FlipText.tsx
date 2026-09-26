@@ -70,7 +70,7 @@ const FlipTextContent = () => {
       <Paper variant="outlined" sx={{ p: 2 }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
           <Typography sx={{ fontSize: '1.25rem', wordBreak: 'break-word', fontFamily: 'monospace' }}>{output}</Typography>
-          <IconButton size="small" onClick={copyOutput} sx={{ flexShrink: 0 }}>
+          <IconButton aria-label="Copy" size="small" onClick={copyOutput} sx={{ flexShrink: 0 }}>
             <ContentCopyIcon fontSize="small" />
           </IconButton>
         </Box>

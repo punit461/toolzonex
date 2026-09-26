@@ -58,7 +58,7 @@ const BbcodeToHtmlContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">BBCode Input:</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'BBCode Input' } }}
           multiline
           rows={12}
           fullWidth
@@ -76,7 +76,7 @@ const BbcodeToHtmlContent = () => {
             {copied ? 'Copied!' : 'Copy'}
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'HTML Output' } }}
           multiline
           rows={12}
           fullWidth

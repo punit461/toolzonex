@@ -57,7 +57,7 @@ const ClassroomGroupMakerContent = () => {
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <Typography variant="subtitle1" fontWeight={600} mb={1}>Student Names (one per line)</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Student Names (one per line)' } }}
             multiline
             minRows={10}
             fullWidth

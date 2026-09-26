@@ -77,14 +77,14 @@ const PdfDpiCheckerContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleCheck} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Checking...</> : 'Check DPI'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Checking...</> : 'Check DPI'}
       </Button>
 
       {result && (
         <Paper variant="outlined" sx={{ mt: 3, p: 2.5 }}>
           <Box sx={{ textAlign: 'center', mb: 3 }}>
             <Typography variant="caption" color="text.secondary">Effective DPI</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 'bold' }}>{result.dpi}</Typography>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 'bold' }}>{result.dpi}</Typography>
           </Box>
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr 1fr' }, gap: 2 }}>
             <Box>

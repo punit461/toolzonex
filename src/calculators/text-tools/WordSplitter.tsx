@@ -64,7 +64,7 @@ const WordSplitterContent = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2 }}>
         <FormControl fullWidth>
           <InputLabel>Split By</InputLabel>
-          <Select value={splitBy} label="Split By" onChange={(e) => setSplitBy(e.target.value as SplitBy)}>
+          <Select inputProps={{ 'aria-label': 'Split By' }} value={splitBy} label="Split By" onChange={(e) => setSplitBy(e.target.value as SplitBy)}>
             <MenuItem value="space">Space</MenuItem>
             <MenuItem value="newline">Newline</MenuItem>
             <MenuItem value="comma">Comma</MenuItem>

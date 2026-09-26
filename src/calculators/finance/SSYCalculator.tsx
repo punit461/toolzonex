@@ -127,9 +127,9 @@ const SSYCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={yearlyInvestment}
               onChange={(e) => setYearlyInvestment(Math.min(150000, Number(e.target.value)))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">₹</InputAdornment>, inputProps: { max: 150000, min: 250 } } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Yearly Investment (₹)', max: 150000, min: 250 }, input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
             />
-            <Slider
+            <Slider aria-label="Yearly Investment (₹)"
               value={yearlyInvestment}
               min={250}
               max={150000}
@@ -149,9 +149,9 @@ const SSYCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(girlAge) ? '' : girlAge}
               onChange={(e) => setGirlAge(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">Yr</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Girl\'s Age (Years)' }, input: { endAdornment: <InputAdornment position="end">Yr</InputAdornment> } }}
             />
-            <Slider
+            <Slider aria-label="Girl's Age (Years)"
               value={Number.isNaN(girlAge) ? 0 : girlAge}
               min={1}
               max={10}
@@ -171,7 +171,7 @@ const SSYCalculator = () => {
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Maturity Value (Year {maturityYear})</Typography>
             <Typography variant="caption" color="text.secondary">Your daughter will be <strong>{girlAgeAtMaturity} years old</strong> at maturity</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               ₹ {maturityValue.toLocaleString('en-IN')}
             </Typography>
 
@@ -186,7 +186,7 @@ const SSYCalculator = () => {
               </Box>
             </Box>
 
-            <Box sx={{ height: 250 }}>
+            <Box aria-hidden="true" sx={{ height: 250 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={chartData}>
                   <XAxis dataKey="year" hide />

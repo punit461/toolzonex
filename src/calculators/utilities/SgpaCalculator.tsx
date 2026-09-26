@@ -108,7 +108,7 @@ const SgpaCalculator = () => {
             <Typography variant="h6">This Semester&apos;s Subjects</Typography>
             <FormControl size="small" sx={{ minWidth: 130 }}>
               <InputLabel>Scale</InputLabel>
-              <Select value={scale} label="Scale" onChange={(e) => setScale(Number(e.target.value))}>
+              <Select inputProps={{ 'aria-label': 'Scale' }} value={scale} label="Scale" onChange={(e) => setScale(Number(e.target.value))}>
                 <MenuItem value={10}>Out of 10</MenuItem>
                 <MenuItem value={4}>Out of 4</MenuItem>
               </Select>
@@ -137,7 +137,7 @@ const SgpaCalculator = () => {
                   value={Number.isNaN(subject.gradePoint) ? '' : subject.gradePoint}
                   onChange={(e) => updateSubject(subject.id, 'gradePoint', e.target.value === '' ? NaN : Number(e.target.value))}
                 />
-                <IconButton color="error" size="small" onClick={() => removeSubject(subject.id)} disabled={subjects.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeSubject(subject.id)} disabled={subjects.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>
@@ -152,7 +152,7 @@ const SgpaCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Your SGPA</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               {sgpa.toFixed(2)} <span style={{ fontSize: '1.2rem', fontWeight: 500 }}>/ {scale}</span>
             </Typography>
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>

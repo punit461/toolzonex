@@ -38,7 +38,7 @@ const WheelSpinnerContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4, alignItems: 'start' }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Entries (one per line)</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Entries (one per line)' } }}
           multiline
           rows={8}
           value={text}

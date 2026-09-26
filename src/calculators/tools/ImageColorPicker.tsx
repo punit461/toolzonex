@@ -8,6 +8,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 const rgbToHex = (r: number, g: number, b: number) =>
   `#${[r, g, b].map((v) => v.toString(16).padStart(2, '0')).join('')}`.toUpperCase();
 
@@ -131,7 +132,7 @@ const ImageColorPickerContent = () => {
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
       <input ref={fileInputRef} type="file" accept="image/*" hidden onChange={handleFileChange} />
 
-      <Paper
+      <Paper {...(imageLoaded ? {} : keyboardClickable)}
         variant="outlined"
         onDrop={handleDrop}
         onDragOver={(e) => e.preventDefault()}
@@ -180,7 +181,7 @@ const ImageColorPickerContent = () => {
                 <Box sx={{ height: 56, bgcolor: hex }} />
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: 1, py: 0.5 }}>
                   <Typography variant="caption" fontFamily="monospace">{copied === hex ? 'Copied!' : hex}</Typography>
-                  <IconButton size="small" onClick={() => handleCopy(hex)}>
+                  <IconButton aria-label="Copy" size="small" onClick={() => handleCopy(hex)}>
                     <ContentCopyIcon sx={{ fontSize: 14 }} />
                   </IconButton>
                 </Box>
@@ -202,7 +203,7 @@ const ImageColorPickerContent = () => {
                 <Box sx={{ height: 56, bgcolor: hex }} />
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: 1, py: 0.5 }}>
                   <Typography variant="caption" fontFamily="monospace">{copied === hex ? 'Copied!' : hex}</Typography>
-                  <IconButton size="small" onClick={() => handleCopy(hex)}>
+                  <IconButton aria-label="Copy" size="small" onClick={() => handleCopy(hex)}>
                     <ContentCopyIcon sx={{ fontSize: 14 }} />
                   </IconButton>
                 </Box>

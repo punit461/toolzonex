@@ -64,7 +64,7 @@ const CreateBlankPdfContent = () => {
         />
         <FormControl fullWidth>
           <InputLabel>Page size</InputLabel>
-          <Select value={preset} label="Page size" onChange={(e) => setPreset(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Page size' }} value={preset} label="Page size" onChange={(e) => setPreset(e.target.value)}>
             <MenuItem value="a4">A4 (210 &times; 297 mm)</MenuItem>
             <MenuItem value="letter">US Letter (8.5 &times; 11 in)</MenuItem>
             <MenuItem value="legal">US Legal (8.5 &times; 14 in)</MenuItem>

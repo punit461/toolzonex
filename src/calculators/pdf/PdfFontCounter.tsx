@@ -68,14 +68,14 @@ const PdfFontCounterContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleCount} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Counting Fonts...</> : 'Count Fonts'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Counting Fonts...</> : 'Count Fonts'}
       </Button>
 
       {result && (
         <Paper variant="outlined" sx={{ mt: 3, p: 2.5 }}>
           <Box sx={{ textAlign: 'center', mb: 2 }}>
             <Typography variant="caption" color="text.secondary">Distinct Fonts Found</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 'bold' }}>{result.count}</Typography>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 'bold' }}>{result.count}</Typography>
             <Typography variant="body2" color="text.secondary">across {result.pageCount} page{result.pageCount !== 1 ? 's' : ''}</Typography>
           </Box>
           {result.count > 0 ? (

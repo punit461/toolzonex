@@ -116,17 +116,17 @@ const TypingSpeedTestContent = () => {
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
       
       <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-        <Paper sx={{ p: 2, flex: 1, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 2, flex: 1, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2" sx={{ opacity: 0.8 }}>Time Left</Typography>
-          <Typography variant="h3" fontWeight="bold">{timeLeft}s</Typography>
+          <Typography component="p" variant="h3" fontWeight="bold">{timeLeft}s</Typography>
         </Paper>
         <Paper sx={{ p: 2, flex: 1, textAlign: 'center', bgcolor: 'success.main', color: 'white' }}>
           <Typography variant="body2" sx={{ opacity: 0.8 }}>WPM</Typography>
-          <Typography variant="h3" fontWeight="bold">{wpm}</Typography>
+          <Typography component="p" variant="h3" fontWeight="bold">{wpm}</Typography>
         </Paper>
         <Paper sx={{ p: 2, flex: 1, textAlign: 'center', bgcolor: 'secondary.main', color: 'white' }}>
           <Typography variant="body2" sx={{ opacity: 0.8 }}>Accuracy</Typography>
-          <Typography variant="h3" fontWeight="bold">{accuracy}%</Typography>
+          <Typography component="p" variant="h3" fontWeight="bold">{accuracy}%</Typography>
         </Paper>
       </Box>
 
@@ -136,7 +136,7 @@ const TypingSpeedTestContent = () => {
         </Typography>
       </Paper>
 
-      <TextField
+      <TextField slotProps={{ htmlInput: { 'aria-label': 'Typing area' } }}
         value={userInput}
         onChange={handleInput}
         disabled={timeLeft === 0}

@@ -67,7 +67,7 @@ const AppointmentReservationListGeneratorContent = () => {
                 <TextField size="small" label="Client / guest name" value={a.clientName} onChange={(e) => updateAppointment(a.id, { clientName: e.target.value })} sx={{ flex: 1.5, minWidth: 150 }} />
                 <TextField size="small" type="date" value={a.date} onChange={(e) => updateAppointment(a.id, { date: e.target.value })} sx={{ flex: 1, minWidth: 130 }} InputLabelProps={{ shrink: true }} label="Date" />
                 <TextField size="small" type="time" value={a.time} onChange={(e) => updateAppointment(a.id, { time: e.target.value })} sx={{ flex: 1, minWidth: 110 }} InputLabelProps={{ shrink: true }} label="Time" />
-                <IconButton onClick={() => removeAppointment(a.id)} disabled={appointments.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeAppointment(a.id)} disabled={appointments.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

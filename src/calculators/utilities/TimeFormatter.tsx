@@ -56,7 +56,7 @@ const TimeFormatter = () => {
       <Typography variant="body2" color="text.secondary">{label}</Typography>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
         <Typography variant="body1" sx={{ fontFamily: 'monospace' }}>{value}</Typography>
-        <IconButton size="small" onClick={() => copyToClipboard(value)}>
+        <IconButton aria-label="Copy" size="small" onClick={() => copyToClipboard(value)}>
           <ContentCopyIcon fontSize="small" />
         </IconButton>
       </Box>

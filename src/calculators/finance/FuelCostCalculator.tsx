@@ -93,7 +93,7 @@ const FuelCostCalculator = () => {
         <Box>
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom>Unit System</Typography>
-            <Select fullWidth value={system} onChange={(e) => setSystem(e.target.value)}>
+            <Select inputProps={{ 'aria-label': 'Unit System' }} fullWidth value={system} onChange={(e) => setSystem(e.target.value)}>
               {UNIT_SYSTEMS.map((u) => (
                 <MenuItem key={u.value} value={u.value}>{u.label}</MenuItem>
               ))}
@@ -109,7 +109,7 @@ const FuelCostCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(distance) ? '' : distance}
               onChange={(e) => setDistance(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">{unitConfig.distanceLabel}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': `Trip Distance (${unitConfig.distanceLabel})` }, input: { endAdornment: <InputAdornment position="end">{unitConfig.distanceLabel}</InputAdornment> } }}
             />
           </Box>
 
@@ -122,14 +122,14 @@ const FuelCostCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(efficiency) ? '' : efficiency}
               onChange={(e) => setEfficiency(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">{unitConfig.efficiencyLabel}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': `Vehicle Fuel Efficiency (${unitConfig.efficiencyLabel})` }, input: { endAdornment: <InputAdornment position="end">{unitConfig.efficiencyLabel}</InputAdornment> } }}
             />
           </Box>
 
           <Box sx={{ mb: 4 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Typography gutterBottom>Fuel Price per Unit</Typography>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Currency' }}
                 size="small"
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -147,7 +147,7 @@ const FuelCostCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(fuelPrice) ? '' : fuelPrice}
               onChange={(e) => setFuelPrice(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Fuel Price per Unit' },
                 input: {
                   startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
@@ -159,7 +159,7 @@ const FuelCostCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Total Trip Fuel Cost</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               {formatMoney(totalCost, currency)}
             </Typography>
 

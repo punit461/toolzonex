@@ -42,7 +42,7 @@ const JsonToYamlConverterContent = () => {
         
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
           <Typography variant="subtitle2" fontWeight="bold">JSON Input</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'JSON Input' } }}
             multiline
             rows={15}
             value={jsonInput}
@@ -80,7 +80,7 @@ const JsonToYamlConverterContent = () => {
               {copied ? 'Copied' : 'Copy'}
             </Button>
           </Box>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'YAML Output' } }}
             multiline
             rows={15}
             value={error ? error : yamlOutput}

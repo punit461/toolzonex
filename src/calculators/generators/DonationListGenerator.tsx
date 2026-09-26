@@ -63,7 +63,7 @@ const DonationListGeneratorContent = () => {
             <Paper key={d.id} variant="outlined" sx={{ p: 2 }}>
               <Box sx={{ display: 'flex', gap: 1, mb: 1, alignItems: 'center' }}>
                 <TextField size="small" fullWidth label="Item description" value={d.description} onChange={(e) => updateDonation(d.id, { description: e.target.value })} />
-                <IconButton onClick={() => removeDonation(d.id)} disabled={donations.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeDonation(d.id)} disabled={donations.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

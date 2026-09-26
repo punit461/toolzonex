@@ -32,13 +32,13 @@ const DiceRollerContent = () => {
       <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', justifyContent: 'center' }}>
         <FormControl size="small" sx={{ minWidth: 140 }}>
           <InputLabel>Number of Dice</InputLabel>
-          <Select value={diceCount} label="Number of Dice" onChange={(e) => setDiceCount(Number(e.target.value))}>
+          <Select inputProps={{ 'aria-label': 'Number of Dice' }} value={diceCount} label="Number of Dice" onChange={(e) => setDiceCount(Number(e.target.value))}>
             {DICE_COUNTS.map((n) => <MenuItem key={n} value={n}>{n}</MenuItem>)}
           </Select>
         </FormControl>
         <FormControl size="small" sx={{ minWidth: 140 }}>
           <InputLabel>Die Type</InputLabel>
-          <Select value={dieType} label="Die Type" onChange={(e) => setDieType(Number(e.target.value))}>
+          <Select inputProps={{ 'aria-label': 'Die Type' }} value={dieType} label="Die Type" onChange={(e) => setDieType(Number(e.target.value))}>
             {DIE_TYPES.map((d) => <MenuItem key={d} value={d}>d{d}</MenuItem>)}
           </Select>
         </FormControl>
@@ -64,7 +64,7 @@ const DiceRollerContent = () => {
                 elevation={2}
                 sx={{
                   width: 56, height: 56, display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  borderRadius: 2, fontSize: '1.5rem', fontWeight: 700, bgcolor: 'primary.main', color: 'white',
+                  borderRadius: 2, fontSize: '1.5rem', fontWeight: 700, bgcolor: 'primary.main', color: 'primary.contrastText',
                 }}
               >
                 {r}

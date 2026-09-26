@@ -88,11 +88,11 @@ const BrandNameGeneratorContent = () => {
             <Paper
               key={idx}
               variant="outlined"
-              sx={{ p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', '&:hover': { bgcolor: 'grey.50' } }}
+              sx={{ p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', '&:hover': { bgcolor: 'action.hover' } }}
               onClick={() => copyName(name)}
             >
               <Typography variant="body1" fontWeight="500">{name}</Typography>
-              <IconButton size="small"><ContentCopyIcon fontSize="small" /></IconButton>
+              <IconButton aria-label="Copy" size="small"><ContentCopyIcon fontSize="small" /></IconButton>
             </Paper>
           ))}
         </Box>

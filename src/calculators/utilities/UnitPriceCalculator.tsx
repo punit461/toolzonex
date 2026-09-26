@@ -91,7 +91,7 @@ const UnitPriceCalculator = () => {
     <CalculatorShell url="/utilities/unit-price-calculator" content={content}>
       <FormControl fullWidth sx={{ mb: 4, maxWidth: 300 }}>
         <InputLabel>Quantity Unit (used for both)</InputLabel>
-        <Select value={unit} label="Quantity Unit (used for both)" onChange={(e) => setUnit(e.target.value)}>
+        <Select inputProps={{ 'aria-label': 'Quantity Unit (used for both)' }} value={unit} label="Quantity Unit (used for both)" onChange={(e) => setUnit(e.target.value)}>
           {Object.entries(UNIT_LABELS).map(([key, label]) => (
             <MenuItem key={key} value={key}>{label}</MenuItem>
           ))}

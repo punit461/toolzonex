@@ -114,7 +114,7 @@ const WindLoadCalculator = () => {
 
         <FormControl fullWidth>
           <InputLabel>Surface Shape / Drag Coefficient</InputLabel>
-          <Select value={shape} label="Surface Shape / Drag Coefficient" onChange={(e) => setShape(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Surface Shape / Drag Coefficient' }} value={shape} label="Surface Shape / Drag Coefficient" onChange={(e) => setShape(e.target.value)}>
             {Object.entries(SHAPE_PRESETS).map(([key, s]) => (
               <MenuItem key={key} value={key}>{s.label}</MenuItem>
             ))}
@@ -126,7 +126,7 @@ const WindLoadCalculator = () => {
 
         <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Estimated Wind Load Force</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>
             {result !== null ? `${result.forceN.toLocaleString(undefined, { maximumFractionDigits: 1 })} N` : '—'}
           </Typography>
           {result !== null && (

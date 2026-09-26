@@ -91,7 +91,7 @@ const PermutationCalculator = () => {
             ) : (
               <>
                 <Typography variant="body2" color="text.secondary" gutterBottom>nPr</Typography>
-                <Typography variant="h3" fontWeight={800} color="primary.main">{result.permutations.toLocaleString()}</Typography>
+                <Typography component="p" variant="h3" fontWeight={800} color="primary.main">{result.permutations.toLocaleString()}</Typography>
                 <Typography variant="body2" color="text.secondary" mt={2} sx={{ fontFamily: 'monospace' }}>
                   {result.nVal}! ÷ ({result.nVal} − {result.rVal})! = {result.nFact.toLocaleString()} ÷ {result.nrFact.toLocaleString()}
                 </Typography>

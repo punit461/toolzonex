@@ -74,13 +74,13 @@ const PlaylistOrganizerContent = () => {
               <TextField size="small" label="Title" value={s.title} onChange={(e) => updateSong(s.id, { title: e.target.value })} sx={{ flex: 2, minWidth: 140 }} />
               <TextField size="small" label="Artist" value={s.artist} onChange={(e) => updateSong(s.id, { artist: e.target.value })} sx={{ flex: 1.5, minWidth: 120 }} />
               <TextField size="small" label="Notes (optional)" value={s.notes} onChange={(e) => updateSong(s.id, { notes: e.target.value })} sx={{ flex: 1.5, minWidth: 120 }} />
-              <IconButton size="small" onClick={() => moveSong(i, -1)} disabled={i === 0}>
+              <IconButton aria-label="Move up" size="small" onClick={() => moveSong(i, -1)} disabled={i === 0}>
                 <ArrowUpwardIcon fontSize="small" />
               </IconButton>
-              <IconButton size="small" onClick={() => moveSong(i, 1)} disabled={i === songs.length - 1}>
+              <IconButton aria-label="Move down" size="small" onClick={() => moveSong(i, 1)} disabled={i === songs.length - 1}>
                 <ArrowDownwardIcon fontSize="small" />
               </IconButton>
-              <IconButton size="small" onClick={() => removeSong(s.id)} disabled={songs.length <= 1}>
+              <IconButton aria-label="Remove" size="small" onClick={() => removeSong(s.id)} disabled={songs.length <= 1}>
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Box>

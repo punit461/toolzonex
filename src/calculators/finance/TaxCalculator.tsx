@@ -116,7 +116,7 @@ const TaxCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(annualIncome) ? '' : annualIncome}
               onChange={(e) => setAnnualIncome(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Annual Income (gross)' },
                 input: {
                   startAdornment: <InputAdornment position="start">$</InputAdornment>,
                 }
@@ -126,7 +126,7 @@ const TaxCalculator = () => {
 
           <Box sx={{ mb: 3 }}>
             <Typography gutterBottom>Filing Status</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Filing Status' }}
               fullWidth
               value={filingStatus}
               onChange={(e) => setFilingStatus(e.target.value as FilingStatus)}
@@ -145,7 +145,7 @@ const TaxCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Estimated Federal Tax Owed</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               {formatUSD(result.estimatedTax)}
             </Typography>
 

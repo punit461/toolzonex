@@ -80,7 +80,7 @@ const GeneratorSizeCalculatorContent = () => {
                 value={Number.isNaN(a.surgeWatts) ? '' : a.surgeWatts}
                 onChange={(e) => updateAppliance(a.id, 'surgeWatts', e.target.value === '' ? NaN : Number(e.target.value))}
               />
-              <IconButton color="error" size="small" onClick={() => removeAppliance(a.id)} disabled={appliances.length <= 1}>
+              <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeAppliance(a.id)} disabled={appliances.length <= 1}>
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Stack>
@@ -97,7 +97,7 @@ const GeneratorSizeCalculatorContent = () => {
 
       <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center', height: 'fit-content' }}>
         <Typography variant="body2" color="text.secondary">Recommended Generator Size</Typography>
-        <Typography variant="h3" color="primary" fontWeight={800}>{Math.round(result.recommendedSize).toLocaleString('en-US')} W</Typography>
+        <Typography component="p" variant="h3" color="primary" fontWeight={800}>{Math.round(result.recommendedSize).toLocaleString('en-US')} W</Typography>
         <Typography variant="caption" color="text.secondary" display="block" sx={{ mt: 1 }}>
           Total running load: {result.totalRunning.toFixed(0)} W
         </Typography>

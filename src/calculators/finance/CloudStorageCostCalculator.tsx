@@ -110,7 +110,7 @@ const CloudStorageCostCalculator = () => {
             </ToggleButtonGroup>
           </Box>
 
-          <Select value={provider} onChange={(e) => setProvider(e.target.value)} fullWidth>
+          <Select inputProps={{ 'aria-label': 'Provider' }} value={provider} onChange={(e) => setProvider(e.target.value)} fullWidth>
             {PROVIDER_PRESETS.map((p) => (
               <MenuItem key={p.label} value={p.label}>{p.label}</MenuItem>
             ))}
@@ -136,9 +136,9 @@ const CloudStorageCostCalculator = () => {
             <Typography>Rate</Typography>
             <Typography fontWeight={600}>${rate.toFixed(4)} / GB</Typography>
           </Paper>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Monthly Cost</Typography>
-            <Typography variant="h3" fontWeight="bold">{fmt(monthlyCost)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{fmt(monthlyCost)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Annual Cost</Typography>

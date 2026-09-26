@@ -113,7 +113,7 @@ const CsvMinifierContent = () => {
             placeholder={SAMPLE}
             fullWidth
             variant="outlined"
-            inputProps={{ style: { fontFamily: 'monospace' } }}
+            inputProps={{ 'aria-label': 'Raw CSV Input', style: { fontFamily: 'monospace' } }}
           />
           <Button variant="outlined" onClick={() => setInput(SAMPLE)}>Load Sample</Button>
         </Box>
@@ -125,7 +125,7 @@ const CsvMinifierContent = () => {
           </Box>
           <Paper
             variant="outlined"
-            sx={{ p: 2, minHeight: 380, maxHeight: 460, bgcolor: 'grey.50', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre' }}
+            sx={{ p: 2, minHeight: 380, maxHeight: 460, bgcolor: 'action.hover', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre' }}
           >
             {output || <Typography color="text.secondary">Minified CSV will appear here...</Typography>}
           </Paper>

@@ -8,6 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue };
 
 function valueColor(value: JsonValue): string {
@@ -97,7 +98,7 @@ function JsonNode({ label, value, isIndex, search }: { label: string | null; val
 
   return (
     <Box sx={{ fontFamily: 'monospace', fontSize: '0.85rem', lineHeight: 1.9 }}>
-      <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', userSelect: 'none' }} onClick={() => setManualExpanded((e) => !e)}>
+      <Box {...keyboardClickable} aria-expanded={expanded} sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', userSelect: 'none' }} onClick={() => setManualExpanded((e) => !e)}>
         <Box sx={{ display: 'flex', p: 0.25, mr: 0.5 }}>
           {expanded ? <ExpandMoreIcon fontSize="small" /> : <ChevronRightIcon fontSize="small" />}
         </Box>
@@ -160,7 +161,7 @@ const JsonTreeViewerContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Paste JSON</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Paste JSON' } }}
           multiline
           rows={16}
           value={input}
@@ -177,7 +178,7 @@ const JsonTreeViewerContent = () => {
       </Box>
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2 }}>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Paste JSON' } }}
           size="small"
           fullWidth
           value={search}
@@ -193,7 +194,7 @@ const JsonTreeViewerContent = () => {
         )}
         <Paper
           variant="outlined"
-          sx={{ p: 2, minHeight: 380, maxHeight: 480, overflow: 'auto', bgcolor: 'grey.50' }}
+          sx={{ p: 2, minHeight: 380, maxHeight: 480, overflow: 'auto', bgcolor: 'action.hover' }}
         >
           {parsed === null ? (
             <Typography color="text.secondary">The interactive tree will appear here once you paste valid JSON...</Typography>

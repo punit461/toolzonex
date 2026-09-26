@@ -98,9 +98,9 @@ const VoltageDropCalculator = () => {
               Voltage drop exceeds 3%. Consider using a larger wire gauge to reduce losses.
             </Alert>
           )}
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Voltage Drop</Typography>
-            <Typography variant="h3" fontWeight="bold">{result.vd.toFixed(2)}V</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{result.vd.toFixed(2)}V</Typography>
           </Paper>
           <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Percentage Drop</Typography>

@@ -97,7 +97,7 @@ const VarianceCalculator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>
           <Typography gutterBottom>Numbers (comma, space, or line separated)</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Numbers (comma, space, or line separated)' } }}
             fullWidth
             multiline
             minRows={6}
@@ -111,7 +111,7 @@ const VarianceCalculator = () => {
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2 }}>
             <Box sx={{ textAlign: 'center', mb: 3 }}>
               <Typography variant="h6" color="text.secondary" gutterBottom>Mean</Typography>
-              <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main' }}>
+              <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main' }}>
                 {fmt(mean)}
               </Typography>
               <Typography variant="body2" color="text.secondary">

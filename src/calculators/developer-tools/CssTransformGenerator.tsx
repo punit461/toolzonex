@@ -34,32 +34,32 @@ const CssTransformGeneratorContent = () => {
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <Typography variant="subtitle2" gutterBottom>Translate X: {translateX}px</Typography>
-            <Slider value={translateX} onChange={(_, v) => setTranslateX(v as number)} min={-200} max={200} />
+            <Slider aria-label={`Translate X: ${translateX}px`} value={translateX} onChange={(_, v) => setTranslateX(v as number)} min={-200} max={200} />
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant="subtitle2" gutterBottom>Translate Y: {translateY}px</Typography>
-            <Slider value={translateY} onChange={(_, v) => setTranslateY(v as number)} min={-200} max={200} />
+            <Slider aria-label={`Translate Y: ${translateY}px`} value={translateY} onChange={(_, v) => setTranslateY(v as number)} min={-200} max={200} />
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant="subtitle2" gutterBottom>Rotate: {rotate}deg</Typography>
-            <Slider value={rotate} onChange={(_, v) => setRotate(v as number)} min={-180} max={180} />
+            <Slider aria-label={`Rotate: ${rotate}deg`} value={rotate} onChange={(_, v) => setRotate(v as number)} min={-180} max={180} />
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant="subtitle2" gutterBottom>Scale: {scale.toFixed(2)}</Typography>
-            <Slider value={scale} onChange={(_, v) => setScale(v as number)} min={0.1} max={3} step={0.05} />
+            <Slider aria-label="Scale" value={scale} onChange={(_, v) => setScale(v as number)} min={0.1} max={3} step={0.05} />
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant="subtitle2" gutterBottom>Skew X: {skewX}deg</Typography>
-            <Slider value={skewX} onChange={(_, v) => setSkewX(v as number)} min={-89} max={89} />
+            <Slider aria-label={`Skew X: ${skewX}deg`} value={skewX} onChange={(_, v) => setSkewX(v as number)} min={-89} max={89} />
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant="subtitle2" gutterBottom>Skew Y: {skewY}deg</Typography>
-            <Slider value={skewY} onChange={(_, v) => setSkewY(v as number)} min={-89} max={89} />
+            <Slider aria-label={`Skew Y: ${skewY}deg`} value={skewY} onChange={(_, v) => setSkewY(v as number)} min={-89} max={89} />
           </Grid>
           <Grid item xs={12}>
             <FormControl fullWidth size="small">
               <InputLabel>Transform Origin</InputLabel>
-              <Select value={origin} label="Transform Origin" onChange={(e) => setOrigin(e.target.value)}>
+              <Select inputProps={{ 'aria-label': 'Transform Origin' }} value={origin} label="Transform Origin" onChange={(e) => setOrigin(e.target.value)}>
                 {ORIGINS.map((o) => <MenuItem key={o} value={o}>{o}</MenuItem>)}
               </Select>
             </FormControl>

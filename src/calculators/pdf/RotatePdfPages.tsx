@@ -99,7 +99,7 @@ const RotatePdfPagesContent = () => {
 
       {loadingMessage && (
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mt: 2 }}>
-          <CircularProgress size={20} />
+          <CircularProgress aria-label="Loading" size={20} />
           <Typography variant="body2" color="text.secondary">{loadingMessage}</Typography>
         </Box>
       )}

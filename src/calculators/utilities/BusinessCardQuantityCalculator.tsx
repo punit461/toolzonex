@@ -76,7 +76,7 @@ const BusinessCardQuantityCalculator = () => {
               <Typography variant="h6">Total Cards Needed</Typography>
               <Typography variant="h6" fontWeight="bold">{Math.ceil(totalCards).toLocaleString()}</Typography>
             </Paper>
-            <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="h6">Boxes Needed</Typography>
               <Typography variant="h6" fontWeight="bold">{boxesNeeded}</Typography>
             </Paper>

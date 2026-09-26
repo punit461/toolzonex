@@ -85,7 +85,7 @@ const AddBarcodeToPdfContent = () => {
         <TextField label="Barcode value" value={value} onChange={(e) => setValue(e.target.value)} fullWidth />
         <FormControl fullWidth>
           <InputLabel>Barcode format</InputLabel>
-          <Select value={format} label="Barcode format" onChange={(e) => setFormat(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Barcode format' }} value={format} label="Barcode format" onChange={(e) => setFormat(e.target.value)}>
             <MenuItem value="CODE128">CODE128 (Standard alphanumeric)</MenuItem>
             <MenuItem value="CODE39">CODE39 (Uppercase alphanumeric)</MenuItem>
             <MenuItem value="UPC">UPC (12-digit numeric)</MenuItem>
@@ -105,7 +105,7 @@ const AddBarcodeToPdfContent = () => {
         />
         <FormControl fullWidth>
           <InputLabel>Position</InputLabel>
-          <Select value={position} label="Position" onChange={(e) => setPosition(e.target.value as Position)}>
+          <Select inputProps={{ 'aria-label': 'Position' }} value={position} label="Position" onChange={(e) => setPosition(e.target.value as Position)}>
             <MenuItem value="top-left">Top left</MenuItem>
             <MenuItem value="top-right">Top right</MenuItem>
             <MenuItem value="bottom-left">Bottom left</MenuItem>
@@ -117,7 +117,7 @@ const AddBarcodeToPdfContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleAdd} disabled={busy || !file || !value.trim()}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Adding Barcode...</> : 'Add Barcode to PDF'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Adding Barcode...</> : 'Add Barcode to PDF'}
       </Button>
     </Box>
   );

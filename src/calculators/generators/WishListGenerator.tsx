@@ -72,7 +72,7 @@ const WishListGeneratorContent = () => {
                   onChange={(e) => updateItem(item.id, { price: e.target.value })}
                   sx={{ flex: 1, minWidth: 100 }}
                 />
-                <Select
+                <Select inputProps={{ 'aria-label': 'Priority' }}
                   size="small"
                   value={item.priority}
                   onChange={(e) => updateItem(item.id, { priority: e.target.value as Priority })}
@@ -82,7 +82,7 @@ const WishListGeneratorContent = () => {
                     <MenuItem key={p} value={p}>{p}</MenuItem>
                   ))}
                 </Select>
-                <IconButton onClick={() => removeItem(item.id)} disabled={items.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeItem(item.id)} disabled={items.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>
@@ -103,7 +103,7 @@ const WishListGeneratorContent = () => {
 
       <Box>
         <Typography variant="subtitle1" fontWeight={600} mb={2}>Your Wish List</Typography>
-        <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">Estimated Total</Typography>
           <Typography variant="h4" fontWeight="bold">{money(total)}</Typography>
         </Paper>

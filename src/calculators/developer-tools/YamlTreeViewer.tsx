@@ -8,6 +8,7 @@ import yaml from 'js-yaml';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 type YamlValue = string | number | boolean | null | YamlValue[] | { [key: string]: YamlValue };
 
 function valueColor(value: YamlValue): string {
@@ -57,7 +58,7 @@ function YamlNode({ label, value, isIndex }: { label: string | null; value: Yaml
 
   return (
     <Box sx={{ fontFamily: 'monospace', fontSize: '0.85rem', lineHeight: 1.9 }}>
-      <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', userSelect: 'none' }} onClick={() => setExpanded((e) => !e)}>
+      <Box {...keyboardClickable} aria-expanded={expanded} sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', userSelect: 'none' }} onClick={() => setExpanded((e) => !e)}>
         <Box sx={{ display: 'flex', p: 0.25, mr: 0.5 }}>
           {expanded ? <ExpandMoreIcon fontSize="small" /> : <ChevronRightIcon fontSize="small" />}
         </Box>
@@ -103,7 +104,7 @@ const YamlTreeViewerContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Paste YAML</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Paste YAML' } }}
           multiline
           rows={16}
           value={input}
@@ -123,7 +124,7 @@ const YamlTreeViewerContent = () => {
         <Typography variant="subtitle1" fontWeight="600">Interactive Tree</Typography>
         <Paper
           variant="outlined"
-          sx={{ p: 2, minHeight: 400, maxHeight: 500, overflow: 'auto', bgcolor: 'grey.50' }}
+          sx={{ p: 2, minHeight: 400, maxHeight: 500, overflow: 'auto', bgcolor: 'action.hover' }}
         >
           {parsed === null ? (
             <Typography color="text.secondary">The interactive tree will appear here once you paste valid YAML...</Typography>

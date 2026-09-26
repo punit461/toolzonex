@@ -54,7 +54,7 @@ const PasswordGeneratorContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box>
         <Typography variant="subtitle1" gutterBottom>Password Length: {length}</Typography>
-        <Slider
+        <Slider aria-label={`Password Length: ${length}`}
           value={length}
           onChange={(e, newValue) => setLength(newValue as number)}
           min={4}

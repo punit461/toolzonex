@@ -153,7 +153,7 @@ const PdfBookmarkViewerContent = () => {
               return count + 1 + countChildren(node);
             }, 0)} bookmark{bookmarks.length !== 1 ? 's' : ''} found
           </Typography>
-          <List dense sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200' }}>
+          <List dense sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200' }}>
             {bookmarks.map((node, i) => (
               <BookmarkItem key={i} node={node} depth={0} />
             ))}

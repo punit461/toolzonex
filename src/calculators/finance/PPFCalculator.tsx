@@ -90,13 +90,13 @@ const PPFCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(yearlyInvestment) ? '' : yearlyInvestment}
               onChange={(e) => setYearlyInvestment(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Yearly Investment (₹)' },
                 input: {
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Yearly Investment (₹)"
               value={Number.isNaN(yearlyInvestment) ? 0 : yearlyInvestment}
               min={500}
               max={150000}
@@ -115,14 +115,13 @@ const PPFCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(timePeriod) ? '' : timePeriod}
               onChange={(e) => setTimePeriod(e.target.value === '' ? NaN : Number(e.target.value))}
-             slotProps={{
+             slotProps={{ htmlInput: { 'aria-label': 'Time Period (Years)', min: 15 },
                 input: {
                   endAdornment: <InputAdornment position="end">Yr</InputAdornment>,
-                  inputProps: { min: 15 },
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Time Period (Years)"
               value={Number.isNaN(timePeriod) ? 0 : timePeriod}
               min={15}
               max={50}
@@ -141,7 +140,7 @@ const PPFCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Maturity Value</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               ₹ {maturityValue.toLocaleString('en-IN')}
             </Typography>
 
@@ -156,7 +155,7 @@ const PPFCalculator = () => {
               </Box>
             </Box>
 
-            <Box sx={{ height: 250 }}>
+            <Box aria-hidden="true" sx={{ height: 250 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={chartData}>
                   <XAxis dataKey="year" hide />

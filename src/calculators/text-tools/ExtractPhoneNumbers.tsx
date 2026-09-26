@@ -47,7 +47,7 @@ const ExtractPhoneNumbersContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box>
           <Typography variant="subtitle2" mb={1} color="text.secondary">Paste your text below:</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Paste your text below' } }}
             multiline
             rows={8}
             value={text}

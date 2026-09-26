@@ -67,7 +67,7 @@ const GameBacklogTrackerContent = () => {
                   onChange={(e) => updateGame(g.id, { platform: e.target.value })}
                   sx={{ flex: 1, minWidth: 100 }}
                 />
-                <Select
+                <Select inputProps={{ 'aria-label': 'Status' }}
                   size="small"
                   value={g.status}
                   onChange={(e) => updateGame(g.id, { status: e.target.value as Status })}
@@ -77,7 +77,7 @@ const GameBacklogTrackerContent = () => {
                     <MenuItem key={opt} value={opt}>{opt}</MenuItem>
                   ))}
                 </Select>
-                <IconButton onClick={() => removeGame(g.id)} disabled={games.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeGame(g.id)} disabled={games.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

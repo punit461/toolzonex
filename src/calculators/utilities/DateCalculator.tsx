@@ -135,7 +135,7 @@ const DateCalculator = () => {
                 type="date"
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
-                slotProps={{ inputLabel: { shrink: true } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Start Date' }, inputLabel: { shrink: true } }}
               />
             </Box>
             <Box sx={{ mb: 4 }}>
@@ -146,7 +146,7 @@ const DateCalculator = () => {
                 type="date"
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
-                slotProps={{ inputLabel: { shrink: true } }}
+                slotProps={{ htmlInput: { 'aria-label': 'End Date' }, inputLabel: { shrink: true } }}
               />
             </Box>
             <Button variant="outlined" onClick={() => { const today = new Date().toISOString().split('T')[0]; const plus30 = new Date(Date.now() + 86400000 * 30).toISOString().split('T')[0]; setStartDate(today); setEndDate(plus30); }}>Reset to Today</Button>
@@ -182,7 +182,7 @@ const DateCalculator = () => {
                 type="date"
                 value={baseDate}
                 onChange={(e) => setBaseDate(e.target.value)}
-                slotProps={{ inputLabel: { shrink: true } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Start Date' }, inputLabel: { shrink: true } }}
               />
             </Box>
             <Box sx={{ mb: 4 }}>
@@ -209,7 +209,7 @@ const DateCalculator = () => {
           <Box>
             <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
               <Typography variant="h6" color="text.secondary" gutterBottom>Result Date</Typography>
-              <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', my: 2 }}>
+              <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main', my: 2 }}>
                 {resultDateStr}
               </Typography>
             </Box>

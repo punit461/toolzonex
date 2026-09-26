@@ -28,22 +28,22 @@ const BoxShadowGeneratorContent = () => {
         
         <Box>
           <Typography variant="subtitle2" mb={1}>Horizontal Offset: {hOffset}px</Typography>
-          <Slider value={hOffset} min={-50} max={50} onChange={(e, val) => setHOffset(val as number)} />
+          <Slider aria-label={`Horizontal Offset: ${hOffset}px`} value={hOffset} min={-50} max={50} onChange={(e, val) => setHOffset(val as number)} />
         </Box>
         
         <Box>
           <Typography variant="subtitle2" mb={1}>Vertical Offset: {vOffset}px</Typography>
-          <Slider value={vOffset} min={-50} max={50} onChange={(e, val) => setVOffset(val as number)} />
+          <Slider aria-label={`Vertical Offset: ${vOffset}px`} value={vOffset} min={-50} max={50} onChange={(e, val) => setVOffset(val as number)} />
         </Box>
 
         <Box>
           <Typography variant="subtitle2" mb={1}>Blur Radius: {blur}px</Typography>
-          <Slider value={blur} min={0} max={100} onChange={(e, val) => setBlur(val as number)} />
+          <Slider aria-label={`Blur Radius: ${blur}px`} value={blur} min={0} max={100} onChange={(e, val) => setBlur(val as number)} />
         </Box>
 
         <Box>
           <Typography variant="subtitle2" mb={1}>Spread Radius: {spread}px</Typography>
-          <Slider value={spread} min={-50} max={50} onChange={(e, val) => setSpread(val as number)} />
+          <Slider aria-label={`Spread Radius: ${spread}px`} value={spread} min={-50} max={50} onChange={(e, val) => setSpread(val as number)} />
         </Box>
 
         <FormGroup>

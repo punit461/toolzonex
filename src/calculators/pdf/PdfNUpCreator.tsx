@@ -80,7 +80,7 @@ const PdfNUpCreatorContent = () => {
       <PdfFileDropzone onFilesSelected={(files) => setFile(files[0] ?? null)} label="PDF file" selectedNames={file ? [file.name] : []} />
       <FormControl fullWidth sx={{ mt: 3 }}>
         <InputLabel>N-up Layout</InputLabel>
-        <Select value={nUp} label="N-up Layout" onChange={(e) => setNUp(Number(e.target.value))}>
+        <Select inputProps={{ 'aria-label': 'N-up Layout' }} value={nUp} label="N-up Layout" onChange={(e) => setNUp(Number(e.target.value))}>
           {N_UP_OPTIONS.map((o) => <MenuItem key={o.value} value={o.value}>{o.label} ({o.cols}&times;{o.rows})</MenuItem>)}
         </Select>
       </FormControl>

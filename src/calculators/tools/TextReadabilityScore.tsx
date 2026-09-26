@@ -87,9 +87,9 @@ const TextReadabilityScoreContent = () => {
         {scores ? (
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
             
-            <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'white', borderRadius: 4, textAlign: 'center' }}>
+            <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'primary.contrastText', borderRadius: 4, textAlign: 'center' }}>
               <Typography variant="subtitle2" sx={{ opacity: 0.9 }}>Flesch Reading Ease</Typography>
-              <Typography variant="h2" sx={{ fontWeight: 800, my: 1 }}>{scores.fkEase}</Typography>
+              <Typography component="p" variant="h2" sx={{ fontWeight: 800, my: 1 }}>{scores.fkEase}</Typography>
               <Typography variant="body2" sx={{ opacity: 0.9 }}>
                 {Number(scores.fkEase) > 90 ? 'Very Easy to read.' : 
                  Number(scores.fkEase) > 70 ? 'Easy to read.' :
@@ -138,7 +138,7 @@ const TextReadabilityScoreContent = () => {
 
           </Box>
         ) : (
-          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'grey.50' }}>
+          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'action.hover' }}>
             <Typography color="text.secondary" align="center">
               Type or paste some text on the left to see its readability scores instantly. Requires at least one full sentence.
             </Typography>

@@ -35,7 +35,7 @@ const PpsrCheckCostCalculatorContent = () => {
             onFocus={(e) => e.target.select()}
             value={Number.isNaN(vehicleCount) ? '' : vehicleCount}
             onChange={(e) => setVehicleCount(e.target.value === '' ? NaN : Number(e.target.value))}
-            inputProps={{ min: 1 }}
+            inputProps={{ 'aria-label': 'Number of vehicles / items to check', min: 1 }}
           />
         </Box>
 
@@ -61,7 +61,7 @@ const PpsrCheckCostCalculatorContent = () => {
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Paper sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <Typography variant="h6" color="text.secondary">Estimated total cost</Typography>
-          <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main' }}>
+          <Typography component="p" variant="h3" sx={{ fontWeight: 700, color: 'primary.main' }}>
             {formatAud(total)}
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>

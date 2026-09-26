@@ -89,7 +89,7 @@ const DailyFatIntakeCalculator = () => {
             <Typography gutterBottom>
               Fat: <strong>{fatPct}%</strong> of calories
             </Typography>
-            <Slider
+            <Slider aria-label="Fat"
               value={fatPct}
               onChange={(_, v) => setFatPct(v as number)}
               min={10}
@@ -108,7 +108,7 @@ const DailyFatIntakeCalculator = () => {
         </Box>
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight="600" mb={2}>Daily Fat Target</Typography>
-          <Paper sx={{ p: 3, display: 'flex', justifyContent: 'space-between', alignItems: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, display: 'flex', justifyContent: 'space-between', alignItems: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="h6">Recommended</Typography>
             <Typography variant="h4" fontWeight="bold">{fatGrams} g/day</Typography>
           </Paper>

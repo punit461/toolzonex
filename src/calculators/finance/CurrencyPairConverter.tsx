@@ -104,7 +104,7 @@ const CurrencyPairConverter = ({
 
           <Box sx={{ mb: 2 }}>
             <Typography gutterBottom>Amount in {activeFrom}</Typography>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': `Amount in ${activeFrom}` } }}
               fullWidth
               variant="outlined"
               type="number"
@@ -144,7 +144,7 @@ const CurrencyPairConverter = ({
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             {loading && (
               <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
-                <CircularProgress size={32} />
+                <CircularProgress aria-label="Loading" size={32} />
                 <Typography variant="body2" color="text.secondary">Fetching live exchange rates...</Typography>
               </Box>
             )}
@@ -157,7 +157,7 @@ const CurrencyPairConverter = ({
               <>
                 <Typography variant="h6" color="text.secondary">Converted Amount</Typography>
                 {convertedAmount !== null ? (
-                  <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main' }}>
+                  <Typography component="p" variant="h3" sx={{ fontWeight: 700, color: 'primary.main' }}>
                     {formatAmount(convertedAmount, activeTo)}
                   </Typography>
                 ) : (

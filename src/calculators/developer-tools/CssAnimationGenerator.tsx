@@ -42,7 +42,7 @@ const CssAnimationGeneratorContent = () => {
         <TextField label="Animation Name" value={name} onChange={(e) => setName(e.target.value)} fullWidth />
         <FormControl fullWidth>
           <InputLabel>Preset</InputLabel>
-          <Select value={preset} label="Preset" onChange={(e) => setPreset(e.target.value as Preset)}>
+          <Select inputProps={{ 'aria-label': 'Preset' }} value={preset} label="Preset" onChange={(e) => setPreset(e.target.value as Preset)}>
             <MenuItem value="fade">Fade In</MenuItem>
             <MenuItem value="slide">Slide In</MenuItem>
             <MenuItem value="spin">Spin</MenuItem>
@@ -51,17 +51,17 @@ const CssAnimationGeneratorContent = () => {
         </FormControl>
         <Box>
           <Typography variant="subtitle2" mb={1}>Duration: {duration}s</Typography>
-          <Slider value={duration} min={0.2} max={5} step={0.1} onChange={(_, v) => setDuration(v as number)} />
+          <Slider aria-label={`Duration: ${duration}s`} value={duration} min={0.2} max={5} step={0.1} onChange={(_, v) => setDuration(v as number)} />
         </Box>
         <FormControl fullWidth>
           <InputLabel>Timing Function</InputLabel>
-          <Select value={timing} label="Timing Function" onChange={(e) => setTiming(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Timing Function' }} value={timing} label="Timing Function" onChange={(e) => setTiming(e.target.value)}>
             {TIMING_FUNCTIONS.map((t) => <MenuItem key={t} value={t}>{t}</MenuItem>)}
           </Select>
         </FormControl>
         <FormControl fullWidth>
           <InputLabel>Iteration Count</InputLabel>
-          <Select value={iterations} label="Iteration Count" onChange={(e) => setIterations(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Iteration Count' }} value={iterations} label="Iteration Count" onChange={(e) => setIterations(e.target.value)}>
             <MenuItem value="1">1</MenuItem>
             <MenuItem value="2">2</MenuItem>
             <MenuItem value="3">3</MenuItem>
@@ -70,7 +70,7 @@ const CssAnimationGeneratorContent = () => {
         </FormControl>
         <FormControl fullWidth>
           <InputLabel>Direction</InputLabel>
-          <Select value={direction} label="Direction" onChange={(e) => setDirection(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Direction' }} value={direction} label="Direction" onChange={(e) => setDirection(e.target.value)}>
             {DIRECTIONS.map((d) => <MenuItem key={d} value={d}>{d}</MenuItem>)}
           </Select>
         </FormControl>

@@ -145,7 +145,7 @@ const LuggageWeightCalculator = () => {
                   onChange={(e) => updateBag(b.id, 'weight', e.target.value)}
                 />
                 {b.pass ? <CheckCircleIcon color="success" fontSize="small" /> : <CancelIcon color="error" fontSize="small" />}
-                <IconButton color="error" size="small" onClick={() => removeBag(b.id)} disabled={bags.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeBag(b.id)} disabled={bags.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>
@@ -156,7 +156,7 @@ const LuggageWeightCalculator = () => {
 
         <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', height: 'fit-content' }}>
           <Typography variant="body2" color="text.secondary">Total Combined Weight</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>{totalWeight.toFixed(1)} {unit}</Typography>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>{totalWeight.toFixed(1)} {unit}</Typography>
           <Typography variant="body2" color={overCount > 0 ? 'error.main' : 'success.main'} sx={{ mt: 2 }}>
             {overCount > 0
               ? `${overCount} bag${overCount > 1 ? 's' : ''} over the ${limitNum} ${unit} limit`

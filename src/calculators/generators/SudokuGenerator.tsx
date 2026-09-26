@@ -89,7 +89,7 @@ const SudokuGeneratorContent = () => {
       <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', justifyContent: 'center' }}>
         <FormControl sx={{ minWidth: 200 }}>
           <InputLabel>Difficulty</InputLabel>
-          <Select
+          <Select inputProps={{ 'aria-label': 'Difficulty' }}
             value={difficulty}
             label="Difficulty"
             onChange={(e) => setDifficulty(e.target.value)}

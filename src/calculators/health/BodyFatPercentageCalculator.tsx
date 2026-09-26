@@ -84,7 +84,7 @@ const BodyFatPercentageContent = () => {
             <Typography variant="h6" sx={{ fontWeight: 700 }}>{category}</Typography>
           </Paper>
         ) : (
-          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'grey.50' }}>
+          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'action.hover' }}>
             <Typography color="text.secondary" align="center">
               Enter your weight and waist circumference to estimate body fat percentage using the YMCA method.
             </Typography>

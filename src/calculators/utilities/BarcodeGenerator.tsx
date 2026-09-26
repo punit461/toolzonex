@@ -80,7 +80,7 @@ const BarcodeGeneratorContent = () => {
 
         <FormControl fullWidth size="small">
           <InputLabel>Barcode Format</InputLabel>
-          <Select value={format} label="Barcode Format" onChange={(e) => setFormat(e.target.value as string)}>
+          <Select inputProps={{ 'aria-label': 'Barcode Format' }} value={format} label="Barcode Format" onChange={(e) => setFormat(e.target.value as string)}>
             <MenuItem value="CODE128">CODE128 (Standard alphanumeric)</MenuItem>
             <MenuItem value="CODE39">CODE39 (Uppercase alphanumeric)</MenuItem>
             <MenuItem value="UPC">UPC (12-digit numeric)</MenuItem>
@@ -93,7 +93,7 @@ const BarcodeGeneratorContent = () => {
         
         <Box>
           <Typography variant="subtitle2" mb={1}>Bar Width: {width}px</Typography>
-          <Slider 
+          <Slider aria-label={`Bar Width: ${width}px`} 
             value={width} 
             min={1} 
             max={5} 
@@ -104,7 +104,7 @@ const BarcodeGeneratorContent = () => {
 
         <Box>
           <Typography variant="subtitle2" mb={1}>Height: {height}px</Typography>
-          <Slider 
+          <Slider aria-label={`Height: ${height}px`} 
             value={height} 
             min={50} 
             max={200} 

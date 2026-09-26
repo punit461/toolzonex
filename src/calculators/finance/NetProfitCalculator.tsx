@@ -98,9 +98,9 @@ const NetProfitCalculator = () => {
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Net Profit</Typography>
-            <Typography variant="h3" fontWeight="bold">{fmt(netProfit)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{fmt(netProfit)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Net Profit Margin</Typography>

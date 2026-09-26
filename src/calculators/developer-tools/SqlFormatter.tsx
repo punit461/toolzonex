@@ -43,7 +43,7 @@ const SqlFormatterContent = () => {
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 2 }}>
         <FormControl size="small" sx={{ minWidth: 200 }}>
           <InputLabel>SQL Dialect</InputLabel>
-          <Select
+          <Select inputProps={{ 'aria-label': 'SQL Dialect' }}
             value={dialect}
             label="SQL Dialect"
             onChange={(e) => setDialect(e.target.value)}
@@ -70,7 +70,7 @@ const SqlFormatterContent = () => {
         
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
           <Typography variant="subtitle2" fontWeight="bold">Input SQL</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Input SQL' } }}
             multiline
             rows={15}
             value={sqlInput}
@@ -94,7 +94,7 @@ const SqlFormatterContent = () => {
               {copied ? 'Copied' : 'Copy'}
             </Button>
           </Box>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Formatted SQL' } }}
             multiline
             rows={15}
             value={error ? error : sqlOutput}

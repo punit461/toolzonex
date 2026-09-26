@@ -5,8 +5,8 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions - ToolZoneX",
-  description: "Answers to common questions about ToolZoneX calculators, privacy policy, terms of service, and how to use our free online tools.",
+  title: "Frequently Asked Questions",
+  description: "Answers to common questions about ToolZoneX: cost, privacy, accuracy, and using the tools on any device.",
   keywords: ["FAQ", "frequently asked questions", "calculator help", "ToolZoneX FAQ", "how to use calculators", "common questions"],
   alternates: { canonical: "/faq" },
   openGraph: {

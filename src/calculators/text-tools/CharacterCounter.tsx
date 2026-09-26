@@ -15,7 +15,7 @@ const StatBox = ({ label, value, highlight }: { label: string; value: number; hi
       borderRadius: 2,
     }}
   >
-    <Typography variant={highlight ? 'h3' : 'h4'} fontWeight="bold">{value}</Typography>
+    <Typography component="p" variant={highlight ? 'h3' : 'h4'} fontWeight="bold">{value}</Typography>
     <Typography variant="subtitle2" sx={{ opacity: highlight ? 0.9 : 0.7 }}>{label}</Typography>
   </Paper>
 );

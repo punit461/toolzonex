@@ -74,7 +74,7 @@ const BusinessDirectoryGeneratorContent = () => {
         <Stack direction="row" spacing={1} alignItems="center" mb={2}>
           <FormControl size="small" sx={{ minWidth: 160 }}>
             <InputLabel>New entry category</InputLabel>
-            <Select label="New entry category" value={newCategory} onChange={(e: SelectChangeEvent) => setNewCategory(e.target.value as Category)}>
+            <Select inputProps={{ 'aria-label': 'New entry category' }} label="New entry category" value={newCategory} onChange={(e: SelectChangeEvent) => setNewCategory(e.target.value as Category)}>
               {CATEGORIES.map((cat) => <MenuItem key={cat} value={cat}>{cat}</MenuItem>)}
             </Select>
           </FormControl>
@@ -90,12 +90,12 @@ const BusinessDirectoryGeneratorContent = () => {
               <Box sx={{ display: 'flex', gap: 1, mb: 1, flexWrap: 'wrap', alignItems: 'center' }}>
                 <FormControl size="small" sx={{ minWidth: 130 }}>
                   <InputLabel>Category</InputLabel>
-                  <Select label="Category" value={e.category} onChange={(ev: SelectChangeEvent) => updateEntry(e.id, { category: ev.target.value as Category })}>
+                  <Select inputProps={{ 'aria-label': 'Category' }} label="Category" value={e.category} onChange={(ev: SelectChangeEvent) => updateEntry(e.id, { category: ev.target.value as Category })}>
                     {CATEGORIES.map((cat) => <MenuItem key={cat} value={cat}>{cat}</MenuItem>)}
                   </Select>
                 </FormControl>
                 <TextField size="small" label="Name" value={e.name} onChange={(ev) => updateEntry(e.id, { name: ev.target.value })} sx={{ flex: 1, minWidth: 130 }} />
-                <IconButton onClick={() => removeEntry(e.id)} disabled={entries.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeEntry(e.id)} disabled={entries.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

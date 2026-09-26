@@ -182,7 +182,7 @@ const RetirementCalculator = () => {
         <Box>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
             <Typography variant="h6" sx={{ fontWeight: 600 }}>Personal Details</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Currency' }}
               size="small"
               value={currency}
               onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -196,14 +196,14 @@ const RetirementCalculator = () => {
           <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 4 }}>
             <Box>
               <Typography gutterBottom variant="body2">Current Age</Typography>
-              <TextField
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Current Age' } }}
                 fullWidth variant="outlined" type="number" size="small"
                 value={Number.isNaN(currentAge) ? '' : currentAge} onChange={(e) => setCurrentAge(e.target.value === '' ? NaN : Number(e.target.value))}
               />
             </Box>
             <Box>
               <Typography gutterBottom variant="body2">Retirement Age</Typography>
-              <TextField
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Retirement Age' } }}
                 fullWidth variant="outlined" type="number" size="small"
                 value={Number.isNaN(retirementAge) ? '' : retirementAge} onChange={(e) => setRetirementAge(e.target.value === '' ? NaN : Number(e.target.value))}
               />
@@ -215,9 +215,9 @@ const RetirementCalculator = () => {
             <TextField
               fullWidth variant="outlined" type="number"
               value={Number.isNaN(monthlyExpenses) ? '' : monthlyExpenses} onChange={(e) => setMonthlyExpenses(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Current Monthly Expenses' }, input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
             />
-            <Slider value={Number.isNaN(monthlyExpenses) ? 0 : monthlyExpenses} min={10000} max={500000} step={5000} onChange={(_, value) => setMonthlyExpenses(value as number)} sx={{ mt: 2 }} />
+            <Slider aria-label="Current Monthly Expenses" value={Number.isNaN(monthlyExpenses) ? 0 : monthlyExpenses} min={10000} max={500000} step={5000} onChange={(_, value) => setMonthlyExpenses(value as number)} sx={{ mt: 2 }} />
           </Box>
 
           <Box sx={{ mb: 4 }}>
@@ -225,7 +225,7 @@ const RetirementCalculator = () => {
             <TextField
               fullWidth variant="outlined" type="number"
               value={Number.isNaN(existingCorpus) ? '' : existingCorpus} onChange={(e) => setExistingCorpus(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Existing Savings / Corpus' }, input: { startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment> } }}
             />
           </Box>
 
@@ -233,19 +233,19 @@ const RetirementCalculator = () => {
           <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
             <Box>
               <Typography gutterBottom variant="body2">Inflation Rate (%)</Typography>
-              <TextField fullWidth variant="outlined" type="number" size="small" value={Number.isNaN(inflationRate) ? '' : inflationRate} onChange={(e) => setInflationRate(e.target.value === '' ? NaN : Number(e.target.value))} />
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Inflation Rate (%)' } }} fullWidth variant="outlined" type="number" size="small" value={Number.isNaN(inflationRate) ? '' : inflationRate} onChange={(e) => setInflationRate(e.target.value === '' ? NaN : Number(e.target.value))} />
             </Box>
             <Box>
               <Typography gutterBottom variant="body2">Life Expectancy</Typography>
-              <TextField fullWidth variant="outlined" type="number" size="small" value={Number.isNaN(lifeExpectancy) ? '' : lifeExpectancy} onChange={(e) => setLifeExpectancy(e.target.value === '' ? NaN : Number(e.target.value))} />
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Life Expectancy' } }} fullWidth variant="outlined" type="number" size="small" value={Number.isNaN(lifeExpectancy) ? '' : lifeExpectancy} onChange={(e) => setLifeExpectancy(e.target.value === '' ? NaN : Number(e.target.value))} />
             </Box>
             <Box>
               <Typography gutterBottom variant="body2">Return (Pre-Retire) %</Typography>
-              <TextField fullWidth variant="outlined" type="number" size="small" value={Number.isNaN(returnPreRetirement) ? '' : returnPreRetirement} onChange={(e) => setReturnPreRetirement(e.target.value === '' ? NaN : Number(e.target.value))} />
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Return (Pre-Retire) %' } }} fullWidth variant="outlined" type="number" size="small" value={Number.isNaN(returnPreRetirement) ? '' : returnPreRetirement} onChange={(e) => setReturnPreRetirement(e.target.value === '' ? NaN : Number(e.target.value))} />
             </Box>
             <Box>
               <Typography gutterBottom variant="body2">Return (Post-Retire) %</Typography>
-              <TextField fullWidth variant="outlined" type="number" size="small" value={Number.isNaN(returnPostRetirement) ? '' : returnPostRetirement} onChange={(e) => setReturnPostRetirement(e.target.value === '' ? NaN : Number(e.target.value))} />
+              <TextField slotProps={{ htmlInput: { 'aria-label': 'Return (Post-Retire) %' } }} fullWidth variant="outlined" type="number" size="small" value={Number.isNaN(returnPostRetirement) ? '' : returnPostRetirement} onChange={(e) => setReturnPostRetirement(e.target.value === '' ? NaN : Number(e.target.value))} />
             </Box>
           </Box>
         </Box>
@@ -256,7 +256,7 @@ const RetirementCalculator = () => {
               <Typography variant="subtitle2" color="text.secondary" sx={{ textTransform: 'uppercase', letterSpacing: '0.05em', mb: 1 }}>
                 Retirement Corpus Needed
               </Typography>
-              <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 3, fontSize: { xs: '2rem', sm: '2.5rem' } }}>
+              <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 3, fontSize: { xs: '2rem', sm: '2.5rem' } }}>
                 {formatBigCurrency(corpusNeeded, currency)}
               </Typography>
 
@@ -282,6 +282,8 @@ const RetirementCalculator = () => {
             <Box sx={{ flexGrow: 1, height: 350, mt: 2 }}>
               <Typography variant="subtitle2" sx={{ mb: 2, textAlign: 'left' }}>Corpus Growth Projection</Typography>
               {isClient && (
+                // Chart repeats the figures shown in text above; hidden from screen readers.
+                <Box aria-hidden="true" sx={{ height: '100%' }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={chartData} margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
@@ -293,6 +295,7 @@ const RetirementCalculator = () => {
                     <Line type="monotone" dataKey="Total Invested" stroke="#71717A" strokeWidth={2} strokeDasharray="5 5" dot={false} />
                   </LineChart>
                 </ResponsiveContainer>
+                </Box>
               )}
             </Box>
           </Box>

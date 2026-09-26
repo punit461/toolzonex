@@ -121,7 +121,7 @@ const InternetSpeedCalculator = () => {
             <TextField label="File Size" type="number" fullWidth value={fileSize} onChange={(e) => setFileSize(e.target.value)} onFocus={(e) => e.target.select()} />
             <FormControl sx={{ minWidth: 100 }}>
               <InputLabel>Unit</InputLabel>
-              <Select value={sizeUnit} label="Unit" onChange={(e) => setSizeUnit(e.target.value)}>
+              <Select inputProps={{ 'aria-label': 'Unit' }} value={sizeUnit} label="Unit" onChange={(e) => setSizeUnit(e.target.value)}>
                 <MenuItem value="mb">MB</MenuItem>
                 <MenuItem value="gb">GB</MenuItem>
                 <MenuItem value="tb">TB</MenuItem>
@@ -134,7 +134,7 @@ const InternetSpeedCalculator = () => {
               <TextField label="Connection Speed" type="number" fullWidth value={speed} onChange={(e) => setSpeed(e.target.value)} onFocus={(e) => e.target.select()} />
               <FormControl sx={{ minWidth: 120 }}>
                 <InputLabel>Unit</InputLabel>
-                <Select value={speedUnit} label="Unit" onChange={(e) => setSpeedUnit(e.target.value)}>
+                <Select inputProps={{ 'aria-label': 'Unit' }} value={speedUnit} label="Unit" onChange={(e) => setSpeedUnit(e.target.value)}>
                   <MenuItem value="mbps">Mbps</MenuItem>
                   <MenuItem value="gbps">Gbps</MenuItem>
                 </Select>

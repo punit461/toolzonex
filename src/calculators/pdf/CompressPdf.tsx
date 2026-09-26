@@ -116,7 +116,7 @@ const CompressPdfContent = () => {
         {strong && (
           <Box sx={{ mb: 2 }}>
             <Typography gutterBottom>Image quality: {Math.round(quality * 100)}%</Typography>
-            <Slider value={quality} min={0.3} max={0.95} step={0.05} onChange={(_, v) => setQuality(v as number)} />
+            <Slider aria-label="Image quality" value={quality} min={0.3} max={0.95} step={0.05} onChange={(_, v) => setQuality(v as number)} />
             <Typography variant="caption" color="text.secondary">
               Lower quality means a smaller file but blurrier images and text.
             </Typography>
@@ -127,7 +127,7 @@ const CompressPdfContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 1 }} onClick={handleCompress} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Compressing...'}</> : 'Compress PDF'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Compressing...'}</> : 'Compress PDF'}
       </Button>
 
       {result && (

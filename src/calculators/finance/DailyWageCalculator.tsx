@@ -75,7 +75,7 @@ const DailyWageCalculatorContent = () => {
           {result ? (
             <>
               <Typography variant="body2" color="text.secondary" gutterBottom>Total Pay for Today</Typography>
-              <Typography variant="h2" fontWeight={800} color="primary.main">{money(result.totalPay)}</Typography>
+              <Typography component="p" variant="h2" fontWeight={800} color="primary.main">{money(result.totalPay)}</Typography>
               <Typography variant="body2" color="text.secondary" mt={2}>
                 Regular: {money(result.regularPay)} &nbsp;|&nbsp; Overtime: {money(result.overtimePay)}
               </Typography>

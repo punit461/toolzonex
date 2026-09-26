@@ -49,7 +49,7 @@ const RandomTeamGeneratorContent = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 3 }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           <Typography variant="subtitle1" fontWeight="600">Names (one per line)</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Names (one per line)' } }}
             multiline
             rows={10}
             value={namesInput}
@@ -68,7 +68,7 @@ const RandomTeamGeneratorContent = () => {
               const v = Math.min(10, Math.max(2, Number(e.target.value) || 2));
               setTeamCount(v);
             }}
-            inputProps={{ min: 2, max: 10 }}
+            inputProps={{ 'aria-label': 'Number of teams', min: 2, max: 10 }}
             fullWidth
           />
           <Typography variant="body2" color="text.secondary">Between 2 and 10 teams.</Typography>

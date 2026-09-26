@@ -134,7 +134,7 @@ const WarehouseSpaceCalculator = () => {
           </Box>
           <Box textAlign="center">
             <Typography variant="body2" color="text.secondary">Total Warehouse Floor Space Needed</Typography>
-            <Typography variant="h3" color="primary" fontWeight={800}>
+            <Typography component="p" variant="h3" color="primary" fontWeight={800}>
               {totalArea.toLocaleString(undefined, { maximumFractionDigits: 0 })} sq ft
             </Typography>
           </Box>

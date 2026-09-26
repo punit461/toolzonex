@@ -70,7 +70,7 @@ const UpsideDownTextContent = () => {
           >
             {output}
           </Typography>
-          <IconButton size="small" onClick={copyOutput} sx={{ flexShrink: 0 }}>
+          <IconButton aria-label="Copy" size="small" onClick={copyOutput} sx={{ flexShrink: 0 }}>
             <ContentCopyIcon fontSize="small" />
           </IconButton>
         </Box>

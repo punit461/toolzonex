@@ -41,7 +41,7 @@ const JwtDecoderContent = () => {
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Encoded JWT</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Encoded JWT' } }}
           multiline
           rows={15}
           value={token}
@@ -60,7 +60,7 @@ const JwtDecoderContent = () => {
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Decoded Token Data</Typography>
         
-        <Paper variant="outlined" sx={{ p: 2, bgcolor: 'grey.50', display: 'flex', flexDirection: 'column', gap: 2, height: '100%', minHeight: 380 }}>
+        <Paper variant="outlined" sx={{ p: 2, bgcolor: 'action.hover', display: 'flex', flexDirection: 'column', gap: 2, height: '100%', minHeight: 380 }}>
           {header || payload ? (
             <>
               <Box>

@@ -124,9 +124,9 @@ const CoffeeRatioCalculator = () => {
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Result</Typography>
           {solveFor === 'water' ? (
             <>
-              <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+              <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
                 <Typography variant="body2">Water Needed</Typography>
-                <Typography variant="h3" fontWeight="bold">{validRatio && resultWater > 0 ? resultWater.toFixed(0) : '—'}</Typography>
+                <Typography component="p" variant="h3" fontWeight="bold">{validRatio && resultWater > 0 ? resultWater.toFixed(0) : '—'}</Typography>
                 <Typography variant="body2">grams</Typography>
               </Paper>
               <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
@@ -135,9 +135,9 @@ const CoffeeRatioCalculator = () => {
               </Paper>
             </>
           ) : (
-            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="body2">Coffee Needed</Typography>
-              <Typography variant="h3" fontWeight="bold">{validRatio && resultCoffee > 0 ? resultCoffee.toFixed(1) : '—'}</Typography>
+              <Typography component="p" variant="h3" fontWeight="bold">{validRatio && resultCoffee > 0 ? resultCoffee.toFixed(1) : '—'}</Typography>
               <Typography variant="body2">grams</Typography>
             </Paper>
           )}

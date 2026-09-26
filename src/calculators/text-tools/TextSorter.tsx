@@ -67,7 +67,7 @@ const TextSorterContent = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mb: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Sort Order</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Sort Order' }}
               value={sortOrder}
               label="Sort Order"
               onChange={(e) => setSortOrder(e.target.value)}
@@ -107,7 +107,7 @@ const TextSorterContent = () => {
              </Button>
           )}
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Result' } }}
           value={result}
           multiline
           rows={12}

@@ -121,7 +121,7 @@ const ExifReaderContent = () => {
 
         {loading && (
           <Box sx={{ display: 'flex', justifyContent: 'center', py: 4 }}>
-            <CircularProgress />
+            <CircularProgress aria-label="Loading" />
           </Box>
         )}
 

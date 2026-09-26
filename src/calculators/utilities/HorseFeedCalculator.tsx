@@ -92,7 +92,7 @@ const HorseFeedCalculator = () => {
           <TextField label="Body Weight (lb)" type="number" fullWidth value={bodyWeight} onChange={(e) => setBodyWeight(e.target.value)} onFocus={(e) => e.target.select()} />
           <FormControl fullWidth size="small">
             <InputLabel>Activity Level</InputLabel>
-            <Select label="Activity Level" value={activity} onChange={(e) => setActivity(e.target.value as Activity)}>
+            <Select inputProps={{ 'aria-label': 'Activity Level' }} label="Activity Level" value={activity} onChange={(e) => setActivity(e.target.value as Activity)}>
               {(Object.keys(ACTIVITY_LABEL) as Activity[]).map((a) => (
                 <MenuItem key={a} value={a}>{ACTIVITY_LABEL[a]}</MenuItem>
               ))}
@@ -102,7 +102,7 @@ const HorseFeedCalculator = () => {
 
         <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Recommended Daily Forage</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>
             {valid ? `${dailyForageLb.toFixed(1)} lb` : '—'}
           </Typography>
           <Typography variant="body1" color="text.secondary">{valid ? `${dailyForageKg.toFixed(1)} kg` : ''}</Typography>

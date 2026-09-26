@@ -40,7 +40,7 @@ const UnderstandingGratuity = () => {
       <Typography variant="body1">
         The calculation is straightforward but relies on two key inputs: your Last Drawn Salary (Basic + Dearness Allowance) and your Years of Service.
       </Typography>
-      <Typography variant="body1" sx={{ p: 2, bgcolor: '#f9f9f9', borderRadius: 1, fontFamily: 'monospace' }}>
+      <Typography variant="body1" sx={{ p: 2, bgcolor: 'action.hover', borderRadius: 1, fontFamily: 'monospace' }}>
         Gratuity = (15 × Last Drawn Salary × Years of Service) / 26
       </Typography>
       <Typography variant="body1">

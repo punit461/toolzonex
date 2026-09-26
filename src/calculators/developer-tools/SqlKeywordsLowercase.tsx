@@ -45,7 +45,7 @@ const SqlKeywordsLowercaseContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">SQL Input</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'SQL Input' } }}
           multiline
           rows={14}
           value={input}
@@ -63,7 +63,7 @@ const SqlKeywordsLowercaseContent = () => {
           <Typography variant="subtitle1" fontWeight="600">Output (Keywords Lowercased)</Typography>
           <Button startIcon={<ContentCopyIcon />} onClick={copy} disabled={!output} size="small">Copy</Button>
         </Box>
-        <Paper variant="outlined" sx={{ p: 2, minHeight: 340, bgcolor: 'grey.50', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+        <Paper variant="outlined" sx={{ p: 2, minHeight: 340, bgcolor: 'action.hover', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
           {output || <Typography color="text.secondary">Output will appear here...</Typography>}
         </Paper>
       </Box>

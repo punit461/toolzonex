@@ -106,7 +106,7 @@ const TvElectricityCostCalculator = () => {
               <Typography variant="h6">Monthly</Typography>
               <Typography variant="h6" fontWeight="bold">{money(monthlyCost)}</Typography>
             </Paper>
-            <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="h6">Annual</Typography>
               <Typography variant="h6" fontWeight="bold">{money(annualCost)}</Typography>
             </Paper>

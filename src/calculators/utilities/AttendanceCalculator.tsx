@@ -144,7 +144,7 @@ const AttendanceCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Current Attendance</Typography>
-            <Typography variant="h2" sx={{ fontWeight: 800, color: isShort ? '#ef4444' : 'primary.main', mb: 2 }}>
+            <Typography component="p" variant="h2" sx={{ fontWeight: 800, color: isShort ? '#ef4444' : 'primary.main', mb: 2 }}>
               {currentPercent.toFixed(2)}%
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>{message}</Typography>

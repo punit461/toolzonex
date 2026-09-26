@@ -93,7 +93,7 @@ const EmergencyFundCalculator = () => {
           <Box sx={{ mb: 4 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Typography gutterBottom>Monthly Essential Expenses</Typography>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Currency' }}
                 size="small"
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -111,13 +111,13 @@ const EmergencyFundCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(monthlyExpenses) ? '' : monthlyExpenses}
               onChange={(e) => setMonthlyExpenses(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Monthly Essential Expenses' },
                 input: {
                   startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Monthly Essential Expenses"
               value={Number.isNaN(monthlyExpenses) ? 0 : monthlyExpenses}
               min={5000}
               max={300000}
@@ -136,13 +136,13 @@ const EmergencyFundCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(coverageMonths) ? '' : coverageMonths}
               onChange={(e) => setCoverageMonths(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Coverage Months' },
                 input: {
                   endAdornment: <InputAdornment position="end">months</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Coverage Months"
               value={Number.isNaN(coverageMonths) ? 0 : coverageMonths}
               min={3}
               max={12}
@@ -161,7 +161,7 @@ const EmergencyFundCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(currentSavings) ? '' : currentSavings}
               onChange={(e) => setCurrentSavings(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Current Emergency Savings' },
                 input: {
                   startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
@@ -178,13 +178,13 @@ const EmergencyFundCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(goalMonths) ? '' : goalMonths}
               onChange={(e) => setGoalMonths(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Months to Reach Goal' },
                 input: {
                   endAdornment: <InputAdornment position="end">months</InputAdornment>,
                 }
               }}
             />
-            <Slider
+            <Slider aria-label="Months to Reach Goal"
               value={Number.isNaN(goalMonths) ? 0 : goalMonths}
               min={1}
               max={36}
@@ -198,7 +198,7 @@ const EmergencyFundCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Target Emergency Fund</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               {formatMoney(targetAmount, currency)}
             </Typography>
 

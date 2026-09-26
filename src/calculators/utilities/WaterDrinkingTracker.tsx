@@ -63,11 +63,11 @@ const WaterDrinkingTrackerContent = () => {
         <Typography variant="h4" fontWeight={800}>{glassesConsumed}</Typography>
         <Typography variant="body2" color="text.secondary" gutterBottom>glasses today ({consumedDisplay} of {goalDisplay})</Typography>
 
-        <LinearProgress variant="determinate" value={percent} sx={{ height: 12, borderRadius: 6, my: 2 }} />
+        <LinearProgress aria-label="Progress" variant="determinate" value={percent} sx={{ height: 12, borderRadius: 6, my: 2 }} />
         <Typography variant="body1" fontWeight={600} sx={{ mb: 2 }}>{percent.toFixed(0)}% of daily goal</Typography>
 
         <Stack direction="row" spacing={2} justifyContent="center">
-          <IconButton color="primary" onClick={() => setGlassesConsumed((c) => Math.max(0, c - 1))} disabled={glassesConsumed === 0}>
+          <IconButton aria-label="Remove a glass" color="primary" onClick={() => setGlassesConsumed((c) => Math.max(0, c - 1))} disabled={glassesConsumed === 0}>
             <RemoveIcon />
           </IconButton>
           <Button variant="contained" startIcon={<AddIcon />} onClick={() => setGlassesConsumed((c) => c + 1)}>

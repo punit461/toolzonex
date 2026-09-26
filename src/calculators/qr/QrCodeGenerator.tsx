@@ -180,6 +180,7 @@ function ColorSwatchInput({ label, value, onChange }: { label: string; value: st
     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.25 }}>
       <Box
         component="input"
+        aria-label={label}
         type="color"
         value={value}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.target.value)}
@@ -277,7 +278,7 @@ function WifiForm({ data, onChange }: { data: WifiData; onChange: (d: WifiData) 
       <TextField label="Network Name (SSID)" value={data.ssid} onChange={(e) => onChange({ ...data, ssid: e.target.value })} fullWidth required />
       <FormControl fullWidth>
         <InputLabel>Encryption</InputLabel>
-        <Select value={data.encryption} label="Encryption" onChange={(e) => onChange({ ...data, encryption: e.target.value as WifiData['encryption'] })}>
+        <Select inputProps={{ 'aria-label': 'Encryption' }} value={data.encryption} label="Encryption" onChange={(e) => onChange({ ...data, encryption: e.target.value as WifiData['encryption'] })}>
           <MenuItem value="WPA">WPA/WPA2</MenuItem>
           <MenuItem value="WEP">WEP</MenuItem>
           <MenuItem value="nopass">None (Open)</MenuItem>
@@ -378,7 +379,7 @@ function CryptoForm({ data, onChange }: { data: CryptoData; onChange: (d: Crypto
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
       <FormControl fullWidth>
         <InputLabel>Cryptocurrency</InputLabel>
-        <Select value={data.type} label="Cryptocurrency" onChange={(e) => onChange({ ...data, type: e.target.value as CryptoData['type'] })}>
+        <Select inputProps={{ 'aria-label': 'Cryptocurrency' }} value={data.type} label="Cryptocurrency" onChange={(e) => onChange({ ...data, type: e.target.value as CryptoData['type'] })}>
           <MenuItem value="bitcoin">Bitcoin</MenuItem>
           <MenuItem value="ethereum">Ethereum</MenuItem>
         </Select>
@@ -753,16 +754,16 @@ const QrCodeGeneratorContent = () => {
               <Grid container spacing={2}>
                 <Grid item xs={4}>
                   <Typography variant="body2" color="text.secondary" noWrap>Size: {size}px</Typography>
-                  <Slider size="small" value={size} min={150} max={500} step={10} onChange={(_, val) => setSize(val as number)} />
+                  <Slider aria-label={`Size: ${size}px`} size="small" value={size} min={150} max={500} step={10} onChange={(_, val) => setSize(val as number)} />
                 </Grid>
                 <Grid item xs={4}>
                   <Typography variant="body2" color="text.secondary" noWrap>Margin: {margin}px</Typography>
-                  <Slider size="small" value={margin} min={0} max={50} step={5} onChange={(_, val) => setMargin(val as number)} />
+                  <Slider aria-label={`Margin: ${margin}px`} size="small" value={margin} min={0} max={50} step={5} onChange={(_, val) => setMargin(val as number)} />
                 </Grid>
                 <Grid item xs={4}>
                   <FormControl fullWidth size="small">
                     <InputLabel>Error Correction</InputLabel>
-                    <Select value={errorCorrection} label="Error Correction" onChange={(e) => setErrorCorrection(e.target.value as 'L' | 'M' | 'Q' | 'H')}>
+                    <Select inputProps={{ 'aria-label': 'Error Correction' }} value={errorCorrection} label="Error Correction" onChange={(e) => setErrorCorrection(e.target.value as 'L' | 'M' | 'Q' | 'H')}>
                       {ERROR_CORRECTION_LEVELS.map((l) => <MenuItem key={l.value} value={l.value}>{l.label}</MenuItem>)}
                     </Select>
                   </FormControl>
@@ -774,7 +775,7 @@ const QrCodeGeneratorContent = () => {
                 <Grid item xs={4}>
                   <FormControl fullWidth size="small">
                     <InputLabel>Dot Style</InputLabel>
-                    <Select value={dotStyle} label="Dot Style" onChange={(e) => setDotStyle(e.target.value)}>
+                    <Select inputProps={{ 'aria-label': 'Dot Style' }} value={dotStyle} label="Dot Style" onChange={(e) => setDotStyle(e.target.value)}>
                       {DOT_STYLES.map((s) => <MenuItem key={s.value} value={s.value}>{s.label}</MenuItem>)}
                     </Select>
                   </FormControl>
@@ -782,7 +783,7 @@ const QrCodeGeneratorContent = () => {
                 <Grid item xs={4}>
                   <FormControl fullWidth size="small">
                     <InputLabel>Border Style</InputLabel>
-                    <Select
+                    <Select inputProps={{ 'aria-label': 'Border Style' }}
                       value={cornerSquareStyle}
                       label="Border Style"
                       onChange={(e) => setCornerSquareStyle(e.target.value)}
@@ -806,7 +807,7 @@ const QrCodeGeneratorContent = () => {
                 <Grid item xs={4}>
                   <FormControl fullWidth size="small">
                     <InputLabel>Center Style</InputLabel>
-                    <Select
+                    <Select inputProps={{ 'aria-label': 'Center Style' }}
                       value={cornerDotStyle}
                       label="Center Style"
                       onChange={(e) => setCornerDotStyle(e.target.value)}
@@ -904,7 +905,7 @@ const QrCodeGeneratorContent = () => {
                   </Box>
                   <Box>
                     <Typography variant="body2" color="text.secondary">Logo Size: {Math.round(logoSize * 100)}%</Typography>
-                    <Slider value={logoSize} min={0.1} max={0.5} step={0.05} onChange={(_, val) => setLogoSize(val as number)} />
+                    <Slider aria-label="Logo Size" value={logoSize} min={0.1} max={0.5} step={0.05} onChange={(_, val) => setLogoSize(val as number)} />
                   </Box>
                 </>
               )}

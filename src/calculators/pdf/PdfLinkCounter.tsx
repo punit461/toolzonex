@@ -144,7 +144,7 @@ const PdfLinkCounterContent = () => {
           <Typography variant="subtitle2" fontWeight={600} gutterBottom>
             Links per page
           </Typography>
-          <Box sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', overflow: 'hidden' }}>
+          <Box sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', overflow: 'hidden' }}>
             {pagesWithLinks.map((p, i) => (
               <Box
                 key={p.pageIndex}
@@ -170,7 +170,7 @@ const PdfLinkCounterContent = () => {
           <Typography variant="subtitle2" fontWeight={600} gutterBottom sx={{ mt: 3 }}>
             All links
           </Typography>
-          <Box sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', overflow: 'hidden', maxHeight: 300, overflowY: 'auto' }}>
+          <Box sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', overflow: 'hidden', maxHeight: 300, overflowY: 'auto' }}>
             {result.links.map((link, i) => (
               <Box
                 key={i}

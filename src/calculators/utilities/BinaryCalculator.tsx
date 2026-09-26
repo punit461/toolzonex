@@ -158,7 +158,7 @@ const BinaryCalculator = () => {
               <>
                 <Box sx={{ textAlign: 'center', mb: 3 }}>
                   <Typography variant="h6" color="text.secondary" gutterBottom>Result</Typography>
-                  <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', fontFamily: 'monospace' }}>
+                  <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main', fontFamily: 'monospace' }}>
                     {toBin(result)}
                   </Typography>
                 </Box>

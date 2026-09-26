@@ -105,7 +105,7 @@ const HeaterSizeCalculator = () => {
           <TextField label="Ceiling Height (ft)" type="number" fullWidth value={ceilingHeight} onChange={(e) => setCeilingHeight(e.target.value)} onFocus={(e) => e.target.select()} />
           <FormControl fullWidth size="small">
             <InputLabel>Insulation Quality</InputLabel>
-            <Select label="Insulation Quality" value={insulation} onChange={(e) => setInsulation(e.target.value as Insulation)}>
+            <Select inputProps={{ 'aria-label': 'Insulation Quality' }} label="Insulation Quality" value={insulation} onChange={(e) => setInsulation(e.target.value as Insulation)}>
               <MenuItem value="poor">Poor</MenuItem>
               <MenuItem value="average">Average</MenuItem>
               <MenuItem value="good">Good</MenuItem>
@@ -113,7 +113,7 @@ const HeaterSizeCalculator = () => {
           </FormControl>
           <FormControl fullWidth size="small">
             <InputLabel>Climate Severity</InputLabel>
-            <Select label="Climate Severity" value={climate} onChange={(e) => setClimate(e.target.value as Climate)}>
+            <Select inputProps={{ 'aria-label': 'Climate Severity' }} label="Climate Severity" value={climate} onChange={(e) => setClimate(e.target.value as Climate)}>
               <MenuItem value="mild">Mild</MenuItem>
               <MenuItem value="moderate">Moderate</MenuItem>
               <MenuItem value="cold">Cold</MenuItem>
@@ -123,7 +123,7 @@ const HeaterSizeCalculator = () => {
 
         <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Recommended Capacity</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>
             {valid ? `${Math.round(totalBtu).toLocaleString()} BTU` : '—'}
           </Typography>
           <Typography variant="caption" color="text.secondary">{valid ? `${area.toFixed(0)} sq ft room` : ''}</Typography>

@@ -136,7 +136,7 @@ const ClassroomCapacityCalculator = () => {
 
           <FormControl fullWidth>
             <InputLabel>Seating Arrangement</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Seating Arrangement' }}
               value={arrangement}
               label="Seating Arrangement"
               onChange={(e) => applyArrangement(e.target.value as Arrangement)}
@@ -161,7 +161,7 @@ const ClassroomCapacityCalculator = () => {
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Maximum Recommended Capacity</Typography>
             <Typography variant="h3" fontWeight="bold">{result.capacity} students</Typography>
           </Paper>

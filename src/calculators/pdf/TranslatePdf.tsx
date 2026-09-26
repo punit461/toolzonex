@@ -138,7 +138,7 @@ const TranslatePdfContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleTranslate} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Translating...'}</> : 'Translate PDF'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Translating...'}</> : 'Translate PDF'}
       </Button>
 
       {translatedText !== null && (
@@ -150,7 +150,7 @@ const TranslatePdfContent = () => {
             minRows={10}
             maxRows={20}
             value={translatedText}
-            slotProps={{ input: { readOnly: true } }}
+            slotProps={{ htmlInput: { 'aria-label': 'Translated text' }, input: { readOnly: true } }}
           />
           <Box sx={{ display: 'flex', gap: 2, mt: 2, flexWrap: 'wrap' }}>
             <Button variant="outlined" onClick={handleCopy}>Copy to Clipboard</Button>

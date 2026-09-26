@@ -48,7 +48,7 @@ gap: ${gap};`;
 
         <FormControl fullWidth size="small">
           <InputLabel>gap</InputLabel>
-          <Select value={gap} label="gap" onChange={(e) => setGap(e.target.value as string)}>
+          <Select inputProps={{ 'aria-label': 'gap' }} value={gap} label="gap" onChange={(e) => setGap(e.target.value as string)}>
             <MenuItem value="0px">0px</MenuItem>
             <MenuItem value="8px">8px</MenuItem>
             <MenuItem value="16px">16px</MenuItem>

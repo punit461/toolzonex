@@ -130,9 +130,9 @@ const CreditCardPayoffCalculator = () => {
           <Stack spacing={2} sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
             {mode === 'payment' ? (
               paymentResult && paymentResult.months !== null ? (
-                <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+                <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
                   <Typography variant="body2">Months to Pay Off</Typography>
-                  <Typography variant="h3" fontWeight="bold">{paymentResult.months}</Typography>
+                  <Typography component="p" variant="h3" fontWeight="bold">{paymentResult.months}</Typography>
                   <Typography variant="body2" mt={1}>
                     Total Interest: ${paymentResult.totalInterest?.toFixed(2)}
                   </Typography>
@@ -145,14 +145,14 @@ const CreditCardPayoffCalculator = () => {
               )
             ) : requiredPayment !== null ? (
               typeof requiredPayment === 'number' ? (
-                <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+                <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
                   <Typography variant="body2">Required Monthly Payment</Typography>
-                  <Typography variant="h3" fontWeight="bold">${requiredPayment.toFixed(2)}</Typography>
+                  <Typography component="p" variant="h3" fontWeight="bold">${requiredPayment.toFixed(2)}</Typography>
                 </Paper>
               ) : (
-                <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+                <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
                   <Typography variant="body2">Required Monthly Payment</Typography>
-                  <Typography variant="h3" fontWeight="bold">${requiredPayment.payment.toFixed(2)}</Typography>
+                  <Typography component="p" variant="h3" fontWeight="bold">${requiredPayment.payment.toFixed(2)}</Typography>
                   <Typography variant="body2" mt={1}>
                     Total Interest: ${requiredPayment.totalInterest.toFixed(2)}
                   </Typography>

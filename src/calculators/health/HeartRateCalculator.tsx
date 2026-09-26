@@ -87,7 +87,7 @@ const HeartRateCalculator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>
           <Typography gutterBottom>Age (Years)</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Age (Years)' } }}
             fullWidth
             variant="outlined"
             type="number"

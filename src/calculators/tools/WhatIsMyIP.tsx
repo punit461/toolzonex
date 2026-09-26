@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Box, TextField, Button, Typography, Paper, Alert, CircularProgress, Grid } from '@mui/material';
+import { Box, TextField, Button, Typography, Paper, Alert, CircularProgress, Grid, Link } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CheckIcon from '@mui/icons-material/Check';
 import RefreshIcon from '@mui/icons-material/Refresh';
@@ -91,7 +91,7 @@ const WhatIsMyIPContent = () => {
       <Box>
         {loading ? (
           <Box sx={{ display: 'flex', justifyContent: 'center', py: 6 }}>
-            <CircularProgress />
+            <CircularProgress aria-label="Loading" />
           </Box>
         ) : (
           <>
@@ -103,7 +103,7 @@ const WhatIsMyIPContent = () => {
                   <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
                     Your Public IP Address
                   </Typography>
-                  <Typography variant="h3" sx={{ fontWeight: 700, fontFamily: 'monospace', mb: 2, color: 'text.primary' }}>
+                  <Typography component="p" variant="h3" sx={{ fontWeight: 700, fontFamily: 'monospace', mb: 2, color: 'text.primary' }}>
                     {ip}
                   </Typography>
                   <Button 
@@ -124,6 +124,10 @@ const WhatIsMyIPContent = () => {
                 >
                   Refresh
                 </Button>
+                <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 1.5 }}>
+                  Your IP address is looked up by ipapi.co (or api.ipify.org if that fails) when this page loads.
+                  ToolZoneX doesn&apos;t store it. See our <Link href="/privacy-policy#outside-services">Privacy Policy</Link>.
+                </Typography>
               </>
             )}
           </>

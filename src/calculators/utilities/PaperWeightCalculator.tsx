@@ -97,7 +97,7 @@ const PaperWeightCalculator = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           <FormControl fullWidth>
             <InputLabel>Paper Size</InputLabel>
-            <Select value={preset} label="Paper Size" onChange={(e) => handlePresetChange(e.target.value)}>
+            <Select inputProps={{ 'aria-label': 'Paper Size' }} value={preset} label="Paper Size" onChange={(e) => handlePresetChange(e.target.value)}>
               {Object.entries(PRESETS).map(([key, p]) => (
                 <MenuItem key={key} value={key}>{p.label}</MenuItem>
               ))}
@@ -132,7 +132,7 @@ const PaperWeightCalculator = () => {
           </Box>
           <Box textAlign="center">
             <Typography variant="body2" color="text.secondary">Total Weight</Typography>
-            <Typography variant="h3" color="primary" fontWeight={800}>
+            <Typography component="p" variant="h3" color="primary" fontWeight={800}>
               {totalGrams.toLocaleString(undefined, { maximumFractionDigits: 1 })} g
             </Typography>
             <Typography variant="body2" color="text.secondary" mt={1}>

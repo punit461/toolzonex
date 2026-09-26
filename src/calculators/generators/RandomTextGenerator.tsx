@@ -120,7 +120,7 @@ const RandomTextGeneratorContent = () => {
         </Button>
       </Box>
 
-      <Paper variant="outlined" sx={{ p: 2, bgcolor: 'grey.50' }}>
+      <Paper variant="outlined" sx={{ p: 2, bgcolor: 'action.hover' }}>
         <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 1 }}>
           <Button startIcon={<ContentCopyIcon />} onClick={copy} disabled={!output} size="small">
             {copied ? 'Copied!' : 'Copy'}
@@ -130,7 +130,7 @@ const RandomTextGeneratorContent = () => {
           multiline
           rows={12}
           value={output}
-          inputProps={{ readOnly: true, style: { fontFamily: 'monospace' } }}
+          inputProps={{ 'aria-label': 'Output', readOnly: true, style: { fontFamily: 'monospace' } }}
           fullWidth
           variant="standard"
         />

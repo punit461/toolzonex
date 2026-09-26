@@ -85,14 +85,14 @@ const MeetingNotesTemplateGeneratorContent = () => {
           <Stack spacing={1}>
             {agenda.map((item, idx) => (
               <Stack direction="row" spacing={1} key={idx}>
-                <TextField
+                <TextField slotProps={{ htmlInput: { 'aria-label': `Agenda item ${idx + 1}` } }}
                   size="small"
                   fullWidth
                   value={item}
                   onChange={(e) => updateAgenda(idx, e.target.value)}
                   placeholder={`Agenda item ${idx + 1}`}
                 />
-                <IconButton size="small" onClick={() => removeAgenda(idx)} disabled={agenda.length <= 1}>
+                <IconButton aria-label="Remove" size="small" onClick={() => removeAgenda(idx)} disabled={agenda.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>
@@ -122,7 +122,7 @@ const MeetingNotesTemplateGeneratorContent = () => {
                   placeholder="Assignee"
                   sx={{ width: 140 }}
                 />
-                <IconButton size="small" onClick={() => removeAction(idx)} disabled={actions.length <= 1}>
+                <IconButton aria-label="Remove" size="small" onClick={() => removeAction(idx)} disabled={actions.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

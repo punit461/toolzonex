@@ -7,15 +7,18 @@
 @import 'tailwindcss/utilities.css' layer(utilities);
 
 @theme {
-  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
 
-  /* Productivity Tool palette — teal focus + orange action, from ui-ux-pro-max */
-  --color-primary: #0d9488;
-  --color-primary-hover: #0b7a70;
+  /* Productivity Tool palette — teal focus + orange action, from ui-ux-pro-max.
+     Darkened 2026-09-26 so every text use and white-on-colour button clears
+     WCAG AA 4.5:1, including on the -soft chip backgrounds (the originals
+     measured 1.9-3.8:1). */
+  --color-primary: #0f766e;
+  --color-primary-hover: #115e59;
   --color-primary-soft: #ccfbf1;
-  --color-secondary: #14b8a6;
-  --color-accent: #f97316;
-  --color-accent-hover: #ea580c;
+  --color-secondary: #0f766e;
+  --color-accent: #c2410c;
+  --color-accent-hover: #9a3412;
   --color-accent-soft: #ffedd5;
 
   --color-bg: #f0fdfa;
@@ -25,11 +28,11 @@
   --color-text-muted: #475569;
   --color-border: #c7e4e0;
 
-  --color-success: #22c55e;
+  --color-success: #15803d;
   --color-success-soft: #dcfce7;
-  --color-danger: #ef4444;
+  --color-danger: #b91c1c;
   --color-danger-soft: #fee2e2;
-  --color-warning: #f59e0b;
+  --color-warning: #92400e;
   --color-warning-soft: #fef3c7;
 }
 

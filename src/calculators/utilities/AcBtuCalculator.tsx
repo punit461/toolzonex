@@ -97,7 +97,7 @@ const AcBtuCalculator = () => {
           <TextField label="Ceiling Height (ft)" type="number" fullWidth value={ceilingHeight} onChange={(e) => setCeilingHeight(e.target.value)} onFocus={(e) => e.target.select()} />
           <FormControl fullWidth size="small">
             <InputLabel>Sun Exposure</InputLabel>
-            <Select label="Sun Exposure" value={sun} onChange={(e) => setSun(e.target.value as SunExposure)}>
+            <Select inputProps={{ 'aria-label': 'Sun Exposure' }} label="Sun Exposure" value={sun} onChange={(e) => setSun(e.target.value as SunExposure)}>
               <MenuItem value="shaded">Shaded</MenuItem>
               <MenuItem value="average">Average</MenuItem>
               <MenuItem value="sunny">Sunny</MenuItem>
@@ -108,7 +108,7 @@ const AcBtuCalculator = () => {
 
         <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Recommended Capacity</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>
             {valid ? `${Math.round(totalBtu).toLocaleString()} BTU` : '—'}
           </Typography>
           <Typography variant="caption" color="text.secondary">{valid ? `${area.toFixed(0)} sq ft room` : ''}</Typography>

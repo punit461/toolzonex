@@ -110,7 +110,7 @@ const PetCareChecklistVaccinationRecordContent = () => {
       <Paper variant="outlined" sx={{ p: 2, mt: 2, mb: 3 }}>
         <Typography variant="subtitle2" fontWeight={600} gutterBottom>Add Custom Care Item</Typography>
         <Stack direction="row" spacing={1}>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Add Custom Care Item' } }}
             size="small"
             fullWidth
             value={customItem}
@@ -139,7 +139,7 @@ const PetCareChecklistVaccinationRecordContent = () => {
               <TextField size="small" label="Vaccine name" value={v.vaccine} onChange={(e) => updateVaccine(v.id, { vaccine: e.target.value })} sx={{ flex: 1, minWidth: 140 }} />
               <TextField size="small" type="date" label="Date given" InputLabelProps={{ shrink: true }} value={v.dateGiven} onChange={(e) => updateVaccine(v.id, { dateGiven: e.target.value })} sx={{ flex: 1, minWidth: 140 }} />
               <TextField size="small" type="date" label="Next due" InputLabelProps={{ shrink: true }} value={v.nextDue} onChange={(e) => updateVaccine(v.id, { nextDue: e.target.value })} sx={{ flex: 1, minWidth: 140 }} />
-              <IconButton onClick={() => removeVaccine(v.id)} disabled={vaccines.length <= 1} size="small">
+              <IconButton aria-label="Remove" onClick={() => removeVaccine(v.id)} disabled={vaccines.length <= 1} size="small">
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Box>

@@ -88,7 +88,7 @@ const GeometricMeanCalculator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>
           <Typography gutterBottom>Numbers (comma, space, or line separated, all positive)</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Numbers (comma, space, or line separated, all positive)' } }}
             fullWidth
             multiline
             minRows={6}
@@ -104,7 +104,7 @@ const GeometricMeanCalculator = () => {
           ) : geoMean !== null ? (
             <>
               <Typography variant="h6" color="text.secondary" gutterBottom>Geometric Mean</Typography>
-              <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 2 }}>
+              <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 2 }}>
                 {geoMean.toLocaleString(undefined, { maximumFractionDigits: 4 })}
               </Typography>
               <Typography variant="body2" color="text.secondary">

@@ -110,7 +110,7 @@ const ResistanceCalculator = () => {
           <Stack spacing={2}>
             <FormControl fullWidth>
               <InputLabel>Calculate</InputLabel>
-              <Select value={mode} label="Calculate" onChange={(e) => setMode(e.target.value)}>
+              <Select inputProps={{ 'aria-label': 'Calculate' }} value={mode} label="Calculate" onChange={(e) => setMode(e.target.value)}>
                 <MenuItem value="R">Resistance from Voltage &amp; Current</MenuItem>
                 <MenuItem value="V">Voltage from Current &amp; Resistance</MenuItem>
                 <MenuItem value="I">Current from Voltage &amp; Resistance</MenuItem>

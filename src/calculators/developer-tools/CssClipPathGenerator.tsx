@@ -46,7 +46,7 @@ const CssClipPathGeneratorContent = () => {
         {(shape === 'circle' || shape === 'ellipse') && (
           <Box>
             <Typography variant="subtitle2" mb={1}>Size: {radius}%</Typography>
-            <Slider value={radius} min={5} max={75} onChange={(_, v) => setRadius(v as number)} />
+            <Slider aria-label={`Size: ${radius}%`} value={radius} min={5} max={75} onChange={(_, v) => setRadius(v as number)} />
           </Box>
         )}
 
@@ -54,19 +54,19 @@ const CssClipPathGeneratorContent = () => {
           <>
             <Box>
               <Typography variant="subtitle2" mb={1}>Top: {insetTop}%</Typography>
-              <Slider value={insetTop} min={0} max={45} onChange={(_, v) => setInsetTop(v as number)} />
+              <Slider aria-label={`Top: ${insetTop}%`} value={insetTop} min={0} max={45} onChange={(_, v) => setInsetTop(v as number)} />
             </Box>
             <Box>
               <Typography variant="subtitle2" mb={1}>Right: {insetRight}%</Typography>
-              <Slider value={insetRight} min={0} max={45} onChange={(_, v) => setInsetRight(v as number)} />
+              <Slider aria-label={`Right: ${insetRight}%`} value={insetRight} min={0} max={45} onChange={(_, v) => setInsetRight(v as number)} />
             </Box>
             <Box>
               <Typography variant="subtitle2" mb={1}>Bottom: {insetBottom}%</Typography>
-              <Slider value={insetBottom} min={0} max={45} onChange={(_, v) => setInsetBottom(v as number)} />
+              <Slider aria-label={`Bottom: ${insetBottom}%`} value={insetBottom} min={0} max={45} onChange={(_, v) => setInsetBottom(v as number)} />
             </Box>
             <Box>
               <Typography variant="subtitle2" mb={1}>Left: {insetLeft}%</Typography>
-              <Slider value={insetLeft} min={0} max={45} onChange={(_, v) => setInsetLeft(v as number)} />
+              <Slider aria-label={`Left: ${insetLeft}%`} value={insetLeft} min={0} max={45} onChange={(_, v) => setInsetLeft(v as number)} />
             </Box>
           </>
         )}

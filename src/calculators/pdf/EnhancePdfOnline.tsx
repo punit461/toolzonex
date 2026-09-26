@@ -90,7 +90,7 @@ const EnhancePdfOnlineContent = () => {
 
       <FormControl fullWidth sx={{ mt: 2 }}>
         <InputLabel>Enhancement Level</InputLabel>
-        <Select value={level} label="Enhancement Level" onChange={(e) => setLevel(Number(e.target.value))}>
+        <Select inputProps={{ 'aria-label': 'Enhancement Level' }} value={level} label="Enhancement Level" onChange={(e) => setLevel(Number(e.target.value))}>
           {ENHANCE_LEVELS.map((opt) => (
             <MenuItem key={opt.value} value={opt.value}>{opt.label} — {opt.desc}</MenuItem>
           ))}
@@ -100,7 +100,7 @@ const EnhancePdfOnlineContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleEnhance} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Enhancing...'}</> : 'Enhance PDF'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />{progress || 'Enhancing...'}</> : 'Enhance PDF'}
       </Button>
 
       {originalSize > 0 && outputSize > 0 && (

@@ -45,7 +45,7 @@ const RandomPinGeneratorContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box>
         <Typography variant="subtitle1" gutterBottom>PIN Length: {length}</Typography>
-        <Slider
+        <Slider aria-label={`PIN Length: ${length}`}
           value={length}
           onChange={handleLengthChange}
           min={4}
@@ -62,7 +62,7 @@ const RandomPinGeneratorContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight="600" mb={1}>Generated PIN:</Typography>
-        <Paper sx={{ p: 3, display: 'flex', alignItems: 'center', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, display: 'flex', alignItems: 'center', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="h4" sx={{ letterSpacing: 4, fontFamily: 'monospace', fontWeight: 'bold' }}>
             {pin}
           </Typography>

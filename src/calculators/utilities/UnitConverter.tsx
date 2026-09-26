@@ -208,7 +208,7 @@ const UnitConverter = () => {
       <Box sx={{ maxWidth: 700, mx: 'auto' }}>
         <FormControl fullWidth sx={{ mb: 4 }}>
           <InputLabel>Category</InputLabel>
-          <Select value={category} label="Category" onChange={(e) => setCategory(e.target.value as CategoryKey)}>
+          <Select inputProps={{ 'aria-label': 'Category' }} value={category} label="Category" onChange={(e) => setCategory(e.target.value as CategoryKey)}>
             {CATEGORIES.map((c) => (
               <MenuItem key={c.key} value={c.key}>{c.label}</MenuItem>
             ))}
@@ -218,7 +218,7 @@ const UnitConverter = () => {
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr auto 1fr' }, gap: 2, alignItems: 'center', mb: 4 }}>
           <FormControl fullWidth>
             <InputLabel>From</InputLabel>
-            <Select value={fromUnit} label="From" onChange={(e) => setFromUnit(e.target.value)}>
+            <Select inputProps={{ 'aria-label': 'From' }} value={fromUnit} label="From" onChange={(e) => setFromUnit(e.target.value)}>
               {unitOptions.map((u) => (
                 <MenuItem key={u.value} value={u.value}>{u.label}</MenuItem>
               ))}
@@ -231,7 +231,7 @@ const UnitConverter = () => {
 
           <FormControl fullWidth>
             <InputLabel>To</InputLabel>
-            <Select value={toUnit} label="To" onChange={(e) => setToUnit(e.target.value)}>
+            <Select inputProps={{ 'aria-label': 'To' }} value={toUnit} label="To" onChange={(e) => setToUnit(e.target.value)}>
               {unitOptions.map((u) => (
                 <MenuItem key={u.value} value={u.value}>{u.label}</MenuItem>
               ))}
@@ -251,7 +251,7 @@ const UnitConverter = () => {
 
         <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center' }}>
           <Typography variant="h6" color="text.secondary" gutterBottom>Result</Typography>
-          <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main' }}>
+          <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main' }}>
             {result.toLocaleString(undefined, { maximumFractionDigits: 6 })}
           </Typography>
         </Box>

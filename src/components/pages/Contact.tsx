@@ -2,11 +2,13 @@
 
 import { useRef, useState } from 'react';
 import Script from 'next/script';
+import NextLink from 'next/link';
 import {
   Box, Typography, Container, Paper, TextField, Button,
-  Alert, CircularProgress, Divider, Link,
+  Alert, CircularProgress, Divider, Link, FormControlLabel, Checkbox,
 } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
+import { CONTACT_EMAIL, CONTACT_RETENTION, OPERATOR_NAME, OPERATOR_LOCATION } from '../../data/siteInfo';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Google Sheets integration via Apps Script web-app URL.
@@ -14,7 +16,6 @@ import EmailIcon from '@mui/icons-material/Email';
 // fall back to mailto: behaviour (no sheet, just email client opens).
 // ─────────────────────────────────────────────────────────────────────────────
 const SHEET_URL = process.env.NEXT_PUBLIC_CONTACT_SHEET_URL as string | undefined;
-const CONTACT_EMAIL = 'punit461bharadwaj@gmail.com';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Turnstile widget. Set NEXT_PUBLIC_TURNSTILE_SITE_KEY to enable; blank skips
@@ -55,6 +56,9 @@ const Contact = () => {
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
   const [turnstileToken, setTurnstileToken] = useState('');
+  // DPDP-style consent: an unticked box the visitor must tick themselves, tied
+  // to one stated purpose (replying). Never pre-checked.
+  const [consent, setConsent] = useState(false);
 
   const turnstileContainer = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<TurnstileWidgetId | null>(null);
@@ -68,18 +72,24 @@ const Contact = () => {
     });
   };
 
-  const isValid = name.trim() && email.trim() && message.trim() && (!TURNSTILE_SITE_KEY || turnstileToken);
+  const isValid = email.trim() && message.trim() && consent && (!TURNSTILE_SITE_KEY || turnstileToken);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!isValid) return;
+    if (!isValid) {
+      // Required fields are enforced by the browser before submit fires, so the
+      // only way to land here is a missing spam-check token.
+      setStatus('error');
+      setErrorMsg('Please complete the spam check above, then send again.');
+      return;
+    }
 
     setStatus('sending');
     setErrorMsg('');
 
     const payload = {
       timestamp: new Date().toISOString(),
-      name: name.trim(),
+      name: name.trim() || '(not given)',
       email: email.trim(),
       subject: subject.trim() || '(no subject)',
       message: message.trim(),
@@ -98,7 +108,7 @@ const Contact = () => {
           body: JSON.stringify(payload),
         });
         setStatus('success');
-        setName(''); setEmail(''); setSubject(''); setMessage('');
+        setName(''); setSubject(''); setMessage(''); setConsent(false);
       } catch {
         setStatus('error');
         setErrorMsg('Network error. Please try again or email us directly.');
@@ -115,7 +125,7 @@ const Contact = () => {
         `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(payload.subject || 'ToolZoneX Enquiry')}&body=${encodeURIComponent(body)}`
       );
       setStatus('success');
-      setName(''); setEmail(''); setSubject(''); setMessage('');
+      setName(''); setSubject(''); setMessage(''); setConsent(false);
     }
   };
 
@@ -127,16 +137,16 @@ const Contact = () => {
           Contact Us
         </Typography>
         <Typography variant="body1" color="text.secondary" sx={{ mb: 6 }}>
-          Have a question, found a bug, or want a new calculator? We'd love to hear from you.
+          Have a question, found a bug, or want a new calculator? We&apos;d love to hear from you.
         </Typography>
 
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 2fr' }, gap: 6 }}>
           {/* Left — info */}
           <Box>
-            <Paper elevation={0} sx={{ p: 3, border: '1px solid #E5E5E5', borderRadius: 2, mb: 3 }}>
+            <Paper variant="outlined" sx={{ p: 3, borderRadius: 2, mb: 3 }}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1 }}>
-                <EmailIcon color="primary" />
-                <Typography sx={{ fontWeight: 700 }}>Email us directly</Typography>
+                <EmailIcon color="primary" aria-hidden="true" />
+                <Typography component="h2" sx={{ fontWeight: 700, fontSize: '1rem' }}>Email us directly</Typography>
               </Box>
               <Link
                 href={`mailto:${CONTACT_EMAIL}`}
@@ -147,32 +157,44 @@ const Contact = () => {
               </Link>
             </Paper>
 
-            <Paper elevation={0} sx={{ p: 3, border: '1px solid #E5E5E5', borderRadius: 2 }}>
-              <Typography sx={{ fontWeight: 700, mb: 1 }}>Common topics</Typography>
+            <Paper variant="outlined" sx={{ p: 3, borderRadius: 2, mb: 3 }}>
+              <Typography component="h2" sx={{ fontWeight: 700, fontSize: '1rem', mb: 1 }}>Who runs ToolZoneX</Typography>
+              <Typography variant="body2" color="text.secondary">
+                {OPERATOR_NAME}, an individual developer based in {OPERATOR_LOCATION}. ToolZoneX has no paid products
+                and never asks for payment details.
+              </Typography>
+            </Paper>
+
+            <Paper variant="outlined" sx={{ p: 3, borderRadius: 2 }}>
+              <Typography component="h2" sx={{ fontWeight: 700, fontSize: '1rem', mb: 1 }}>Common topics</Typography>
               <Typography variant="body2" color="text.secondary" component="div">
                 <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 2 }}>
                   <li>Calculator bugs or wrong results</li>
                   <li>Feature requests</li>
                   <li>Partnership & advertising</li>
                   <li>Content corrections</li>
-                  <li>General questions</li>
+                  <li>Privacy requests and grievances</li>
                 </ul>
               </Typography>
             </Paper>
           </Box>
 
           {/* Right — form */}
-          <Paper elevation={0} sx={{ p: 4, border: '1px solid #E5E5E5', borderRadius: 2 }}>
+          <Paper variant="outlined" sx={{ p: { xs: 2.5, sm: 4 }, borderRadius: 2 }}>
             {status === 'success' ? (
               <Alert severity="success" sx={{ borderRadius: 2 }}>
-                <Typography sx={{ fontWeight: 700 }}>Message sent!</Typography>
+                <Typography sx={{ fontWeight: 700 }}>Message sent</Typography>
                 <Typography variant="body2">
-                  Thanks for reaching out. We'll get back to you at <strong>{email || 'your email'}</strong> as soon as possible.
+                  Thanks for getting in touch. We&apos;ll reply to <strong>{email || 'your email address'}</strong> as soon as we can.
                 </Typography>
               </Alert>
             ) : (
-              <Box component="form" onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-                <Typography variant="h6" sx={{ fontWeight: 700 }}>Send us a message</Typography>
+              // No `noValidate`: the browser's own required-field checks run on submit,
+              // focus the first missing field and announce why — unlike the old
+              // permanently-disabled button, which gave keyboard and screen-reader
+              // users no clue what was missing.
+              <Box component="form" onSubmit={handleSubmit} aria-labelledby="contact-form-heading" sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                <Typography id="contact-form-heading" variant="h6" component="h2" sx={{ fontWeight: 700 }}>Send us a message</Typography>
                 <Divider />
 
                 {status === 'error' && (
@@ -181,24 +203,25 @@ const Contact = () => {
 
                 <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2 }}>
                   <TextField
-                    label="Your Name"
-                    variant="outlined"
-                    required
-                    value={name}
-                    onChange={e => setName(e.target.value)}
-                  />
-                  <TextField
-                    label="Email Address"
+                    label="Email address"
                     type="email"
                     variant="outlined"
                     required
+                    autoComplete="email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
+                  />
+                  <TextField
+                    label="Name (optional)"
+                    variant="outlined"
+                    autoComplete="name"
+                    value={name}
+                    onChange={e => setName(e.target.value)}
                   />
                 </Box>
 
                 <TextField
-                  label="Subject"
+                  label="Subject (optional)"
                   variant="outlined"
                   value={subject}
                   onChange={e => setSubject(e.target.value)}
@@ -213,8 +236,30 @@ const Contact = () => {
                   required
                   value={message}
                   onChange={e => setMessage(e.target.value)}
-                  placeholder="Tell us what's on your mind…"
                 />
+
+                <Box>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={consent}
+                        onChange={e => setConsent(e.target.checked)}
+                        required
+                        slotProps={{ input: { 'aria-describedby': 'contact-privacy-notice' } }}
+                      />
+                    }
+                    label="I agree that ToolZoneX may use my email address, message and (if given) name and subject to reply to me."
+                    sx={{ alignItems: 'flex-start', '& .MuiCheckbox-root': { pt: 0.5 } }}
+                  />
+                  <Typography id="contact-privacy-notice" variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+                    {SHEET_URL
+                      ? <>Your message is stored in our Google Sheet and our Microsoft 365 mailbox, used only to reply, and deleted {CONTACT_RETENTION} after our last reply. </>
+                      : <>Sending opens your email app with your message ready to send to {CONTACT_EMAIL}. We use it only to reply, and delete it {CONTACT_RETENTION} after our last reply. </>}
+                    You can withdraw consent or ask us to delete your message at any time by emailing {CONTACT_EMAIL}.
+                    See our{' '}
+                    <Link component={NextLink} href="/privacy-policy">Privacy Policy</Link>.
+                  </Typography>
+                </Box>
 
                 {TURNSTILE_SITE_KEY && <Box ref={turnstileContainer} />}
 
@@ -222,18 +267,12 @@ const Contact = () => {
                   type="submit"
                   variant="contained"
                   size="large"
-                  disabled={!isValid || status === 'sending'}
+                  disabled={status === 'sending'}
                   sx={{ alignSelf: 'flex-start', minWidth: 160 }}
-                  startIcon={status === 'sending' ? <CircularProgress size={18} color="inherit" /> : undefined}
+                  startIcon={status === 'sending' ? <CircularProgress aria-label="Loading" size={18} color="inherit" /> : undefined}
                 >
-                  {status === 'sending' ? 'Sending…' : 'Send Message'}
+                  {status === 'sending' ? 'Sending…' : 'Send message'}
                 </Button>
-
-                <Typography variant="caption" color="text.secondary">
-                  {SHEET_URL
-                    ? 'Your message will be saved securely and we will reply by email.'
-                    : `No reply service configured yet. You can email us directly at ${CONTACT_EMAIL}`}
-                </Typography>
               </Box>
             )}
           </Paper>

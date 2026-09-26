@@ -120,11 +120,11 @@ const ApplianceWattageCalculator = () => {
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
-          <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'primary.main', color: 'white', height: 'fit-content' }}>
+          <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText', height: 'fit-content' }}>
             <Typography variant="body2">
               {solveFor === 'watts' ? 'Wattage' : solveFor === 'volts' ? 'Voltage' : 'Amperage'}
             </Typography>
-            <Typography variant="h3" fontWeight="bold">
+            <Typography component="p" variant="h3" fontWeight="bold">
               {result.toFixed(2)} {solveFor === 'watts' ? 'W' : solveFor === 'volts' ? 'V' : 'A'}
             </Typography>
           </Paper>

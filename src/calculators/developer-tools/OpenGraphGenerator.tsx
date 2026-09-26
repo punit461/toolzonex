@@ -46,13 +46,13 @@ const OpenGraphGeneratorContent = () => {
         <TextField label="og:url" value={ogUrl} onChange={(e) => setOgUrl(e.target.value)} fullWidth />
         <FormControl fullWidth>
           <InputLabel>og:type</InputLabel>
-          <Select value={ogType} label="og:type" onChange={(e) => setOgType(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'og:type' }} value={ogType} label="og:type" onChange={(e) => setOgType(e.target.value)}>
             {OG_TYPES.map((t) => <MenuItem key={t} value={t}>{t}</MenuItem>)}
           </Select>
         </FormControl>
         <FormControl fullWidth>
           <InputLabel>twitter:card</InputLabel>
-          <Select value={twitterCard} label="twitter:card" onChange={(e) => setTwitterCard(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'twitter:card' }} value={twitterCard} label="twitter:card" onChange={(e) => setTwitterCard(e.target.value)}>
             {TWITTER_CARDS.map((t) => <MenuItem key={t} value={t}>{t}</MenuItem>)}
           </Select>
         </FormControl>

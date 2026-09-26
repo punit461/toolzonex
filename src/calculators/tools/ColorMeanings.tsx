@@ -6,6 +6,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 interface ColorMeaning {
   name: string;
   hex: string;
@@ -63,7 +64,7 @@ const ColorMeaningsContent = () => {
           <Typography variant="h5" fontWeight="bold">{activeColor.name}</Typography>
           <Typography variant="body2" sx={{ opacity: 0.9, mt: 0.5 }}>{activeColor.meaning}</Typography>
         </Box>
-        <IconButton onClick={() => handleCopy(activeColor.hex)} sx={{ color: 'inherit' }}>
+        <IconButton aria-label="Copy" onClick={() => handleCopy(activeColor.hex)} sx={{ color: 'inherit' }}>
           <ContentCopyIcon />
         </IconButton>
         <Typography fontFamily="monospace" fontWeight="bold">{copied === activeColor.hex ? 'Copied!' : activeColor.hex}</Typography>
@@ -71,7 +72,7 @@ const ColorMeaningsContent = () => {
 
       <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: 1.5 }}>
         {COLOR_MEANINGS.map((c) => (
-          <Paper
+          <Paper {...keyboardClickable}
             key={c.name}
             variant="outlined"
             onClick={() => setActive(c.name)}

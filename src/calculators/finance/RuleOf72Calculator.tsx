@@ -84,9 +84,9 @@ const RuleOf72Calculator = () => {
             slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             sx={{ mb: 3 }}
           />
-          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Years to Double</Typography>
-            <Typography variant="h3" fontWeight="bold">{yearsToDouble.toFixed(1)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{yearsToDouble.toFixed(1)}</Typography>
           </Paper>
         </Paper>
 
@@ -103,7 +103,7 @@ const RuleOf72Calculator = () => {
           />
           <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'secondary.main', color: 'white' }}>
             <Typography variant="body2">Required Annual Rate</Typography>
-            <Typography variant="h3" fontWeight="bold">{requiredRate.toFixed(2)}%</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{requiredRate.toFixed(2)}%</Typography>
           </Paper>
         </Paper>
       </Box>

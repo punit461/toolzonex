@@ -65,7 +65,7 @@ const Crc32GeneratorContent = () => {
 
       <Box>
         <Typography variant="subtitle1" fontWeight={600} mb={1}>CRC-32 Checksum</Typography>
-        <Paper sx={{ p: 3, display: 'flex', alignItems: 'center', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, display: 'flex', alignItems: 'center', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="h4" fontWeight="bold" sx={{ fontFamily: 'monospace' }}>{hash || '—'}</Typography>
           <IconButton onClick={copyResult} sx={{ color: 'white' }} title="Copy to clipboard">
             <ContentCopyIcon />

@@ -22,17 +22,17 @@ const CssGradientTextGeneratorContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box sx={{ display: 'flex', gap: 3 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <input type="color" value={color1} onChange={(e) => setColor1(e.target.value)} style={{ width: 36, height: 36, border: 'none', cursor: 'pointer' }} />
+            <input aria-label="Gradient start color" type="color" value={color1} onChange={(e) => setColor1(e.target.value)} style={{ width: 36, height: 36, border: 'none', cursor: 'pointer' }} />
             <Typography variant="body2" fontFamily="monospace">{color1}</Typography>
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <input type="color" value={color2} onChange={(e) => setColor2(e.target.value)} style={{ width: 36, height: 36, border: 'none', cursor: 'pointer' }} />
+            <input aria-label="Gradient end color" type="color" value={color2} onChange={(e) => setColor2(e.target.value)} style={{ width: 36, height: 36, border: 'none', cursor: 'pointer' }} />
             <Typography variant="body2" fontFamily="monospace">{color2}</Typography>
           </Box>
         </Box>
         <Box>
           <Typography variant="subtitle2" mb={1}>Angle: {angle}°</Typography>
-          <Slider value={angle} min={0} max={360} onChange={(_, v) => setAngle(v as number)} />
+          <Slider aria-label={`Angle: ${angle}°`} value={angle} min={0} max={360} onChange={(_, v) => setAngle(v as number)} />
         </Box>
         <input
           value={text}
@@ -44,7 +44,7 @@ const CssGradientTextGeneratorContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', bgcolor: 'background.paper' }}>
-          <Typography
+          <Typography component="p"
             variant="h3"
             sx={{
               fontWeight: 800,

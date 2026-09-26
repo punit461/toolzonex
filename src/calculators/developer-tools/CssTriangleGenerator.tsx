@@ -64,11 +64,11 @@ const CssTriangleGeneratorContent = () => {
 
         <Box>
           <Typography variant="subtitle2" color="text.secondary" mb={1}>Size: {size}px</Typography>
-          <Slider value={size} min={10} max={300} step={5} onChange={(_, v) => setSize(v as number)} valueLabelDisplay="auto" />
+          <Slider aria-label={`Size: ${size}px`} value={size} min={10} max={300} step={5} onChange={(_, v) => setSize(v as number)} valueLabelDisplay="auto" />
         </Box>
 
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-          <Box
+          <Box aria-label="Triangle color"
             component="input"
             type="color"
             value={color}
@@ -86,7 +86,7 @@ const CssTriangleGeneratorContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Live Preview</Typography>
-        <Paper variant="outlined" sx={{ p: 3, minHeight: 220, display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'grey.50' }}>
+        <Paper variant="outlined" sx={{ p: 3, minHeight: 220, display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'action.hover' }}>
           <Box sx={triangleStyle(direction, size, color)} />
         </Paper>
 

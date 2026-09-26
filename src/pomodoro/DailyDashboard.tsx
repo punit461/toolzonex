@@ -73,7 +73,7 @@ export function DailyDashboard() {
       {chartData.length > 0 && (
         <Card>
           <h2 className="mb-4 text-sm font-semibold text-text-muted uppercase">Focus score per session</h2>
-          <ResponsiveContainer width="100%" height={220}>
+          <div aria-hidden="true"><ResponsiveContainer width="100%" height={220}>
             <BarChart data={chartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" />
               <XAxis dataKey="name" stroke="var(--color-text-muted)" fontSize={12} />
@@ -81,7 +81,7 @@ export function DailyDashboard() {
               <Tooltip contentStyle={{ borderRadius: 8, border: '1px solid var(--color-border)' }} />
               <Bar dataKey="score" fill="var(--color-primary)" radius={[4, 4, 0, 0]} />
             </BarChart>
-          </ResponsiveContainer>
+          </ResponsiveContainer></div>
         </Card>
       )}
     </div>

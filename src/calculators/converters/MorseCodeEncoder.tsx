@@ -53,7 +53,7 @@ const MorseCodeEncoderContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Plain Text Input:</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Plain Text Input' } }}
           multiline
           rows={12}
           fullWidth
@@ -70,7 +70,7 @@ const MorseCodeEncoderContent = () => {
             {copied ? 'Copied!' : 'Copy'}
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Morse Code Output' } }}
           multiline
           rows={12}
           fullWidth

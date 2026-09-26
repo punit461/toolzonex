@@ -138,7 +138,7 @@ const UKStampDutyCalculator = () => {
             <TextField
               fullWidth type="number" value={price} onFocus={(e) => e.target.select()}
               onChange={(e) => setPrice(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { startAdornment: <InputAdornment position="start">£</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Property Price' }, input: { startAdornment: <InputAdornment position="start">£</InputAdornment> } }}
             />
           </Box>
 
@@ -160,7 +160,7 @@ const UKStampDutyCalculator = () => {
             <Typography variant="h6" color="text.secondary">
               Stamp Duty Owed
             </Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 3, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 3, color: 'primary.main' }}>
               {formatGBP(result.tax)}
             </Typography>
 

@@ -67,7 +67,7 @@ const ReferenceIdGeneratorContent = () => {
         <TextField label="Random Portion Length" type="number" value={length} onChange={(e) => setLength(e.target.value)} fullWidth />
         <FormControl fullWidth>
           <InputLabel>Character Set</InputLabel>
-          <Select value={charSet} label="Character Set" onChange={(e) => setCharSet(e.target.value as CharSet)}>
+          <Select inputProps={{ 'aria-label': 'Character Set' }} value={charSet} label="Character Set" onChange={(e) => setCharSet(e.target.value as CharSet)}>
             <MenuItem value="numeric">Numeric Only</MenuItem>
             <MenuItem value="alphanumeric">Alphanumeric</MenuItem>
           </Select>

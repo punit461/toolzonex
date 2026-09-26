@@ -74,7 +74,7 @@ const SecureTokenGeneratorContent = () => {
         />
         <FormControl fullWidth>
           <InputLabel>Encoding Format</InputLabel>
-          <Select value={format} label="Encoding Format" onChange={(e) => setFormat(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Encoding Format' }} value={format} label="Encoding Format" onChange={(e) => setFormat(e.target.value)}>
             <MenuItem value="hex">Hex</MenuItem>
             <MenuItem value="base64">Base64</MenuItem>
             <MenuItem value="base64url">Base64URL</MenuItem>

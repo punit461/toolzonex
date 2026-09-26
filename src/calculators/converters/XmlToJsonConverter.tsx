@@ -119,7 +119,7 @@ const XmlToJsonContent = () => {
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Input XML:</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Input XML' } }}
           multiline
           rows={16}
           fullWidth
@@ -148,7 +148,7 @@ const XmlToJsonContent = () => {
             </Button>
           </Box>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Output JSON' } }}
           multiline
           rows={16}
           fullWidth

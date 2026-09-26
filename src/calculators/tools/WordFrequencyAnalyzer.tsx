@@ -72,7 +72,7 @@ const WordFrequencyAnalyzerContent = () => {
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         {frequencies.length > 0 ? (
           <Paper variant="outlined" sx={{ overflow: 'hidden' }}>
-            <Box sx={{ p: 2, bgcolor: 'primary.main', color: 'white' }}>
+            <Box sx={{ p: 2, bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="h6">Top Words Frequency</Typography>
             </Box>
             <TableContainer sx={{ maxHeight: 400 }}>
@@ -97,7 +97,7 @@ const WordFrequencyAnalyzerContent = () => {
             </TableContainer>
           </Paper>
         ) : (
-          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'grey.50' }}>
+          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'action.hover' }}>
             <Typography color="text.secondary" align="center">
               Paste text on the left to see the most frequently used words.
             </Typography>

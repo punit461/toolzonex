@@ -269,7 +269,7 @@ const HeightComparisonContent = () => {
                 />
               )}
 
-              <IconButton onClick={() => removePerson(p.id)} disabled={people.length <= 1}><DeleteIcon fontSize="small" /></IconButton>
+              <IconButton aria-label="Remove" onClick={() => removePerson(p.id)} disabled={people.length <= 1}><DeleteIcon fontSize="small" /></IconButton>
             </Box>
           );
         })}
@@ -325,7 +325,7 @@ const HeightComparisonContent = () => {
         <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 1 }}>Quick add a reference:</Typography>
 
         <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 1.5 }}>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Quick add a reference' } }}
             size="small"
             placeholder="Search presets…"
             value={presetQuery}

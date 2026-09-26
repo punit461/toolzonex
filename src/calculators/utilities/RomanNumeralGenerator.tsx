@@ -52,7 +52,7 @@ const RomanNumeralGeneratorContent = () => {
 
       <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', bgcolor: 'action.hover' }}>
         {isValid ? (
-          <Typography variant="h2" fontWeight={800} sx={{ fontSize: { xs: '2.5rem', sm: '3.5rem' }, letterSpacing: 2 }}>
+          <Typography component="p" variant="h2" fontWeight={800} sx={{ fontSize: { xs: '2.5rem', sm: '3.5rem' }, letterSpacing: 2 }}>
             {roman}
           </Typography>
         ) : (

@@ -1,0 +1,51 @@
+ToolZoneX licensing
+===================
+
+1. Source code
+
+   The source code in this repository is licensed under the MIT License,
+   reproduced below.
+
+2. Not covered by the MIT License (all rights reserved)
+
+   The following belong to Punit Bharadwaj and are NOT licensed for reuse:
+
+   - the "ToolZoneX" name, logos, favicons and social images
+     (public/logo*, public/favicon*, public/og-image.jpg);
+   - written editorial content: the blog articles in src/components/pages/blogs/,
+     the tool guides in src/data/tool-blogs*.ts, and the text of the Privacy
+     Policy, Terms and Conditions, Cookie Policy and Refund Policy in
+     src/components/pages/.
+
+   You may not use the ToolZoneX name or logos to identify another website,
+   product or service, or republish that written content, without written
+   permission.
+
+3. Third-party components
+
+   Dependencies and fonts keep their own licences (see package.json and each
+   package's licence in node_modules).
+
+-------------------------------------------------------------------------------
+
+MIT License
+
+Copyright (c) 2026 Punit Bharadwaj
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

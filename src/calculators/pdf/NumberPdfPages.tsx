@@ -65,7 +65,7 @@ const NumberPdfPagesContent = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mt: 3 }}>
         <FormControl fullWidth>
           <InputLabel>Position</InputLabel>
-          <Select value={position} label="Position" onChange={(e) => setPosition(e.target.value as keyof typeof POSITIONS)}>
+          <Select inputProps={{ 'aria-label': 'Position' }} value={position} label="Position" onChange={(e) => setPosition(e.target.value as keyof typeof POSITIONS)}>
             {Object.entries(POSITIONS).map(([key, { label }]) => (
               <MenuItem key={key} value={key}>{label}</MenuItem>
             ))}

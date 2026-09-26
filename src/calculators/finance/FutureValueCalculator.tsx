@@ -84,7 +84,7 @@ const FutureValueCalculator = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <Typography gutterBottom>Currency</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Currency' }}
               size="small"
               value={currency}
               onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -135,9 +135,9 @@ const FutureValueCalculator = () => {
           <Typography variant="subtitle1" fontWeight="600" mb={2}>
             Result
           </Typography>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Future Value</Typography>
-            <Typography variant="h3" fontWeight="bold">{formatMoney(Math.round(fv), currency)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{formatMoney(Math.round(fv), currency)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
             <Typography variant="h6">Total Interest</Typography>

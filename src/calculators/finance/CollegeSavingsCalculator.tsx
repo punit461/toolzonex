@@ -132,7 +132,7 @@ const CollegeSavingsCalculator = () => {
           </Box>
           <FormControl fullWidth>
             <InputLabel>Estimated College Cost</InputLabel>
-            <Select label="Estimated College Cost" value={preset} onChange={(e) => setPreset(e.target.value as keyof typeof COST_PRESETS)}>
+            <Select inputProps={{ 'aria-label': 'Estimated College Cost' }} label="Estimated College Cost" value={preset} onChange={(e) => setPreset(e.target.value as keyof typeof COST_PRESETS)}>
               {Object.entries(COST_PRESETS).map(([key, item]) => (
                 <MenuItem key={key} value={key}>{item.label}</MenuItem>
               ))}
@@ -170,9 +170,9 @@ const CollegeSavingsCalculator = () => {
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Required Monthly Contribution</Typography>
-            <Typography variant="h3" fontWeight="bold">{fmt(requiredMonthly)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{fmt(requiredMonthly)}</Typography>
             <Typography variant="body2" mt={1}>
               over {monthsToGo > 0 ? `${Math.round(monthsToGo / 12 * 10) / 10} years` : '—'}
             </Typography>

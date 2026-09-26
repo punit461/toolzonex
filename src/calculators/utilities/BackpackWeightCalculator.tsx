@@ -161,7 +161,7 @@ const BackpackWeightCalculator = () => {
                   value={i.weight}
                   onChange={(e) => updateItem(i.id, 'weight', e.target.value)}
                 />
-                <IconButton color="error" size="small" onClick={() => removeItem(i.id)} disabled={items.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeItem(i.id)} disabled={items.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>
@@ -172,7 +172,7 @@ const BackpackWeightCalculator = () => {
 
         <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', height: 'fit-content' }}>
           <Typography variant="body2" color="text.secondary">Total Pack Weight</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>{totalWeight.toFixed(1)} {unit}</Typography>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>{totalWeight.toFixed(1)} {unit}</Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>% of Body Weight</Typography>
           <Typography variant="h5" fontWeight={700}>{bodyWeightNum > 0 ? `${percentOfBody.toFixed(1)}%` : '—'}</Typography>
           {bodyWeightNum > 0 && (

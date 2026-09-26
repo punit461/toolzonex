@@ -146,7 +146,7 @@ const RoomPerimeterCalculator = () => {
                       onChange={(e) => updateSegment(s.id, e.target.value)}
                       slotProps={{ input: { endAdornment: <InputAdornment position="end">ft</InputAdornment> } }}
                     />
-                    <IconButton color="error" size="small" onClick={() => removeSegment(s.id)} disabled={segments.length <= 1}>
+                    <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeSegment(s.id)} disabled={segments.length <= 1}>
                       <DeleteIcon fontSize="small" />
                     </IconButton>
                   </Stack>
@@ -158,7 +158,7 @@ const RoomPerimeterCalculator = () => {
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Total Perimeter</Typography>
             <Typography variant="h3" fontWeight="bold">{perimeter.toFixed(2)} ft</Typography>
           </Paper>

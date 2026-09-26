@@ -75,7 +75,7 @@ const HttpHeaderViewerContent = () => {
       />
 
       {statusMatch && (
-        <Paper sx={{ p: 2, display: 'flex', alignItems: 'center', gap: 2, bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 2, display: 'flex', alignItems: 'center', gap: 2, bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="subtitle1">Status</Typography>
           <Chip label={statusMatch[2]} sx={{ bgcolor: 'white', color: 'primary.main', fontWeight: 700 }} />
           <Typography variant="body1">{statusMatch[3] || ''}</Typography>

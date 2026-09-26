@@ -81,7 +81,7 @@ const SqlMinifier = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           <Typography variant="subtitle1" fontWeight="600">SQL Input</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'SQL Input' } }}
             multiline
             rows={15}
             value={input}
@@ -101,7 +101,7 @@ const SqlMinifier = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2 }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <Typography variant="subtitle1" fontWeight="600">Minified SQL</Typography>
-            <IconButton onClick={copyToClipboard} disabled={!output} size="small">
+            <IconButton aria-label="Copy" onClick={copyToClipboard} disabled={!output} size="small">
               <ContentCopyIcon fontSize="small" />
             </IconButton>
           </Box>

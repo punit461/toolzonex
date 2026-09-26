@@ -72,7 +72,7 @@ const PdfRecompressImagesContent = () => {
       <PdfFileDropzone onFilesSelected={(files) => { setFile(files[0] ?? null); setSizes(null); }} label="PDF file" selectedNames={file ? [file.name] : []} />
       <FormControl fullWidth sx={{ mt: 3 }}>
         <InputLabel>Image Quality</InputLabel>
-        <Select value={quality} label="Image Quality" onChange={(e) => setQuality(Number(e.target.value))}>
+        <Select inputProps={{ 'aria-label': 'Image Quality' }} value={quality} label="Image Quality" onChange={(e) => setQuality(Number(e.target.value))}>
           {QUALITY_OPTIONS.map((o) => <MenuItem key={o.value} value={o.value}>{o.label}</MenuItem>)}
         </Select>
       </FormControl>

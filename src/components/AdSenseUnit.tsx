@@ -1,7 +1,9 @@
 'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { Box, Typography } from '@mui/material';
+import { isAdFreeRoute } from '../data/adFreeRoutes';
 
 interface AdSenseUnitProps {
   slotId?: string;
@@ -16,10 +18,11 @@ export default function AdSenseUnit({ slotId, style, className }: AdSenseUnitPro
   }
   const adSlot = slotId || process.env.NEXT_PUBLIC_ADSENSE_SLOT_ID;
   const isDev = process.env.NODE_ENV === 'development';
+  const adFree = isAdFreeRoute(usePathname());
 
   useEffect(() => {
     // If no adSlot is provided, we rely on Auto Ads via the layout.tsx script, so we don't push into the array here.
-    if (isDev || !publisherId || !adSlot) return;
+    if (isDev || adFree || !publisherId || !adSlot) return;
 
     try {
       // @ts-ignore
@@ -27,7 +30,9 @@ export default function AdSenseUnit({ slotId, style, className }: AdSenseUnitPro
     } catch (error) {
       console.error('AdSense error:', error);
     }
-  }, [publisherId, adSlot, isDev]);
+  }, [publisherId, adSlot, isDev, adFree]);
+
+  if (adFree) return null;
 
   if (isDev) {
     return (

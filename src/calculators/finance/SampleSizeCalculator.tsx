@@ -106,9 +106,9 @@ const SampleSizeCalculator = () => {
           <Typography variant="subtitle1" fontWeight="600" mb={2}>
             Result
           </Typography>
-          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Required Sample Size</Typography>
-            <Typography variant="h3" fontWeight="bold">{sampleSize}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{sampleSize}</Typography>
           </Paper>
         </Box>
       </Box>

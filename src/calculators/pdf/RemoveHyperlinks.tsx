@@ -76,7 +76,7 @@ const RemoveHyperlinksContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
       {removed !== null && <Alert severity="success" sx={{ mt: 2 }}>Removed {removed} hyperlink{removed !== 1 ? 's' : ''} from the document.</Alert>}
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleAction} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Processing...</> : 'Remove Hyperlinks'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Processing...</> : 'Remove Hyperlinks'}
       </Button>
     </Box>
   );

@@ -60,16 +60,16 @@ const BMICalculator = () => {
     let col = '';
     if (value < 18.5) {
       cat = 'Underweight';
-      col = '#3b82f6'; // blue
+      col = 'info.main'; // theme colours pass WCAG AA in light and dark mode
     } else if (value >= 18.5 && value <= 22.9) {
       cat = 'Normal';
-      col = '#22c55e'; // green
+      col = 'success.main';
     } else if (value >= 23 && value <= 24.9) {
       cat = 'Overweight';
-      col = '#eab308'; // yellow
+      col = 'warning.main';
     } else if (value >= 25) {
       cat = 'Obese';
-      col = '#ef4444'; // red
+      col = 'error.main';
     }
 
     return { bmi: value, category: cat, color: col };
@@ -168,7 +168,7 @@ const BMICalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(weight) ? '' : weight}
               onChange={(e) => setWeight(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">{weightUnit}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Weight' }, input: { endAdornment: <InputAdornment position="end">{weightUnit}</InputAdornment> } }}
             />
           </Box>
 
@@ -195,7 +195,7 @@ const BMICalculator = () => {
                 onFocus={(e) => e.target.select()}
                 value={Number.isNaN(heightCm) ? '' : heightCm}
                 onChange={(e) => setHeightCm(e.target.value === '' ? NaN : Number(e.target.value))}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Height' }, input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
               />
             </Box>
           ) : (
@@ -208,7 +208,7 @@ const BMICalculator = () => {
                   onFocus={(e) => e.target.select()}
                   value={Number.isNaN(heightFt) ? '' : heightFt}
                   onChange={(e) => setHeightFt(e.target.value === '' ? NaN : Number(e.target.value))}
-                  slotProps={{ input: { endAdornment: <InputAdornment position="end">ft</InputAdornment> } }}
+                  slotProps={{ htmlInput: { 'aria-label': 'Height (feet)' }, input: { endAdornment: <InputAdornment position="end">ft</InputAdornment> } }}
                 />
               </Box>
               <Box sx={{ flex: 1 }}>
@@ -219,7 +219,7 @@ const BMICalculator = () => {
                   onFocus={(e) => e.target.select()}
                   value={Number.isNaN(heightIn) ? '' : heightIn}
                   onChange={(e) => setHeightIn(e.target.value === '' ? NaN : Number(e.target.value))}
-                  slotProps={{ input: { endAdornment: <InputAdornment position="end">in</InputAdornment> } }}
+                  slotProps={{ htmlInput: { 'aria-label': 'Height (inches)' }, input: { endAdornment: <InputAdornment position="end">in</InputAdornment> } }}
                 />
               </Box>
             </Box>
@@ -230,12 +230,12 @@ const BMICalculator = () => {
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Your BMI Is</Typography>
             
-            <Typography variant="h1" component="div" sx={{ fontWeight: 900, fontSize: '5rem', color: color || '#9CA3AF', my: 2 }}>
+            <Typography variant="h1" component="div" sx={{ fontWeight: 900, fontSize: '5rem', color: color || 'text.secondary', my: 2 }}>
               {bmi || '—'}
             </Typography>
 
-            <Box sx={{ bgcolor: 'background.paper', px: 3, py: 1, borderRadius: 5, border: `2px solid ${color || '#E5E5E5'}` }}>
-              <Typography variant="h6" sx={{ color: color || '#9CA3AF', fontWeight: 700, textTransform: 'uppercase' }}>
+            <Box sx={{ bgcolor: 'background.paper', px: 3, py: 1, borderRadius: 5, border: '2px solid', borderColor: color || 'divider' }}>
+              <Typography variant="h6" sx={{ color: color || 'text.secondary', fontWeight: 700, textTransform: 'uppercase' }}>
                 {category || 'Enter details'}
               </Typography>
             </Box>
@@ -243,13 +243,13 @@ const BMICalculator = () => {
             {category === 'Underweight' && (
               <Typography variant="body2" sx={{ mt: 3, textAlign: 'center' }}>
                 Looking to gain weight healthily? Try the{' '}
-                <Link component={RouterLink} href="/health/calorie-calculator">Calorie Calculator</Link> to plan a calorie surplus.
+                <Link component={RouterLink} href="/health/calorie-calculator" underline="always">Calorie Calculator</Link> to plan a calorie surplus.
               </Typography>
             )}
             {(category === 'Overweight' || category === 'Obese') && (
               <Typography variant="body2" sx={{ mt: 3, textAlign: 'center' }}>
                 Want a weight-management plan? Try the{' '}
-                <Link component={RouterLink} href="/health/tdee-calculator">TDEE Calculator</Link> to find your daily calorie target.
+                <Link component={RouterLink} href="/health/tdee-calculator" underline="always">TDEE Calculator</Link> to find your daily calorie target.
               </Typography>
             )}
           </Box>

@@ -121,7 +121,7 @@ const PdfImageCounterContent = () => {
           <Typography variant="subtitle2" fontWeight={600} gutterBottom sx={{ mt: 2 }}>
             Images per page
           </Typography>
-          <Box sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', overflow: 'hidden' }}>
+          <Box sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', overflow: 'hidden' }}>
             {pagesWithImages.map((p, i) => (
               <Box
                 key={p.pageIndex}
@@ -147,7 +147,7 @@ const PdfImageCounterContent = () => {
           <Typography variant="subtitle2" fontWeight={600} gutterBottom sx={{ mt: 3 }}>
             Unique image resources
           </Typography>
-          <Box sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', overflow: 'hidden' }}>
+          <Box sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', overflow: 'hidden' }}>
             {result.images.map((img, i) => (
               <Box
                 key={i}

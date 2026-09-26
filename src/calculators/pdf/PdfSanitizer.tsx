@@ -115,7 +115,7 @@ const PdfSanitizerContent = () => {
               ? <>Removed <Chip label={foundCount} size="small" color="success" sx={{ mx: 0.5 }} /> potentially dangerous element{foundCount !== 1 ? 's' : ''} from this PDF.</>
               : 'No potentially dangerous elements were detected. Your PDF appears clean.'}
           </Alert>
-          <List dense sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200' }}>
+          <List dense sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200' }}>
             {results.map((r, i) => (
               <ListItem key={i}>
                 <ListItemIcon sx={{ minWidth: 36 }}>
@@ -129,7 +129,7 @@ const PdfSanitizerContent = () => {
       )}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleSanitize} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Sanitizing...</> : 'Sanitize PDF'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Sanitizing...</> : 'Sanitize PDF'}
       </Button>
     </Box>
   );

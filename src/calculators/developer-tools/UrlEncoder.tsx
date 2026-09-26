@@ -42,7 +42,7 @@ const UrlEncoderContent = () => {
               {copied ? 'Copied!' : 'Copy'}
             </Button>
           </Box>
-          <Paper sx={{ p: 2, bgcolor: 'grey.50', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all', overflow: 'auto' }}>
+          <Paper sx={{ p: 2, bgcolor: 'action.hover', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all', overflow: 'auto' }}>
             {output}
           </Paper>
         </Paper>

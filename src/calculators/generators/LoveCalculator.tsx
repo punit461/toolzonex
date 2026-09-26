@@ -55,10 +55,10 @@ const LoveCalculatorContent = () => {
 
       {result && (
         <Paper sx={{ p: 4, width: '100%', textAlign: 'center', borderRadius: 3 }}>
-          <Typography variant="h3" fontWeight="800" color="error.main" sx={{ mt: 0, mb: 1 }}>
+          <Typography component="p" variant="h3" fontWeight="800" color="error.main" sx={{ mt: 0, mb: 1 }}>
             {result.score}%
           </Typography>
-          <LinearProgress
+          <LinearProgress aria-label="Progress"
             variant="determinate"
             value={result.score}
             color="error"

@@ -43,7 +43,7 @@ const MetaTagGeneratorContent = () => {
         <TextField label="Charset" value={charset} onChange={(e) => setCharset(e.target.value)} fullWidth />
         <FormControl fullWidth>
           <InputLabel>Robots</InputLabel>
-          <Select value={robots} label="Robots" onChange={(e) => setRobots(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Robots' }} value={robots} label="Robots" onChange={(e) => setRobots(e.target.value)}>
             {ROBOTS_OPTIONS.map((opt) => <MenuItem key={opt} value={opt}>{opt}</MenuItem>)}
           </Select>
         </FormControl>

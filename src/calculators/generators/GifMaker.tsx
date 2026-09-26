@@ -11,6 +11,7 @@ import GifIcon from '@mui/icons-material/Gif';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 interface Frame {
   id: string;
   url: string;
@@ -142,7 +143,7 @@ const GifMakerContent = () => {
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
       <input ref={fileInputRef} type="file" accept="image/*" multiple hidden onChange={handleFileChange} />
 
-      <Paper
+      <Paper {...keyboardClickable}
         variant="outlined"
         onDrop={handleDrop}
         onDragOver={(e) => e.preventDefault()}
@@ -170,13 +171,13 @@ const GifMakerContent = () => {
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', px: 0.5 }}>
-                <IconButton size="small" disabled={index === 0} onClick={() => moveFrame(index, -1)}>
+                <IconButton aria-label="Move up" size="small" disabled={index === 0} onClick={() => moveFrame(index, -1)}>
                   <ArrowUpwardIcon sx={{ fontSize: 14 }} />
                 </IconButton>
-                <IconButton size="small" disabled={index === frames.length - 1} onClick={() => moveFrame(index, 1)}>
+                <IconButton aria-label="Move down" size="small" disabled={index === frames.length - 1} onClick={() => moveFrame(index, 1)}>
                   <ArrowDownwardIcon sx={{ fontSize: 14 }} />
                 </IconButton>
-                <IconButton size="small" color="error" onClick={() => removeFrame(frame.id)}>
+                <IconButton aria-label="Remove" size="small" color="error" onClick={() => removeFrame(frame.id)}>
                   <DeleteIcon sx={{ fontSize: 14 }} />
                 </IconButton>
               </Box>
@@ -188,11 +189,11 @@ const GifMakerContent = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 3 }}>
         <Box>
           <Typography variant="body2" color="text.secondary" mb={0.5}>Frame Delay (ms): {delay}</Typography>
-          <Slider value={delay} min={50} max={2000} step={50} onChange={(_, v) => setDelay(v as number)} />
+          <Slider aria-label={`Frame Delay (ms): ${delay}`} value={delay} min={50} max={2000} step={50} onChange={(_, v) => setDelay(v as number)} />
         </Box>
         <Box>
           <Typography variant="body2" color="text.secondary" mb={0.5}>Quality (lower = better, slower): {quality}</Typography>
-          <Slider value={quality} min={1} max={30} onChange={(_, v) => setQuality(v as number)} />
+          <Slider aria-label={`Quality (lower = better, slower): ${quality}`} value={quality} min={1} max={30} onChange={(_, v) => setQuality(v as number)} />
         </Box>
       </Box>
 
@@ -210,7 +211,7 @@ const GifMakerContent = () => {
 
       {rendering && (
         <Box>
-          <LinearProgress variant="determinate" value={progress} />
+          <LinearProgress aria-label="Progress" variant="determinate" value={progress} />
           <Typography variant="caption" color="text.secondary">{progress}%</Typography>
         </Box>
       )}

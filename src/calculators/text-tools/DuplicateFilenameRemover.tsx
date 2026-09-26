@@ -80,7 +80,7 @@ const DuplicateFilenameRemoverContent = () => {
             </Button>
           )}
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Resolved File Names' } }}
           value={output}
           multiline
           rows={10}

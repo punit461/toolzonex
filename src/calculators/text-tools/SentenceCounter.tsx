@@ -7,7 +7,7 @@ import AdSenseUnit from '../../components/AdSenseUnit';
 
 const StatBox = ({ label, value }: { label: string; value: number }) => (
   <Paper sx={{ p: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText', borderRadius: 2 }}>
-    <Typography variant="h3" fontWeight="bold">{value}</Typography>
+    <Typography component="p" variant="h3" fontWeight="bold">{value}</Typography>
     <Typography variant="subtitle2" sx={{ opacity: 0.9 }}>{label}</Typography>
   </Paper>
 );

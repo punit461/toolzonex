@@ -67,7 +67,7 @@ const BirthdayReminderListGeneratorContent = () => {
                 InputLabelProps={{ shrink: true }}
                 sx={{ minWidth: 160 }}
               />
-              <IconButton size="small" onClick={() => removePerson(idx)} disabled={people.length <= 1}>
+              <IconButton aria-label="Remove" size="small" onClick={() => removePerson(idx)} disabled={people.length <= 1}>
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </Stack>

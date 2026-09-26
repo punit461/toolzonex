@@ -107,7 +107,7 @@ const CsvValidatorContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Paste or Upload CSV</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Paste or Upload CSV' } }}
           multiline
           rows={16}
           value={input}
@@ -129,7 +129,7 @@ const CsvValidatorContent = () => {
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Validation Result</Typography>
         {!result ? (
-          <Paper variant="outlined" sx={{ p: 3, bgcolor: 'grey.50' }}>
+          <Paper variant="outlined" sx={{ p: 3, bgcolor: 'action.hover' }}>
             <Typography color="text.secondary">Paste or upload a CSV file to check its structure.</Typography>
           </Paper>
         ) : result.issues.length === 0 ? (

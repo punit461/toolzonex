@@ -78,7 +78,7 @@ const PdfToWordContent = () => {
       )}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleConvert} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Converting...</> : 'Convert to Word (.docx)'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Converting...</> : 'Convert to Word (.docx)'}
       </Button>
     </Box>
   );

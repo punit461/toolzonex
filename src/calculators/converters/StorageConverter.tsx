@@ -57,7 +57,7 @@ const StorageConverterContent = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr auto 1fr' }, gap: 2, alignItems: 'end' }}>
         <Box sx={{ minWidth: 0 }}>
           <Typography gutterBottom>From</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'From value' } }}
             fullWidth
             type="number"
             value={value}
@@ -67,7 +67,7 @@ const StorageConverterContent = () => {
           />
           <FormControl fullWidth>
             <InputLabel>Unit</InputLabel>
-            <Select value={fromId} label="Unit" onChange={(e) => setFromId(e.target.value)}>
+            <Select inputProps={{ 'aria-label': 'Unit' }} value={fromId} label="Unit" onChange={(e) => setFromId(e.target.value)}>
               {UNITS.map((u) => (
                 <MenuItem key={u.id} value={u.id}>{u.label}</MenuItem>
               ))}
@@ -81,7 +81,7 @@ const StorageConverterContent = () => {
 
         <Box sx={{ minWidth: 0 }}>
           <Typography gutterBottom>To</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'To value' } }}
             fullWidth
             value={formatResult(result)}
             InputProps={{ readOnly: true }}
@@ -89,7 +89,7 @@ const StorageConverterContent = () => {
           />
           <FormControl fullWidth>
             <InputLabel>Unit</InputLabel>
-            <Select value={toId} label="Unit" onChange={(e) => setToId(e.target.value)}>
+            <Select inputProps={{ 'aria-label': 'Unit' }} value={toId} label="Unit" onChange={(e) => setToId(e.target.value)}>
               {UNITS.map((u) => (
                 <MenuItem key={u.id} value={u.id}>{u.label}</MenuItem>
               ))}

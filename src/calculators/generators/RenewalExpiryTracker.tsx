@@ -82,7 +82,7 @@ const RenewalExpiryTrackerContent = () => {
       <Box>
         <FormControl size="small" sx={{ minWidth: 220, mb: 2 }}>
           <InputLabel>Category</InputLabel>
-          <Select label="Category" value={currentCategory} onChange={handleCategoryChange}>
+          <Select inputProps={{ 'aria-label': 'Category' }} label="Category" value={currentCategory} onChange={handleCategoryChange}>
             {CATEGORIES.map((cat) => (
               <MenuItem key={cat} value={cat}>{cat}</MenuItem>
             ))}
@@ -95,7 +95,7 @@ const RenewalExpiryTrackerContent = () => {
             <Paper key={i.id} variant="outlined" sx={{ p: 2 }}>
               <Box sx={{ display: 'flex', gap: 1, mb: 1, alignItems: 'center' }}>
                 <TextField size="small" fullWidth label="Name" value={i.name} onChange={(e) => updateItem(i.id, { name: e.target.value })} />
-                <IconButton onClick={() => removeItem(i.id)} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeItem(i.id)} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

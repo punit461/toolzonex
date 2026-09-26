@@ -72,7 +72,7 @@ const HexToRgbContent = () => {
         <Box>
           <Typography variant="subtitle2" color="text.secondary" mb={0.5}>RGB Format</Typography>
           <Box sx={{ display: 'flex', gap: 1 }}>
-            <TextField value={rgb} InputProps={{ readOnly: true }} fullWidth size="small" />
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'RGB value' } }} value={rgb} InputProps={{ readOnly: true }} fullWidth size="small" />
             <Button variant="outlined" onClick={() => copyToClipboard(rgb)} sx={{ minWidth: 100 }}>
               <ContentCopyIcon fontSize="small" sx={{ mr: 1 }} /> Copy
             </Button>
@@ -82,7 +82,7 @@ const HexToRgbContent = () => {
         <Box>
           <Typography variant="subtitle2" color="text.secondary" mb={0.5}>RGBA Format (with opacity)</Typography>
           <Box sx={{ display: 'flex', gap: 1 }}>
-            <TextField value={rgba} InputProps={{ readOnly: true }} fullWidth size="small" />
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'RGBA value' } }} value={rgba} InputProps={{ readOnly: true }} fullWidth size="small" />
             <Button variant="outlined" onClick={() => copyToClipboard(rgba)} sx={{ minWidth: 100 }}>
               <ContentCopyIcon fontSize="small" sx={{ mr: 1 }} /> Copy
             </Button>

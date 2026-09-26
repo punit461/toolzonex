@@ -71,7 +71,7 @@ const BillPaymentChecklistContent = () => {
             <Paper key={b.id} variant="outlined" sx={{ p: 2 }}>
               <Box sx={{ display: 'flex', gap: 1, mb: 1, alignItems: 'center' }}>
                 <TextField size="small" fullWidth label="Bill name" value={b.name} onChange={(e) => updateBill(b.id, { name: e.target.value })} />
-                <IconButton onClick={() => removeBill(b.id)} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeBill(b.id)} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

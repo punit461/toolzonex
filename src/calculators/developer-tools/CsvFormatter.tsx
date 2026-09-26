@@ -112,7 +112,7 @@ const CsvFormatterContent = () => {
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap' }}>
         <Typography variant="subtitle1">Delimiter:</Typography>
-        <Select
+        <Select inputProps={{ 'aria-label': 'Delimiter' }}
           value={delimiter}
           onChange={(e) => handleDelimiter(e.target.value as Delimiter)}
           size="small"
@@ -137,7 +137,7 @@ const CsvFormatterContent = () => {
             placeholder={SAMPLE}
             fullWidth
             variant="outlined"
-            inputProps={{ style: { fontFamily: 'monospace' } }}
+            inputProps={{ 'aria-label': 'Raw CSV Input', style: { fontFamily: 'monospace' } }}
           />
           <Box sx={{ display: 'flex', gap: 2 }}>
             <Button variant="outlined" onClick={() => handleInput(SAMPLE)} fullWidth>Load Sample</Button>
@@ -151,7 +151,7 @@ const CsvFormatterContent = () => {
           </Box>
           <Paper
             variant="outlined"
-            sx={{ p: 2, minHeight: 380, maxHeight: 460, bgcolor: 'grey.50', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre' }}
+            sx={{ p: 2, minHeight: 380, maxHeight: 460, bgcolor: 'action.hover', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre' }}
           >
             {output || <Typography color="text.secondary">Formatted CSV will appear here...</Typography>}
           </Paper>

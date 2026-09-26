@@ -81,7 +81,7 @@ const TimeCalculatorContent = () => {
         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
           <FormControl sx={{ minWidth: 200 }}>
             <InputLabel>Operation</InputLabel>
-            <Select value={operation} label="Operation" onChange={e => setOperation(e.target.value as any)}>
+            <Select inputProps={{ 'aria-label': 'Operation' }} value={operation} label="Operation" onChange={e => setOperation(e.target.value as any)}>
               <MenuItem value="add">Add (+)</MenuItem>
               <MenuItem value="subtract">Subtract (-)</MenuItem>
             </Select>
@@ -104,7 +104,7 @@ const TimeCalculatorContent = () => {
         </Button>
 
         {/* Result */}
-        <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'primary.contrastText', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Typography variant="subtitle2" mb={1}>Result</Typography>
           <Typography variant="h4" fontWeight="bold">
             {resDays}d {resHours}h {resMinutes}m {resSeconds}s

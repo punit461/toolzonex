@@ -71,7 +71,7 @@ const MarkdownToHtmlContent = () => {
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Markdown Input:</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Markdown Input' } }}
           multiline
           rows={16}
           fullWidth
@@ -94,7 +94,7 @@ const MarkdownToHtmlContent = () => {
             Copy
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Raw HTML Output' } }}
           multiline
           rows={16}
           fullWidth

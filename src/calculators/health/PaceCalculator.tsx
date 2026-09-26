@@ -94,7 +94,7 @@ const PaceCalculator = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Mode</InputLabel>
-            <Select label="Mode" value={mode} onChange={(e) => setMode(e.target.value as any)}>
+            <Select inputProps={{ 'aria-label': 'Mode' }} label="Mode" value={mode} onChange={(e) => setMode(e.target.value as any)}>
               <MenuItem value="time-to-pace">Time → Pace</MenuItem>
               <MenuItem value="pace-to-time">Pace → Time</MenuItem>
             </Select>
@@ -102,7 +102,7 @@ const PaceCalculator = () => {
 
           <FormControl fullWidth>
             <InputLabel>Unit</InputLabel>
-            <Select label="Unit" value={unit} onChange={(e) => setUnit(e.target.value as 'km' | 'mi')}>
+            <Select inputProps={{ 'aria-label': 'Unit' }} label="Unit" value={unit} onChange={(e) => setUnit(e.target.value as 'km' | 'mi')}>
               <MenuItem value="km">Kilometers</MenuItem>
               <MenuItem value="mi">Miles</MenuItem>
             </Select>
@@ -126,7 +126,7 @@ const PaceCalculator = () => {
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight="600" mb={2}>Result</Typography>
-          <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white', mb: 2 }}>
+          <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'primary.contrastText', mb: 2 }}>
             <Typography variant="h6">{mode === 'time-to-pace' ? 'Pace' : 'Finish Time'}</Typography>
             <Typography variant="h6" fontWeight="bold">{result.paceText}</Typography>
           </Paper>

@@ -131,7 +131,7 @@ const RatioSimplifier = () => {
           {error ? (
             <Typography color="error">{error}</Typography>
           ) : (
-            <Typography variant="h3" color="primary" fontWeight={800}>
+            <Typography component="p" variant="h3" color="primary" fontWeight={800}>
               {simplified?.join(' : ')}
             </Typography>
           )}

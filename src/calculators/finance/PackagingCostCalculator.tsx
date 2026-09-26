@@ -113,7 +113,7 @@ const PackagingCostCalculator = () => {
                   onChange={(e) => updateMaterial(m.id, 'cost', e.target.value)}
                   slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
                 />
-                <IconButton color="error" size="small" onClick={() => removeMaterial(m.id)} disabled={materials.length <= 1}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeMaterial(m.id)} disabled={materials.length <= 1}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>
@@ -144,7 +144,7 @@ const PackagingCostCalculator = () => {
           <Typography variant="body2" color="text.secondary">Materials Cost per Unit</Typography>
           <Typography variant="h6" fontWeight={600}>{fmt(materialsCost)}</Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>Total Packaging Cost per Unit</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>{fmt(perUnitCost)}</Typography>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>{fmt(perUnitCost)}</Typography>
           {(parseFloat(quantity) || 0) > 0 && (
             <>
               <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>Total for {quantity} Units</Typography>

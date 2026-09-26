@@ -58,7 +58,7 @@ const GuidGeneratorContent = () => {
         />
         <FormControl fullWidth>
           <InputLabel>Braces</InputLabel>
-          <Select value={braces} label="Braces" onChange={(e) => setBraces(e.target.value as BracesOption)}>
+          <Select inputProps={{ 'aria-label': 'Braces' }} value={braces} label="Braces" onChange={(e) => setBraces(e.target.value as BracesOption)}>
             <MenuItem value="with-braces">{'{with braces}'}</MenuItem>
             <MenuItem value="without-braces">Without braces</MenuItem>
             <MenuItem value="both">Show both</MenuItem>
@@ -66,7 +66,7 @@ const GuidGeneratorContent = () => {
         </FormControl>
         <FormControl fullWidth>
           <InputLabel>Case</InputLabel>
-          <Select value={caseOption} label="Case" onChange={(e) => setCaseOption(e.target.value as CaseOption)}>
+          <Select inputProps={{ 'aria-label': 'Case' }} value={caseOption} label="Case" onChange={(e) => setCaseOption(e.target.value as CaseOption)}>
             <MenuItem value="lower">Lowercase</MenuItem>
             <MenuItem value="upper">Uppercase</MenuItem>
           </Select>
@@ -89,7 +89,7 @@ const GuidGeneratorContent = () => {
             {guids.map((g, i) => (
               <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <Typography sx={{ fontFamily: 'monospace', fontSize: '0.9rem', flex: 1, overflow: 'auto' }}>{g}</Typography>
-                <IconButton size="small" onClick={() => copySingle(g)}>
+                <IconButton aria-label="Copy" size="small" onClick={() => copySingle(g)}>
                   <ContentCopyIcon fontSize="small" />
                 </IconButton>
               </Box>

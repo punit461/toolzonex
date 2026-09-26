@@ -85,7 +85,7 @@ const NumerologyCalculatorContent = () => {
           <Grid item xs={12} sm={name.trim() ? 6 : 12}>
             <Paper sx={{ p: 3, textAlign: 'center', borderRadius: 3, height: '100%' }}>
               <Typography variant="body2" color="text.secondary">Life Path Number</Typography>
-              <Typography variant="h3" fontWeight="800" color="primary.main" sx={{ my: 1 }}>
+              <Typography component="p" variant="h3" fontWeight="800" color="primary.main" sx={{ my: 1 }}>
                 {result.lifePath}
               </Typography>
               <Typography variant="body2">{LIFE_PATH_MEANINGS[result.lifePath]}</Typography>

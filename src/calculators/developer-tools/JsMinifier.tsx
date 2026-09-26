@@ -57,7 +57,7 @@ const JsMinifierContent = () => {
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Original JavaScript</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Original JavaScript' } }}
           multiline
           rows={15}
           value={input}
@@ -92,7 +92,7 @@ const JsMinifierContent = () => {
             p: 2, 
             height: '100%', 
             minHeight: 330, 
-            bgcolor: 'grey.50',
+            bgcolor: 'action.hover',
             overflow: 'auto',
             fontFamily: 'monospace',
             whiteSpace: 'pre-wrap',

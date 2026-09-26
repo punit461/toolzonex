@@ -74,7 +74,7 @@ const CommissionCalculator = () => {
           <TextField label="Commission Rate" type="number" value={commissionRate} onChange={(e) => setCommissionRate(e.target.value)} slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }} fullWidth />
           <Box>
             <Typography variant="body2" color="text.secondary" mb={1}>Salesperson Split: {splitPct}%</Typography>
-            <Slider value={parseFloat(splitPct) || 70} onChange={(_, v) => setSplitPct(String(v))} min={0} max={100} valueLabelDisplay="auto" valueLabelFormat={(v) => `${v}%`} />
+            <Slider aria-label={`Salesperson Split: ${splitPct}%`} value={parseFloat(splitPct) || 70} onChange={(_, v) => setSplitPct(String(v))} min={0} max={100} valueLabelDisplay="auto" valueLabelFormat={(v) => `${v}%`} />
             <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
               <Typography variant="caption" color="text.secondary">Company {100 - (parseFloat(splitPct) || 70)}%</Typography>
               <Typography variant="caption" color="text.secondary">Salesperson {splitPct}%</Typography>
@@ -84,9 +84,9 @@ const CommissionCalculator = () => {
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Results</Typography>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Total Commission</Typography>
-            <Typography variant="h3" fontWeight="bold">{fmt(result.baseCommission)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{fmt(result.baseCommission)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, mb: 1, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Salesperson ({result.splitPctValue}%)</Typography>

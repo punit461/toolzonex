@@ -136,7 +136,7 @@ const SemesterPercentageCalculator = () => {
               value={Number.isNaN(subject.max) ? '' : subject.max}
               onChange={(e) => updateSubject(subject.id, 'max', e.target.value === '' ? NaN : Number(e.target.value))}
             />
-            <IconButton color="error" size="small" onClick={() => removeSubject(subject.id)} disabled={subjects.length <= 1}>
+            <IconButton aria-label="Remove" color="error" size="small" onClick={() => removeSubject(subject.id)} disabled={subjects.length <= 1}>
               <DeleteIcon fontSize="small" />
             </IconButton>
           </Stack>
@@ -146,9 +146,9 @@ const SemesterPercentageCalculator = () => {
           Add Subject
         </Button>
 
-        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">Overall Semester Percentage</Typography>
-          <Typography variant="h3" fontWeight="bold">{overallPercentage.toFixed(2)}%</Typography>
+          <Typography component="p" variant="h3" fontWeight="bold">{overallPercentage.toFixed(2)}%</Typography>
           <Typography variant="body2" mt={1}>{totalObtained} / {totalMax} total marks</Typography>
         </Paper>
 

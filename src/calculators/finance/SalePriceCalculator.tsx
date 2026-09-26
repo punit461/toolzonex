@@ -117,9 +117,9 @@ const SalePriceCalculator = () => {
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">{mode === 'toOriginal' ? 'Original Price' : 'Sale Price'}</Typography>
-            <Typography variant="h3" fontWeight="bold">
+            <Typography component="p" variant="h3" fontWeight="bold">
               {fmt(mode === 'toOriginal' ? result.originalPrice : result.salePrice)}
             </Typography>
           </Paper>

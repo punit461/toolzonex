@@ -65,7 +65,7 @@ const SmallTextGeneratorContent = () => {
               <Typography variant="caption" color="text.secondary">{o.label}</Typography>
               <Typography sx={{ fontSize: '1.25rem', wordBreak: 'break-word' }}>{o.value || '\u2014'}</Typography>
             </Box>
-            <IconButton size="small" onClick={() => copyText(o.value, idx)} sx={{ flexShrink: 0 }}>
+            <IconButton aria-label="Copy" size="small" onClick={() => copyText(o.value, idx)} sx={{ flexShrink: 0 }}>
               <ContentCopyIcon fontSize="small" />
             </IconButton>
           </Paper>

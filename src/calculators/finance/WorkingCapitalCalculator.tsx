@@ -112,7 +112,7 @@ const WorkingCapitalCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: workingCapital >= 0 ? 'primary.main' : 'error.main', color: 'white' }}>
             <Typography variant="body2">Working Capital</Typography>
-            <Typography variant="h3" fontWeight="bold">{fmt(workingCapital)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{fmt(workingCapital)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Current Ratio</Typography>

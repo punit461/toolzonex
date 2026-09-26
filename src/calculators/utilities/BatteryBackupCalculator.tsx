@@ -82,7 +82,7 @@ const BatteryBackupCalculator = () => {
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Results</Typography>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Total Energy</Typography>
             <Typography variant="h3" fontWeight="bold">{result.totalWh} Wh</Typography>
           </Paper>
@@ -104,7 +104,7 @@ const BatteryBackupCalculator = () => {
             {result.barData.map((d, i) => (
               <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                 <Typography variant="body2" sx={{ minWidth: 60, textAlign: 'right' }}>{d.hour}h</Typography>
-                <LinearProgress variant="determinate" value={d.remaining} sx={{ flex: 1, height: 16, borderRadius: 1, '& .MuiLinearProgress-bar': { bgcolor: d.remaining > 50 ? 'success.main' : d.remaining > 20 ? 'warning.main' : 'error.main' } }} />
+                <LinearProgress aria-label="Progress" variant="determinate" value={d.remaining} sx={{ flex: 1, height: 16, borderRadius: 1, '& .MuiLinearProgress-bar': { bgcolor: d.remaining > 50 ? 'success.main' : d.remaining > 20 ? 'warning.main' : 'error.main' } }} />
                 <Typography variant="body2" sx={{ minWidth: 40 }}>{Math.round(d.remaining)}%</Typography>
               </Box>
             ))}

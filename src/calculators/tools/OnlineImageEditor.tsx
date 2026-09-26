@@ -188,7 +188,7 @@ const OnlineImageEditorContent = () => {
               <Typography variant="subtitle2" gutterBottom>
                 Brightness: {brightness}%
               </Typography>
-              <Slider
+              <Slider aria-label={`Brightness: ${brightness}%`}
                 value={brightness}
                 onChange={(_, v) => setBrightness(v as number)}
                 min={0}
@@ -200,7 +200,7 @@ const OnlineImageEditorContent = () => {
               <Typography variant="subtitle2" gutterBottom>
                 Contrast: {contrast}%
               </Typography>
-              <Slider
+              <Slider aria-label={`Contrast: ${contrast}%`}
                 value={contrast}
                 onChange={(_, v) => setContrast(v as number)}
                 min={0}
@@ -212,7 +212,7 @@ const OnlineImageEditorContent = () => {
               <Typography variant="subtitle2" gutterBottom>
                 Saturation: {saturation}%
               </Typography>
-              <Slider
+              <Slider aria-label={`Saturation: ${saturation}%`}
                 value={saturation}
                 onChange={(_, v) => setSaturation(v as number)}
                 min={0}
@@ -225,16 +225,16 @@ const OnlineImageEditorContent = () => {
                 Rotation: {rotation}°
               </Typography>
               <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-                <IconButton onClick={() => setRotation(r => r - 90)}>
+                <IconButton aria-label="Rotate left" onClick={() => setRotation(r => r - 90)}>
                   <RotateLeftIcon />
                 </IconButton>
-                <IconButton onClick={() => setRotation(r => r + 90)}>
+                <IconButton aria-label="Rotate right" onClick={() => setRotation(r => r + 90)}>
                   <RotateRightIcon />
                 </IconButton>
-                <IconButton onClick={() => setFlipped(f => !f)} color={flipped ? 'primary' : 'default'}>
+                <IconButton aria-label="Flip" onClick={() => setFlipped(f => !f)} color={flipped ? 'primary' : 'default'}>
                   <FlipIcon />
                 </IconButton>
-                <IconButton onClick={resetFilters}>
+                <IconButton aria-label="Reset filters" onClick={resetFilters}>
                   <RefreshIcon />
                 </IconButton>
               </Box>

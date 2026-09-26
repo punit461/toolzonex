@@ -73,7 +73,7 @@ const RomanNumeralConverterContent = () => {
             fullWidth
             type="number"
             placeholder="e.g. 2024"
-            inputProps={{ style: { fontSize: '2rem', textAlign: 'center', fontWeight: 'bold' } }}
+            inputProps={{ 'aria-label': 'Number (1-3999)', style: { fontSize: '2rem', textAlign: 'center', fontWeight: 'bold' } }}
           />
         </Box>
 
@@ -88,7 +88,7 @@ const RomanNumeralConverterContent = () => {
             onChange={(e) => handleRomChange(e.target.value)}
             fullWidth
             placeholder="e.g. MMXXIV"
-            inputProps={{ style: { fontSize: '2rem', textAlign: 'center', fontWeight: 'bold', textTransform: 'uppercase' } }}
+            inputProps={{ 'aria-label': 'Roman Numeral', style: { fontSize: '2rem', textAlign: 'center', fontWeight: 'bold', textTransform: 'uppercase' } }}
           />
         </Box>
 

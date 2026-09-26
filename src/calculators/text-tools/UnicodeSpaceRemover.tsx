@@ -58,7 +58,7 @@ const UnicodeSpaceRemoverContent = () => {
             </Button>
           )}
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Cleaned Text' } }}
           value={cleaned}
           multiline
           rows={10}

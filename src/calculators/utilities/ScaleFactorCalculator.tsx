@@ -99,7 +99,7 @@ const ScaleFactorCalculator = () => {
           </Box>
           <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
             <Typography variant="body2" color="text.secondary">Scale Factor</Typography>
-            <Typography variant="h3" color="primary" fontWeight={800}>
+            <Typography component="p" variant="h3" color="primary" fontWeight={800}>
               {factorResult !== null ? factorResult.toLocaleString(undefined, { maximumFractionDigits: 6 }) : '—'}
             </Typography>
             {factorResult !== null && factorResult > 0 && (
@@ -126,7 +126,7 @@ const ScaleFactorCalculator = () => {
             <Typography variant="body2" color="text.secondary">
               {mode === 'findScaled' ? 'Scaled Dimension' : 'Original Dimension'}
             </Typography>
-            <Typography variant="h3" color="primary" fontWeight={800}>
+            <Typography component="p" variant="h3" color="primary" fontWeight={800}>
               {dimensionResult !== null ? dimensionResult.toLocaleString(undefined, { maximumFractionDigits: 4 }) : '—'}
             </Typography>
           </Paper>

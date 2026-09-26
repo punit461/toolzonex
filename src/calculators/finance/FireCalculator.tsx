@@ -98,9 +98,9 @@ const FireCalculator = () => {
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Results</Typography>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">FIRE Number</Typography>
-            <Typography variant="h3" fontWeight="bold">{fmt(result.fireNumber)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{fmt(result.fireNumber)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Years to FIRE</Typography>
@@ -111,7 +111,7 @@ const FireCalculator = () => {
               <Typography variant="body2">Current Progress</Typography>
               <Typography variant="body2" fontWeight={600}>{result.progress.toFixed(1)}%</Typography>
             </Box>
-            <LinearProgress variant="determinate" value={result.progress} sx={{ height: 10, borderRadius: 5 }} />
+            <LinearProgress aria-label="Progress" variant="determinate" value={result.progress} sx={{ height: 10, borderRadius: 5 }} />
           </Paper>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Current Savings</Typography>
@@ -127,7 +127,7 @@ const FireCalculator = () => {
             {result.projections.map((p) => (
               <Box key={p.year} sx={{ display: 'flex', alignItems: 'center', gap: 2, py: 0.5 }}>
                 <Typography variant="body2" sx={{ minWidth: 50 }}>Yr {p.year}</Typography>
-                <LinearProgress variant="determinate" value={p.progress} sx={{ flex: 1, height: 8, borderRadius: 4 }} />
+                <LinearProgress aria-label="Progress" variant="determinate" value={p.progress} sx={{ flex: 1, height: 8, borderRadius: 4 }} />
                 <Typography variant="body2" sx={{ minWidth: 100, textAlign: 'right' }}>{fmt(p.balance)}</Typography>
               </Box>
             ))}

@@ -40,7 +40,7 @@ const RandomLinePickerContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box>
           <Typography variant="subtitle2" mb={1} color="text.secondary">Enter items (one per line):</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Enter items (one per line)' } }}
             multiline
             rows={10}
             value={text}
@@ -54,7 +54,7 @@ const RandomLinePickerContent = () => {
         <Paper variant="outlined" sx={{ p: 2, bgcolor: 'action.hover' }}>
           <Typography variant="subtitle2" mb={2}>How many items to pick?</Typography>
           <Box sx={{ px: 2 }}>
-            <Slider
+            <Slider aria-label="How many items to pick?"
               value={pickCount}
               onChange={(e, val) => setPickCount(val as number)}
               min={1}
@@ -83,7 +83,7 @@ const RandomLinePickerContent = () => {
             sx={{ 
               p: 4, 
               bgcolor: 'primary.main', 
-              color: 'white',
+              color: 'primary.contrastText',
               borderRadius: 4,
               minHeight: 300
             }}
@@ -101,7 +101,7 @@ const RandomLinePickerContent = () => {
             </Box>
           </Paper>
         ) : (
-          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'grey.50' }}>
+          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'action.hover' }}>
             <Typography color="text.secondary" align="center">
               Enter your list on the left and click the button to pick a random winner or item.
             </Typography>

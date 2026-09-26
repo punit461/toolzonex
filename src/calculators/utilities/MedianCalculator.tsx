@@ -78,7 +78,7 @@ const MedianCalculator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>
           <Typography gutterBottom>Numbers (comma, space, or line separated)</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Numbers (comma, space, or line separated)' } }}
             fullWidth
             multiline
             minRows={6}
@@ -91,7 +91,7 @@ const MedianCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Median</Typography>
-            <Typography variant="h2" sx={{ fontWeight: 800, color: 'primary.main', mb: 3 }}>
+            <Typography component="p" variant="h2" sx={{ fontWeight: 800, color: 'primary.main', mb: 3 }}>
               {median.toLocaleString(undefined, { maximumFractionDigits: 4 })}
             </Typography>
             <Typography variant="body2" color="text.secondary" gutterBottom>

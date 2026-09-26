@@ -117,6 +117,24 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef<HTMLButtonElement>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const menuId = `nav-menu-${category.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+
+  // The menus used to open on hover only, so keyboard users could never reach
+  // them (WCAG 2.1.1). Hover still works; Enter/Space now toggle, Escape closes
+  // and puts focus back on the button.
+  const handleButtonClick = (e: React.MouseEvent) => {
+    // A keyboard-activated click has detail === 0; a mouse click that follows a
+    // hover-open shouldn't immediately close the menu again.
+    if (e.detail === 0) setOpen((o) => !o);
+    else setOpen(true);
+  };
+  const handleMenuKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      e.stopPropagation();
+      setOpen(false);
+      anchorRef.current?.focus();
+    }
+  };
 
   const handleOpen = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -136,6 +154,10 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
         color="inherit"
         endIcon={open ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />}
         onMouseEnter={handleOpen}
+        onClick={handleButtonClick}
+        aria-haspopup="true"
+        aria-expanded={open}
+        aria-controls={open ? menuId : undefined}
         sx={{
           fontWeight: 500,
           fontSize: '0.8rem',
@@ -175,7 +197,7 @@ const DropdownButton = ({ category }: DropdownButtonProps) => {
               }}
             >
               <ClickAwayListener onClickAway={() => setOpen(false)}>
-                <Box>
+                <Box id={menuId} onKeyDown={handleMenuKeyDown}>
                   <MenuList
                     sx={{
                       py: 1,
@@ -363,28 +385,28 @@ const Header = () => {
               transition: 'all 0.2s ease',
               '&:hover': { bgcolor: 'action.selected', transform: 'rotate(15deg)' },
             }}
-            aria-label="Toggle dark mode"
+            aria-label={mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {mode === 'dark' ? <LightModeOutlinedIcon fontSize="small" /> : <DarkModeOutlinedIcon fontSize="small" />}
           </IconButton>
 
           {/* Mobile hamburger */}
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton onClick={toggleColorMode} color="inherit" aria-label="Toggle dark mode" sx={{ mr: 0.5 }}>
+            <IconButton onClick={toggleColorMode} color="inherit" aria-label={mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} sx={{ mr: 0.5 }}>
               {mode === 'dark' ? <LightModeOutlinedIcon /> : <DarkModeOutlinedIcon />}
             </IconButton>
-            <IconButton onClick={() => setDrawerOpen(true)} color="inherit">
+            <IconButton onClick={() => setDrawerOpen(true)} color="inherit" aria-label="Open menu" aria-expanded={drawerOpen} aria-controls="mobile-nav-drawer">
               <MenuIcon />
             </IconButton>
           </Box>
         </Toolbar>
 
         {/* Mobile Drawer */}
-        <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
+        <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)} slotProps={{ paper: { id: 'mobile-nav-drawer', 'aria-label': 'Site menu' } }}>
           <Box sx={{ width: 280, pt: 2, height: '100%', overflowY: 'auto' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 2, mb: 1 }}>
               <img src={mode === 'dark' ? '/logo-tzx-dark.webp' : '/logo-tzx.webp'} alt="ToolZoneX" width={98} height={36} style={{ height: 36, width: 'auto', display: 'block' }} />
-              <IconButton onClick={() => setDrawerOpen(false)}><CloseIcon /></IconButton>
+              <IconButton aria-label="Close menu" onClick={() => setDrawerOpen(false)}><CloseIcon /></IconButton>
             </Box>
             <Divider sx={{ mb: 1 }} />
 

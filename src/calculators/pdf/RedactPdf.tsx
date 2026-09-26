@@ -73,6 +73,15 @@ const RedactPdfContent = () => {
 
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
+      {/* Shown before the button, not only in the FAQ: people reach for a tool
+          named "Redact" to hide ID numbers and bank details, and this one
+          doesn't remove anything from the file. */}
+      <Alert severity="warning" sx={{ mt: 3 }}>
+        <strong>Visual cover only.</strong> This draws a black box over the area but does not delete the text or
+        images underneath: anyone with the file can still select, copy or extract them. Don&apos;t rely on it to hide
+        passwords, ID numbers, bank details or other sensitive information.
+      </Alert>
+
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleAction} disabled={busy || !file}>
         {busy ? 'Redacting...' : 'Redact PDF'}
       </Button>

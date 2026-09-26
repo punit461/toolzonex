@@ -109,7 +109,7 @@ const CyclingPowerCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', mb: 2 }}>
             <Typography variant="body2" color="text.secondary">Estimated Power Required</Typography>
-            <Typography variant="h3" color="primary" fontWeight={800}>
+            <Typography component="p" variant="h3" color="primary" fontWeight={800}>
               {result ? `${Math.round(result.pLegs)} W` : '—'}
             </Typography>
           </Paper>

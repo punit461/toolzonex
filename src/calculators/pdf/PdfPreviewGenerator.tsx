@@ -10,6 +10,7 @@ import { readFileAsArrayBuffer } from './pdfUtils';
 import { usePdfPasswordUnlock } from './usePdfPasswordUnlock';
 import { loadPdfJsDocument, renderPageThumbnail } from './pdfThumbnails';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 interface Thumb {
   url: string;
   width: number;
@@ -56,7 +57,7 @@ const PdfPreviewGeneratorContent = () => {
       {thumbnails.length > 0 && (
         <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: 2, mt: 3 }}>
           {thumbnails.map((t) => (
-            <Box key={t.page} sx={{ textAlign: 'center', cursor: 'pointer' }} onClick={() => setSelected(t)}>
+            <Box {...keyboardClickable} key={t.page} sx={{ textAlign: 'center', cursor: 'pointer' }} onClick={() => setSelected(t)}>
               <img src={t.url} alt={`Page ${t.page}`} style={{ maxWidth: '100%', border: '1px solid #ddd', borderRadius: 4 }} />
               <Typography variant="caption">Page {t.page}</Typography>
             </Box>
@@ -66,7 +67,7 @@ const PdfPreviewGeneratorContent = () => {
 
       <Dialog open={!!selected} onClose={() => setSelected(null)} maxWidth="lg" fullWidth>
         <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 1 }}>
-          <IconButton onClick={() => setSelected(null)}><CloseIcon /></IconButton>
+          <IconButton aria-label="Close" onClick={() => setSelected(null)}><CloseIcon /></IconButton>
         </Box>
         {selected && (
           <Box sx={{ textAlign: 'center', p: 2 }}>

@@ -153,7 +153,7 @@ const BudgetPlanner = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: remaining >= 0 ? 'primary.main' : 'error.main', color: 'white' }}>
             <Typography variant="body2">{remaining >= 0 ? 'Remaining (Surplus)' : 'Over Budget'}</Typography>
-            <Typography variant="h3" fontWeight="bold">{fmt(Math.abs(remaining))}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{fmt(Math.abs(remaining))}</Typography>
           </Paper>
           <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Monthly Income</Typography>
@@ -171,7 +171,7 @@ const BudgetPlanner = () => {
                 <Typography variant="body2">{b.category}</Typography>
                 <Typography variant="body2" fontWeight={600}>{fmt(b.amount)} ({b.pct.toFixed(1)}%)</Typography>
               </Box>
-              <LinearProgress
+              <LinearProgress aria-label="Progress"
                 variant="determinate"
                 value={Math.min(b.pct, 100)}
                 sx={{ height: 8, borderRadius: 4, bgcolor: 'action.hover', '& .MuiLinearProgress-bar': { bgcolor: COLORS[i % COLORS.length] } }}

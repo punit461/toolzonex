@@ -101,7 +101,7 @@ const PdfBuilderContent = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2 }}>
         <FormControl fullWidth>
           <InputLabel>Page size</InputLabel>
-          <Select value={pageSize} label="Page size" onChange={(e) => setPageSize(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Page size' }} value={pageSize} label="Page size" onChange={(e) => setPageSize(e.target.value)}>
             {Object.entries(PAGE_SIZES).map(([key, val]) => (
               <MenuItem key={key} value={key}>{val.label}</MenuItem>
             ))}
@@ -109,7 +109,7 @@ const PdfBuilderContent = () => {
         </FormControl>
         <FormControl fullWidth>
           <InputLabel>Font size</InputLabel>
-          <Select value={fontSize} label="Font size" onChange={(e) => setFontSize(Number(e.target.value))}>
+          <Select inputProps={{ 'aria-label': 'Font size' }} value={fontSize} label="Font size" onChange={(e) => setFontSize(Number(e.target.value))}>
             {FONT_SIZES.map((s) => (
               <MenuItem key={s} value={s}>{s}pt</MenuItem>
             ))}

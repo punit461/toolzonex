@@ -174,7 +174,7 @@ const FolderStructureGeneratorContent = () => {
           <Typography variant="subtitle1" fontWeight={600} mb={1}>
             Folder Structure (indent with spaces, end folders with &quot;/&quot;)
           </Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Folder Structure (indent with spaces, end folders with "/")' } }}
             multiline
             minRows={12}
             fullWidth
@@ -186,7 +186,7 @@ const FolderStructureGeneratorContent = () => {
       ) : (
         <Box sx={{ mb: 3 }}>
           <Typography variant="subtitle1" fontWeight={600} mb={1}>Project Type</Typography>
-          <Select value={preset} onChange={(e) => setPreset(e.target.value)} sx={{ minWidth: 240 }}>
+          <Select inputProps={{ 'aria-label': 'Project Type' }} value={preset} onChange={(e) => setPreset(e.target.value)} sx={{ minWidth: 240 }}>
             {Object.keys(PRESETS).map((p) => <MenuItem key={p} value={p}>{p}</MenuItem>)}
           </Select>
         </Box>

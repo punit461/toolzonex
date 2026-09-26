@@ -54,32 +54,32 @@ const RgbToHslContent = () => {
             <Typography variant="subtitle2" color="error.main" fontWeight="bold">Red (R)</Typography>
             <Typography variant="subtitle2">{r}</Typography>
           </Box>
-          <Slider value={r} min={0} max={255} onChange={(e, val) => setR(val as number)} color="error" />
+          <Slider aria-label="Red (R)" value={r} min={0} max={255} onChange={(e, val) => setR(val as number)} color="error" />
         </Box>
         <Box>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
             <Typography variant="subtitle2" color="success.main" fontWeight="bold">Green (G)</Typography>
             <Typography variant="subtitle2">{g}</Typography>
           </Box>
-          <Slider value={g} min={0} max={255} onChange={(e, val) => setG(val as number)} color="success" />
+          <Slider aria-label="Green (G)" value={g} min={0} max={255} onChange={(e, val) => setG(val as number)} color="success" />
         </Box>
         <Box>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
             <Typography variant="subtitle2" color="primary.main" fontWeight="bold">Blue (B)</Typography>
             <Typography variant="subtitle2">{b}</Typography>
           </Box>
-          <Slider value={b} min={0} max={255} onChange={(e, val) => setB(val as number)} color="primary" />
+          <Slider aria-label="Blue (B)" value={b} min={0} max={255} onChange={(e, val) => setB(val as number)} color="primary" />
         </Box>
         <Box>
           <Typography variant="subtitle2" fontWeight="bold" mb={1}>Or Pick a Color</Typography>
-          <input type="color" value={hex} onChange={handleColorPicker} style={{ width: '100%', height: 48, border: 'none', cursor: 'pointer' }} />
+          <input aria-label="Pick a color" type="color" value={hex} onChange={handleColorPicker} style={{ width: '100%', height: 48, border: 'none', cursor: 'pointer' }} />
         </Box>
       </Box>
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box>
           <Typography variant="subtitle1" fontWeight="600" mb={1}>HSL Result:</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'HSL Result' } }}
             value={`hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`}
             InputProps={{ readOnly: true, sx: { fontFamily: 'monospace', fontSize: '1.1rem', fontWeight: 'bold' } }}
             fullWidth

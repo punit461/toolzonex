@@ -70,9 +70,9 @@ const FocusTimerContent = () => {
 
   const getBgColor = () => {
     switch (mode) {
-      case 'pomodoro': return '#ef4444'; // Red
-      case 'shortBreak': return '#3b82f6'; // Blue
-      case 'longBreak': return '#10b981'; // Green
+      case 'pomodoro': return '#b91c1c'; // Red (white text 6.5:1)
+      case 'shortBreak': return '#1e40af'; // Blue (8.7:1)
+      case 'longBreak': return '#065f46'; // Green (7.7:1)
     }
   };
 
@@ -130,9 +130,9 @@ const FocusTimerContent = () => {
             startIcon={isActive ? <PauseIcon /> : <PlayArrowIcon />}
             onClick={toggleTimer}
             sx={{ 
-              bgcolor: 'rgba(255,255,255,0.2)', 
+              bgcolor: 'rgba(255,255,255,0.15)', 
               color: 'white', 
-              '&:hover': { bgcolor: 'rgba(255,255,255,0.3)' },
+              '&:hover': { bgcolor: 'rgba(255,255,255,0.2)' },
               borderRadius: 8, 
               px: 5, 
               py: 2,
@@ -142,7 +142,7 @@ const FocusTimerContent = () => {
           >
             {isActive ? 'Pause' : 'Start'}
           </Button>
-          <IconButton 
+          <IconButton aria-label="Reset" 
             onClick={resetTimer}
             sx={{ 
               bgcolor: 'rgba(255,255,255,0.1)', 

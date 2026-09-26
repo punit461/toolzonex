@@ -146,7 +146,7 @@ const GPUCostCalculator = () => {
         <Box sx={{ minWidth: 0 }}>
           <Box sx={{ mb: 3 }}>
             <Typography gutterBottom>GPU Type</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'GPU Type' }}
               fullWidth
               value={gpuId}
               onChange={(e) => setGpuId(e.target.value)}
@@ -167,7 +167,7 @@ const GPUCostCalculator = () => {
               value={quantity}
               onFocus={(e) => e.target.select()}
               onChange={(e) => setQuantity(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { inputProps: { min: 1 } } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Number of GPUs', min: 1 } }}
             />
           </Box>
 
@@ -179,9 +179,9 @@ const GPUCostCalculator = () => {
               value={hoursPerMonth}
               onFocus={(e) => e.target.select()}
               onChange={(e) => setHoursPerMonth(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">hrs/mo</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Hours per month' }, input: { endAdornment: <InputAdornment position="end">hrs/mo</InputAdornment> } }}
             />
-            <Slider
+            <Slider aria-label="Hours per month"
               value={hoursPerMonth}
               min={1}
               max={730}
@@ -198,7 +198,7 @@ const GPUCostCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Cost per Month</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 3, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 3, color: 'primary.main' }}>
               {formatUSD(costPerMonth)}
             </Typography>
 

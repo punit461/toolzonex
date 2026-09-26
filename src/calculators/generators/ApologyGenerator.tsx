@@ -72,7 +72,7 @@ const ApologyGeneratorContent = () => {
             minRows={8}
             fullWidth
             variant="standard"
-            slotProps={{ input: { disableUnderline: true, sx: { p: 2 } } }}
+            slotProps={{ htmlInput: { 'aria-label': 'Your Apology (editable)' }, input: { disableUnderline: true, sx: { p: 2 } } }}
           />
         </Paper>
         {edited !== null && (

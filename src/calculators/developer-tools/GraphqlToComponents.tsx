@@ -46,7 +46,7 @@ const GraphqlToComponentsContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Paste GraphQL Operation (query / mutation), not a schema</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Paste GraphQL Operation (query / mutation), not a schema' } }}
           multiline
           rows={18}
           value={input}
@@ -70,7 +70,7 @@ const GraphqlToComponentsContent = () => {
         <Paper
           variant="outlined"
           component="pre"
-          sx={{ p: 2, minHeight: 395, bgcolor: 'grey.50', overflow: 'auto', fontFamily: 'monospace', fontSize: '0.85rem', m: 0, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}
+          sx={{ p: 2, minHeight: 395, bgcolor: 'action.hover', overflow: 'auto', fontFamily: 'monospace', fontSize: '0.85rem', m: 0, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}
         >
           {output || 'Component scaffold will appear here...'}
         </Paper>

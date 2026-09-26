@@ -57,7 +57,7 @@ const RemoveEmojisContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Output</Typography>
-        <Paper variant="outlined" sx={{ p: 2, minHeight: 330, bgcolor: 'grey.50', overflow: 'auto', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
+        <Paper variant="outlined" sx={{ p: 2, minHeight: 330, bgcolor: 'action.hover', overflow: 'auto', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
           {output || <Typography color="text.secondary">{mode === 'remove' ? 'Emoji-free text will appear here...' : 'Extracted emojis will appear here...'}</Typography>}
         </Paper>
         {input && (

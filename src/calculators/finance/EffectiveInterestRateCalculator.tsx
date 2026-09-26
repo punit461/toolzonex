@@ -90,7 +90,7 @@ const EffectiveInterestRateCalculator = () => {
           />
           <Box>
             <Typography gutterBottom>Compounding Frequency</Typography>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Compounding Frequency' }}
               fullWidth
               value={frequency}
               onChange={(e) => setFrequency(Number(e.target.value))}
@@ -103,9 +103,9 @@ const EffectiveInterestRateCalculator = () => {
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Effective Annual Rate (EAR)</Typography>
-            <Typography variant="h3" fontWeight="bold">{ear.toFixed(3)}%</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{ear.toFixed(3)}%</Typography>
           </Paper>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Difference from Nominal Rate</Typography>

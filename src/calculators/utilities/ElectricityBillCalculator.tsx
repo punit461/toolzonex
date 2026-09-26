@@ -77,7 +77,7 @@ const ElectricityBillCalculatorContent = () => {
           sx={{
             p: 4,
             bgcolor: 'primary.main',
-            color: 'white',
+            color: 'primary.contrastText',
             borderRadius: 4,
             minHeight: 200,
             display: 'flex',
@@ -89,7 +89,7 @@ const ElectricityBillCalculatorContent = () => {
           <Typography variant="body1" sx={{ opacity: 0.9 }}>
             Total Bill
           </Typography>
-          <Typography variant="h3" fontWeight="bold">
+          <Typography component="p" variant="h3" fontWeight="bold">
             ₹{totalBillInr.toLocaleString('en-IN', { maximumFractionDigits: 2 })}
           </Typography>
           <Typography variant="body1" sx={{ opacity: 0.9, mt: 1 }}>

@@ -70,7 +70,7 @@ const TextEncryptionDecryptionContent = () => {
         <Box sx={{ mb: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Method</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Method' }}
               value={mode}
               label="Method"
               onChange={(e) => setMode(e.target.value)}
@@ -98,7 +98,7 @@ const TextEncryptionDecryptionContent = () => {
              </Button>
           )}
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Result' } }}
           value={result}
           multiline
           rows={12}

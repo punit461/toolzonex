@@ -109,7 +109,7 @@ const PackingListGeneratorContent = () => {
       <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mb: 3 }}>
         <FormControl fullWidth>
           <InputLabel>Trip Type</InputLabel>
-          <Select value={tripType} label="Trip Type" onChange={(e) => setTripType(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Trip Type' }} value={tripType} label="Trip Type" onChange={(e) => setTripType(e.target.value)}>
             {Object.keys(TRIP_TYPES).map((t) => (
               <MenuItem key={t} value={t}>{t}</MenuItem>
             ))}

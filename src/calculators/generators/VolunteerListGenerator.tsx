@@ -69,7 +69,7 @@ const VolunteerListGeneratorContent = () => {
               <Box sx={{ display: 'flex', gap: 1, mb: 1, flexWrap: 'wrap', alignItems: 'center' }}>
                 <TextField size="small" label="Name" value={v.name} onChange={(e) => updateVolunteer(v.id, { name: e.target.value })} sx={{ flex: 1.5, minWidth: 130 }} />
                 <TextField size="small" label="Role / task" value={v.role} onChange={(e) => updateVolunteer(v.id, { role: e.target.value })} sx={{ flex: 1, minWidth: 110 }} />
-                <IconButton onClick={() => removeVolunteer(v.id)} disabled={volunteers.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeVolunteer(v.id)} disabled={volunteers.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

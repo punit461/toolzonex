@@ -67,7 +67,7 @@ const WeddingBudgetCalculatorContent = () => {
               onChange={(e) => updatePct(r.id, e.target.value)}
               size="small"
               sx={{ flex: 1 }}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': r.category }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
           </Box>
         ))}
@@ -79,7 +79,7 @@ const WeddingBudgetCalculatorContent = () => {
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: remaining >= 0 ? 'primary.main' : 'error.main', color: 'white' }}>
           <Typography variant="body2">{remaining >= 0 ? 'Unallocated Budget' : 'Over Budget By'}</Typography>
-          <Typography variant="h3" fontWeight="bold">{money(Math.abs(remaining))}</Typography>
+          <Typography component="p" variant="h3" fontWeight="bold">{money(Math.abs(remaining))}</Typography>
         </Paper>
         <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between' }}>
           <Typography>Total Allocated</Typography>
@@ -93,7 +93,7 @@ const WeddingBudgetCalculatorContent = () => {
               <Typography variant="body2">{b.category}</Typography>
               <Typography variant="body2" fontWeight={600}>{money(b.amount)}</Typography>
             </Box>
-            <LinearProgress
+            <LinearProgress aria-label="Progress"
               variant="determinate"
               value={Math.min(b.pct, 100)}
               sx={{ height: 8, borderRadius: 4, bgcolor: 'action.hover', '& .MuiLinearProgress-bar': { bgcolor: COLORS[i % COLORS.length] } }}

@@ -98,7 +98,7 @@ const HomeLoanEligibilityCalculator = () => {
           <Box sx={{ mb: 4 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Typography gutterBottom>Monthly Income (net)</Typography>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Currency' }}
                 size="small"
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -116,7 +116,7 @@ const HomeLoanEligibilityCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(monthlyIncome) ? '' : monthlyIncome}
               onChange={(e) => setMonthlyIncome(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Monthly Income (net)' },
                 input: {
                   startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
@@ -133,7 +133,7 @@ const HomeLoanEligibilityCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(existingEMIs) ? '' : existingEMIs}
               onChange={(e) => setExistingEMIs(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{
+              slotProps={{ htmlInput: { 'aria-label': 'Existing Monthly EMIs' },
                 input: {
                   startAdornment: <InputAdornment position="start">{currencySymbol(currency)}</InputAdornment>,
                 }
@@ -150,9 +150,9 @@ const HomeLoanEligibilityCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(emiRatioPct) ? '' : emiRatioPct}
               onChange={(e) => setEmiRatioPct(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Max EMI-to-Income Ratio (%)' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
-            <Slider
+            <Slider aria-label="Max EMI-to-Income Ratio (%)"
               value={Number.isNaN(emiRatioPct) ? 0 : emiRatioPct}
               min={30}
               max={60}
@@ -171,7 +171,7 @@ const HomeLoanEligibilityCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(interestRate) ? '' : interestRate}
               onChange={(e) => setInterestRate(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Interest Rate (% p.a.)' }, input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
             />
           </Box>
 
@@ -184,9 +184,9 @@ const HomeLoanEligibilityCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(tenureYears) ? '' : tenureYears}
               onChange={(e) => setTenureYears(e.target.value === '' ? NaN : Number(e.target.value))}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">Yr</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Loan Tenure (Years)' }, input: { endAdornment: <InputAdornment position="end">Yr</InputAdornment> } }}
             />
-            <Slider
+            <Slider aria-label="Loan Tenure (Years)"
               value={Number.isNaN(tenureYears) ? 0 : tenureYears}
               min={1}
               max={30}
@@ -200,7 +200,7 @@ const HomeLoanEligibilityCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Eligible Home Loan Amount</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               {formatMoney(eligibleLoanAmount, currency)}
             </Typography>
 

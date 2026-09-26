@@ -89,7 +89,7 @@ const StopWordRemoverContent = () => {
             </Button>
           )}
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Content Words' } }}
           value={result}
           multiline
           rows={12}

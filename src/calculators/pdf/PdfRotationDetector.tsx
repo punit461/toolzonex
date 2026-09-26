@@ -87,7 +87,7 @@ const PdfRotationDetectorContent = () => {
             </Box>
             <Box component="tbody">
               {pages.map((p) => (
-                <Box key={p.pageIndex} component="tr" sx={{ '&:hover': { bgcolor: 'grey.50' } }}>
+                <Box key={p.pageIndex} component="tr" sx={{ '&:hover': { bgcolor: 'action.hover' } }}>
                   <Box component="td" sx={{ py: 1, pr: 2, fontSize: '0.9rem' }}>{p.pageIndex}</Box>
                   <Box component="td" sx={{ py: 1, pr: 2, fontSize: '0.9rem' }}>
                     <Chip

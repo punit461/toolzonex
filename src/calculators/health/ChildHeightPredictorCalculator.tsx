@@ -135,12 +135,12 @@ const ChildHeightPredictorCalculator = () => {
                 onFocus={(e) => e.target.select()}
                 value={motherCm}
                 onChange={(e) => setMotherCm(e.target.value)}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Mother’s height (cm)' }, input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
               />
             ) : (
               <Box sx={{ display: 'flex', gap: 2 }}>
-                <TextField fullWidth type="number" value={motherFt} onChange={(e) => setMotherFt(e.target.value)} slotProps={{ input: { endAdornment: <InputAdornment position="end">ft</InputAdornment> } }} />
-                <TextField fullWidth type="number" value={motherIn} onChange={(e) => setMotherIn(e.target.value)} slotProps={{ input: { endAdornment: <InputAdornment position="end">in</InputAdornment> } }} />
+                <TextField fullWidth type="number" value={motherFt} onChange={(e) => setMotherFt(e.target.value)} slotProps={{ htmlInput: { 'aria-label': 'Mother’s height (feet)' }, input: { endAdornment: <InputAdornment position="end">ft</InputAdornment> } }} />
+                <TextField fullWidth type="number" value={motherIn} onChange={(e) => setMotherIn(e.target.value)} slotProps={{ htmlInput: { 'aria-label': 'Mother’s height (inches)' }, input: { endAdornment: <InputAdornment position="end">in</InputAdornment> } }} />
               </Box>
             )}
           </Box>
@@ -154,12 +154,12 @@ const ChildHeightPredictorCalculator = () => {
                 onFocus={(e) => e.target.select()}
                 value={fatherCm}
                 onChange={(e) => setFatherCm(e.target.value)}
-                slotProps={{ input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
+                slotProps={{ htmlInput: { 'aria-label': 'Father’s height (cm)' }, input: { endAdornment: <InputAdornment position="end">cm</InputAdornment> } }}
               />
             ) : (
               <Box sx={{ display: 'flex', gap: 2 }}>
-                <TextField fullWidth type="number" value={fatherFt} onChange={(e) => setFatherFt(e.target.value)} slotProps={{ input: { endAdornment: <InputAdornment position="end">ft</InputAdornment> } }} />
-                <TextField fullWidth type="number" value={fatherIn} onChange={(e) => setFatherIn(e.target.value)} slotProps={{ input: { endAdornment: <InputAdornment position="end">in</InputAdornment> } }} />
+                <TextField fullWidth type="number" value={fatherFt} onChange={(e) => setFatherFt(e.target.value)} slotProps={{ htmlInput: { 'aria-label': 'Father’s height (feet)' }, input: { endAdornment: <InputAdornment position="end">ft</InputAdornment> } }} />
+                <TextField fullWidth type="number" value={fatherIn} onChange={(e) => setFatherIn(e.target.value)} slotProps={{ htmlInput: { 'aria-label': 'Father’s height (inches)' }, input: { endAdornment: <InputAdornment position="end">in</InputAdornment> } }} />
               </Box>
             )}
           </Box>

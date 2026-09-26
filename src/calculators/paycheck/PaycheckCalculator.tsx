@@ -56,14 +56,14 @@ const PaycheckCalculatorContent = ({ stateSlug }: Props) => {
             value={grossAnnual}
             onFocus={(e) => e.target.select()}
             onChange={(e) => setGrossAnnual(e.target.value === '' ? 0 : Number(e.target.value))}
-            slotProps={{ input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
+            slotProps={{ htmlInput: { 'aria-label': 'Gross Annual Salary' }, input: { startAdornment: <InputAdornment position="start">$</InputAdornment> } }}
           />
         </Box>
 
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mb: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Filing Status</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Filing Status' }}
               value={filingStatus}
               label="Filing Status"
               onChange={(e) => setFilingStatus(e.target.value as FilingStatus)}
@@ -75,7 +75,7 @@ const PaycheckCalculatorContent = ({ stateSlug }: Props) => {
           </FormControl>
           <FormControl fullWidth>
             <InputLabel>Pay Frequency</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Pay Frequency' }}
               value={frequency}
               label="Pay Frequency"
               onChange={(e) => setFrequency(e.target.value as PayFrequency)}
@@ -97,7 +97,7 @@ const PaycheckCalculatorContent = ({ stateSlug }: Props) => {
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center' }}>
           <Typography variant="h6" color="text.secondary">Take-Home Pay ({FREQUENCY_LABELS[frequency]})</Typography>
-          <Typography variant="h3" sx={{ fontWeight: 700, mb: 1, color: 'primary.main' }}>
+          <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 1, color: 'primary.main' }}>
             {period(result.netAnnual)}
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>

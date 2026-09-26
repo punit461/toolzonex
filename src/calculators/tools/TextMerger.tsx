@@ -64,7 +64,7 @@ const TextMergerContent = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 3 }}>
         <Box>
           <Typography variant="subtitle1" fontWeight="bold" mb={1}>List 1</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'List 1' } }}
             multiline
             rows={8}
             value={list1}
@@ -75,7 +75,7 @@ const TextMergerContent = () => {
         </Box>
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight="bold" mb={1}>List 2</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'List 2' } }}
             multiline
             rows={8}
             value={list2}
@@ -92,7 +92,7 @@ const TextMergerContent = () => {
         
         <FormControl size="small" sx={{ minWidth: 150 }}>
           <InputLabel>Order</InputLabel>
-          <Select value={order} label="Order" onChange={(e) => setOrder(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Order' }} value={order} label="Order" onChange={(e) => setOrder(e.target.value)}>
             <MenuItem value="1-2">List 1 then List 2</MenuItem>
             <MenuItem value="2-1">List 2 then List 1</MenuItem>
           </Select>
@@ -100,7 +100,7 @@ const TextMergerContent = () => {
 
         <FormControl size="small" sx={{ minWidth: 150 }}>
           <InputLabel>Separator</InputLabel>
-          <Select value={separator} label="Separator" onChange={(e) => setSeparator(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Separator' }} value={separator} label="Separator" onChange={(e) => setSeparator(e.target.value)}>
             <MenuItem value="space">Space</MenuItem>
             <MenuItem value="comma">Comma (,)</MenuItem>
             <MenuItem value="dash">Dash (-)</MenuItem>
@@ -121,7 +121,7 @@ const TextMergerContent = () => {
 
       {/* Output Panel */}
       <Paper sx={{ overflow: 'hidden', border: '1px solid' }}>
-        <Box sx={{ p: 2, bgcolor: 'primary.main', color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Box sx={{ p: 2, bgcolor: 'primary.main', color: 'primary.contrastText', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="h6" display="flex" alignItems="center" gap={1}>
             <CallMergeIcon /> Merged Result
           </Typography>
@@ -137,7 +137,7 @@ const TextMergerContent = () => {
           </Button>
         </Box>
         <Box sx={{ p: 0 }}>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Merged Result' } }}
             multiline
             rows={10}
             value={mergedText}

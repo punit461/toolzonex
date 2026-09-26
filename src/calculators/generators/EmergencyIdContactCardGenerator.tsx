@@ -83,7 +83,7 @@ const EmergencyIdContactCardGeneratorContent = () => {
                 <TextField size="small" label="Name" value={c.name} onChange={(e) => updateContact(c.id, { name: e.target.value })} sx={{ flex: 1.5, minWidth: 130 }} />
                 <TextField size="small" label="Relationship" value={c.relationship} onChange={(e) => updateContact(c.id, { relationship: e.target.value })} sx={{ flex: 1, minWidth: 110 }} />
                 <TextField size="small" label="Phone" value={c.phone} onChange={(e) => updateContact(c.id, { phone: e.target.value })} sx={{ flex: 1, minWidth: 120 }} />
-                <IconButton onClick={() => removeContact(c.id)} disabled={contacts.length <= 1} size="small">
+                <IconButton aria-label="Remove" onClick={() => removeContact(c.id)} disabled={contacts.length <= 1} size="small">
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Box>

@@ -50,7 +50,7 @@ const OvulationCalculatorContent = () => {
       <Box>
         <Box sx={{ mb: 4 }}>
           <Typography gutterBottom>First day of your last period</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'First day of your last period' } }}
             fullWidth
             type="date"
             value={lastPeriod}
@@ -66,7 +66,7 @@ const OvulationCalculatorContent = () => {
             value={Number.isNaN(cycleLength) ? '' : cycleLength}
             onFocus={(e) => e.target.select()}
             onChange={(e) => setCycleLength(e.target.value === '' ? NaN : Number(e.target.value))}
-            slotProps={{ input: { endAdornment: <InputAdornment position="end">days</InputAdornment> } }}
+            slotProps={{ htmlInput: { 'aria-label': 'Average cycle length' }, input: { endAdornment: <InputAdornment position="end">days</InputAdornment> } }}
             helperText="Most cycles range from 21 to 35 days. Default is 28."
           />
         </Box>

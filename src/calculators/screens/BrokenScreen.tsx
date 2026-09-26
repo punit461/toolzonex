@@ -7,57 +7,52 @@ import UploadIcon from '@mui/icons-material/Upload';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 import { useFullscreen } from './useFullscreen';
+import { makeCrack, paintBrokenScreen, seededRng, VIEW, type ArtStyle } from './brokenScreenArt';
 
-type Style = 'crack' | 'lcd1' | 'lcd2' | 'custom';
+type Style = ArtStyle | 'custom';
 
-// Crack paths live in a 1000x1000 viewBox stretched over the screen.
-const VIEW = 1000;
-
-/**
- * A spider-web crack around (x, y): jagged rays running outward, joined by a
- * few broken rings near the impact point. Built in the screen's own pixel
- * space so the angles look right, then mapped into the stretched viewBox.
- */
-const makeCrack = (x: number, y: number, w: number, h: number): string[] => {
-  const toView = (px: number, py: number) => `${((px / w) * VIEW).toFixed(1)},${((py / h) * VIEW).toFixed(1)}`;
-  const reach = Math.hypot(w, h) * 0.45;
-  const rayCount = 9 + Math.floor(Math.random() * 5);
-  const rays: [number, number][][] = [];
-  const paths: string[] = [];
-
-  for (let i = 0; i < rayCount; i++) {
-    let angle = (i / rayCount) * Math.PI * 2 + (Math.random() - 0.5) * 0.4;
-    const length = reach * (0.3 + Math.random() * 0.7);
-    const points: [number, number][] = [[x, y]];
-    let travelled = 0;
-    let [px, py] = [x, y];
-    while (travelled < length) {
-      const step = 20 + Math.random() * 40;
-      angle += (Math.random() - 0.5) * 0.5;
-      px += Math.cos(angle) * step;
-      py += Math.sin(angle) * step;
-      travelled += step;
-      points.push([px, py]);
-    }
-    rays.push(points);
-    paths.push(`M${points.map(([a, b]) => toView(a, b)).join(' L')}`);
-  }
-
-  // Rings: link neighbouring rays at a few distances, skipping some for a broken look.
-  for (const ringIndex of [1, 3, 5]) {
-    for (let i = 0; i < rays.length; i++) {
-      const a = rays[i][ringIndex];
-      const b = rays[(i + 1) % rays.length][ringIndex];
-      if (a && b && Math.random() < 0.75) paths.push(`M${toView(...a)} L${toView(...b)}`);
-    }
-  }
-  return paths;
-};
+// Offsets so switching style with the same seed doesn't reuse the same random stream.
+const STYLE_SEED: Record<ArtStyle, number> = { lcd: 11, shattered: 23, crack: 37 };
 
 const BrokenScreenContent = () => {
   const { targetRef, isFullscreen, toggle } = useFullscreen<HTMLDivElement>();
-  const [style, setStyle] = useState<Style>('lcd1');
+  const [style, setStyle] = useState<Style>('lcd');
   const [cracks, setCracks] = useState<string[][]>([]);
+  // Generated artwork with a random seed per visit. The seed only feeds the
+  // canvas (never the markup), so a different value on the client can't cause
+  // a hydration mismatch.
+  const [seed, setSeed] = useState(() => Math.floor(Math.random() * 2 ** 31));
+  const [seedCracks, setSeedCracks] = useState<string[][]>([]);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  // Paint the chosen style at the screen's current size, and again whenever it
+  // resizes (entering fullscreen). The seeded RNG keeps the pattern the same.
+  useEffect(() => {
+    const container = targetRef.current;
+    const canvas = canvasRef.current;
+    if (!container || !canvas || style === 'custom') {
+      setSeedCracks([]);
+      return;
+    }
+    const draw = () => {
+      const w = container.clientWidth;
+      const h = container.clientHeight;
+      if (!w || !h) return;
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = Math.round(w * dpr);
+      canvas.height = Math.round(h * dpr);
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const rng = seededRng(seed + STYLE_SEED[style]);
+      const { impacts } = paintBrokenScreen(ctx, w, h, style, rng);
+      setSeedCracks(impacts.map((p) => makeCrack(p.x, p.y, w, h, rng, p.scale)));
+    };
+    draw();
+    const observer = new ResizeObserver(draw);
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, [style, seed, targetRef]);
 
   const addCrack = (e: React.PointerEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -85,11 +80,7 @@ const BrokenScreenContent = () => {
     e.target.value = '';
   };
 
-  const imageSrc =
-    style === 'lcd1' ? '/broken1.webp' :
-    style === 'lcd2' ? '/broken2.webp' :
-    style === 'crack' ? '/cracked_glass.jpg' :
-    customSrc;
+  const allCracks = [...seedCracks, ...cracks];
 
   return (
     <Box>
@@ -100,11 +91,16 @@ const BrokenScreenContent = () => {
           size="small"
           onChange={(_, value) => value && setStyle(value)}
         >
-          <ToggleButton value="lcd1">Broken LCD</ToggleButton>
-          <ToggleButton value="lcd2">Shattered Screen</ToggleButton>
+          <ToggleButton value="lcd">Broken LCD</ToggleButton>
+          <ToggleButton value="shattered">Shattered Screen</ToggleButton>
           <ToggleButton value="crack">Cracked Glass</ToggleButton>
           <ToggleButton value="custom" disabled={!customSrc}>Custom</ToggleButton>
         </ToggleButtonGroup>
+        {style !== 'custom' && (
+          <Button variant="text" size="small" onClick={() => setSeed(Math.floor(Math.random() * 2 ** 31))}>
+            New pattern
+          </Button>
+        )}
         <Button
           variant="outlined"
           size="small"
@@ -142,16 +138,25 @@ const BrokenScreenContent = () => {
           ...(isFullscreen && { position: 'fixed', inset: 0, zIndex: 1300 }),
         }}
       >
-        {imageSrc && (
+        {style === 'custom' ? (
+          customSrc && (
+            <Box
+              component="img"
+              src={customSrc}
+              alt="Your uploaded image"
+              draggable={false}
+              sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', userSelect: 'none' }}
+            />
+          )
+        ) : (
           <Box
-            component="img"
-            src={imageSrc}
-            alt="Broken screen"
-            draggable={false}
-            sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', userSelect: 'none' }}
+            component="canvas"
+            ref={canvasRef}
+            aria-hidden="true"
+            sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block' }}
           />
         )}
-        {cracks.length > 0 && (
+        {allCracks.length > 0 && (
           <Box
             component="svg"
             viewBox={`0 0 ${VIEW} ${VIEW}`}
@@ -159,7 +164,7 @@ const BrokenScreenContent = () => {
             aria-hidden
             sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none' }}
           >
-            {cracks.flat().map((d, i) => (
+            {allCracks.flat().map((d, i) => (
               <g key={i}>
                 {/* Dark shadow under a bright edge reads as split glass on any background. */}
                 <path d={d} fill="none" stroke="rgba(0,0,0,0.55)" strokeWidth={3} vectorEffect="non-scaling-stroke" />
@@ -178,9 +183,9 @@ const BrokenScreen = () => {
     <>
       <Typography variant="h2">Broken Screen Prank</Typography>
       <Typography variant="body1">
-        A fake broken-screen overlay for pranking friends and coworkers. Choose between a realistic shattered
-        LCD photo, a cracked glass photo, or upload your own image, go fullscreen on their device, and
-        watch the reaction — it&apos;s just a picture, no actual damage.
+        A fake broken-screen overlay for pranking friends and coworkers. Choose a broken LCD, a shattered screen
+        or cracked glass — each one is drawn fresh in your browser — or upload your own image, go fullscreen on
+        their device, and watch the reaction. It&apos;s just a picture, no actual damage.
       </Typography>
 
       <Typography variant="h2">How to use it</Typography>
@@ -212,7 +217,7 @@ const BrokenScreen = () => {
       <Box sx={{ typography: 'body1' }}>
         <ul>
           <li><strong>Does this actually damage the screen?</strong> No — it&apos;s purely a visual overlay on a webpage. Nothing about the device is affected.</li>
-          <li><strong>What&apos;s the difference between the styles?</strong> Broken LCD and Shattered Screen are photos of damaged displays; Cracked Glass is a photo of shattered glass with a spider-web crack pattern.</li>
+          <li><strong>What&apos;s the difference between the styles?</strong> Broken LCD shows coloured stripes and leaking black ink like a failed display; Shattered Screen is a hard impact with light bleeding from the backlight; Cracked Glass is spider-web cracks across dark glass. All three are drawn by code in your browser, so click <strong>New pattern</strong> for a different break.</li>
           <li><strong>Can I upload my own image?</strong> Yes, click Upload Your Own Image to display any picture from your device full-screen.</li>
           <li><strong>Is my uploaded image saved anywhere?</strong> No, it stays only in your browser for this session and is never uploaded to a server.</li>
           <li><strong>Does it work on a phone?</strong> Yes. On iPhone, where websites can&apos;t use true fullscreen, the broken screen fills the browser window instead; swipe back to exit.</li>

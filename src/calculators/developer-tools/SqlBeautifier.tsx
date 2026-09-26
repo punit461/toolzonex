@@ -93,7 +93,7 @@ const SqlBeautifierContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Minified SQL</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Minified SQL' } }}
           multiline
           rows={15}
           value={input}
@@ -112,7 +112,7 @@ const SqlBeautifierContent = () => {
           <Typography variant="subtitle1" fontWeight="600">Formatted SQL</Typography>
           <Button startIcon={<ContentCopyIcon />} onClick={copyToClipboard} disabled={!output} size="small">Copy</Button>
         </Box>
-        <Paper variant="outlined" sx={{ p: 2, height: '100%', minHeight: 395, bgcolor: 'grey.50', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
+        <Paper variant="outlined" sx={{ p: 2, height: '100%', minHeight: 395, bgcolor: 'action.hover', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
           {output || <Typography color="text.secondary">Formatted SQL will appear here...</Typography>}
         </Paper>
       </Box>

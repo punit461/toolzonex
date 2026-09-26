@@ -56,7 +56,7 @@ const ConvertPdfToLetterContent = () => {
       <PdfFileDropzone onFilesSelected={(files) => setFile(files[0] ?? null)} label="PDF file" selectedNames={file ? [file.name] : []} />
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleAction} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Converting...</> : 'Convert to Letter'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Converting...</> : 'Convert to Letter'}
       </Button>
     </Box>
   );

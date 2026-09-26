@@ -118,7 +118,7 @@ const RevenueGrowthCalculator = () => {
                 <Typography variant="body2" sx={{ minWidth: 70, textAlign: 'right', color: p.growth === null ? 'text.secondary' : p.growth >= 0 ? 'success.main' : 'error.main' }}>
                   {p.growth === null ? '—' : `${p.growth >= 0 ? '+' : ''}${p.growth.toFixed(1)}%`}
                 </Typography>
-                <IconButton color="error" size="small" onClick={() => removePeriod(p.id)} disabled={periods.length <= 2}>
+                <IconButton aria-label="Remove" color="error" size="small" onClick={() => removePeriod(p.id)} disabled={periods.length <= 2}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>
@@ -131,7 +131,7 @@ const RevenueGrowthCalculator = () => {
           <Typography variant="body2" color="text.secondary">Latest Period Revenue</Typography>
           <Typography variant="h5" fontWeight={700}>{fmt(rows[rows.length - 1]?.revenue ?? 0)}</Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>Latest Period-over-Period Growth</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>
             {latestGrowth === null ? '—' : `${latestGrowth >= 0 ? '+' : ''}${latestGrowth.toFixed(1)}%`}
           </Typography>
         </Paper>

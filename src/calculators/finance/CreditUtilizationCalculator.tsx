@@ -143,11 +143,11 @@ const CreditUtilizationCalculator = () => {
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Overall Credit Utilization</Typography>
-            <Typography variant="h3" fontWeight="bold">{utilization.toFixed(1)}%</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{utilization.toFixed(1)}%</Typography>
           </Paper>
-          <LinearProgress
+          <LinearProgress aria-label="Progress"
             variant="determinate"
             value={Math.min(utilization, 100)}
             sx={{ height: 10, borderRadius: 5, mb: 2 }}

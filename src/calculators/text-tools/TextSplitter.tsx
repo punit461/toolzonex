@@ -60,7 +60,7 @@ const TextSplitterContent = () => {
         <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mb: 3 }}>
           <FormControl sx={{ minWidth: 200, flexGrow: 1 }}>
             <InputLabel>Split Method</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Split Method' }}
               value={mode}
               label="Split Method"
               onChange={(e) => setMode(e.target.value)}

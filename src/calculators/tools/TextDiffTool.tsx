@@ -150,7 +150,7 @@ const TextDiffToolContent = () => {
 
       {/* Output Panel */}
       {hasCompared && (
-        <Paper variant="outlined" sx={{ p: 4, bgcolor: '#fafafa' }}>
+        <Paper variant="outlined" sx={{ p: 4, bgcolor: 'action.hover' }}>
           <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 2, mb: 3 }}>
             <Typography variant="h6">Difference Result</Typography>
             <ToggleButtonGroup

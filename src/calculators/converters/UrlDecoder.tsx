@@ -32,7 +32,7 @@ const UrlDecoderContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">URL-Encoded Input:</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'URL-Encoded Input' } }}
           multiline
           rows={10}
           fullWidth
@@ -50,7 +50,7 @@ const UrlDecoderContent = () => {
             {copied ? 'Copied!' : 'Copy'}
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Decoded Text' } }}
           multiline
           rows={10}
           fullWidth

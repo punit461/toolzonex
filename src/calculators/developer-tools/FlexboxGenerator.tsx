@@ -32,7 +32,7 @@ gap: ${gap};`;
         
         <FormControl fullWidth size="small">
           <InputLabel>flex-direction</InputLabel>
-          <Select value={flexDirection} label="flex-direction" onChange={(e) => setFlexDirection(e.target.value as string)}>
+          <Select inputProps={{ 'aria-label': 'flex-direction' }} value={flexDirection} label="flex-direction" onChange={(e) => setFlexDirection(e.target.value as string)}>
             <MenuItem value="row">row</MenuItem>
             <MenuItem value="row-reverse">row-reverse</MenuItem>
             <MenuItem value="column">column</MenuItem>
@@ -42,7 +42,7 @@ gap: ${gap};`;
         
         <FormControl fullWidth size="small">
           <InputLabel>justify-content</InputLabel>
-          <Select value={justifyContent} label="justify-content" onChange={(e) => setJustifyContent(e.target.value as string)}>
+          <Select inputProps={{ 'aria-label': 'justify-content' }} value={justifyContent} label="justify-content" onChange={(e) => setJustifyContent(e.target.value as string)}>
             <MenuItem value="flex-start">flex-start</MenuItem>
             <MenuItem value="flex-end">flex-end</MenuItem>
             <MenuItem value="center">center</MenuItem>
@@ -54,7 +54,7 @@ gap: ${gap};`;
 
         <FormControl fullWidth size="small">
           <InputLabel>align-items</InputLabel>
-          <Select value={alignItems} label="align-items" onChange={(e) => setAlignItems(e.target.value as string)}>
+          <Select inputProps={{ 'aria-label': 'align-items' }} value={alignItems} label="align-items" onChange={(e) => setAlignItems(e.target.value as string)}>
             <MenuItem value="stretch">stretch</MenuItem>
             <MenuItem value="flex-start">flex-start</MenuItem>
             <MenuItem value="flex-end">flex-end</MenuItem>
@@ -65,7 +65,7 @@ gap: ${gap};`;
 
         <FormControl fullWidth size="small">
           <InputLabel>flex-wrap</InputLabel>
-          <Select value={flexWrap} label="flex-wrap" onChange={(e) => setFlexWrap(e.target.value as string)}>
+          <Select inputProps={{ 'aria-label': 'flex-wrap' }} value={flexWrap} label="flex-wrap" onChange={(e) => setFlexWrap(e.target.value as string)}>
             <MenuItem value="nowrap">nowrap</MenuItem>
             <MenuItem value="wrap">wrap</MenuItem>
             <MenuItem value="wrap-reverse">wrap-reverse</MenuItem>
@@ -74,7 +74,7 @@ gap: ${gap};`;
 
         <FormControl fullWidth size="small">
           <InputLabel>gap</InputLabel>
-          <Select value={gap} label="gap" onChange={(e) => setGap(e.target.value as string)}>
+          <Select inputProps={{ 'aria-label': 'gap' }} value={gap} label="gap" onChange={(e) => setGap(e.target.value as string)}>
             <MenuItem value="0px">0px</MenuItem>
             <MenuItem value="8px">8px</MenuItem>
             <MenuItem value="16px">16px</MenuItem>
@@ -108,7 +108,7 @@ gap: ${gap};`;
               key={num} 
               sx={{ 
                 bgcolor: 'primary.main', 
-                color: 'white', 
+                color: 'primary.contrastText', 
                 p: 2, 
                 borderRadius: 1,
                 display: 'flex',

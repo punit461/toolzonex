@@ -26,7 +26,7 @@ const TipCalculatorContent = () => {
       {/* Input Panel */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
         <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <Select
+          <Select inputProps={{ 'aria-label': 'Currency' }}
             size="small"
             value={currency}
             onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
@@ -53,7 +53,7 @@ const TipCalculatorContent = () => {
             <Typography variant="subtitle2" fontWeight="bold">Tip %</Typography>
             <Typography variant="subtitle2" fontWeight="bold">{tipPercentage}%</Typography>
           </Box>
-          <Slider
+          <Slider aria-label="Tip %"
             value={tipPercentage}
             min={0}
             max={50}
@@ -73,7 +73,7 @@ const TipCalculatorContent = () => {
             <Typography variant="subtitle2" fontWeight="bold">Split between (people)</Typography>
             <Typography variant="subtitle2" fontWeight="bold">{splitCount}</Typography>
           </Box>
-          <Slider
+          <Slider aria-label="Split between (people)"
             value={splitCount}
             min={1}
             max={20}
@@ -88,7 +88,7 @@ const TipCalculatorContent = () => {
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight="600" mb={2}>Tip Summary</Typography>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-          <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="h6">Total Bill</Typography>
             <Typography variant="h6" fontWeight="bold">{formatMoney(totalBill, currency)}</Typography>
           </Paper>

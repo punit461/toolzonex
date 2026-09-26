@@ -56,7 +56,7 @@ const HtmlEntityEncoderContent = () => {
         <Typography variant="subtitle1" fontWeight="600">
           {mode === 'encode' ? 'Plain HTML Input:' : 'Entity Encoded Input:'}
         </Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': mode === 'encode' ? 'Plain HTML Input' : 'Entity Encoded Input' } }}
           multiline
           rows={10}
           fullWidth
@@ -87,7 +87,7 @@ const HtmlEntityEncoderContent = () => {
             Copy
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': mode === 'encode' ? 'Encoded Output' : 'Decoded HTML Output' } }}
           multiline
           rows={10}
           fullWidth

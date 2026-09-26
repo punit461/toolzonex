@@ -78,7 +78,7 @@ const PixelDensityCalculator = () => {
 
         <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Pixel Density</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>{valid ? `${ppi.toFixed(1)} PPI` : '—'}</Typography>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>{valid ? `${ppi.toFixed(1)} PPI` : '—'}</Typography>
           <Typography variant="caption" color="text.secondary">{valid ? `Diagonal: ${diagonalPx.toFixed(1)} px` : ''}</Typography>
         </Paper>
       </Box>

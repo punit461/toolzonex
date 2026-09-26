@@ -9,6 +9,7 @@ import ThemeRegistry from "@/components/ThemeRegistry";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import AdSenseScript from "@/components/AdSenseScript";
 import { Box, Container } from "@mui/material";
 import { ORGANIZATION_SAME_AS } from "@/data/author";
 
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     default: "ToolZoneX — Smart Tools for Every Decision",
     template: "%s | ToolZoneX",
   },
-  description: "Free online calculators for Finance, Health, and Utilities — EMI, SIP, Income Tax, BMI, Gold Rate, PPF, GST and more. Instant, accurate results.",
+  description: "Free online calculators for Finance, Health, and Utilities — EMI, SIP, Income Tax, BMI, Gold Rate, PPF, GST and more. Instant results, no sign-up.",
   keywords: [
     "online calculator", "free calculator", "EMI calculator", "SIP calculator",
     "income tax calculator", "BMI calculator", "PPF calculator", "GST calculator",
@@ -121,6 +122,13 @@ const websiteSchema = {
 
 import Script from "next/script";
 
+// EEA (EU + Iceland, Liechtenstein, Norway), UK and Switzerland: where Google
+// requires consent before ad or analytics storage.
+const CONSENT_REQUIRED_REGIONS = [
+  'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT',
+  'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'CH',
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -142,11 +150,13 @@ export default function RootLayout({
         {adsensePublisherId && (
           <>
             <meta name="google-adsense-account" content={adsensePublisherId} />
-            <Script
-              async
-              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsensePublisherId}`}
-              crossOrigin="anonymous"
-              strategy="afterInteractive"
+            {/* Google's consent tool (AdSense Privacy & messaging) reads this
+                queue; its API only works if the queue exists before the ad
+                script loads. See components/legal/CookieSettingsButton.tsx. */}
+            <script
+              dangerouslySetInnerHTML={{
+                __html: 'window.googlefc=window.googlefc||{};window.googlefc.callbackQueue=window.googlefc.callbackQueue||[];',
+              }}
             />
           </>
         )}
@@ -157,10 +167,18 @@ export default function RootLayout({
               src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
               strategy="afterInteractive"
             />
+            {/* GA4 isn't enabled in production (no measurement ID is set). If it
+                ever is, analytics and ad storage default to denied in the EEA,
+                UK and Switzerland until Google's consent message grants them. */}
             <Script id="ga4-init" strategy="afterInteractive">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
+                gtag('consent', 'default', {
+                  ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+                  region: ${JSON.stringify(CONSENT_REQUIRED_REGIONS)},
+                  wait_for_update: 500
+                });
                 gtag('js', new Date());
                 gtag('config', '${gaMeasurementId}');
               `}
@@ -169,11 +187,13 @@ export default function RootLayout({
         )}
       </head>
       <body>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         {gaMeasurementId && <GoogleAnalytics measurementId={gaMeasurementId} />}
+        {adsensePublisherId && <AdSenseScript client={adsensePublisherId} />}
         <ThemeRegistry>
           <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
             <Header />
-            <Container component="main" sx={{ mt: 4, mb: 4, flex: 1, maxWidth: '1200px !important' }}>
+            <Container component="main" id="main-content" tabIndex={-1} sx={{ mt: 4, mb: 4, flex: 1, maxWidth: '1200px !important', '&:focus': { outline: 'none' } }}>
               {children}
             </Container>
             <Footer />

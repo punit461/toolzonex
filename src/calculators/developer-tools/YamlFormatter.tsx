@@ -80,7 +80,7 @@ const YamlFormatterContent = () => {
           placeholder={SAMPLE}
           fullWidth
           variant="outlined"
-          inputProps={{ style: { fontFamily: 'monospace' } }}
+          inputProps={{ 'aria-label': 'Unformatted YAML', style: { fontFamily: 'monospace' } }}
         />
         <Box sx={{ display: 'flex', gap: 2 }}>
           <Button variant="contained" onClick={format} fullWidth>Format YAML</Button>
@@ -95,7 +95,7 @@ const YamlFormatterContent = () => {
         </Box>
         <Paper
           variant="outlined"
-          sx={{ p: 2, minHeight: 380, maxHeight: 460, bgcolor: 'grey.50', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}
+          sx={{ p: 2, minHeight: 380, maxHeight: 460, bgcolor: 'action.hover', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}
         >
           {output || <Typography color="text.secondary">Formatted YAML will appear here...</Typography>}
         </Paper>

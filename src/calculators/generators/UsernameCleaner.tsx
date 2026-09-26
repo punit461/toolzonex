@@ -104,7 +104,7 @@ const UsernameCleanerContent = () => {
             {copied ? 'Copied!' : 'Copy'}
           </Button>
         </Box>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Cleaned Username(s)' } }}
           value={output}
           multiline
           rows={5}

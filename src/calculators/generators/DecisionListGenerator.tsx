@@ -57,14 +57,14 @@ const DecisionListGeneratorContent = () => {
       <Stack spacing={1.5}>
         {rows.map((r) => (
           <Box key={r.id} sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Reason' } }}
               size="small"
               fullWidth
               placeholder={list === 'pros' ? 'Reason in favor' : 'Reason against'}
               value={r.reason}
               onChange={(e) => updateRow(list, r.id, { reason: e.target.value })}
             />
-            <Select
+            <Select inputProps={{ 'aria-label': 'Weight' }}
               size="small"
               value={r.weight}
               onChange={(e) => updateRow(list, r.id, { weight: Number(e.target.value) })}
@@ -74,7 +74,7 @@ const DecisionListGeneratorContent = () => {
                 <MenuItem key={w} value={w}>Weight {w}</MenuItem>
               ))}
             </Select>
-            <IconButton onClick={() => removeRow(list, r.id)} disabled={rows.length <= 1} size="small">
+            <IconButton aria-label="Remove" onClick={() => removeRow(list, r.id)} disabled={rows.length <= 1} size="small">
               <DeleteIcon fontSize="small" />
             </IconButton>
           </Box>

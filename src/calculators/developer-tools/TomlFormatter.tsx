@@ -38,7 +38,7 @@ const TomlFormatterContent = () => {
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Typography variant="subtitle1" fontWeight="600">Raw TOML Input</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Raw TOML Input' } }}
           multiline
           rows={16}
           value={input}
@@ -62,7 +62,7 @@ const TomlFormatterContent = () => {
         <Paper
           variant="outlined"
           component="pre"
-          sx={{ p: 2, minHeight: 395, bgcolor: 'grey.50', overflow: 'auto', fontFamily: 'monospace', fontSize: '0.85rem', m: 0, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}
+          sx={{ p: 2, minHeight: 395, bgcolor: 'action.hover', overflow: 'auto', fontFamily: 'monospace', fontSize: '0.85rem', m: 0, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}
         >
           {output || 'Formatted TOML will appear here...'}
         </Paper>

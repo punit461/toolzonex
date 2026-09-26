@@ -89,7 +89,7 @@ const InventoryValueContent = () => {
         </Table>
       </TableContainer>
 
-      <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+      <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
         <Typography variant="body2">Total Inventory Value</Typography>
         <Typography variant="h4" fontWeight="bold">{money(total)}</Typography>
       </Paper>

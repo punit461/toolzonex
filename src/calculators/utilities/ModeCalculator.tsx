@@ -81,7 +81,7 @@ const ModeCalculator = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         <Box>
           <Typography gutterBottom>Numbers (comma, space, or line separated)</Typography>
-          <TextField
+          <TextField slotProps={{ htmlInput: { 'aria-label': 'Numbers (comma, space, or line separated)' } }}
             fullWidth
             multiline
             minRows={6}
@@ -98,7 +98,7 @@ const ModeCalculator = () => {
             ) : (
               <>
                 <Typography variant="h6" color="text.secondary" gutterBottom>{modes.length > 1 ? 'Modes' : 'Mode'}</Typography>
-                <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 1, wordBreak: 'break-word', textAlign: 'center' }}>
+                <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 1, wordBreak: 'break-word', textAlign: 'center' }}>
                   {modes.join(', ')}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">Appears {maxFreq} time{maxFreq === 1 ? '' : 's'} ({count} values total)</Typography>

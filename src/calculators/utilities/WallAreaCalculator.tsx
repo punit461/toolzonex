@@ -113,7 +113,7 @@ const WallAreaCalculator = () => {
             value={Number.isNaN(row.height) ? '' : row.height}
             onChange={(e) => update(row.id, 'height', e.target.value === '' ? NaN : Number(e.target.value))}
           />
-          <IconButton color="error" size="small" onClick={() => remove(row.id)} disabled={rows.length <= minRows}>
+          <IconButton aria-label="Remove" color="error" size="small" onClick={() => remove(row.id)} disabled={rows.length <= minRows}>
             <DeleteIcon fontSize="small" />
           </IconButton>
         </Stack>

@@ -54,7 +54,7 @@ const DocumentChecklistGeneratorContent = () => {
       <Box>
         <FormControl size="small" sx={{ minWidth: 220, mb: 2 }}>
           <InputLabel>Context</InputLabel>
-          <Select label="Context" value={context} onChange={handleContextChange}>
+          <Select inputProps={{ 'aria-label': 'Context' }} label="Context" value={context} onChange={handleContextChange}>
             {CONTEXTS.map((ctx) => (
               <MenuItem key={ctx} value={ctx}>{ctx}</MenuItem>
             ))}
@@ -88,7 +88,7 @@ const DocumentChecklistGeneratorContent = () => {
         <Paper variant="outlined" sx={{ p: 2, mt: 2 }}>
           <Typography variant="subtitle1" fontWeight={600} gutterBottom>Add Custom Item</Typography>
           <Stack direction="row" spacing={1}>
-            <TextField
+            <TextField slotProps={{ htmlInput: { 'aria-label': 'Add Custom Item' } }}
               size="small"
               fullWidth
               value={customItem}

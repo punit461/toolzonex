@@ -191,7 +191,7 @@ const BabyGrowthCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={ageValue}
               onChange={(e) => setAgeValue(e.target.value)}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">{ageUnit}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Age' }, input: { endAdornment: <InputAdornment position="end">{ageUnit}</InputAdornment> } }}
             />
           </Box>
 
@@ -215,7 +215,7 @@ const BabyGrowthCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={weight}
               onChange={(e) => setWeight(e.target.value)}
-              slotProps={{ input: { endAdornment: <InputAdornment position="end">{weightUnit}</InputAdornment> } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Weight' }, input: { endAdornment: <InputAdornment position="end">{weightUnit}</InputAdornment> } }}
             />
           </Box>
         </Box>

@@ -92,7 +92,7 @@ const AddOverlayToPdfContent = () => {
           <TextField label="Text color" type="color" value={textColor} onChange={(e) => setTextColor(e.target.value)} sx={{ width: 120 }} InputLabelProps={{ shrink: true }} />
           <FormControl sx={{ flex: 1 }}>
             <InputLabel>Position</InputLabel>
-            <Select value={position} label="Position" onChange={(e) => setPosition(e.target.value as any)}>
+            <Select inputProps={{ 'aria-label': 'Position' }} value={position} label="Position" onChange={(e) => setPosition(e.target.value as any)}>
               <MenuItem value="top-right">Top Right</MenuItem>
               <MenuItem value="center">Center</MenuItem>
               <MenuItem value="bottom-left">Bottom Left</MenuItem>
@@ -101,14 +101,14 @@ const AddOverlayToPdfContent = () => {
         </Stack>
         <Box>
           <Typography gutterBottom>Opacity: {Math.round(opacity * 100)}%</Typography>
-          <Slider value={opacity} min={0.1} max={0.9} step={0.05} onChange={(_, v) => setOpacity(v as number)} />
+          <Slider aria-label="Opacity" value={opacity} min={0.1} max={0.9} step={0.05} onChange={(_, v) => setOpacity(v as number)} />
         </Box>
       </Stack>
 
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleApply} disabled={busy || !file}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Processing...</> : 'Add Overlay'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Processing...</> : 'Add Overlay'}
       </Button>
     </Box>
   );

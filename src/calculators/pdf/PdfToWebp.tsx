@@ -59,7 +59,7 @@ const PdfToWebpContent = () => {
       <PdfFileDropzone onFilesSelected={(files) => setFile(files[0] ?? null)} label="PDF file" selectedNames={file ? [file.name] : []} />
       <Box sx={{ mt: 2 }}>
         <MuiTypography gutterBottom>WebP Quality: {Math.round(quality * 100)}%</MuiTypography>
-        <Slider
+        <Slider aria-label="Quality"
           value={quality}
           onChange={(_, v) => setQuality(v as number)}
           min={0.5}

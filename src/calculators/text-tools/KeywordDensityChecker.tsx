@@ -112,7 +112,7 @@ const KeywordDensityCheckerContent = () => {
                     <TableCell align="right">
                       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, justifyContent: 'flex-end' }}>
                         <Typography variant="body2" sx={{ minWidth: 45 }}>{row.density.toFixed(2)}%</Typography>
-                        <LinearProgress
+                        <LinearProgress aria-label="Progress"
                           variant="determinate"
                           value={Math.min(row.density * 10, 100)}
                           color={row.density > 5 ? 'error' : row.density > 2 ? 'success' : 'primary'}

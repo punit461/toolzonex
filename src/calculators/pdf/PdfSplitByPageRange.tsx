@@ -64,7 +64,7 @@ const PdfSplitByPageRangeContent = () => {
 
       <Box sx={{ mt: 3 }}>
         <Typography gutterBottom>Page ranges (one output file per range, separated by semicolons)</Typography>
-        <TextField
+        <TextField slotProps={{ htmlInput: { 'aria-label': 'Page ranges (one output file per range, separated by semicolons)' } }}
           fullWidth
           placeholder="e.g. 1-3; 5; 8-10"
           value={ranges}
@@ -76,7 +76,7 @@ const PdfSplitByPageRangeContent = () => {
       {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
 
       <Button variant="contained" size="large" fullWidth sx={{ mt: 3 }} onClick={handleSplit} disabled={busy || !file || !ranges}>
-        {busy ? <><CircularProgress size={18} color="inherit" sx={{ mr: 1.5 }} />Splitting...</> : 'Split PDF'}
+        {busy ? <><CircularProgress aria-label="Loading" size={18} color="inherit" sx={{ mr: 1.5 }} />Splitting...</> : 'Split PDF'}
       </Button>
     </Box>
   );

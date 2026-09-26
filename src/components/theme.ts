@@ -69,10 +69,20 @@ const lightPalette = {
     dark: '#0C5B40',
     contrastText: '#FFFFFF',
   },
+  // 5.16:1 on white (was #A3720B at 4.23:1, under the 4.5:1 WCAG AA minimum
+  // for warning-coloured text and white-on-warning buttons).
   warning: {
-    main: '#A3720B',
+    main: '#8F660A',
     light: '#FAF1DD',
-    dark: '#7A5608',
+    dark: '#735206',
+    contrastText: '#FFFFFF',
+  },
+  // Never set before, so MUI's default #0288d1 applied: white chip text on it
+  // measured under 4.5:1 on the blog index. 5.28:1 now.
+  info: {
+    main: '#0B6BCB',
+    light: '#E7F1FB',
+    dark: '#0A56A3',
     contrastText: '#FFFFFF',
   },
   error: {
@@ -123,6 +133,12 @@ const darkPalette = {
     dark: '#EBC46A',
     contrastText: '#0D121C',
   },
+  info: {
+    main: '#6CB4F5',
+    light: '#10263D',
+    dark: '#8CC4F7',
+    contrastText: '#0D121C',
+  },
   error: {
     main: '#EF7A63',
     light: '#3A1C16',
@@ -148,11 +164,70 @@ const darkPalette = {
 export function createAppTheme(mode: PaletteMode) {
   const palette = mode === 'dark' ? darkPalette : lightPalette;
 
+  // Keyboard focus must be visible (WCAG 2.4.7). MUI's default for ButtonBase is
+  // a faint ripple; this adds a solid ring only for keyboard focus (.Mui-focusVisible),
+  // so mouse clicks look unchanged.
+  const focusRing = { outline: `2px solid ${palette.primary.main}`, outlineOffset: '2px' };
+  const insetFocusRing = { ...focusRing, outlineOffset: '-2px' };
+
   return createTheme({
     palette,
     typography,
     shape,
     components: {
+      MuiTypography: {
+        defaultProps: {
+          // h4-h6 and the subtitles are used across ~2,100 places as a text
+          // size for results, card titles and labels ("₹ 54,13,879", "Monthly
+          // EMI"), not as document headings. Rendered as <h4>-<h6> they broke
+          // the heading outline on 257 of 266 audited pages (axe heading-order).
+          // Real headings in those styles set component="h2"/"h3" explicitly.
+          variantMapping: {
+            h1: 'h1', h2: 'h2', h3: 'h3',
+            h4: 'p', h5: 'p', h6: 'p',
+            subtitle1: 'p', subtitle2: 'p',
+            body1: 'p', body2: 'p', inherit: 'p',
+          },
+        },
+      },
+      MuiButtonBase: {
+        styleOverrides: {
+          root: { '&.Mui-focusVisible': focusRing },
+        },
+      },
+      // Items inside menus, lists, tabs and cards sit in overflow-hidden
+      // containers, where an outside ring would be clipped.
+      MuiMenuItem: { styleOverrides: { root: { '&.Mui-focusVisible': insetFocusRing } } },
+      MuiListItemButton: { styleOverrides: { root: { '&.Mui-focusVisible': insetFocusRing } } },
+      MuiTab: { styleOverrides: { root: { '&.Mui-focusVisible': insetFocusRing } } },
+      MuiCardActionArea: { styleOverrides: { root: { '&.Mui-focusVisible': insetFocusRing } } },
+      MuiLink: {
+        // Underlined by default: links inside sentences must be distinguishable
+        // without relying on colour (WCAG 1.4.1). Nav and footer column links
+        // opt out with textDecoration: 'none'.
+        defaultProps: { underline: 'always' as const },
+        styleOverrides: { root: { '&:focus-visible': { ...focusRing, borderRadius: 2 } } },
+      },
+      // Selected toggle text in primary.main measured under 4.5:1 on its own
+      // tinted background in dark mode; primary.dark is the higher-contrast
+      // shade in both palettes.
+      MuiToggleButton: {
+        styleOverrides: {
+          root: { '&.Mui-selected.MuiToggleButton-primary': { color: palette.primary.dark } },
+        },
+      },
+      // Accordion titles default to <h3>; on this site accordions sit directly
+      // under the page's h1 (FAQ, tool options), so h3 skipped a level.
+      MuiAccordion: {
+        defaultProps: { slotProps: { heading: { component: 'h2' } } },
+      },
+      // Field outlines are the only cue to where an input is; MUI's default
+      // (23% black) is ~1.8:1. These are >=3:1 against the page (WCAG 1.4.11).
+      MuiOutlinedInput: {
+        styleOverrides: {
+          notchedOutline: { borderColor: mode === 'dark' ? '#6B7688' : '#878FA2' },
+        },
+      },
       MuiCssBaseline: {
         styleOverrides: {
           'html, body': {
@@ -206,9 +281,6 @@ export function createAppTheme(mode: PaletteMode) {
         styleOverrides: {
           root: { fontWeight: 500 },
         },
-      },
-      MuiLink: {
-        defaultProps: { underline: 'hover' as const },
       },
     },
   });

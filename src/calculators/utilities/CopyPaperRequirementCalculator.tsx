@@ -98,7 +98,7 @@ const CopyPaperRequirementCalculator = () => {
               <Typography variant="h6">Reams Needed</Typography>
               <Typography variant="h6" fontWeight="bold">{reamsNeeded}</Typography>
             </Paper>
-            <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="h6">Cases Needed</Typography>
               <Typography variant="h6" fontWeight="bold">{casesNeeded}</Typography>
             </Paper>
