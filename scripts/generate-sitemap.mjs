@@ -9,6 +9,11 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.com';
 // submitted in the sitemap as indexable URLs.
 const VERIFICATION_FILE_PATTERN = /^(google[a-f0-9]+|bingsiteauth|yandex_[a-f0-9]+|pinterest-[a-f0-9]+)$/i;
 
+// lastmod stamped on every URL in sitemap-cleanup.xml. It only needs to be newer
+// than Googlebot's last visit so the URL gets re-fetched and the noindex/301 is
+// seen; bump it if another index sweep ships and the file is still published.
+const CLEANUP_LASTMOD = '2026-09-26T00:00:00+00:00';
+
 const gitDateCache = new Map();
 
 /** Real last-commit date (author date, ISO 8601) for a source file, via git history —
@@ -86,6 +91,15 @@ async function generateSitemap() {
   }
 
   const urls = [];
+  const noindexRoutes = [];
+
+  function toRoute(basePath, basename) {
+    let route = `${basePath}/${basename}`;
+    if (route.endsWith('/index')) {
+      route = route.replace('/index', '');
+    }
+    return route === '' ? '/' : route;
+  }
 
   function crawlDir(directory, basePath = '') {
     const files = fs.readdirSync(directory);
@@ -98,23 +112,22 @@ async function generateSitemap() {
         crawlDir(fullPath, `${basePath}/${file}`);
       } else if (file.endsWith('.html') && file !== '404.html') {
         const basename = file.replace('.html', '');
+        // Next's internal pages (_not-found.html) carry a noindex meta and would
+        // otherwise land in sitemap-cleanup.xml as if they were real content.
+        if (basename.startsWith('_')) {
+          continue;
+        }
         if (basePath === '' && VERIFICATION_FILE_PATTERN.test(basename)) {
           continue;
         }
 
         const html = fs.readFileSync(fullPath, 'utf8');
         if (/<meta[^>]+name="robots"[^>]+content="[^"]*noindex/i.test(html)) {
+          noindexRoutes.push(toRoute(basePath, basename));
           continue;
         }
 
-        let route = `${basePath}/${basename}`;
-        if (route.endsWith('/index')) {
-          route = route.replace('/index', '');
-        }
-        if (route === '') {
-          route = '/';
-        }
-        urls.push({ route, filePath: fullPath });
+        urls.push({ route: toRoute(basePath, basename), filePath: fullPath });
       }
     }
   }
@@ -143,14 +156,36 @@ ${uniqueUrls
   fs.writeFileSync(path.join(outPath, 'sitemap.xml'), sitemap);
   console.log(`✅ sitemap.xml generated with ${uniqueUrls.length} URLs`);
 
+  // Every noindexed page (and every legacy /tools/ + /calculators/ URL, whose
+  // stub HTML is noindexed and which _redirects now 301s). Listing them with a
+  // fresh lastmod gets Googlebot to re-crawl them and act on the noindex / 301
+  // within weeks, instead of whenever it happens to wander back to pages that
+  // are no longer in the main sitemap. Search Console will report these as
+  // "Submitted URL marked 'noindex'" -- expected. Once the Pages report shows
+  // them excluded, delete this block and its robots.txt line.
+  const cleanupRoutes = [...new Set(noindexRoutes)].sort();
+  const cleanupSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${cleanupRoutes
+  .map((route) => `  <url>
+    <loc>${SITE_URL}${route}</loc>
+    <lastmod>${CLEANUP_LASTMOD}</lastmod>
+  </url>`)
+  .join('\n')}
+</urlset>`;
+  fs.writeFileSync(path.join(outPath, 'sitemap-cleanup.xml'), cleanupSitemap);
+  console.log(`✅ sitemap-cleanup.xml generated with ${cleanupRoutes.length} noindexed/redirected URLs`);
+
+  // /_next/ must stay crawlable: it holds every page's CSS and JS, and blocking
+  // it made Googlebot render every tool as an unstyled, non-working form.
   const robots = `# ToolZoneX robots.txt
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /_next/
 
 # Sitemaps
 Sitemap: ${SITE_URL}/sitemap.xml
+Sitemap: ${SITE_URL}/sitemap-cleanup.xml
 `;
   fs.writeFileSync(path.join(outPath, 'robots.txt'), robots);
   console.log('✅ robots.txt generated');
