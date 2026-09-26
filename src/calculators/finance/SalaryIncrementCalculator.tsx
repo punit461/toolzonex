@@ -18,10 +18,15 @@ const SalaryIncrementCalculator = () => {
   const [currentCTC, setCurrentCTC] = useState<number>(1000000);
   const [incrementPercent, setIncrementPercent] = useState<number>(10);
   const [currency, setCurrency] = useState<CurrencyCode>('INR');
+  const [arrearsMonths, setArrearsMonths] = useState<number>(0);
+  const [startYear, setStartYear] = useState<number>(2026);
+  const [projectionYears, setProjectionYears] = useState<number>(10);
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
+    // Set after mount so the statically built HTML never disagrees with the visitor's clock.
+    setStartYear(new Date().getFullYear());
   }, []);
 
   const { newCTC, incrementAmount, monthlyIncrease, newMonthlyCTC } = useMemo(() => {
@@ -35,6 +40,24 @@ const SalaryIncrementCalculator = () => {
       newMonthlyCTC: totalNew / 12,
     };
   }, [currentCTC, incrementPercent]);
+
+  // Increment that took effect before it reached a payslip, paid later as a lump sum.
+  const arrears = monthlyIncrease * (Number.isNaN(arrearsMonths) ? 0 : Math.max(0, arrearsMonths));
+
+  // Same increment every year, compounding on the already-raised CTC. Row 0 is the current CTC.
+  const projection = useMemo(() => {
+    const base = Number.isNaN(currentCTC) ? 0 : currentCTC;
+    const rate = (Number.isNaN(incrementPercent) ? 0 : incrementPercent) / 100;
+    const years = Number.isNaN(projectionYears) ? 1 : Math.min(40, Math.max(1, Math.round(projectionYears)));
+    const rows: { label: string; ctc: number; cumulative: number }[] = [];
+    let cumulative = 0;
+    for (let i = 0; i <= years; i++) {
+      const ctc = base * Math.pow(1 + rate, i);
+      cumulative += ctc;
+      rows.push({ label: Number.isNaN(startYear) ? `Year ${i}` : String(startYear + i), ctc, cumulative });
+    }
+    return rows;
+  }, [currentCTC, incrementPercent, startYear, projectionYears]);
 
   const chartData = [
     {
@@ -65,6 +88,40 @@ const SalaryIncrementCalculator = () => {
         new CTC to ₹9,20,000.
       </Typography>
 
+      <Typography variant="h2">Salary Increment with Arrears</Typography>
+      <Typography variant="body1">
+        Increments often take effect from an earlier date than the first payslip that includes them, for example
+        an appraisal approved in June but effective from April. The unpaid difference for those months is paid
+        later as a one-time amount called arrears. Enter those months in the <strong>Arrears (months)</strong> field.
+      </Typography>
+      <Box sx={{ my: 2, p: 2, bgcolor: 'action.hover', borderRadius: 1, fontFamily: 'monospace' }}>
+        Monthly Increase = Increment Amount ÷ 12
+        <br />
+        Arrears = Monthly Increase × Months Pending
+      </Box>
+      <Typography variant="body1">
+        A ₹8,00,000 CTC with a 10% increment effective from April but first paid in July has a monthly increase of
+        ₹6,667, so the April–June arrears come to ₹20,000, on top of the new monthly salary. These are gross
+        CTC-based figures: the amount credited will be lower after TDS and PF. In India, arrears that relate to
+        earlier financial years may qualify for tax relief when you file your return, so check with your payroll
+        team or a tax advisor.
+      </Typography>
+
+      <Typography variant="h2">Projecting Your Salary Over Several Years</Typography>
+      <Typography variant="body1">
+        If you expect a similar increment every year, your salary compounds: each year&apos;s raise is calculated
+        on the already-raised salary. The <strong>Salary Projection</strong> table applies your increment
+        percentage year after year and keeps a running total of everything earned.
+      </Typography>
+      <Box sx={{ my: 2, p: 2, bgcolor: 'action.hover', borderRadius: 1, fontFamily: 'monospace' }}>
+        Salary after n years = Current Salary × (1 + Increment % / 100)^n
+      </Box>
+      <Typography variant="body1">
+        A salary of ₹35,400 a month in 2023 with a 3% increment every year grows to about ₹80,993 a month by 2051
+        (28 increments), and the total earned over those 29 years is about ₹1.92 crore. To reproduce it, enter
+        ₹4,24,800 as the annual CTC, 3% as the increment, 2023 as the starting year and 28 years to project.
+      </Typography>
+
       <Typography variant="h2">Common Use Cases</Typography>
       <Box sx={{ typography: 'body1' }}>
         <ul>
@@ -85,6 +142,12 @@ const SalaryIncrementCalculator = () => {
         Increment percentage = (New CTC − Current CTC) ÷ Current CTC × 100. If you already know your old and new
         CTC and want the percentage rather than the new amount, subtract the two figures, divide by the old CTC,
         and multiply by 100.
+      </Typography>
+      <Typography variant="h3">How do I calculate CTC after an increment with arrears?</Typography>
+      <Typography variant="body1">
+        Work out the new CTC first (Current CTC × (1 + Increment % / 100)), then multiply the monthly increase by
+        the number of months the increment was pending. For a CTC of ₹14,67,800 with a 10% increment paid six
+        months late, the new CTC is ₹16,14,580, the monthly increase is ₹12,232 and the arrears are ₹73,390.
       </Typography>
       <Typography variant="h3">Is CTC the same as my take-home salary?</Typography>
       <Typography variant="body1">
@@ -162,6 +225,19 @@ const SalaryIncrementCalculator = () => {
               sx={{ mt: 2 }}
             />
           </Box>
+
+          <Box sx={{ mb: 4 }}>
+            <Typography gutterBottom>Arrears (months)</Typography>
+            <TextField
+              fullWidth
+              variant="outlined"
+              type="number"
+              onFocus={(e) => e.target.select()}
+              value={Number.isNaN(arrearsMonths) ? '' : arrearsMonths}
+              onChange={(e) => setArrearsMonths(e.target.value === '' ? NaN : Number(e.target.value))}
+              helperText="Months between the date the increment took effect and the first salary that paid it. Leave at 0 if it was paid on time."
+            />
+          </Box>
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
@@ -181,6 +257,15 @@ const SalaryIncrementCalculator = () => {
                 <Typography variant="h6" color="success.main">+ {formatMoney(monthlyIncrease, currency)}</Typography>
               </Box>
             </Box>
+
+            {arrears > 0 && (
+              <Box sx={{ mb: 4 }}>
+                <Typography variant="body2" color="text.secondary">
+                  Arrears Due ({arrearsMonths} {arrearsMonths === 1 ? 'month' : 'months'}, one-time)
+                </Typography>
+                <Typography variant="h6" color="success.main">+ {formatMoney(arrears, currency)}</Typography>
+              </Box>
+            )}
 
             <Box sx={{ height: 300 }}>
               {isClient && (
@@ -226,6 +311,53 @@ const SalaryIncrementCalculator = () => {
                 <TableCell align="right">{formatMoney(newMonthlyCTC, currency)}</TableCell>
                 <TableCell align="right" sx={{ color: 'success.main', fontWeight: 500 }}>+ {formatMoney(monthlyIncrease, currency)}</TableCell>
               </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Box>
+
+      <Box sx={{ mt: 6 }}>
+        <Typography variant="h4" gutterBottom sx={{ fontSize: '1.5rem', fontWeight: 600 }}>Salary Projection</Typography>
+        <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+          Your CTC year by year if you get the same {Number.isNaN(incrementPercent) ? 0 : incrementPercent}% increment every year.
+        </Typography>
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', sm: '200px 200px' }, gap: 2, mb: 2 }}>
+          <TextField
+            label="Starting year"
+            type="number"
+            size="small"
+            onFocus={(e) => e.target.select()}
+            value={Number.isNaN(startYear) ? '' : startYear}
+            onChange={(e) => setStartYear(e.target.value === '' ? NaN : Number(e.target.value))}
+          />
+          <TextField
+            label="Years to project (1–40)"
+            type="number"
+            size="small"
+            onFocus={(e) => e.target.select()}
+            value={Number.isNaN(projectionYears) ? '' : projectionYears}
+            onChange={(e) => setProjectionYears(e.target.value === '' ? NaN : Number(e.target.value))}
+          />
+        </Box>
+        <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid', maxHeight: 440 }}>
+          <Table stickyHeader size="small">
+            <TableHead>
+              <TableRow>
+                <TableCell sx={{ fontWeight: 600 }}>Year</TableCell>
+                <TableCell align="right" sx={{ fontWeight: 600 }}>Annual CTC</TableCell>
+                <TableCell align="right" sx={{ fontWeight: 600 }}>Monthly</TableCell>
+                <TableCell align="right" sx={{ fontWeight: 600 }}>Total Earned So Far</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {projection.map((row) => (
+                <TableRow key={row.label}>
+                  <TableCell>{row.label}</TableCell>
+                  <TableCell align="right">{formatMoney(row.ctc, currency)}</TableCell>
+                  <TableCell align="right">{formatMoney(row.ctc / 12, currency)}</TableCell>
+                  <TableCell align="right">{formatMoney(row.cumulative, currency)}</TableCell>
+                </TableRow>
+              ))}
             </TableBody>
           </Table>
         </TableContainer>
