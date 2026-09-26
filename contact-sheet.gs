@@ -21,7 +21,7 @@
  * form keeps working before the key is set up.
  */
 
-const NOTIFY_EMAIL = 'punit461bharadwaj@gmail.com';
+const NOTIFY_EMAIL = 'punit@toolzonex.com';
 const SHEET_NAME   = 'Contacts'; // rename to whatever your sheet tab is called
 
 // Hostnames the widget is allowed to be solved on, so the site key can't be
@@ -113,6 +113,30 @@ function doPost(e) {
     return ContentService
       .createTextOutput(JSON.stringify({ status: 'error', message: err.toString() }))
       .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+// ── Retention: delete messages older than RETENTION_DAYS ─────────────────────
+// The Privacy Policy promises contact messages are deleted 12 months after our
+// last exchange. This removes sheet rows older than that (measured from the
+// submission time, which is never later than the last exchange). Set it to run
+// daily: Apps Script editor → Triggers → Add Trigger → purgeOldContacts →
+// Time-driven → Day timer. The notification copies in the email inbox need
+// deleting there as well (a mailbox retention policy, or by hand).
+const RETENTION_DAYS = 365;
+
+function purgeOldContacts() {
+  const book = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = book.getSheetByName(SHEET_NAME) || book.getActiveSheet();
+  const lastRow = sheet.getLastRow();
+  if (lastRow < 2) return; // header only
+
+  const cutoff = Date.now() - RETENTION_DAYS * 24 * 60 * 60 * 1000;
+  const stamps = sheet.getRange(2, 1, lastRow - 1, 1).getValues();
+  // Bottom-up, so deleting a row doesn't shift the ones still to check.
+  for (let i = stamps.length - 1; i >= 0; i--) {
+    const time = new Date(stamps[i][0]).getTime();
+    if (!isNaN(time) && time < cutoff) sheet.deleteRow(i + 2);
   }
 }
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { Box, Typography, Container, Paper } from '@mui/material';
+import { CONTACT_EMAIL } from '../../data/siteInfo';
 
 const About = () => {
   return (
@@ -68,7 +69,7 @@ const About = () => {
               <Box sx={{ display: 'flex', gap: 2, mt: 2 }}>
                 <a href="https://github.com/punit461" target="_blank" rel="noopener noreferrer" style={{ color: '#171717', textDecoration: 'none', fontWeight: 600 }}>GitHub</a>
                 <a href="https://www.linkedin.com/in/punit461bhardwaj/" target="_blank" rel="noopener noreferrer" style={{ color: '#0077b5', textDecoration: 'none', fontWeight: 600 }}>LinkedIn</a>
-                <a href="mailto:punit461bhardwaj@gmail.com" style={{ color: '#171717', textDecoration: 'none', fontWeight: 600 }}>Email</a>
+                <a href={`mailto:${CONTACT_EMAIL}`} style={{ color: '#171717', textDecoration: 'none', fontWeight: 600 }}>Email</a>
               </Box>
             </Box>
             <Box sx={{ flex: 1, p: 2, bgcolor: '#fff', borderRadius: 2, border: '1px dashed #ccc' }}>

@@ -137,7 +137,7 @@ const Contact = () => {
           Contact Us
         </Typography>
         <Typography variant="body1" color="text.secondary" sx={{ mb: 6 }}>
-          Have a question, found a bug, or want a new calculator? We'd love to hear from you.
+          Have a question, found a bug, or want a new calculator? We&apos;d love to hear from you.
         </Typography>
 
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 2fr' }, gap: 6 }}>
@@ -253,7 +253,7 @@ const Contact = () => {
                   />
                   <Typography id="contact-privacy-notice" variant="body2" color="text.secondary" sx={{ mt: 1 }}>
                     {SHEET_URL
-                      ? <>Your message is stored in our Google account (Google Sheets and Gmail), used only to reply, and deleted {CONTACT_RETENTION} after our last reply. </>
+                      ? <>Your message is stored in our Google Sheet and our Microsoft 365 mailbox, used only to reply, and deleted {CONTACT_RETENTION} after our last reply. </>
                       : <>Sending opens your email app with your message ready to send to {CONTACT_EMAIL}. We use it only to reply, and delete it {CONTACT_RETENTION} after our last reply. </>}
                     You can withdraw consent or ask us to delete your message at any time by emailing {CONTACT_EMAIL}.
                     See our{' '}
@@ -269,7 +269,7 @@ const Contact = () => {
                   size="large"
                   disabled={status === 'sending'}
                   sx={{ alignSelf: 'flex-start', minWidth: 160 }}
-                  startIcon={status === 'sending' ? <CircularProgress size={18} color="inherit" /> : undefined}
+                  startIcon={status === 'sending' ? <CircularProgress aria-label="Loading" size={18} color="inherit" /> : undefined}
                 >
                   {status === 'sending' ? 'Sending…' : 'Send message'}
                 </Button>

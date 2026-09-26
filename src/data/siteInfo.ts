@@ -2,15 +2,13 @@
  * Who runs ToolZoneX and how to reach them -- the one place legal pages, the
  * contact form, the About page and the footer read these details from.
  *
- * The contact address used to be spelled two ways: /about linked
- * punit461bhardwaj@gmail.com while /contact (and the contact form's Apps Script
- * notifier) used punit461bharadwaj@gmail.com. Everything now uses the /about
- * spelling, which matches the site owner's git identity and LinkedIn handle.
- * The Apps Script copy lives outside this repo; see contact-sheet.gs.
+ * CONTACT_EMAIL is the site's dedicated mailbox (hosted on Microsoft 365, per
+ * the domain's MX record). It replaced two personal Gmail addresses that had
+ * been hard-coded in different places (/about vs /contact and contact-sheet.gs).
  *
- * Only details that were already public on the site are used here. A postal
- * address is deliberately absent: none has been published, and inventing one
- * would be worse than leaving it out.
+ * Only details the owner has published are used here. A postal address is
+ * deliberately absent: none has been published, and inventing one would be
+ * worse than leaving it out.
  */
 
 export const SITE_NAME = 'ToolZoneX';
@@ -18,7 +16,7 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolzonex.c
 
 export const OPERATOR_NAME = 'Punit Bharadwaj';
 export const OPERATOR_LOCATION = 'Bengaluru, Karnataka, India';
-export const CONTACT_EMAIL = 'punit461bhardwaj@gmail.com';
+export const CONTACT_EMAIL = 'punit@toolzonex.com';
 
 /** Governing law and the courts that hear disputes (Terms, section 17). */
 export const JURISDICTION = 'Bengaluru, Karnataka, India';

@@ -75,8 +75,9 @@ const sections: LegalSection[] = [
           The <Internal href="/contact">contact form</Internal> asks for your email address and message (both
           required), and optionally your name and a subject. It adds the time you sent it. We use this only to
           read and reply to your message. The form sends it to a Google Apps Script we control. That script saves
-          it in a Google Sheet and emails a copy to our Gmail inbox, both in our own Google account. If you email
-          us directly instead, we receive whatever your email contains.
+          it in a Google Sheet in our Google account and emails a copy to our {SITE_NAME} mailbox, which is hosted
+          on Microsoft 365. If you email us directly instead, we receive whatever your email contains, in the same
+          mailbox.
         </p>
         <p>
           The form may use Cloudflare Turnstile to block automated spam. Turnstile checks signals from your
@@ -182,7 +183,7 @@ const sections: LegalSection[] = [
           They’re deleted sooner if you ask, or if you withdraw consent, unless the law requires us to keep them.
         </li>
         <li>Data saved in your browser stays until you clear it. You control this, not us.</li>
-        <li>Google, Cloudflare and the services in the table above keep data under their own policies.</li>
+        <li>Google, Microsoft, Cloudflare and the services in the table above keep data under their own policies.</li>
       </ul>
     ),
   },
@@ -193,7 +194,8 @@ const sections: LegalSection[] = [
       <>
         <p>We don’t sell your personal data, and we don’t share contact messages with anyone for marketing. Data reaches:</p>
         <ul>
-          <li>Google, which stores contact messages for us (in Gmail and Google Sheets) and runs AdSense.</li>
+          <li>Google, which stores contact-form messages for us in Google Sheets, and runs AdSense.</li>
+          <li>Microsoft, which hosts our email (Microsoft 365).</li>
           <li>Cloudflare, our host and spam protection.</li>
           <li>The services named in <MuiLink href="#outside-services">Tools that use outside services</MuiLink>, only when you use those tools.</li>
           <li>Authorities, if the law requires it, or to protect our rights or someone’s safety.</li>
@@ -211,9 +213,9 @@ const sections: LegalSection[] = [
     title: 'Where data is processed',
     body: (
       <p>
-        We’re based in India, and our providers (Google, Cloudflare and the services listed above) run servers
+        We’re based in India, and our providers (Google, Microsoft, Cloudflare and the services listed above) run servers
         in many countries, including the United States. So your data may be processed outside your country. Where
-        the GDPR applies, Google and Cloudflare use recognised transfer safeguards, such as the European
+        the GDPR applies, Google, Microsoft and Cloudflare use recognised transfer safeguards, such as the European
         Commission’s standard contractual clauses.
       </p>
     ),
@@ -284,8 +286,8 @@ const sections: LegalSection[] = [
     title: 'Security',
     body: (
       <p>
-        The whole site uses HTTPS. Contact messages are stored only in our own Google account, and only{' '}
-        {OPERATOR_NAME} can access them. No system is perfectly secure. If a breach affects your personal data, we’ll
+        The whole site uses HTTPS. Contact messages are stored only in our own Google and Microsoft 365 accounts,
+        and only {OPERATOR_NAME} can access them. No system is perfectly secure. If a breach affects your personal data, we’ll
         tell you and the relevant authorities as the law requires.
       </p>
     ),
