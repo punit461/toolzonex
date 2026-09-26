@@ -57,7 +57,7 @@ const JsonValidatorContent = () => {
       )}
 
       {isValid === false && error && (
-        <Paper variant="outlined" sx={{ p: 2, bgcolor: '#fdecea', borderColor: 'error.main' }}>
+        <Paper variant="outlined" sx={{ p: 2, bgcolor: 'error.light', borderColor: 'error.main' }}>
           <Typography variant="subtitle2" color="error.main" fontWeight="600" gutterBottom>
             Syntax Error
           </Typography>

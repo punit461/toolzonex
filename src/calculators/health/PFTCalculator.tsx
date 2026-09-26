@@ -16,24 +16,24 @@ const RUN_SCORES: Record<string, { max: number; good: number; avg: number; label
 
 const getRunGrade = (seconds: number, event: string) => {
   const s = RUN_SCORES[event];
-  if (seconds <= s.max) return { grade: 'Outstanding', color: '#22c55e' };
-  if (seconds <= s.good) return { grade: 'Good', color: '#84cc16' };
-  if (seconds <= s.avg) return { grade: 'Average', color: '#eab308' };
-  return { grade: 'Below Standard', color: '#ef4444' };
+  if (seconds <= s.max) return { grade: 'Outstanding', color: '#15803d' };
+  if (seconds <= s.good) return { grade: 'Good', color: '#3f6212' };
+  if (seconds <= s.avg) return { grade: 'Average', color: '#a16207' };
+  return { grade: 'Below Standard', color: '#b91c1c' };
 };
 
 const getPushupGrade = (count: number) => {
-  if (count >= 40) return { grade: 'Outstanding', color: '#22c55e' };
-  if (count >= 30) return { grade: 'Good', color: '#84cc16' };
-  if (count >= 20) return { grade: 'Average', color: '#eab308' };
-  return { grade: 'Below Standard', color: '#ef4444' };
+  if (count >= 40) return { grade: 'Outstanding', color: '#15803d' };
+  if (count >= 30) return { grade: 'Good', color: '#3f6212' };
+  if (count >= 20) return { grade: 'Average', color: '#a16207' };
+  return { grade: 'Below Standard', color: '#b91c1c' };
 };
 
 const getSitupGrade = (count: number) => {
-  if (count >= 35) return { grade: 'Outstanding', color: '#22c55e' };
-  if (count >= 25) return { grade: 'Good', color: '#84cc16' };
-  if (count >= 15) return { grade: 'Average', color: '#eab308' };
-  return { grade: 'Below Standard', color: '#ef4444' };
+  if (count >= 35) return { grade: 'Outstanding', color: '#15803d' };
+  if (count >= 25) return { grade: 'Good', color: '#3f6212' };
+  if (count >= 15) return { grade: 'Average', color: '#a16207' };
+  return { grade: 'Below Standard', color: '#b91c1c' };
 };
 
 const toSeconds = (min: number, sec: number) => min * 60 + sec;
@@ -55,7 +55,7 @@ const PFTCalculator = () => {
   const grades = ['Outstanding', 'Good', 'Average', 'Below Standard'];
   const gradeOrder = [runResult.grade, pushupResult.grade, situpResult.grade];
   const overallGrade = grades.find(g => gradeOrder.includes(g)) ?? 'Below Standard';
-  const overallColor = [runResult, pushupResult, situpResult].find(r => r.grade === overallGrade)?.color ?? '#ef4444';
+  const overallColor = [runResult, pushupResult, situpResult].find(r => r.grade === overallGrade)?.color ?? '#b91c1c';
 
   const content = (
     <>

@@ -65,7 +65,7 @@ const PdfToImageContent = () => {
       <PdfFileDropzone onFilesSelected={(files) => setFile(files[0] ?? null)} label="PDF file" selectedNames={file ? [file.name] : []} />
       <FormControl fullWidth sx={{ mt: 2 }}>
         <InputLabel>Resolution</InputLabel>
-        <Select value={scale} label="Resolution" onChange={(e) => setScale(Number(e.target.value))}>
+        <Select inputProps={{ 'aria-label': 'Resolution' }} value={scale} label="Resolution" onChange={(e) => setScale(Number(e.target.value))}>
           {SCALE_OPTIONS.map((opt) => (
             <MenuItem key={opt.value} value={opt.value}>{opt.label}</MenuItem>
           ))}

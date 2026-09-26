@@ -132,7 +132,7 @@ const CollegeSavingsCalculator = () => {
           </Box>
           <FormControl fullWidth>
             <InputLabel>Estimated College Cost</InputLabel>
-            <Select label="Estimated College Cost" value={preset} onChange={(e) => setPreset(e.target.value as keyof typeof COST_PRESETS)}>
+            <Select inputProps={{ 'aria-label': 'Estimated College Cost' }} label="Estimated College Cost" value={preset} onChange={(e) => setPreset(e.target.value as keyof typeof COST_PRESETS)}>
               {Object.entries(COST_PRESETS).map(([key, item]) => (
                 <MenuItem key={key} value={key}>{item.label}</MenuItem>
               ))}

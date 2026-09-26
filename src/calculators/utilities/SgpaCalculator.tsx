@@ -108,7 +108,7 @@ const SgpaCalculator = () => {
             <Typography variant="h6">This Semester&apos;s Subjects</Typography>
             <FormControl size="small" sx={{ minWidth: 130 }}>
               <InputLabel>Scale</InputLabel>
-              <Select value={scale} label="Scale" onChange={(e) => setScale(Number(e.target.value))}>
+              <Select inputProps={{ 'aria-label': 'Scale' }} value={scale} label="Scale" onChange={(e) => setScale(Number(e.target.value))}>
                 <MenuItem value={10}>Out of 10</MenuItem>
                 <MenuItem value={4}>Out of 4</MenuItem>
               </Select>

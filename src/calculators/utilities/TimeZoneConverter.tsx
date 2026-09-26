@@ -110,7 +110,7 @@ const TimeZoneConverterContent = () => {
           <Typography variant="subtitle1" fontWeight="600" mb={2}>Target Timezone</Typography>
           <FormControl fullWidth sx={{ mb: 3 }}>
             <InputLabel>Select Timezone</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Select Timezone' }}
               value={targetZone}
               label="Select Timezone"
               onChange={(e) => setTargetZone(e.target.value as string)}

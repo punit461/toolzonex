@@ -39,7 +39,7 @@ const PipeVolumeCalculatorContent = () => {
         />
         <FormControl fullWidth>
           <InputLabel>Diameter Unit</InputLabel>
-          <Select value={diaUnit} label="Diameter Unit" onChange={(e) => setDiaUnit(e.target.value as 'in' | 'mm')}>
+          <Select inputProps={{ 'aria-label': 'Diameter Unit' }} value={diaUnit} label="Diameter Unit" onChange={(e) => setDiaUnit(e.target.value as 'in' | 'mm')}>
             <MenuItem value="in">Inches (in)</MenuItem>
             <MenuItem value="mm">Millimeters (mm)</MenuItem>
           </Select>
@@ -53,7 +53,7 @@ const PipeVolumeCalculatorContent = () => {
         />
         <FormControl fullWidth>
           <InputLabel>Length Unit</InputLabel>
-          <Select value={lenUnit} label="Length Unit" onChange={(e) => setLenUnit(e.target.value as 'ft' | 'm')}>
+          <Select inputProps={{ 'aria-label': 'Length Unit' }} value={lenUnit} label="Length Unit" onChange={(e) => setLenUnit(e.target.value as 'ft' | 'm')}>
             <MenuItem value="ft">Feet (ft)</MenuItem>
             <MenuItem value="m">Meters (m)</MenuItem>
           </Select>

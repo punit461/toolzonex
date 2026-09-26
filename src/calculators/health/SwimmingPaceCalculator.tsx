@@ -76,7 +76,7 @@ const SwimmingPaceCalculator = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Pool Length</InputLabel>
-            <Select label="Pool Length" value={poolLength} onChange={(e) => setPoolLength(e.target.value as '25m' | '50m' | '25yd')}>
+            <Select inputProps={{ 'aria-label': 'Pool Length' }} label="Pool Length" value={poolLength} onChange={(e) => setPoolLength(e.target.value as '25m' | '50m' | '25yd')}>
               <MenuItem value="25m">25m (short course)</MenuItem>
               <MenuItem value="50m">50m (long course)</MenuItem>
               <MenuItem value="25yd">25 yards</MenuItem>

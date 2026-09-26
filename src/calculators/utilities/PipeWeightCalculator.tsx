@@ -66,7 +66,7 @@ const PipeWeightCalculatorContent = () => {
         />
         <FormControl fullWidth>
           <InputLabel>Material</InputLabel>
-          <Select value={materialIdx} label="Material" onChange={(e) => setMaterialIdx(Number(e.target.value))}>
+          <Select inputProps={{ 'aria-label': 'Material' }} value={materialIdx} label="Material" onChange={(e) => setMaterialIdx(Number(e.target.value))}>
             {MATERIALS.map((m, i) => (
               <MenuItem key={i} value={i}>{m.label}</MenuItem>
             ))}

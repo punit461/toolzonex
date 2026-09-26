@@ -56,7 +56,7 @@ const HexCalculatorContent = () => {
         />
         <FormControl sx={{ minWidth: 80, mt: { xs: 0, md: 1 } }}>
           <InputLabel>Op</InputLabel>
-          <Select value={operation} label="Op" onChange={(e) => setOperation(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Op' }} value={operation} label="Op" onChange={(e) => setOperation(e.target.value)}>
             <MenuItem value="+">+</MenuItem>
             <MenuItem value="-">−</MenuItem>
             <MenuItem value="*">×</MenuItem>

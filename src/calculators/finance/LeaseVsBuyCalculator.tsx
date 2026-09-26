@@ -97,7 +97,7 @@ const LeaseVsBuyCalculator = () => {
   return (
     <CalculatorShell url="/finance/lease-vs-buy-calculator" content={content}>
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
-        <Box sx={{ bgcolor: '#f0f9ff', p: 4, borderRadius: 3, border: '1px solid #bae6fd' }}>
+        <Box sx={{ bgcolor: 'info.light', p: 4, borderRadius: 3, border: '1px solid #bae6fd' }}>
           <Typography variant="h5" sx={{ color: '#0369a1', fontWeight: 800, mb: 3 }}>Lease Details</Typography>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
             <TextField
@@ -120,7 +120,7 @@ const LeaseVsBuyCalculator = () => {
           </Box>
         </Box>
 
-        <Box sx={{ bgcolor: '#fefce8', p: 4, borderRadius: 3, border: '1px solid #fef08a' }}>
+        <Box sx={{ bgcolor: 'warning.light', p: 4, borderRadius: 3, border: '1px solid #fef08a' }}>
           <Typography variant="h5" sx={{ color: '#a16207', fontWeight: 800, mb: 3 }}>Buy Details</Typography>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
             <TextField

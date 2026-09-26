@@ -90,7 +90,7 @@ const EnhancePdfOnlineContent = () => {
 
       <FormControl fullWidth sx={{ mt: 2 }}>
         <InputLabel>Enhancement Level</InputLabel>
-        <Select value={level} label="Enhancement Level" onChange={(e) => setLevel(Number(e.target.value))}>
+        <Select inputProps={{ 'aria-label': 'Enhancement Level' }} value={level} label="Enhancement Level" onChange={(e) => setLevel(Number(e.target.value))}>
           {ENHANCE_LEVELS.map((opt) => (
             <MenuItem key={opt.value} value={opt.value}>{opt.label} — {opt.desc}</MenuItem>
           ))}

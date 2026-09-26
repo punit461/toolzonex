@@ -55,7 +55,7 @@ const SentenceCaseFixerContent = () => {
         <Box sx={{ mb: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Case Mode</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Case Mode' }}
               value={mode}
               label="Case Mode"
               onChange={(e) => setMode(e.target.value)}

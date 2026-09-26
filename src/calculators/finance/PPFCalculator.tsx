@@ -115,10 +115,9 @@ const PPFCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={Number.isNaN(timePeriod) ? '' : timePeriod}
               onChange={(e) => setTimePeriod(e.target.value === '' ? NaN : Number(e.target.value))}
-             slotProps={{ htmlInput: { 'aria-label': 'Time Period (Years)' },
+             slotProps={{ htmlInput: { 'aria-label': 'Time Period (Years)', min: 15 },
                 input: {
                   endAdornment: <InputAdornment position="end">Yr</InputAdornment>,
-                  inputProps: { min: 15 },
                 }
               }}
             />

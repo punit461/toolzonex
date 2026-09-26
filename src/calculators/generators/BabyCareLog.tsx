@@ -87,7 +87,7 @@ const BabyCareLogContent = () => {
               <TextField size="small" type="time" label="Time" InputLabelProps={{ shrink: true }} value={f.time} onChange={(e) => updateFeeding(f.id, { time: e.target.value })} sx={{ minWidth: 130 }} />
               <FormControl size="small" sx={{ minWidth: 130 }}>
                 <InputLabel>Type</InputLabel>
-                <Select label="Type" value={f.type} onChange={(e: SelectChangeEvent) => updateFeeding(f.id, { type: e.target.value })}>
+                <Select inputProps={{ 'aria-label': 'Type' }} label="Type" value={f.type} onChange={(e: SelectChangeEvent) => updateFeeding(f.id, { type: e.target.value })}>
                   {FEEDING_TYPES.map((t) => <MenuItem key={t} value={t}>{t}</MenuItem>)}
                 </Select>
               </FormControl>

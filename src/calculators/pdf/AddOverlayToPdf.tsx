@@ -92,7 +92,7 @@ const AddOverlayToPdfContent = () => {
           <TextField label="Text color" type="color" value={textColor} onChange={(e) => setTextColor(e.target.value)} sx={{ width: 120 }} InputLabelProps={{ shrink: true }} />
           <FormControl sx={{ flex: 1 }}>
             <InputLabel>Position</InputLabel>
-            <Select value={position} label="Position" onChange={(e) => setPosition(e.target.value as any)}>
+            <Select inputProps={{ 'aria-label': 'Position' }} value={position} label="Position" onChange={(e) => setPosition(e.target.value as any)}>
               <MenuItem value="top-right">Top Right</MenuItem>
               <MenuItem value="center">Center</MenuItem>
               <MenuItem value="bottom-left">Bottom Left</MenuItem>

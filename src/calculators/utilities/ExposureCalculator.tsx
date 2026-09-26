@@ -71,7 +71,7 @@ const ExposureCalculatorContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <FormControl fullWidth>
           <InputLabel>Solve For</InputLabel>
-          <Select label="Solve For" value={solveFor} onChange={(e) => setSolveFor(e.target.value as SolveFor)}>
+          <Select inputProps={{ 'aria-label': 'Solve For' }} label="Solve For" value={solveFor} onChange={(e) => setSolveFor(e.target.value as SolveFor)}>
             <MenuItem value="aperture">Aperture (f-stop)</MenuItem>
             <MenuItem value="shutter">Shutter Speed</MenuItem>
             <MenuItem value="iso">ISO</MenuItem>

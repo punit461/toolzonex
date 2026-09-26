@@ -97,7 +97,7 @@ const AcBtuCalculator = () => {
           <TextField label="Ceiling Height (ft)" type="number" fullWidth value={ceilingHeight} onChange={(e) => setCeilingHeight(e.target.value)} onFocus={(e) => e.target.select()} />
           <FormControl fullWidth size="small">
             <InputLabel>Sun Exposure</InputLabel>
-            <Select label="Sun Exposure" value={sun} onChange={(e) => setSun(e.target.value as SunExposure)}>
+            <Select inputProps={{ 'aria-label': 'Sun Exposure' }} label="Sun Exposure" value={sun} onChange={(e) => setSun(e.target.value as SunExposure)}>
               <MenuItem value="shaded">Shaded</MenuItem>
               <MenuItem value="average">Average</MenuItem>
               <MenuItem value="sunny">Sunny</MenuItem>

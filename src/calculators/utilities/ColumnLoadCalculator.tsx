@@ -114,7 +114,7 @@ const ColumnLoadCalculator = () => {
           </Box>
           <FormControl fullWidth>
             <InputLabel>Load Type</InputLabel>
-            <Select label="Load Type" value={preset} onChange={(e) => setPreset(e.target.value as keyof typeof LOAD_PRESETS)}>
+            <Select inputProps={{ 'aria-label': 'Load Type' }} label="Load Type" value={preset} onChange={(e) => setPreset(e.target.value as keyof typeof LOAD_PRESETS)}>
               {Object.entries(LOAD_PRESETS).map(([key, item]) => (
                 <MenuItem key={key} value={key}>{item.label}</MenuItem>
               ))}

@@ -86,7 +86,7 @@ const MergeTextFilesContent = () => {
       <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}>
         <FormControl sx={{ minWidth: 220 }}>
           <InputLabel>Separator Between Files</InputLabel>
-          <Select
+          <Select inputProps={{ 'aria-label': 'Separator Between Files' }}
             value={separatorMode}
             label="Separator Between Files"
             onChange={(e) => setSeparatorMode(e.target.value as SeparatorMode)}

@@ -58,7 +58,7 @@ const FakePhoneGeneratorContent = () => {
 
       <FormControl sx={{ minWidth: 240 }}>
         <InputLabel>Format</InputLabel>
-        <Select label="Format" value={format} onChange={(e) => setFormat(e.target.value as FormatKey)}>
+        <Select inputProps={{ 'aria-label': 'Format' }} label="Format" value={format} onChange={(e) => setFormat(e.target.value as FormatKey)}>
           {(Object.keys(FORMAT_LABELS) as FormatKey[]).map((key) => (
             <MenuItem key={key} value={key}>{FORMAT_LABELS[key]}</MenuItem>
           ))}

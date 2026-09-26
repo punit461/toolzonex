@@ -335,7 +335,7 @@ const LoremIpsumGeneratorContent = () => {
           />
           <FormControl fullWidth>
             <InputLabel>Type</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Type' }}
               value={type}
               label="Type"
               onChange={(e) => setType(e.target.value as 'paragraphs' | 'sentences' | 'words')}
@@ -351,7 +351,7 @@ const LoremIpsumGeneratorContent = () => {
           {type !== 'words' && (
             <FormControl fullWidth>
               <InputLabel>Length</InputLabel>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Length' }}
                 value={paragraphLength}
                 label="Length"
                 onChange={(e) => setParagraphLength(e.target.value as ParagraphLength)}
@@ -364,7 +364,7 @@ const LoremIpsumGeneratorContent = () => {
           )}
           <FormControl fullWidth>
             <InputLabel>Case</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Case' }}
               value={textCase}
               label="Case"
               onChange={(e) => setTextCase(e.target.value as TextCase)}

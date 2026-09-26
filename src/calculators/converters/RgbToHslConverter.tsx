@@ -72,7 +72,7 @@ const RgbToHslContent = () => {
         </Box>
         <Box>
           <Typography variant="subtitle2" fontWeight="bold" mb={1}>Or Pick a Color</Typography>
-          <input type="color" value={hex} onChange={handleColorPicker} style={{ width: '100%', height: 48, border: 'none', cursor: 'pointer' }} />
+          <input aria-label="Pick a color" type="color" value={hex} onChange={handleColorPicker} style={{ width: '100%', height: 48, border: 'none', cursor: 'pointer' }} />
         </Box>
       </Box>
 

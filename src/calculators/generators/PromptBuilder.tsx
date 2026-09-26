@@ -29,7 +29,7 @@ const PromptBuilderContent = () => {
         
         <FormControl fullWidth>
           <InputLabel>Role / Persona</InputLabel>
-          <Select value={role} label="Role / Persona" onChange={(e) => setRole(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Role / Persona' }} value={role} label="Role / Persona" onChange={(e) => setRole(e.target.value)}>
             <MenuItem value="Expert Programmer">Expert Programmer</MenuItem>
             <MenuItem value="Copywriter">Copywriter</MenuItem>
             <MenuItem value="Data Analyst">Data Analyst</MenuItem>
@@ -60,7 +60,7 @@ const PromptBuilderContent = () => {
 
         <FormControl fullWidth>
           <InputLabel>Output Format</InputLabel>
-          <Select value={format} label="Output Format" onChange={(e) => setFormat(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Output Format' }} value={format} label="Output Format" onChange={(e) => setFormat(e.target.value)}>
             <MenuItem value="Markdown with code blocks">Markdown with code blocks</MenuItem>
             <MenuItem value="Bullet point list">Bullet point list</MenuItem>
             <MenuItem value="Step-by-step guide">Step-by-step guide</MenuItem>
@@ -72,7 +72,7 @@ const PromptBuilderContent = () => {
 
         <FormControl fullWidth>
           <InputLabel>Tone</InputLabel>
-          <Select value={tone} label="Tone" onChange={(e) => setTone(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Tone' }} value={tone} label="Tone" onChange={(e) => setTone(e.target.value)}>
             <MenuItem value="Professional and concise">Professional & Concise</MenuItem>
             <MenuItem value="Friendly and conversational">Friendly & Conversational</MenuItem>
             <MenuItem value="Humorous and witty">Humorous & Witty</MenuItem>

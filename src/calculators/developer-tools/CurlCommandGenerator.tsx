@@ -58,7 +58,7 @@ const CurlCommandGeneratorContent = () => {
         <Stack direction="row" spacing={2}>
           <FormControl sx={{ minWidth: 130 }}>
             <InputLabel>Method</InputLabel>
-            <Select value={method} label="Method" onChange={(e) => setMethod(e.target.value as Method)}>
+            <Select inputProps={{ 'aria-label': 'Method' }} value={method} label="Method" onChange={(e) => setMethod(e.target.value as Method)}>
               {(['GET', 'POST', 'PUT', 'DELETE', 'PATCH'] as Method[]).map((m) => (
                 <MenuItem key={m} value={m}>{m}</MenuItem>
               ))}

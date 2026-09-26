@@ -74,7 +74,7 @@ const IdealSleepDurationCalculator = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Age Group</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Age Group' }}
               value={groupIndex}
               label="Age Group"
               onChange={(e: SelectChangeEvent<number>) => setGroupIndex(Number(e.target.value))}

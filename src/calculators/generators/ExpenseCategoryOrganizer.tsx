@@ -81,7 +81,7 @@ const ExpenseCategoryOrganizerContent = () => {
                 <TextField size="small" fullWidth label="Amount" type="number" value={e.amount} onChange={(ev) => updateExpense(e.id, { amount: ev.target.value })} />
                 <FormControl size="small" fullWidth>
                   <InputLabel>Category</InputLabel>
-                  <Select
+                  <Select inputProps={{ 'aria-label': 'Category' }}
                     label="Category"
                     value={e.category}
                     onChange={(ev: SelectChangeEvent) => updateExpense(e.id, { category: ev.target.value as Category })}

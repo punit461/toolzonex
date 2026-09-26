@@ -94,7 +94,7 @@ const PaceCalculator = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Mode</InputLabel>
-            <Select label="Mode" value={mode} onChange={(e) => setMode(e.target.value as any)}>
+            <Select inputProps={{ 'aria-label': 'Mode' }} label="Mode" value={mode} onChange={(e) => setMode(e.target.value as any)}>
               <MenuItem value="time-to-pace">Time → Pace</MenuItem>
               <MenuItem value="pace-to-time">Pace → Time</MenuItem>
             </Select>
@@ -102,7 +102,7 @@ const PaceCalculator = () => {
 
           <FormControl fullWidth>
             <InputLabel>Unit</InputLabel>
-            <Select label="Unit" value={unit} onChange={(e) => setUnit(e.target.value as 'km' | 'mi')}>
+            <Select inputProps={{ 'aria-label': 'Unit' }} label="Unit" value={unit} onChange={(e) => setUnit(e.target.value as 'km' | 'mi')}>
               <MenuItem value="km">Kilometers</MenuItem>
               <MenuItem value="mi">Miles</MenuItem>
             </Select>

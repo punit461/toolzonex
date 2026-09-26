@@ -87,7 +87,7 @@ const ColorContrastChecker = () => {
                   input: {
                     startAdornment: (
                       <InputAdornment position="start">
-                        <input
+                        <input aria-label="Pick foreground color"
                           type="color"
                           value={fgNormal}
                           onChange={(e) => setFgInput(e.target.value)}
@@ -113,7 +113,7 @@ const ColorContrastChecker = () => {
                   input: {
                     startAdornment: (
                       <InputAdornment position="start">
-                        <input
+                        <input aria-label="Pick background color"
                           type="color"
                           value={bgNormal}
                           onChange={(e) => setBgInput(e.target.value)}

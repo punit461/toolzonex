@@ -66,7 +66,7 @@ const FaviconHtmlGeneratorContent = () => {
             <Stack direction="row" alignItems="center" spacing={1}>
               <FormControlLabel control={<Checkbox checked={options.themeColor} onChange={() => toggle('themeColor')} />} label="Theme Color meta tag" />
               {options.themeColor && (
-                <input type="color" value={color} onChange={(e) => setColor(e.target.value)} style={{ width: 36, height: 28, border: 'none', background: 'none' }} />
+                <input aria-label="Theme color" type="color" value={color} onChange={(e) => setColor(e.target.value)} style={{ width: 36, height: 28, border: 'none', background: 'none' }} />
               )}
             </Stack>
           </Grid>

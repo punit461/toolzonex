@@ -125,7 +125,7 @@ const BannerSizeCalculator = () => {
           </Box>
           <FormControl fullWidth>
             <InputLabel>Size Unit</InputLabel>
-            <Select label="Size Unit" value={unit} onChange={(e) => setUnit(e.target.value as SizeUnit)}>
+            <Select inputProps={{ 'aria-label': 'Size Unit' }} label="Size Unit" value={unit} onChange={(e) => setUnit(e.target.value as SizeUnit)}>
               <MenuItem value="ft">Feet</MenuItem>
               <MenuItem value="in">Inches</MenuItem>
               <MenuItem value="m">Meters</MenuItem>
@@ -134,7 +134,7 @@ const BannerSizeCalculator = () => {
           </FormControl>
           <FormControl fullWidth>
             <InputLabel>Print Resolution (DPI)</InputLabel>
-            <Select label="Print Resolution (DPI)" value={dpi} onChange={(e) => setDpi(Number(e.target.value))}>
+            <Select inputProps={{ 'aria-label': 'Print Resolution (DPI)' }} label="Print Resolution (DPI)" value={dpi} onChange={(e) => setDpi(Number(e.target.value))}>
               {DPI_PRESETS.map((d) => (
                 <MenuItem key={d} value={d}>{d} DPI</MenuItem>
               ))}

@@ -77,7 +77,7 @@ const ProteinIntakeCalculator = () => {
           />
           <FormControl fullWidth>
             <InputLabel>Activity Level</InputLabel>
-            <Select label="Activity Level" value={activity} onChange={(e) => setActivity(e.target.value as any)}>
+            <Select inputProps={{ 'aria-label': 'Activity Level' }} label="Activity Level" value={activity} onChange={(e) => setActivity(e.target.value as any)}>
               <MenuItem value="sedentary">Sedentary (0.8 g/kg)</MenuItem>
               <MenuItem value="moderate">Moderate (1.2 g/kg)</MenuItem>
               <MenuItem value="active">Active (1.6 g/kg)</MenuItem>
@@ -86,7 +86,7 @@ const ProteinIntakeCalculator = () => {
           </FormControl>
           <FormControl fullWidth>
             <InputLabel>Goal</InputLabel>
-            <Select label="Goal" value={goal} onChange={(e) => setGoal(e.target.value as any)}>
+            <Select inputProps={{ 'aria-label': 'Goal' }} label="Goal" value={goal} onChange={(e) => setGoal(e.target.value as any)}>
               <MenuItem value="maintain">Maintain</MenuItem>
               <MenuItem value="lose">Lose Fat</MenuItem>
               <MenuItem value="gain">Gain Muscle</MenuItem>

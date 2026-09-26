@@ -65,7 +65,7 @@ const ContrastColorFinderContent = () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap' }}>
-        <Box
+        <Box aria-label="Background color"
           component="input"
           type="color"
           value={bgHex || '#1976d2'}

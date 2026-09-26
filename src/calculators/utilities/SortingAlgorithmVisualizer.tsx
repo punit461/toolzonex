@@ -151,7 +151,7 @@ const SortingAlgorithmVisualizerContent = () => {
       <Paper variant="outlined" sx={{ p: 3, bgcolor: 'action.hover', display: 'flex', gap: 3, flexWrap: 'wrap', alignItems: 'center' }}>
         <FormControl size="small" sx={{ minWidth: 200 }}>
           <InputLabel>Algorithm</InputLabel>
-          <Select 
+          <Select inputProps={{ 'aria-label': 'Algorithm' }} 
             value={algorithm} 
             label="Algorithm" 
             onChange={(e) => setAlgorithm(e.target.value)}

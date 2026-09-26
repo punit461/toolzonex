@@ -167,7 +167,7 @@ const GPUCostCalculator = () => {
               value={quantity}
               onFocus={(e) => e.target.select()}
               onChange={(e) => setQuantity(e.target.value === '' ? 0 : Number(e.target.value))}
-              slotProps={{ htmlInput: { 'aria-label': 'Number of GPUs' }, input: { inputProps: { min: 1 } } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Number of GPUs', min: 1 } }}
             />
           </Box>
 

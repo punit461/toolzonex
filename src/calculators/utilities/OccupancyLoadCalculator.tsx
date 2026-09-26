@@ -80,7 +80,7 @@ const OccupancyLoadCalculator = () => {
           />
           <FormControl fullWidth>
             <InputLabel>Occupancy Type</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Occupancy Type' }}
               value={typeIndex}
               label="Occupancy Type"
               onChange={(e: SelectChangeEvent<number>) => setTypeIndex(Number(e.target.value))}

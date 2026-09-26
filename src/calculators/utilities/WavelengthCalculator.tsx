@@ -105,7 +105,7 @@ const WavelengthCalculator = () => {
               <TextField label="Frequency" type="number" value={frequency} onChange={(e) => setFrequency(e.target.value)} onFocus={(e) => e.target.select()} />
               <FormControl>
                 <InputLabel>Unit</InputLabel>
-                <Select value={freqUnit} label="Unit" onChange={(e) => setFreqUnit(e.target.value)}>
+                <Select inputProps={{ 'aria-label': 'Unit' }} value={freqUnit} label="Unit" onChange={(e) => setFreqUnit(e.target.value)}>
                   <MenuItem value="hz">Hz</MenuItem>
                   <MenuItem value="khz">kHz</MenuItem>
                   <MenuItem value="mhz">MHz</MenuItem>

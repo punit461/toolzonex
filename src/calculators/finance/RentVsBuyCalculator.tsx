@@ -128,7 +128,7 @@ const RentVsBuyCalculator = () => {
     >
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
         {/* Rent Section */}
-        <Box sx={{ bgcolor: '#f0f9ff', p: 4, borderRadius: 3, border: '1px solid #bae6fd', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+        <Box sx={{ bgcolor: 'info.light', p: 4, borderRadius: 3, border: '1px solid #bae6fd', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
             <Typography variant="h5" sx={{ color: '#0369a1', fontWeight: 800 }}>Rent Details</Typography>
             <Select inputProps={{ 'aria-label': 'Currency' }}
@@ -169,7 +169,7 @@ const RentVsBuyCalculator = () => {
         </Box>
 
         {/* Buy Section */}
-        <Box sx={{ bgcolor: '#fefce8', p: 4, borderRadius: 3, border: '1px solid #fef08a', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+        <Box sx={{ bgcolor: 'warning.light', p: 4, borderRadius: 3, border: '1px solid #fef08a', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
           <Typography variant="h5" sx={{ mb: 3, color: '#a16207', fontWeight: 800 }}>Buy Details</Typography>
           <Box sx={{ mb: 4 }}>
             <Typography gutterBottom fontWeight={600} color="text.secondary">Property Value</Typography>

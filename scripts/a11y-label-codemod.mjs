@@ -82,9 +82,13 @@ function staticText(node) {
 
 /** True when the element (or its attributes) already provide an accessible name. */
 function hasName(el, src) {
+  const isSelect = tagName(el) === 'Select';
   for (const a of el.openingElement.attributes) {
     if (a.type !== 'JSXAttribute') return true; // spread props: can't tell -- leave alone
     const n = a.name.name;
+    // <Select label="..."> only sizes the outline's notch; without labelId the
+    // visible <InputLabel> isn't attached, so the combobox has no name.
+    if (n === 'label' && isSelect) continue;
     if (['label', 'aria-label', 'aria-labelledby', 'labelId', 'title'].includes(n)) return true;
     if (['inputProps', 'slotProps', 'SelectProps'].includes(n) && /aria-label|aria-labelledby/.test(src.slice(a.start, a.end))) return true;
     if (n === 'getAriaLabel') return true;
@@ -219,6 +223,12 @@ function proposeControlLabel(elPath, src, rel) {
   const override = OVERRIDES[`${rel}:${el.loc.start.line}`];
   if (override) return { ...override, how: 'override' };
   const valueId = valueIdentifier(el);
+  if (t === 'Select') {
+    // The label prop duplicates the visible InputLabel text: reuse it.
+    const lp = attr(el, 'label');
+    if (lp?.value?.type === 'StringLiteral' && lp.value.value.trim()) return { label: lp.value.value.trim(), how: 'label-prop' };
+    if (lp?.value?.type === 'JSXExpressionContainer') return { expr: src.slice(lp.value.expression.start, lp.value.expression.end), how: 'label-prop' };
+  }
   if (t === 'Select' || (t === 'TextField' && attr(el, 'select'))) {
     if (valueId && /currency/i.test(valueId)) return { label: 'Currency', how: 'value' };
     // Inside a FormControl with an InputLabel: use that text.
@@ -329,6 +339,15 @@ function edits(el, name) {
     if (sp) {
       const obj = sp.value?.expression;
       if (obj?.type !== 'ObjectExpression') return null;
+      // slotProps.input.inputProps overrides the htmlInput slot, so a label put
+      // in htmlInput would be silently dropped: add it where it will survive.
+      const inp = obj.properties.find((p) => p.type === 'ObjectProperty' && p.key.name === 'input');
+      const nested = inp?.value.type === 'ObjectExpression'
+        && inp.value.properties.find((p) => p.type === 'ObjectProperty' && p.key.name === 'inputProps');
+      if (nested) {
+        if (nested.value.type !== 'ObjectExpression') return null;
+        return [[nested.value.start + 1, ` 'aria-label': ${jsVal},`]];
+      }
       const hi = obj.properties.find((p) => p.type === 'ObjectProperty' && (p.key.name === 'htmlInput' || p.key.value === 'htmlInput'));
       if (hi) {
         if (hi.value.type !== 'ObjectExpression') return null;

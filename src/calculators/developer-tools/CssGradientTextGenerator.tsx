@@ -22,11 +22,11 @@ const CssGradientTextGeneratorContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box sx={{ display: 'flex', gap: 3 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <input type="color" value={color1} onChange={(e) => setColor1(e.target.value)} style={{ width: 36, height: 36, border: 'none', cursor: 'pointer' }} />
+            <input aria-label="Gradient start color" type="color" value={color1} onChange={(e) => setColor1(e.target.value)} style={{ width: 36, height: 36, border: 'none', cursor: 'pointer' }} />
             <Typography variant="body2" fontFamily="monospace">{color1}</Typography>
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <input type="color" value={color2} onChange={(e) => setColor2(e.target.value)} style={{ width: 36, height: 36, border: 'none', cursor: 'pointer' }} />
+            <input aria-label="Gradient end color" type="color" value={color2} onChange={(e) => setColor2(e.target.value)} style={{ width: 36, height: 36, border: 'none', cursor: 'pointer' }} />
             <Typography variant="body2" fontFamily="monospace">{color2}</Typography>
           </Box>
         </Box>

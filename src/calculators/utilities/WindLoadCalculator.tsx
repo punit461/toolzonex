@@ -114,7 +114,7 @@ const WindLoadCalculator = () => {
 
         <FormControl fullWidth>
           <InputLabel>Surface Shape / Drag Coefficient</InputLabel>
-          <Select value={shape} label="Surface Shape / Drag Coefficient" onChange={(e) => setShape(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Surface Shape / Drag Coefficient' }} value={shape} label="Surface Shape / Drag Coefficient" onChange={(e) => setShape(e.target.value)}>
             {Object.entries(SHAPE_PRESETS).map(([key, s]) => (
               <MenuItem key={key} value={key}>{s.label}</MenuItem>
             ))}

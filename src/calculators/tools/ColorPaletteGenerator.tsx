@@ -50,12 +50,13 @@ const ColorPaletteGeneratorContent = () => {
               }
             }}
           >
-            <Tooltip title="Copy HEX" arrow placement="top">
+            <Tooltip title="Copy HEX" arrow placement="top" describeChild>
               <Button 
                 onClick={() => handleCopy(color, index)}
                 sx={{ 
                   color: 'white', 
-                  bgcolor: 'rgba(0,0,0,0.3)', 
+                  // 60% black keeps white text >=5.7:1 even over a white swatch.
+                  bgcolor: 'rgba(0,0,0,0.6)', 
                   px: 2, 
                   py: 1, 
                   borderRadius: 2,
@@ -63,7 +64,7 @@ const ColorPaletteGeneratorContent = () => {
                   textTransform: 'none',
                   fontSize: { xs: '0.9rem', md: '1.1rem' },
                   fontWeight: 'bold',
-                  '&:hover': { bgcolor: 'rgba(0,0,0,0.5)' }
+                  '&:hover': { bgcolor: 'rgba(0,0,0,0.7)' }
                 }}
                 endIcon={copiedIndex === index ? undefined : <ContentCopyIcon fontSize="small" />}
               >

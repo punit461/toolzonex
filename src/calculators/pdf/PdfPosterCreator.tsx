@@ -72,7 +72,7 @@ const PdfPosterCreatorContent = () => {
       <PdfFileDropzone onFilesSelected={(files) => setFile(files[0] ?? null)} label="PDF file" selectedNames={file ? [file.name] : []} />
       <FormControl fullWidth sx={{ mt: 3 }}>
         <InputLabel>Grid Size</InputLabel>
-        <Select value={grid} label="Grid Size" onChange={(e) => setGrid(e.target.value)}>
+        <Select inputProps={{ 'aria-label': 'Grid Size' }} value={grid} label="Grid Size" onChange={(e) => setGrid(e.target.value)}>
           {GRID_OPTIONS.map((o) => <MenuItem key={o.value} value={o.value}>{o.label}</MenuItem>)}
         </Select>
       </FormControl>

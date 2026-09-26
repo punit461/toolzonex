@@ -54,7 +54,7 @@ const DocumentChecklistGeneratorContent = () => {
       <Box>
         <FormControl size="small" sx={{ minWidth: 220, mb: 2 }}>
           <InputLabel>Context</InputLabel>
-          <Select label="Context" value={context} onChange={handleContextChange}>
+          <Select inputProps={{ 'aria-label': 'Context' }} label="Context" value={context} onChange={handleContextChange}>
             {CONTEXTS.map((ctx) => (
               <MenuItem key={ctx} value={ctx}>{ctx}</MenuItem>
             ))}

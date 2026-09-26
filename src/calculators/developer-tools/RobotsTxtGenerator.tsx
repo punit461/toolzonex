@@ -98,7 +98,7 @@ const RobotsTxtGeneratorContent = () => {
           <Box key={idx} sx={{ display: 'flex', gap: 1, mb: 1, alignItems: 'center' }}>
             <FormControl size="small" sx={{ minWidth: 120 }}>
               <InputLabel>Type</InputLabel>
-              <Select
+              <Select inputProps={{ 'aria-label': 'Type' }}
                 value={rule.type}
                 label="Type"
                 onChange={(e) => updateRule(idx, 'type', e.target.value)}

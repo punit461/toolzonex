@@ -58,7 +58,7 @@ const CookingTimeCalculatorContent = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Food</InputLabel>
-            <Select label="Food" value={foodId} onChange={(e) => setFoodId(e.target.value)}>
+            <Select inputProps={{ 'aria-label': 'Food' }} label="Food" value={foodId} onChange={(e) => setFoodId(e.target.value)}>
               {FOOD_GUIDE.map((f) => (
                 <MenuItem key={f.id} value={f.id}>{f.label}</MenuItem>
               ))}

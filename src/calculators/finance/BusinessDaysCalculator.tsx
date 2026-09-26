@@ -89,7 +89,7 @@ const BusinessDaysCalculator = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Mode</InputLabel>
-            <Select label="Mode" value={mode} onChange={(e) => setMode(e.target.value as any)}>
+            <Select inputProps={{ 'aria-label': 'Mode' }} label="Mode" value={mode} onChange={(e) => setMode(e.target.value as any)}>
               <MenuItem value="days-to-date">Business Days → Date</MenuItem>
               <MenuItem value="date-to-days">Date Range → Business Days</MenuItem>
             </Select>

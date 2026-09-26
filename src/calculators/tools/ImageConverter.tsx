@@ -116,7 +116,7 @@ const ImageConverterContent = () => {
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <FormControl fullWidth sx={{ mb: 2 }}>
           <InputLabel>Output Format</InputLabel>
-          <Select
+          <Select inputProps={{ 'aria-label': 'Output Format' }}
             value={outputFormat}
             label="Output Format"
             onChange={(e) => setOutputFormat(e.target.value)}

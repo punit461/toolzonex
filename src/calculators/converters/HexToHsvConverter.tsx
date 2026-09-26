@@ -56,7 +56,7 @@ const HexToHsvContent = () => {
           error={!rgb}
           helperText={!rgb ? 'Enter a valid 6-digit hex code, like #2196F3' : ' '}
         />
-        <input
+        <input aria-label="Pick a color"
           type="color"
           value={rgb ? hex.startsWith('#') ? hex : `#${hex}` : '#2196F3'}
           onChange={(e) => setHex(e.target.value)}

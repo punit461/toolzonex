@@ -97,7 +97,7 @@ const CapacitanceCalculator = () => {
           <TextField label="Distance Between Plates (mm)" type="number" fullWidth value={distance} onChange={(e) => setDistance(e.target.value)} onFocus={(e) => e.target.select()} />
           <FormControl fullWidth size="small">
             <InputLabel>Dielectric Material</InputLabel>
-            <Select label="Dielectric Material" value={dielectric} onChange={(e) => handleDielectricChange(e.target.value)}>
+            <Select inputProps={{ 'aria-label': 'Dielectric Material' }} label="Dielectric Material" value={dielectric} onChange={(e) => handleDielectricChange(e.target.value)}>
               {Object.entries(DIELECTRIC_PRESETS).map(([key, p]) => (
                 <MenuItem key={key} value={key}>{p.label}</MenuItem>
               ))}

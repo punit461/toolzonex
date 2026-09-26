@@ -54,7 +54,7 @@ const RandomLetterGeneratorContent = () => {
         />
         <FormControl fullWidth>
           <InputLabel>Case</InputLabel>
-          <Select value={caseOption} label="Case" onChange={(e) => setCaseOption(e.target.value as CaseOption)}>
+          <Select inputProps={{ 'aria-label': 'Case' }} value={caseOption} label="Case" onChange={(e) => setCaseOption(e.target.value as CaseOption)}>
             <MenuItem value="upper">Uppercase (A-Z)</MenuItem>
             <MenuItem value="lower">Lowercase (a-z)</MenuItem>
             <MenuItem value="mixed">Mixed (A-Z + a-z)</MenuItem>

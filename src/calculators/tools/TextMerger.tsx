@@ -92,7 +92,7 @@ const TextMergerContent = () => {
         
         <FormControl size="small" sx={{ minWidth: 150 }}>
           <InputLabel>Order</InputLabel>
-          <Select value={order} label="Order" onChange={(e) => setOrder(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Order' }} value={order} label="Order" onChange={(e) => setOrder(e.target.value)}>
             <MenuItem value="1-2">List 1 then List 2</MenuItem>
             <MenuItem value="2-1">List 2 then List 1</MenuItem>
           </Select>
@@ -100,7 +100,7 @@ const TextMergerContent = () => {
 
         <FormControl size="small" sx={{ minWidth: 150 }}>
           <InputLabel>Separator</InputLabel>
-          <Select value={separator} label="Separator" onChange={(e) => setSeparator(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Separator' }} value={separator} label="Separator" onChange={(e) => setSeparator(e.target.value)}>
             <MenuItem value="space">Space</MenuItem>
             <MenuItem value="comma">Comma (,)</MenuItem>
             <MenuItem value="dash">Dash (-)</MenuItem>

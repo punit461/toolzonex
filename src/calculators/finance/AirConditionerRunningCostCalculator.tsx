@@ -111,7 +111,7 @@ const AirConditionerRunningCostCalculator = () => {
             <>
               <FormControl fullWidth>
                 <InputLabel>AC Capacity</InputLabel>
-                <Select
+                <Select inputProps={{ 'aria-label': 'AC Capacity' }}
                   value={tonnage}
                   label="AC Capacity"
                   onChange={(e) => {

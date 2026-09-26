@@ -124,12 +124,12 @@ function ResultPanel({ r, label, tds }: { r: Result; label: string; tds: number 
           {r.deductions > 0 && <Row label="Chapter VI-A Deductions" value={`− ${fmt(r.deductions)}`} />}
           <Row label="Taxable Income" value={fmt(r.taxableIncome)} bold />
           <Row label="Slab Tax" value={fmt(r.rawTax)} />
-          {r.rebate > 0 && <Row label="Rebate u/s 87A" value={`− ${fmt(r.rebate)}`} color="#22c55e" />}
+          {r.rebate > 0 && <Row label="Rebate u/s 87A" value={`− ${fmt(r.rebate)}`} color="success.main" />}
           {r.surcharge > 0 && <Row label="Surcharge" value={fmt(r.surcharge)} />}
           <Row label="Health & Education Cess (4%)" value={fmt(r.cess)} />
           <Row label="Total Tax Liability" value={fmt(r.totalTax)} bold />
-          {tds > 0 && <Row label="TDS Already Deducted" value={`− ${fmt(tds)}`} color="#22c55e" />}
-          <Row label={r.netPayable > 0 ? 'Tax Payable' : 'Refund'} value={fmt(Math.abs(r.totalTax - tds))} bold color={r.netPayable > 0 ? '#ef4444' : '#22c55e'} />
+          {tds > 0 && <Row label="TDS Already Deducted" value={`− ${fmt(tds)}`} color="success.main" />}
+          <Row label={r.netPayable > 0 ? 'Tax Payable' : 'Refund'} value={fmt(Math.abs(r.totalTax - tds))} bold color={r.netPayable > 0 ? 'error.main' : 'success.main'} />
         </TableBody>
       </Table>
     </Box>
@@ -326,7 +326,7 @@ const IncomeTaxCalculator = () => {
           </Box>
 
           {regime === 'compare' && (
-            <Box sx={{ mt: 3, p: 3, bgcolor: '#F0FDF4', borderRadius: 2, border: '1px solid #BBF7D0' }}>
+            <Box sx={{ mt: 3, p: 3, bgcolor: 'success.light', borderRadius: 2, border: '1px solid', borderColor: 'success.main' }}>
               <Typography sx={{ fontWeight: 700 }} gutterBottom>Regime Recommendation</Typography>
               <Typography variant="body2" color="text.secondary">
                 {saving > 0

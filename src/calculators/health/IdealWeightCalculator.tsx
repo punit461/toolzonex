@@ -80,7 +80,7 @@ const IdealWeightCalculator = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Gender</InputLabel>
-            <Select label="Gender" value={gender} onChange={(e) => setGender(e.target.value as 'male' | 'female')}>
+            <Select inputProps={{ 'aria-label': 'Gender' }} label="Gender" value={gender} onChange={(e) => setGender(e.target.value as 'male' | 'female')}>
               <MenuItem value="male">Male</MenuItem>
               <MenuItem value="female">Female</MenuItem>
             </Select>
@@ -88,7 +88,7 @@ const IdealWeightCalculator = () => {
 
           <FormControl fullWidth>
             <InputLabel>Height Unit</InputLabel>
-            <Select label="Height Unit" value={unit} onChange={(e) => setUnit(e.target.value as 'cm' | 'ft')}>
+            <Select inputProps={{ 'aria-label': 'Height Unit' }} label="Height Unit" value={unit} onChange={(e) => setUnit(e.target.value as 'cm' | 'ft')}>
               <MenuItem value="cm">Centimeters (cm)</MenuItem>
               <MenuItem value="ft">Feet & Inches</MenuItem>
             </Select>

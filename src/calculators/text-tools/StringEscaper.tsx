@@ -86,7 +86,7 @@ const StringEscaperContent = () => {
         <Box sx={{ mb: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Processing Mode</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Processing Mode' }}
               value={mode}
               label="Processing Mode"
               onChange={(e) => setMode(e.target.value)}

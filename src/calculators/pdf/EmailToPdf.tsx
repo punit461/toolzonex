@@ -73,7 +73,7 @@ const EmailToPdfContent = () => {
         </Stack>
         <FormControl fullWidth>
           <InputLabel>Content Format</InputLabel>
-          <Select value={format} label="Content Format" onChange={(e) => setFormat(e.target.value as 'html' | 'text')}>
+          <Select inputProps={{ 'aria-label': 'Content Format' }} value={format} label="Content Format" onChange={(e) => setFormat(e.target.value as 'html' | 'text')}>
             <MenuItem value="html">HTML</MenuItem>
             <MenuItem value="text">Plain Text</MenuItem>
           </Select>

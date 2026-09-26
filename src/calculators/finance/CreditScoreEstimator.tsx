@@ -140,31 +140,31 @@ const CreditScoreEstimator = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Payment History</InputLabel>
-            <Select label="Payment History" value={payment} onChange={(e) => setPayment(e.target.value as Level)}>
+            <Select inputProps={{ 'aria-label': 'Payment History' }} label="Payment History" value={payment} onChange={(e) => setPayment(e.target.value as Level)}>
               {PAYMENT_OPTIONS.map((o) => <MenuItem key={o.value} value={o.value}>{o.label}</MenuItem>)}
             </Select>
           </FormControl>
           <FormControl fullWidth>
             <InputLabel>Credit Utilization</InputLabel>
-            <Select label="Credit Utilization" value={utilization} onChange={(e) => setUtilization(e.target.value as Level)}>
+            <Select inputProps={{ 'aria-label': 'Credit Utilization' }} label="Credit Utilization" value={utilization} onChange={(e) => setUtilization(e.target.value as Level)}>
               {UTILIZATION_OPTIONS.map((o) => <MenuItem key={o.value} value={o.value}>{o.label}</MenuItem>)}
             </Select>
           </FormControl>
           <FormControl fullWidth>
             <InputLabel>Length of Credit History</InputLabel>
-            <Select label="Length of Credit History" value={history} onChange={(e) => setHistory(e.target.value as Level)}>
+            <Select inputProps={{ 'aria-label': 'Length of Credit History' }} label="Length of Credit History" value={history} onChange={(e) => setHistory(e.target.value as Level)}>
               {HISTORY_OPTIONS.map((o) => <MenuItem key={o.value} value={o.value}>{o.label}</MenuItem>)}
             </Select>
           </FormControl>
           <FormControl fullWidth>
             <InputLabel>Credit Mix</InputLabel>
-            <Select label="Credit Mix" value={mix} onChange={(e) => setMix(e.target.value as Level)}>
+            <Select inputProps={{ 'aria-label': 'Credit Mix' }} label="Credit Mix" value={mix} onChange={(e) => setMix(e.target.value as Level)}>
               {MIX_OPTIONS.map((o) => <MenuItem key={o.value} value={o.value}>{o.label}</MenuItem>)}
             </Select>
           </FormControl>
           <FormControl fullWidth>
             <InputLabel>New Credit / Recent Inquiries</InputLabel>
-            <Select label="New Credit / Recent Inquiries" value={inquiries} onChange={(e) => setInquiries(e.target.value as Level)}>
+            <Select inputProps={{ 'aria-label': 'New Credit / Recent Inquiries' }} label="New Credit / Recent Inquiries" value={inquiries} onChange={(e) => setInquiries(e.target.value as Level)}>
               {INQUIRY_OPTIONS.map((o) => <MenuItem key={o.value} value={o.value}>{o.label}</MenuItem>)}
             </Select>
           </FormControl>

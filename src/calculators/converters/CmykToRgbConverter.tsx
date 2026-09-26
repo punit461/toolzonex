@@ -29,7 +29,7 @@ const CmykToRgbContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Box>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-            <Typography variant="subtitle2" sx={{ color: '#00AEEF' }} fontWeight="bold">Cyan (C)</Typography>
+            <Typography variant="subtitle2" sx={{ color: 'text.primary', borderLeft: '4px solid #00AEEF', pl: 1 }} fontWeight="bold">Cyan (C)</Typography>
             <Typography variant="subtitle2">{c}%</Typography>
           </Box>
           <Slider aria-label="Cyan (C)" value={c} min={0} max={100} onChange={(e, val) => setC(val as number)} />
@@ -37,7 +37,7 @@ const CmykToRgbContent = () => {
 
         <Box>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-            <Typography variant="subtitle2" sx={{ color: '#EC008C' }} fontWeight="bold">Magenta (M)</Typography>
+            <Typography variant="subtitle2" sx={{ color: 'text.primary', borderLeft: '4px solid #EC008C', pl: 1 }} fontWeight="bold">Magenta (M)</Typography>
             <Typography variant="subtitle2">{m}%</Typography>
           </Box>
           <Slider aria-label="Magenta (M)" value={m} min={0} max={100} onChange={(e, val) => setM(val as number)} />
@@ -45,7 +45,7 @@ const CmykToRgbContent = () => {
 
         <Box>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-            <Typography variant="subtitle2" sx={{ color: '#FFF200' }} fontWeight="bold">Yellow (Y)</Typography>
+            <Typography variant="subtitle2" sx={{ color: 'text.primary', borderLeft: '4px solid #FFF200', pl: 1 }} fontWeight="bold">Yellow (Y)</Typography>
             <Typography variant="subtitle2">{y}%</Typography>
           </Box>
           <Slider aria-label="Yellow (Y)" value={y} min={0} max={100} onChange={(e, val) => setY(val as number)} />

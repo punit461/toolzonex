@@ -100,7 +100,7 @@ const TorqueCalculator = () => {
             <TextField label="Force" type="number" value={force} onChange={(e) => setForce(e.target.value)} onFocus={(e) => e.target.select()} />
             <FormControl>
               <InputLabel>Unit</InputLabel>
-              <Select value={forceUnit} label="Unit" onChange={(e) => setForceUnit(e.target.value)}>
+              <Select inputProps={{ 'aria-label': 'Unit' }} value={forceUnit} label="Unit" onChange={(e) => setForceUnit(e.target.value)}>
                 {Object.entries(FORCE_UNITS).map(([key, def]) => (
                   <MenuItem key={key} value={key}>{def.label}</MenuItem>
                 ))}
@@ -111,7 +111,7 @@ const TorqueCalculator = () => {
             <TextField label="Lever Arm Distance" type="number" value={distance} onChange={(e) => setDistance(e.target.value)} onFocus={(e) => e.target.select()} />
             <FormControl>
               <InputLabel>Unit</InputLabel>
-              <Select value={distanceUnit} label="Unit" onChange={(e) => setDistanceUnit(e.target.value)}>
+              <Select inputProps={{ 'aria-label': 'Unit' }} value={distanceUnit} label="Unit" onChange={(e) => setDistanceUnit(e.target.value)}>
                 {Object.entries(DISTANCE_UNITS).map(([key, def]) => (
                   <MenuItem key={key} value={key}>{def.label}</MenuItem>
                 ))}

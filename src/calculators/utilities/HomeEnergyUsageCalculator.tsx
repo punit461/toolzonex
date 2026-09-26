@@ -91,7 +91,7 @@ const HomeEnergyUsageCalculator = () => {
           />
           <FormControl fullWidth>
             <InputLabel>Usage Intensity</InputLabel>
-            <Select label="Usage Intensity" value={intensity} onChange={(e) => setIntensity(e.target.value as Intensity)}>
+            <Select inputProps={{ 'aria-label': 'Usage Intensity' }} label="Usage Intensity" value={intensity} onChange={(e) => setIntensity(e.target.value as Intensity)}>
               <MenuItem value="low">{LABELS.low}</MenuItem>
               <MenuItem value="medium">{LABELS.medium}</MenuItem>
               <MenuItem value="high">{LABELS.high}</MenuItem>

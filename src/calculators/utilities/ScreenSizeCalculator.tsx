@@ -106,7 +106,7 @@ const ScreenSizeCalculator = () => {
             />
             <FormControl fullWidth>
               <InputLabel>Aspect Ratio</InputLabel>
-              <Select value={ratio} label="Aspect Ratio" onChange={(e) => setRatio(e.target.value)}>
+              <Select inputProps={{ 'aria-label': 'Aspect Ratio' }} value={ratio} label="Aspect Ratio" onChange={(e) => setRatio(e.target.value)}>
                 {Object.keys(ASPECT_RATIOS).filter(k => k !== 'custom').map((r) => (
                   <MenuItem key={r} value={r}>{r}</MenuItem>
                 ))}

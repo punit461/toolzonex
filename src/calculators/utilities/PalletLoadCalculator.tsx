@@ -110,7 +110,7 @@ const PalletLoadCalculator = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Pallet Preset</InputLabel>
-            <Select value={preset} label="Pallet Preset" onChange={(e) => applyPreset(e.target.value as Preset)}>
+            <Select inputProps={{ 'aria-label': 'Pallet Preset' }} value={preset} label="Pallet Preset" onChange={(e) => applyPreset(e.target.value as Preset)}>
               <MenuItem value="us">US Standard (48&quot; × 40&quot;)</MenuItem>
               <MenuItem value="eu">EU Standard (1200mm × 800mm)</MenuItem>
               <MenuItem value="custom">Custom</MenuItem>

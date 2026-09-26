@@ -81,7 +81,7 @@ const TimeCalculatorContent = () => {
         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
           <FormControl sx={{ minWidth: 200 }}>
             <InputLabel>Operation</InputLabel>
-            <Select value={operation} label="Operation" onChange={e => setOperation(e.target.value as any)}>
+            <Select inputProps={{ 'aria-label': 'Operation' }} value={operation} label="Operation" onChange={e => setOperation(e.target.value as any)}>
               <MenuItem value="add">Add (+)</MenuItem>
               <MenuItem value="subtract">Subtract (-)</MenuItem>
             </Select>

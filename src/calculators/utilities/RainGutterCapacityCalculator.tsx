@@ -103,7 +103,7 @@ const RainGutterCapacityCalculator = () => {
           />
           <FormControl fullWidth>
             <InputLabel>Gutter Size</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Gutter Size' }}
               value={gutterIndex}
               label="Gutter Size"
               onChange={(e: SelectChangeEvent<number>) => setGutterIndex(Number(e.target.value))}

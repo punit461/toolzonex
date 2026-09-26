@@ -76,7 +76,7 @@ const SleepTimeCalculatorContent = () => {
         <Box sx={{ display: 'flex', gap: 2 }}>
           <FormControl fullWidth size="small">
             <InputLabel>Hour</InputLabel>
-            <Select value={wakeHour} label="Hour" onChange={(e) => setWakeHour(Number(e.target.value))}>
+            <Select inputProps={{ 'aria-label': 'Hour' }} value={wakeHour} label="Hour" onChange={(e) => setWakeHour(Number(e.target.value))}>
               {Array.from({ length: 12 }).map((_, i) => (
                 <MenuItem key={i + 1} value={i + 1}>{i + 1}</MenuItem>
               ))}
@@ -85,7 +85,7 @@ const SleepTimeCalculatorContent = () => {
           
           <FormControl fullWidth size="small">
             <InputLabel>Minute</InputLabel>
-            <Select value={wakeMinute} label="Minute" onChange={(e) => setWakeMinute(Number(e.target.value))}>
+            <Select inputProps={{ 'aria-label': 'Minute' }} value={wakeMinute} label="Minute" onChange={(e) => setWakeMinute(Number(e.target.value))}>
               {[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55].map(m => (
                 <MenuItem key={m} value={m}>{m.toString().padStart(2, '0')}</MenuItem>
               ))}
@@ -94,7 +94,7 @@ const SleepTimeCalculatorContent = () => {
 
           <FormControl fullWidth size="small">
             <InputLabel>AM/PM</InputLabel>
-            <Select value={wakeAmPm} label="AM/PM" onChange={(e) => setWakeAmPm(e.target.value as string)}>
+            <Select inputProps={{ 'aria-label': 'AM/PM' }} value={wakeAmPm} label="AM/PM" onChange={(e) => setWakeAmPm(e.target.value as string)}>
               <MenuItem value="AM">AM</MenuItem>
               <MenuItem value="PM">PM</MenuItem>
             </Select>
@@ -119,7 +119,7 @@ const SleepTimeCalculatorContent = () => {
       </Paper>
 
       {/* If I go to sleep at... */}
-      <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, display: 'flex', flexDirection: 'column', gap: 3, bgcolor: '#f0fdf4' }}>
+      <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, display: 'flex', flexDirection: 'column', gap: 3, bgcolor: 'success.light' }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <BedtimeIcon color="primary" />
           <Typography variant="h6" fontWeight="bold">I am going to sleep at...</Typography>
@@ -128,7 +128,7 @@ const SleepTimeCalculatorContent = () => {
         <Box sx={{ display: 'flex', gap: 2 }}>
           <FormControl fullWidth size="small">
             <InputLabel>Hour</InputLabel>
-            <Select value={sleepHour} label="Hour" onChange={(e) => setSleepHour(Number(e.target.value))}>
+            <Select inputProps={{ 'aria-label': 'Hour' }} value={sleepHour} label="Hour" onChange={(e) => setSleepHour(Number(e.target.value))}>
               {Array.from({ length: 12 }).map((_, i) => (
                 <MenuItem key={i + 1} value={i + 1}>{i + 1}</MenuItem>
               ))}
@@ -137,7 +137,7 @@ const SleepTimeCalculatorContent = () => {
           
           <FormControl fullWidth size="small">
             <InputLabel>Minute</InputLabel>
-            <Select value={sleepMinute} label="Minute" onChange={(e) => setSleepMinute(Number(e.target.value))}>
+            <Select inputProps={{ 'aria-label': 'Minute' }} value={sleepMinute} label="Minute" onChange={(e) => setSleepMinute(Number(e.target.value))}>
               {[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55].map(m => (
                 <MenuItem key={m} value={m}>{m.toString().padStart(2, '0')}</MenuItem>
               ))}
@@ -146,7 +146,7 @@ const SleepTimeCalculatorContent = () => {
 
           <FormControl fullWidth size="small">
             <InputLabel>AM/PM</InputLabel>
-            <Select value={sleepAmPm} label="AM/PM" onChange={(e) => setSleepAmPm(e.target.value as string)}>
+            <Select inputProps={{ 'aria-label': 'AM/PM' }} value={sleepAmPm} label="AM/PM" onChange={(e) => setSleepAmPm(e.target.value as string)}>
               <MenuItem value="AM">AM</MenuItem>
               <MenuItem value="PM">PM</MenuItem>
             </Select>

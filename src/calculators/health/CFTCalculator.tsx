@@ -12,16 +12,16 @@ interface GradeResult { grade: string; color: string }
 
 const getGrade = (value: number, outstanding: number, good: number, avg: number, higherIsBetter = true): GradeResult => {
   if (higherIsBetter) {
-    if (value >= outstanding) return { grade: 'Outstanding', color: '#22c55e' };
-    if (value >= good) return { grade: 'Good', color: '#84cc16' };
-    if (value >= avg) return { grade: 'Average', color: '#eab308' };
-    return { grade: 'Below Standard', color: '#ef4444' };
+    if (value >= outstanding) return { grade: 'Outstanding', color: '#15803d' };
+    if (value >= good) return { grade: 'Good', color: '#3f6212' };
+    if (value >= avg) return { grade: 'Average', color: '#a16207' };
+    return { grade: 'Below Standard', color: '#b91c1c' };
   } else {
     // lower is better (time events)
-    if (value <= outstanding) return { grade: 'Outstanding', color: '#22c55e' };
-    if (value <= good) return { grade: 'Good', color: '#84cc16' };
-    if (value <= avg) return { grade: 'Average', color: '#eab308' };
-    return { grade: 'Below Standard', color: '#ef4444' };
+    if (value <= outstanding) return { grade: 'Outstanding', color: '#15803d' };
+    if (value <= good) return { grade: 'Good', color: '#3f6212' };
+    if (value <= avg) return { grade: 'Average', color: '#a16207' };
+    return { grade: 'Below Standard', color: '#b91c1c' };
   }
 };
 
@@ -54,7 +54,7 @@ const CFTCalculator = () => {
   const grades = ['Outstanding', 'Good', 'Average', 'Below Standard'];
   const allGrades = [marchGrade.grade, ammoGrade.grade, shuttleGrade.grade, dragGrade.grade];
   const overallGrade = grades.find(g => allGrades.includes(g)) ?? 'Below Standard';
-  const overallColor = [marchGrade, ammoGrade, shuttleGrade, dragGrade].find(r => r.grade === overallGrade)?.color ?? '#ef4444';
+  const overallColor = [marchGrade, ammoGrade, shuttleGrade, dragGrade].find(r => r.grade === overallGrade)?.color ?? '#b91c1c';
 
   const fmt = (min: number, sec: number) => `${min}:${String(sec).padStart(2, '0')}`;
 

@@ -32,7 +32,7 @@ const CssTextShadowGeneratorContent = () => {
           <Slider aria-label={`Blur Radius: ${blur}px`} value={blur} min={0} max={30} onChange={(_, v) => setBlur(v as number)} />
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-          <input type="color" value={color} onChange={(e) => setColor(e.target.value)} style={{ width: 36, height: 36, border: 'none', cursor: 'pointer' }} />
+          <input aria-label="Shadow color" type="color" value={color} onChange={(e) => setColor(e.target.value)} style={{ width: 36, height: 36, border: 'none', cursor: 'pointer' }} />
           <Typography variant="body2" fontFamily="monospace">{color}</Typography>
         </Box>
       </Box>

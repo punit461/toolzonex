@@ -33,7 +33,7 @@ const TwitterCardGeneratorContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <FormControl fullWidth>
           <InputLabel>twitter:card</InputLabel>
-          <Select value={cardType} label="twitter:card" onChange={(e) => setCardType(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'twitter:card' }} value={cardType} label="twitter:card" onChange={(e) => setCardType(e.target.value)}>
             {CARD_TYPES.map((t) => <MenuItem key={t} value={t}>{t}</MenuItem>)}
           </Select>
         </FormControl>

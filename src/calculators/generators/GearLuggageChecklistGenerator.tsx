@@ -86,7 +86,7 @@ const GearLuggageChecklistGeneratorContent = () => {
       <Box>
         <FormControl size="small" sx={{ minWidth: 220, mb: 2 }}>
           <InputLabel>Category</InputLabel>
-          <Select label="Category" value={category} onChange={handleCategoryChange}>
+          <Select inputProps={{ 'aria-label': 'Category' }} label="Category" value={category} onChange={handleCategoryChange}>
             {CATEGORIES.map((cat) => (
               <MenuItem key={cat} value={cat}>{cat}</MenuItem>
             ))}

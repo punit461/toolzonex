@@ -95,7 +95,7 @@ const FovCalculator = () => {
         <Stack spacing={2}>
           <FormControl fullWidth size="small">
             <InputLabel>Sensor Preset</InputLabel>
-            <Select label="Sensor Preset" value={preset} onChange={(e) => handlePresetChange(e.target.value)}>
+            <Select inputProps={{ 'aria-label': 'Sensor Preset' }} label="Sensor Preset" value={preset} onChange={(e) => handlePresetChange(e.target.value)}>
               {Object.entries(PRESETS).map(([key, p]) => (
                 <MenuItem key={key} value={key}>{p.label}</MenuItem>
               ))}

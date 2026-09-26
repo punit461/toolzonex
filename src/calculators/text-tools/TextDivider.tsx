@@ -59,7 +59,7 @@ const TextDividerContent = () => {
       <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
         <FormControl sx={{ minWidth: 220 }}>
           <InputLabel>Divide By</InputLabel>
-          <Select value={mode} label="Divide By" onChange={(e) => setMode(e.target.value as Mode)}>
+          <Select inputProps={{ 'aria-label': 'Divide By' }} value={mode} label="Divide By" onChange={(e) => setMode(e.target.value as Mode)}>
             <MenuItem value="delimiter">Custom Delimiter</MenuItem>
             <MenuItem value="char-count">Fixed Character Count</MenuItem>
             <MenuItem value="word-count">Fixed Word Count</MenuItem>

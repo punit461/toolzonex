@@ -102,7 +102,7 @@ const SeedSpacingCalculator = () => {
           />
           <FormControl fullWidth>
             <InputLabel>Plant Type</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Plant Type' }}
               value={typeIndex}
               label="Plant Type"
               onChange={(e: SelectChangeEvent<number>) => setTypeIndex(Number(e.target.value))}

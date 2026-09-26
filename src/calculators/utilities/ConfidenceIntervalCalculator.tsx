@@ -88,7 +88,7 @@ const ConfidenceIntervalCalculator = () => {
           <TextField label="Sample Size (n)" type="number" fullWidth value={sampleSize} onChange={(e) => setSampleSize(e.target.value)} onFocus={(e) => e.target.select()} />
           <FormControl fullWidth size="small">
             <InputLabel>Confidence Level</InputLabel>
-            <Select label="Confidence Level" value={confidence} onChange={(e) => setConfidence(e.target.value as ConfidenceLevel)}>
+            <Select inputProps={{ 'aria-label': 'Confidence Level' }} label="Confidence Level" value={confidence} onChange={(e) => setConfidence(e.target.value as ConfidenceLevel)}>
               <MenuItem value="90">90%</MenuItem>
               <MenuItem value="95">95%</MenuItem>
               <MenuItem value="99">99%</MenuItem>

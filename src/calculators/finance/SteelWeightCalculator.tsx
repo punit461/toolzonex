@@ -82,14 +82,14 @@ const SteelWeightCalculator = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Steel Type</InputLabel>
-            <Select label="Steel Type" value={type} onChange={(e) => setType(e.target.value as 'MS' | 'SS')}>
+            <Select inputProps={{ 'aria-label': 'Steel Type' }} label="Steel Type" value={type} onChange={(e) => setType(e.target.value as 'MS' | 'SS')}>
               <MenuItem value="MS">Mild Steel (7850 kg/m³)</MenuItem>
               <MenuItem value="SS">Stainless Steel (8000 kg/m³)</MenuItem>
             </Select>
           </FormControl>
           <FormControl fullWidth>
             <InputLabel>Shape</InputLabel>
-            <Select label="Shape" value={shape} onChange={(e) => setShape(e.target.value as any)}>
+            <Select inputProps={{ 'aria-label': 'Shape' }} label="Shape" value={shape} onChange={(e) => setShape(e.target.value as any)}>
               <MenuItem value="bar">Bar (rectangular)</MenuItem>
               <MenuItem value="plate">Plate</MenuItem>
               <MenuItem value="pipe">Pipe (hollow)</MenuItem>

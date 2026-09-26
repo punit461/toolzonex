@@ -65,7 +65,7 @@ const WordScramblerContent = () => {
         <Box sx={{ mb: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Scramble Mode</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Scramble Mode' }}
               value={mode}
               label="Scramble Mode"
               onChange={(e) => setMode(e.target.value)}

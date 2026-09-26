@@ -104,7 +104,7 @@ const WaistToHipRatioCalculator = () => {
               />
               <FormControl sx={{ minWidth: 120 }}>
                 <InputLabel>Waist Unit</InputLabel>
-                <Select value={waistUnit} label="Waist Unit" onChange={(e) => setWaistUnit(e.target.value)}>
+                <Select inputProps={{ 'aria-label': 'Waist Unit' }} value={waistUnit} label="Waist Unit" onChange={(e) => setWaistUnit(e.target.value)}>
                   <MenuItem value="cm">cm</MenuItem>
                   <MenuItem value="in">in</MenuItem>
                 </Select>
@@ -121,7 +121,7 @@ const WaistToHipRatioCalculator = () => {
               />
               <FormControl sx={{ minWidth: 120 }}>
                 <InputLabel>Hip Unit</InputLabel>
-                <Select value={hipUnit} label="Hip Unit" onChange={(e) => setHipUnit(e.target.value)}>
+                <Select inputProps={{ 'aria-label': 'Hip Unit' }} value={hipUnit} label="Hip Unit" onChange={(e) => setHipUnit(e.target.value)}>
                   <MenuItem value="cm">cm</MenuItem>
                   <MenuItem value="in">in</MenuItem>
                 </Select>
@@ -129,7 +129,7 @@ const WaistToHipRatioCalculator = () => {
             </Stack>
             <FormControl fullWidth>
               <InputLabel>Gender</InputLabel>
-              <Select value={gender} label="Gender" onChange={(e) => setGender(e.target.value)}>
+              <Select inputProps={{ 'aria-label': 'Gender' }} value={gender} label="Gender" onChange={(e) => setGender(e.target.value)}>
                 <MenuItem value="female">Female</MenuItem>
                 <MenuItem value="male">Male</MenuItem>
               </Select>

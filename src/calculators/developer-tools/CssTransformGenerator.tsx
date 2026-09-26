@@ -59,7 +59,7 @@ const CssTransformGeneratorContent = () => {
           <Grid item xs={12}>
             <FormControl fullWidth size="small">
               <InputLabel>Transform Origin</InputLabel>
-              <Select value={origin} label="Transform Origin" onChange={(e) => setOrigin(e.target.value)}>
+              <Select inputProps={{ 'aria-label': 'Transform Origin' }} value={origin} label="Transform Origin" onChange={(e) => setOrigin(e.target.value)}>
                 {ORIGINS.map((o) => <MenuItem key={o} value={o}>{o}</MenuItem>)}
               </Select>
             </FormControl>

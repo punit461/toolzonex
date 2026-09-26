@@ -56,7 +56,7 @@ const TextReverserContent = () => {
         <Box sx={{ mb: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Reversal Mode</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Reversal Mode' }}
               value={mode}
               label="Reversal Mode"
               onChange={(e) => setMode(e.target.value)}

@@ -93,13 +93,13 @@ const SitemapGeneratorContent = () => {
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr 1fr' }, gap: 2, alignItems: 'center' }}>
         <FormControl fullWidth size="small">
           <InputLabel>Default Change Frequency</InputLabel>
-          <Select value={changefreq} label="Default Change Frequency" onChange={(e) => setChangefreq(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Default Change Frequency' }} value={changefreq} label="Default Change Frequency" onChange={(e) => setChangefreq(e.target.value)}>
             {CHANGEFREQ_OPTIONS.map((f) => <MenuItem key={f} value={f}>{f}</MenuItem>)}
           </Select>
         </FormControl>
         <FormControl fullWidth size="small">
           <InputLabel>Default Priority</InputLabel>
-          <Select value={priority} label="Default Priority" onChange={(e) => setPriority(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Default Priority' }} value={priority} label="Default Priority" onChange={(e) => setPriority(e.target.value)}>
             {PRIORITY_OPTIONS.map((p) => <MenuItem key={p} value={p}>{p}</MenuItem>)}
           </Select>
         </FormControl>

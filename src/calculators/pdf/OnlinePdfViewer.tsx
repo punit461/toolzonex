@@ -81,7 +81,7 @@ const OnlinePdfViewerContent = () => {
             size="small"
             sx={{ width: 200 }}
           />
-          <Button variant="outlined" onClick={jumpToPage}>Go</Button>
+          <Button variant="outlined" onClick={jumpToPage}>Go to page</Button>
           <Typography variant="body2" color="text.secondary">{numPages} page(s)</Typography>
         </Box>
       )}

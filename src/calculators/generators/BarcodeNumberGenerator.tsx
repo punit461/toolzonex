@@ -69,7 +69,7 @@ const BarcodeNumberGeneratorContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <FormControl fullWidth>
           <InputLabel>Barcode Format</InputLabel>
-          <Select value={format} label="Barcode Format" onChange={(e) => handleFormatChange(e.target.value as Format)}>
+          <Select inputProps={{ 'aria-label': 'Barcode Format' }} value={format} label="Barcode Format" onChange={(e) => handleFormatChange(e.target.value as Format)}>
             <MenuItem value="upca">UPC-A (12 digits total)</MenuItem>
             <MenuItem value="ean13">EAN-13 (13 digits total)</MenuItem>
           </Select>

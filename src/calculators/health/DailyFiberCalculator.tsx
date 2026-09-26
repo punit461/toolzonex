@@ -57,7 +57,7 @@ const DailyFiberCalculatorContent = () => {
           />
           <FormControl fullWidth>
             <InputLabel>Gender</InputLabel>
-            <Select label="Gender" value={gender} onChange={(e) => setGender(e.target.value as Gender)}>
+            <Select inputProps={{ 'aria-label': 'Gender' }} label="Gender" value={gender} onChange={(e) => setGender(e.target.value as Gender)}>
               <MenuItem value="female">Female</MenuItem>
               <MenuItem value="male">Male</MenuItem>
             </Select>

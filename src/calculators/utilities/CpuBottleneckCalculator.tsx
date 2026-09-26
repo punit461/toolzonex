@@ -101,7 +101,7 @@ const CpuBottleneckCalculator = () => {
         <Stack spacing={2}>
           <FormControl fullWidth size="small">
             <InputLabel>CPU Tier</InputLabel>
-            <Select label="CPU Tier" value={cpuTier} onChange={(e) => setCpuTier(e.target.value as Tier)}>
+            <Select inputProps={{ 'aria-label': 'CPU Tier' }} label="CPU Tier" value={cpuTier} onChange={(e) => setCpuTier(e.target.value as Tier)}>
               {(Object.keys(TIER_LABEL) as Tier[]).map((t) => (
                 <MenuItem key={t} value={t}>{TIER_LABEL[t]}</MenuItem>
               ))}
@@ -109,7 +109,7 @@ const CpuBottleneckCalculator = () => {
           </FormControl>
           <FormControl fullWidth size="small">
             <InputLabel>GPU Tier</InputLabel>
-            <Select label="GPU Tier" value={gpuTier} onChange={(e) => setGpuTier(e.target.value as Tier)}>
+            <Select inputProps={{ 'aria-label': 'GPU Tier' }} label="GPU Tier" value={gpuTier} onChange={(e) => setGpuTier(e.target.value as Tier)}>
               {(Object.keys(TIER_LABEL) as Tier[]).map((t) => (
                 <MenuItem key={t} value={t}>{TIER_LABEL[t]}</MenuItem>
               ))}
@@ -117,7 +117,7 @@ const CpuBottleneckCalculator = () => {
           </FormControl>
           <FormControl fullWidth size="small">
             <InputLabel>Target Resolution</InputLabel>
-            <Select label="Target Resolution" value={resolution} onChange={(e) => setResolution(e.target.value as Resolution)}>
+            <Select inputProps={{ 'aria-label': 'Target Resolution' }} label="Target Resolution" value={resolution} onChange={(e) => setResolution(e.target.value as Resolution)}>
               {(Object.keys(RES_LABEL) as Resolution[]).map((r) => (
                 <MenuItem key={r} value={r}>{RES_LABEL[r]}</MenuItem>
               ))}

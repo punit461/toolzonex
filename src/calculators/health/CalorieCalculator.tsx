@@ -74,7 +74,7 @@ const CalorieCalculatorContent = () => {
 
         <FormControl fullWidth>
           <InputLabel>Activity Level</InputLabel>
-          <Select value={activity} label="Activity Level" onChange={(e) => setActivity(Number(e.target.value))}>
+          <Select inputProps={{ 'aria-label': 'Activity Level' }} value={activity} label="Activity Level" onChange={(e) => setActivity(Number(e.target.value))}>
             <MenuItem value={1.2}>Sedentary (little to no exercise)</MenuItem>
             <MenuItem value={1.375}>Lightly active (light exercise 1-3 days/week)</MenuItem>
             <MenuItem value={1.55}>Moderately active (moderate exercise 3-5 days/week)</MenuItem>

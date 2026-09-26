@@ -43,7 +43,7 @@ const SqlFormatterContent = () => {
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 2 }}>
         <FormControl size="small" sx={{ minWidth: 200 }}>
           <InputLabel>SQL Dialect</InputLabel>
-          <Select
+          <Select inputProps={{ 'aria-label': 'SQL Dialect' }}
             value={dialect}
             label="SQL Dialect"
             onChange={(e) => setDialect(e.target.value)}

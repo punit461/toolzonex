@@ -48,7 +48,7 @@ const UnitConverterContent = ({ category }: { category: UnitCategory }) => {
           />
           <FormControl fullWidth>
             <InputLabel>Unit</InputLabel>
-            <Select value={fromId} label="Unit" onChange={(e) => setFromId(e.target.value)}>
+            <Select inputProps={{ 'aria-label': 'Unit' }} value={fromId} label="Unit" onChange={(e) => setFromId(e.target.value)}>
               {category.units.map((u) => (
                 <MenuItem key={u.id} value={u.id}>{u.label}</MenuItem>
               ))}
@@ -70,7 +70,7 @@ const UnitConverterContent = ({ category }: { category: UnitCategory }) => {
           />
           <FormControl fullWidth>
             <InputLabel>Unit</InputLabel>
-            <Select value={toId} label="Unit" onChange={(e) => setToId(e.target.value)}>
+            <Select inputProps={{ 'aria-label': 'Unit' }} value={toId} label="Unit" onChange={(e) => setToId(e.target.value)}>
               {category.units.map((u) => (
                 <MenuItem key={u.id} value={u.id}>{u.label}</MenuItem>
               ))}

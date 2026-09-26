@@ -81,7 +81,7 @@ const EnergyConverter = () => {
         <TextField fullWidth label="Value" type="number" value={value} onChange={(e) => setValue(e.target.value)} onFocus={(e) => e.target.select()} />
         <FormControl fullWidth>
           <InputLabel>From Unit</InputLabel>
-          <Select value={fromUnit} label="From Unit" onChange={(e) => setFromUnit(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'From Unit' }} value={fromUnit} label="From Unit" onChange={(e) => setFromUnit(e.target.value)}>
             {UNIT_ORDER.map((key) => (
               <MenuItem key={key} value={key}>{UNITS[key].label}</MenuItem>
             ))}

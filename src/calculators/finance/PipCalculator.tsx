@@ -22,7 +22,7 @@ const PipCalculatorContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <FormControl fullWidth>
           <InputLabel>Lot Size</InputLabel>
-          <Select value={lotSize} label="Lot Size" onChange={(e) => setLotSize(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Lot Size' }} value={lotSize} label="Lot Size" onChange={(e) => setLotSize(e.target.value)}>
             <MenuItem value="standard">Standard (100,000 units)</MenuItem>
             <MenuItem value="mini">Mini (10,000 units)</MenuItem>
             <MenuItem value="micro">Micro (1,000 units)</MenuItem>

@@ -68,7 +68,7 @@ const CssTriangleGeneratorContent = () => {
         </Box>
 
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-          <Box
+          <Box aria-label="Triangle color"
             component="input"
             type="color"
             value={color}

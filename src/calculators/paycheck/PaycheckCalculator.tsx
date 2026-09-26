@@ -63,7 +63,7 @@ const PaycheckCalculatorContent = ({ stateSlug }: Props) => {
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mb: 3 }}>
           <FormControl fullWidth>
             <InputLabel>Filing Status</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Filing Status' }}
               value={filingStatus}
               label="Filing Status"
               onChange={(e) => setFilingStatus(e.target.value as FilingStatus)}
@@ -75,7 +75,7 @@ const PaycheckCalculatorContent = ({ stateSlug }: Props) => {
           </FormControl>
           <FormControl fullWidth>
             <InputLabel>Pay Frequency</InputLabel>
-            <Select
+            <Select inputProps={{ 'aria-label': 'Pay Frequency' }}
               value={frequency}
               label="Pay Frequency"
               onChange={(e) => setFrequency(e.target.value as PayFrequency)}

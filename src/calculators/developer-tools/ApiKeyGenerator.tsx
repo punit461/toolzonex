@@ -68,7 +68,7 @@ const ApiKeyGenerator = () => {
         />
         <FormControl fullWidth>
           <InputLabel>Prefix</InputLabel>
-          <Select value={prefix} label="Prefix" onChange={(e) => setPrefix(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Prefix' }} value={prefix} label="Prefix" onChange={(e) => setPrefix(e.target.value)}>
             <MenuItem value="none">None</MenuItem>
             <MenuItem value="sk_">sk_</MenuItem>
             <MenuItem value="api_">api_</MenuItem>
@@ -76,7 +76,7 @@ const ApiKeyGenerator = () => {
         </FormControl>
         <FormControl fullWidth>
           <InputLabel>Character Set</InputLabel>
-          <Select value={charset} label="Character Set" onChange={(e) => setCharset(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Character Set' }} value={charset} label="Character Set" onChange={(e) => setCharset(e.target.value)}>
             <MenuItem value="hex">Hexadecimal</MenuItem>
             <MenuItem value="alnum">Alphanumeric</MenuItem>
             <MenuItem value="base64url">Base64 URL-safe</MenuItem>

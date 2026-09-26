@@ -64,7 +64,7 @@ const PdfToTiffContent = () => {
 
       <FormControl fullWidth sx={{ mt: 2 }}>
         <InputLabel>Output DPI</InputLabel>
-        <Select value={scale} label="Output DPI" onChange={(e) => setScale(Number(e.target.value))}>
+        <Select inputProps={{ 'aria-label': 'Output DPI' }} value={scale} label="Output DPI" onChange={(e) => setScale(Number(e.target.value))}>
           {SCALE_OPTIONS.map((opt) => (
             <MenuItem key={opt.value} value={opt.value}>{opt.label}</MenuItem>
           ))}

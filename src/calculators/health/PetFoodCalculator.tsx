@@ -114,7 +114,7 @@ const PetFoodCalculator = () => {
           <TextField label="Weight (lb)" type="number" fullWidth value={weight} onChange={(e) => setWeight(e.target.value)} onFocus={(e) => e.target.select()} />
           <FormControl fullWidth size="small">
             <InputLabel>Activity Level</InputLabel>
-            <Select label="Activity Level" value={activity} onChange={(e) => setActivity(e.target.value as Activity)}>
+            <Select inputProps={{ 'aria-label': 'Activity Level' }} label="Activity Level" value={activity} onChange={(e) => setActivity(e.target.value as Activity)}>
               {(Object.keys(ACTIVITY_LABEL) as Activity[]).map((a) => (
                 <MenuItem key={a} value={a}>{ACTIVITY_LABEL[a]}</MenuItem>
               ))}

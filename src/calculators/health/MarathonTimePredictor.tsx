@@ -58,7 +58,7 @@ const MarathonTimePredictorContent = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <FormControl fullWidth>
           <InputLabel>Reference Race Distance</InputLabel>
-          <Select label="Reference Race Distance" value={preset} onChange={(e) => setPreset(e.target.value)}>
+          <Select inputProps={{ 'aria-label': 'Reference Race Distance' }} label="Reference Race Distance" value={preset} onChange={(e) => setPreset(e.target.value)}>
             <MenuItem value="5k">5K</MenuItem>
             <MenuItem value="10k">10K</MenuItem>
             <MenuItem value="half">Half Marathon (21.0975 km)</MenuItem>

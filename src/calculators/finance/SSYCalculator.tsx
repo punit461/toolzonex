@@ -127,7 +127,7 @@ const SSYCalculator = () => {
               onFocus={(e) => e.target.select()}
               value={yearlyInvestment}
               onChange={(e) => setYearlyInvestment(Math.min(150000, Number(e.target.value)))}
-              slotProps={{ htmlInput: { 'aria-label': 'Yearly Investment (₹)' }, input: { startAdornment: <InputAdornment position="start">₹</InputAdornment>, inputProps: { max: 150000, min: 250 } } }}
+              slotProps={{ htmlInput: { 'aria-label': 'Yearly Investment (₹)', max: 150000, min: 250 }, input: { startAdornment: <InputAdornment position="start">₹</InputAdornment> } }}
             />
             <Slider aria-label="Yearly Investment (₹)"
               value={yearlyInvestment}

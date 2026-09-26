@@ -70,7 +70,7 @@ const HouseholdInventoryListContent = () => {
       <Box>
         <FormControl size="small" sx={{ minWidth: 220, mb: 2 }}>
           <InputLabel>Location</InputLabel>
-          <Select label="Location" value={currentLocation} onChange={handleLocationChange}>
+          <Select inputProps={{ 'aria-label': 'Location' }} label="Location" value={currentLocation} onChange={handleLocationChange}>
             {LOCATIONS.map((loc) => (
               <MenuItem key={loc} value={loc}>{loc}</MenuItem>
             ))}
