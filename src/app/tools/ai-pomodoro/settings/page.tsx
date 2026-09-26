@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   title: 'AI Pomodoro Settings - Focus Monitoring Preferences',
   description: 'Control camera-based focus monitoring and detection interval for the AI Pomodoro timer.',
   alternates: { canonical: '/tools/ai-pomodoro/settings' },
+  // A settings panel for the timer, not something anyone searches for.
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'AI Pomodoro Settings | ToolZoneX',
     description: 'Control camera-based focus monitoring and detection interval.',

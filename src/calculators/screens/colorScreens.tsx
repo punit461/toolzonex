@@ -4,6 +4,12 @@ import { Typography, Box } from '@mui/material';
 import ColorScreen from './ColorScreen';
 
 const USE_CASES: Record<string, string[]> = {
+  'Black Screen': [
+    'Spotting stuck (always-lit) pixels, backlight bleed, and IPS glow, which only show up against pure black in a dark room.',
+    'Seeing dust, fingerprints, and smudges before cleaning your screen.',
+    'Making a screen look switched off while the device stays awake — during a long download, a presentation break, or on stage.',
+    'Keeping a dark room dark when a monitor has to stay on, e.g. while watching or sleeping.',
+  ],
   'Green Screen': [
     'Chroma-key backgrounds for video calls, streaming, or recording.',
     'Testing green-screen (chroma key) software or camera setups.',
@@ -23,12 +29,27 @@ const DEFAULT_USE_CASES = [
 ];
 
 const EXAMPLES: Record<string, string> = {
+  'Black Screen': 'Turn the room lights off, open the black screen in fullscreen, and look at the panel from straight on and then at an angle. A pixel that stays lit is stuck; lighter patches near the edges or corners are backlight bleed. Both are easy to miss on normal content, so this is worth doing within a new monitor\'s return window.',
   'Green Screen': 'Open this page in fullscreen behind you during a video call, and most video-conferencing apps with virtual-background support can key it out as if you had a real green screen.',
   'Zoom Lighting Screen': 'Prop your laptop facing you at chest height, go fullscreen, and the bright warm light fills in shadows on your face during a video call.',
 };
 const DEFAULT_EXAMPLE = 'Go fullscreen on a second monitor to use it as a plain, distraction-free backdrop while screen recording or presenting.';
 
 const EXTRA_FAQS: Record<string, { q: string; a: string }[]> = {
+  'Black Screen': [
+    {
+      q: 'Does a black screen save battery?',
+      a: 'On OLED and AMOLED screens (most recent phones and some laptops) yes — black pixels are switched off and draw almost no power. On LCD screens the backlight stays on behind a black image, so the saving is minimal; lowering brightness does more.',
+    },
+    {
+      q: 'Will a black screen stop my computer from sleeping?',
+      a: 'No. It is just a webpage showing black. Your power and sleep settings still apply, so change those if the device needs to stay awake.',
+    },
+    {
+      q: 'How do I find dead pixels with a black screen?',
+      a: 'On black, look for pixels that stay lit (stuck pixels). Dead pixels, which stay dark, are easier to see on white or a bright color — our Dead Pixel Test cycles through several colors for exactly that.',
+    },
+  ],
   'Blue Screen': [
     {
       q: 'Is this a Blue Screen of Death (BSOD) prank simulator?',
