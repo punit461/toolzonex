@@ -88,8 +88,20 @@ Pages: tip-screen 9.3, broken-screen 24 (13% CTR), windows-11-blue-screen 33, wi
    - Add QR to PDF now generates the QR code locally with qr-code-styling, instead of calling api.qrserver.com.
    - Translate PDF's upload box now says the extracted text goes to the translation service.
 
+6. **Fullscreen on iPhone:** Safari there only lets `<video>` go fullscreen, so on phones the screen tools' fullscreen button did nothing. The shared `useFullscreen` hook now falls back to pinning the screen over the viewport. A back swipe or Esc exits.
+7. **Windows update and blue-screen pranks (the cluster with Google positions):**
+   - Added:
+     - the real five-dot Windows spinner
+     - an update percentage that creeps and never loops (it used to race 0→100 in 12 seconds)
+     - a blue screen that counts up, with its QR code
+     - a stop-code picker
+     - for Windows 11, a choice between the classic blue screen and the 2025 black one
+   - The cursor is hidden in fullscreen.
+   - Fixed the blue-screen FAQ, which described the update screen, and cross-linked the paired pages.
+
 ### Checklist
 
+- [x] Search Console tasks and the Bing sitemap submission. Confirmed in zone logs: Google-InspectionTool fetched all nine screen pages plus 656 assets, and Bingbot fetched the key file and sitemap-bing.xml.
 - [ ] After deploy: `npm run indexnow`.
 - [ ] Bing Webmaster → Sitemaps: submit `https://toolzonex.com/sitemap-bing.xml`.
 - [ ] Bing Webmaster → Search Performance: in 1–2 weeks, check impressions for the 15 pages.
