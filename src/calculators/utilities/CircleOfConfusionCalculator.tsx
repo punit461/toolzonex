@@ -88,9 +88,9 @@ const CircleOfConfusionCalculator = () => {
         </Stack>
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Result</Typography>
-          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Circle of Confusion</Typography>
-            <Typography variant="h3" fontWeight="bold">{valid ? coc.toFixed(4) : '—'}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{valid ? coc.toFixed(4) : '—'}</Typography>
             <Typography variant="body2">mm</Typography>
           </Paper>
         </Box>

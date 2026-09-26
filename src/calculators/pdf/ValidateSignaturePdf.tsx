@@ -106,7 +106,7 @@ const ValidateSignaturePdfContent = () => {
           </Alert>
 
           {result.signatures.length > 0 && (
-            <List dense sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200' }}>
+            <List dense sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200' }}>
               {result.signatures.map((sig, i) => (
                 <Box key={i}>
                   {i > 0 && <Divider />}

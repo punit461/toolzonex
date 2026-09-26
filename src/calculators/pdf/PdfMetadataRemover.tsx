@@ -69,7 +69,7 @@ const PdfMetadataRemoverContent = () => {
             Removed {removed.length} metadata field{removed.length !== 1 ? 's' : ''}. File downloaded.
           </Alert>
           <Typography variant="subtitle2" gutterBottom>Stripped fields:</Typography>
-          <List dense sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200' }}>
+          <List dense sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200' }}>
             {removed.map((field) => (
               <ListItem key={field}>
                 <ListItemText primary={field} />

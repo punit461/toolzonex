@@ -106,7 +106,7 @@ function ResultPanel({ r, label, tds }: { r: Result; label: string; tds: number 
   return (
     <Box sx={{ p: 3, bgcolor: 'action.hover', borderRadius: 2, border: '1px solid', height: '100%' }}>
       <Typography variant="overline" sx={{ fontWeight: 700, color: 'text.secondary' }}>{label}</Typography>
-      <Typography variant="h3" sx={{ fontWeight: 900, color: 'primary.main', my: 1 }}>{fmt(r.totalTax)}</Typography>
+      <Typography component="p" variant="h3" sx={{ fontWeight: 900, color: 'primary.main', my: 1 }}>{fmt(r.totalTax)}</Typography>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>Effective rate: {pct(r.effectiveRate)}</Typography>
 
       {r.netPayable > 0

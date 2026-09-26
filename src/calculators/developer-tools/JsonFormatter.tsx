@@ -93,7 +93,7 @@ const JsonFormatterContent = () => {
             p: 2, 
             height: '100%', 
             minHeight: 395, 
-            bgcolor: 'grey.50',
+            bgcolor: 'action.hover',
             overflow: 'auto',
             fontFamily: 'monospace',
             whiteSpace: 'pre-wrap',

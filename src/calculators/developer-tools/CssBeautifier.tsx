@@ -108,7 +108,7 @@ const CssBeautifierContent = () => {
               {copied ? 'Copied!' : 'Copy'}
             </Button>
           </Box>
-          <Paper sx={{ p: 2, bgcolor: 'grey.50', fontFamily: 'monospace', whiteSpace: 'pre-wrap', overflow: 'auto', maxHeight: 500 }}>
+          <Paper sx={{ p: 2, bgcolor: 'action.hover', fontFamily: 'monospace', whiteSpace: 'pre-wrap', overflow: 'auto', maxHeight: 500 }}>
             {output}
           </Paper>
         </Paper>

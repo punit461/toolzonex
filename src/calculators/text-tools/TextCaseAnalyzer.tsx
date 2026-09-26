@@ -62,7 +62,7 @@ const TextCaseAnalyzerContent = () => {
       />
 
       <Box>
-        <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">Detected Case Style</Typography>
           <Typography variant="h5" fontWeight="bold">{detected}</Typography>
         </Paper>

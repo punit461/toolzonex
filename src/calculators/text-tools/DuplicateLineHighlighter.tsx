@@ -31,7 +31,7 @@ const DuplicateLineHighlighterContent = () => {
       />
 
       <Box>
-        <Paper sx={{ p: 2, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 2, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">Distinct Lines With Duplicates</Typography>
           <Typography variant="h4" fontWeight="bold">{duplicateCount}</Typography>
         </Paper>

@@ -90,7 +90,7 @@ const NetWorthCalculator = () => {
       <Paper sx={{ mt: 4, p: 3 }}>
         <Box sx={{ textAlign: 'center', mb: 2, py: 2, bgcolor: result.netWorth >= 0 ? 'success.light' : 'error.light', borderRadius: 1 }}>
           <Typography variant="body2" color={result.netWorth >= 0 ? 'success.contrastText' : 'error.contrastText'}>Net Worth</Typography>
-          <Typography variant="h3" fontWeight="bold" color={result.netWorth >= 0 ? 'success.contrastText' : 'error.contrastText'}>{fmt(result.netWorth)}</Typography>
+          <Typography component="p" variant="h3" fontWeight="bold" color={result.netWorth >= 0 ? 'success.contrastText' : 'error.contrastText'}>{fmt(result.netWorth)}</Typography>
         </Box>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
           <Typography>Total Assets</Typography>

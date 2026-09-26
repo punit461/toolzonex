@@ -121,7 +121,7 @@ const NpvIrrCalculatorContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Stack spacing={2}>
-          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Net Present Value (NPV)</Typography>
             <Typography variant="h4" fontWeight="bold">{currency.format(result.npv)}</Typography>
           </Paper>

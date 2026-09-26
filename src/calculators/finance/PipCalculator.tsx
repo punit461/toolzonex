@@ -64,7 +64,7 @@ const PipCalculatorContent = () => {
           sx={{
             p: 4,
             bgcolor: 'primary.main',
-            color: 'white',
+            color: 'primary.contrastText',
             borderRadius: 4,
             minHeight: 250,
             display: 'flex',
@@ -74,7 +74,7 @@ const PipCalculatorContent = () => {
           }}
         >
           <Typography variant="body2" sx={{ opacity: 0.9, mb: 1 }}>Pip Value</Typography>
-          <Typography variant="h3" fontWeight="bold">
+          <Typography component="p" variant="h3" fontWeight="bold">
             ${pipValue.toFixed(4)}
           </Typography>
           <Typography variant="body2" sx={{ opacity: 0.8, mt: 1 }}>

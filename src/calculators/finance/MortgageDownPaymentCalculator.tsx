@@ -118,9 +118,9 @@ const MortgageDownPaymentCalculator = () => {
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Down Payment Amount</Typography>
-            <Typography variant="h3" fontWeight="bold">{fmt(downPaymentAmount)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{fmt(downPaymentAmount)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Mortgage Loan Amount</Typography>

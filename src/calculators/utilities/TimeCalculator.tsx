@@ -104,7 +104,7 @@ const TimeCalculatorContent = () => {
         </Button>
 
         {/* Result */}
-        <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'primary.contrastText', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Typography variant="subtitle2" mb={1}>Result</Typography>
           <Typography variant="h4" fontWeight="bold">
             {resDays}d {resHours}h {resMinutes}m {resSeconds}s

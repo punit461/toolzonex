@@ -79,7 +79,7 @@ const DailyFiberCalculatorContent = () => {
             {result ? (
               <>
                 <Typography variant="body2" color="text.secondary" gutterBottom>Recommended Daily Fiber</Typography>
-                <Typography variant="h2" fontWeight={800} color="primary.main">{result.recommended.toFixed(0)}g</Typography>
+                <Typography component="p" variant="h2" fontWeight={800} color="primary.main">{result.recommended.toFixed(0)}g</Typography>
                 {result.calorieBased !== null && (
                   <Typography variant="body2" color="text.secondary" mt={2}>
                     Calorie-based estimate (14g per 1,000 kcal): {result.calorieBased.toFixed(0)}g

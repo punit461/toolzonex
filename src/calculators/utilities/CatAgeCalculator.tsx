@@ -108,7 +108,7 @@ const CatAgeCalculator = () => {
         />
         <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Human-Equivalent Age</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>
             {humanYears !== null ? `${humanYears.toFixed(1)} years` : '—'}
           </Typography>
         </Paper>

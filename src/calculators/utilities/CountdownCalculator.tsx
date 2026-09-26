@@ -130,7 +130,7 @@ const CountdownCalculator = () => {
                   { value: remaining.seconds, label: 'Seconds' },
                 ].map((item) => (
                   <Paper key={item.label} variant="outlined" sx={{ p: 2 }}>
-                    <Typography variant="h3" fontWeight={700} color="primary">{item.value}</Typography>
+                    <Typography component="p" variant="h3" fontWeight={700} color="primary">{item.value}</Typography>
                     <Typography variant="body2" color="text.secondary">{item.label}</Typography>
                   </Paper>
                 ))}

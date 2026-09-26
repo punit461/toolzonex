@@ -76,7 +76,7 @@ const PartyBudgetCalculatorContent = () => {
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: remaining >= 0 ? 'primary.main' : 'error.main', color: 'white' }}>
           <Typography variant="body2">{remaining >= 0 ? 'Unallocated Budget' : 'Over Budget By'}</Typography>
-          <Typography variant="h3" fontWeight="bold">{money(Math.abs(remaining))}</Typography>
+          <Typography component="p" variant="h3" fontWeight="bold">{money(Math.abs(remaining))}</Typography>
         </Paper>
         <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between' }}>
           <Typography>Total Allocated</Typography>

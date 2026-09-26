@@ -96,7 +96,7 @@ const PdfVersionCheckerContent = () => {
         <Paper variant="outlined" sx={{ mt: 3, p: 2.5 }}>
           <Box sx={{ textAlign: 'center', mb: 3 }}>
             <Typography variant="caption" color="text.secondary">PDF Version</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 'bold' }}>{result.version}</Typography>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 'bold' }}>{result.version}</Typography>
           </Box>
           <Alert severity="info" sx={{ mb: 2 }}>{result.compatibility}</Alert>
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr 1fr' }, gap: 2 }}>

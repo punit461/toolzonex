@@ -240,7 +240,7 @@ const VATCalculator = () => {
             <Typography variant="h6" color="text.secondary">
               {mode === 'add' ? 'Gross Amount (incl. VAT)' : 'Net Amount (excl. VAT)'}
             </Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               {formatMoney(mode === 'add' ? grossAmount : netAmount, selectedCountry)}
             </Typography>
 

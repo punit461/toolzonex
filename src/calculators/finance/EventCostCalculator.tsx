@@ -136,7 +136,7 @@ const EventCostCalculator = () => {
 
         <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', height: 'fit-content' }}>
           <Typography variant="body2" color="text.secondary">Total Event Cost</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>{money(total)}</Typography>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>{money(total)}</Typography>
           <Typography variant="caption" color="text.secondary">across {items.length} line item{items.length !== 1 ? 's' : ''}</Typography>
         </Paper>
       </Box>

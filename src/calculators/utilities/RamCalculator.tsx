@@ -100,7 +100,7 @@ const RamCalculator = () => {
             </Stack>
             <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
               <Typography variant="body2" color="text.secondary">Total RAM Capacity</Typography>
-              <Typography variant="h3" color="primary" fontWeight={800}>
+              <Typography component="p" variant="h3" color="primary" fontWeight={800}>
                 {totalCapacity !== null ? `${totalCapacity} GB` : '—'}
               </Typography>
             </Paper>
@@ -113,7 +113,7 @@ const RamCalculator = () => {
             </Stack>
             <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
               <Typography variant="body2" color="text.secondary">Theoretical Bandwidth</Typography>
-              <Typography variant="h3" color="primary" fontWeight={800}>
+              <Typography component="p" variant="h3" color="primary" fontWeight={800}>
                 {bandwidth !== null ? `${bandwidth.toFixed(2)} GB/s` : '—'}
               </Typography>
             </Paper>

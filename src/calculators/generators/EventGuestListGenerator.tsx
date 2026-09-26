@@ -126,7 +126,7 @@ const EventGuestListGeneratorContent = () => {
             </Paper>
           </Grid>
           <Grid item xs={6}>
-            <Paper sx={{ p: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="h5" fontWeight={800}>{summary.totalHeadcount}</Typography>
               <Typography variant="body2">Total Headcount</Typography>
             </Paper>

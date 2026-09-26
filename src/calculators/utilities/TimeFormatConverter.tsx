@@ -68,7 +68,7 @@ const TimeFormatConverterContent = () => {
             <MenuItem value="PM">PM</MenuItem>
           </TextField>
         </Stack>
-        <Paper sx={{ p: 2, bgcolor: 'primary.main', color: 'white', textAlign: 'center' }}>
+        <Paper sx={{ p: 2, bgcolor: 'primary.main', color: 'primary.contrastText', textAlign: 'center' }}>
           <Typography variant="body2" sx={{ opacity: 0.85 }}>24-Hour Format</Typography>
           <Typography variant="h4" fontWeight={700}>{converted24 ?? '—'}</Typography>
         </Paper>
@@ -86,7 +86,7 @@ const TimeFormatConverterContent = () => {
           fullWidth
           sx={{ mb: 2 }}
         />
-        <Paper sx={{ p: 2, bgcolor: 'primary.main', color: 'white', textAlign: 'center' }}>
+        <Paper sx={{ p: 2, bgcolor: 'primary.main', color: 'primary.contrastText', textAlign: 'center' }}>
           <Typography variant="body2" sx={{ opacity: 0.85 }}>12-Hour Format</Typography>
           <Typography variant="h4" fontWeight={700}>{converted12 ?? '—'}</Typography>
         </Paper>

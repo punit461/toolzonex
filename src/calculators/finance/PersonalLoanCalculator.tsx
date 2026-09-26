@@ -202,7 +202,7 @@ const PersonalLoanCalculator = () => {
             {rate <= 0 ? (
               <Typography color="error" sx={{ mt: 2, fontWeight: 600 }}>Please enter a valid interest rate (&gt; 0%)</Typography>
             ) : (
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               {formatMoney(emi, currency)}
             </Typography>
             )}
@@ -221,7 +221,7 @@ const PersonalLoanCalculator = () => {
             <Box aria-hidden="true" sx={{ height: 250 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
-                  <Pie
+                  <Pie rootTabIndex={-1}
                     data={chartData}
                     cx="50%"
                     cy="50%"

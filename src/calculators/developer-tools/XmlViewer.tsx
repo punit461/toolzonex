@@ -267,7 +267,7 @@ const XmlViewerContent = () => {
       </Box>
       {error && <Alert severity="error">{error}</Alert>}
       {input.trim() && (
-        <Paper variant="outlined" sx={{ p: 2, minHeight: 200, maxHeight: 500, overflow: 'auto', bgcolor: 'grey.50' }}>
+        <Paper variant="outlined" sx={{ p: 2, minHeight: 200, maxHeight: 500, overflow: 'auto', bgcolor: 'action.hover' }}>
           <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 1 }}>
             <IconButton size="small" onClick={handleCopy} title="Copy formatted XML">
               <ContentCopyIcon fontSize="small" />

@@ -64,7 +64,7 @@ const DaysBetweenDatesCalculatorContent = () => {
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight="600" mb={2}>Result</Typography>
         {result ? (
-          <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
               <Typography variant="h6">Total Days</Typography>
               <Typography variant="h6" fontWeight="bold">{result.totalDays.toLocaleString()}</Typography>

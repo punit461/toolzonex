@@ -113,7 +113,7 @@ const FlooringCalculator = () => {
           </Box>
           <Box textAlign="center">
             <Typography variant="body2" color="text.secondary">Boxes Needed (with waste)</Typography>
-            <Typography variant="h3" color="primary" fontWeight={800}>
+            <Typography component="p" variant="h3" color="primary" fontWeight={800}>
               {Math.ceil(boxesWithWaste)}
             </Typography>
             <Typography variant="caption" color="text.secondary">{boxesNeeded.toFixed(2)} boxes without waste allowance</Typography>

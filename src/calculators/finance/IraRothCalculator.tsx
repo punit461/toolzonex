@@ -181,7 +181,7 @@ const IraRothCalculator = () => {
             <Typography variant="h6" color="text.secondary" gutterBottom>
               2026 Contribution Limit
             </Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 3, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 3, color: 'primary.main' }}>
               {formatUSD(result.contributionLimit)}
             </Typography>
 

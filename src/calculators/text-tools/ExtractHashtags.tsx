@@ -37,7 +37,7 @@ const ExtractHashtagsContent = () => {
       />
 
       <Box>
-        <Paper sx={{ p: 2, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 2, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">Hashtags Found</Typography>
           <Typography variant="h4" fontWeight="bold">{hashtags.length}</Typography>
         </Paper>

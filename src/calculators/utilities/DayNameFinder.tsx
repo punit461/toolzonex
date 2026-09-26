@@ -41,7 +41,7 @@ const DayNameFinderContent = () => {
       />
 
       {dayName ? (
-        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Stack spacing={1}>
             <Typography variant="body2" sx={{ opacity: 0.85 }}>Day of the Week</Typography>
             <Typography variant="h3" fontWeight={700}>{dayName}</Typography>

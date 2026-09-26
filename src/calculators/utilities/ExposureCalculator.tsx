@@ -103,7 +103,7 @@ const ExposureCalculatorContent = () => {
           {result ? (
             <>
               <Typography variant="body2" color="text.secondary" gutterBottom>{result.label}</Typography>
-              <Typography variant="h2" fontWeight={800} color="primary.main">{result.value}</Typography>
+              <Typography component="p" variant="h2" fontWeight={800} color="primary.main">{result.value}</Typography>
             </>
           ) : (
             <Typography variant="body1" color="text.secondary">Enter the other two exposure values and a target EV</Typography>

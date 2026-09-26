@@ -55,7 +55,7 @@ const RandomDecisionMakerContent = () => {
             display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 3,
           }}
         >
-          <Typography variant="h3" fontWeight={800}>
+          <Typography component="p" variant="h3" fontWeight={800}>
             {decision ?? 'Click Decide'}
           </Typography>
         </Paper>

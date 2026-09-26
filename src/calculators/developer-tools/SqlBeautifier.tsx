@@ -112,7 +112,7 @@ const SqlBeautifierContent = () => {
           <Typography variant="subtitle1" fontWeight="600">Formatted SQL</Typography>
           <Button startIcon={<ContentCopyIcon />} onClick={copyToClipboard} disabled={!output} size="small">Copy</Button>
         </Box>
-        <Paper variant="outlined" sx={{ p: 2, height: '100%', minHeight: 395, bgcolor: 'grey.50', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
+        <Paper variant="outlined" sx={{ p: 2, height: '100%', minHeight: 395, bgcolor: 'action.hover', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
           {output || <Typography color="text.secondary">Formatted SQL will appear here...</Typography>}
         </Paper>
       </Box>

@@ -105,9 +105,9 @@ const CPCCalculator = () => {
               fullWidth
             />
           </Box>
-          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white', alignSelf: 'center' }}>
+          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText', alignSelf: 'center' }}>
             <Typography variant="body2">Cost Per Click</Typography>
-            <Typography variant="h3" fontWeight="bold">{fmt(forwardResult)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{fmt(forwardResult)}</Typography>
           </Paper>
         </Box>
       ) : (
@@ -129,9 +129,9 @@ const CPCCalculator = () => {
               fullWidth
             />
           </Box>
-          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white', alignSelf: 'center' }}>
+          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText', alignSelf: 'center' }}>
             <Typography variant="body2">Total Ad Spend</Typography>
-            <Typography variant="h3" fontWeight="bold">{fmt(reverseResult)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{fmt(reverseResult)}</Typography>
           </Paper>
         </Box>
       )}

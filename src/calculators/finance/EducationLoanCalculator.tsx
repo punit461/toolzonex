@@ -81,7 +81,7 @@ const EducationLoanCalculator = () => {
         </Box>
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight="600" mb={2}>Result</Typography>
-          <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white', mb: 2 }}>
+          <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'primary.contrastText', mb: 2 }}>
             <Typography variant="h6">Monthly EMI</Typography>
             <Typography variant="h6" fontWeight="bold">₹{emi.toLocaleString()}</Typography>
           </Paper>

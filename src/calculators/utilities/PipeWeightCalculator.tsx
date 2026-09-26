@@ -88,7 +88,7 @@ const PipeWeightCalculatorContent = () => {
           sx={{
             p: 4,
             bgcolor: 'primary.main',
-            color: 'white',
+            color: 'primary.contrastText',
             borderRadius: 4,
             minHeight: 200,
             display: 'flex',

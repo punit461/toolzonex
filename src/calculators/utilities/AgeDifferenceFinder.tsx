@@ -112,7 +112,7 @@ const AgeDifferenceFinder = () => {
             ) : (
               <>
                 <Typography variant="h6" color="text.secondary" gutterBottom>Age Difference</Typography>
-                <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 2, textAlign: 'center' }}>
+                <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 2, textAlign: 'center' }}>
                   {result.years}y {result.months}m {result.days}d
                 </Typography>
                 <Typography variant="body1" textAlign="center">

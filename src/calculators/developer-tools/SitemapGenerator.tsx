@@ -122,7 +122,7 @@ const SitemapGeneratorContent = () => {
           </Box>
           <Paper
             variant="outlined"
-            sx={{ p: 2, maxHeight: 400, bgcolor: 'grey.50', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}
+            sx={{ p: 2, maxHeight: 400, bgcolor: 'action.hover', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}
           >
             {output}
           </Paper>

@@ -70,7 +70,7 @@ const SafetyStockCalculatorContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight={600} mb={2}>Results</Typography>
-        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">Safety Stock</Typography>
           <Typography variant="h3" fontWeight="bold">{Math.max(0, Math.round(result.safetyStock)).toLocaleString('en-US')} units</Typography>
         </Paper>

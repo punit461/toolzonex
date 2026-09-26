@@ -209,7 +209,7 @@ const DateCalculator = () => {
           <Box>
             <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
               <Typography variant="h6" color="text.secondary" gutterBottom>Result Date</Typography>
-              <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', my: 2 }}>
+              <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main', my: 2 }}>
                 {resultDateStr}
               </Typography>
             </Box>

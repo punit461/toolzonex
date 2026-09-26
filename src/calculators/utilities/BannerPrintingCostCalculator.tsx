@@ -93,7 +93,7 @@ const BannerPrintingCostCalculator = () => {
               <Typography variant="h6">Cost per Banner</Typography>
               <Typography variant="h6" fontWeight="bold">{money(costPerBanner)}</Typography>
             </Paper>
-            <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="h6">Total Cost ({qty || 0} banner{qty === 1 ? '' : 's'})</Typography>
               <Typography variant="h6" fontWeight="bold">{money(totalCost)}</Typography>
             </Paper>

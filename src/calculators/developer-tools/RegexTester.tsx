@@ -131,7 +131,7 @@ const RegexTesterContent = () => {
             sx={{ 
               p: 2, 
               minHeight: 150, 
-              bgcolor: 'grey.50',
+              bgcolor: 'action.hover',
               fontFamily: 'monospace',
               whiteSpace: 'pre-wrap',
               wordBreak: 'break-all'

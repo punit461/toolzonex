@@ -92,15 +92,15 @@ const CalorieCalculatorContent = () => {
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         {calories ? (
           <Paper variant="outlined" sx={{ overflow: 'hidden' }}>
-            <Box sx={{ p: 3, bgcolor: 'primary.main', color: 'white', textAlign: 'center' }}>
+            <Box sx={{ p: 3, bgcolor: 'primary.main', color: 'primary.contrastText', textAlign: 'center' }}>
               <Typography variant="h6" sx={{ opacity: 0.9 }}>Maintenance Calories</Typography>
-              <Typography variant="h2" sx={{ fontWeight: 800 }}>{calories.maintain}</Typography>
+              <Typography component="p" variant="h2" sx={{ fontWeight: 800 }}>{calories.maintain}</Typography>
               <Typography variant="body2" sx={{ opacity: 0.9 }}>Calories/day to maintain weight</Typography>
             </Box>
             <TableContainer>
               <Table>
                 <TableHead>
-                  <TableRow sx={{ bgcolor: 'grey.100' }}>
+                  <TableRow sx={{ bgcolor: 'action.hover' }}>
                     <TableCell><strong>Goal</strong></TableCell>
                     <TableCell align="right"><strong>Calories / Day</strong></TableCell>
                   </TableRow>
@@ -127,7 +127,7 @@ const CalorieCalculatorContent = () => {
             </TableContainer>
           </Paper>
         ) : (
-          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'grey.50' }}>
+          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'action.hover' }}>
             <Typography color="text.secondary" align="center">
               Enter your details and click Calculate to see your daily calorie targets for weight loss, maintenance, or muscle gain.
             </Typography>

@@ -151,7 +151,7 @@ const RobotsTxtGeneratorContent = () => {
               {copied ? 'Copied!' : 'Copy'}
             </Button>
           </Box>
-          <Paper sx={{ p: 2, bgcolor: 'grey.50', fontFamily: 'monospace', whiteSpace: 'pre-wrap', overflow: 'auto' }}>
+          <Paper sx={{ p: 2, bgcolor: 'action.hover', fontFamily: 'monospace', whiteSpace: 'pre-wrap', overflow: 'auto' }}>
             {output}
           </Paper>
         </Paper>

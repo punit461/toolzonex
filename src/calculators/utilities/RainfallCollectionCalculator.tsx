@@ -88,9 +88,9 @@ const RainfallCollectionCalculator = () => {
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Result</Typography>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Estimated Gallons Collected</Typography>
-            <Typography variant="h3" fontWeight="bold">{result.collected.toFixed(1)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{result.collected.toFixed(1)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Theoretical Maximum (100% efficiency)</Typography>

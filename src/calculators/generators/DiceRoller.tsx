@@ -64,7 +64,7 @@ const DiceRollerContent = () => {
                 elevation={2}
                 sx={{
                   width: 56, height: 56, display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  borderRadius: 2, fontSize: '1.5rem', fontWeight: 700, bgcolor: 'primary.main', color: 'white',
+                  borderRadius: 2, fontSize: '1.5rem', fontWeight: 700, bgcolor: 'primary.main', color: 'primary.contrastText',
                 }}
               >
                 {r}

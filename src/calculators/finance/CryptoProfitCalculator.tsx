@@ -113,7 +113,7 @@ const CryptoProfitCalculatorContent = () => {
           sx={{
             p: 4,
             bgcolor: 'primary.main',
-            color: 'white',
+            color: 'primary.contrastText',
             borderRadius: 4,
             minHeight: 200,
             display: 'flex',
@@ -122,7 +122,7 @@ const CryptoProfitCalculatorContent = () => {
             alignItems: 'center',
           }}
         >
-          <Typography variant="h3" fontWeight="bold">
+          <Typography component="p" variant="h3" fontWeight="bold">
             {profit >= 0 ? money(profit) : `−${money(Math.abs(profit))}`}
           </Typography>
           <Typography variant="h6" sx={{ opacity: 0.9 }}>

@@ -126,7 +126,7 @@ const WindLoadCalculator = () => {
 
         <Paper variant="outlined" sx={{ p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Estimated Wind Load Force</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>
             {result !== null ? `${result.forceN.toLocaleString(undefined, { maximumFractionDigits: 1 })} N` : '—'}
           </Typography>
           {result !== null && (

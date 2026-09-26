@@ -222,7 +222,7 @@ const KrwToUsdConverter = () => {
               <>
                 <Typography variant="h6" color="text.secondary">Converted Amount</Typography>
                 {convertedAmount !== null ? (
-                  <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main' }}>
+                  <Typography component="p" variant="h3" sx={{ fontWeight: 700, color: 'primary.main' }}>
                     {toCurrency === 'USD' ? formatUSD(convertedAmount) : formatKRW(convertedAmount)}
                   </Typography>
                 ) : (

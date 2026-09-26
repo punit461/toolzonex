@@ -77,7 +77,7 @@ const HashRateCalculatorContent = () => {
         </TableContainer>
 
         {timeEstimate && (
-          <Paper sx={{ mt: 3, p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ mt: 3, p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Estimated Average Time to Find a Block Solo</Typography>
             <Typography variant="h4" fontWeight="bold">
               {timeEstimate.years >= 1 ? `${timeEstimate.years.toFixed(1)} years` : `${timeEstimate.days.toFixed(1)} days`}

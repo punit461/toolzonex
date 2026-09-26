@@ -194,7 +194,7 @@ const JsonTreeViewerContent = () => {
         )}
         <Paper
           variant="outlined"
-          sx={{ p: 2, minHeight: 380, maxHeight: 480, overflow: 'auto', bgcolor: 'grey.50' }}
+          sx={{ p: 2, minHeight: 380, maxHeight: 480, overflow: 'auto', bgcolor: 'action.hover' }}
         >
           {parsed === null ? (
             <Typography color="text.secondary">The interactive tree will appear here once you paste valid JSON...</Typography>

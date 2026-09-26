@@ -171,7 +171,7 @@ const SSYCalculator = () => {
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Maturity Value (Year {maturityYear})</Typography>
             <Typography variant="caption" color="text.secondary">Your daughter will be <strong>{girlAgeAtMaturity} years old</strong> at maturity</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
               ₹ {maturityValue.toLocaleString('en-IN')}
             </Typography>
 

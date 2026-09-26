@@ -87,7 +87,7 @@ const ZalgoTextGeneratorContent = () => {
           </Button>
         </Box>
       </Box>
-      <Paper variant="outlined" sx={{ p: 3, minHeight: 140, bgcolor: 'grey.50', wordBreak: 'break-word', fontSize: '1.5rem', lineHeight: 2.5 }}>
+      <Paper variant="outlined" sx={{ p: 3, minHeight: 140, bgcolor: 'action.hover', wordBreak: 'break-word', fontSize: '1.5rem', lineHeight: 2.5 }}>
         {output || <Typography color="text.secondary" variant="body1">Corrupted text will appear here...</Typography>}
       </Paper>
     </Box>

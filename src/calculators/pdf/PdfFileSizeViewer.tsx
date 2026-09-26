@@ -61,7 +61,7 @@ const PdfFileSizeViewerContent = () => {
       <PdfFileDropzone onFilesSelected={(files) => { setFile(files[0] ?? null); setInfo(null); }} label="PDF file" selectedNames={file ? [file.name] : []} />
 
       {info && (
-        <Box sx={{ mt: 3, p: 3, borderRadius: 2, bgcolor: 'grey.50', border: '1px solid', borderColor: 'grey.300' }}>
+        <Box sx={{ mt: 3, p: 3, borderRadius: 2, bgcolor: 'action.hover', border: '1px solid', borderColor: 'grey.300' }}>
           <Typography variant="h3" gutterBottom>{info.fileName}</Typography>
 
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2, mt: 2 }}>

@@ -164,7 +164,7 @@ const CashFlowCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: netCashFlow >= 0 ? 'primary.main' : 'error.main', color: 'white' }}>
             <Typography variant="body2">Net Cash Flow</Typography>
-            <Typography variant="h3" fontWeight="bold">{fmt(netCashFlow)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{fmt(netCashFlow)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, mb: 1, display: 'flex', justifyContent: 'space-between' }}>
             <Typography>Total Inflows</Typography>

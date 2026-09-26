@@ -67,7 +67,7 @@ const JsonMinifierContent = () => {
         </Box>
         <Paper
           variant="outlined"
-          sx={{ p: 2, minHeight: 395, bgcolor: 'grey.50', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}
+          sx={{ p: 2, minHeight: 395, bgcolor: 'action.hover', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}
         >
           {output || <Typography color="text.secondary">Minified JSON will appear here...</Typography>}
         </Paper>

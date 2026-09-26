@@ -108,7 +108,7 @@ gap: ${gap};`;
               key={num} 
               sx={{ 
                 bgcolor: 'primary.main', 
-                color: 'white', 
+                color: 'primary.contrastText', 
                 p: 2, 
                 borderRadius: 1,
                 display: 'flex',

@@ -121,7 +121,7 @@ const TextMergerContent = () => {
 
       {/* Output Panel */}
       <Paper sx={{ overflow: 'hidden', border: '1px solid' }}>
-        <Box sx={{ p: 2, bgcolor: 'primary.main', color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Box sx={{ p: 2, bgcolor: 'primary.main', color: 'primary.contrastText', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="h6" display="flex" alignItems="center" gap={1}>
             <CallMergeIcon /> Merged Result
           </Typography>

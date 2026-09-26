@@ -165,7 +165,7 @@ const DrywallCalculator = () => {
           </Box>
           <Box textAlign="center">
             <Typography variant="body2" color="text.secondary">Drywall Sheets Needed</Typography>
-            <Typography variant="h3" color="primary" fontWeight={800}>{sheetsNeeded.toLocaleString()}</Typography>
+            <Typography component="p" variant="h3" color="primary" fontWeight={800}>{sheetsNeeded.toLocaleString()}</Typography>
           </Box>
         </Paper>
       </Box>

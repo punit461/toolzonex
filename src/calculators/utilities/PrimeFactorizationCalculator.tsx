@@ -148,7 +148,7 @@ const PrimeFactorizationCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Prime Factorization</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', wordBreak: 'break-word' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main', wordBreak: 'break-word' }}>
               {number >= 2 ? formatted : '—'}
             </Typography>
             {number >= 2 && (

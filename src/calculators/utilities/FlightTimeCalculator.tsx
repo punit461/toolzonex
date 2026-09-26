@@ -101,7 +101,7 @@ const FlightTimeCalculator = () => {
           {result ? (
             <>
               <Typography variant="body2" color="text.secondary" gutterBottom>Estimated Total Flight Time</Typography>
-              <Typography variant="h3" fontWeight={800} color="primary.main">{formatTime(result.totalHours)}</Typography>
+              <Typography component="p" variant="h3" fontWeight={800} color="primary.main">{formatTime(result.totalHours)}</Typography>
               <Typography variant="body2" color="text.secondary" mt={2}>
                 Cruise time only: {formatTime(result.cruiseHours)}
               </Typography>

@@ -228,7 +228,7 @@ const USMortgageCalculator = () => {
             <Typography variant="h6" color="text.secondary">
               Total Monthly Payment
             </Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 3, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 3, color: 'primary.main' }}>
               {formatUSD(result.totalMonthlyPayment)}
             </Typography>
 

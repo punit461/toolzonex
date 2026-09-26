@@ -92,7 +92,7 @@ const CountdownListGeneratorContent = () => {
             </Typography>
           ) : (
             <>
-              <Typography variant="h3" fontWeight={800} color="primary.main">{daysRemaining}</Typography>
+              <Typography component="p" variant="h3" fontWeight={800} color="primary.main">{daysRemaining}</Typography>
               <Typography variant="body2" color="text.secondary">days until {eventName || 'your event'}</Typography>
               <Typography variant="body2" sx={{ mt: 1 }}>({weeksRemaining} weeks / {monthsRemaining} months)</Typography>
             </>

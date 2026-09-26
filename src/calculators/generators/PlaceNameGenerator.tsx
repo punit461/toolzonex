@@ -69,7 +69,7 @@ const PlaceNameGeneratorContent = () => {
       </Button>
 
       {name && (
-        <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'primary.main', color: 'white', width: '100%', maxWidth: 420 }}>
+        <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText', width: '100%', maxWidth: 420 }}>
           <Typography variant="body2" sx={{ opacity: 0.85 }}>{style === 'realistic' ? 'Realistic' : 'Fantasy'} Place Name</Typography>
           <Typography variant="h4" fontWeight={800}>{name}</Typography>
         </Paper>

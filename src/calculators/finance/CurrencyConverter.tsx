@@ -204,7 +204,7 @@ const CurrencyConverter = () => {
               <>
                 <Typography variant="h6" color="text.secondary">Converted Amount</Typography>
                 {convertedAmount !== null ? (
-                  <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main' }}>
+                  <Typography component="p" variant="h3" sx={{ fontWeight: 700, color: 'primary.main' }}>
                     {convertedAmount.toLocaleString(undefined, { maximumFractionDigits: 2 })} {toCurrency}
                   </Typography>
                 ) : (

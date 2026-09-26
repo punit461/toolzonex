@@ -159,7 +159,7 @@ const FileNameGeneratorContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight={600} mb={2}>Generated File Name</Typography>
-        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white', mb: 2 }}>
+        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText', mb: 2 }}>
           <Typography variant="h6" fontWeight={700} sx={{ wordBreak: 'break-all' }}>
             {generatedName || '—'}
           </Typography>

@@ -123,9 +123,9 @@ const DownPaymentCalculator = () => {
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Down Payment</Typography>
-            <Typography variant="h3" fontWeight="bold">{fmt(finalDownPayment)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{fmt(finalDownPayment)}</Typography>
             <Typography variant="body2">{finalPercent.toFixed(1)}% of purchase price</Typography>
           </Paper>
           <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>

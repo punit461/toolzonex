@@ -126,7 +126,7 @@ const WeightedGradeCalculator = () => {
 
         <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center', height: 'fit-content' }}>
           <Typography variant="body2" color="text.secondary">Overall Grade</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>{overallGrade.toFixed(2)}%</Typography>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>{overallGrade.toFixed(2)}%</Typography>
           <Typography variant="caption" color="text.secondary">Total weight entered: {totalWeight}%</Typography>
         </Paper>
       </Box>

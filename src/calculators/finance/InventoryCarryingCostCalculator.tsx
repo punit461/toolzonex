@@ -122,9 +122,9 @@ const InventoryCarryingCostCalculator = () => {
             <Typography>Total Carrying Cost Rate</Typography>
             <Typography fontWeight={600}>{totalRate.toFixed(1)}%</Typography>
           </Paper>
-          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Annual Carrying Cost</Typography>
-            <Typography variant="h3" fontWeight="bold">{fmt(carryingCost)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{fmt(carryingCost)}</Typography>
           </Paper>
         </Box>
       </Box>

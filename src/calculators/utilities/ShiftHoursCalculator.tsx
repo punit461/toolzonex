@@ -141,7 +141,7 @@ const ShiftHoursCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Paid Hours</Typography>
-            <Typography variant="h2" sx={{ fontWeight: 800, color: 'primary.main', mb: 1 }}>
+            <Typography component="p" variant="h2" sx={{ fontWeight: 800, color: 'primary.main', mb: 1 }}>
               {hours}h {minutes}m
             </Typography>
             <Typography variant="body1" color="text.secondary" gutterBottom>

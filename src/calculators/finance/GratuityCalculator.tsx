@@ -149,7 +149,7 @@ const GratuityCalculator = () => {
               <Box sx={{ textAlign: 'center', width: '100%' }}>
                 <Typography variant="h6" color="text.secondary" gutterBottom>Estimated Gratuity Amount</Typography>
                 
-                <Typography variant="h2" sx={{ fontWeight: 800, color: 'primary.main', my: 3 }}>
+                <Typography component="p" variant="h2" sx={{ fontWeight: 800, color: 'primary.main', my: 3 }}>
                   ₹ {Math.round(gratuity).toLocaleString('en-IN')}
                 </Typography>
                 

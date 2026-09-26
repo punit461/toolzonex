@@ -130,9 +130,9 @@ const AgeCalculator = () => {
             <Typography variant="h6" color="text.secondary" gutterBottom>Exact Age</Typography>
             
             <Typography variant="h2" sx={{ fontWeight: 800, color: 'primary.main', mb: 2, textAlign: 'center' }}>
-              {years} <span style={{ fontSize: '1.5rem', fontWeight: 500, color: '#404040' }}>Years</span><br/>
-              {months} <span style={{ fontSize: '1.5rem', fontWeight: 500, color: '#404040' }}>Months</span><br/>
-              {days} <span style={{ fontSize: '1.5rem', fontWeight: 500, color: '#404040' }}>Days</span>
+              {years} <Box component="span" sx={{ fontSize: '1.5rem', fontWeight: 500, color: 'text.secondary' }}>Years</Box><br/>
+              {months} <Box component="span" sx={{ fontSize: '1.5rem', fontWeight: 500, color: 'text.secondary' }}>Months</Box><br/>
+              {days} <Box component="span" sx={{ fontSize: '1.5rem', fontWeight: 500, color: 'text.secondary' }}>Days</Box>
             </Typography>
 
             {nextBirthday !== null && (

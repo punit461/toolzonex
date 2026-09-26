@@ -150,7 +150,7 @@ const PdfWatermarkRemoverSimpleContent = () => {
           <Typography variant="subtitle1" fontWeight={600} gutterBottom>
             Found {candidates.length} candidate{candidates.length !== 1 ? 's' : ''} — uncheck any you want to keep
           </Typography>
-          <Box sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', p: 1, mb: 2 }}>
+          <Box sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200', p: 1, mb: 2 }}>
             {candidates.map((c) => (
               <FormControlLabel
                 key={c.id}

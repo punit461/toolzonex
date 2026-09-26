@@ -251,7 +251,7 @@ const UnitConverter = () => {
 
         <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center' }}>
           <Typography variant="h6" color="text.secondary" gutterBottom>Result</Typography>
-          <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main' }}>
+          <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main' }}>
             {result.toLocaleString(undefined, { maximumFractionDigits: 6 })}
           </Typography>
         </Box>

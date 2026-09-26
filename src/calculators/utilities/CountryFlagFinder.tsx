@@ -112,7 +112,7 @@ const CountryFlagFinderContent = () => {
       </Typography>
 
       {filtered.length === 1 ? (
-        <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'primary.main', color: 'white', maxWidth: 480 }}>
+        <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText', maxWidth: 480 }}>
           <Typography sx={{ fontSize: '5rem', lineHeight: 1 }}>{flagEmoji(filtered[0].code)}</Typography>
           <Typography variant="h5" fontWeight={700} sx={{ mt: 2 }}>{filtered[0].name}</Typography>
           <Typography variant="body2" sx={{ opacity: 0.85 }}>ISO Code: {filtered[0].code}</Typography>

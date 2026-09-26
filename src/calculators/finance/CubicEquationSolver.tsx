@@ -191,7 +191,7 @@ const CubicEquationSolver = () => {
                 display: 'flex',
                 justifyContent: 'space-between',
                 bgcolor: 'primary.main',
-                color: 'white',
+                color: 'primary.contrastText',
               }}
             >
               <Typography variant="h6">x{i + 1}</Typography>

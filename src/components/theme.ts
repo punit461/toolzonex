@@ -202,8 +202,24 @@ export function createAppTheme(mode: PaletteMode) {
       MuiTab: { styleOverrides: { root: { '&.Mui-focusVisible': insetFocusRing } } },
       MuiCardActionArea: { styleOverrides: { root: { '&.Mui-focusVisible': insetFocusRing } } },
       MuiLink: {
-        defaultProps: { underline: 'hover' as const },
+        // Underlined by default: links inside sentences must be distinguishable
+        // without relying on colour (WCAG 1.4.1). Nav and footer column links
+        // opt out with textDecoration: 'none'.
+        defaultProps: { underline: 'always' as const },
         styleOverrides: { root: { '&:focus-visible': { ...focusRing, borderRadius: 2 } } },
+      },
+      // Selected toggle text in primary.main measured under 4.5:1 on its own
+      // tinted background in dark mode; primary.dark is the higher-contrast
+      // shade in both palettes.
+      MuiToggleButton: {
+        styleOverrides: {
+          root: { '&.Mui-selected.MuiToggleButton-primary': { color: palette.primary.dark } },
+        },
+      },
+      // Accordion titles default to <h3>; on this site accordions sit directly
+      // under the page's h1 (FAQ, tool options), so h3 skipped a level.
+      MuiAccordion: {
+        defaultProps: { slotProps: { heading: { component: 'h2' } } },
       },
       // Field outlines are the only cue to where an input is; MUI's default
       // (23% black) is ~1.8:1. These are >=3:1 against the page (WCAG 1.4.11).

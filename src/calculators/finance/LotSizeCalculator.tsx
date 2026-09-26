@@ -61,7 +61,7 @@ const LotSizeCalculatorContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight="600" mb={2}>Result</Typography>
-        <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
             <Typography variant="h6">Lot Size</Typography>
             <Typography variant="h6" fontWeight="bold">{roundedLot.toFixed(2)} lots</Typography>

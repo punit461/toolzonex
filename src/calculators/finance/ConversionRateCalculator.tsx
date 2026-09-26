@@ -136,25 +136,25 @@ const ConversionRateCalculator = () => {
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           {mode === 'rate' && (
-            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="body2">Conversion Rate</Typography>
-              <Typography variant="h3" fontWeight="bold">
+              <Typography component="p" variant="h3" fontWeight="bold">
                 {result.conversionRate !== null ? `${result.conversionRate.toFixed(2)}%` : '--'}
               </Typography>
             </Paper>
           )}
           {mode === 'conversions' && (
-            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="body2">Required Conversions</Typography>
-              <Typography variant="h3" fontWeight="bold">
+              <Typography component="p" variant="h3" fontWeight="bold">
                 {result.requiredConversions !== null ? Math.ceil(result.requiredConversions).toLocaleString() : '--'}
               </Typography>
             </Paper>
           )}
           {mode === 'visitors' && (
-            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="body2">Required Visitors</Typography>
-              <Typography variant="h3" fontWeight="bold">
+              <Typography component="p" variant="h3" fontWeight="bold">
                 {result.requiredVisitors !== null ? Math.ceil(result.requiredVisitors).toLocaleString() : '--'}
               </Typography>
             </Paper>

@@ -127,7 +127,7 @@ const CpuBottleneckCalculator = () => {
 
         <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Bottleneck Risk</Typography>
-          <Typography variant="h3" fontWeight={800} color={riskColor === 'error' ? 'error.main' : riskColor === 'warning' ? 'warning.main' : 'success.main'}>
+          <Typography component="p" variant="h3" fontWeight={800} color={riskColor === 'error' ? 'error.main' : riskColor === 'warning' ? 'warning.main' : 'success.main'}>
             {risk}
           </Typography>
           <Typography variant="body2" sx={{ mt: 2 }}>{explanation}</Typography>

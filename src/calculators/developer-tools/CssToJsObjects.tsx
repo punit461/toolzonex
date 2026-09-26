@@ -52,7 +52,7 @@ const CssToJsObjectsContent = () => {
         <Paper
           variant="outlined"
           component="pre"
-          sx={{ p: 2, minHeight: 395, bgcolor: 'grey.50', overflow: 'auto', fontFamily: 'monospace', fontSize: '0.85rem', m: 0, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}
+          sx={{ p: 2, minHeight: 395, bgcolor: 'action.hover', overflow: 'auto', fontFamily: 'monospace', fontSize: '0.85rem', m: 0, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}
         >
           {output || 'JS style objects will appear here...'}
         </Paper>

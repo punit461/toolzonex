@@ -57,9 +57,9 @@ const YoutubeCpmCalculatorContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight={600} mb={2}>Result</Typography>
-        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">CPM (Cost Per Mille)</Typography>
-          <Typography variant="h3" fontWeight="bold">{money(result.cpm)}</Typography>
+          <Typography component="p" variant="h3" fontWeight="bold">{money(result.cpm)}</Typography>
           <Typography variant="caption">per 1,000 {mode === 'impressions' ? 'impressions' : 'views'}</Typography>
         </Paper>
       </Box>

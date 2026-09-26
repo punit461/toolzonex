@@ -135,7 +135,7 @@ const ProductSkuGeneratorContent = () => {
             alignItems: 'center',
             justifyContent: 'space-between',
             bgcolor: 'primary.main',
-            color: 'white',
+            color: 'primary.contrastText',
             gap: 2,
           }}
         >

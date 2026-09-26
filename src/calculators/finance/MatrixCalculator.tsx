@@ -269,7 +269,7 @@ const MatrixCalculator = () => {
                 display: 'flex',
                 justifyContent: 'space-between',
                 bgcolor: 'primary.main',
-                color: 'white',
+                color: 'primary.contrastText',
               }}
             >
               <Typography variant="h6">Determinant</Typography>

@@ -92,7 +92,7 @@ const PdfAttachmentExtractorContent = () => {
           <Typography variant="subtitle1" fontWeight={600} gutterBottom>
             {attachments.length} attachment{attachments.length !== 1 ? 's' : ''} found
           </Typography>
-          <List dense sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200' }}>
+          <List dense sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200' }}>
             {attachments.map((att, i) => (
               <ListItem
                 key={i}

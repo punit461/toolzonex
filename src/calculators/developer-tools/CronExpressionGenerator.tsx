@@ -159,7 +159,7 @@ const CronExpressionGenerator = () => {
           />
         </Box>
 
-        <Paper variant="outlined" sx={{ p: 3, bgcolor: 'grey.50' }}>
+        <Paper variant="outlined" sx={{ p: 3, bgcolor: 'action.hover' }}>
           <Typography variant="caption" color="text.secondary">Cron Expression</Typography>
           <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', flexWrap: 'wrap' }}>
             <TextField

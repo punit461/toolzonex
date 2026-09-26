@@ -127,7 +127,7 @@ const BatteryChargingTimeCalculator = () => {
           {result && !Number.isNaN(result.hours) ? (
             <>
               <Typography variant="body2" color="text.secondary" gutterBottom>Estimated Time to Full Charge</Typography>
-              <Typography variant="h3" fontWeight={800} color="primary.main">{formatTime(result.hours)}</Typography>
+              <Typography component="p" variant="h3" fontWeight={800} color="primary.main">{formatTime(result.hours)}</Typography>
               <Typography variant="body2" color="text.secondary" mt={2}>
                 Energy needed: {result.energyNeededWh.toFixed(2)} Wh at {result.effectiveWatts.toFixed(2)} effective W
               </Typography>

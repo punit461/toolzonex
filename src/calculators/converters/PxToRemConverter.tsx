@@ -90,7 +90,7 @@ const PxToRemContent = () => {
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight="600" mb={1}>Quick Reference Table (Base: {baseSize}px)</Typography>
         <Paper sx={{ border: '1px solid', borderColor: 'divider', overflow: 'hidden' }}>
-          <Box sx={{ display: 'flex', bgcolor: 'primary.main', color: 'white', fontWeight: 'bold' }}>
+          <Box sx={{ display: 'flex', bgcolor: 'primary.main', color: 'primary.contrastText', fontWeight: 'bold' }}>
             <Box sx={{ flex: 1, p: 1.5, borderRight: '1px solid rgba(255,255,255,0.2)' }}>PX</Box>
             <Box sx={{ flex: 1, p: 1.5 }}>REM</Box>
           </Box>

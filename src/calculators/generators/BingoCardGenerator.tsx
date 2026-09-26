@@ -52,7 +52,7 @@ const BingoCardGeneratorContent = () => {
         <Paper variant="outlined" sx={{ p: 2, maxWidth: 420, width: '100%' }}>
           <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 0.5, mb: 0.5 }}>
             {COLUMNS.map((col) => (
-              <Box key={col} sx={{ textAlign: 'center', py: 1, bgcolor: 'primary.main', color: 'common.white', borderRadius: 1, fontWeight: 800, fontSize: '1.3rem' }}>
+              <Box key={col} sx={{ textAlign: 'center', py: 1, bgcolor: 'primary.main', color: 'primary.contrastText', borderRadius: 1, fontWeight: 800, fontSize: '1.3rem' }}>
                 {col}
               </Box>
             ))}

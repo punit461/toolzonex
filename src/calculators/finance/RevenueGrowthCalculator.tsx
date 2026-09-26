@@ -131,7 +131,7 @@ const RevenueGrowthCalculator = () => {
           <Typography variant="body2" color="text.secondary">Latest Period Revenue</Typography>
           <Typography variant="h5" fontWeight={700}>{fmt(rows[rows.length - 1]?.revenue ?? 0)}</Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>Latest Period-over-Period Growth</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>
             {latestGrowth === null ? '—' : `${latestGrowth >= 0 ? '+' : ''}${latestGrowth.toFixed(1)}%`}
           </Typography>
         </Paper>

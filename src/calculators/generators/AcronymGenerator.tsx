@@ -200,7 +200,7 @@ const AcronymGeneratorContent = () => {
 
           {acronym && (
             <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'background.default', border: '1px solid', borderColor: 'divider' }}>
-              <Typography variant="h3" sx={{ fontWeight: 800, letterSpacing: '0.1em', mb: 2, color: 'primary.main' }}>
+              <Typography component="p" variant="h3" sx={{ fontWeight: 800, letterSpacing: '0.1em', mb: 2, color: 'primary.main' }}>
                 {acronym}
               </Typography>
               <Button variant="outlined" startIcon={<ContentCopyIcon />} onClick={() => copyResult(acronym)}>

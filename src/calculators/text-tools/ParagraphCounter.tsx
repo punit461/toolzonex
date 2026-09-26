@@ -33,7 +33,7 @@ const ParagraphCounterContent = () => {
       />
 
       <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 2 }}>
-        <Paper sx={{ p: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">Paragraphs</Typography>
           <Typography variant="h4" fontWeight="bold">{stats.paragraphs}</Typography>
         </Paper>

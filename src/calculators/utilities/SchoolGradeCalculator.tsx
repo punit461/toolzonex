@@ -124,9 +124,9 @@ const SchoolGradeCalculator = () => {
           onFocus={(e) => e.target.select()}
           slotProps={{ input: { endAdornment: <InputAdornment position="end">%</InputAdornment> } }}
         />
-        <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">Letter Grade</Typography>
-          <Typography variant="h2" fontWeight="bold">{grade ?? '—'}</Typography>
+          <Typography component="p" variant="h2" fontWeight="bold">{grade ?? '—'}</Typography>
         </Paper>
       </Box>
 

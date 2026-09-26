@@ -104,9 +104,9 @@ const CourierChargeCalculator = () => {
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Cost Breakdown</Typography>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Estimated Total</Typography>
-            <Typography variant="h3" fontWeight="bold">{moneyFmt.format(result.total)}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{moneyFmt.format(result.total)}</Typography>
           </Paper>
           <Paper sx={{ p: 2, mb: 2 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', py: 0.5 }}>

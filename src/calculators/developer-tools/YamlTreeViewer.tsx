@@ -124,7 +124,7 @@ const YamlTreeViewerContent = () => {
         <Typography variant="subtitle1" fontWeight="600">Interactive Tree</Typography>
         <Paper
           variant="outlined"
-          sx={{ p: 2, minHeight: 400, maxHeight: 500, overflow: 'auto', bgcolor: 'grey.50' }}
+          sx={{ p: 2, minHeight: 400, maxHeight: 500, overflow: 'auto', bgcolor: 'action.hover' }}
         >
           {parsed === null ? (
             <Typography color="text.secondary">The interactive tree will appear here once you paste valid YAML...</Typography>

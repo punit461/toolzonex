@@ -171,7 +171,7 @@ const DensityCalculator = () => {
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Results</Typography>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Density</Typography>
             <Typography variant="h3" fontWeight="bold">{result.densityKgM3.toFixed(0)} kg/m³</Typography>
             <Typography variant="body2">{result.densityGperCm3.toFixed(2)} g/cm³</Typography>

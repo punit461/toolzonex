@@ -84,7 +84,7 @@ const PdfDpiCheckerContent = () => {
         <Paper variant="outlined" sx={{ mt: 3, p: 2.5 }}>
           <Box sx={{ textAlign: 'center', mb: 3 }}>
             <Typography variant="caption" color="text.secondary">Effective DPI</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 'bold' }}>{result.dpi}</Typography>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 'bold' }}>{result.dpi}</Typography>
           </Box>
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr 1fr' }, gap: 2 }}>
             <Box>

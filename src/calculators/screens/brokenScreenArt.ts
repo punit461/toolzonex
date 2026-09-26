@@ -132,7 +132,27 @@ export function paintBrokenScreen(ctx: CanvasRenderingContext2D, w: number, h: n
   const iy = h * (0.3 + rng() * 0.4);
 
   if (style === 'lcd') {
-    ctx.fillStyle = '#04050a';
+    // A lit "wallpaper" underneath, so the dead ink and stripes read as damage
+    // to a working display rather than lines on a black screen.
+    const wall = ctx.createLinearGradient(0, 0, w, h);
+    wall.addColorStop(0, '#1d4ed8');
+    wall.addColorStop(0.55, '#6d28d9');
+    wall.addColorStop(1, '#0e7490');
+    ctx.fillStyle = wall;
+    ctx.fillRect(0, 0, w, h);
+    const glowX = w * (0.2 + rng() * 0.6);
+    const glow = ctx.createRadialGradient(glowX, h * 0.3, 0, glowX, h * 0.3, Math.max(w, h) * 0.6);
+    glow.addColorStop(0, 'rgba(255,255,255,0.25)');
+    glow.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = glow;
+    ctx.fillRect(0, 0, w, h);
+    // Backlight bleeding white through one region of the panel.
+    const bleedX = rng() < 0.5 ? rng() * w * 0.3 : w * (0.7 + rng() * 0.3);
+    const bleed = ctx.createLinearGradient(bleedX - w * 0.12, 0, bleedX + w * 0.12, 0);
+    bleed.addColorStop(0, 'rgba(255,255,255,0)');
+    bleed.addColorStop(0.5, 'rgba(235,240,255,0.8)');
+    bleed.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = bleed;
     ctx.fillRect(0, 0, w, h);
     stripeBands(ctx, w, h, 3 + Math.floor(rng() * 3), rng);
     // Horizontal glitch lines.
@@ -142,7 +162,7 @@ export function paintBrokenScreen(ctx: CanvasRenderingContext2D, w: number, h: n
       ctx.fillRect(0, rng() * h, w, 1 + rng() * 3);
     }
     ctx.globalAlpha = 1;
-    inkBleed(ctx, ix, iy, Math.min(w, h) * 0.5, 6 + Math.floor(rng() * 5), rng);
+    inkBleed(ctx, ix, iy, Math.min(w, h) * 0.75, 9 + Math.floor(rng() * 6), rng);
     return { impacts: [{ x: ix, y: iy, scale: 0.8 }] };
   }
 
@@ -164,15 +184,18 @@ export function paintBrokenScreen(ctx: CanvasRenderingContext2D, w: number, h: n
     return { impacts: [{ x: ix, y: iy, scale: 1.2 }, { x: ix + (rng() - 0.5) * w * 0.2, y: iy + (rng() - 0.5) * h * 0.2, scale: 0.6 }] };
   }
 
-  // Cracked glass: a dark screen with a faint glass sheen and several impacts.
+  // Cracked glass: a lock-screen-like gradient under glass, with a diagonal
+  // sheen and several impacts.
   const bg = ctx.createLinearGradient(0, 0, w, h);
-  bg.addColorStop(0, '#101826');
-  bg.addColorStop(1, '#060a12');
+  bg.addColorStop(0, '#0f172a');
+  bg.addColorStop(0.6, '#134e4a');
+  bg.addColorStop(1, '#155e75');
   ctx.fillStyle = bg;
   ctx.fillRect(0, 0, w, h);
-  const sheen = ctx.createLinearGradient(0, 0, w, h * 0.6);
-  sheen.addColorStop(0, 'rgba(255,255,255,0.10)');
-  sheen.addColorStop(0.5, 'rgba(255,255,255,0.02)');
+  const sheen = ctx.createLinearGradient(0, 0, w, h * 0.7);
+  sheen.addColorStop(0, 'rgba(255,255,255,0.22)');
+  sheen.addColorStop(0.45, 'rgba(255,255,255,0.05)');
+  sheen.addColorStop(0.5, 'rgba(255,255,255,0.14)');
   sheen.addColorStop(1, 'rgba(255,255,255,0)');
   ctx.fillStyle = sheen;
   ctx.fillRect(0, 0, w, h);

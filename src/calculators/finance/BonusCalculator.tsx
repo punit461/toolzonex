@@ -117,7 +117,7 @@ const BonusCalculator = () => {
           <Typography variant="subtitle1" fontWeight="600" mb={2}>
             Result
           </Typography>
-          <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="h6">Gross Bonus</Typography>
             <Typography variant="h6" fontWeight="bold">{formatMoney(Math.round(gross), currency)}</Typography>
           </Paper>

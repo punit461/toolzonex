@@ -65,7 +65,7 @@ const PdfMetadataViewerContent = () => {
       {meta && (
         <Box sx={{ mt: 3 }}>
           <Alert severity="success" sx={{ mb: 2 }}>Found {pageCount} page{pageCount !== 1 ? 's' : ''} in this document.</Alert>
-          <List sx={{ bgcolor: 'grey.50', borderRadius: 1, border: '1px solid', borderColor: 'grey.200' }}>
+          <List sx={{ bgcolor: 'action.hover', borderRadius: 1, border: '1px solid', borderColor: 'grey.200' }}>
             {meta.map((entry) => (
               <ListItem key={entry.key} divider>
                 <ListItemText

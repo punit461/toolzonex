@@ -56,7 +56,7 @@ const SecretSantaGeneratorContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         {pairs.length > 0 ? (
-          <Paper sx={{ p: 4, bgcolor: 'primary.main', color: 'white', borderRadius: 4, minHeight: 250 }}>
+          <Paper sx={{ p: 4, bgcolor: 'primary.main', color: 'primary.contrastText', borderRadius: 4, minHeight: 250 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
               <Typography variant="h5" fontWeight="bold" sx={{ opacity: 0.9 }}>Secret Santa Pairs</Typography>
               <IconButton aria-label="Copy" size="small" onClick={copyPairs} sx={{ color: 'white' }}><ContentCopyIcon fontSize="small" /></IconButton>
@@ -72,7 +72,7 @@ const SecretSantaGeneratorContent = () => {
             </Box>
           </Paper>
         ) : (
-          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'grey.50' }}>
+          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'action.hover' }}>
             <Typography color="text.secondary" align="center">
               Enter at least 2 names and click Generate to create Secret Santa pairs.
             </Typography>

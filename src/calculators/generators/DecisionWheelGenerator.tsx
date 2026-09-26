@@ -186,7 +186,7 @@ const DecisionWheelGeneratorContent = () => {
         </Box>
 
         {winner && (
-          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white', width: '100%' }}>
+          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText', width: '100%' }}>
             <Typography variant="body2" sx={{ opacity: 0.85 }}>The wheel landed on</Typography>
             <Typography variant="h5" fontWeight={800}>{winner.label}</Typography>
           </Paper>

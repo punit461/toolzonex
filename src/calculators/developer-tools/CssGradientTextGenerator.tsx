@@ -44,7 +44,7 @@ const CssGradientTextGeneratorContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, display: 'flex', flexDirection: 'column', gap: 3 }}>
         <Paper variant="outlined" sx={{ p: 4, textAlign: 'center', bgcolor: 'background.paper' }}>
-          <Typography
+          <Typography component="p"
             variant="h3"
             sx={{
               fontWeight: 800,

@@ -115,7 +115,7 @@ const BitcoinMiningCalculatorContent = () => {
         <Typography variant="subtitle1" fontWeight={600} mb={2}>Results</Typography>
         <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: result.dailyProfit >= 0 ? 'primary.main' : 'error.main', color: 'white' }}>
           <Typography variant="body2">Daily Profit After Electricity</Typography>
-          <Typography variant="h3" fontWeight="bold">{money(result.dailyProfit)}</Typography>
+          <Typography component="p" variant="h3" fontWeight="bold">{money(result.dailyProfit)}</Typography>
         </Paper>
         <Paper sx={{ p: 2, mb: 1, display: 'flex', justifyContent: 'space-between' }}>
           <Typography>Estimated BTC Mined / Day</Typography>

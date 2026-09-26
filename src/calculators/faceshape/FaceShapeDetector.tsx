@@ -75,7 +75,7 @@ const FaceShapeDetectorContent = () => {
         {result ? (
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Your Face Shape</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 2, color: 'primary.main' }}>{result}</Typography>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 2, color: 'primary.main' }}>{result}</Typography>
             <Typography variant="body1" color="text.secondary">{FACE_SHAPE_DESCRIPTIONS[result]}</Typography>
           </Box>
         ) : (

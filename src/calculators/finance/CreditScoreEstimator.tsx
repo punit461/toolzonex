@@ -173,7 +173,7 @@ const CreditScoreEstimator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Paper sx={{ p: 4, textAlign: 'center', bgcolor: 'action.hover' }}>
             <Typography variant="body2" color="text.secondary" gutterBottom>Estimated Score Range</Typography>
-            <Typography variant="h3" fontWeight={800} color="primary.main">{result.range}</Typography>
+            <Typography component="p" variant="h3" fontWeight={800} color="primary.main">{result.range}</Typography>
             <Typography variant="h6" color="text.secondary" mt={1}>{result.label}</Typography>
             <Typography variant="body2" color="text.secondary" mt={3}>
               Rough educational estimate only — not your real credit score.

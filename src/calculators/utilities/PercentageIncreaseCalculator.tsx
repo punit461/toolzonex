@@ -49,7 +49,7 @@ const PercentageIncreaseCalculatorContent = () => {
           sx={{
             p: 4,
             bgcolor: 'primary.main',
-            color: 'white',
+            color: 'primary.contrastText',
             borderRadius: 4,
             minHeight: 200,
             display: 'flex',
@@ -58,7 +58,7 @@ const PercentageIncreaseCalculatorContent = () => {
             alignItems: 'center',
           }}
         >
-          <Typography variant="h3" fontWeight="bold">
+          <Typography component="p" variant="h3" fontWeight="bold">
             {Math.abs(percentageChange).toFixed(2)}%
           </Typography>
           <Typography variant="h6" sx={{ opacity: 0.9 }}>

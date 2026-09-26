@@ -129,9 +129,9 @@ const CostPerLeadCalculator = () => {
           />
         </Box>
 
-        <Paper sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <Paper sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <Typography variant="body2">Overall Cost Per Lead</Typography>
-          <Typography variant="h3" fontWeight="bold">{money(overallCpl)}</Typography>
+          <Typography component="p" variant="h3" fontWeight="bold">{money(overallCpl)}</Typography>
         </Paper>
       </Box>
 

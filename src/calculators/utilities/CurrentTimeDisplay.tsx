@@ -73,7 +73,7 @@ const CurrentTimeDisplayContent = () => {
           p: 6, 
           textAlign: 'center', 
           bgcolor: 'primary.main', 
-          color: 'white', 
+          color: 'primary.contrastText', 
           borderRadius: 4,
           boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
         }}

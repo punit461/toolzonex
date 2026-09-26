@@ -131,7 +131,7 @@ const ExtractImagesFromPdfContent = () => {
             {images.map((img) => (
               <Grid item xs={6} sm={4} md={3} key={img.index}>
                 <Card>
-                  <CardMedia component="img" image={img.dataUrl} alt={`Image ${img.index}`} sx={{ objectFit: 'contain', height: 160, bgcolor: 'grey.100' }} />
+                  <CardMedia component="img" image={img.dataUrl} alt={`Image ${img.index}`} sx={{ objectFit: 'contain', height: 160, bgcolor: 'action.hover' }} />
                   <CardActions sx={{ justifyContent: 'space-between', px: 1 }}>
                     <Typography variant="caption" color="text.secondary">Page {img.page}</Typography>
                     <IconButton aria-label="Download" size="small" onClick={() => downloadImage(img)}>

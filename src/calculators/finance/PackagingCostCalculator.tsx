@@ -144,7 +144,7 @@ const PackagingCostCalculator = () => {
           <Typography variant="body2" color="text.secondary">Materials Cost per Unit</Typography>
           <Typography variant="h6" fontWeight={600}>{fmt(materialsCost)}</Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>Total Packaging Cost per Unit</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>{fmt(perUnitCost)}</Typography>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>{fmt(perUnitCost)}</Typography>
           {(parseFloat(quantity) || 0) > 0 && (
             <>
               <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>Total for {quantity} Units</Typography>

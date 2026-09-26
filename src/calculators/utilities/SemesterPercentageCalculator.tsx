@@ -146,9 +146,9 @@ const SemesterPercentageCalculator = () => {
           Add Subject
         </Button>
 
-        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">Overall Semester Percentage</Typography>
-          <Typography variant="h3" fontWeight="bold">{overallPercentage.toFixed(2)}%</Typography>
+          <Typography component="p" variant="h3" fontWeight="bold">{overallPercentage.toFixed(2)}%</Typography>
           <Typography variant="body2" mt={1}>{totalObtained} / {totalMax} total marks</Typography>
         </Paper>
 

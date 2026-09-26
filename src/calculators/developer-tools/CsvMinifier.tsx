@@ -125,7 +125,7 @@ const CsvMinifierContent = () => {
           </Box>
           <Paper
             variant="outlined"
-            sx={{ p: 2, minHeight: 380, maxHeight: 460, bgcolor: 'grey.50', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre' }}
+            sx={{ p: 2, minHeight: 380, maxHeight: 460, bgcolor: 'action.hover', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre' }}
           >
             {output || <Typography color="text.secondary">Minified CSV will appear here...</Typography>}
           </Paper>

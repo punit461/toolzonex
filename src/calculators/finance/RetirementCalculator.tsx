@@ -256,7 +256,7 @@ const RetirementCalculator = () => {
               <Typography variant="subtitle2" color="text.secondary" sx={{ textTransform: 'uppercase', letterSpacing: '0.05em', mb: 1 }}>
                 Retirement Corpus Needed
               </Typography>
-              <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 3, fontSize: { xs: '2rem', sm: '2.5rem' } }}>
+              <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 3, fontSize: { xs: '2rem', sm: '2.5rem' } }}>
                 {formatBigCurrency(corpusNeeded, currency)}
               </Typography>
 

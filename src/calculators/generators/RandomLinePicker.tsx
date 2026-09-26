@@ -83,7 +83,7 @@ const RandomLinePickerContent = () => {
             sx={{ 
               p: 4, 
               bgcolor: 'primary.main', 
-              color: 'white',
+              color: 'primary.contrastText',
               borderRadius: 4,
               minHeight: 300
             }}
@@ -101,7 +101,7 @@ const RandomLinePickerContent = () => {
             </Box>
           </Paper>
         ) : (
-          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'grey.50' }}>
+          <Paper variant="outlined" sx={{ p: 4, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: 'action.hover' }}>
             <Typography color="text.secondary" align="center">
               Enter your list on the left and click the button to pick a random winner or item.
             </Typography>

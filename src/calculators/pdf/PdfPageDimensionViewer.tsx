@@ -78,7 +78,7 @@ const PdfPageDimensionViewerContent = () => {
               </Box>
               <Box component="tbody">
                 {pages.map((p) => (
-                  <Box key={p.pageIndex} component="tr" sx={{ '&:hover': { bgcolor: 'grey.50' } }}>
+                  <Box key={p.pageIndex} component="tr" sx={{ '&:hover': { bgcolor: 'action.hover' } }}>
                     <Box component="td" sx={{ py: 1, pr: 2, fontSize: '0.9rem', fontWeight: 600 }}>{p.pageIndex}</Box>
                     <Box component="td" sx={{ py: 1, pr: 2, fontSize: '0.9rem', fontFamily: 'monospace' }}>{p.ptW} × {p.ptH}</Box>
                     <Box component="td" sx={{ py: 1, pr: 2, fontSize: '0.9rem', fontFamily: 'monospace' }}>{p.inW} × {p.inH}</Box>

@@ -110,7 +110,7 @@ const ProbabilityCalculator = () => {
             singleResult !== null ? (
               <>
                 <Typography variant="body2" color="text.secondary">Probability</Typography>
-                <Typography variant="h3" fontWeight={800} color="primary.main">{singleResult.toFixed(4)}</Typography>
+                <Typography component="p" variant="h3" fontWeight={800} color="primary.main">{singleResult.toFixed(4)}</Typography>
                 <Typography variant="body2" color="text.secondary" mt={1}>{(singleResult * 100).toFixed(2)}%</Typography>
               </>
             ) : (
@@ -121,7 +121,7 @@ const ProbabilityCalculator = () => {
               <Typography variant="body2" color="text.secondary">
                 {mode === 'both' ? 'P(A and B)' : 'P(A or B)'}
               </Typography>
-              <Typography variant="h3" fontWeight={800} color="primary.main">{compoundResult.toFixed(4)}</Typography>
+              <Typography component="p" variant="h3" fontWeight={800} color="primary.main">{compoundResult.toFixed(4)}</Typography>
               <Typography variant="body2" color="text.secondary" mt={1}>{(compoundResult * 100).toFixed(2)}%</Typography>
             </>
           ) : (

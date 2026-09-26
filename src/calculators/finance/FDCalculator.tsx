@@ -80,7 +80,7 @@ const FDCalculatorContent = () => {
 
       <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
         <Typography variant="subtitle1" fontWeight="600" mb={2}>Result</Typography>
-        <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
             <Typography variant="h6">Maturity Amount</Typography>
             <Typography variant="h6" fontWeight="bold">₹{maturityAmount.toLocaleString(undefined, { maximumFractionDigits: 0 })}</Typography>

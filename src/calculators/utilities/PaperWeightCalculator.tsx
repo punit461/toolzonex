@@ -132,7 +132,7 @@ const PaperWeightCalculator = () => {
           </Box>
           <Box textAlign="center">
             <Typography variant="body2" color="text.secondary">Total Weight</Typography>
-            <Typography variant="h3" color="primary" fontWeight={800}>
+            <Typography component="p" variant="h3" color="primary" fontWeight={800}>
               {totalGrams.toLocaleString(undefined, { maximumFractionDigits: 1 })} g
             </Typography>
             <Typography variant="body2" color="text.secondary" mt={1}>

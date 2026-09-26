@@ -104,7 +104,7 @@ const GeometricMeanCalculator = () => {
           ) : geoMean !== null ? (
             <>
               <Typography variant="h6" color="text.secondary" gutterBottom>Geometric Mean</Typography>
-              <Typography variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 2 }}>
+              <Typography component="p" variant="h3" sx={{ fontWeight: 800, color: 'primary.main', mb: 2 }}>
                 {geoMean.toLocaleString(undefined, { maximumFractionDigits: 4 })}
               </Typography>
               <Typography variant="body2" color="text.secondary">

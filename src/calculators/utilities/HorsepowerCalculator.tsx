@@ -88,7 +88,7 @@ const HorsepowerCalculator = () => {
 
         <Paper variant="outlined" sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 }, p: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">Horsepower</Typography>
-          <Typography variant="h3" color="primary" fontWeight={800}>{valid ? hp.toFixed(1) : '—'}</Typography>
+          <Typography component="p" variant="h3" color="primary" fontWeight={800}>{valid ? hp.toFixed(1) : '—'}</Typography>
           <Typography variant="caption" color="text.secondary">{valid ? `${kw.toFixed(1)} kW` : ''}</Typography>
         </Paper>
       </Box>

@@ -103,7 +103,7 @@ const WhatIsMyIPContent = () => {
                   <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
                     Your Public IP Address
                   </Typography>
-                  <Typography variant="h3" sx={{ fontWeight: 700, fontFamily: 'monospace', mb: 2, color: 'text.primary' }}>
+                  <Typography component="p" variant="h3" sx={{ fontWeight: 700, fontFamily: 'monospace', mb: 2, color: 'text.primary' }}>
                     {ip}
                   </Typography>
                   <Button 

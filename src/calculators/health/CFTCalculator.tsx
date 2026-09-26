@@ -200,7 +200,7 @@ const CFTCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2 }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>Combat Readiness Grade</Typography>
-            <Typography variant="h2" sx={{ fontWeight: 900, color: overallColor, mb: 3 }}>
+            <Typography component="p" variant="h2" sx={{ fontWeight: 900, color: overallColor, mb: 3 }}>
               {overallGrade}
             </Typography>
 

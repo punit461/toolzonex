@@ -109,11 +109,11 @@ const PotentialEnergyCalculator = () => {
           </Stack>
         </Paper>
 
-        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">
             {solveFor === 'energy' ? 'Potential Energy' : solveFor === 'mass' ? 'Mass' : 'Height'}
           </Typography>
-          <Typography variant="h3" fontWeight="bold">
+          <Typography component="p" variant="h3" fontWeight="bold">
             {result !== null
               ? `${result.toFixed(4)} ${solveFor === 'energy' ? 'J' : solveFor === 'mass' ? 'kg' : 'm'}`
               : '—'}

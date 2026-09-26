@@ -260,7 +260,7 @@ const LLMCostCalculator = () => {
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Box sx={{ p: 4, bgcolor: 'action.hover', borderRadius: 2, textAlign: 'center', height: '100%' }}>
             <Typography variant="h6" color="text.secondary">Cost per Request</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 3, color: 'primary.main' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 700, mb: 3, color: 'primary.main' }}>
               {formatUSD(costPerRequest)}
             </Typography>
 
@@ -288,7 +288,7 @@ const LLMCostCalculator = () => {
               <Box aria-hidden="true" sx={{ height: 220 }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
-                    <Pie
+                    <Pie rootTabIndex={-1}
                       data={chartData}
                       cx="50%"
                       cy="50%"

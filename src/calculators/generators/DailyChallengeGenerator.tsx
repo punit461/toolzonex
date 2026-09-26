@@ -98,7 +98,7 @@ const DailyChallengeGeneratorContent = () => {
 
   return (
     <Box>
-      <Paper sx={{ p: 4, mb: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white', minHeight: 120, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 2 }}>
+      <Paper sx={{ p: 4, mb: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText', minHeight: 120, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 2 }}>
         <Chip label={challenge.category} color={CATEGORY_COLORS[challenge.category]} />
         <Typography variant="h5" fontWeight="bold">{challenge.text}</Typography>
       </Paper>

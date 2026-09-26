@@ -137,7 +137,7 @@ const LuckyNumberCalculator = () => {
               <Paper variant="outlined" sx={{ p: 3, bgcolor: 'action.hover' }}>
                 <Box sx={{ textAlign: 'center', mb: 1 }}>
                   <Typography variant="body2" color="text.secondary">Life Path Number</Typography>
-                  <Typography variant="h3" fontWeight={700} color="primary.main">{result.lp}</Typography>
+                  <Typography component="p" variant="h3" fontWeight={700} color="primary.main">{result.lp}</Typography>
                   <Typography variant="body1">{LIFE_PATH_MEANINGS[String(result.lp)]}</Typography>
                 </Box>
               </Paper>

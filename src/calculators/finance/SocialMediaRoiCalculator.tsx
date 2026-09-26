@@ -75,7 +75,7 @@ const SocialMediaRoiCalculatorContent = () => {
           {result ? (
             <>
               <Typography variant="body2" color="text.secondary" gutterBottom>Campaign ROI</Typography>
-              <Typography
+              <Typography component="p"
                 variant="h2"
                 fontWeight={800}
                 color={result.roiPercent >= 0 ? 'success.main' : 'error.main'}

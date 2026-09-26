@@ -89,7 +89,7 @@ const PdfReadingTimeContent = () => {
         <Paper variant="outlined" sx={{ mt: 3, p: 2.5 }}>
           <Box sx={{ textAlign: 'center', mb: 3 }}>
             <Typography variant="caption" color="text.secondary">Estimated Reading Time</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 'bold' }}>
+            <Typography component="p" variant="h3" sx={{ fontWeight: 'bold' }}>
               {result.hours > 0
                 ? `${result.hours} hr ${result.minutes} min`
                 : `${result.minutes} min`}

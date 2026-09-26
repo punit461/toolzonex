@@ -66,7 +66,7 @@ const AlphabetLearningToolContent = () => {
       
       {/* Main Card */}
       <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 1, md: 4 } }}>
-        <IconButton aria-label="Previous" onClick={prevLetter} size="large" sx={{ bgcolor: 'grey.100' }}>
+        <IconButton aria-label="Previous" onClick={prevLetter} size="large" sx={{ bgcolor: 'action.hover' }}>
           <ArrowBackIosNewIcon />
         </IconButton>
 
@@ -88,7 +88,7 @@ const AlphabetLearningToolContent = () => {
           }}
         >
           {/* Top Left Letter */}
-          <Typography 
+          <Typography component="p" 
             variant="h2" 
             sx={{ position: 'absolute', top: 16, left: 24, fontWeight: 'bold', color: currentItem.color }}
           >
@@ -96,7 +96,7 @@ const AlphabetLearningToolContent = () => {
           </Typography>
           
           {/* Bottom Right Letter (Lowercase) */}
-          <Typography 
+          <Typography component="p" 
             variant="h3" 
             sx={{ position: 'absolute', bottom: 16, right: 24, fontWeight: 'bold', color: currentItem.color, opacity: 0.5 }}
           >
@@ -107,7 +107,7 @@ const AlphabetLearningToolContent = () => {
             {currentItem.emoji}
           </Typography>
 
-          <Typography variant="h3" sx={{ fontWeight: 'bold', color: 'text.primary', mt: 2 }}>
+          <Typography component="p" variant="h3" sx={{ fontWeight: 'bold', color: 'text.primary', mt: 2 }}>
             {currentItem.word}
           </Typography>
 
@@ -125,7 +125,7 @@ const AlphabetLearningToolContent = () => {
           </IconButton>
         </Paper>
 
-        <IconButton aria-label="Next" onClick={nextLetter} size="large" sx={{ bgcolor: 'grey.100' }}>
+        <IconButton aria-label="Next" onClick={nextLetter} size="large" sx={{ bgcolor: 'action.hover' }}>
           <ArrowForwardIosIcon />
         </IconButton>
       </Box>

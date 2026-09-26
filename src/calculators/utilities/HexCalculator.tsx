@@ -90,7 +90,7 @@ const HexCalculatorContent = () => {
           <ConversionRow label="Octal" value={numB !== null ? `0o${toOctal(numB)}` : '—'} />
         </Paper>
 
-        <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="subtitle2" mb={2} sx={{ opacity: 0.9 }}>Result</Typography>
           <ConversionRow label="Hex" value={result !== null ? `0x${toHex(result)}` : '—'} />
           <ConversionRow label="Decimal" value={result !== null ? String(Math.round(result * 10000) / 10000) : '—'} />

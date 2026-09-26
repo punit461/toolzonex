@@ -120,7 +120,7 @@ const RandomTextGeneratorContent = () => {
         </Button>
       </Box>
 
-      <Paper variant="outlined" sx={{ p: 2, bgcolor: 'grey.50' }}>
+      <Paper variant="outlined" sx={{ p: 2, bgcolor: 'action.hover' }}>
         <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 1 }}>
           <Button startIcon={<ContentCopyIcon />} onClick={copy} disabled={!output} size="small">
             {copied ? 'Copied!' : 'Copy'}

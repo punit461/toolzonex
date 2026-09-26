@@ -95,7 +95,7 @@ const ProteinIntakeCalculator = () => {
         </Box>
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight="600" mb={2}>Daily Protein</Typography>
-          <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 2, display: 'flex', justifyContent: 'space-between', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="h6">Recommended</Typography>
             <Typography variant="h6" fontWeight="bold">{protein} g/day</Typography>
           </Paper>

@@ -44,7 +44,7 @@ const RegexEscapeToolContent = () => {
           <Typography variant="subtitle1" fontWeight="600">Escaped for Regex</Typography>
           <Button startIcon={<ContentCopyIcon />} onClick={copy} disabled={!output} size="small">Copy</Button>
         </Box>
-        <Paper variant="outlined" sx={{ p: 2, minHeight: 250, bgcolor: 'grey.50', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
+        <Paper variant="outlined" sx={{ p: 2, minHeight: 250, bgcolor: 'action.hover', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
           {output || <Typography color="text.secondary">Escaped text will appear here...</Typography>}
         </Paper>
       </Box>

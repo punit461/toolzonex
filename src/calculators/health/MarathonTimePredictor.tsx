@@ -90,7 +90,7 @@ const MarathonTimePredictorContent = () => {
           {result ? (
             <>
               <Typography variant="body2" color="text.secondary" gutterBottom>Predicted Marathon Time</Typography>
-              <Typography variant="h2" fontWeight={800} color="primary.main">{formatDuration(result.t2)}</Typography>
+              <Typography component="p" variant="h2" fontWeight={800} color="primary.main">{formatDuration(result.t2)}</Typography>
               <Typography variant="body2" color="text.secondary" mt={2}>
                 Pace: {formatPace(result.paceSecPerKm)}
               </Typography>

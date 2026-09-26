@@ -37,7 +37,7 @@ const PdfPageCounterContent = () => {
       <PdfFileDropzone onFilesSelected={(files) => { setFile(files[0] ?? null); setPageCount(null); }} label="PDF file" selectedNames={file ? [file.name] : []} />
 
       {pageCount !== null && (
-        <Box sx={{ mt: 3, p: 3, borderRadius: 2, bgcolor: 'grey.50', border: '1px solid', borderColor: 'grey.300' }}>
+        <Box sx={{ mt: 3, p: 3, borderRadius: 2, bgcolor: 'action.hover', border: '1px solid', borderColor: 'grey.300' }}>
           <Typography variant="body2" color="text.secondary">File</Typography>
           <Typography variant="body1" sx={{ mb: 1 }}>{file?.name}</Typography>
           <Typography variant="body2" color="text.secondary">Size</Typography>
@@ -45,7 +45,7 @@ const PdfPageCounterContent = () => {
             {file ? `${(file.size / 1024).toFixed(1)} KB` : ''}
           </Typography>
           <Typography variant="body2" color="text.secondary">Pages</Typography>
-          <Typography variant="h3" color="primary">{pageCount}</Typography>
+          <Typography component="p" variant="h3" color="primary">{pageCount}</Typography>
         </Box>
       )}
 

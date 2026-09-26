@@ -63,7 +63,7 @@ const SqlKeywordsLowercaseContent = () => {
           <Typography variant="subtitle1" fontWeight="600">Output (Keywords Lowercased)</Typography>
           <Button startIcon={<ContentCopyIcon />} onClick={copy} disabled={!output} size="small">Copy</Button>
         </Box>
-        <Paper variant="outlined" sx={{ p: 2, minHeight: 340, bgcolor: 'grey.50', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+        <Paper variant="outlined" sx={{ p: 2, minHeight: 340, bgcolor: 'action.hover', overflow: 'auto', fontFamily: 'monospace', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
           {output || <Typography color="text.secondary">Output will appear here...</Typography>}
         </Paper>
       </Box>

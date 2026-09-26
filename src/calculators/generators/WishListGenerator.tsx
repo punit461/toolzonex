@@ -103,7 +103,7 @@ const WishListGeneratorContent = () => {
 
       <Box>
         <Typography variant="subtitle1" fontWeight={600} mb={2}>Your Wish List</Typography>
-        <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">Estimated Total</Typography>
           <Typography variant="h4" fontWeight="bold">{money(total)}</Typography>
         </Paper>

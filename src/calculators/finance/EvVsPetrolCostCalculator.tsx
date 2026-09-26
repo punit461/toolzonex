@@ -154,7 +154,7 @@ const EvVsPetrolCostCalculator = () => {
           <Typography variant="body2" color="text.secondary">Petrol Cost</Typography>
           <Typography variant="h5" fontWeight={700}>{money(result.petrolCost)}</Typography>
         </Paper>
-        <Paper sx={{ p: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+        <Paper sx={{ p: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
           <Typography variant="body2">
             {result.cheaper === 'tie' ? 'Equal Cost' : result.cheaper === 'ev' ? 'EV Saves' : 'Petrol Saves'}
           </Typography>

@@ -93,9 +93,9 @@ const CPACalculator = () => {
         </Box>
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
-          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">Cost Per Acquisition</Typography>
-            <Typography variant="h3" fontWeight="bold">{cpa !== null ? fmt(cpa) : '--'}</Typography>
+            <Typography component="p" variant="h3" fontWeight="bold">{cpa !== null ? fmt(cpa) : '--'}</Typography>
           </Paper>
         </Box>
       </Box>

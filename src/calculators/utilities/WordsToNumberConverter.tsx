@@ -157,7 +157,7 @@ const WordsToNumberConverterContent = () => {
           sx={{
             p: 4,
             bgcolor: 'primary.main',
-            color: 'white',
+            color: 'primary.contrastText',
             borderRadius: 4,
             minHeight: 200,
             display: 'flex',
@@ -169,7 +169,7 @@ const WordsToNumberConverterContent = () => {
           {result.error === null && result.value !== null ? (
             <>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                <Typography variant="h3" fontWeight="bold" sx={{ wordBreak: 'break-all' }}>
+                <Typography component="p" variant="h3" fontWeight="bold" sx={{ wordBreak: 'break-all' }}>
                   {result.value.toLocaleString('en-US', { maximumFractionDigits: 10 })}
                 </Typography>
                 <IconButton aria-label="Copy" size="small" onClick={handleCopy} sx={{ color: 'white' }}>

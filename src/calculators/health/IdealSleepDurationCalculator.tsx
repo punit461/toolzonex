@@ -88,7 +88,7 @@ const IdealSleepDurationCalculator = () => {
 
         <Box sx={{ order: { xs: -1, md: 0 }, mb: { xs: 4, md: 0 } }}>
           <Typography variant="subtitle1" fontWeight={600} mb={2}>Recommended Sleep</Typography>
-          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+          <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
             <Typography variant="body2">{group.label}</Typography>
             <Typography variant="h3" fontWeight="bold">{group.min}-{group.max} hours</Typography>
             <Typography variant="body2">per night</Typography>

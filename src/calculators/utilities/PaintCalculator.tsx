@@ -162,7 +162,7 @@ const PaintCalculator = () => {
           </Box>
           <Box textAlign="center">
             <Typography variant="body2" color="text.secondary">Paint Needed</Typography>
-            <Typography variant="h3" color="primary" fontWeight={800}>
+            <Typography component="p" variant="h3" color="primary" fontWeight={800}>
               {gallonsNeeded.toLocaleString(undefined, { maximumFractionDigits: 2 })} {volUnit}
             </Typography>
           </Box>

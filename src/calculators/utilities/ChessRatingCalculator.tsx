@@ -101,9 +101,9 @@ const ChessRatingCalculator = () => {
           </Box>
           <Box>
             <Typography variant="subtitle1" fontWeight={600} mb={2}>Results</Typography>
-            <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="body2">Performance Rating</Typography>
-              <Typography variant="h3" fontWeight="bold">{performance.perf.toFixed(0)}</Typography>
+              <Typography component="p" variant="h3" fontWeight="bold">{performance.perf.toFixed(0)}</Typography>
             </Paper>
             <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between' }}>
               <Typography>Total Games</Typography>
@@ -119,9 +119,9 @@ const ChessRatingCalculator = () => {
           </Box>
           <Box>
             <Typography variant="subtitle1" fontWeight={600} mb={2}>Results</Typography>
-            <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+            <Paper sx={{ p: 3, mb: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'primary.contrastText' }}>
               <Typography variant="body2">Expected Score</Typography>
-              <Typography variant="h3" fontWeight="bold">{expected.expectedScore.toFixed(2)}</Typography>
+              <Typography component="p" variant="h3" fontWeight="bold">{expected.expectedScore.toFixed(2)}</Typography>
             </Paper>
             <Paper sx={{ p: 2, mb: 2, display: 'flex', justifyContent: 'space-between' }}>
               <Typography>Rating Gap (Opp − Yours)</Typography>

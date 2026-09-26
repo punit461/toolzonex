@@ -71,7 +71,7 @@ const GameScoreTrackerContent = () => {
           </Button>
         </Box>
 
-        <Paper variant="outlined" sx={{ bgcolor: 'grey.50' }}>
+        <Paper variant="outlined" sx={{ bgcolor: 'action.hover' }}>
           <List disablePadding>
             {players.length === 0 && (
               <ListItem>
@@ -133,7 +133,7 @@ const GameScoreTrackerContent = () => {
           sx={{ 
             p: 3, 
             bgcolor: 'primary.main', 
-            color: 'white',
+            color: 'primary.contrastText',
             borderRadius: 4
           }}
         >
