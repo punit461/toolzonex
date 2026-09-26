@@ -5,6 +5,7 @@ import { Box, Typography, Tabs, Tab, Grid, Paper, Snackbar } from '@mui/material
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 const CATEGORIES: { label: string; emoji: string[] }[] = [
   {
     label: 'Smileys & Emotion',
@@ -74,7 +75,7 @@ const EmojiCategoryBrowserContent = () => {
       <Grid container spacing={1.5}>
         {CATEGORIES[tab].emoji.map((e, i) => (
           <Grid item xs={3} sm={2} md={1.5} key={i}>
-            <Paper
+            <Paper {...keyboardClickable}
               onClick={() => copyEmoji(e)}
               sx={{ p: 1.5, textAlign: 'center', cursor: 'pointer', fontSize: '1.8rem', '&:hover': { bgcolor: 'action.hover' } }}
               variant="outlined"

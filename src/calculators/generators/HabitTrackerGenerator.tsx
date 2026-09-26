@@ -8,6 +8,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 const HabitTrackerGeneratorContent = () => {
   const [habits, setHabits] = useState<string[]>(['Drink water', 'Exercise', 'Read']);
   const [days, setDays] = useState('30');
@@ -104,7 +105,7 @@ const HabitTrackerGeneratorContent = () => {
                   const key = `${habitIdx}-${day}`;
                   const isChecked = !!checked[key];
                   return (
-                    <Box
+                    <Box {...keyboardClickable} aria-pressed={isChecked} aria-label={`${habits[habitIdx] || `Habit ${habitIdx + 1}`}, day ${day}`}
                       key={day}
                       onClick={() => toggle(habitIdx, day)}
                       sx={{

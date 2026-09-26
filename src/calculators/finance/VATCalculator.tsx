@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react';
 import {
   Box, TextField, Typography, MenuItem, Select, InputAdornment,
-  ToggleButtonGroup, ToggleButton,
+  ToggleButtonGroup, ToggleButton, Button,
 } from '@mui/material';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
@@ -211,13 +211,16 @@ const VATCalculator = () => {
           </Box>
 
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            <Typography
-              variant="body2"
-              sx={{ cursor: 'pointer', color: useCustomRate ? 'primary.main' : 'text.secondary', fontWeight: 600 }}
+            {/* Was a clickable <p>, unreachable by keyboard. */}
+            <Button
+              size="small"
+              variant="text"
+              aria-pressed={useCustomRate}
               onClick={() => setUseCustomRate(!useCustomRate)}
+              sx={{ p: 0, minWidth: 0, fontWeight: 600, color: useCustomRate ? 'primary.main' : 'text.secondary' }}
             >
               {useCustomRate ? '✓ ' : ''}Use a custom rate instead
-            </Typography>
+            </Button>
             {useCustomRate && (
               <TextField
                 size="small"

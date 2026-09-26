@@ -6,6 +6,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 interface Palette {
   name: string;
   tags: string[];
@@ -74,7 +75,7 @@ const ColorPaletteLibraryContent = () => {
             <Box sx={{ display: 'flex', height: 80 }}>
               {palette.colors.map((hex) => (
                 <Tooltip title={hex} key={hex} arrow>
-                  <Box
+                  <Box {...keyboardClickable}
                     onClick={() => handleCopy(hex)}
                     sx={{ flex: 1, bgcolor: hex, cursor: 'pointer', transition: 'flex 0.2s', '&:hover': { flex: 1.2 } }}
                   />

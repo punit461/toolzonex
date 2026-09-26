@@ -285,7 +285,7 @@ const LLMCostCalculator = () => {
             </Box>
 
             {(inputCost > 0 || outputCost > 0) && (
-              <Box sx={{ height: 220 }}>
+              <Box aria-hidden="true" sx={{ height: 220 }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <Pie

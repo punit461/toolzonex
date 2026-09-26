@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Typography, Divider, Card, CardActionArea, CardContent } from '@mui/material';
+import { Box, Typography, Divider, Card, CardActionArea, CardContent, Link as MuiLink } from '@mui/material';
 import React from 'react';
 import Link from 'next/link';
 import ArticleIcon from '@mui/icons-material/Article';
@@ -16,6 +16,19 @@ interface CalculatorShellProps {
 }
 
 const RELATED_COUNT = 6;
+
+/**
+ * Finance and health results feed real decisions (tax filing, loans,
+ * pregnancy dates), so those pages say plainly, next to the result, that it's
+ * an estimate. The full wording is in the Terms (section "Results are
+ * estimates, not professional advice").
+ */
+const ADVICE_NOTICE: Record<string, string> = {
+  Finance:
+    'Estimate for information only, not financial, tax or investment advice. Rates and rules change, so check anything important with a qualified professional or the official source.',
+  Health:
+    'For general information only, not medical advice. Talk to a doctor before making health decisions based on this result.',
+};
 
 const CATEGORY_DASHBOARD_ROUTES: Record<string, string> = {
   Finance: '/finance',
@@ -102,9 +115,15 @@ const CalculatorShell = ({ url, children, content }: CalculatorShellProps) => {
         </Typography>
       </Box>
 
-      <Box sx={{ mb: 8, p: { xs: 2, md: 4 }, bgcolor: 'background.paper', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
+      <Box sx={{ mb: ADVICE_NOTICE[category] ? 2 : 8, p: { xs: 2, md: 4 }, bgcolor: 'background.paper', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
         {children}
       </Box>
+      {ADVICE_NOTICE[category] && (
+        <Typography role="note" variant="body2" color="text.secondary" sx={{ mb: 8 }}>
+          {ADVICE_NOTICE[category]}{' '}
+          <MuiLink component={Link} href="/terms-of-service#not-advice">Terms</MuiLink>
+        </Typography>
+      )}
 
       <Divider sx={{ mb: 6 }} />
 

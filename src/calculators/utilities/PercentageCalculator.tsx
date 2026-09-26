@@ -103,7 +103,7 @@ const PercentageCalculator = () => {
             <Typography>?</Typography>
           </Box>
           <Box sx={{ mt: 3, p: 2, bgcolor: 'action.hover', borderRadius: 1 }}>
-            <Typography variant="h5">Answer: <span style={{ fontWeight: 800, color: '#171717' }}>{res1}</span></Typography>
+            <Typography variant="h5">Answer: <Box component="span" sx={{ fontWeight: 800, color: 'text.primary' }}>{res1}</Box></Typography>
             <Typography variant="caption" color="text.secondary">{val1A}% of {val1B} = {res1}</Typography>
           </Box>
         </Paper>
@@ -134,7 +134,7 @@ const PercentageCalculator = () => {
             <Typography>?</Typography>
           </Box>
           <Box sx={{ mt: 3, p: 2, bgcolor: 'action.hover', borderRadius: 1 }}>
-            <Typography variant="h5">Answer: <span style={{ fontWeight: 800, color: '#171717' }}>{res2.toFixed(2)}%</span></Typography>
+            <Typography variant="h5">Answer: <Box component="span" sx={{ fontWeight: 800, color: 'text.primary' }}>{res2.toFixed(2)}%</Box></Typography>
           </Box>
         </Paper>
 
@@ -164,7 +164,7 @@ const PercentageCalculator = () => {
             />
           </Box>
           <Box sx={{ mt: 3, p: 2, bgcolor: 'action.hover', borderRadius: 1 }}>
-            <Typography variant="h5">Answer: <span style={{ fontWeight: 800, color: res3 >= 0 ? '#22c55e' : '#ef4444' }}>{Math.abs(res3).toFixed(2)}% {res3 >= 0 ? 'Increase' : 'Decrease'}</span></Typography>
+            <Typography variant="h5">Answer: <Box component="span" sx={{ fontWeight: 800, color: res3 >= 0 ? 'success.main' : 'error.main' }}>{Math.abs(res3).toFixed(2)}% {res3 >= 0 ? 'Increase' : 'Decrease'}</Box></Typography>
           </Box>
         </Paper>
 

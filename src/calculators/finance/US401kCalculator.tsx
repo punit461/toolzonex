@@ -255,7 +255,7 @@ const US401kCalculator = () => {
               </Typography>
             )}
 
-            <Box sx={{ height: 220 }}>
+            <Box aria-hidden="true" sx={{ height: 220 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={projection.rows} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                   <defs>

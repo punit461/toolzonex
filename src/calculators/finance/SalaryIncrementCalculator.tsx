@@ -267,7 +267,7 @@ const SalaryIncrementCalculator = () => {
               </Box>
             )}
 
-            <Box sx={{ height: 300 }}>
+            <Box aria-hidden="true" sx={{ height: 300 }}>
               {isClient && (
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>

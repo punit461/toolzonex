@@ -5,6 +5,7 @@ import { Box, Typography, Paper, Grid, Alert } from '@mui/material';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 const LEVELS = ['00', '33', '66', '99', 'CC', 'FF'];
 
 const PALETTE: string[] = (() => {
@@ -42,7 +43,7 @@ const WebSafeColorGeneratorContent = () => {
       <Grid container spacing={0.5}>
         {PALETTE.map((hex) => (
           <Grid item xs={1} key={hex} sx={{ width: '16.66%', flexBasis: '16.66%', maxWidth: '16.66%' }}>
-            <Paper
+            <Paper {...keyboardClickable}
               onClick={() => handleSelect(hex)}
               sx={{
                 aspectRatio: '1 / 1',

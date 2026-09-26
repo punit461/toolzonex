@@ -46,7 +46,7 @@ const Adler32GeneratorContent = () => {
         placeholder="Type or paste any text..."
       />
       <Paper variant="outlined" sx={{ p: 2, position: 'relative', bgcolor: 'grey.900', color: '#10b981', fontFamily: 'monospace', wordBreak: 'break-all', minHeight: 56 }}>
-        {hash || <Typography color="text.secondary" component="span" sx={{ fontFamily: 'inherit' }}>Adler-32 checksum will appear here...</Typography>}
+        {hash || <Typography component="span" sx={{ fontFamily: 'inherit', color: 'grey.400' }}>Adler-32 checksum will appear here...</Typography>}
         <Button
           size="small"
           variant="contained"

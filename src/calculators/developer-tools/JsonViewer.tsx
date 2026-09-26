@@ -1,13 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Box, TextField, Typography, Button, Paper, Alert, ToggleButtonGroup, ToggleButton, IconButton } from '@mui/material';
+import { Box, TextField, Typography, Button, Paper, Alert, ToggleButtonGroup, ToggleButton } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue };
 
 function valueColor(value: JsonValue): string {
@@ -57,10 +58,13 @@ function JsonNode({ label, value, isIndex }: { label: string | null; value: Json
 
   return (
     <Box sx={{ fontFamily: 'monospace', fontSize: '0.85rem', lineHeight: 1.9 }}>
-      <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', userSelect: 'none' }} onClick={() => setExpanded((e) => !e)}>
-        <IconButton size="small" sx={{ p: 0.25, mr: 0.5 }} tabIndex={-1}>
+      {/* The whole row toggles. It used to hold a tabIndex={-1} IconButton,
+          so keyboard users couldn't expand anything; now the row itself is the
+          button (same pattern as JsonTreeViewer). */}
+      <Box {...keyboardClickable} aria-expanded={expanded} sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', userSelect: 'none' }} onClick={() => setExpanded((e) => !e)}>
+        <Box sx={{ display: 'flex', p: 0.25, mr: 0.5 }}>
           {expanded ? <ExpandMoreIcon fontSize="small" /> : <ChevronRightIcon fontSize="small" />}
-        </IconButton>
+        </Box>
         {keyLabel}
         <Box component="span" sx={{ color: 'text.secondary' }}>
           {bracketOpen}

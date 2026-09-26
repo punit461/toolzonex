@@ -17,7 +17,9 @@ interface Props {
   url: string;
 }
 
-const WINDOWS_BLUE = '#0078d7';
+// #0078d4 rather than #0078d7: indistinguishable, but white text on it clears
+// WCAG AA (4.53:1) where #0078d7 sits exactly on the 4.5 line.
+const WINDOWS_BLUE = '#0078d4';
 
 // Real Windows stop codes, most familiar first.
 const STOP_CODES = [
@@ -155,7 +157,7 @@ const WindowsScreenDisplay = ({ os, variant }: { os: 10 | 11; variant: 'bsod' | 
             <Typography sx={{ fontSize: { xs: '1.3rem', md: '1.6rem' }, fontWeight: 400, mb: 1 }}>
               Working on updates <Percent key={runKey} start={start} mode="update" />% complete
             </Typography>
-            <Typography sx={{ fontSize: '0.95rem', opacity: 0.9 }}>
+            <Typography sx={{ fontSize: '0.95rem' }}>
               {os === 11 ? "Don't turn off your PC. This will take a while." : "Don't turn off your computer"}
             </Typography>
           </Box>
@@ -169,7 +171,7 @@ const WindowsScreenDisplay = ({ os, variant }: { os: 10 | 11; variant: 'bsod' | 
             <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.3rem' }, mb: 6 }}>
               <Percent key={runKey} start={0} mode="bsod" />% complete
             </Typography>
-            <Typography sx={{ fontSize: '0.85rem', opacity: 0.85 }}>Stop code: {stopCode}</Typography>
+            <Typography sx={{ fontSize: '0.85rem' }}>Stop code: {stopCode}</Typography>
           </Box>
         )}
 
@@ -184,13 +186,13 @@ const WindowsScreenDisplay = ({ os, variant }: { os: 10 | 11; variant: 'bsod' | 
             </Typography>
             <Box sx={{ display: 'flex', gap: 2, alignItems: 'flex-start' }}>
               <Box sx={{ flexShrink: 0, lineHeight: 0 }}>
-                <QRCodeSVG value="https://www.windows.com/stopcode" size={88} bgColor="#ffffff" fgColor={WINDOWS_BLUE} marginSize={1} />
+                <QRCodeSVG value="https://www.windows.com/stopcode" size={88} bgColor="#ffffff" fgColor={WINDOWS_BLUE} marginSize={1} title="QR code linking to windows.com/stopcode" />
               </Box>
               <Box>
-                <Typography sx={{ fontSize: '0.8rem', opacity: 0.85 }}>
+                <Typography sx={{ fontSize: '0.8rem' }}>
                   For more information about this issue and possible fixes, visit https://www.windows.com/stopcode
                 </Typography>
-                <Typography sx={{ fontSize: '0.8rem', opacity: 0.85, mt: 1 }}>
+                <Typography sx={{ fontSize: '0.8rem', mt: 1 }}>
                   If you call a support person, give them this info:<br />
                   Stop code: {stopCode}
                 </Typography>
@@ -247,6 +249,7 @@ const WindowsScreen = ({ os, variant, title, description, url }: Props) => {
         <ul>
           <li><strong>Does this actually affect the computer?</strong> No — it&apos;s just a fullscreen webpage that looks like a Windows {variant === 'bsod' ? 'error' : 'update'} screen. Closing the tab or pressing Esc returns everything to normal instantly.</li>
           <li><strong>Will this trigger a real restart or update?</strong> No, nothing on the device is touched.</li>
+          <li><strong>Is this made by Microsoft?</strong> No. It&apos;s an unofficial imitation for harmless pranks. Windows is a trademark of Microsoft Corporation, which isn&apos;t affiliated with ToolZoneX. Don&apos;t use it to deceive anyone into paying or giving access to a device — that&apos;s how tech-support scams work.</li>
           {variant === 'update' ? (
             <>
               <li><strong>How do I set up this Windows {os} update screen prank on a coworker&apos;s PC?</strong> Open this page on their screen while they&apos;re away, click &quot;Click to Fullscreen&quot; (or press F), and leave it running — the spinning &quot;Working on updates&quot; percentage looks convincing at a glance. Press Esc together to reveal the prank when they get back.</li>

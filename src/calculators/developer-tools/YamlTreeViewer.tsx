@@ -8,6 +8,7 @@ import yaml from 'js-yaml';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 type YamlValue = string | number | boolean | null | YamlValue[] | { [key: string]: YamlValue };
 
 function valueColor(value: YamlValue): string {
@@ -57,7 +58,7 @@ function YamlNode({ label, value, isIndex }: { label: string | null; value: Yaml
 
   return (
     <Box sx={{ fontFamily: 'monospace', fontSize: '0.85rem', lineHeight: 1.9 }}>
-      <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', userSelect: 'none' }} onClick={() => setExpanded((e) => !e)}>
+      <Box {...keyboardClickable} aria-expanded={expanded} sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', userSelect: 'none' }} onClick={() => setExpanded((e) => !e)}>
         <Box sx={{ display: 'flex', p: 0.25, mr: 0.5 }}>
           {expanded ? <ExpandMoreIcon fontSize="small" /> : <ChevronRightIcon fontSize="small" />}
         </Box>

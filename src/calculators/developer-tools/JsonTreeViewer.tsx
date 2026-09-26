@@ -8,6 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue };
 
 function valueColor(value: JsonValue): string {
@@ -97,7 +98,7 @@ function JsonNode({ label, value, isIndex, search }: { label: string | null; val
 
   return (
     <Box sx={{ fontFamily: 'monospace', fontSize: '0.85rem', lineHeight: 1.9 }}>
-      <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', userSelect: 'none' }} onClick={() => setManualExpanded((e) => !e)}>
+      <Box {...keyboardClickable} aria-expanded={expanded} sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', userSelect: 'none' }} onClick={() => setManualExpanded((e) => !e)}>
         <Box sx={{ display: 'flex', p: 0.25, mr: 0.5 }}>
           {expanded ? <ExpandMoreIcon fontSize="small" /> : <ChevronRightIcon fontSize="small" />}
         </Box>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Box, TextField, Button, Typography, Paper, Alert, CircularProgress, Grid } from '@mui/material';
+import { Box, TextField, Button, Typography, Paper, Alert, CircularProgress, Grid, Link } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CheckIcon from '@mui/icons-material/Check';
 import RefreshIcon from '@mui/icons-material/Refresh';
@@ -126,7 +126,7 @@ const WhatIsMyIPContent = () => {
                 </Button>
                 <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 1.5 }}>
                   Your IP address is looked up by ipapi.co (or api.ipify.org if that fails) when this page loads.
-                  ToolZoneX doesn&apos;t store it. See our <a href="/privacy-policy#outside-services">Privacy Policy</a>.
+                  ToolZoneX doesn&apos;t store it. See our <Link href="/privacy-policy#outside-services">Privacy Policy</Link>.
                 </Typography>
               </>
             )}

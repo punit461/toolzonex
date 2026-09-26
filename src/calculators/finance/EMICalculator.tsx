@@ -204,7 +204,7 @@ const EMICalculator = () => {
               </Box>
             </Box>
 
-            <Box sx={{ height: 250 }}>
+            <Box aria-hidden="true" sx={{ height: 250 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie

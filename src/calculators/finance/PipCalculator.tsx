@@ -5,6 +5,7 @@ import { Box, TextField, Typography, Paper, MenuItem, Select, FormControl, Input
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 const PipCalculatorContent = () => {
   const [lotSize, setLotSize] = useState<string>('standard');
   const [exchangeRate, setExchangeRate] = useState<string>('1.1000');
@@ -40,14 +41,14 @@ const PipCalculatorContent = () => {
         <Paper variant="outlined" sx={{ p: 2 }}>
           <Typography variant="subtitle2" mb={1}>Pair Type</Typography>
           <Box sx={{ display: 'flex', gap: 1 }}>
-            <Paper
+            <Paper {...keyboardClickable} aria-pressed={!isJpy}
               onClick={() => setIsJpy(false)}
               sx={{ p: 1.5, flex: 1, cursor: 'pointer', bgcolor: !isJpy ? 'primary.main' : 'action.hover', color: !isJpy ? 'white' : 'text.primary', textAlign: 'center', border: '1px solid', borderColor: !isJpy ? 'primary.main' : 'divider' }}
             >
               <Typography variant="body2" fontWeight="bold">Non-JPY</Typography>
               <Typography variant="caption" sx={{ opacity: 0.8 }}>Pip = 0.0001</Typography>
             </Paper>
-            <Paper
+            <Paper {...keyboardClickable} aria-pressed={isJpy}
               onClick={() => setIsJpy(true)}
               sx={{ p: 1.5, flex: 1, cursor: 'pointer', bgcolor: isJpy ? 'primary.main' : 'action.hover', color: isJpy ? 'white' : 'text.primary', textAlign: 'center', border: '1px solid', borderColor: isJpy ? 'primary.main' : 'divider' }}
             >

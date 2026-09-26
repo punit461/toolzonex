@@ -71,7 +71,7 @@ export function WeeklyDashboard() {
 
       <Card>
         <h2 className="mb-4 text-sm font-semibold text-text-muted uppercase">Focus score trend</h2>
-        <ResponsiveContainer width="100%" height={220}>
+        <div aria-hidden="true"><ResponsiveContainer width="100%" height={220}>
           <LineChart data={chartData}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" />
             <XAxis dataKey="day" stroke="var(--color-text-muted)" fontSize={12} />
@@ -79,12 +79,12 @@ export function WeeklyDashboard() {
             <Tooltip contentStyle={{ borderRadius: 8, border: '1px solid var(--color-border)' }} />
             <Line type="monotone" dataKey="score" stroke="var(--color-primary)" strokeWidth={2} dot={{ r: 3 }} connectNulls />
           </LineChart>
-        </ResponsiveContainer>
+        </ResponsiveContainer></div>
       </Card>
 
       <Card>
         <h2 className="mb-4 text-sm font-semibold text-text-muted uppercase">Distraction trend</h2>
-        <ResponsiveContainer width="100%" height={220}>
+        <div aria-hidden="true"><ResponsiveContainer width="100%" height={220}>
           <BarChart data={chartData}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" />
             <XAxis dataKey="day" stroke="var(--color-text-muted)" fontSize={12} />
@@ -92,7 +92,7 @@ export function WeeklyDashboard() {
             <Tooltip contentStyle={{ borderRadius: 8, border: '1px solid var(--color-border)' }} />
             <Bar dataKey="distractions" fill="var(--color-accent)" radius={[4, 4, 0, 0]} />
           </BarChart>
-        </ResponsiveContainer>
+        </ResponsiveContainer></div>
       </Card>
     </div>
   )

@@ -282,6 +282,8 @@ const RetirementCalculator = () => {
             <Box sx={{ flexGrow: 1, height: 350, mt: 2 }}>
               <Typography variant="subtitle2" sx={{ mb: 2, textAlign: 'left' }}>Corpus Growth Projection</Typography>
               {isClient && (
+                // Chart repeats the figures shown in text above; hidden from screen readers.
+                <Box aria-hidden="true" sx={{ height: '100%' }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={chartData} margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
@@ -293,6 +295,7 @@ const RetirementCalculator = () => {
                     <Line type="monotone" dataKey="Total Invested" stroke="#71717A" strokeWidth={2} strokeDasharray="5 5" dot={false} />
                   </LineChart>
                 </ResponsiveContainer>
+                </Box>
               )}
             </Box>
           </Box>

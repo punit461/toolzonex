@@ -11,6 +11,7 @@ import GifIcon from '@mui/icons-material/Gif';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 interface Frame {
   id: string;
   url: string;
@@ -142,7 +143,7 @@ const GifMakerContent = () => {
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
       <input ref={fileInputRef} type="file" accept="image/*" multiple hidden onChange={handleFileChange} />
 
-      <Paper
+      <Paper {...keyboardClickable}
         variant="outlined"
         onDrop={handleDrop}
         onDragOver={(e) => e.preventDefault()}

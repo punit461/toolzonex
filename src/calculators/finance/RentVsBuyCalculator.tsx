@@ -263,7 +263,7 @@ const RentVsBuyCalculator = () => {
               )}
             </Box>
 
-            <Box sx={{ height: 250, mt: 'auto' }}>
+            <Box aria-hidden="true" sx={{ height: 250, mt: 'auto' }}>
               {isClient && (
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={chartData}>

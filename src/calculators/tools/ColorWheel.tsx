@@ -6,6 +6,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 type Harmony = 'complementary' | 'analogous' | 'triadic' | 'split-complementary' | 'tetradic' | 'monochromatic';
 
 const HARMONY_OFFSETS: Record<Harmony, number[]> = {
@@ -76,7 +77,7 @@ const ColorWheelContent = () => {
             const y = RADIUS + dist * Math.sin(angleRad);
             return (
               <Tooltip title={s.hex} key={i} arrow>
-                <Box
+                <Box {...keyboardClickable}
                   onClick={() => handleCopy(s.hex)}
                   sx={{
                     position: 'absolute',
@@ -140,7 +141,7 @@ const ColorWheelContent = () => {
 
         <Box sx={{ display: 'flex', borderRadius: 2, overflow: 'hidden', boxShadow: 2, minHeight: 140 }}>
           {swatches.map((s, i) => (
-            <Box
+            <Box {...keyboardClickable}
               key={i}
               onClick={() => handleCopy(s.hex)}
               sx={{

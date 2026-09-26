@@ -448,7 +448,8 @@ const LoremIpsumGeneratorContent = () => {
           </Box>
         </Box>
 
-        <Paper sx={{ p: 2, bgcolor: 'background.default', border: '1px solid', borderColor: 'divider', minHeight: 300, maxHeight: 600, overflow: 'auto' }}>
+        {/* Scrollable, so it must be focusable for keyboard users to scroll it (WCAG 2.1.1). */}
+        <Paper tabIndex={0} role="region" aria-label="Generated text" sx={{ p: 2, bgcolor: 'background.default', border: '1px solid', borderColor: 'divider', minHeight: 300, maxHeight: 600, overflow: 'auto' }}>
           {htmlResult ? (
             view === 'source' ? (
               <Box component="pre" sx={{ m: 0, whiteSpace: 'pre-wrap', fontFamily: 'monospace', fontSize: '0.85rem', color: 'text.secondary' }}>

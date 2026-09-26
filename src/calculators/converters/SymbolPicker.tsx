@@ -5,6 +5,7 @@ import { Box, Typography, Tabs, Tab, Grid, Paper, Snackbar } from '@mui/material
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 const CATEGORIES: { label: string; symbols: { char: string; name: string }[] }[] = [
   {
     label: 'Legal',
@@ -101,7 +102,7 @@ const SymbolPickerContent = () => {
       <Grid container spacing={1.5}>
         {CATEGORIES[tab].symbols.map((s) => (
           <Grid item xs={3} sm={2} md={1.5} key={s.char + s.name}>
-            <Paper
+            <Paper {...keyboardClickable}
               onClick={() => copySymbol(s.char)}
               sx={{ p: 1.5, textAlign: 'center', cursor: 'pointer', '&:hover': { bgcolor: 'action.hover' } }}
               variant="outlined"

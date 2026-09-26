@@ -6,6 +6,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 interface ColorMeaning {
   name: string;
   hex: string;
@@ -71,7 +72,7 @@ const ColorMeaningsContent = () => {
 
       <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: 1.5 }}>
         {COLOR_MEANINGS.map((c) => (
-          <Paper
+          <Paper {...keyboardClickable}
             key={c.name}
             variant="outlined"
             onClick={() => setActive(c.name)}

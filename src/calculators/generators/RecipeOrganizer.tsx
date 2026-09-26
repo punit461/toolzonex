@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Box, Typography, Paper, TextField, Stack, Button, IconButton, MenuItem, Select, Grid, Chip } from '@mui/material';
+import { ButtonBase, Box, Typography, Paper, TextField, Stack, Button, IconButton, MenuItem, Select, Grid, Chip } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CalculatorShell from '../../components/CalculatorShell';
@@ -66,11 +66,18 @@ const RecipeOrganizerContent = () => {
             >
               <Stack direction="row" justifyContent="space-between" alignItems="center">
                 <Box>
-                  <Typography fontWeight={600}>{r.name}</Typography>
+                  {/* The card is mouse-clickable; this is the keyboard route to open it. */}
+                  <ButtonBase
+                    onClick={() => setSelectedId(r.id)}
+                    aria-pressed={selectedId === r.id}
+                    sx={{ borderRadius: 1, textAlign: 'left', display: 'block' }}
+                  >
+                    <Typography fontWeight={600}>{r.name || 'Untitled Recipe'}</Typography>
+                  </ButtonBase>
                   <Chip label={r.category} size="small" sx={{ mt: 0.5 }} />
                   {r.prepTime && <Typography variant="caption" color="text.secondary" sx={{ ml: 1 }}>{r.prepTime}</Typography>}
                 </Box>
-                <IconButton aria-label="Remove" size="small" onClick={(e) => { e.stopPropagation(); removeRecipe(r.id); }}>
+                <IconButton aria-label={`Remove ${r.name || 'recipe'}`} size="small" onClick={(e) => { e.stopPropagation(); removeRecipe(r.id); }}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </Stack>

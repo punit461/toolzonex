@@ -8,6 +8,16 @@ import CompressIcon from '@mui/icons-material/Compress';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import type { Theme } from '@mui/material/styles';
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
+
+// Syntax colours that pass 4.5:1 in both themes (the fixed light-theme hexes
+// were ~3:1 or worse on the dark background).
+const XML_COLORS = {
+  tag: (t: Theme) => (t.palette.mode === 'dark' ? '#8AB4F8' : '#1565c0'),
+  attr: (t: Theme) => (t.palette.mode === 'dark' ? '#7FD6A0' : '#2e7d32'),
+  value: (t: Theme) => (t.palette.mode === 'dark' ? '#F6B26B' : '#B34700'),
+};
 interface XmlNode {
   tag: string;
   attributes: { name: string; value: string }[];
@@ -115,16 +125,16 @@ function XmlTreeView({ node, depth, allExpanded }: { node: XmlNode; depth: numbe
       <Box sx={{ ml: depth * 2, fontFamily: 'monospace', fontSize: '0.9rem' }}>
         {node.tag ? (
           <>
-            <Box component="span" sx={{ color: '#1565c0', fontWeight: 600 }}>&lt;{node.tag}</Box>
+            <Box component="span" sx={{ color: XML_COLORS.tag, fontWeight: 600 }}>&lt;{node.tag}</Box>
             {node.attributes.map((a) => (
               <Box key={a.name} component="span">
-                {' '}<Box component="span" sx={{ color: '#2e7d32' }}>{a.name}</Box>
-                =<Box component="span" sx={{ color: '#e65100' }}>&quot;{a.value}&quot;</Box>
+                {' '}<Box component="span" sx={{ color: XML_COLORS.attr }}>{a.name}</Box>
+                =<Box component="span" sx={{ color: XML_COLORS.value }}>&quot;{a.value}&quot;</Box>
               </Box>
             ))}
-            <Box component="span" sx={{ color: '#1565c0', fontWeight: 600 }}>&gt;</Box>
+            <Box component="span" sx={{ color: XML_COLORS.tag, fontWeight: 600 }}>&gt;</Box>
             <Box component="span" sx={{ color: '#212121' }}>{node.textContent}</Box>
-            <Box component="span" sx={{ color: '#1565c0', fontWeight: 600 }}>&lt;/{node.tag}&gt;</Box>
+            <Box component="span" sx={{ color: XML_COLORS.tag, fontWeight: 600 }}>&lt;/{node.tag}&gt;</Box>
           </>
         ) : (
           <Box component="span" sx={{ color: '#212121' }}>{node.textContent}</Box>
@@ -139,6 +149,7 @@ function XmlTreeView({ node, depth, allExpanded }: { node: XmlNode; depth: numbe
   return (
     <Box sx={{ ml: depth * 2 }}>
       <Box
+        {...(hasChildren ? { ...keyboardClickable, 'aria-expanded': expanded } : {})}
         sx={{
           display: 'flex',
           alignItems: 'center',
@@ -156,18 +167,18 @@ function XmlTreeView({ node, depth, allExpanded }: { node: XmlNode; depth: numbe
             {expanded ? '▼' : '▶'}
           </Box>
         )}
-        <Box component="span" sx={{ color: '#1565c0', fontWeight: 600 }}>&lt;{node.tag}</Box>
+        <Box component="span" sx={{ color: XML_COLORS.tag, fontWeight: 600 }}>&lt;{node.tag}</Box>
         {node.attributes.map((a) => (
           <Box key={a.name} component="span">
-            {' '}<Box component="span" sx={{ color: '#2e7d32' }}>{a.name}</Box>
-            =<Box component="span" sx={{ color: '#e65100' }}>&quot;{a.value}&quot;</Box>
+            {' '}<Box component="span" sx={{ color: XML_COLORS.attr }}>{a.name}</Box>
+            =<Box component="span" sx={{ color: XML_COLORS.value }}>&quot;{a.value}&quot;</Box>
           </Box>
         ))}
-        <Box component="span" sx={{ color: '#1565c0', fontWeight: 600 }}>
+        <Box component="span" sx={{ color: XML_COLORS.tag, fontWeight: 600 }}>
           {hasChildren ? (node.isSelfClosing ? ' /&gt;' : '&gt;') : (node.isSelfClosing ? ' /&gt;' : '&gt;')}
         </Box>
         {!hasChildren && node.isSelfClosing && (
-          <Box component="span" sx={{ color: '#1565c0', fontWeight: 600 }}>&lt;/{node.tag}&gt;</Box>
+          <Box component="span" sx={{ color: XML_COLORS.tag, fontWeight: 600 }}>&lt;/{node.tag}&gt;</Box>
         )}
       </Box>
       {isOpen && node.children.map((child, i) => (
@@ -180,7 +191,7 @@ function XmlTreeView({ node, depth, allExpanded }: { node: XmlNode; depth: numbe
       )}
       {hasChildren && (
         <Box sx={{ ml: depth * 2, fontFamily: 'monospace', fontSize: '0.9rem' }}>
-          <Box component="span" sx={{ color: '#1565c0', fontWeight: 600 }}>&lt;/{node.tag}&gt;</Box>
+          <Box component="span" sx={{ color: XML_COLORS.tag, fontWeight: 600 }}>&lt;/{node.tag}&gt;</Box>
         </Box>
       )}
     </Box>

@@ -6,6 +6,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 
+import { keyboardClickable } from '../../components/ui/keyboardClickable';
 const SYMBOLS: { char: string; name: string }[] = [
   { char: '★', name: 'black star' },
   { char: '☆', name: 'white star' },
@@ -72,7 +73,7 @@ const StarSymbolGeneratorContent = () => {
         <Grid container spacing={1.5}>
           {SYMBOLS.map((s) => (
             <Grid item xs={3} sm={2} md={1.5} key={s.char + s.name}>
-              <Paper
+              <Paper {...keyboardClickable}
                 onClick={() => copySymbol(s.char)}
                 sx={{ p: 1.5, textAlign: 'center', cursor: 'pointer', '&:hover': { bgcolor: 'action.hover' } }}
                 variant="outlined"
