@@ -18,7 +18,16 @@ import { readRedirects } from './lib/redirect-maps.mjs';
 
 const OUT_DIR = path.join(process.cwd(), 'out');
 
-const lines = readRedirects().map(([from, to]) => `${from} ${to} 301`);
+// Cloudflare only strips a trailing slash (308) when a file exists at the
+// slashless path. The /tools/ and /calculators/ stubs give it one, so their
+// rules catch /x/ too; the blog has no files left, so /blog/x/ would 404
+// without its own rule.
+const withTrailingSlash = (from) => from === '/blog' || from.startsWith('/blog/');
+
+const lines = readRedirects().flatMap(([from, to]) => [
+  `${from} ${to} 301`,
+  ...(withTrailingSlash(from) ? [`${from}/ ${to} 301`] : []),
+]);
 
 if (lines.length === 0) throw new Error('generate-redirects: parsed zero redirects, refusing to write an empty _redirects');
 
