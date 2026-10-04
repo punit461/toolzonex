@@ -65,19 +65,32 @@ const COLUMNS: { heading: string; links: [string, string][] }[][] = [
         ['Percentage Calculator', '/utilities/percentage-calculator'],
       ],
     },
-  ],
-  [
     {
       heading: 'Tools',
       links: [
         ['Online Notepad', '/tools/online-notepad'],
         ['What Is My IP', '/tools/what-is-my-ip'],
-        ['PDF Tools', '/tools/pdf-tools'],
       ],
     },
+  ],
+  [
+    // The header's category links sit in dropdowns that aren't in the
+    // server-rendered HTML until opened, so without this list the category
+    // hubs were linked only from the homepage.
     {
-      heading: 'Guides',
-      links: [['All articles', '/blog']],
+      heading: 'Categories',
+      links: [
+        ['Finance', '/finance'],
+        ['Health', '/health'],
+        ['Utilities', '/utilities'],
+        ['Converters', '/converters'],
+        ['Text Tools', '/text-tools'],
+        ['Generators', '/generators'],
+        ['Developer Tools', '/developer-tools'],
+        ['Web Tools', '/tools'],
+        ['PDF Tools', '/tools/pdf-tools'],
+        ['AI Tools', '/ai'],
+      ],
     },
   ],
   [

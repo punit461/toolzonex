@@ -23,8 +23,8 @@ import { getToolOrNull } from './toolRegistry';
  *  - the 15 links already hand-curated in src/components/Footer.tsx
  *    (EMI, SIP, income tax, GST, PPF, gold, BMI, BMR, TDEE, age, date,
  *    percentage, notepad);
- *  - the 75 hand-written guides in src/data/tool-blogs.handwritten.ts, which
- *    mark the tools that got real editorial investment.
+ *  - the 75 hand-written tool guides (since retired; see archive/blog/), which
+ *    marked the tools that got real editorial investment.
  *
  * Routes are validated against the registry at module load, so a typo or a
  * renamed tool quietly drops out of the menu instead of throwing at render.
