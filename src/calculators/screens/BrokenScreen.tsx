@@ -1,28 +1,45 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Box, Typography, Button, ToggleButtonGroup, ToggleButton } from '@mui/material';
+import { Box, Typography, Button, ToggleButtonGroup, ToggleButton, Link } from '@mui/material';
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
 import UploadIcon from '@mui/icons-material/Upload';
 import CalculatorShell from '../../components/CalculatorShell';
 import AdSenseUnit from '../../components/AdSenseUnit';
 import { useFullscreen } from './useFullscreen';
-import { makeCrack, paintBrokenScreen, seededRng, VIEW, type ArtStyle } from './brokenScreenArt';
+import { paintBrokenScreen, seededRng, type ArtStyle } from './brokenScreenArt';
 
 type Style = ArtStyle | 'custom';
 
 // Offsets so switching style with the same seed doesn't reuse the same random stream.
 const STYLE_SEED: Record<ArtStyle, number> = { lcd: 11, shattered: 23, crack: 37 };
 
+/**
+ * One crack: a copy of the licensed crack photo (white cracks on black, see
+ * the credit in the page content). x/y are fractions of the screen, rotate is
+ * in degrees, and scale multiplies the base size.
+ */
+interface Crack {
+  x: number;
+  y: number;
+  rotate: number;
+  scale: number;
+}
+
+const CRACK_SRC = '/broken-glass-cracks.webp';
+// Where the impact point sits in the photo, as fractions of its width/height.
+// Each copy is anchored there so a tap lands exactly on the impact.
+const IMPACT = { x: 0.55, y: 0.45 };
+
 const BrokenScreenContent = () => {
   const { targetRef, isFullscreen, toggle } = useFullscreen<HTMLDivElement>();
   const [style, setStyle] = useState<Style>('lcd');
-  const [cracks, setCracks] = useState<string[][]>([]);
+  const [cracks, setCracks] = useState<Crack[]>([]);
   // Generated artwork with a random seed per visit. The seed only feeds the
-  // canvas (never the markup), so a different value on the client can't cause
-  // a hydration mismatch.
+  // canvas and the client-side crack list (never the server markup), so a
+  // different value on the client can't cause a hydration mismatch.
   const [seed, setSeed] = useState(() => Math.floor(Math.random() * 2 ** 31));
-  const [seedCracks, setSeedCracks] = useState<string[][]>([]);
+  const [seedCracks, setSeedCracks] = useState<Crack[]>([]);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   // Paint the chosen style at the screen's current size, and again whenever it
@@ -46,7 +63,15 @@ const BrokenScreenContent = () => {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       const rng = seededRng(seed + STYLE_SEED[style]);
       const { impacts } = paintBrokenScreen(ctx, w, h, style, rng);
-      setSeedCracks(impacts.map((p) => makeCrack(p.x, p.y, w, h, rng, p.scale)));
+      // The photo is landscape. On a portrait screen, turn the main break
+      // sideways so its long cracks still run the full height.
+      const baseTurn = h > w ? 90 : 0;
+      setSeedCracks(impacts.map((p, i) => ({
+        x: p.x / w,
+        y: p.y / h,
+        rotate: (i === 0 ? baseTurn : rng() * 360) + (rng() - 0.5) * 30,
+        scale: p.scale,
+      })));
     };
     draw();
     const observer = new ResizeObserver(draw);
@@ -56,7 +81,12 @@ const BrokenScreenContent = () => {
 
   const addCrack = (e: React.PointerEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    const crack = makeCrack(e.clientX - rect.left, e.clientY - rect.top, rect.width, rect.height);
+    const crack: Crack = {
+      x: (e.clientX - rect.left) / rect.width,
+      y: (e.clientY - rect.top) / rect.height,
+      rotate: Math.random() * 360,
+      scale: 0.45 + Math.random() * 0.3,
+    };
     setCracks((prev) => [...prev, crack]);
   };
   const [customSrc, setCustomSrc] = useState<string | null>(null);
@@ -132,6 +162,8 @@ const BrokenScreenContent = () => {
           borderRadius: isFullscreen ? 0 : 2,
           position: 'relative',
           overflow: 'hidden',
+          // Lets each crack size itself with cqmax (the screen's longer side).
+          containerType: 'size',
           touchAction: 'manipulation',
           // A visible mouse pointer gives the prank away.
           cursor: isFullscreen ? 'none' : 'crosshair',
@@ -156,23 +188,30 @@ const BrokenScreenContent = () => {
             sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block' }}
           />
         )}
-        {allCracks.length > 0 && (
-          <Box
-            component="svg"
-            viewBox={`0 0 ${VIEW} ${VIEW}`}
-            preserveAspectRatio="none"
-            aria-hidden
-            sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none' }}
-          >
-            {allCracks.flat().map((d, i) => (
-              <g key={i}>
-                {/* Dark shadow under a bright edge reads as split glass on any background. */}
-                <path d={d} fill="none" stroke="rgba(0,0,0,0.55)" strokeWidth={3} vectorEffect="non-scaling-stroke" />
-                <path d={d} fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth={1.2} vectorEffect="non-scaling-stroke" />
-              </g>
-            ))}
-          </Box>
-        )}
+        {allCracks.map((c, i) => (
+          // "screen" blending drops the photo's black glass and keeps only the
+          // white cracks, so the drawn screen underneath shows through.
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            key={i}
+            src={CRACK_SRC}
+            alt=""
+            aria-hidden="true"
+            draggable={false}
+            style={{
+              position: 'absolute',
+              left: `${c.x * 100}%`,
+              top: `${c.y * 100}%`,
+              width: `${125 * c.scale}cqmax`,
+              maxWidth: 'none',
+              transformOrigin: `${IMPACT.x * 100}% ${IMPACT.y * 100}%`,
+              transform: `translate(-${IMPACT.x * 100}%, -${IMPACT.y * 100}%) rotate(${c.rotate}deg)`,
+              mixBlendMode: 'screen',
+              pointerEvents: 'none',
+              userSelect: 'none',
+            }}
+          />
+        ))}
       </Box>
     </Box>
   );
@@ -184,8 +223,8 @@ const BrokenScreen = () => {
       <Typography variant="h2">Broken Screen Prank</Typography>
       <Typography variant="body1">
         A fake broken-screen overlay for pranking friends and coworkers. Choose a broken LCD, a shattered screen
-        or cracked glass — each one is drawn fresh in your browser — or upload your own image, go fullscreen on
-        their device, and watch the reaction. It&apos;s just a picture, no actual damage.
+        or cracked glass, with real-looking cracks from a photo of shattered glass, or upload your own image. Go
+        fullscreen on their device and watch the reaction. It&apos;s just a picture, no actual damage.
       </Typography>
 
       <Typography variant="h2">How to use it</Typography>
@@ -217,13 +256,19 @@ const BrokenScreen = () => {
       <Box sx={{ typography: 'body1' }}>
         <ul>
           <li><strong>Does this actually damage the screen?</strong> No — it&apos;s purely a visual overlay on a webpage. Nothing about the device is affected.</li>
-          <li><strong>What&apos;s the difference between the styles?</strong> Broken LCD shows coloured stripes and leaking black ink like a failed display; Shattered Screen is a hard impact with light bleeding from the backlight; Cracked Glass is spider-web cracks across dark glass. All three are drawn by code in your browser, so click <strong>New pattern</strong> for a different break.</li>
+          <li><strong>What&apos;s the difference between the styles?</strong> Broken LCD shows coloured stripes and leaking black ink like a failed display; Shattered Screen is a hard impact with light bleeding from the backlight; Cracked Glass is several impacts across dark glass. The damage underneath is drawn in your browser and the cracks are placed at random, so click <strong>New pattern</strong> for a different break.</li>
           <li><strong>Can I upload my own image?</strong> Yes, click Upload Your Own Image to display any picture from your device full-screen.</li>
           <li><strong>Is my uploaded image saved anywhere?</strong> No, it stays only in your browser for this session and is never uploaded to a server.</li>
           <li><strong>Does it work on a phone?</strong> Yes. On iPhone, where websites can&apos;t use true fullscreen, the broken screen fills the browser window instead; swipe back to exit.</li>
           <li><strong>How do I undo it?</strong> Press Esc or close the browser tab. <strong>Clear cracks</strong> removes the tap cracks.</li>
         </ul>
       </Box>
+
+      <Typography variant="body2" color="text.secondary">
+        Crack photo: &ldquo;Black background with radiating white cracks on broken glass&rdquo; by Sadhin Costa,{' '}
+        <Link href="https://www.vecteezy.com/free-photos/broken-display">Broken Display Stock photos by Vecteezy</Link>,
+        used under the Vecteezy Free License.
+      </Typography>
     </>
   );
 

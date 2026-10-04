@@ -1,10 +1,11 @@
 /**
- * Code-generated "broken screen" artwork.
+ * Code-drawn "broken screen" backgrounds: the failed-LCD stripes and ink
+ * bleed, the backlight bleed, and the glass sheen under the cracks.
  *
- * The page used to show three photographs of damaged screens downloaded from
- * the internet with no licence. Everything here is drawn in the browser
- * instead, so there is no third-party image to own the rights to, and every
- * visit gets a slightly different break.
+ * The cracks themselves are a licensed photo (public/broken-glass-cracks.webp,
+ * credited on the page), layered on top in BrokenScreen.tsx. Drawn crack lines
+ * looked fake. The page's original photos had no licence and were removed on
+ * 2026-09-26.
  *
  * Randomness comes from a seeded generator so a pattern stays identical when
  * it's redrawn at a new size (e.g. entering fullscreen); "New pattern" just
@@ -22,50 +23,6 @@ export function seededRng(seed: number): Rng {
     t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
-}
-
-// Crack paths live in a 1000x1000 viewBox stretched over the screen.
-export const VIEW = 1000;
-
-/**
- * A spider-web crack around (x, y): jagged rays running outward, joined by a
- * few broken rings near the impact point. Built in the screen's own pixel
- * space so the angles look right, then mapped into the stretched viewBox.
- */
-export function makeCrack(x: number, y: number, w: number, h: number, rng: Rng = Math.random, scale = 1): string[] {
-  const toView = (px: number, py: number) => `${((px / w) * VIEW).toFixed(1)},${((py / h) * VIEW).toFixed(1)}`;
-  const reach = Math.hypot(w, h) * 0.45 * scale;
-  const rayCount = 9 + Math.floor(rng() * 5);
-  const rays: [number, number][][] = [];
-  const paths: string[] = [];
-
-  for (let i = 0; i < rayCount; i++) {
-    let angle = (i / rayCount) * Math.PI * 2 + (rng() - 0.5) * 0.4;
-    const length = reach * (0.3 + rng() * 0.7);
-    const points: [number, number][] = [[x, y]];
-    let travelled = 0;
-    let [px, py] = [x, y];
-    while (travelled < length) {
-      const step = 20 + rng() * 40;
-      angle += (rng() - 0.5) * 0.5;
-      px += Math.cos(angle) * step;
-      py += Math.sin(angle) * step;
-      travelled += step;
-      points.push([px, py]);
-    }
-    rays.push(points);
-    paths.push(`M${points.map(([a, b]) => toView(a, b)).join(' L')}`);
-  }
-
-  // Rings: link neighbouring rays at a few distances, skipping some for a broken look.
-  for (const ringIndex of [1, 3, 5]) {
-    for (let i = 0; i < rays.length; i++) {
-      const a = rays[i][ringIndex];
-      const b = rays[(i + 1) % rays.length][ringIndex];
-      if (a && b && rng() < 0.75) paths.push(`M${toView(...a)} L${toView(...b)}`);
-    }
-  }
-  return paths;
 }
 
 export type ArtStyle = 'lcd' | 'shattered' | 'crack';
