@@ -196,11 +196,7 @@ const Home = () => {
             Calculators run in your browser: enter your salary, your loan amount, or your medical numbers and none
             of it is sent to us. The few tools that need live data, such as exchange rates or PDF translation, say so
             on the page. The finance tools are built for Indian rules specifically: income tax regimes, PPF and SSY
-            rules, GST rates, and HRA exemption maths, rather than a US calculator with the currency symbol swapped. And when a number needs explaining, the{' '}
-            <Box component={RouterLink} href="/blog" sx={{ color: 'primary.main', fontWeight: 500 }}>
-              guides
-            </Box>{' '}
-            cover the rules behind it.
+            rules, GST rates, and HRA exemption maths, rather than a US calculator with the currency symbol swapped.
           </Typography>
         </Box>
       )}

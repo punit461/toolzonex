@@ -1,41 +1,33 @@
 import fs from 'fs';
 import path from 'path';
+import { readRedirects } from './lib/redirect-maps.mjs';
 
 /**
- * Writes out/_redirects (Cloudflare Pages) from src/data/legacy-redirects.ts, so
- * the old /tools/<slug> and /calculators/<slug> URLs answer with a real 301
+ * Writes out/_redirects (Cloudflare Pages) from the redirect maps in src/data/
+ * (see scripts/lib/redirect-maps.mjs), so old URLs answer with a real 301
  * instead of a 200 page carrying a meta refresh.
  *
  * Under GitHub Pages the meta-refresh stubs were the only option, and Google
  * treated each old URL as its own page: /tools/crossword-puzzle-generator and
  * /generators/crossword-puzzle-generator were both collecting impressions for
  * the same queries. Cloudflare Pages applies _redirects before serving any
- * static asset, so the stubs are still built (harmless fallback if the site
- * ever moves hosts) but are never served while this file exists.
+ * static asset, so the /tools/ and /calculators/ stubs are still built (harmless
+ * fallback if the site ever moves hosts) but are never served while this file
+ * exists. The retired blog has no stubs at all; its URLs exist only as rules here.
  */
 
-const SOURCE = path.join(process.cwd(), 'src/data/legacy-redirects.ts');
 const OUT_DIR = path.join(process.cwd(), 'out');
 
-// Export name in legacy-redirects.ts -> the URL prefix its keys live under.
-const MAPS = {
-  toolsRedirectMap: '/tools/',
-  calculatorsRedirectMap: '/calculators/',
-};
+// Cloudflare only strips a trailing slash (308) when a file exists at the
+// slashless path. The /tools/ and /calculators/ stubs give it one, so their
+// rules catch /x/ too; the blog has no files left, so /blog/x/ would 404
+// without its own rule.
+const withTrailingSlash = (from) => from === '/blog' || from.startsWith('/blog/');
 
-function parseMap(source, exportName) {
-  const block = source.match(new RegExp(`export const ${exportName}[^=]*=\\s*\\{([\\s\\S]*?)\\n\\};`));
-  if (!block) throw new Error(`generate-redirects: ${exportName} not found in legacy-redirects.ts`);
-  return [...block[1].matchAll(/"([^"]+)"\s*:\s*"([^"]+)"/g)].map(([, slug, target]) => [slug, target]);
-}
-
-const source = fs.readFileSync(SOURCE, 'utf8');
-const lines = [];
-for (const [exportName, prefix] of Object.entries(MAPS)) {
-  for (const [slug, target] of parseMap(source, exportName)) {
-    lines.push(`${prefix}${slug} ${target} 301`);
-  }
-}
+const lines = readRedirects().flatMap(([from, to]) => [
+  `${from} ${to} 301`,
+  ...(withTrailingSlash(from) ? [`${from}/ ${to} 301`] : []),
+]);
 
 if (lines.length === 0) throw new Error('generate-redirects: parsed zero redirects, refusing to write an empty _redirects');
 

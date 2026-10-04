@@ -344,24 +344,6 @@ const Header = () => {
             {navCategories.map((cat) => (
               <DropdownButton key={cat.label} category={cat} />
             ))}
-            <Button
-              component={RouterLink}
-              href="/blog"
-              color="inherit"
-              sx={{
-                fontWeight: 500,
-                fontSize: '0.8rem',
-                textTransform: 'none',
-                px: 1.25,
-                py: 0.75,
-                borderRadius: 2,
-                whiteSpace: 'nowrap',
-                transition: 'all 0.2s ease',
-                '&:hover': { bgcolor: 'action.hover' },
-              }}
-            >
-              Blog
-            </Button>
           </Box>
 
           <Box sx={{ flexGrow: 1 }} />
@@ -422,11 +404,6 @@ const Header = () => {
               {navCategories.map((cat) => (
                 <MobileAccordion key={cat.label} category={cat} onClose={() => setDrawerOpen(false)} />
               ))}
-
-              {/* Blog */}
-              <ListItemButton component={RouterLink} href="/blog" onClick={() => setDrawerOpen(false)}>
-                <ListItemText primary="Blog" slotProps={{ primary: { sx: { fontWeight: 700, fontSize: '0.95rem' } } }} />
-              </ListItemButton>
             </List>
           </Box>
         </Drawer>
