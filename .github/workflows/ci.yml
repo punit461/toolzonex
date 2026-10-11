@@ -1,0 +1,40 @@
+name: CI
+
+# Catches broken changes before they reach the deploy branch (Cloudflare Pages
+# builds `deploy`, so a failure there means a failed release, not a failed check).
+on:
+  push:
+  pull_request:
+    branches: [main, deploy]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Type-check
+        run: npx tsc --noEmit
+      - name: Unit tests
+        run: npm test
+      - name: Static build (same command Cloudflare Pages runs)
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: https://toolzonex.com
+      - name: Sanity-check the export
+        run: |
+          test -f out/index.html
+          test -f out/sitemap.xml
+          test -f out/_headers
+          test -f out/_redirects
+          echo "Pages exported: $(find out -name '*.html' | wc -l)"
+          grep -q "toolzonex.com" out/sitemap.xml
